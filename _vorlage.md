@@ -1,6 +1,6 @@
 # Seitenüberschrift
 
-- [Anker 1](#anker-1)
+- [Allgemeines](#anker-1)
 - [Anker 2](#anker-2)
     - [Anker 2a](#anker2a)
 - [Anker 3](#anker-3)
@@ -10,14 +10,16 @@
 - [Anker 4](#anker-4)
 
 <a name="anker-1"></a>
-## Kapitel 1
+## Allgemeines
 
 - Vor jeder `h2` und `h3` Überschrift muss ein Anker gesetzt werden
-- `h2` und `h3` werden dann im TOC verlinkt
+- `h2` und `h3` werden im TOC verlinkt
+- Links `[Linktitel](/{{path}}/{{version}}/md-datei-ohne-endung)`, `{{path}}` wird dem Pfad auf redaxo.org angepasst, `{{version}}` wird die Version eingesetzt
 
-Es gibt im Moment in diese `Mannschaft`, oh, einige Spieler vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen, aber ich habe gehört viele Situationen. Erstens: wir haben nicht offensiv gespielt. Es gibt keine deutsche Mannschaft spielt offensiv und die Name offensiv wie Bayern. Letzte Spiel hatten wir in Platz drei Spitzen: Elber, Jancka und dann Zickler. Wir müssen nicht vergessen Zickler.
+Absatz … Es gibt im Moment in diese `Mannschaft`, oh, einige Spieler vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen, aber ich habe gehört viele Situationen. Erstens: wir haben nicht offensiv gespielt. Es gibt keine deutsche Mannschaft spielt offensiv und die Name offensiv wie Bayern. Letzte Spiel hatten wir in Platz drei Spitzen: Elber, Jancka und dann Zickler. Wir müssen nicht vergessen Zickler.
 
     <?php
+    // Code wird einfach nur eingerückt
     $article = rex_article::get();
     
 
