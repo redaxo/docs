@@ -1,121 +1,84 @@
-<style>
-.label {
-    background-color: #63c0fd;
-    color: #132633;
-     font-style: normal;
-}
-.in-progress {
-    background-color: #fbca04;
-    color: #332900;
-}
-.in-progress:before {
-    content: 'in Bearbeitung';
-}
-.incomplete {
-    background-color: #f7c6c7; 
-    color: #332829; 
-}
-.incomplete:after {
-    content: 'unvollständig';
-}
-.open {
-    background-color: #e11d21;
-    color: #fff; 
-}
-.open:after {
-    content: 'offen';
-}
-.ready {
-    background-color: #009800; 
-    color: #fff;
-}
-.ready:after {
-    content: 'abgeschlossen';
-}
-.review {
-    background-color: #207de5;
-    color: #fff;
-}
-.review:after {
-    content: 'überprüfen';
-}
-</style>
-
-- Labels vergeben
-    - <i class="label open"></i>
-    - <i class="label in-progress"></i>
-    - <i class="label incomplete"></i>
-    - <i class="label review"></i>
-    - <i class="label ready"></i>
-    - <i class="label">Peter</i> <i class="label">Jan</i> <i class="label">Gregor</i> <i class="label">Thomas</i>
-
 - Einleitung
-    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <i class="label open"></i>
-    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <i class="label open"></i>
-    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <i class="label open"></i>
-    - [Api Dokumentation](/docs/master/) <i class="label open"></i>
+    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
+    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>offen</b></sup>
+    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>offen</b></sup>
+    - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
 - Setup
-    - [Installation](/{{path}}/{{version}}/installation) <i class="label open"></i>
-    - [Login](/{{path}}/{{version}}/login) <i class="label open"></i>
-    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <i class="label open"></i>
+    - [Installation](/{{path}}/{{version}}/installation) <sup><b>offen</b></sup>
+    - [Login](/{{path}}/{{version}}/login) <sup><b>offen</b></sup>
+    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>offen</b></sup>
 
 - Anwender
-    - [Profil](/{{path}}/{{version}}/profil) <i class="label open"></i>
-    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <i class="label open"></i>
-    - [Artikel](/{{path}}/{{version}}/artikel) <i class="label open"></i>
-    - [Medienpool](/{{path}}/{{version}}/medienpool) <i class="label open"></i>
-    - [Backup](/{{path}}/{{version}}/backup) <i class="label open"></i>
+    - [Profil](/{{path}}/{{version}}/profil) <sup><b>offen</b></sup>
+    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>offen</b></sup>
+    - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>offen</b></sup>
+    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>offen</b></sup>
+    - [Backup](/{{path}}/{{version}}/backup) <sup><b>offen</b></sup>
 
 - Basis
-    - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <i class="label open"></i>
-    - [System (allgemein, system_settings)](/{{path}}/{{version}}/system) <i class="label open"></i>
-    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <i class="label open"></i>
-    - [Templates](/{{path}}/{{version}}/templates) <i class="label open"></i>
-    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <i class="label open"></i>
-    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <i class="label open"></i>
-    - [Installer](/{{path}}/{{version}}/installer) <i class="label open"></i>
-    - [Media Manager](/{{path}}/{{version}}/media-manager) <i class="label open"></i>
+    - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>offen</b></sup>
+    - [System (allgemein, system_settings)](/{{path}}/{{version}}/system) <sup><b>offen</b></sup>
+    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>offen</b></sup>
+    - [Templates](/{{path}}/{{version}}/templates) <sup><b>offen</b></sup>
+    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <sup><b>offen</b></sup>
+    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>offen</b></sup>
+    - [Installer](/{{path}}/{{version}}/installer) <sup><b>offen</b></sup>
+    - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>offen</b></sup>
 
 - Service
-    - [Api](/{{path}}/{{version}}/api) <i class="label open"></i>
-    - [Caching](/{{path}}/{{version}}/caching) <i class="label open"></i>
-    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <i class="label open"></i>
-    - [Eigenschaften (rex:: )](/{{path}}/{{version}}/eigenschaften) <i class="label open"></i>
-    - [Errors & Logs (syslog, exceptions, logger)](/{{path}}/{{version}}/errors) <i class="label open"></i>
-    - [Extension Points](/{{path}}/{{version}}/extension-points) <i class="label open"></i>
-    - [Formatierungen](/{{path}}/{{version}}/formatierungen) <i class="label open"></i>
-    - [Formulare](/{{path}}/{{version}}/formulare) <i class="label open"></i>
-    - [Fragmente](/{{path}}/{{version}}/fragmente) <i class="label open"></i>
-    - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration) <i class="label open"></i>
-    - [Listen](/{{path}}/{{version}}/listen) <i class="label open"></i>
+    - [Api](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
+    - [Caching](/{{path}}/{{version}}/caching) <sup><b>offen</b></sup>
+    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>offen</b></sup>
+    - [Eigenschaften (rex:: )](/{{path}}/{{version}}/eigenschaften) <sup><b>offen</b></sup>
+    - [Errors & Logs (syslog, exceptions, logger)](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
+    - [Extension Points](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
+    - [Formatierungen](/{{path}}/{{version}}/formatierungen) <sup><b>offen</b></sup>
+    - [Formulare](/{{path}}/{{version}}/formulare) <sup><b>offen</b></sup>
+    - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>offen</b></sup>
+    - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
+    - [Listen](/{{path}}/{{version}}/listen) <sup><b>offen</b></sup>
         - Tabellen (rex_list)
         - Auswahllisten (rex_select)
-    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <i class="label open"></i>
-    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <i class="label open"></i>
-    - [Paginierung](/{{path}}/{{version}}/paginierung) <i class="label open"></i>
-    - [Pfade](/{{path}}/{{version}}/pfade) <i class="label open"></i>
-    - [Requests](/{{path}}/{{version}}/requests) <i class="label open"></i>
-    - [Responses](/{{path}}/{{version}}/responses) <i class="label open"></i>
-    - [REX_VARs](/{{path}}/{{version}}/redaxo-variablen) <i class="label open"></i>
-    - [Sinnvolles (dir, file, finder etc.)](/{{path}}/{{version}}/sinnvolles) <i class="label open"></i>
-    - [Socket](/{{path}}/{{version}}/socket) <i class="label open"></i>
-    - [Streams](/{{path}}/{{version}}/streams) <i class="label open"></i>
-    - [Urls](/{{path}}/{{version}}/urls) <i class="label open"></i>
-    - [Validierungen](/{{path}}/{{version}}/validierungen) <i class="label open"></i>
+    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>offen</b></sup>
+    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>offen</b></sup>
+    - [Paginierung](/{{path}}/{{version}}/paginierung) <sup><b>offen</b></sup>
+    - [Pfade](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
+    - [Requests](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
+    - [Responses](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
+    - [REX_VARs](/{{path}}/{{version}}/redaxo-variablen) <sup><b>offen</b></sup>
+    - [Sinnvolles (dir, file, finder etc.)](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
+    - [Socket](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
+    - [Streams](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
+    - [Urls](/{{path}}/{{version}}/urls) <sup><b>offen</b></sup>
+    - [Validierungen](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOns
-    - [Installation](/{{path}}/{{version}}/addon-installation) <i class="label open"></i>
-    - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <i class="label open"></i>
-    - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung) <i class="label open"></i>
+    - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>offen</b></sup>
+    - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>offen</b></sup>
+    - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung) <sup><b>offen</b></sup>
 
 - Datenbank
-    - [Queries](/{{path}}/{{version}}/datenbank-queries) <i class="label open"></i>
-    - [Tabellen verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen) <i class="label open"></i>
-    - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <i class="label open"></i>
+    - [Queries](/{{path}}/{{version}}/datenbank-queries) <sup><b>offen</b></sup>
+    - [Tabellen verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>offen</b></sup>
+    - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
 - Tutorials
-    - [Quickstart](/{{path}}/{{version}}/tutorial-quickstart) <i class="label open"></i>
+    - [Quickstart](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>offen</b></sup>
 
 
 
+##### Labels vergeben
+
+```
+<sup><b>offen</b></sup>
+<sup><b>in Bearbeitung</b></sup>
+<sup><b>unvollständig</b></sup>
+<sup><b>überprüfen</b></sup>
+<sup><b>abgeschlossen</b></sup>
+
+<sup><i>Gregor</i></sup>
+<sup><i>Jan</i></sup>
+<sup><i>Peter</i></sup>
+<sup><i>Thomas</i></sup>
+```
