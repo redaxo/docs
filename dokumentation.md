@@ -10,7 +10,7 @@
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>offen</b></sup>
 
 - Anwender
-    - [Profil](/{{path}}/{{version}}/profil) <sup><b>offen</b></sup>
+    - [Profil](/{{path}}/{{version}}/profil) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>offen</b></sup>
     - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>offen</b></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>offen</b></sup>
