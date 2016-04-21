@@ -1,0 +1,1 @@
+# REDAXO Variablen
