@@ -15,7 +15,4 @@
 ## Upload
 
 <a name="installation"></a>
-## Installation
-
-
-
+## Installation.
