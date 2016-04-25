@@ -1,5 +1,5 @@
 - Erste Schritte
-    - [Über Redaxo](/{{path}}/{{version}}/ueber-redaxo) <sup><b>offen</b></sup>
+    - [Über Redaxo](/{{path}}/{{version}}/ueber-redaxo) <sup><b>überprüfen</b></sup>
     - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg) <sup><b>offen</b></sup>
     - [Sicherheitshinweise](/{{path}}/{{version}}/sicherheitshinweise) <sup><b>offen</b></sup>
     - [Updatehinweise](/{{path}}/{{version}}/updatehinweise) <sup><b>offen</b></sup>
@@ -7,7 +7,7 @@
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>offen</b></sup>
 
 - Setup
-    - [Installation - Systemanforderungen, Download, Upload, Installation](/{{path}}/{{version}}/installation) <sup><b>offen</b></sup>
+    - [Installation - Systemanforderungen, Download, Upload, Installation](/{{path}}/{{version}}/installation) <sup><b>überprüfen</b></sup>
     - [Login](/{{path}}/{{version}}/login) <sup><b>offen</b></sup>
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>offen</b></sup>
 
