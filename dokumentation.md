@@ -1,6 +1,6 @@
 - Erste Schritte
     - [Über Redaxo](/{{path}}/{{version}}/ueber-redaxo) <sup><b>überprüfen</b></sup>
-    - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg) <sup><b>offen</b></sup>
+    - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg) <sup><b>überprüfen</b></sup>
     - [Sicherheitshinweise](/{{path}}/{{version}}/sicherheitshinweise) <sup><b>offen</b></sup>
     - [Updatehinweise](/{{path}}/{{version}}/updatehinweise) <sup><b>offen</b></sup>
     - [Die Redaxo-Demo](/{{path}}/{{version}}/demo) <sup><b>offen</b></sup>
