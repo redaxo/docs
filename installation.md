@@ -179,3 +179,21 @@ Sie können im Nachhinein die gesamte Installationsroutine erneut starten. Dazu 
 Bestätigen Sie anschließend den Klick durch den “OK”-Button und darauf folgend mit “weiter” um das Setup erneut zu starten.
 
 Ein erneuter Start des Setups ist jedoch in der Regel nicht nötig.
+
+--
+
+## Mehrfachinstallationen
+
+Einem häufig geäußertem Wunsch der Community entsprechend, ist es seit Version 3.2 möglich, REDAXO mehrfach in einer Datenbank zu installieren. Die Unterscheidung der Installationen erfolgt durch Setzen unterschiedlicher Tabellen-Präfixe.
+
+In der Datei redaxo/include/master.inc.php ist der Tabellen-Präfix standardmäßig auf “rex_” gesetzt:
+
+	$REX['TABLE_PREFIX'] = "rex_";
+
+Dieser Wert muss vor der Installation einer weiteren REDAXO-Version manuell geändert werden. Der Wert wird beim Setup nicht abgefragt. Wird der Wert nicht vorab geändert, werden die Tabellen der vorhergegangenen Installation überschrieben.
+
+> **Hinweis**
+
+> Noch sind nicht alle Addons auf diese Einstellung hin angepasst, deshalb ist dieses Feature mit Vorsicht zu genießen!
+
+> Weiterhin ist zu beachten, dass erstellte Exporte (Import/Export-Addon) nur in Installationen importiert werden können, die mit dem gleichen TABLE_PREFIX konfiguriert sind, wie diejenige, unter der der Export erstellt wurde!
