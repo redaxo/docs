@@ -14,7 +14,7 @@
 - Redaktion
     - [Vorwort](/{{path}}/{{version}}/redaktion-vorwort) <sup><b>offen</b></sup>
     - [Profil](/{{path}}/{{version}}/profil) <sup><b>offen</b></sup>
-    - [Strukturverwaltung - Hier auch die Unterpunkte Kategorien & Artikel](/{{path}}/{{version}}/strukturverwaltung) <sup><b>offen</b></sup>
+    - [Strukturverwaltung - Hier auch die Unterpunkte Kategorien & Artikel](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup>
     - [Inhaltsverwaltung - Hier auch die Unterpunkte](/{{path}}/{{version}}/inhaltsverwaltung) <sup><b>offen</b></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>offen</b></sup>
 
