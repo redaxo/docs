@@ -3,7 +3,7 @@
     - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg) <sup><b>überprüfen</b></sup>
     - [Sicherheitshinweise](/{{path}}/{{version}}/sicherheitshinweise) <sup><b>überprüfen</b></sup>
     - [Updatehinweise](/{{path}}/{{version}}/updatehinweise) <sup><b>überprüfen</b></sup>
-    - [Die Redaxo-Demo](/{{path}}/{{version}}/demo) <sup><b>offen</b></sup>
+    - [Die Redaxo-Demo](/{{path}}/{{version}}/demo) <sup><b>überprüfen</b></sup>
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>offen</b></sup>
 
 - Setup
