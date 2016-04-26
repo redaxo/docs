@@ -17,7 +17,7 @@
     - [Backup](/{{path}}/{{version}}/backup) <sup><b>offen</b></sup>
 
 - Basis
-    - [Allgemeiner Ausfbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
+    - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>offen</b></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>offen</b></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
