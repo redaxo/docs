@@ -18,10 +18,10 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
-    - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>offen</b></sup>
-    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>offen</b></sup>
+    - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <sup><b>offen</b></sup>
+    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>offen</b></sup>
     - [Installer](/{{path}}/{{version}}/installer) <sup><b>offen</b></sup>
     - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>offen</b></sup>
