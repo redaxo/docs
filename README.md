@@ -12,4 +12,4 @@
 * Immer den kompletten REDAXO Inhalt, inkl Navi
 * Benennung: v5.2.0-[Kennung-was-das-Bild-zeigt].png 
 * in den Assets Ordner. 
-* Immer Standardtheme verwenden
+* Immer Standardtheme mit aktivierten AddOns aus der Installation verwenden, damit die Navi gleich aussieht
