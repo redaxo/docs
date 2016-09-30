@@ -2,6 +2,7 @@
 ## Bitte beachten
 
 * Anrede Du
+* wenn man sich einen Inhalt vornimmt, bitte hier markieren dokumentation.md
 
 
 ### screenshots
