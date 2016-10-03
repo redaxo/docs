@@ -1,3 +1,3 @@
 # Installer
 
-[Screenshot]: assets/installer-shot-01.png "Screenshot 1"
+![Screenshot](https://raw.githubusercontent.com/redaxo/docs/assets/installer-shot-01.png)
