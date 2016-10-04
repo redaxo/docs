@@ -51,7 +51,7 @@ Schritt 3 -  Systemcheck
 ### Schritt 4 - Konfiguration
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt. 
    
-- URL Der Website mit abschließendem /
+- URL der Website mit abschließendem /
 - Name der Website  
 - E-Mail-Adressse bei Fehlern
 - Zeitzone
