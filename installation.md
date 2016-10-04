@@ -10,7 +10,7 @@ Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/d
 
 Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffenltichen Webserver. 
 Meist lautet der Webpordner httpdocs , htdocs oder html. 
-Ausführliche Informationen zum Upload und zu Deinen Zugangsdaten erhälst Du von Deinem Hostingpartner
+Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst Du von Deinem Hostingpartner
 
 Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
 
