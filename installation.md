@@ -46,9 +46,13 @@ Schritt 3 -  Systemcheck
 ### Schritt 4 - Konfiguration
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt. 
     - URL Der Website mit abschließendem /
+    
     - Name der Website  
+    
     - E-Mail-Adressse bei Fehlern
+    
     - Zeitzone
+    
     - Datenbankverbindung
 
 Hat Dein Benutzer das Recht auch neue Datenbanken zu erstellen, kannst du hier direkt eine neue Datenbank mit der oben agegebenen Bezeichnung anlegen lassen. 
