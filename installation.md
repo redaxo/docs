@@ -13,11 +13,10 @@ Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/d
 <a name="upload"></a>
 ## Upload 
 
-Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffenltichen Webserver. 
-Meist lautet der Webpordner httpdocs , htdocs oder html. 
+Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffentlichen Webserver. Meist lautet der Webpordner httpdocs , htdocs oder html. 
 Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst du von deinem Hostingpartner
 
-Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
+> **Tipp:** Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
 
 > **Hinweis für MAC und Linux-User:** Stelle sicher, dass die versteckten .htaccess-Dateien mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden. 
 
@@ -25,8 +24,8 @@ Sollte der Server es beim Upload nicht selbst erledigt haben, stelle die Ordner-
 <a name="install"></a>
 ## Installationsvorgang
 
-Nachdem Du Redaxo hochgeladen hat, kannst du die Installation mit http://deinedomain.tld/redaxo/ aufrufen. 
-Die folgenden 7 Schritte führen Dich durch die Installation. 
+Nachdem du Redaxo hochgeladen hast, kannst du die Installation mit http://deinedomain.tld/redaxo/ aufrufen. 
+Die folgenden 7 Schritte führen dich durch die Installation. 
 
 ### Schritt 1 - Sprachauswahl
 
