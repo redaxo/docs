@@ -21,6 +21,14 @@ Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur 
 Nachdem Du Redaxo hochgeladen hat, kannst Du die Installation mit http://deinedomain.tld/redaxo/ aufrufen. 
 Die folgenden 7 Schritte führen Dich durch die Installation. 
 
+### Schritt 1 - Sprachauswahl 
+
+Im  ersten Schritt legst Du die Sprache für den Installationsvorgang und für das Backend fest.  
+![Sprachwahl](/assets/v5.2.0-installation-01-language.png)
+**Hinweis :** Die Sprache kann später im Setup oder User geändert werden. 
+
+### Schritt 2 - Sprachauswahl
+Redaxo ist ein Open Source Projekt und kostenfrei. Allerdings gibt es Lizenzbedingungen die akzeptiert werden müssen.
 
 ![Lizenz](/assets/v5.2.0-installation-02-license.png)
 Schritt2 -  Lizenz 
