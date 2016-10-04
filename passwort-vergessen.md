@@ -1,6 +1,6 @@
 # Passwort vergessen
 
-Falls du dein Passwort vergessen hast, musst du dieses in der Datenbank zurücksetzen. Falls Du in dieser Richtung zu wenig bzw. keine Erfahrung besitzt, wende dich bitte an deinen Entwickler oder Hoster.
+Falls du dein Passwort vergessen hast, musst du dieses in der Datenbank zurücksetzen. Falls du in dieser Richtung zu wenig bzw. keine Erfahrung besitzt, wende dich bitte an deinen Entwickler oder Hoster.
 
 ## Änderung des Passworts mit phpMyAdmin
 Bevor du Änderungen an der Datenbank durchführst, denke daran ein Backup anzulegen. 
