@@ -2,9 +2,9 @@
 
 In den folgenden Bereichen erfährst Du wie Du Redaxo auf deinem Server installieren kannst. 
 
-[Download](#download)
-[Upload](#upload)
-[Installationsvorgang](#install)
+- [Download](#download)
+- [Upload](#upload)
+- [Installationsvorgang](#install)
 
 <a name="download"></a>
 ## Download
