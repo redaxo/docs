@@ -6,7 +6,7 @@
 
 - Setup
     - [Installation](/{{path}}/{{version}}/installation) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Login](/{{path}}/{{version}}/login) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Login](/{{path}}/{{version}}/login) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
 
 - Anwender
