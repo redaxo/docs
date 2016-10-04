@@ -23,7 +23,8 @@ Die folgenden 7 Schritte führen Dich durch die Installation.
 
 ### Schritt 1 - Sprachauswahl 
 
-Im  ersten Schritt legst Du die Sprache für den Installationsvorgang und für das Backend fest.  
+Im  ersten Schritt legst Du die Sprache für den Installationsvorgang und für das Backend fest. 
+
 ![Sprachwahl](/assets/v5.2.0-installation-01-language.png)
 **Hinweis :** Die Sprache kann später im Setup oder User geändert werden. 
 
