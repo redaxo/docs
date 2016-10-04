@@ -1,6 +1,6 @@
 # Installation
 
-In den folgenden Bereichen erfährst du, wie du Redaxo auf deinem Server oder Webspace installieren kannst. 
+In den folgenden Abschnitten erfährst du, wie du Redaxo auf deinem Server oder Webspace installieren kannst. 
 
 - [Download](#download)
 - [Upload](#upload)
@@ -9,7 +9,7 @@ In den folgenden Bereichen erfährst du, wie du Redaxo auf deinem Server oder We
 <a name="download"></a>
 ## Download
 
-Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/download/ herunter. 
+Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/download/ herunter. Informationen zum aktuellen Release findest du auch unter https://github.com/redaxo/redaxo/releases.
 <a name="upload"></a>
 ## Upload 
 
