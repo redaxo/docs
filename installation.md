@@ -1,6 +1,6 @@
 # Installation
 
-In den folgenden Bereichen erfährst Du wie Du Redaxo auf deinem Server installieren kannst. 
+In den folgenden Bereichen erfährst du, wie du Redaxo auf deinem Server oder Webspace installieren kannst. 
 
 - [Download](#download)
 - [Upload](#upload)
@@ -15,7 +15,7 @@ Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/d
 
 Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffenltichen Webserver. 
 Meist lautet der Webpordner httpdocs , htdocs oder html. 
-Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst Du von Deinem Hostingpartner
+Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst du von deinem Hostingpartner
 
 Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
 
@@ -25,12 +25,12 @@ Sollte der Server es beim Upload nicht selbst erledigt haben, stelle die Ordner-
 <a name="install"></a>
 ## Installationsvorgang
 
-Nachdem Du Redaxo hochgeladen hat, kannst Du die Installation mit http://deinedomain.tld/redaxo/ aufrufen. 
+Nachdem Du Redaxo hochgeladen hat, kannst du die Installation mit http://deinedomain.tld/redaxo/ aufrufen. 
 Die folgenden 7 Schritte führen Dich durch die Installation. 
 
 ### Schritt 1 - Sprachauswahl
 
-Im  ersten Schritt legst Du die Sprache für den Installationsvorgang und für das Backend fest. 
+Im  ersten Schritt legst du die Sprache für den Installationsvorgang und für das Backend fest. 
 
 ![Sprachwahl](/assets/v5.2.0-installation-01-language.png)
 
@@ -71,13 +71,13 @@ Bitte wähle eine der drei Optionen.
 Schritt 5 -  Datenbank
 
 ### Schritt 6 - Administrator
-Definiere einen Namen und ein sicheres Passwort für den Administrator Deiner Redaxo-Installation. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- wie Kleinbuchstaben und Sonderzeichen. Auch ist es sinnvoll nicht unbedingt Admin oder Administrator als Benutzername anzulegen. Diese sind leicht zu erraten.  
+Definiere einen Namen und ein sicheres Passwort für den Administrator deiner Redaxo-Installation. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- wie Kleinbuchstaben und Sonderzeichen. Auch ist es sinnvoll nicht unbedingt Admin oder Administrator als Benutzername anzulegen. Diese sind leicht zu erraten.  
 
 ![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
 Schritt 6 -  Administrator
 
 ### Schritt 7 - Geschafft - Heureka - Hurra
-Die Installation ist erfolgreich. Bitte beachte die Hinweise auf der Seite oder melden dich direkt über den Button unter der Seite an. Alternativ kannst Du auch /redaxo/ hinter die URL im Browser schreiben, um in das Backend zu gelangen.
+Die Installation ist erfolgreich. Bitte beachte die Hinweise auf der Seite oder melden dich direkt über den Button unter der Seite an. Alternativ kannst du auch /redaxo/ hinter die URL im Browser schreiben, um in das Backend zu gelangen.
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7 -  Ende
