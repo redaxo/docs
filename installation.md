@@ -45,15 +45,12 @@ Schritt 3 -  Systemcheck
 
 ### Schritt 4 - Konfiguration
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt. 
-    - URL Der Website mit abschließendem /
-    
-    - Name der Website  
-    
-    - E-Mail-Adressse bei Fehlern
-    
-    - Zeitzone
-    
-    - Datenbankverbindung
+   
+- URL Der Website mit abschließendem /
+- Name der Website  
+- E-Mail-Adressse bei Fehlern
+- Zeitzone
+- Datenbankverbindung
 
 Hat Dein Benutzer das Recht auch neue Datenbanken zu erstellen, kannst du hier direkt eine neue Datenbank mit der oben agegebenen Bezeichnung anlegen lassen. 
 Befindet sich die Datenbank auf dem lokalen Server, kannst Du hier localhost stehen lassen. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall musst Du hier die Adresse des Datenbankservers eingeben. 
