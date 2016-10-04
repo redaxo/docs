@@ -5,7 +5,7 @@
     - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
 - Setup
-    - [Installation](/{{path}}/{{version}}/installation) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Installation](/{{path}}/{{version}}/installation) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup><sup><b>überprüfen</b></sup>
     - [Login](/{{path}}/{{version}}/login) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
 
