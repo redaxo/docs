@@ -72,8 +72,8 @@ An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 - Zeitzone
 - Datenbankverbindung
 
-Hat Dein Benutzer das Recht auch neue Datenbanken zu erstellen, kannst du hier direkt eine neue Datenbank mit der oben agegebenen Bezeichnung anlegen lassen. 
 Befindet sich die Datenbank auf dem lokalen Server, kannst Du hier localhost stehen lassen. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall musst Du hier die Adresse des Datenbankservers eingeben. 
+Hat dein Benutzer das Recht auch neue Datenbanken zu erstellen, kannst du hier direkt eine neue Datenbank mit der oben agegebenen Bezeichnung anlegen lassen. 
 
 ![Config](/assets/v5.2.0-installation-04-config.png)
 Schritt 4 -  Systemcheck
