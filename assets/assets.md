@@ -1,1 +1,0 @@
-Screenshots werden hier abgelegt
