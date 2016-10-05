@@ -10,7 +10,7 @@ In den folgenden Abschnitten erfährst du, wie du Redaxo auf deinem Server oder 
 
 <a name="schnell"></a>
 ## Schnellanleitung
-- Erstelle eine MySQL-Datenbank und notiere Dir die Zugangsdaten. 
+- Erstelle eine MySQL-Datenbank und notiere dir die Zugangsdaten. 
 - Lade die neuste Version unter http://redaxo.org/de/download/ herunter.
 - Entpacke die ZIP-Datei auf deinem Rechner.
 - Lade die Dateien in dein Webverzeichnis.
