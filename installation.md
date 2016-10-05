@@ -19,7 +19,7 @@ In den folgenden Abschnitten erfährst du, wie du Redaxo auf deinem Server oder 
 
 <a name="datenbank"></a>
 ## Datenbank
-Erstellle eine leere MySQL-Datenbank. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu solltest Du Zugangsdaten erhalten haben. Für die Installation benötigst du die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank. 
+Erstellle eine leere MySQL-Datenbank. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu solltest du Zugangsdaten erhalten haben. Für die Installation benötigst du die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank. 
 
 <a name="download"></a>
 ## Download
@@ -31,7 +31,7 @@ Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/d
 Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffentlichen Webserver. Meist lautet der Webpordner httpdocs , htdocs oder html. 
 Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst du von deinem Hostingpartner.
 
-> **Tipp:** Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
+> **Tipp:** Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
 
 
 > **Hinweis für MAC und Linux-User:** Stelle sicher, dass die versteckten .htaccess-Dateien mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden. 
@@ -72,7 +72,7 @@ An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 - Zeitzone
 - Datenbankverbindung
 
-Befindet sich die Datenbank auf dem lokalen Server, kannst Du hier localhost stehen lassen. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall musst Du hier die Adresse des Datenbankservers eingeben. 
+Befindet sich die Datenbank auf dem lokalen Server, kannst du hier localhost stehen lassen. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall musst du hier die Adresse des Datenbankservers eingeben. 
 Hat dein Benutzer das Recht auch neue Datenbanken zu erstellen, kannst du hier direkt eine neue Datenbank mit der oben agegebenen Bezeichnung anlegen lassen. 
 
 ![Config](/assets/v5.2.0-installation-04-config.png)
@@ -96,4 +96,5 @@ Die Installation ist erfolgreich. Bitte beachte die Hinweise auf der Seite oder 
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7 -  Ende
+
 
