@@ -2,9 +2,19 @@
 
 In den folgenden Abschnitten erfährst du, wie du Redaxo auf deinem Server oder Webspace installieren kannst. 
 
+- [Schnellanleitung](#schnell)
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
+
+<a name="schnell"></a>
+## Schnellanleitung
+- Lade die neuste Version unter  http://redaxo.org/de/download/ herunter
+- Entpacke die ZIP-Datei
+- Lade die Dateien in dein Webverzeichnis
+- Erstelle eine Datenbank
+- Starte die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) durch.
+- Gehe alle [Installationschritte](#install) durch
 
 <a name="download"></a>
 ## Download
@@ -14,7 +24,7 @@ Lade dir als erstes die aktuelle Version von Redaxo unter http://redaxo.org/de/d
 ## Upload 
 
 Entpacke das heruntergeladene Zip-File und verschiebe den Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffentlichen Webserver. Meist lautet der Webpordner httpdocs , htdocs oder html. 
-Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst du von deinem Hostingpartner
+Ausführliche Informationen zum Upload und zu deinen Zugangsdaten erhälst du von deinem Hostingpartner.
 
 > **Tipp:** Einige Hoster bieten zur Verwaltung auch Oberflächen wie PLESK oder CPANEL zur Verwaltung des Webspaces an. Hier enthalten ist auch ein Dateimanager mit dem Du die Zip-Datei direkt hochladen und auf dem Server entpacken kannst. 
 
