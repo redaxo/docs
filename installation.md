@@ -3,18 +3,23 @@
 In den folgenden Abschnitten erfährst du, wie du Redaxo auf deinem Server oder Webspace installieren kannst. 
 
 - [Schnellanleitung](#schnell)
+- [Datenbank](#datenbank)
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
 
 <a name="schnell"></a>
 ## Schnellanleitung
-- Lade die neuste Version unter  http://redaxo.org/de/download/ herunter
-- Entpacke die ZIP-Datei
-- Lade die Dateien in dein Webverzeichnis
-- Erstelle eine Datenbank
-- Starte die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) durch.
-- Gehe alle [Installationschritte](#install) durch
+- Erstelle eine MySQL-Datenbank und notiere Dir die Zugangsdaten. 
+- Lade die neuste Version unter http://redaxo.org/de/download/ herunter.
+- Entpacke die ZIP-Datei auf deinem Rechner.
+- Lade die Dateien in dein Webverzeichnis.
+- Führe die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) aus.
+- Gehe alle [Installationschritte](#install) durch.
+
+<a name="datenbank"></a>
+## Datenbank
+Erstellle eine leere MySQL-Datenbank. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu solltest Du Zugangsdaten erhalten haben. Für die Installation benötigst du die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank. 
 
 <a name="download"></a>
 ## Download
