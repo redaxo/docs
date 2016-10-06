@@ -8,5 +8,5 @@ Neu heruntergeladene Addons werden nicht automatisch installiert. Das muss immer
 Aktualisierungen finden dagegen automatisch statt.
 Bei der Aktualisierung wird je nach Einstellung ein Backup des alten AddOn-Ordners gemacht, ein Datenbankbackup wird jedoch nicht ausgeführt. 
 
-> Bitte schaue dir vor der Durchführung einer Aktualisierung unbedingt die Versionshinweise an. Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
+> Bitte schaue dir vor der Durchführung einer Aktualisierung unbedingt die Versionshinweise an. *Führe vorher ein Backup durch.* Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
 
