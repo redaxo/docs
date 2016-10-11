@@ -20,7 +20,7 @@ Anschließend kannst Du das Addon unter "Addons" installieren.
 
 ## Vorhandene Aktualisieren
 
-[SCREENSHOT geplant]
+![Systemcheck](/assets/v5.2.0-installer-01-aktualisieren.png)
 
 --- TEXT  in Vorbereitung ---
 
