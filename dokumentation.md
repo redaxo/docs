@@ -23,7 +23,7 @@
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
-    - [Installer](/{{path}}/{{version}}/installer) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Installer](/{{path}}/{{version}}/installer) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>offen</b></sup>
 
 - Service
