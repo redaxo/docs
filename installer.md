@@ -5,6 +5,11 @@ Neu heruntergeladene Addons werden nicht automatisch installiert. Das muss immer
 Aktualisierungen finden dagegen automatisch statt.
 Bei der Aktualisierung wird je nach Einstellung ein Backup des alten AddOn-Ordners gemacht, ein Datenbankbackup wird jedoch nicht ausgeführt. 
 
+- [Vorhandene Aktualisieren](#aktualisieren)
+- [Neue Addons herunterladen](#herunterladen)
+- [Eigende Addons hochladen](#hochladen)
+
+<a name="aktualisieren"></a>
 
 ## Vorhandene Aktualisieren
 
@@ -16,7 +21,7 @@ Im Bereich "Vorhandene Aktualisieren" siehst du welche Addons und Bestandteile d
 
 > Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
 
-
+<a name="herunterladen"></a>
 ## Neue Addons herunterladen
 
 ![Systemcheck](/assets/v5.2.0-installer-02-neue.png)
@@ -28,9 +33,11 @@ Lese dir die Beschreibung durch, damit du dir sicher sein kannst, dass du dieses
 
 Klicke auf "herunterladen" im obersten Punkt in der Dateien-Liste. Das Addon wird nun heruntergeladen.
 
-Anschließend kannst Du das Addon unter "Addons" installieren. 
+Anschließend kannst du das Addon unter "Addons" installieren. 
 
+<a name="hochladen"></a>
 ## Eigene Addons hochladen
 **Aus der Readme:** Wenn in den Einstellungen der Api-Key für myREDAXO hinterlegt wurde, können über den Installer auch die eigenen Addons in den Downloadbereich von Redaxo hochgeladen werden. Der Api-Key ist im eingeloggten Bereich unter http://www.redaxo.org/de/myredaxo/mein-api-key/ einzusehen. Da mit dem Key die eigenen AddOns über die Api verändert werden können, sollte der Key nicht weitergegeben werden.
+Weitere Informationen findest du im Abschnitt Entwicklung.
 
 
