@@ -19,7 +19,7 @@ Im Bereich "Vorhandene Aktualisieren" siehst du welche Addons und Bestandteile d
 
 ![Systemcheck](/assets/v5.2.0-installer-03-versionen.png)
 
-> Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
+> Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist und führe das jeweilige Update nicht aus. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
 
 <a name="herunterladen"></a>
 ## Neue Addons herunterladen
