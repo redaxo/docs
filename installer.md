@@ -8,7 +8,7 @@ Bei der Aktualisierung wird je nach Einstellung ein Backup des alten AddOn-Ordne
 
 ## Neue Addons herunterladen
 
-[SCREENSHOT geplant]
+![Neue Addons](/assets/v5.2.0-installer-02-neue.png)
 
 Öffne nun den Punkt "Neue Herunterladen". Hier findest du eine Liste mit den oben genannten Addons und ein paar Informationen wie Autor, Kurzbeschreibung und man kann das Addon anklicken um mehr zu erfahren. Willst du ein Addon installieren, klicke den Namen an, oder am Ende der Zeile den Link "ansehen" mit dem Augen-Icon.
 
@@ -20,9 +20,9 @@ Anschließend kannst Du das Addon unter "Addons" installieren.
 
 ## Vorhandene Aktualisieren
 
-![Systemcheck](/assets/v5.2.0-installer-01-aktualisieren.png)
+![Addons aktualisieren](/assets/v5.2.0-installer-01-aktualisieren.png)
 
---- TEXT  in Vorbereitung ---
+
 
 > Bitte schaue dir vor der Durchführung einer Aktualisierung unbedingt die Versionshinweise an. *Führe vorher ein Backup durch.* Manchmal ist es erforderlich Anpassungen nach einem Update durchzuführen. Solltest du dir hierbei nicht sicher sein, was zu tun ist, belasse besser alles vorerst wie es ist. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
 
