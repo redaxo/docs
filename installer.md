@@ -30,3 +30,7 @@ Klicke auf "herunterladen" im obersten Punkt in der Dateien-Liste. Das Addon wir
 
 Anschließend kannst Du das Addon unter "Addons" installieren. 
 
+## Eigene Addons hochladen
+**Aus der Readme:** Wenn in den Einstellungen der Api-Key für myREDAXO hinterlegt wurde, können über den Installer auch die eigenen Addons in den Downloadbereich von Redaxo hochgeladen werden. Der Api-Key ist im eingeloggten Bereich unter http://www.redaxo.org/de/myredaxo/mein-api-key/ einzusehen. Da mit dem Key die eigenen AddOns über die Api verändert werden können, sollte der Key nicht weitergegeben werden.
+
+
