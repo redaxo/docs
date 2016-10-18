@@ -10,11 +10,11 @@
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Anwender
-    - [Profil](/{{path}}/{{version}}/profil) <sup><b>offen</b></sup>
-    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>offen</b></sup>
+    - [Profil](/{{path}}/{{version}}/profil) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>offen</b></sup>
-    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>offen</b></sup>
-    - [Backup](/{{path}}/{{version}}/backup) <sup><b>offen</b></sup>
+    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Backup](/{{path}}/{{version}}/backup) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
