@@ -46,7 +46,7 @@
     - [Pfade](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
-    - [REX_VARs](/{{path}}/{{version}}/redaxo-variablen) <sup><b>offen</b></sup>
+    - [REX_VARs](/{{path}}/{{version}}/redaxo-variablen) <sup><b>in Bearbeitung</b></sup> <sup><i>Daniel</i></sup>
     - [Sinnvolles (dir, file, finder etc.)](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
