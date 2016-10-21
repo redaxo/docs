@@ -14,6 +14,7 @@
 - [Anlegen eines Benutzers](#benutzer)
 
 <a name="einleitung"></a>
+## Einleitung
 In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Du kannst die einzelnen Nutzer mit verschiednenen Rollen versehen und diesen Rollen unterschiedliche Rechte zuweisen. 
 Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde findest du die Benutzervaltung im Menüpunkt  **Benutzer**. 
 
