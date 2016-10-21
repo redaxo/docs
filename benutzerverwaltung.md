@@ -6,6 +6,7 @@ Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde find
 - [Benutzerliste](#liste)
 - [Rollen](#rollen)
 - [Anlegen einer Rolle](#rollenerstellen)
+  - [Beschreibung](#beschreibung)
   - [Allgemein](#rolleallgemein)
   - [Optionen](#rolleoptionen)
   - [Extras](#rolleextras)
@@ -42,16 +43,23 @@ Redakteure benötigen meist einen Bruchteil der verfügbaren Berechtigungen.  Di
 <a name="rollenerstellen"></a>
 ## Anlegen einer Rolle
 Klicke im Reiter Rollen auf das Plus-Symbol um eine neue Rolle zu erstellen. 
+Eine Rollendefinition ist in mehrere Abschnitte unterteilt. Je nach installiertem Addon können weitere Abschnitte hinzukommen. Nachfolgend erklären wir dir die Standardabschnitte, die nach der Installation zur Verfügung stehen. 
+
+<a name="beschreibung"></a>
+### Beschreibung
+Hinterlege eine Beschreibung für die Rolle um ggf. anderen Administratoren zu erklären für wen diese Rolle gedacht ist oder welche Einschränkungen du durchgeführt hast. 
+
 <a name="rolleallgemein"></a>
 ### Allgemein
 
-Allgemein bedeutet, der Benutzer bekommt generell Zugriff auf Addons bzw. Plugins. Es kann also sein, dass der Benutzer auf das Addon zugreifen können muss um eine Option nutzen zu können. Ein Beispiel: Ein Benutzer hat zugriff auf ein Addon und kann die Option Hilfe nutzen, aber nicht die Einstellung.
+Im Abschnitt Allgemein wird der generelle Zugriff auf ein Addon oder Plugin definiert. Es kann sein, dass der Benutzer auf das Addon zugreifen können muss um die für die Redaktion erforderlichen Funktionen zu nutzen. Er benötigt aber nicht die Funktionen zur Konfiguration des Addons. 
 
-Eine Rollendefinition ist in mehrere Abschnitte unterteilt. 
+> Ein Beispiel: Ein Benutzer soll eine Tabelle eines Glossars pflegen, aber nicht die Struktur der Tabelle verändern dürfen. 
+
 <a name="rolleoptionen"></a>
 
 ### Optionen
-Einige Addons bzw. Plugins haben mehrere Optionen. Diese können in dem Feld Optionen aktiviert werden.
+Einige Addons oder Plugins haben mehrere zusätzliche Optionen. Diese können in dem Feld Optionen aktiviert werden.
 
 <a name="rolleextras"></a>
 ### Extras
