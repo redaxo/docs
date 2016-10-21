@@ -12,7 +12,7 @@ Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde find
   - [Sprachen](#rollesprachen)
   - [Kategorien](#rollekategorien)
   - [Medienordner](#rollemedienordner)
-  - [Module](#rolleomodule)
+  - [Module](#rollemodule)
 - [Anlegen eines Benutzers](#benutzer)
 
 <a name="liste"></a>
