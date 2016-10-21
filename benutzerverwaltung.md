@@ -1,10 +1,10 @@
 # Benutzerverwaltung
 
 In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Du kannst die einzelnen Nutzer mit verschiednenen Rollen versehen und diesen Rollen unterschiedliche Rechte zuweisen. 
-Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde findest du die Benutzervaltung im Menüpunkt  ** Benutzer **. 
+Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde findest du die Benutzervaltung im Menüpunkt  **Benutzer**. 
 
 - [Benutzerliste](#liste)
-- [rollen](#rollen)
+- [Rollen](#rollen)
 - [Anlegen einer Rolle](#rollenerstellen)
   - [Allgemein](#rolleallgemein)
   - [Optionen](#rolleoptionen)
@@ -13,7 +13,7 @@ Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde find
   - [Kategorien](#rollekategorien)
   - [Medienordner](#rollemedienordner)
   - [Module](#rolleomodule)
-
+- [Anlegen eines Benutzers](#benutzer)
 
 <a name="liste"></a>
 ## Benutzerliste
@@ -25,8 +25,8 @@ Folgende Informationen zu den einzelen Benutzern werden aufgelistet:
 - Rolle
 - letzter Login
 
-Zum Bearbeiten eines Nutzers klickst du auf  ** editieren **.
-Zum Löschen eines Nutzers klickst du auf  ** löschen **.
+Zum Bearbeiten eines Nutzers klickst du auf  **editieren**.
+Zum Löschen eines Nutzers klickst du auf  **löschen**.
 > Das Löschen des aktuell angemeldeten Nutzers (also deines eigenen Accounts) ist nicht möglich. 
 
 <a name="rollen"></a>
@@ -65,7 +65,7 @@ Hier legst Du fest auf welche Kategorien (Rubriken) der Redakteur Zugriff erhäl
 Lege hier fest auf welche Medienpool-Kategorien der Benutzer eine Schreibberechtigung erhält. 
 > Er besitzt weiterhin das Lese- und Nutzrecht für alle Medien, kann diese aber darüber hinaus nicht bearbeiten. 
 
-<a name="rollememodule"></a>
+<a name="rollemodule"></a>
 ### Module
 Um das Backend für einige Benutzer noch einfacher bzw. übersichtlicher zu gestalten, kann der Zugriff auf wenige Module - oder auch Slices - beschränkt werden. Damit könnte man Benutzer, die lediglich News Pflegen können sollen, nur die News-Module freigeben.
 
