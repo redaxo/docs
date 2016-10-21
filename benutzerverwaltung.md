@@ -75,7 +75,8 @@ Um einen neuen Benutzer anzulegen klickst Du auf das Plus-Symbol in der Benutzer
 ![Systemcheck](/assets/v5.2.0-Benutzerverwaltung--benutzer.png)
 Benutzer anlegen
 
-Du kannst jetzt folgende Einstellungen durchfühen: 
+Du kannst folgende Einstellungen durchfühen: 
+
 - Benutzername 
 - Passwort (*Kann durch den Nutzer im Profil geändert werden*) 
 - Name
@@ -89,8 +90,9 @@ Du kannst jetzt folgende Einstellungen durchfühen:
 
 <a name="Admin"></a>
 ## Admin
-Der Admin erhält alle Rechte und Zugriff auf alle System- und Addonfunktionen
+Der Admin erhält alle Rechte und Zugriff auf alle System- und Addonfunktionen. 
+> Um Fehlbedienungen zu vermeiden sollten Redakteure geeignete Rechte über eine Rolle erhalten. 
 
 <a name="startseite"></a>
 ## Startseite
-Hier kannst Du festlegen welche Seite direkt nach dem Login im Backend aufgerufen werden soll, Standard: Struktur. 
+Hier kannst du festlegen welche Seite direkt nach dem Login im Backend aufgerufen werden soll, Standard: Struktur. 
