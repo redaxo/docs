@@ -55,5 +55,4 @@ Lege hier fest auf welche Medienpool-Kategorien der Benutzer eine Schreibberecht
 
 Um das Backend für einige Benutzer noch einfacher bzw. übersichtlicher zu gestalten, kann der Zugriff auf wenige Module - oder auch Slices - beschränkt werden. Damit könnte man Benutzer, die lediglich News Pflegen können sollen, nur die News-Module freigeben.
 
-
 ## Anlegen eines Benutzers
