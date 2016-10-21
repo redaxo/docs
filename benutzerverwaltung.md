@@ -28,9 +28,11 @@ Folgende Informationen zu den einzelen Benutzern werden aufgelistet:
 - Rolle
 - letzter Login
 
-Zum Bearbeiten eines Nutzers klickst du auf  **editieren**.
-Zum Löschen eines Nutzers klickst du auf  **löschen**.
+Zum Bearbeiten eines Benutzers klickst du auf  **editieren**.
+Zum Löschen eines Benutzers klickst du auf  **löschen**.
 > Das Löschen des aktuell angemeldeten Nutzers (also deines eigenen Accounts) ist nicht möglich. 
+
+[Einen neuen Benutzer](#benutzer) erstellt du durch Klick auf das Plus-Symbol. 
 
 <a name="rollen"></a>
 ## Rollen 
