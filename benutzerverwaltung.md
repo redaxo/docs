@@ -1,8 +1,5 @@
 # Benutzerverwaltung
-
-In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Du kannst die einzelnen Nutzer mit verschiednenen Rollen versehen und diesen Rollen unterschiedliche Rechte zuweisen. 
-Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde findest du die Benutzervaltung im Menüpunkt  **Benutzer**. 
-
+- [Einleitung](#einleitung)
 - [Benutzerliste](#liste)
 - [Rollen](#rollen)
 - [Anlegen einer Rolle](#rollenerstellen)
@@ -15,6 +12,10 @@ Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde find
   - [Medienordner](#rollemedienordner)
   - [Module](#rollemodule)
 - [Anlegen eines Benutzers](#benutzer)
+
+<a name="einleitung"></a>
+In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Du kannst die einzelnen Nutzer mit verschiednenen Rollen versehen und diesen Rollen unterschiedliche Rechte zuweisen. 
+Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde findest du die Benutzervaltung im Menüpunkt  **Benutzer**. 
 
 <a name="liste"></a>
 ## Benutzerliste
