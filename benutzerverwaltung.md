@@ -17,6 +17,9 @@ Sofern du Administrator bist oder dir das entsprechende Recht erteilt wurde find
 
 <a name="liste"></a>
 ## Benutzerliste
+![Systemcheck](/assets/v5.2.0-Benutzerverwaltung--liste.png)
+Benutzerliste
+
 Bei Aufruf der Benutzerverwaltung wird dir die Liste aller System-Benutzer aufgelistet.
 Folgende Informationen zu den einzelen Benutzern werden aufgelistet: 
 - ID
