@@ -1,9 +1,18 @@
 # Strukturverwaltung
 
-Die Strukturverwaltung ist der zentrale Teil der Websiteverwaltung, sie stellt die Übersicht der Inhalte dar und dient derer Verwaltung.
+Die Strukturverwaltung ist die eigentliche Schaltzentrale zur Verwaltung deiner Webpräsenz. Durch Aufruf des Menüpunktes „Struktur“ gelangst du in die Strukturverwaltung Ihrer Website. 
 
-Die Navigationsstruktur ist hierarchisch eingeteilt. Es gibt Kategorien und Artikel. Artikel werden in den verschiedenen Kategorien sortiert. In der jeweiligen Kategorie sind verschiedene Artikel (meist lediglich ein Startartikel). Jeder Artikel besteht wiederum aus verschiedenen Blöcken (Slices).
+Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbetriebsystems (Windows/Mac). Wobei die hier gezeigten Ordner die Kategorien (oder Rubriken) der Website darstellen.  Diesen Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. Die Ordnerstruktur spiegelt meist die Navigationsstruktur deiner Website wieder. So ist es relativ einfach den gewünschten Artikel oder die Kategorie zu finden.
 
-Zum Verständnis: Man kann sich für dieses Beispiel durchaus die Internetseite mit einem Buch vergleichen: Der Umschlag und Schriftart ist von jemanden festgelegt. Die Struktur ist eingeteilt in Kapitel (= Kategorien) jedes Kapitel kann aus mehrere Seiten bestehen (= Artikel). Meistens hat ein Kapitel jedoch nur eine Seite (= Startartikel). Jeder Artikel besteht aus mehreren Absätzen (= Blöcken/Slices).
+> Tipp: Jede Kategorie und jeder Artikel sollte einen eindeutigen Namen erhalten. Dies hilft später bei der Navigation und den Suchmaschinen (z.B. Google / Bing) den Artikel thematisch zuzuordnen. 
 
-Kategorien und Artikel erhalten stets einen Namen. Mit der Priorität wird die Reihenfolge bestimmt, in der die Kategorie oder der Artikel angezeigt werden. Dies gilt auch für das Frontend. Der Status zeigt an, ob das Element online – also sichtbar oder offline – also nicht sichtbar ist. In Einzelfällen kann es vorkommen, dass Redaxo von den Entwicklern anders konfiguriert wurde. Dann hat online/offline keine oder eine andere Funktion. Über editieren und löschen können Sie den Artikel / die Kategorie verändern (Name und Priorität) oder ganz entfernen. Eine Kategorie kann jedoch nur gelöscht werden, wenn Sie keine Artikel außer dem Startartikel enthält.
+## Funktionen der Strukturverwaltung
+
+In  der Struktur erstellest und verwaltest du deine Kategorien und Artikel. Sie ermöglicht den Aufbau der Navigation und die Durchführung von Einstellungen. 
+
+### Pfad
+Anhand der Pfad-Anzeige kannst Du jederzeit sehen, wo du sich innerhalb der Struktur befindest
+
+###  ... 
+
+
