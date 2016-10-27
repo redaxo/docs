@@ -1,6 +1,6 @@
 # Strukturverwaltung
 
-Die Strukturverwaltung ist die eigentliche Schaltzentrale zur Verwaltung deiner Webpräsenz. Durch Aufruf des Menüpunktes „Struktur“ gelangst du in die Strukturverwaltung Ihrer Website. 
+Die Strukturverwaltung ist die eigentliche Schaltzentrale zur Verwaltung deiner Webpräsenz. Durch Aufruf des Menüpunktes „Struktur“ gelangst du in die Strukturverwaltung deiner Website. 
 
 Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbetriebsystems (Windows/Mac). Wobei die hier gezeigten Ordner die Kategorien (oder Rubriken) der Website darstellen.  Diesen Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. Die Ordnerstruktur spiegelt meist die Navigationsstruktur deiner Website wieder. So ist es relativ einfach den gewünschten Artikel oder die Kategorie zu finden.
 
