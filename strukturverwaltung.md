@@ -11,8 +11,9 @@ Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbet
 In  der Struktur erstellest und verwaltest du deine Kategorien und Artikel. Sie ermöglicht den Aufbau der Navigation und die Durchführung von Einstellungen. 
 
 ### Pfad
-Anhand der Pfad-Anzeige kannst Du jederzeit sehen, wo du sich innerhalb der Struktur befindest
+Anhand der Pfad-Anzeige kannst Du jederzeit sehen, wo du dich innerhalb der Struktur befindest. 
 
 ###  ... 
+
 
 
