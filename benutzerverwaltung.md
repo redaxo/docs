@@ -98,13 +98,13 @@ Du kannst folgende Einstellungen durchfühen:
 - Name
 - Beschreibung (z.B. Chefredakteur)
 - E-Mail-Adresse (wird evtl. von einigen Addons benötigt)
-- [Admin](#Admin)
+- [Admin](#qdmin)
 - User ist aktiv
 - [Rolle](#rollen)
 - [Startseite](#startseite)
 - Backendsprache
 
-<a name="Admin"></a>
+<a name="admin"></a>
 ## Admin
 Der Admin erhält alle Rechte und Zugriff auf alle System- und Addonfunktionen. 
 > Um Fehlbedienungen zu vermeiden sollten Redakteure geeignete Rechte über eine Rolle erhalten. 
