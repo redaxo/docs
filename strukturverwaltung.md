@@ -11,11 +11,11 @@ Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbet
 <a name="artikel_und_kategorien"></a>
 ## Artikel und Kategorien
 
-Das seitenbildende Element ist der **Artikel**. Er steht in der Regel für eine Inhaltsseite Ihrer Webseite. Für jeden Artikel kann ein **Template** ausgewählt werden, das den Rahmen oder das Erscheinungsbild der Webseite bestimmt. Über die Funktion **Status** kann – soweit programmiert – die Seite **online und offline** geschaltet werden.
+Das seitenbildende Element ist der **Artikel**. Er steht in der Regel für eine Inhaltsseite deiner Website. Für jeden Artikel kann ein **Template** ausgewählt werden, das den Rahmen oder das Erscheinungsbild der Seite bestimmt. Über die Funktion **Status** kann – soweit vorgesehen – die Seite **online und offline** geschaltet werden.
 
-Die Verwaltung der Artikel erfolgt über die **Kategorien**. In REDAXO wird eine hierarchische Struktur eingesetzt. Das heißt, verschiedene Kategorien (Ordner) enthalten verschiedene Artikel (Inhalte). Jede Kategorie hat einen **Startartikel** (Startartikel sind Einstiegsseiten einer Kategorie – im Normalfall Übersichtsseiten).
+Die Verwaltung der Artikel erfolgt über die **Kategorien**. In REDAXO wird eine hierarchische Struktur eingesetzt. Das heißt, verschiedene Kategorien (Ordner) enthalten verschiedene Artikel (Inhalte). Jede Kategorie hat einen **Startartikel** (Startartikel sind Einstiegsseiten einer Kategorie).
 
-Normale Artikel können in beliebiger Anzahl erstellt werden. Einem Artikel kann man ein Template zuweisen, welches die Darstellungsform bestimmt. Ein Artikel besteht aus mehreren **Blöcken** und repräsentiert den eigentlichen Inhalt. Die Erstellung dieser Blöcke basiert auf **Modulen**. Mittels der Module werden Eingabemasken für Textbausteine, Bilder u. a. definiert und die Anzeige der dort eingegebenen Inhalte formatiert.
+Einfache Artikel können in beliebiger Anzahl erstellt werden. Einem Artikel kann man ein Template zuweisen, welches die Darstellungsform bestimmt. Ein Artikel besteht aus mehreren **Blöcken** und repräsentiert den eigentlichen Inhalt. Die Erstellung dieser Blöcke basiert auf **Modulen**. Mittels der Module werden Eingabemasken für Textbausteine, Bilder u. a. definiert und die Anzeige der dort eingegebenen Inhalte formatiert.
 
 Weiterhin hat der Artikel Metadaten, die ihn allgemein beschreiben (z.B. Kurzbeschreibung, Suchbegriff und Grafik).
 
