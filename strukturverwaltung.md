@@ -13,7 +13,7 @@ Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbet
 
 Das seitenbildende Element ist der **Artikel**. Er steht in der Regel für eine Inhaltsseite deiner Website. Für jeden Artikel kann ein **Template** ausgewählt werden, das den Rahmen oder das Erscheinungsbild der Seite bestimmt. Über die Funktion **Status** kann – soweit vorgesehen – die Seite **online und offline** geschaltet werden.
 
-Die Verwaltung der Artikel erfolgt über die **Kategorien**. In REDAXO wird eine hierarchische Struktur eingesetzt. Das heißt, verschiedene Kategorien (Ordner) enthalten verschiedene Artikel (Inhalte). Jede Kategorie hat einen **Startartikel** (Startartikel sind Einstiegsseiten einer Kategorie).
+Die Verwaltung der Artikel erfolgt in den **Kategorien**. In REDAXO wird eine hierarchische Struktur eingesetzt. Das heißt, verschiedene Kategorien (Ordner) enthalten verschiedene Artikel (Inhalte). Jede Kategorie hat einen **Startartikel** (Startartikel sind Einstiegsseiten einer Kategorie).
 
 Einfache Artikel können in beliebiger Anzahl erstellt werden. Einem Artikel kann man ein Template zuweisen, welches die Darstellungsform bestimmt. Ein Artikel besteht aus mehreren **Blöcken** und repräsentiert den eigentlichen Inhalt. Die Erstellung dieser Blöcke basiert auf **Modulen**. Mittels der Module werden Eingabemasken für Textbausteine, Bilder u. a. definiert und die Anzeige der dort eingegebenen Inhalte formatiert.
 
