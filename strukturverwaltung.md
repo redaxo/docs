@@ -8,12 +8,15 @@ Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbet
 
 ## Funktionen der Strukturverwaltung
 
-In  der Struktur erstellest und verwaltest du deine Kategorien und Artikel. Sie ermöglicht den Aufbau der Navigation und die Durchführung von Einstellungen. 
+In  der Struktur erstellst und verwaltest du deine Kategorien und Artikel. Sie ermöglicht dir den Aufbau der Navigation und die Durchführung von Einstellungen. 
 
 ### Pfad
 Anhand der Pfad-Anzeige kannst Du jederzeit sehen, wo du dich innerhalb der Struktur befindest. 
 
-###  ... 
+### Artikel und Kategorien
+Die Ansicht der Struktur ist zweigeteilt. Im oberen Bereich werden die Kategorien angezeigt und im unteren Abschnitt die Artikel der gerade ausgewählten Kategorie. 
+
+... 
 
 
 
