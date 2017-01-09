@@ -92,7 +92,7 @@ Definiere einen Namen und ein sicheres Passwort für den Administrator deiner Re
 Schritt 6 -  Administrator
 
 ### Schritt 7 - Geschafft - Heureka - Hurra
-Die Installation ist erfolgreich. Bitte beachte die Hinweise auf der Seite oder melden dich direkt über den Button unter der Seite an. Alternativ kannst du auch /redaxo/ hinter die URL im Browser schreiben, um in das Backend zu gelangen.
+Die Installation ist erfolgreich. Bitte beachte die Hinweise auf der Seite oder melden dich direkt über den Button unten an. Alternativ kannst du auch /redaxo/ hinter die URL deiner Installation im Browser eingeben, um in das Backend zu gelangen. (www.domain.xy/redaxo)
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7 -  Ende
