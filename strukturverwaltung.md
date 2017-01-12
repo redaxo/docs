@@ -25,7 +25,7 @@ Die Pfadanzeige zeigt dir an, wo du dich innerhalb der Struktur befindest. Bei K
 Zum Erstellen einer neuen Kategorie, klicke auf das (+)-Symbol, gebe den Namen der Kategorie ein und speichere deine Eingabe über die Schaltfläche “Kategorie hinzufügen” ab. Die erstellte Kategorie ist zunächst offline gestellt. 
 
 ### Artikel erstellen
-Zum Erstellen einer neues Artikels, klicke auf das (+)-Symbol, gebe den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Speichere deine Eingabe über die Schaltfläche “Artikel hinzufügen” ab. Der erstellte Artikel ist zunächst offline gestellt. 
+Zum Erstellen einer neues Artikels, klicke auf das (+)-Symbol, gebe den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Speichere deine Eingabe über die Schaltfläche “Artikel hinzufügen” ab. Der erstellte Artikel ist zunächst offline gestellt. Die weitere Bearbeitung des Artikels erfolgt nach Klick auf den Artikelnamen. 
 
 ### Online / Offline
 Hiermit können Artikel und Kategorien den Status online oder offline erhalten. 
