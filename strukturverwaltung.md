@@ -1,62 +1,37 @@
 # Strukturverwaltung
 
 - [Über](#ueber)
-- [Artikel und Kategorien](#artikel_und_kategorien)
-- [Kategorien](#kategorien)
-- [Artikel](#artikel)
+- [Funktionsbeschreibung](#funktionen)
 
 <a name="ueber"></a>
 ## Über
 
 Die Strukturverwaltung ist die eigentliche Schaltzentrale zur Verwaltung deiner Webpräsenz. Durch Aufruf des Menüpunktes „Struktur“ gelangst du in die Strukturverwaltung deiner Website. Die Strukturverwaltung wird meistens direkt nach dem Login (je nach vergebenen Rechten) aufgerufen. 
 
-Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbetriebsystems (Windows/Mac). Wobei die hier gezeigten Ordner die Kategorien (oder Rubriken) der Website darstellen.  Diesen Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. Die Ordnerstruktur spiegelt die Navigationsstruktur deiner Website wieder. So ist es relativ einfach den gewünschten Artikel oder die Kategorie zu finden.
+Die Strukturverwaltung ähnelt einer Ordneransicht eines klassischen Computerbetriebsystems (Windows/Mac). Wobei die hier gezeigten Ordner die Kategorien (oder Rubriken) der Website darstellen.  Diesen Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. Gewöhnlich spiegelt die Struktur die Navigation deiner Website wieder. So ist es relativ einfach den gewünschten Kategorie (Rubrik) oder den gewünschten Artikel zu finden.
 
-<a name="artikel_und_kategorien"></a>
-## Artikel
+--- SCREENSHOT ---
 
-Das seitenbildende Element ist der **Artikel**. Er steht in der Regel für die Inhaltsseite deiner Website. Für jeden Artikel kann ein **Template** ausgewählt werden, das den Rahmen oder das Erscheinungsbild der Seite bestimmt. Über die Funktion **Status** kann – soweit vorgesehen – die Seite **online und offline** geschaltet werden.
+Die Struktur ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien Kategorien der aktuell gewählten Kategorie dargestellt, darunter die zugehörigen Kategorien der gerade aktiven Kategorie. 
 
-Die Verwaltung der Artikel erfolgt in den **Kategorien**. In REDAXO wird eine hierarchische Struktur eingesetzt. Das heißt, verschiedene Kategorien (Ordner) enthalten verschiedene Artikel (Inhalte). Jede Kategorie hat einen **Startartikel**. Der Startartikel ist die Einstiegsseite der Kategorie. Weitere Artikel einer Kategorie können mittels spezieller Listen oder Navigationen auf der Website gelistet werden. 
+<a name="funktionen"></a>
+## Funktionsbeschreibung
+In der Struktur kannst du die Struktur deiner Website verwalten und erweiteren.
+Folgende Funktionen stehen hierzu zur Verfügung: 
 
-Einfache Artikel können in beliebiger Anzahl erstellt werden. Einem Artikel kann man ein Template zuweisen, welches die Darstellungsform bestimmt. 
+### Pfad 
+Die Pfadanzeige zeigt dir an, wo du dich innerhalb der Struktur befindest. Bei Klick auf einen Abschitt des Pfades wechselst du direkt in die gewünschte Kategorie. 
 
-> Tipp: Jede Kategorie und jeder Artikel sollte einen eindeutigen Namen erhalten. Dies hilft später bei der Navigation und den Suchmaschinen (z.B. Google / Bing) den Artikel thematisch zuzuordnen. 
+#### Kategorie erstellen
+Zum Erstellen einer neuen Kategorie, klicke auf das (+)-Symbol, gebe den Namen der Kategorie ein und speichere deine Eingabe über die Schaltfläche “Kategorie hinzufügen” ab. Die erstellte Kategorie ist zunächst offline gestellt. 
 
-<a name="kategorien"></a>
-## Kategorien
+#### Artikel erstellen
+Zum Erstellen einer neues Artikels, klicke auf das (+)-Symbol, gebe den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Speichere deine Eingabe über die Schaltfläche “Artikel hinzufügen” ab. Der erstellte Artikel ist zunächst offline gestellt. 
 
-Kategorien werden, wie in einem Explorer oder Finder, zur Strukturierung und Verwaltung der Artikel erstellt. Sie können wiederum andere Kategorien und Artikel enthalten. Kategorien werden meist genutzt, um Navigationsstrukturen abzubilden. Für die meisten Fälle gilt: Was in der Struktur zu sehen ist, sieht man auch auf der Sitemap und in der Navigation. Die Priorität organisiert die Reihenfolge der Kategorien.
+#### Online / Offline
+Hiermit können Artikel und Kategorien den Status online oder offline erhalten. 
+Sofern bei der Programmierung der Website berücksichtigt, werden offline gestellte Artikel und Kategorien in den Navigationen der Website ausgeblendet oder gar gesperrt. In der Strukturverwaltung selbst hat diese Funktion keine Auswirkung, die Inhalte, Artikel und Kategorien können weiterhin bearbeitet und betrachtet werden.  
 
-Jede Kategorie enthält nach dem Erstellen immer einen Startartikel, der nicht gelöscht oder in der Funktion offline/online verändert werden kann.Wechseln Sie in die gewünschte Kategorie, indem Sie auf den Namen der Kategorie klicken. Die Kategorie wird danach mit den enthaltenen Artikeln angezeigt.
-
-
-**Erstellen**
-
-Zum Erstellen einer neuen Kategorie, klicke auf das (+)-Symbol, geben den Namen der Kategorie ein und speichere deine Eingabe über die Schaltfläche “Kategorie hinzufügen” ab. Die so erstellte Kategorie ist zunächst offline gestellt. 
-
-**Funktion/Status**
-
-Diese Einstellung kann vom Entwickler ausgelesen und genutzt werden. Neben der Verwaltung können Kategorien die Seitennavigation Ihrer Webseite bilden. Über die oben beschriebene Funktion “online/offline” kann der Name sichtbar geschaltet werden. Diese Funktion wird in der Regel bei der Programmierung eines Templates genutzt.
-
-
-
-**Prio**
-
-Über die Einstellung Prio kann die Reihenfolge der Kategorien in der Strukturverwaltung verändert werden. Die Reihenfolge kann auch bei der Ausgabe der Kategorien auf der Webseite genutzt werden.
-
-<a name="artikel"></a>
-## Artikel
-
-Artikel sind die eigentlichen Inhalte. Ein Artikel besteht aus einem Artikelnamen, einem Template, beschreibenden Daten (Metadaten) und dem eigentlichen Inhalt, welcher auf der Webseite im Normalfall zu sehen ist.
-
-In der Strukturverwaltung kommt man über die Kategorien zu den Artikeln und sieht diese immer unterhalb einer Kategorie und deren Unterkategorien.
-
-Es gibt zwei Arten von Artikeln. Den Startartikel und den “normalen” Artikel. Ein Startartikel hängt immer an einer Kategorie, das heißt, es ist immer ein Startartikel in einer Kategorie vorhanden. Um weitere Artikel anzulegen, kann man neben dem Artikelnamen auf das Plus-Icon klicken und einen neuen Artikel anlegen.
-
-Mit online/offline kann man, wie bei den Kategorien auch, den Artikel aktivieren und deaktivieren. Abhängig von der Programmierung wird dann dieser Artikel angezeigt oder nicht. Man kann beliebig viele Artikel anlegen und über die “Prio”-Spalte positionieren. Mit dem Template wird definiert, in welchem Rahmen ein Artikel dargestellt werden soll.
-
-Inhalte werden über Blöcke gepflegt. Wenn man auf dem Artikelnamen klickt, springt man in die Inhaltsverwaltung. Siehe 2.2 Inhaltsverwaltung
-
-
+#### Prio
+Die Priorität (Prio) definiert die Reihenfolge der Artikel und Kategorien in der Struktur. Die Prio kannst du ändern, indem du neben den Artikel- oder Kategorienamen auf “ändern” klickst und anschließend den Prio-Wert änderst. Du speicherst die Einstellung mit “Artikel speichern” oder “Kategorie speichern”. 
 
