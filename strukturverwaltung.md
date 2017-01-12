@@ -5,7 +5,7 @@
 
 <a name="ueber"></a>
 ## Über
-Über die Strukturverwaltung werden Kategorien angelegt und verwaltet, die sowohl als Navigation im Backend dienen und optional als Navigationsmenü im Frontend verwendet werden können.Die verfügbaren Optionen hängen von den Rechten des jeweiligen Benutzers ab. Die Strukturverwaltung wird meistens direkt nach dem Login (je nach vergebenen Rechten) aufgerufen. Die Reihenfolge der einzelnen Kategorien wird über die Prioritätenspalte festgelegt.  Den Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. 
+Über die Strukturverwaltung werden Kategorien angelegt und verwaltet, die sowohl als Navigation im Backend dienen und optional als Navigationsmenü im Frontend verwendet werden können.Die verfügbaren Optionen hängen von den Rechten des jeweiligen Benutzers ab. Die Strukturverwaltung wird meistens direkt nach dem Login (je nach vergebenen Rechten) aufgerufen und ist über den Menüpunkt „Struktur“ erreichbar. Die Reihenfolge der einzelnen Kategorien wird über die Prioritätenspalte festgelegt. Den Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. 
 Ob die Inhalte im Frontend dargestellt werden sollen, lässt sich über die Funktion „online“ oder „offline“ bestimmen.
 
 ![Systemcheck](/assets/v5.2.0-Struktur-01-overview.png.png)
