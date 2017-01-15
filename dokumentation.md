@@ -21,10 +21,13 @@
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Module / Aktionen](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Aktionen](/{{path}}/{{version}}/aktionen) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Installer](/{{path}}/{{version}}/installer) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>offen</b></sup>
+    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>offen</b></sup>
 
 - Service
     - [Api](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
@@ -40,8 +43,6 @@
     - [Listen](/{{path}}/{{version}}/listen) <sup><b>offen</b></sup>
         - Tabellen (rex_list)
         - Auswahllisten (rex_select)
-    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>offen</b></sup>
-    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>offen</b></sup>
     - [Paginierung](/{{path}}/{{version}}/paginierung) <sup><b>offen</b></sup>
     - [Pfade](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
