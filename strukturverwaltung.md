@@ -11,7 +11,7 @@ Ob die Inhalte im Frontend dargestellt werden sollen, lässt sich über die Funk
 ![Systemcheck](/assets/v5.2.0-Struktur-01-overview.png.png)
 Struktur nach dem Login / Hauptebene
 
-Die Strukturansicht  ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien Kategorien der aktuell gewählten Kategorie dargestellt, darunter die zugehörigen Kategorien der gerade aktiven Kategorie. 
+Die Strukturansicht  ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien der aktuell gewählten Kategorie dargestellt, darunter die Artikel der gerade aktiven Kategorie. 
 
 <a name="funktionen"></a>
 ## Funktionsbeschreibung
@@ -32,7 +32,7 @@ Hiermit können Artikel und Kategorien den Status online oder offline erhalten.
 Sofern bei der Programmierung der Website berücksichtigt, werden offline gestellte Artikel und Kategorien in den Navigationen der Website ausgeblendet oder gar gesperrt. In der Strukturverwaltung selbst hat diese Funktion keine Auswirkung, die Inhalte, Artikel und Kategorien können weiterhin bearbeitet und betrachtet werden.  
 
 ### Ändern 
-Das Ändern der Artikel– und Dateinamen, die Reigenfolge, optionale Metadaten oder die Templateauswahl sind über die “ändern”-Funktio zugänglich. 
+Das Ändern der Artikel– und Kategorienamen, die Reigenfolge, optionale Metadaten der Kategorien oder die Templateauswahl für Artikel sind über die “ändern”-Funktio zugänglich. 
 
 #### Prio
 Die Priorität (Prio) definiert die Reihenfolge der Artikel und Kategorien in der Struktur. Die Prio kannst du ändern, indem du neben den Artikel- oder Kategorienamen auf “ändern” klickst und anschließend den Prio-Wert änderst. Du speicherst die Einstellung mit “Artikel speichern” oder “Kategorie speichern”.
