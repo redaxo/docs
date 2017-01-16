@@ -25,9 +25,9 @@
     - [Aktionen](/{{path}}/{{version}}/aktionen) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Installer](/{{path}}/{{version}}/installer) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>offen</b></sup>
-    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>offen</b></sup>
+    - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
 - Service
     - [Api](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
