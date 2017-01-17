@@ -65,7 +65,7 @@
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
 - Tutorials
-    - [Quickstart](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>offen</b></sup>
+    - [Quickstart](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>in Bearbeitung</b></sup> <sup><i>Marco</i></sup>
 
 
 
@@ -82,4 +82,5 @@
 <sup><i>Jan</i></sup>
 <sup><i>Peter</i></sup>
 <sup><i>Thomas</i></sup>
+<sup><i>Marco</i></sup>
 ```
