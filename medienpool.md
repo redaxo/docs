@@ -6,9 +6,9 @@ Der Medienpool wird nach einem Klick auf den Link Medienpool in einem eigenen Fe
 
 # Medien verwalten
 
-Alle Dateien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner files. Im Medienpool werden nur die Dateien angezeigt, die über den Medienpool in das Verzeichnis geladen wurden.
+Im Medienpool werden nur die Dateien angezeigt, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden. Alle Dateien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner “/media” der Redaxo-Installation.
 
-Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Dateien diesen Kategorien zuweisen. In der Demo-Version von REDAXO wird zum Beispiel zwischen Inhalts-Bildern, Layout-Bildern und Stylesheets unterschieden. Es können beliebig viele Kategorien definiert werden.
+Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Dateien diesen Kategorien zuweisen. 
 
 **Übersicht**
 
@@ -27,8 +27,8 @@ Unter der Überschrift **Medienkategorien verwalten** können neue Kategorien an
 
 ## Dateien hinzufügen
 
-Zum Hochladen von Dateien in den Medienpool bzw. das Verzeichnis “files”, wählt man den Menüpunkt “Datei hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
+Zum Hochladen von Dateien in den Medienpool bzw. das Verzeichnis “/media”, wählt man den Menüpunkt “Datei hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
 
 ## Dateien synchronisieren
 
-Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle per FTP in den Ordner “files” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
+Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle per FTP in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
