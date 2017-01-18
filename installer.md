@@ -37,7 +37,7 @@ Anschließend kannst du das Addon unter "Addons" installieren.
 
 <a name="hochladen"></a>
 ## Eigene Addons hochladen
-**Aus der Readme:** Wenn in den Einstellungen der Api-Key für myREDAXO hinterlegt wurde, können über den Installer auch die eigenen Addons in den Downloadbereich von Redaxo hochgeladen werden. Der Api-Key ist im eingeloggten Bereich unter http://www.redaxo.org/de/myredaxo/mein-api-key/ einzusehen. Da mit dem Key die eigenen AddOns über die Api verändert werden können, sollte der Key nicht weitergegeben werden.
-Weitere Informationen findest du im Abschnitt Entwicklung.
+Entwickler können eigene Addons direkt aus der Redaxo-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Hierzu benötigst du einen API-Key den du in deinem myRedaxo-Account einsehen kannst. 
+Weitere Informationen zur Bereitstellung eigener Addons findest du im Abschnitt Entwicklung.
 
 
