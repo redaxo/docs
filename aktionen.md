@@ -42,7 +42,7 @@ Es kann auf alle Werte im Slice zugegriffen werden. Auch eigene Datenfelder, die
 
 ### Preview Aktion
 
-In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber änderbar sein. Beim Anlegen soll das Feld mit dem aktuellen Wert belegt werden. Das Beispiel geht davon aus, dass sich um das Feld REX_VALUE[2] handelt.
+In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber änderbar sein. Beim Anlegen soll das Feld mit dem aktuellen Wert belegt werden. Das Beispiel geht davon aus, dass es sich um das Feld REX_VALUE[2] handelt.
 
     <?php
     if ($this->getValue(2) == '') {
