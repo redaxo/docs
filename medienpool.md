@@ -1,33 +1,40 @@
 # Medienpool
-
-Über den Medienpool können Dateien auf den Server geladen, verwaltet und gelöscht werden. Im Allgemeinen werden darüber Grafiken und Textdateien verwaltet. Es können aber auch beliebige andere Dateitypen bearbeitet werden.
-
-Der Medienpool wird nach einem Klick auf den Link Medienpool in einem eigenen Fenster geöffnet.
+Der Medienpool stellt die Funktionen zur Verwaltung von Mediendateien wie Bilder, Dokumente und Videos bereit. Die Medien können über Kategorien organisiert werden. Der Medienpool wird nach einem Klick auf den Link Medienpool in einem eigenen Fenster geöffnet.
 
 # Medien verwalten
 
-Im Medienpool werden nur die Dateien angezeigt, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden. Alle Dateien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner “/media” der Redaxo-Installation.
-
+Im Medienpool werden nur die Dateien angezeigt, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden. Alle Medien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner “/media” der Redaxo-Installation.
 Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Dateien diesen Kategorien zuweisen. 
 
-**Übersicht**
+**Liste der Medien**
 
 Zu jeder Kategorie kann man sich die entsprechenden Dateien anzeigen lassen. Durch Klick auf den Bildtitel erhält man die Detailinformationen.
 
 **Detailansicht**
 
-Klicken Sie in der Übersicht einer Kategorie auf den Titel einer Datei, so gelangen Sie zur Detailansicht.
-Über die Detailansicht kann man die Kategorie wechseln, die Datei ändern, Titel-, Beschreibungs- und Copyrighttexte einfügen oder die Datei löschen. Über die Schaltfläche **Aktualisieren** werden die Änderungen übernommen. 
+Klicken in der Übersicht einer Kategorie auf den Titel eines Mediums, du gelangst dann in die Detailansicht.
+Über die Detailansicht kann man die Kategorie wechseln, die Datei ändern, Titel- und ggf. (je nach Installation) weitere Informationen zum Medium hinterlegen. Über die Schaltfläche **Aktualisieren** werden Änderungen übernommen.
 
-Dateien können aus dem Medienpool nur gelöscht werden, wenn die Datei nicht in einem Artikel/Block eingefügt ist. Andernfalls erscheint eine Warnmeldung mit der Information, in welchen Artikeln diese Datei eingebunden ist.
 
 ## Medienkategorien verwalten
 
-Unter der Überschrift **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie klickt man auf das Plus-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Dateien beinhalten. Ansonsten erscheint ein Warnhinweis.
+Unter der Überschrift **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie klickt man auf das Plus-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Dateien beinhalten. Ansonsten erscheint ein Warnhinweis. 
 
-## Dateien hinzufügen
+## Medien hinzufügen
 
-Zum Hochladen von Dateien in den Medienpool bzw. das Verzeichnis “/media”, wählt man den Menüpunkt “Datei hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
+Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
+
+## Medien löschen
+ 
+Mit der Schaltfläche **Löschen** in der Detailansicht des Mediums entfernst du das Medium aus dem Medienpool. 
+  > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. 
+
+## Dateien tauschen / ersetzen
+...
+
+## Dateien verschieben
+...
+
 
 ## Dateien synchronisieren
 
