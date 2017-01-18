@@ -38,7 +38,20 @@ gespeichert werden.
 Es kann auf alle Werte im Slice zugegriffen werden. Auch eigene Datenfelder, die zuvor in der Tabelle rex_article_slice angelegt wurden, sind möglich.
 
 
-## Beispiel einer kompletten Aktion
+## Beispiele
+
+### Preview Aktion
+
+In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber änderbar sein. Beim Anlegen soll das Feld mit dem aktuellen Wert belegt werden. Das Beispiel geht davon aus, dass sich um das Feld REX_VALUE[2] handelt.
+
+    <?php
+    if ($this->getValue(2) == '') {
+       $this->setValue(2,date('d.m.Y'));
+    }
+    ?>
+
+
+### Presave Aktion
 
 In diesem Beispiel wird eine Presave Aktion gezeigt. In dieser Aktion geht es darum, HTML Text aus Wysiwyg Editoren (z.B. Redactor, TinyMCE) zu prüfen und gegebenenfalls zu ändern.
 
