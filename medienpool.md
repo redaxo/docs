@@ -4,7 +4,6 @@ Der Medienpool stellt die Funktionen zur Verwaltung von Mediendateien wie Bilder
 Im Medienpool werden nur die Medien angezeigt und bearbeitet, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden. Alle Medien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner “/media” deiner Redaxo-Installation.
 Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Medien diesen Kategorien zuweisen. 
 
-- [Über](#ueber)
 - [Liste der Medien](#liste)
 - [Detailansicht](#detail)
 - [Medienkategorien verwalten](#kategorien)
