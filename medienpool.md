@@ -25,16 +25,38 @@ Unter der Überschrift **Medienkategorien verwalten** können neue Kategorien an
 Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
 
 ## Medien löschen
- 
-Mit der Schaltfläche **Löschen** in der Detailansicht des Mediums entfernst du das Medium aus dem Medienpool. 
-  > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. 
 
-## Dateien tauschen / ersetzen
-...
+### Löschen über Detailansicht
+- Mit der Schaltfläche **Löschen** in der Detailansicht des Mediums entfernst du das Medium aus dem Medienpool. 
 
-## Dateien verschieben
-...
+### Löschen über Detailansicht
+- Markiere mit den Checkboxen die Medien, die du löschen möchtest 
+- Scrolle an das Ende der Liste
+- Klicke dann auf “löschen”
 
+ > Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren. 
+
+ > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. Es wird eine Liste angzeigt, wo das Medium in Verwendung ist. 
+
+## Datei  austauschen (ersetzen)
+
+Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** findest du eine Uploadmöglichkeit für den Austausch der Datei.  
+
+
+## Medien verschieben
+Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über die Detailansicht durchführen oder auch für mehrere Dateien in der Liste der Medien durchführen. 
+
+### Verscheiben über Detailansicht
+- Rufe die Detailansicht des Mediums auf
+- Wähle eine neue Katgorie
+- bestätige dann mit “aktualisieren”
+
+### Verschieben über Liste der Medien
+- Markiere mit den Checkboxen die Medien, die du verschieben möchtest 
+- Scrolle an das Ende der Liste
+- Wähle dann unter “Ausgewählte Medien - in Kategorie” die neue Kategorie aus und klicke dann auf “verschieben”
+
+ > Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren.
 
 ## Dateien synchronisieren
 
