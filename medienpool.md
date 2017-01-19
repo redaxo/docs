@@ -1,8 +1,10 @@
 # Medienpool
 Der Medienpool stellt die Funktionen zur Verwaltung von Mediendateien wie Bilder, Dokumente und Videos bereit. Die Medien können über Kategorien organisiert werden. Der Medienpool wird nach einem Klick auf den Link Medienpool in einem eigenen Fenster geöffnet.
 
-Im Medienpool werden nur die Medien angezeigt und bearbeitet, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden. Alle Medien, die mit dem Medienpool verwaltet werden, befinden sich in dem Ordner “/media” deiner Redaxo-Installation.
+Im Medienpool werden die Medien gelistet und bearbeitet, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden.
 Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Medien diesen Kategorien zuweisen. 
+
+Alle Medien, die im Medienpool verwaltet werden, befinden sich im Ordner “/media” deiner Redaxo-Installation.
 
 - [Liste der Medien](#liste)
 - [Detailansicht](#detail)
@@ -52,7 +54,7 @@ Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium
 <a name="tausch"></a>
 ## Datei austauschen (ersetzen)
 
-Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** findest du eine Uploadmöglichkeit für den Austausch der Datei.  
+Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** in der Detailansicht, findest du eine Uploadmöglichkeit für den Austausch der Datei. 
 
 <a name="schieben"></a>
 ## Medien verschieben
