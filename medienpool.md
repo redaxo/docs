@@ -38,7 +38,7 @@ Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium
 
  > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. Es wird eine Liste angzeigt, wo das Medium in Verwendung ist. 
 
-## Datei  austauschen (ersetzen)
+## Datei austauschen (ersetzen)
 
 Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** findest du eine Uploadmöglichkeit für den Austausch der Datei.  
 
@@ -46,7 +46,7 @@ Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kan
 ## Medien verschieben
 Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über die Detailansicht durchführen oder auch für mehrere Dateien in der Liste der Medien durchführen. 
 
-### Verscheiben über Detailansicht
+### Verschieben über Detailansicht
 - Rufe die Detailansicht des Mediums auf
 - Wähle eine neue Katgorie
 - bestätige dann mit “aktualisieren”
