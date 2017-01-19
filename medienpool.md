@@ -29,12 +29,12 @@ Klickst du in der Übersicht einer Kategorie auf den Titel eines Mediums, gelang
 <a name="kategorien"></a>
 ## Medienkategorien verwalten
 
-Unter der Überschrift **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie klickt man auf das Plus-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Dateien beinhalten. Ansonsten erscheint ein Warnhinweis. 
+Im Reiter **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie klickt man auf das (+)-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Medien beinhalten. Ansonsten erscheint ein Warnhinweis. 
 
 <a name="upload"></a>
 ## Medien hinzufügen
 
-Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
+Zum Hochladen von Dateien in den Medienpool, wählt man den Reiter “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
 
 <a name="loeschen"></a>
 ## Medien löschen
@@ -75,6 +75,6 @@ Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über
 <a name="sync"></a>
 ## Dateien synchronisieren
 
-Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle zusätzlich per FTP in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
+Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion “Dateien synchronisieren”. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
-> **Achtug**: Achte darauf, dass die neuen Dateien, die du per FTP in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses und der Datebank durch.  
+> **Achtug**: Achte darauf, dass die neuen Dateien, die du in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses und der Datebank durch.  
