@@ -45,9 +45,9 @@ Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium
 - Scrolle an das Ende der Liste
 - Klicke dann auf “löschen”
 
- > Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren. 
+> Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren. 
 
- > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. Es wird eine Liste angzeigt, wo das Medium in Verwendung ist. 
+> Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. Es wird eine Liste angzeigt, wo das Medium in Verwendung ist. 
 
 <a name="tausch"></a>
 ## Datei austauschen (ersetzen)
@@ -75,4 +75,4 @@ Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über
 
 Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle zusätzlich per FTP in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
- > **Achtug** Achte darauf, dass die neuen Dateien, die du per FTP in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses durch.  
+> **Achtug**: Achte darauf, dass die neuen Dateien, die du per FTP in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses und der Datebank durch.  
