@@ -55,7 +55,7 @@ Zum Hochladen von Dateien in den Medienpool, wählt man den Menüpunkt “Medium
 
 Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** findest du eine Uploadmöglichkeit für den Austausch der Datei.  
 
-<a name="verschieben"></a>
+<a name="schieben"></a>
 ## Medien verschieben
 Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über die Detailansicht durchführen oder auch für mehrere Dateien in der Liste der Medien durchführen. 
 
@@ -74,4 +74,6 @@ Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über
 <a name="sync"></a>
 ## Dateien synchronisieren
 
-Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle per FTP in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
+Um mehrere Dateien gleichzeitig in den Medienpool hochzuladen, gibt es die Funktion “Dateien synchronisieren”. Alle zusätzlich per FTP in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
+
+ > **Achtug** Achte darauf, dass die neuen Dateien, die du per FTP in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses durch.  
