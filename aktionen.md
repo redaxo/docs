@@ -74,6 +74,29 @@ Diesen Code ins Feld "Presave-Aktion" eintragen und den Events Add und Edit zuwe
 
 Die fertige Aktion dann dem Modul mit dem Wysywig Text zuweisen. Das Modul muss den Text für dieses Beispiel in die REX_VALUE[1] speichern.
 
+### Postsave Aktion
+
+Postsave Aktionen werden hauptsächlich verwendet, um nach dem Speichern des Slices weitere Aktionen durchzuführen, z.B. eine Benachrichtung absetzen oder eine Meldung auf Twitter zu hinterlegen. Hierfür wird manchmal auch die Id des Slices benötigt. Die Slice Id wird jedoch erst beim Speichervorgang vergeben und ist daher bei einem neu angelegten Slice noch nicht direkt verfügbar. Im Beispiel seht ihr, wie man dann trotzdem an die Slice Id kommt. Das Beispiel zeigt ebenfalls, wie man an die Werte von REX_ARTICLE_ID, REX_CLANG_ID, REX_CTYPE_ID und REX_MODULE_ID kommt.
+
+    <?php
+    $slice_id = "REX_SLICE_ID";
+    if ($slice_id == 0 && $this->event == 'add') {
+       $qry = 'SELECT id id FROM '.rex::getTablePrefix().'article_slice WHERE '
+             . 'clang_id = REX_CLANG_ID AND '
+             . 'ctype_id = REX_CTYPE_ID AND '
+             . 'article_id = REX_ARTICLE_ID AND '
+             . 'module_id = REX_MODULE_ID AND '
+             . 'createuser = "'.rex::getUser()->getValue('login').'"'
+             . ' ORDER BY id DESC';
+
+       $sql = rex_sql::factory();
+       $sql->setQuery($qry);
+       if ($res = $sql->getArray()) {
+          $slice_id = $res[0]['id'];
+       }   
+    }
+    ?>
+
   > **Hinweis:** 
 Eine Aktion kann einem Modul erst zugewiesen werden, wenn das Modul gespeichert wurde. Es ist also nicht möglich, die Aktion direkt bei der Erstellung eines Moduls zuzuweisen. Die Auswahlmöglichkeit für die Zuweisung einer Aktion zu einem Modul erscheint erst, wenn das Modul bereits existiert.
 
