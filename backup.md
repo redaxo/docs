@@ -1,22 +1,34 @@
 # Backup
-Mit dem Backup-Addon kannst du du die Datenbank und die Dateien deiner Redaxo-Installation sichern und wiederherstellen.
+Wie bei jeder Software oder Website macht es Sinn, gerade vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server, ein Backup durchzuführen. Redaxo stellt dir über das Backup-Addon die Möglichkeit zur Verfügung sämtliche Daten deiner Webpräsenz über eine einfache Oberfläche zu sichern und zu Importieren. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Daten durchzuführen.  
+
 Sobald das AddOn installiert und aktiviert wurde, erscheint der Bereich “Backup” in der AddOns-Navigationsleiste des Backends.
 
+Das Backup-Addon unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sind also beide Schritte durchzuführen. 
+
 ![Screenshot](/assets/v5.2.0-backup-01-overview.png)
-Screenshot: Backup
+Screenshot: Datenbank-Backup
 
-## Daten exportieren
+## Datenbankexport
+Beim Datenbank-Export wird eine .sql-Datei erzeugt, die die Struktur und die Inhalte der gewünschten Tabellen deiner Redaxo-Installation enthält. Beim Export schlägt das Addons die wichtigsten Tabellen zur Sicherung vor. Weitere Tabellen können zur Sicherung ausgewählt werden. Du kannst wählen, ob die Sicherung auf dem Server abgelegt werden soll oder ob di die erzeugte Datei herunterladen möchtest. 
 
-Die Daten der Datenbank und die Dateien werden jeweils separat gespeichert. Die exportierten Daten können direkt auf dem Server gespeichert oder als Dateien heruntergeladen werden, je nach Bedarf. Beim Testen von verschiedenen Varianten von Funktionen beispielsweise, kann zuvor eine Sicherung durchgeführt werden. Diese speichert den Ist-Zustand ab und kann auf dem Server belassen werden. Falls die Änderung sich als nicht sinnvoll erwiesen hat, kann direkt auf diese zurückgegriffen werden. Das Herunterladen als Datei ermöglicht das Sichern der Daten auf einem anderen Rechner.
-Redaxo schlägt automatisch einen Dateinnamen für die exportierten Daten vor. Dieser Name kann aber beliebig verändert werden.
-Wählen Sie die Option “Auf dem Server speichern” wird die Datei auf dem Server gespeichert und im Backup-Addon unter Import angezeigt. die gespeicherten Daten werden in deiner Redaxo-Installation auf dem Server unter  “/redaxo/include/addons/import_export/files” abgelegt. 
+**3 Schritte zum Datenbank-Export:** 
+- Wähle evtl. weitere Tabellen zur Sichrerung aus
+- Wähle den gewünschten Speicherort
+- Um die Sicherung anzustoßen klicke auf “exportieren”.
 
-### Datenbank-Export
-Beim Datenbank-Export wird eine .sql-Datei erzeugt, die die Struktur und die Inhalte der gewünschten Tabellen deiner Redaxo-Installation enthält. Beim Export schlägt das Addons die wichtigsten Tabellen zur Sicherung vor. Weitere Tabellen können zur Sicherung ausgewählt werden. 
 > Möchtest du auch die Zugangsdaten der Redakteure sichern, wähle zusätzlich die Tabelle **rex_user** aus. 
 
-### Datei-Export
-Beim Dateiexport werden die ausgewählten Dateien und/oder Verzeichnisse in komprimierter Form gespeichert.
+![Screenshot](/assets/v5.2.0-backup-02-files.png)
+Screenshot: Datei-Backup
+
+## Dateiexport
+Beim Dateiexport werden die ausgewählten Dateien und/oder Verzeichnisse in komprimierter Form gespeichert. Redaxo selbst wird hier nicht gesichert. Eine Vorauswahl von Dateien findet nicht statt. 
+
+**3 Schritte zum Datei-Export:** 
+- Wähle die gewünschten Ordner auf dem Server Sichrerung aus
+- Wähle den gewünschten Speicherort
+- Um die Sicherung anzustoßen klicke auf “exportieren”.
+
 
 
 ## Daten importieren
