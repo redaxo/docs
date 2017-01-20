@@ -74,6 +74,14 @@ Diesen Code ins Feld "Presave-Aktion" eintragen und den Events Add und Edit zuwe
 
 Die fertige Aktion dann dem Modul mit dem Wysywig Text zuweisen. Das Modul muss den Text für dieses Beispiel in die REX_VALUE[1] speichern.
 
+Im folgenden Beispiel wird eine einfache Validierung durchgeführt, ob ein Eintrag im REX_VALUE[1] gemacht wurde. Wenn kein Eintrag gemacht wurde, wird eine Meldung ausgegeben und der Block kann nicht gespeichert werden.
+
+    if ($this->getValue(1) == '') {
+       $this->save = false;
+       $this->messages[] = 'Bitte Wert in Feld 1 eintragen.';   
+    } 
+
+
 ### Postsave Aktion
 
 Postsave Aktionen werden hauptsächlich verwendet, um nach dem Speichern des Slices weitere Aktionen durchzuführen, z.B. eine Benachrichtung absetzen oder eine Meldung auf Twitter zu hinterlegen. Hierfür wird manchmal auch die Id des Slices benötigt. Die Slice Id wird jedoch erst beim Speichervorgang vergeben und ist daher bei einem neu angelegten Slice noch nicht direkt verfügbar. Im Beispiel seht ihr, wie man dann trotzdem an die Slice Id kommt. Das Beispiel zeigt ebenfalls, wie man an die Werte von REX_ARTICLE_ID, REX_CLANG_ID, REX_CTYPE_ID und REX_MODULE_ID kommt.
