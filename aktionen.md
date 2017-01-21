@@ -1,6 +1,6 @@
 # Aktionen
 
-Es gibt in der Standardkonfiguration von Redaxo drei Events bzw. Aktionen für Module die automatisch ausgeführt werden.
+Es gibt in der Standardkonfiguration von REDAXO drei Events bzw. Aktionen für Module die automatisch ausgeführt werden.
 
 Aktion | Beschreibung
 ------------- | -------------
