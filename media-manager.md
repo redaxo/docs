@@ -1,6 +1,6 @@
 # Media Manager
 
-Der Media Manager ist ein Basis Addon von Redaxo, welches bereits mit der Grundinstallation installiert und aktiviert wird.
+Der Media Manager ist ein Basis Addon von REDAXO, welches bereits mit der Grundinstallation installiert und aktiviert wird.
 Das Addon dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des Addons erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum einbinden eines Mediums muss dazu der Mediatyp in der Url notiert werden (Beispiel siehe unten).
 
 Die durch den Media Manager erstellten Bilddateien werden in einem eigenen Cache abgelegt, der bei Bedarf auch für jeden einzelnen Bildtyp gelöscht werden kann.
