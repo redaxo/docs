@@ -22,7 +22,7 @@ flip | Kann ein Bild horizontal oder vertikal spiegeln
 header | das Medium wird nicht im Browser angezeigt sondern als Download ausgegeben
 insert_image | Ein Bild in ein anderes kopieren (z.B. für Wasserzeichen)
 mediapath | das Medium wird in einem von media abweichenden Pfad gesucht
-mirror | Spiegelungseffekt
+mirror | Spiegelungseffekt unterhalb des Bildes
 resize | verkleinern / vergrößern unter Angabe der gewünschten Breite bzw. Höhe in Pixel. Die Werte können optional als minimal, maximal oder exakt angegeben werden
 rotate | Effekt um ein Bild zu drehen (90, 180 oder 270 Grad)
 rounded_corners | runde Ecken
