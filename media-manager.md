@@ -13,7 +13,7 @@ Effekt| Beschreibung
 ------------- | -------------
 convert2img  |  konvertiert eine Quelldatei in ein Web-Format. Mögliche Formate für die Bildquelle: .pdf, .ps, .psd, .tif,     .tiff, .bmp, .eps, .ico. Mögliche Formate für das Ziel: .jpg, .png
 crop  | beschneidet ein Bild auf die angegebene Größe (Angabe in Pixel)
-filter_blur | Unschärfefilter
+filter_blur | Weichzeichnungsfilter
 filter_colorize | Einfärben eines Bildes
 filter_greyscale | Bild in Graustufen umwandeln
 filter_sepia | Bild mit Sepiatönung versehen
