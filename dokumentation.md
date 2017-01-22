@@ -38,7 +38,7 @@
     - [Extension Points](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
     - [Formatierungen](/{{path}}/{{version}}/formatierungen) <sup><b>offen</b></sup>
     - [Formulare](/{{path}}/{{version}}/formulare) <sup><b>offen</b></sup>
-    - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>offen</b></sup>
+    - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
     - [Listen](/{{path}}/{{version}}/listen) <sup><b>offen</b></sup>
         - Tabellen (rex_list)
