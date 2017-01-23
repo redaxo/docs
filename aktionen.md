@@ -1,6 +1,6 @@
 # Aktionen
 
-Es gibt in der Standardkonfiguration von REDAXO drei Events bzw. Aktionen für Module die automatisch ausgeführt werden.
+In der Standardkonfiguration von REDAXO existieren drei Events, bzw. Aktionen für Module, die automatisch ausgeführt werden.
 
 Aktion | Beschreibung
 ------------- | -------------
@@ -11,11 +11,21 @@ Postsave | Wird nach dem Speichern des Moduls ausgeführt.
 
 ## Aktion erstellen
 
-Es ist wichtig die korrekte Aktion zu verwenden, Presave eignet sich sehr gut um Daten vor dem Speichervorgang zu Manipulieren. Postsave eignet sich um Daten nach dem Speichervorgang weiter zu verarbeiten.
+Es ist wichtig, die korrekte Aktion zu verwenden:
+
+- Presave eignet sich sehr gut, um Daten vor dem Speichervorgang zu manipulieren.
+- Mit Postsave kann man Daten nach dem Speichervorgang weiter verarbeiten.
+
+Aktionen finden sich in einem eigenen Tab bei den Modulen. Wenn man eine neue Aktion anlegt, wird der betreffende Code in die Felder für Preview, Presave und/oder Postsave eingesetzt. Für jede dieser drei Varianten lässt sich definieren, bei welchem Event die Aktion ausgeführt wird: beim Hinzufügen eines Modules (ADD), beim Bearbeiten eines Moduls (EDIT) oder beim Löschen eines Moduls (DELETE). Letzteres Event steht bei der Preview-Aktion nicht zur Verfügung.
+
+Sobald eine Aktion existiert, findet sich beim Bearbeiten eines Moduls ein weiteres Select-Feld, mit dem man die Aktion schließlich dem Modul hinzufügen kann.
+
+  > **Hinweis:** 
+Eine Aktion kann einem Modul erst zugewiesen werden, nachdem das Modul gespeichert wurde. Es ist also nicht möglich, die Aktion direkt bei der Erstellung eines Moduls zuzuweisen. Die Auswahlmöglichkeit für die Zuweisung einer Aktion zu einem Modul erscheint erst, wenn das Modul bereits existiert.
 
 ### Auf Werte zugreifen
 
-Normalerweise werden beispielsweise in Presave-Aktionen Werte überprüft bzw. verändert, die zuvor in einem Modulblock eingegeben wurden. Auf die entsprechenden Werte kann mit
+Normalerweise wird man beispielsweise in Presave-Aktionen Werte überprüfen oder verändern, die zuvor in einem Modulblock eingegeben wurden. Auf die entsprechenden Werte kann man zugreifen mit
 
     $text = $this->getValue(1);  // Beispiel für REX_VALUE[1]
     
@@ -23,9 +33,9 @@ oder
 
     $medialist1 = $this->sql->getValue('medialist1'); // Beispiel für das Feld medialist1
 
-zugegriffen werden.
 
-Wenn die Werte in einer Presave-Aktion geändert werden, so können diese mit
+
+Wenn man die Werte in einer Presave-Aktion ändern will, so kann man diese speichern mit
 
     $this->setValue(1,$text); // Beispiel für REX_VALUE[1]
     
@@ -33,16 +43,15 @@ oder
 
     $this->sql->setValue('medialist2','ichbinaucheinbild.jpg'); // Beispiel für das Feld medialist2
 
-gespeichert werden.
 
-Es kann auf alle Werte im Slice zugegriffen werden. Auch eigene Datenfelder, die zuvor in der Tabelle rex_article_slice angelegt wurden, sind möglich.
+Man kann auf alle Werte im Slice zugreifen, also auf alle Felder, die in einem Modulblock eingetragen wurden. Auch eigene Datenfelder, die zuvor in der Tabelle `rex_article_slice` angelegt wurden, können mit Aktionen bearbeitet werden.
 
 
 ## Beispiele
 
-### Preview Aktion
+### Preview-Aktion
 
-In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber änderbar sein. Beim Anlegen soll das Feld mit dem aktuellen Wert belegt werden. Das Beispiel geht davon aus, dass es sich um das Feld REX_VALUE[2] handelt.
+In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber änderbar sein. Beim Anlegen soll das Feld mit dem aktuellen Wert vorausgefüllt werden. Das Beispiel geht davon aus, dass es sich um das Feld REX_VALUE[2] handelt.
 
     <?php
     if ($this->getValue(2) == '') {
@@ -51,13 +60,12 @@ In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber
     ?>
 
 
-### Presave Aktionen
+### Presave-Aktionen
 
-#### Beispiel 1: HTML Text aus Wysiwyg Editoren modifizieren
+#### Beispiel 1: HTML Text aus Wysiwyg-Editoren modifizieren
 
-In diesem Beispiel wird eine Presave Aktion gezeigt. In dieser Aktion geht es darum, HTML Text aus Wysiwyg Editoren (z.B. Redactor, TinyMCE) zu prüfen und gegebenenfalls zu ändern.
-
-Diesen Code ins Feld "Presave-Aktion" eintragen und den Events Add und Edit zuweisen
+In dieser Aktion geht es darum, aus einem Wysiwyg-Editor (z.B. Redactor, TinyMCE) stammenden HTML-Text zu prüfen und gegebenenfalls zu ändern.
+Folgender Code wird also ins Feld "Presave-Aktion" eintragen und dann den Events Add und Edit zugewiesen:
 
     <?php
     // REX_VALUE[1] auslesen
@@ -74,34 +82,34 @@ Diesen Code ins Feld "Presave-Aktion" eintragen und den Events Add und Edit zuwe
     $this->setValue(1,$text);                            
     ?>
 
-Die fertige Aktion dann dem Modul mit dem Wysywig Text zuweisen. Das Modul muss den Text für dieses Beispiel in die REX_VALUE[1] speichern.
+Die fertige Aktion muss man dann noch dem Modul mit dem Wysywig-Text zuweisen. Die Aktion geht davon aus, dass das Modul den Text in das Feld REX_VALUE[1] speichert.
     
 #### Beispiel 2: Multiselect aus Datenbank speichern
 
-Um ein Multiselectfeld in einem Modul für das Backend zu erstellen, muss man einen kleinen Umweg gehen, da die REX_VALUE-Felder Text zurückgeben, Werte aus Multiselectfeldern aber sinnvollerweise als Array verarbeitet werden.
-Die im Multiselect ausgewählten Werte (in diesem Falle Ids) sollen kommasepariert im REX_VALUE[1] abgelegt werden.
+Um ein Multiselect-Feld in einem Modul für das Backend zu erstellen, muss man einen kleinen Umweg gehen, da die REX_VALUE-Felder Text zurückgeben, Werte aus Multiselect-Feldern aber sinnvollerweise als Array verarbeitet werden.
+Die im Multiselect ausgewählten Werte (in diesem Falle IDs) sollen kommasepariert im REX_VALUE[1] abgelegt werden.
 
-Der komplette Modulinput kann dann beispielsweise so aussehen:
+Der komplette Modul-Input kann dann beispielsweise so aussehen:
 
     <?php
-      // Datenbankelemente für Multiselecfeld auslesen
+      // Datenbankelemente für Multiselect-Feld auslesen
       $sql = rex_sql::factory();
       $qry = "SELECT name, id FROM rex_meinetabelle ORDER BY name";
       $sql->setQuery($qry);
       $res = $sql->getArray();
 
-      // Multiselectwerte aus REX_VALUE[1] auslesen 
+      // Multiselect-Werte aus REX_VALUE[1] auslesen 
       $multiselect = explode(',',"REX_VALUE[1]");
     ?>
 
-    // Selectfeld kann einen beliebigen Namen haben, muss aber als Array definiert werden
+    // Select-Feld kann einen beliebigen Namen haben, muss aber als Array definiert werden
     <select name="my_multiselect[]" multiple="multiple" size="5">
       <?php foreach ($res as $o) : ?>
        <option value="<?= $o['id'] ?>" <?= in_array($o['id'],$multiselect) ? 'selected="selected" ' : '' ?>><?= $o['name'] ?> ?></option>
        <?php endforeach ?>
     </select>
     
-Die hierzu passende Presave Aktion nimmt die Werte von my_multiselect entgegen, macht einen kommaseparierten String daraus und gibt den String an value1 weiter.
+Die hierzu passende Presave-Aktion nimmt die Werte von `my_multiselect` entgegen, macht einen kommaseparierten String daraus und gibt den String an `value1` weiter.
 
     <?php
     $this->sql->setValue('value1',implode(',',rex_post('my_multiselect','array')));
@@ -109,7 +117,7 @@ Die hierzu passende Presave Aktion nimmt die Werte von my_multiselect entgegen, 
     
 #### Beispiel 3: Validierung
 
-Eingaben können in REDAXO Modulen per Javascript validiert werden, doch manchmal ist eine Aktion die bessere Wahl. Auch hierzu wird wieder die Presave Aktion verwendet. Im Beispiel wird geprüft, ob REX_VALUE[1] leer ist. Ist die Bedingung erfüllt, wird der Block nicht gespeichert und eine Meldung ausgegeben.
+Eingaben können in REDAXO-Modulen per Javascript validiert werden, doch manchmal ist eine Aktion, wo man PHP verwenden kann, die bessere Wahl. Auch hierzu wird wieder die Presave-Aktion verwendet. Im Beispiel wird geprüft, ob REX_VALUE[1] leer ist. Ist die Bedingung erfüllt, wird der Block nicht gespeichert und stattdessen eine Meldung ausgegeben.
 
     <?php
     if ($this->getValue(1) == '') {
@@ -122,9 +130,9 @@ Eingaben können in REDAXO Modulen per Javascript validiert werden, doch manchma
 
 
 
-### Postsave Aktion
+### Postsave-Aktion
 
-Postsave Aktionen werden hauptsächlich verwendet, um nach dem Speichern des Slices weitere Aktionen durchzuführen, z.B. eine Benachrichtung absetzen oder eine Meldung auf Twitter zu hinterlegen. Hierfür wird manchmal auch die Id des Slices benötigt. Die Slice Id wird jedoch erst beim Speichervorgang vergeben und ist daher bei einem neu angelegten Slice noch nicht direkt verfügbar. Im Beispiel seht ihr, wie man dann trotzdem an die Slice Id kommt. Das Beispiel zeigt ebenfalls, wie man an die Werte von REX_ARTICLE_ID, REX_CLANG_ID, REX_CTYPE_ID und REX_MODULE_ID kommt.
+Postsave-Aktionen werden hauptsächlich verwendet, um nach dem Speichern des Slices weitere Aktionen durchzuführen, z.B. eine Benachrichtung absetzen oder eine Meldung auf Twitter zu hinterlegen. Hierfür wird manchmal auch die ID des Slices benötigt. Die Slice-ID wird jedoch erst beim Speichervorgang vergeben und ist daher bei einem neu angelegten Slice noch nicht direkt verfügbar. Das Beispiel zeigt, wie man dann trotzdem an die Slice-ID kommt. Außerdem demonstriert das Beispiel, wie man an die Werte von REX_ARTICLE_ID, REX_CLANG_ID, REX_CTYPE_ID und REX_MODULE_ID erreicht.
 
     <?php
     $slice_id = "REX_SLICE_ID";
@@ -144,7 +152,4 @@ Postsave Aktionen werden hauptsächlich verwendet, um nach dem Speichern des Sli
        }   
     }
     ?>
-
-  > **Hinweis:** 
-Eine Aktion kann einem Modul erst zugewiesen werden, wenn das Modul gespeichert wurde. Es ist also nicht möglich, die Aktion direkt bei der Erstellung eines Moduls zuzuweisen. Die Auswahlmöglichkeit für die Zuweisung einer Aktion zu einem Modul erscheint erst, wenn das Modul bereits existiert.
 
