@@ -1,7 +1,7 @@
 
 ## Bitte beachten
 
-* Anrede Du
+* möglichst ohne direkte Anrede (Du / Sie) auskommen. Falls in Ausnahmefällen nicht möglich, dann "Du" verwenden statt "Sie"
 * wenn man sich einen Inhalt vornimmt, bitte hier markieren dokumentation.md
 
 
