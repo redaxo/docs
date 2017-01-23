@@ -1,5 +1,5 @@
 # Backup
-Wie bei jeder Software oder Website macht es Sinn, gerade vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server, ein Backup durchzuführen. Redaxo stellt dir über das Backup-Addon die Möglichkeit zur Verfügung sämtliche Daten deiner Webpräsenz über eine einfache Oberfläche zu sichern und zu Importieren. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Daten durchzuführen.  
+Wie bei jeder Software oder Website ist es sinnvoll, gerade vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server, ein Backup durchzuführen. Redaxo stellt dir über das Backup-Addon die Möglichkeit zur Verfügung sämtliche Daten deiner Webpräsenz über eine einfache Oberfläche zu sichern und zu Importieren. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Daten durchzuführen.  
 
 Sobald das AddOn installiert und aktiviert wurde, erscheint der Bereich “Backup” in der AddOns-Navigationsleiste des Backends.
 
