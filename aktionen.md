@@ -51,7 +51,9 @@ In einem Modul soll es ein Feld für die Datumseingabe geben, das Feld soll aber
     ?>
 
 
-### Presave Aktion
+### Presave Aktionen
+
+#### Beispiel 1: HTML Text aus Wysiwyg Editoren modifizieren
 
 In diesem Beispiel wird eine Presave Aktion gezeigt. In dieser Aktion geht es darum, HTML Text aus Wysiwyg Editoren (z.B. Redactor, TinyMCE) zu prüfen und gegebenenfalls zu ändern.
 
@@ -79,7 +81,38 @@ Im folgenden Beispiel wird eine einfache Validierung durchgeführt, ob ein Eintr
     if ($this->getValue(1) == '') {
        $this->save = false;
        $this->messages[] = 'Bitte Wert in Feld 1 eintragen.';   
-    } 
+    }
+    
+#### Beispiel 2: Multiselect aus Datenbank speichern
+
+Um ein Multiselectfeld in einem Modul für das Backend zu erstellen, muss man einen kleinen Umweg gehen, da die REX_VALUE-Felder Text zurückgeben, Werte aus Multiselectfeldern aber sinnvollerweise als Array verarbeitet werden.
+Die im Multiselect ausgewählten Werte (in diesem Falle Ids) sollen kommasepariert im REX_VALUE[1] abgelegt werden.
+
+Der komplette Modulinput kann dann beispielsweise so aussehen:
+
+    <?php
+      // Datenbankelemente für Multiselecfeld auslesen
+      $sql = rex_sql::factory();
+      $qry = "SELECT name, id FROM rex_meinetabelle ORDER BY name";
+      $sql->setQuery($qry);
+      $res = $sql->getArray();
+
+      // Multiselectwerte aus REX_VALUE[1] auslesen 
+      $multiselect = explode(',',"REX_VALUE[1]");
+    ?>
+
+    // Selectfeld kann einen beliebigen Namen haben, muss aber als Array definiert werden
+    <select name="my_multiselect[]" multiple="multiple" size="5">
+      <?php foreach ($res as $o) : ?>
+       <option value="<?= $o['id'] ?>" <?= in_array($o['id'],$multiselect) ? 'selected="selected" ' : '' ?>><?= $o['name'] ?> ?></option>
+       <?php endforeach ?>
+    </select>
+    
+Die hierzu passende Presave Aktion nimmt die Werte von my_multiselect entgegen, macht einen kommaseparierten String daraus und gibt den String an value1 weiter.
+
+    <?php
+    $this->sql->setValue('value1',implode(',',rex_post('my_multiselect','array')));
+    ?>
 
 
 ### Postsave Aktion
