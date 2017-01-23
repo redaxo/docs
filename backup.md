@@ -4,6 +4,8 @@ Für kleinere Webpräsenzen steht in Redaxo ein [Backup-Addon](#addon) zur Siche
 
 > Da das Backup-Addon abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per FTP(s) und PHPMyadmin durchgeführt werden. 
 
+> **Backups älterer Redaxo-Versionen als 5.0** Das Einspielen eines Redaxo-Backups älterer Versionen als 5.0 ist nicht vorgesehen. 
+
 Tägliche Backups sollten möglichst automatisch über die im Webhosting des Providers bereitgestellten Sicherungsmöglichkeiten (z.B. in [Plesk](https://www.plesk.com/)) erfolgen. 
 
 - [Backup-Addon](#addon)
