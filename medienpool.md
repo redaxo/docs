@@ -18,13 +18,13 @@ Alle Medien, die im Medienpool verwaltet werden, befinden sich im Ordner “/med
 
 <a name="liste"></a>
 ## Liste der Medien
-Nach Aufruf des Medienpools über den Menüpunkt “Medienpool”, gelangst du direkt in die Liste der Medien. Hier werden alle Medien der aktuell gewählten Kategorie gelistet. Medien, die keiner Kategorie zugeordnet sind, werden in der Hauptebene unter “Keine Kategorie” gelistet. Zur Auswahl einer Kategorie, steht dir ein Auswahlmenü neben der Suche zur Vefügung. 
+Nach Aufruf des Medienpools über den Menüpunkt “Medienpool”, gelangt man direkt in die Liste der Medien. Hier werden alle Medien der aktuell gewählten Kategorie gelistet. Medien, die keiner Kategorie zugeordnet sind, werden in der Hauptebene unter “Keine Kategorie” gelistet. Zur Auswahl einer Kategorie, steht dir ein Auswahlmenü neben der Suche zur Vefügung. 
 
 <a name="detail"></a>
 ## Detailansicht
 
-Klickst du in der Übersicht einer Kategorie auf den Titel eines Mediums, gelangst du in die Detailansicht.
-Über die Detailansicht kann man die Kategorie wechseln, die Medien ändern, Titel- und ggf. (je nach Installation) weitere Informationen zum Medium hinterlegen. Über die Schaltfläche **Aktualisieren** werden Änderungen übernommen.
+Klickt man in der Übersicht einer Kategorie auf den Titel eines Mediums, erhält man die Detailansicht.
+Über die Detailansicht kann die Kategorie gewechselt werden, die Medien geändert werden, Titel- und ggf. (je nach Installation) weitere Informationen zum Medium hinterlegt werden. Über die Schaltfläche **Aktualisieren** werden Änderungen übernommen.
 
 <a name="kategorien"></a>
 ## Medienkategorien verwalten
@@ -34,47 +34,47 @@ Im Reiter **Medienkategorien verwalten** können neue Kategorien angelegt und vo
 <a name="upload"></a>
 ## Medien hinzufügen
 
-Zum Hochladen von Dateien in den Medienpool, wählt man den Reiter “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Um eine Datei gleich richtig einer Kategorie zuzuordnen, kann beim Upload gleich die entsprechende Medienkategorie auswählen.
+Zum Hochladen von Dateien in den Medienpool, wählt man den Reiter “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Je nach Installation, stehen hier weitere Felder zum Ausfüllen bereit. Um eine Datei einer Kategorie zuzuordnen, kann man beim Upload gleich die entsprechende Medienkategorie festlegen. 
 
 <a name="loeschen"></a>
 ## Medien löschen
 
 ### Löschen über Detailansicht
-- Mit der Schaltfläche **Löschen** in der Detailansicht des Mediums entfernst du das Medium aus dem Medienpool. 
+- Mit der Schaltfläche **Löschen** in der Detailansicht des Mediums entfernt man das Medium aus dem Medienpool. 
 
 ### Löschen über Detailansicht
-- Markiere mit den Checkboxen die Medien, die du löschen möchtest 
-- Scrolle an das Ende der Liste
-- Klicke dann auf “löschen”
+- Zu löschende Dateien werden über die Checkboxen ausgewählt.
+- Anschließen Scrollen zum Ende der Liste
+- Bestätigen des Löschvorgangs durch Klick auf “löschen”
 
-> Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren. 
+> Möchte man die Aktion auf alle Medien der Kategorie anwenden, kann man alle Medien mit der Checkbox am Ende der Liste markieren. 
 
 > Sollte das Medium in Verwendung sein, wird das Medium nicht gelöscht. Es wird eine Liste angzeigt, wo das Medium in Verwendung ist. 
 
 <a name="tausch"></a>
 ## Datei austauschen (ersetzen)
 
-Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kannst du ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** in der Detailansicht, findest du eine Uploadmöglichkeit für den Austausch der Datei. 
+Anstelle eines neuen Uploads und Neuverlinken aller Vorkommen eines Mediums, kann man ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** in der Detailansicht, findet man eine Uploadmöglichkeit für den Austausch der Datei. 
 
 <a name="schieben"></a>
 ## Medien verschieben
-Das Verscheiben eines Mediums in eine andere Kategorie kannst du wahlweise über die Detailansicht durchführen oder auch für mehrere Dateien in der Liste der Medien durchführen. 
+Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die Detailansicht erfolgen oder auch für mehrere Dateien in der Liste der Medien erfolgen. 
 
 ### Verschieben über Detailansicht
-- Rufe die Detailansicht des Mediums auf
-- Wähle eine neue Katgorie
-- bestätige dann mit “aktualisieren”
+- Aufruf der Detailansicht eines Mediums
+- Auswahl einer neuen Kategorie
+- bestätigen mit “aktualisieren”
 
 ### Verschieben über Liste der Medien
-- Markiere mit den Checkboxen die Medien, die du verschieben möchtest 
-- Scrolle an das Ende der Liste
-- Wähle dann unter “Ausgewählte Medien - in Kategorie” die neue Kategorie aus und klicke dann auf “verschieben”
+- Über die Checkboxen die Medien markieren, die du verschoben werden sollen 
+- Zum Ende der Liste scrollen
+- Unter “Ausgewählte Medien - in Kategorie” die neue Kategorie auswählen und auf “verschieben” klicken
 
- > Möchtest du die Aktion auf alle Medien der Kategorie anwenden, kannst du alle Medien mit der Checkbox am Ende der Liste markieren.
+ > Möchte man die Aktion auf alle Medien der Kategorie anwenden, kannst man alle Medien mit der Checkbox am Ende der Liste markieren.
 
 <a name="sync"></a>
 ## Dateien synchronisieren
 
 Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion “Dateien synchronisieren”. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner “/media” geladenen Dateien werden dann unter “betroffene Dateien” gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und die entsprechende Medienkategorie. Durch Klick auf “Synchronisieren” werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
-> **Achtug**: Achte darauf, dass die neuen Dateien, die du in den Medienordner kopierst keine vorhandenen Dateien überschreiben (gleicher Dateiname). Führe vorher ein Backup des Verzeichnisses und der Datebank durch.  
+> **Achtug**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datebank sollte möglichst vorher erfolgen.  
