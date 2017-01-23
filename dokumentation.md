@@ -14,7 +14,7 @@
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>offen</b></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
-    - [Backup](/{{path}}/{{version}}/backup) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Backup](/{{path}}/{{version}}/backup) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
