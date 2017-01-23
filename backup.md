@@ -5,7 +5,13 @@ Sobald das AddOn installiert und aktiviert wurde, erscheint der Bereich “Backu
 
 Das Backup-Addon unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sind also beide Schritte durchzuführen. 
 
-## Datenbankexport
+- [Datenbankexport](#dbexport)
+- [Dateiexport](#fileexport)
+- [Daten importieren](#import)
+  - [Upload](#upload)
+  - [Vom Server](#fromserver)
+
+<a name="dbexport"></a>## Datenbankexport
 
 ![Screenshot](/assets/v5.2.0-backup-01-overview.png)
 Screenshot: Datenbank-Backup
@@ -19,7 +25,7 @@ Beim Datenbank-Export wird eine .sql-Datei erzeugt, die die Struktur und die Inh
 
 > Möchtest du auch die Zugangsdaten der Redakteure sichern, wähle zusätzlich die Tabelle **rex_user** aus. 
 
-## Dateiexport
+<a name="fileexport"></a>## Dateiexport
 
 ![Screenshot](/assets/v5.2.0-backup-02-files.png)
 Screenshot: Datei-Backup
@@ -32,13 +38,13 @@ Beim Dateiexport werden die ausgewählten Dateien und/oder Verzeichnisse in komp
 - Um die Sicherung anzustoßen klicke auf “exportieren”.
 
 
-## Daten importieren
+<a name="import"></a>## Daten importieren
 
 Im Reiter Import kannst du deine Sicherungen einspielen. Hierzu kannst du Sicherungen von deinem Rechner hochladen oder die auf dem Server gespeicherten Sicherungen wiederherstellen. 
 
 > **Hinweis** die vorhandenen Daten (Datenbank und Dateien) werden hierbei gelöscht. 
 
-### Upload
+<a name="upload"></a>### Upload
 
 Im Abschnitt **Upload** kannst du deine Sicherungsdateien hochladen und einspielen.  
 
@@ -51,7 +57,7 @@ Screenshot: Datenimport Upload
 Klicke auf das jeweilige Dateiauswahlfeld um eine bei dir lokal gespeicherte Sicherung auszuwählen. Bestätige dann den Upload mit der Schaltfläche Import. 
 Führe keine weiteren Schritte in Redaxo durch, bis der Import beendet ist. 
 
-### Vom Server laden
+<a name="fromserver"></a>### Vom Server laden
 
 Im Abschnitt **Vom Server laden** spielst du Sicherungen die auf dem Server gespeichert wurden wieder ein. 
 
