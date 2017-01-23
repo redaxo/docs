@@ -42,7 +42,7 @@ Im Reiter Import kannst du deine Sicherungen einspielen. Hierzu kannst du Sicher
 
 Im Abschnitt **Upload** kannst du deine Sicherungsdateien hochladen und einspielen.  
 
-![Screenshot](v5.2.0-backup-03-upload.png)
+![Screenshot](/assets/v5.2.0-backup-03-upload.png)
 Screenshot: Datenimport Upload
 
 - Unter Datenbankexport kannst du eine Datenbanksicherung einspielen
@@ -55,7 +55,7 @@ Führe keine weiteren Schritte in Redaxo durch, bis der Import beendet ist.
 
 Im Abschnitt **Vom Server laden** spielst du Sicherungen die auf dem Server gespeichert wurden wieder ein. 
 
-![Screenshot](v5.2.0-backup-04-fromserver.png)
+![Screenshot](/assets/v5.2.0-backup-04-fromserver.png)
 Screenshot: Datenimport vom Server
 
 - Unter Datenbankexporte werden dir die Sicherungen der Datenbank gelistet
