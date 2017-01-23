@@ -11,7 +11,7 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
   - [Dateiexport](#fileexport)
   - [Daten importieren](#import)
     - [Upload](#upload)
-    - [Vom Server](#fromserver)
+    - [Vom Server laden](#fromserver)
 
 <a name="addon"></a>
 ## Backup-Addon 
