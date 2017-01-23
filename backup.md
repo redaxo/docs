@@ -18,8 +18,8 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 <a name="addon"></a>
 ## Backup-Addon 
 
-Sobald das Backup-AddOn installiert und aktiviert wurde, erscheint der Bereich “Backup” in der AddOns-Navigationsleiste des Backends.
-Das Backup-Addon unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website müssen beide Schritte durchgeführt werden. 
+Das Backup-AddOn ist über den Menüpukt ”Backup“ erreichbar.
+Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
 
 <a name="dbexport"></a>
@@ -48,7 +48,7 @@ Beim Datei-Export werden die ausgewählten Dateien und/oder Verzeichnisse in kom
 **3 Schritte zum Datei-Export:** 
 - Die gewünschten Ordner auf dem Server Sichrerung auswählen
 - Den gewünschten Speicherort auswählen
-- Ein Klick auf “Exportieren” startet um die Sicherung
+- Ein Klick auf “Exportieren” startet die Sicherung
 
 <a name="import"></a>
 ### Daten importieren
