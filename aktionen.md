@@ -75,13 +75,6 @@ Diesen Code ins Feld "Presave-Aktion" eintragen und den Events Add und Edit zuwe
     ?>
 
 Die fertige Aktion dann dem Modul mit dem Wysywig Text zuweisen. Das Modul muss den Text für dieses Beispiel in die REX_VALUE[1] speichern.
-
-Im folgenden Beispiel wird eine einfache Validierung durchgeführt, ob ein Eintrag im REX_VALUE[1] gemacht wurde. Wenn kein Eintrag gemacht wurde, wird eine Meldung ausgegeben und der Block kann nicht gespeichert werden.
-
-    if ($this->getValue(1) == '') {
-       $this->save = false;
-       $this->messages[] = 'Bitte Wert in Feld 1 eintragen.';   
-    }
     
 #### Beispiel 2: Multiselect aus Datenbank speichern
 
