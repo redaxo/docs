@@ -113,6 +113,20 @@ Die hierzu passende Presave Aktion nimmt die Werte von my_multiselect entgegen, 
     <?php
     $this->sql->setValue('value1',implode(',',rex_post('my_multiselect','array')));
     ?>
+    
+#### Beispiel 3: Validierung
+
+Eingaben können in REDAXO Modulen per Javascript validiert werden, doch manchmal ist eine Aktion die bessere Wahl. Auch hierzu wird wieder die Presave Aktion verwendet. Im Beispiel wird geprüft, ob REX_VALUE[1] leer ist. Ist die Bedingung erfüllt, wird der Block nicht gespeichert und eine Meldung ausgegeben.
+
+    <?php
+    if ($this->getValue(1) == '') {
+       // Der Block wird nicht gespeichert
+       $this->save = false;
+       // Meldung ausgeben
+       $this->messages[] = 'Bitte Wert in Feld 1 eintragen.';   
+    }
+    ?>
+
 
 
 ### Postsave Aktion
