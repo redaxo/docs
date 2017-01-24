@@ -1,5 +1,5 @@
 # Backup
-Vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server sollte man eine Datensicherung durchführen. 
+Vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server sollte eine Datensicherung durch geführt werden. 
 Für kleinere Webpräsenzen steht in Redaxo ein [Backup-Addon](#addon) zur Sicherung der Datenbank und ausgewählter Dateiordner zur Verfügung. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Datenbank durchzuführen.
 
 > Da das Backup-Addon abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per FTP(s) und PHPMyadmin durchgeführt werden. 
@@ -18,8 +18,8 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 <a name="addon"></a>
 ## Backup-Addon 
 
-Sobald das AddOn installiert und aktiviert wurde, erscheint der Bereich “Backup” in der AddOns-Navigationsleiste des Backends.
-Das Backup-Addon unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website müssen beide Schritte durchgeführt werden. 
+Das Backup-AddOn ist über den Menüpukt ”Backup“ erreichbar.
+Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
 
 <a name="dbexport"></a>
@@ -28,14 +28,14 @@ Das Backup-Addon unterscheidet zwischen Datenbank und Dateien. Für eine komplet
 ![Screenshot](/assets/v5.2.0-backup-01-overview.png)
 Screenshot: Datenbank-Backup
 
-Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und Inhalte der gewünschten Tabellen deiner Redaxo-Installation enthält. Beim Export schlägt das Addons die wichtigsten Tabellen zur Sicherung vor. Weitere Tabellen können zur Sicherung ausgewählt werden. Du kannst wählen, ob die Sicherung auf dem Server abgelegt werden soll oder ob du die erzeugte Datei herunterladen möchtest. 
+Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und Inhalte der gewünschten Tabellen der Redaxo-Installation enthält. Beim Export schlägt das Addons die wichtigsten Tabellen zur Sicherung vor. Weitere Tabellen können zur Sicherung ausgewählt werden. Des Weiteren kann ausgewählt werden, ob die Sicherung nach Abschluss des Vorgangs auf dem Server abgelegt oder den Computer heruntergeladen werden soll. 
 
 **3 Schritte zum Datenbank-Export:** 
-- Wähle optional weitere Tabellen zur Sichrerung aus
-- Wähle den gewünschten Speicherort
-- Klicke auf “exportieren” um die Sicherung zu starten
+- Optional weitere Tabellen zur Sicherung auswählen
+- Gewünschten Speicherort auswählen
+- Ein Klick auf “Exportieren” startet die Sicherung
 
-> Wähle zusätzlich die Tabelle **rex_user** aus, wenn du auch die Zugangsdaten der Redakteure sichern möchtest. 
+**Tipp:** Wenn auch die Zugangsdaten der Redakteure gesichert werden sollen, muss zusätzlich die Tabelle **rex_user** ausgewählt werden.
 
 <a name="fileexport"></a>
 ### Datei-Export
@@ -46,45 +46,45 @@ Screenshot: Datei-Backup
 Beim Datei-Export werden die ausgewählten Dateien und/oder Verzeichnisse in komprimierter Form gespeichert. Redaxo selbst wird hier nicht gesichert. Eine Vorauswahl von Dateien findet nicht statt. 
 
 **3 Schritte zum Datei-Export:** 
-- Wähle die gewünschten Ordner auf dem Server Sichrerung aus
-- Wähle den gewünschten Speicherort
-- Klicke auf “exportieren” um die Sicherung zu starten
+- Die gewünschten Ordner auf dem Server Sichrerung auswählen
+- Den gewünschten Speicherort auswählen
+- Ein Klick auf “Exportieren” startet die Sicherung
 
 <a name="import"></a>
 ### Daten importieren
 
-Im Reiter **Import** kannst du deine Sicherungen einspielen. Hierzu kannst du Sicherungen von deinem Rechner hochladen oder die auf dem Server gespeicherten Sicherungen wiederherstellen. 
+Im Reiter **Import** können Sicherungen vom Computer hochgeladen oder die auf dem Server gespeicherten Sicherungen wiedergeherstellt werden. 
 
 > **Hinweis** die vorhandenen Daten (Datenbank und Dateien) werden hierbei gelöscht. 
 
 <a name="upload"></a>
 #### Upload
 
-Im Abschnitt **Upload** kannst du deine Sicherungsdateien hochladen und einspielen.  
+Im Abschnitt **Upload** können Sicherungsdateien hochgeladen und eingespielt werden.  
 
 ![Screenshot](/assets/v5.2.0-backup-03-upload.png)
-Screenshot: Datenimport Upload
+Screenshot: Daten-Import Upload
 
-- Unter Datenbankexport kannst du eine Datenbanksicherung einspielen
-- Unter Dateiexport kannst du eine Dateisicherung einspielen
+- Die Datenbank-Sicherung kann unter Datenbank-Export eingespielt werden
+- Die Datei-Sicherung kann unter Datei-Export einspielt werden
 
-Klicke auf das jeweilige Dateiauswahlfeld um eine bei dir lokal gespeicherte Sicherung auszuwählen. Bestätige dann den Upload mit der Schaltfläche **Import**. 
+Mit einem Klick auf das jeweilige Dateiauswahlfeld kann die lokal gespeicherte Sicherung ausgewählt und mit einem Klick auf **Import** hochgeladen werden. 
 
-Wichtig: Führe keine weiteren Schritte in Redaxo durch, bis der Import beendet ist!
+**Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in Redaxo ausgeführt werden!
 
 <a name="fromserver"></a>
 #### Vom Server laden
 
-Im Abschnitt **Vom Server laden** spielst du Sicherungen die auf dem Server gespeichert wurden wieder ein. 
+Im Abschnitt **Vom Server laden** können Sicherungen, die auf dem Server gespeichert wurden, wieder eingespielt werden. 
 
 ![Screenshot](/assets/v5.2.0-backup-04-fromserver.png)
-Screenshot: Datenimport vom Server
+Screenshot: Daten-Import vom Server
 
 - Unter Datenbank-Exporte werden dir die Sicherungen der Datenbank gelistet
 - Unter Datei-Exporte siehst du die Liste der Dateisicherungen
 
-Um eine Datenbank- oder Dateisicherung wieder einzuspielen, klicke in der jeweiligen Zeile auf **importieren**. 
+Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klicke in der jeweiligen Zeile auf **importieren**. 
 
-Wichtig: Führe keine weiteren Schritte in Redaxo durch, bis der Import beendet ist!
+**Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in Redaxo ausgeführt werden!
 
 Nach erfolgreichem Import werden alle Artikel sowie der Cache neu generiert. Alte Daten werden vom Server gelöscht. 
