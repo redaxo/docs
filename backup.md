@@ -19,7 +19,7 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 ## Backup-AddOn 
 
 Das Backup-AddOn ist über den Menüpukt ”Backup“ erreichbar.
-Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung der eigentlichen REDAXO-Installation ist nicht vorgesehen. Die Backups können zur Wiederherstellung eines älteren Datenbestandes und bei der Installation eines neuen REDAXO eingespielt werden. 
+Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung der eigentlichen REDAXO-Installation ist nicht vorgesehen. Die Backups können zur Wiederherstellung eines älteren Datenbestandes und nach der Installation eines neuen REDAXO (z.B. bei einer Migration) eingespielt werden. 
 
 
 <a name="dbexport"></a>
