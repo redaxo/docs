@@ -36,11 +36,11 @@
     - [Eigenschaften (rex:: )](/{{path}}/{{version}}/eigenschaften) <sup><b>offen</b></sup>
     - [Errors & Logs (syslog, exceptions, logger)](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points (Liste, Anwendung)](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
-    - [Formatierungen (rex_formatter)](/{{path}}/{{version}}/formatierungen) <sup><b>offen</b></sup>
-    - [Formulare (rex_form)](/{{path}}/{{version}}/formulare) <sup><b>offen</b></sup>
+    - [Formatierungen (rex_formatter)](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
+    - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
-    - [Listen](/{{path}}/{{version}}/listen) <sup><b>offen</b></sup>
+    - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
         - Tabellen (rex_list)
         - Auswahllisten (rex_select)
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung) <sup><b>offen</b></sup>
@@ -80,7 +80,9 @@
 
 <sup><i>Gregor</i></sup>
 <sup><i>Jan</i></sup>
+<sup><i>Joachim</i></sup>
 <sup><i>Peter</i></sup>
 <sup><i>Thomas</i></sup>
 <sup><i>Marco</i></sup>
+<sup><i>Wolfgang</i></sup>
 ```
