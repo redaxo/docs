@@ -18,23 +18,28 @@ Alle Medien, die im Medienpool verwaltet werden, befinden sich im Ordner “/med
 
 <a name="liste"></a>
 ## Liste der Medien
+![Liste der Medien / hier eine ausgewählte Kategorie](/assets/v5.2.0-medianpool-01-overview.png)
+
 Nach Aufruf des Medienpools über den Menüpunkt “Medienpool”, gelangt man direkt in die Liste der Medien. Hier werden alle Medien der aktuell gewählten Kategorie gelistet. Medien, die keiner Kategorie zugeordnet sind, werden in der Hauptebene unter “Keine Kategorie” gelistet. Zur Auswahl einer Kategorie, steht dir ein Auswahlmenü neben der Suche zur Vefügung. 
 
 <a name="detail"></a>
 ## Detailansicht
 
 Klickt man in der Übersicht einer Kategorie auf den Titel eines Mediums, erhält man die Detailansicht.
-Über die Detailansicht kann die Kategorie gewechselt werden, die Medien geändert werden, Titel- und ggf. (je nach Installation) weitere Informationen zum Medium hinterlegt werden. Über die Schaltfläche **Aktualisieren** werden Änderungen übernommen.
+Über die Detailansicht kann die Kategorie des Mediums gewechselt werden, das Medium getauscht werden, Titel- und ggf. (je nach Installation) weitere Informationen zum Medium hinterlegt werden. Über die Schaltfläche **Aktualisieren** werden Änderungen übernommen.
 
 <a name="kategorien"></a>
 ## Medienkategorien verwalten
 
-Im Reiter **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie klickt man auf das (+)-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Medien beinhalten. Ansonsten erscheint ein Warnhinweis. 
+Im Reiter **Medienkategorien verwalten** können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie, klickt man auf das (+)-Symbol neben der Bezeichnung **Name** und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Medien beinhalten. Ansonsten erscheint ein Warnhinweis. 
+
+> Tipp: Das Verschieben einer Kategorie ist aktuell nicht vorgesehen. Daher sollte man die Kategorisierung der Medien vor Projektbeginn ausführlich planen. 
 
 <a name="upload"></a>
 ## Medien hinzufügen
 
-Zum Hochladen von Dateien in den Medienpool, wählt man den Reiter “Medium hinzufügen”. Hier kann zu der Datei ergänzend ein Titel angegeben werden. Je nach Installation, stehen hier weitere Felder zum Ausfüllen bereit. Um eine Datei einer Kategorie zuzuordnen, kann man beim Upload gleich die entsprechende Medienkategorie festlegen. 
+Zum Hochladen von Dateien in den Medienpool, wählt man den Reiter “Medium hinzufügen”. 
+Hier kann man zum Medium ein Titel hinterlegen und, je nach Installation, weitere Felder ausfüllen. Um eine Datei einer Kategorie zuzuordnen, kann man vor dem Upload gleich die passende Medienkategorie festlegen. Das gewünschte Medium wählt man im Abschnitt Datei. Dort steht eine Schaltfläche zum Aufruf des eigenen Dateisystems bereit. Der Ladevorgang wird dann aus gelöst mit der Schaltfläche “hinzufügen”. 
 
 <a name="loeschen"></a>
 ## Medien löschen
