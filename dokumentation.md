@@ -10,10 +10,10 @@
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Anwender
-    - [Profil](/{{path}}/{{version}}/profil) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Profil](/{{path}}/{{version}}/profil) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>offen</b></sup>
-    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Backup](/{{path}}/{{version}}/backup) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Basis
