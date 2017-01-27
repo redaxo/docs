@@ -12,8 +12,7 @@
 - Anwender
     - [Profil](/{{path}}/{{version}}/profil) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Artikel](/{{path}}/{{version}}/artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
-    - [Kategorien](/{{path}}/{{version}}/kategorien) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [Artikel und Kategorien](/{{path}}/{{version}}/artikel-kategorien) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Redaktion](/{{path}}/{{version}}/redaktion) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Backup](/{{path}}/{{version}}/backup) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
