@@ -1,6 +1,5 @@
-# Kategorien und Artikel 
+# Artikel 
 
-## Kategorien
 ## Startartikel
 ## Artikel
 ## Erstellen eines Artikels
