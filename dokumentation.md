@@ -14,7 +14,7 @@
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Redaktion](/{{path}}/{{version}}/redaktion) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Backup](/{{path}}/{{version}}/backup) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Backup](/{{path}}/{{version}}/backup) <sup><b>abgeschlossen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
@@ -86,3 +86,5 @@
 <sup><i>Marco</i></sup>
 <sup><i>Wolfgang</i></sup>
 ```
+
+
