@@ -6,10 +6,10 @@
 - [Upload](#upload)
 - [Installationsvorgang](#install)
 
-Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
-
 <a name="schnell"></a>
 ## Schnellanleitung
+
+Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
 
 - Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren. 
 - Die neueste Version unter http://redaxo.org/de/download/ herunterladen.
