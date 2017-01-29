@@ -90,14 +90,16 @@ Aktuelle Seite wäre in diesem Beispiel die Seite 72
         echo '<ul>';
         for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
             $show = false;
+            $class = ($this->pager->isActivePage($page)) ? ' active' : '';
             if ($page < $distance) $show = true;
             if (abs($page - $pager->getCurrentPage()) < $distance) $show = true; 
             if ($page + $distance > $pager->getLastPage()) $show = true;
+            // if (($page+1)%10 == 0) $show = true; // alle 10er Schritte anzeigen
             if ($show) {
                 if (($page-1) > $lastPageShown) {
                     echo '<li>...</li>';
                 }
-                echo '<li><a href="'.rex_getUrl(rex_article::getCurrentId(),'',[$pager->getCursorName() => $pager->getCursor($page)]).'">'.($page + 1).'</a></li>';
+                echo '<li class="'.$class.'"><a href="'.rex_getUrl(rex_article::getCurrentId(),'',[$pager->getCursorName() => $pager->getCursor($page)]).'">'.($page + 1).'</a></li>';
                 $lastPageShown = $page;
             }
         }
