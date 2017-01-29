@@ -1,12 +1,12 @@
 # Installation
 
-Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
-
 - [Schnellanleitung](#schnell)
 - [Datenbank](#datenbank)
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
+
+Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
 
 <a name="schnell"></a>
 ## Schnellanleitung
