@@ -37,7 +37,7 @@ Ausführliche Informationen zum Upload und zu denZugangsdaten liefert der Hostin
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch einen Dateimanager, mit dem man die Zip-Datei direkt hochladen und auf dem Server entpacken kann. 
 
 
-> **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen muss diese erst einblenden. 
+> **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen muss man diese erst einblenden. 
 
 Die Ordner- und Dateirechte müssen auf `755` gestellt werden, falls der Server dies beim Upload nicht selbst erledigt haben sollte.
 
@@ -83,8 +83,8 @@ Besitzt der Datenbank-User das Recht, auch neue Datenbanken zu erstellen, so kan
 Schritt 4: Systemcheck
 
 ### Schritt 5: Datenbank
-Us muss eine der drei Optionen gewählt werden. 
-> **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 sind aktuell nicht vorgesehen.
+Es muss eine der drei Optionen gewählt werden. 
+> **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 ist aktuell nicht vorgesehen.
 
 ![Datenbank](/assets/v5.2.0-installation-05-database.png)
 Schritt 5: Datenbank
