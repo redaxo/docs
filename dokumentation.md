@@ -43,7 +43,7 @@
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
         - Tabellen (rex_list)
         - Auswahllisten (rex_select)
-    - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests (rex_get, rex_post, rex_request, etc.)](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses (rex_response)](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
