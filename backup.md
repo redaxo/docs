@@ -16,15 +16,15 @@ Für kleinere Webpräsenzen steht in Redaxo ein [Backup-AddOn](#addon) zur Siche
 
 > Da das Backup-Addon abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per FTP(s) und PHPMyadmin durchgeführt werden. 
 
-> **Backups älterer Redaxo-Versionen als 5.0** 
-> Das Einspielen eines Redaxo-Backups älterer Versionen als 5.0 ist nicht vorgesehen. 
+> **Backups älterer REDAXO-Versionen als 5.0** 
+> Das Einspielen eines REDAXO-Backups älterer Versionen als 5.0 ist nicht vorgesehen. 
 
 Tägliche Backups sollten möglichst automatisch über die im Webhosting des Providers bereitgestellten Sicherungsmöglichkeiten (z.B. in [Plesk](https://www.plesk.com/)) erfolgen. 
 
 <a name="addon"></a>
 ## Backup-AddOn 
 
-Das Backup-AddOn ist über den Menüpukt ”Backup“ erreichbar.
+Das Backup-AddOn ist über den Menüpunkt "Backup" erreichbar.
 Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
 
@@ -40,7 +40,7 @@ Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und In
 
 - Optional weitere Tabellen zur Sicherung auswählen
 - Gewünschten Speicherort auswählen
-- Ein Klick auf “Exportieren” startet die Sicherung
+- Ein Klick auf "Exportieren" startet die Sicherung
 
 > **Tipp:** Wenn auch die Zugangsdaten der Redakteure gesichert werden sollen, muss zusätzlich die Tabelle **rex_user** ausgewählt werden.
 
@@ -50,7 +50,7 @@ Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und In
 ![Screenshot](/assets/v5.2.0-backup-02-files.png)
 Screenshot: Datei-Backup
 
-Beim Datei-Export werden die ausgewählten Dateien und/oder Verzeichnisse in komprimierter Form gespeichert. Redaxo selbst wird hier nicht gesichert. Eine Vorauswahl von Dateien findet nicht statt. 
+Beim Datei-Export werden die ausgewählten Dateien und/oder Verzeichnisse in komprimierter Form gespeichert. REDAXO selbst wird hier nicht gesichert. Eine Vorauswahl von Dateien findet nicht statt. 
 
 **Drei Schritte zum Datei-Export:** 
 
@@ -78,7 +78,7 @@ Screenshot: Daten-Import Upload
 
 Mit einem Klick auf das jeweilige Dateiauswahlfeld kann die lokal gespeicherte Sicherung ausgewählt und mit einem Klick auf **Import** hochgeladen werden. 
 
-> **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in Redaxo ausgeführt werden!
+> **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in REDAXO ausgeführt werden!
 
 <a name="fromserver"></a>
 #### Vom Server laden
@@ -93,7 +93,7 @@ Screenshot: Daten-Import vom Server
 
 Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klickt man in der jeweiligen Zeile auf **importieren**. 
 
-> **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in Redaxo ausgeführt werden!
+> **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in REDAXO ausgeführt werden!
 
 Nach erfolgreichem Import werden alle Artikel sowie der Cache neu generiert. Alte Daten werden vom Server gelöscht. 
 
