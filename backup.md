@@ -1,14 +1,14 @@
 # Backup
 Vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server sollte eine Datensicherung durch geführt werden. 
-Für kleinere Webpräsenzen steht in Redaxo ein [Backup-Addon](#addon) zur Sicherung der Datenbank und ausgewählter Dateiordner zur Verfügung. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Datenbank durchzuführen.
+Für kleinere Webpräsenzen steht in REDAXO ein [Backup-AddOn](#addon) zur Sicherung der Datenbank und ausgewählter Dateiordner zur Verfügung. Zudem ist es möglich, in Kombination mit einem Cronjob, regelmäßige Sicherungen der Datenbank durchzuführen.
 
-> Da das Backup-Addon abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per FTP(s) und PHPMyadmin durchgeführt werden. 
-
-> **Backups älterer Redaxo-Versionen als 5.0** Das Einspielen eines Redaxo-Backups älterer Versionen als 5.0 ist nicht vorgesehen. 
+> Da das Backup-Addon abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per (S)FTP und [PHPMyAdmin](https://www.phpmyadmin.net) durchgeführt werden. 
 
 Tägliche Backups sollten möglichst automatisch über die im Webhosting des Providers bereitgestellten Sicherungsmöglichkeiten (z.B. in [Plesk](https://www.plesk.com/)) erfolgen. 
 
-- [Backup-Addon](#addon)
+> **Backups älterer Redaxo-Versionen als REDAXO 5.0**: Das Einspielen eines Redaxo-Backups älterer Versionen als 5.0 ist aktuell nicht vorgesehen. 
+
+- [Backup-AddOn](#addon)
   - [Datenbank-Export](#dbexport)
   - [Datei-Export](#fileexport)
   - [Daten importieren](#import)
@@ -16,10 +16,10 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
     - [Vom Server laden](#fromserver)
 
 <a name="addon"></a>
-## Backup-Addon 
+## Backup-AddOn 
 
 Das Backup-AddOn ist über den Menüpukt ”Backup“ erreichbar.
-Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
+Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung der eigentlichen REDAXO-Installation ist nicht vorgesehen. Die Backups können zur Wiederherstellung eines älteren Datenbestandes und nach der Installation eines neuen REDAXO (z.B. bei einer Migration) eingespielt werden. 
 
 
 <a name="dbexport"></a>
