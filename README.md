@@ -5,7 +5,7 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 ## Bitte beachten
 
 - Hinweise zur Formatierung und Markdown-Syntax findet Ihr in der Datei [_vorlage.md](_vorlage.md)
-- Bitte in jedes Kapitel eine Sprunganker-Navigation integrieren (siehe [_vorlage.md](_vorlage.md))
+- Bitte in jedes Kapitel eine Sprunganker-Navigation integrieren (siehe [_vorlage.md](_vorlage.md)). Diese Sprunganker-Navigation muss direkt am Anfang hinter der ersten Überschrift kommen. Direkt danach muss die zweite Überschrift folgen.
 - Wenn man sich einen Inhalt vornimmt, bitte mit Namen und Status markieren in der [dokumentation.md](dokumentation.md)
 - **Hinweis:** Die Links in der Inhaltsverzeichnis-Datei [dokumentation.md](dokumentation.md) funktionieren nicht innerhalb von Github, da sie vorbereitet sind für den automatischen Import in die REDAXO-Website. Ihr müsst daher die gewünschte Datei selbst auswählen und öffnen.
 
