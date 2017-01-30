@@ -2,6 +2,16 @@
 
 - [Über](#ueber)
 - [Funktionsbeschreibung](#funktionen)
+  - [Pfad](#pfad)
+  - [Kategorie erstellen](#kat_e)
+  - [Artikel erstellen](#art_e)
+  - [Online / Offline](#ofon)
+  - [Ändern](#aendern)
+  - [Prio](#prio)
+  - [Kategorien und Artikel umbenennen](#rename)
+  - [Artikel-Template ändern](#template)
+  - [Metadaten einer Kategorie](#meta)
+  
 
 <a name="ueber"></a>
 ## Über
@@ -15,33 +25,42 @@ Die Strukturansicht  ist zweigeteilt. Im Oberen Abschnitt werden immer die Unter
 
 <a name="funktionen"></a>
 ## Funktionsbeschreibung
-In der Struktur kannst du die Struktur deiner Website verwalten und erweiteren.
+In der Struktur kann man die Struktur der Website verwalten und erweiteren.
 Folgende Funktionen stehen hierzu zur Verfügung: 
 
+<a name="pfad"></a>
 ### Pfad 
-Die Pfadanzeige zeigt dir an, wo du dich innerhalb der Struktur befindest. Bei Klick auf einen Abschitt des Pfades wechselst du direkt in die gewünschte Kategorie. 
+Die Pfadanzeige zeigt an, wo man sich innerhalb der Struktur befindest. Bei Klick auf einen Abschitt des Pfades wechselt man direkt in die gewünschte Kategorie. 
 
+<a name="kat_e"></a>
 ### Kategorie erstellen
-Zum Erstellen einer neuen Kategorie, klicke auf das (+)-Symbol, gebe den Namen der Kategorie ein und speichere deine Eingabe über die Schaltfläche “Kategorie hinzufügen” ab. Die erstellte Kategorie ist zunächst offline gestellt. 
+Das Erstellen einer neuen Kategorie erfolgt über das (+)-Symbol. Dana legt man den Namen der Kategorie fest und speichert die Eingabe über die Schaltfläche “Kategorie hinzufügen”. Die erstellte Kategorie ist zunächst offline gestellt. 
 
+<a name="art_e"></a>
 ### Artikel erstellen
-Zum Erstellen einer neues Artikels, klicke auf das (+)-Symbol, gebe den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Speichere deine Eingabe über die Schaltfläche “Artikel hinzufügen” ab. Der erstellte Artikel ist zunächst offline gestellt. Die weitere Bearbeitung des Artikels erfolgt nach Klick auf den Artikelnamen. 
+Man erstellt einen neuen Artikel über das (+)-Symbol und gibt anschließend den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Nach Bestätigen über die Schaltfläche “Artikel hinzufügen” wird der Artikel angelegt. Der erstellte Artikel ist zunächst offline gestellt. Um den Artikel zur Bearbeitung aufzurufen, klickt man auf seinen Namen. 
 
+<a name="ofon"></a>
 ### Online / Offline
 Hiermit können Artikel und Kategorien den Status online oder offline erhalten. 
 Sofern bei der Programmierung der Website berücksichtigt, werden offline gestellte Artikel und Kategorien in den Navigationen der Website ausgeblendet oder gar gesperrt. In der Strukturverwaltung selbst hat diese Funktion keine Auswirkung, die Inhalte, Artikel und Kategorien können weiterhin bearbeitet und betrachtet werden.  
 
+<a name="aendern"></a>
 ### Ändern 
-Das Ändern der Artikel– und Kategorienamen, die Reigenfolge, optionale Metadaten der Kategorien oder die Templateauswahl für Artikel sind über die “ändern”-Funktio zugänglich. 
+Das Ändern der Artikel– und Kategorienamen, die Reigenfolge, optionale Metadaten der Kategorien oder die Templateauswahl für Artikel sind über die “ändern”-Funktion zugänglich. 
 
+<a name="prio"></a>
 #### Prio
-Die Priorität (Prio) definiert die Reihenfolge der Artikel und Kategorien in der Struktur. Die Prio kannst du ändern, indem du neben den Artikel- oder Kategorienamen auf “ändern” klickst und anschließend den Prio-Wert änderst. Du speicherst die Einstellung mit “Artikel speichern” oder “Kategorie speichern”.
+Die Priorität (Prio) definiert die Reihenfolge der Artikel und Kategorien in der Struktur. Die Prio kann man ändern, indem man neben den Artikel- oder Kategorienamen auf “ändern” klickt und anschließend den Prio-Wert ändert. Man speichert die Einstellung mit “Artikel speichern” oder “Kategorie speichern”.
 
+<a name="rename"></a>
 #### Artikel und Kategorien umbenennen
 Das umbenennen einer Kategorie oder eines Arikels erfolgt über die “Ändern”-Funktion. Nach Aufruf kann der Name in einem Formularfeld geändert werden. Nach Bestätigung mit “Artikel speichern” oder “Kategorie speichern” wird der Name geändert. 
 
+<a name="template"></a>
 #### Artikel-Template ändern
 Nach Aufruf der “Ändern”-Funktion erscheint beim Artikel ein Auswahlfeld zur Festlegung des Templates. Nach Bestätigung mit “Artikel speichern” wird die Auswahl übernommen. 
 
+<a name="meta"></a>
 #### Metadaten einer Kategorie (optional) 
-Anders als bei Artikeln werden Metadaten der Kategorien (optional) direkt in der Struktur bearbeitet. Hierzu ruft man die “Ändern”-Funktion auf. Es erscheint (sofern im Projekt vorgesehen) ein Plus-Symbol dass es ermöglicht weitere Einstellungen zur Kategorie durchzuführen. 
+Anders als bei Artikeln werden Metadaten der Kategorien (optional) direkt in der Struktur bearbeitet. Hierzu ruft man die “Ändern”-Funktion auf. Es erscheint (sofern im Projekt vorgesehen) ein (+)-Symbol, das es ermöglicht weitere Einstellungen zur Kategorie durchzuführen. 
