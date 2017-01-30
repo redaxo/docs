@@ -42,7 +42,7 @@ Weitere Methoden der rex_pager Klasse sind
 
         <?php
         // Anzahl Elemente pro Seite (Standard 30)
-        $rowsPerPage = $pager->getRowsPerPage();
+        $rows_per_page = $pager->getRowsPerPage();
         
         // Liefert den Wert des aktuellen Cursors
         // bei optionaler Übergabe einer Seitenzahl den Cursorwert der Seite
@@ -51,30 +51,30 @@ Weitere Methoden der rex_pager Klasse sind
         // prüft den übergebenen Cursorwert
         // Rückgabe: 1, wenn der Cursorwert innerhalb des definierten Bereiches ist
         //           0, wenn der Cursorwert nicht innerhalb des Bereiches liegt
-        $isValidCursor = $pager->validateCursor(integer $cursor);
+        $is_valid_cursor = $pager->validateCursor(integer $cursor);
         
         // Liefert den Name des Cursors. Standard ist "start"
-        $cursorName = $pager->getCursorName();
+        $cursor_name = $pager->getCursorName();
         
         // Gibt 0 zurück, da der Offset für die erste Seite immer 0 ist        
-        $offsetForFirstPage = $pager->getFirstPage();
+        $offset_for_first_page = $pager->getFirstPage();
         
         // Gibt die Seitennummer für die vorhergehenden Seite zurück
         // Wert ist nie kleiner als die kleinste mögliche Seitennummer
-        $prevPageNo = $pager->getPrevPage( );
+        $prev_page_no = $pager->getPrevPage( );
         
         // Gibt die Seitennummer der aktuellen Seite zurück oder 0
-        $currentPageNo = $pager->getCurrentPage();
+        $current_page_no = $pager->getCurrentPage();
         
         // Gibt die Seitennummer für die nächste Seite zurück
         // Wert ist nie größer als die höchste mögliche Seitennummer
-        $nextPageNo = $pager->getNextPage();
+        $next_page_no = $pager->getNextPage();
         
         // Gibt die höchste mögliche Seitennummer zurück
-        $lastPageNo = $pager->getLastPage();
+        $last_page_no = $pager->getLastPage();
         
         // gibt true zurück, wenn der Cursor auf der übergebenen Seitennummer steht
-        $isActivePage = $pager->isActivePage(integer $pageNo);
+        $is_active_page = $pager->isActivePage(integer $pageNo);
         ?>
         
 Ein weiteres Beispiel einer Ausgabe zeigt, wie man die Klasse rex_pager verwenden kann, um einen Pager anzuzeigen, der nicht alle Seiten ausgibt, sondern Bereiche zwischen dem Anfang und der aktuellen Position und dem Ende auslässt. Die Ausgabe könnte dann so aussehen:
@@ -85,7 +85,7 @@ Aktuelle Seite wäre in diesem Beispiel die Seite 72
 
         $distance = 3; // Wert, der bestimmt wieviele Seiten vor bzw. nach der aktuellen Seite angezeigt werden sollen.
 
-        $lastPageShown = 0;
+        $last_page_shown = 0;
 
         echo '<ul>';
         for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
@@ -96,11 +96,11 @@ Aktuelle Seite wäre in diesem Beispiel die Seite 72
             if ($page + $distance > $pager->getLastPage()) $show = true;
             // if (($page+1)%10 == 0) $show = true; // alle 10er Schritte anzeigen
             if ($show) {
-                if (($page-1) > $lastPageShown) {
+                if (($page-1) > $last_page_shown) {
                     echo '<li>...</li>';
                 }
                 echo '<li class="'.$class.'"><a href="'.rex_getUrl(rex_article::getCurrentId(),'',[$pager->getCursorName() => $pager->getCursor($page)]).'">'.($page + 1).'</a></li>';
-                $lastPageShown = $page;
+                $last_page_shown = $page;
             }
         }
         echo '</ul>';
