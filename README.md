@@ -20,7 +20,7 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 
 ## Coding-Standard
 
-Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Conding-Standard beachten:
+Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Coding-Standard beachten:
 [http://symfony.com/doc/current/contributing/code/standards.html](http://symfony.com/doc/current/contributing/code/standards.html)
 
 ### Screenshots
