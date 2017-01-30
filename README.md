@@ -18,6 +18,11 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 - REDAXO
 - AddOn
 
+## Coding-Standard
+
+Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Conding-Standard beachten:
+[http://symfony.com/doc/current/contributing/code/standards.html](http://symfony.com/doc/current/contributing/code/standards.html)
+
 ### Screenshots
 
 - Breite 1600 Pixel Breite. Höhe, wie man es braucht.
