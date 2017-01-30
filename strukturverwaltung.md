@@ -7,10 +7,10 @@
   - [Artikel erstellen](#art_e)
   - [Online / Offline](#ofon)
   - [Ändern](#aendern)
-  - [Prio](#prio)
-  - [Kategorien und Artikel umbenennen](#rename)
-  - [Artikel-Template ändern](#template)
-  - [Metadaten einer Kategorie](#meta)
+    - [Prio](#prio)
+    - [Kategorien und Artikel umbenennen](#rename)
+    - [Artikel-Template ändern](#template)
+    - [Metadaten einer Kategorie](#meta)
   
 
 <a name="ueber"></a>
