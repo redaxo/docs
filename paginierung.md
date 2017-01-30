@@ -46,35 +46,35 @@ Weitere Methoden der rex_pager Klasse sind
         
         // Liefert den Wert des aktuellen Cursors
         // bei optionaler Übergabe einer Seitenzahl den Cursorwert der Seite
-        $cursor = $pager->getCursor( integer $pageNo = null );
+        $cursor = $pager->getCursor(integer $pageNo = null);
         
         // prüft den übergebenen Cursorwert
         // Rückgabe: 1, wenn der Cursorwert innerhalb des definierten Bereiches ist
         //           0, wenn der Cursorwert nicht innerhalb des Bereiches liegt
-        $isValidCursor = $pager->validateCursor( integer $cursor );
+        $isValidCursor = $pager->validateCursor(integer $cursor);
         
         // Liefert den Name des Cursors. Standard ist "start"
-        $cursorName = $pager->getCursorName( );
+        $cursorName = $pager->getCursorName();
         
         // Gibt 0 zurück, da der Offset für die erste Seite immer 0 ist        
-        $offsetForFirstPage = $pager->getFirstPage( );
+        $offsetForFirstPage = $pager->getFirstPage();
         
         // Gibt die Seitennummer für die vorhergehenden Seite zurück
         // Wert ist nie kleiner als die kleinste mögliche Seitennummer
         $prevPageNo = $pager->getPrevPage( );
         
         // Gibt die Seitennummer der aktuellen Seite zurück oder 0
-        $currentPageNo = $pager->getCurrentPage( );
+        $currentPageNo = $pager->getCurrentPage();
         
         // Gibt die Seitennummer für die nächste Seite zurück
         // Wert ist nie größer als die höchste mögliche Seitennummer
-        $nextPageNo = $pager->getNextPage( );
+        $nextPageNo = $pager->getNextPage();
         
         // Gibt die höchste mögliche Seitennummer zurück
-        $lastPageNo = $pager->getLastPage( );
+        $lastPageNo = $pager->getLastPage();
         
         // gibt true zurück, wenn der Cursor auf der übergebenen Seitennummer steht
-        $isActivePage = $pager->isActivePage( integer $pageNo );
+        $isActivePage = $pager->isActivePage(integer $pageNo);
         ?>
         
 Ein weiteres Beispiel einer Ausgabe zeigt, wie man die Klasse rex_pager verwenden kann, um einen Pager anzuzeigen, der nicht alle Seiten ausgibt, sondern Bereiche zwischen dem Anfang und der aktuellen Position und dem Ende auslässt. Die Ausgabe könnte dann so aussehen:
