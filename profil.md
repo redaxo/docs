@@ -6,7 +6,7 @@ Das Benutzerprofil kann durch Klick auf den Namen neben "Angemeldet als:" aufger
 
 ## Passwort ändern
 
-Zur Änderung des Passwortes gibst du dein altes Passwort ein und schreibst in die anschließenden Felder dein neues Passwort. Die Änderung bestätigst du mit "Passwort speichern". 
+Zur Änderung des Passwortes gibt man sein altes Passwort ein und schreib in die anschließenden zwei Felder das neues Passwort. Die Änderung wird mit "Passwort speichern" bestätigt. 
 
 Zur eigenen Sicherheit und zum Schutze der Webpräsenz sollte das neue Passwort: 
 - möglichst lang (mehr als 8 Zeichen) sein 
