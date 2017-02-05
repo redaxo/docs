@@ -8,7 +8,7 @@
 - [Ausgabe-Variablen](#ausgabe-variablen)
     - [REX_CLANG](#rex-clang)
     - [REX_CONFIG](#rex-config)
-    - [REX_PROPERTY](#rex-propery)
+    - [REX_PROPERTY](#rex-property)
     - [REX_ARTICLE_ID](#rex-article-id)
     - [REX_CATEGORY_ID](#rex-category-id)
     - [REX_CLANG_ID](#rex-clang-id) 
