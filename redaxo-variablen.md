@@ -57,15 +57,15 @@ Um das Einbinden von dynamische Daten innerhalb von Modulen und Templates zu erl
  
 <a name="allgemeine-parameter"></a>
 ### Allgemeine Parameter
-Allen REDAXO-Variablen kann einer der folgenden Parameter übergeben werden.
+Allen REDAXO-Variablen kann einer der folgenden Parameter optionalen übergeben werden.
 
 Parameter | Beschreibung  
 --- | ---
-callback | Mit `callback=xyz` ist es möglich, eine Funktion anzugeben, durch die der Variableninhalt vor der Ausgabe manipuliert werden kann. 
-prefix | Mit `prefix=xyz` ist es möglich, zusätzlichen Inhalt vor der Variable auszugeben.   
-suffix | Mit `suffix=xyz` ist es möglich, zusätzlichen Inhalt nach der Variable auszugeben. 
-instead | Der mit `instead=xyz` definierte Inhalt wird statt der Variable ausgegeben, wenn diese nicht leer ist.
-ifempty | Der mit `ifempty=xyz` definierte Inhalt wird ausgegeben, wenn die Variable leer ist.
+`callback=xyz` | Der Variableninhalt wird an eine Funktion `xyz` übergeben, durch die der Variableninhalt vor der Ausgabe manipuliert werden kann. 
+`prefix=xyz` | Erlaubt es, zusätzlichen Inhalt vor der Variable auszugeben.   
+`suffix=xyz` | Erlaubt es, zusätzlichen Inhalt nach der Variable auszugeben. 
+`instead=xyz` | Der Inhalt `xyz` wird statt der Variable ausgegeben, wenn diese nicht leer ist.
+`ifempty=xyz` | Der Inhalt `xyz` wird ausgegeben, wenn die Variable leer ist.
 
 
 <a name="ein-ausgabe-variablen"></a>
