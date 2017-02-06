@@ -71,7 +71,7 @@ Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die 
 - bestätigen mit “aktualisieren”
 
 ### Verschieben über Liste der Medien
-- Über die Checkboxen die Medien markieren, die du verschoben werden sollen 
+- Über die Checkboxen die Medien markieren, die verschoben werden sollen 
 - Zum Ende der Liste scrollen
 - Unter “Ausgewählte Medien - in Kategorie” die neue Kategorie auswählen und auf “verschieben” klicken
 
