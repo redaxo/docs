@@ -113,4 +113,4 @@ Standard-Direktiven für NGINX:
  location ^~ /redaxo/cache { deny  all; }
 ```
 
-> Bei der Verwendung eines Rewriter-Addons bitte die Dokumentation deas Addons beachten.
+> Bei der Verwendung eines Rewriter-Addons bitte die Dokumentation des Addons beachten.
