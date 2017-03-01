@@ -5,7 +5,6 @@
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
-- [Hinweis für NGINX-Nutzer](#nginx)
 
 <a name="schnell"></a>
 ## Schnellanleitung
@@ -68,6 +67,18 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 ![Systemcheck](/assets/v5.2.0-installation-03-systemcheck.png)
 Schritt 3: Systemcheck
 
+### Hinweis für NGINX-Nutzer
+> Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
+
+Direktiven für NGINX:
+```
+ location ^~ /redaxo/src { deny  all; }
+ location ^~ /redaxo/data { deny  all; }
+ location ^~ /redaxo/cache { deny  all; }
+```
+> Bei der Verwendung eines Rewriter-Addons bitte die Dokumentation des Addons beachten.
+
+
 ### Schritt 4: Konfiguration
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt. 
    
@@ -102,15 +113,3 @@ Die Installation ist erfolgreich. Man sollte die weiteren Hinweise auf der Seite
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7: Ende
 
-<a name="nginx"></a>
-## Hinweis für NGINX-Nutzer
-Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
-
-Standard-Direktiven für NGINX:
-```
- location ^~ /redaxo/src { deny  all; }
- location ^~ /redaxo/data { deny  all; }
- location ^~ /redaxo/cache { deny  all; }
-```
-
-> Bei der Verwendung eines Rewriter-Addons bitte die Dokumentation des Addons beachten.
