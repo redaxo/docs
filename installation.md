@@ -102,6 +102,7 @@ Die Installation ist erfolgreich. Man sollte die weiteren Hinweise auf der Seite
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7: Ende
 
+<a name="nginx"></a>
 ## Hinweis für NGINX-Nutzer
 Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
 
