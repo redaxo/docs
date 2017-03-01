@@ -105,7 +105,9 @@ Schritt 7: Ende
 ## Hinweis für NGINX-Nutzer
 Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
 
- location ~ /redaxo/src { deny  all; }
- location ~ /redaxo/data { deny  all; }
- location ~ /redaxo/cache { deny  all; }```
+```
+ location ^~ /redaxo/src { deny  all; }
+ location ^~ /redaxo/data { deny  all; }
+ location ^~ /redaxo/cache { deny  all; }
+```
 
