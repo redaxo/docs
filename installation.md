@@ -5,7 +5,7 @@
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
-- [Hinweis für NGINX-Nutzer](nginx)
+- [Hinweis für NGINX-Nutzer](#nginx)
 
 <a name="schnell"></a>
 ## Schnellanleitung
