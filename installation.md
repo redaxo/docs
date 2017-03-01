@@ -5,6 +5,7 @@
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
+- [Hinweis für NGINX-Nutzer](nginx)
 
 <a name="schnell"></a>
 ## Schnellanleitung
@@ -101,4 +102,10 @@ Die Installation ist erfolgreich. Man sollte die weiteren Hinweise auf der Seite
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7: Ende
 
+## Hinweis für NGINX-Nutzer
+Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
+
+ location ~ /redaxo/src { deny  all; }
+ location ~ /redaxo/data { deny  all; }
+ location ~ /redaxo/cache { deny  all; }```
 
