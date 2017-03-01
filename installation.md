@@ -67,7 +67,7 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 ![Systemcheck](/assets/v5.2.0-installation-03-systemcheck.png)
 Schritt 3: Systemcheck
 
-### Hinweis für NGINX-Nutzer
+**Hinweis für NGINX-Nutzer**
 > Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
 
 Direktiven für NGINX:
