@@ -34,7 +34,7 @@ Die Pfadanzeige zeigt an, wo man sich innerhalb der Struktur befindest. Bei Klic
 
 <a name="kat_e"></a>
 ### Kategorie erstellen
-Das Erstellen einer neuen Kategorie erfolgt über das (+)-Symbol. Dana legt man den Namen der Kategorie fest und speichert die Eingabe über die Schaltfläche “Kategorie hinzufügen”. Die erstellte Kategorie ist zunächst offline gestellt. 
+Das Erstellen einer neuen Kategorie erfolgt über das (+)-Symbol. Danach legt man den Namen der Kategorie fest und speichert die Eingabe über die Schaltfläche “Kategorie hinzufügen”. Die erstellte Kategorie ist zunächst offline gestellt. 
 
 <a name="art_e"></a>
 ### Artikel erstellen
