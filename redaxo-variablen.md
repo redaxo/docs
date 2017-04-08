@@ -3,21 +3,21 @@
 - [Einführung](#einführung)
     - [Allgemeine Parameter](#allgemeine-parameter)
 - [Ein- und Ausgabe-Variablen](#ein-ausgabe-variablen)
-    - [REX_VALUE](#rex-value)
-    - [REX_MEDIA und REX_MEDIALIST](#rex-media)
     - [REX_LINK und REX_LINKLIST](#rex-link)
+    - [REX_MEDIA und REX_MEDIALIST](#rex-media)
+    - [REX_VALUE](#rex-value)
 - [Ausgabe-Variablen](#ausgabe-variablen)
-    - [REX_CLANG](#rex-clang)
-    - [REX_CONFIG](#rex-config)
-    - [REX_PROPERTY](#rex-property)
     - [REX_ARTICLE_ID](#rex-article-id)
     - [REX_CATEGORY_ID](#rex-category-id)
+    - [REX_CLANG](#rex-clang)
     - [REX_CLANG_ID](#rex-clang-id) 
+    - [REX_CONFIG](#rex-config)
+    - [REX_CTYPE_ID](#rex-ctype-id)
+    - [REX_MODULE_ID](#rex-module-id)
+    - [REX_PROPERTY](#rex-property)
+    - [REX_SLICE_ID](#rex-slice-id)
     - [REX_TEMPLATE_ID](#rex-template-id)
     - [REX_USER_ID](#rex-user-id)
-    - [REX_SLICE_ID](#rex-slice-id)
-    - [REX_MODULE_ID](#rex-module-id)
-    - [REX_CTYPE_ID](#rex-ctype-id)
 - [Arrays zurückwandeln](#arrays-zurueckwandeln)
 - [Eigene Variablen](#eigene-variablen)
 
@@ -74,6 +74,54 @@ Parameter | Beschreibung
 Im Eingabebereich eines Moduls dienen sie zur Übernahme von redaktionellen Eingaben, die in die Datenbank geschrieben werden. Im Ausgabebereich stellen sie diese Daten zur Weiterverarbeitung und Ausgabe zur Verfügung. 
 
 
+<a name="rex-link"></a>
+### REX_LINK und REX_LINKLIST
+TODO
+
+
+<a name="rex-media"></a>
+### REX_MEDIA und REX_MEDIALIST
+Mit `REX_MEDIA` und `REX_MEDIALIST` können im Eingabebereich über ein Widget Medien aus dem Medienpool ausgewählt werden. So ist es möglich, z.B. Bilder oder Links zu Dokumenten in den Inhalt einzufügen. 
+
+Durch `REX_MEDIA` wird nur eine Datei eingefügt, durch `REX_MEDIALIST` ist das Einfügen einer beliebigen Zahl von Dateien möglich.
+
+*Wird vom AddOn `mediapool` bereitgestellt.*
+
+#### Syntax
+##### Ausgabe-Variable
+Gibt den Dateinamen eines Mediums zurück. Wird nur die ID angegeben, ist eine gekürzte Schreibweise erlaubt.
+    
+    // Kurze Schreibweise
+    REX_MEDIA[i]
+    // Ausführliche Schreibweise
+    REX_MEDIA[id=i] 
+    REX_MEDIA[id=i field=xyz]
+    REX_MEDIA[id=i output=mimetype]
+
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`field=xyz` | Abrufen eines Metadatenfeldes `xyz` (optional). Statt des Dateinamens wird der Inhalt des Metadatenfeldes zurückgegeben.
+`output=mimetype` | Statt des Dateinamens wird der Medientyp der Datei zurückgegeben.
+
+##### Eingabe-Variable
+Gibt im Backend ein Eingabewidget aus.
+
+    // Kurze Schreibweise
+    REX_MEDIA[i] 
+    // Ausführliche Schreibweise
+    REX_MEDIA[id=i widget=1 category=xyz types=xyz preview=1]
+    
+Parameter | Beschreibung  
+--- | ---    
+`category=xyz` | Beschränkt die Auswahl auf die Medienkategorie `xyz` (optional).
+`types=xyz` | Beschränkt die Auswahl auf bestimmte Dateitypen (optional). Es können mehrere Typen kommagetrennt übergeben werden *(Achtung: es dürfen keine Leerzeichen in der Übergabe enthalten sein)*. 
+`preview=1` | Aktiviert eine Voransicht im Widget.
+
+##### Beispiele
+    TODO
+
+
 <a name="rex-value"></a>
 ### REX_VALUE
 In `REX_VALUE` können alle möglichen Inhalte gespeichert werden. Sie ist daher die am häufigsten eingesetzte REDAXO-Variable.
@@ -123,108 +171,9 @@ Parameter | Beschreibung
     <p>REX_VALUE[1]</p>
 
 
-<a name="rex-media"></a>
-### REX_MEDIA und REX_MEDIALIST
-Mit `REX_MEDIA` und `REX_MEDIALIST` können im Eingabebereich über ein Widget Medien aus dem Medienpool ausgewählt werden. So ist es möglich, z.B. Bilder oder Links zu Dokumenten in den Inhalt einzufügen. 
-
-Durch `REX_MEDIA` wird nur eine Datei eingefügt, durch `REX_MEDIALIST` ist das Einfügen einer beliebigen Zahl von Dateien möglich.
-
-*Wird vom AddOn `mediapool` bereitgestellt.*
-
-#### Syntax
-##### Ausgabe-Variable
-Gibt den Dateinamen eines Mediums zurück. Wird nur die ID angegeben, ist eine gekürzte Schreibweise erlaubt.
-    
-    // Kurze Schreibweise
-    REX_MEDIA[i]
-    // Ausführliche Schreibweise
-    REX_MEDIA[id=i] 
-    REX_MEDIA[id=i field=xyz]
-    REX_MEDIA[id=i output=mimetype]
-
-Parameter | Beschreibung  
---- | ---
-`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
-`field=xyz` | Abrufen eines Metadatenfeldes `xyz` (optional). Statt des Dateinamens wird der Inhalt des Metadatenfeldes zurückgegeben.
-`output=mimetype` | Statt des Dateinamens wird der Medientyp der Datei zurückgegeben.
-
-##### Eingabe-Variable
-Gibt im Backend ein Eingabewidget aus.
-
-    // Kurze Schreibweise
-    REX_MEDIA[i] 
-    // Ausführliche Schreibweise
-    REX_MEDIA[id=i widget=1 category=xyz types=xyz preview=1]
-    
-Parameter | Beschreibung  
---- | ---    
-`category=xyz` | Beschränkt die Auswahl auf die Medienkategorie `xyz` (optional).
-`types=xyz` | Beschränkt die Auswahl auf bestimmte Dateitypen (optional). Es können mehrere Typen kommagetrennt übergeben werden *(Achtung: es dürfen keine Leerzeichen in der Übergabe enthalten sein)*. 
-`preview=1` | Aktiviert eine Voransicht im Widget.
-
-##### Beispiele
-    TODO
-
-
-<a name="rex-link"></a>
-### REX_LINK und REX_LINKLIST
-TODO
-
-
 <a name="ausgabe-variablen"></a>
 ## 2. Ausgabe-Variablen
 Ausgabe-Variablen bieten nur Lesezugriff. Mit ihrer hilfe können Daten des CMS im Ein- und Augabebereich abgerufen werden.
-
-
-<a name="rex-clang"></a>
-### REX_CLANG
-Ermöglicht den Zugriff auf die Metadaten-Felder der Ausgabe-Sprachen im Frontend. 
-Shortcut für `rex_clang::getCurrent()->getValue($field)` und `rex_clang::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
-
-*Wird vom REDAXO-Core breitgestellt.* 
-
-#### Syntax
-
-    REX_CLANG[id=i field=xzy]
-
-Parameter | Beschreibung  
---- | ---
-`id=i` | die ID der Sprache, die Angabe ist optional 
-`field=xyz` | Das auszugebende Metadaten-Feld 
-
-
-<a name="rex-config"></a>
-### REX_CONFIG
-Erlaubt den Zugriff auf Datenfelder der REDAXO-Konfigurationstabelle. 
-Shortcut für `rex_config::get($namespace, $key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
-
-*Wird vom REDAXO-Core breitgestellt.* 
-
-#### Syntax
-    
-    REX_CONFIG[namespace=xyz key=xyz]
-
-Parameter | Beschreibung
---- | ---
-`namespace=xyz` | der Namespace der Konfiguration, meistens der Name des Addons oder `namespace=core` für den REDAXO-Core 
-`key=xyz` | das abzurufende Datenfeld
-
-
-<a name="rex-property"></a>
-### REX_PROPERTY
-Bietet Zugriff auf die in den `package.yml` der Addons und in der `config.yml` des Cores definierten Datenfelder. 
-Shortcut für `rex_package::get($namespace)->getProperty($key)` und `rex::getProperty($key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
-
-*Wird vom REDAXO-Core breitgestellt.* 
-
-#### Syntax
-    
-    REX_PROPERTY[namespace=xyz key=xyz]
-
-Parameter | Beschreibung
---- | --- 
-`namespace=xyz` | der Name des Addons, wird kein Namespace angegeben wird auf die Daten des REDAXO-Core zugegriffen 
-`key=xyz` | das abzurufende Datenfeld
 
 
 <a name="rex-article-id"></a>
@@ -249,6 +198,23 @@ Liefert die ID der aktiven Kategorie. Es sind keine Parameter erforderlich.
     REX_CATEGORY_ID
     
     
+<a name="rex-clang"></a>
+### REX_CLANG
+Ermöglicht den Zugriff auf die Metadaten-Felder der Ausgabe-Sprachen im Frontend. 
+Shortcut für `rex_clang::getCurrent()->getValue($field)` und `rex_clang::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
+
+*Wird vom REDAXO-Core breitgestellt.* 
+
+#### Syntax
+
+    REX_CLANG[id=i field=xzy]
+
+Parameter | Beschreibung  
+--- | ---
+`id=i` | die ID der Sprache, die Angabe ist optional 
+`field=xyz` | Das auszugebende Metadaten-Feld 
+
+
 <a name="rex-clang-id"></a>
 ### REX_CLANG_ID
 Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlich.
@@ -258,6 +224,73 @@ Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlic
 #### Syntax
     
     REX_CLANG_ID
+    
+    
+<a name="rex-config"></a>
+### REX_CONFIG
+Erlaubt den Zugriff auf Datenfelder der REDAXO-Konfigurationstabelle. 
+Shortcut für `rex_config::get($namespace, $key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
+
+*Wird vom REDAXO-Core breitgestellt.* 
+
+#### Syntax
+    
+    REX_CONFIG[namespace=xyz key=xyz]
+
+Parameter | Beschreibung
+--- | ---
+`namespace=xyz` | der Namespace der Konfiguration, meistens der Name des Addons oder `namespace=core` für den REDAXO-Core 
+`key=xyz` | das abzurufende Datenfeld
+
+
+<a name="rex-ctype-id"></a>
+### REX_CTYPE_ID
+Liefert die ID der aktiven Artikel-Spalte. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
+
+*Wird vom `structure` Plugin `content` breitgestellt.*
+
+#### Syntax
+    
+    REX_CTYPE_ID
+    
+    
+<a name="rex-module-id"></a>
+### REX_MODULE_ID
+Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
+
+*Wird vom `structure` Plugin `content` breitgestellt.*
+
+#### Syntax
+    
+    REX_MODULE_ID
+    
+    
+<a name="rex-property"></a>
+### REX_PROPERTY
+Bietet Zugriff auf die in den `package.yml` der Addons und in der `config.yml` des Cores definierten Datenfelder. 
+Shortcut für `rex_package::get($namespace)->getProperty($key)` und `rex::getProperty($key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
+
+*Wird vom REDAXO-Core breitgestellt.* 
+
+#### Syntax
+    
+    REX_PROPERTY[namespace=xyz key=xyz]
+
+Parameter | Beschreibung
+--- | --- 
+`namespace=xyz` | der Name des Addons, wird kein Namespace angegeben wird auf die Daten des REDAXO-Core zugegriffen 
+`key=xyz` | das abzurufende Datenfeld
+
+
+<a name="rex-slice-id"></a>
+### REX_SLICE_ID
+Liefert die ID des aktiven Blocks (Slice). Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
+
+*Wird vom `structure` Plugin `content` breitgestellt.*
+
+#### Syntax
+    
+    REX_SLICE_ID
     
     
 <a name="rex-template-id"></a>
@@ -291,39 +324,6 @@ Liefert den Login-Namen des eingeloggten Backend-Users. Wenn kein Backend-User e
 #### Syntax
     
     REX_USER_LOGIN
-    
-    
-<a name="rex-slice-id"></a>
-### REX_SLICE_ID
-Liefert die ID des aktiven Blocks (Slice). Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
-
-*Wird vom `structure` Plugin `content` breitgestellt.*
-
-#### Syntax
-    
-    REX_SLICE_ID
-    
-    
-<a name="rex-module-id"></a>
-### REX_MODULE_ID
-Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
-
-*Wird vom `structure` Plugin `content` breitgestellt.*
-
-#### Syntax
-    
-    REX_MODULE_ID
-    
-    
-<a name="rex-ctype-id"></a>
-### REX_CTYPE_ID
-Liefert die ID der aktiven Artikel-Spalte. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
-
-*Wird vom `structure` Plugin `content` breitgestellt.*
-
-#### Syntax
-    
-    REX_CTYPE_ID
     
     
 <a name="arrays-zurueckwandeln"></a>
