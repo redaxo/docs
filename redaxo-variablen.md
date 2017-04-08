@@ -1,13 +1,15 @@
 # REDAXO-Variablen
 
 - [Einführung](#einführung)
-    - [Allgemeine Parameter](#allgemeine-parameter)
+- [Allgemeine Parameter](#allgemeine-parameter)
 - [Ein- und Ausgabe-Variablen](#ein-ausgabe-variablen)
     - [REX_LINK und REX_LINKLIST](#rex-link)
     - [REX_MEDIA und REX_MEDIALIST](#rex-media)
     - [REX_VALUE](#rex-value)
 - [Ausgabe-Variablen](#ausgabe-variablen)
+    - [REX_ARTICLE](#rex-article)
     - [REX_ARTICLE_ID](#rex-article-id)
+    - [REX_CATEGORY](#rex-category)
     - [REX_CATEGORY_ID](#rex-category-id)
     - [REX_CLANG](#rex-clang)
     - [REX_CLANG_ID](#rex-clang-id) 
@@ -16,6 +18,7 @@
     - [REX_MODULE_ID](#rex-module-id)
     - [REX_PROPERTY](#rex-property)
     - [REX_SLICE_ID](#rex-slice-id)
+    - [REX_TEMPLATE](#rex-template)
     - [REX_TEMPLATE_ID](#rex-template-id)
     - [REX_USER_ID](#rex-user-id)
 - [Arrays zurückwandeln](#arrays-zurueckwandeln)
@@ -56,14 +59,14 @@ Um das Einbinden von dynamische Daten innerhalb von Modulen und Templates zu erl
  
  
 <a name="allgemeine-parameter"></a>
-### Allgemeine Parameter
-Allen REDAXO-Variablen kann einer der folgenden Parameter optionalen übergeben werden.
+## Allgemeine Parameter
+Allen REDAXO-Variablen, die Parameter akzeptieren (erkennbar den den eckigen Klammern `[]`) kann einer der folgenden Parameter optional übergeben werden.
 
 Parameter | Beschreibung  
 --- | ---
-`callback=xyz` | Der Variableninhalt wird an eine Funktion `xyz` übergeben, durch die der Variableninhalt vor der Ausgabe manipuliert werden kann. 
-`prefix=xyz` | Erlaubt es, zusätzlichen Inhalt vor der Variable auszugeben.   
-`suffix=xyz` | Erlaubt es, zusätzlichen Inhalt nach der Variable auszugeben. 
+`callback=xyz` | Der Variableninhalt wird an eine PHP-Funktion `xyz` übergeben, durch die der Variableninhalt vor der Ausgabe manipuliert werden kann. 
+`prefix=xyz` | Erlaubt zusätzliche Ausgaben vor der Variable.   
+`suffix=xyz` | Erlaubt zusätzliche Ausgaben nach der Variable.  
 `instead=xyz` | Der Inhalt `xyz` wird statt der Variable ausgegeben, wenn diese nicht leer ist.
 `ifempty=xyz` | Der Inhalt `xyz` wird ausgegeben, wenn die Variable leer ist.
 
@@ -71,12 +74,90 @@ Parameter | Beschreibung
 <a name="ein-ausgabe-variablen"></a>
 ## 1. Ein- und Ausgabe-Variablen
 Über diese Variablen wird der wesentliche Teil aller redaktionellen Inhalte in REDAXO verwaltet. 
-Im Eingabebereich eines Moduls dienen sie zur Übernahme von redaktionellen Eingaben, die in die Datenbank geschrieben werden. Im Ausgabebereich stellen sie diese Daten zur Weiterverarbeitung und Ausgabe zur Verfügung. 
+Im Eingabebereich eines Moduls nehmen sie Inhalte auf, die in die Datenbank geschrieben werden. Im Ausgabebereich stellen sie diese Inhalte zur Weiterverarbeitung und Ausgabe zur Verfügung. 
 
 
 <a name="rex-link"></a>
 ### REX_LINK und REX_LINKLIST
-TODO
+`REX_LINK` und `REX_LINKLIST` ermöglichen das Einfügen von Links zu Redaxo-Artikeln über ein eine *Linkmap*.
+
+Mit `REX_LINK` wird ein einzelner Artikellink eingefügt, `REX_LINKLIST` erlaubt das Einfügen mehrerer Artikel-Links.
+
+*Wird vom AddOn `structure` bereitgestellt.*
+
+#### Syntax
+##### REX_LINK
+###### Ausgabe-Variable
+Gibt die ID des gewählten Artikels zurück. Es ist eine gekürzte Schreibweise erlaubt.
+    
+    // Kurze Schreibweise
+    REX_LINK[i]
+    // Ausführliche Schreibweise
+    REX_LINK[id=i] 
+    
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+
+###### Eingabe-Variable
+Gibt im Backend ein Eingabewidget aus, über das die Linkmap aufgerufen wird.
+    
+    // Kurze Schreibweise
+    REX_LINK[id=i widget=1] 
+    // Ausführliche Schreibweise
+    REX_LINK[id=i widget=1 category=i]
+    
+Parameter | Beschreibung  
+--- | ---    
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`widget=1` | Erzeugt das Eingabewidget.  
+`category=i` | ID der Kategorie, die beim Öffnen der Linkmap angezeigt werden soll (optional).
+
+###### Beispiel
+**Eingabemodul**
+
+    REX_LINK[id=1 widget=1]
+    
+**Ausgabemodul**
+
+    <a href="<?=rex_getUrl(REX_LINK[id=1]);?>">zum Artikel mit der ID REX_LINK[id=1]</a>
+
+##### REX_LINKLIST
+###### Ausgabe-Variable
+Gibt die IDs der gewählten Artikel als kommagetrennten String zurück. Es ist eine gekürzte Schreibweise erlaubt.
+    
+    // Kurze Schreibweise
+    REX_LINKLIST[i]
+    // Ausführliche Schreibweise
+    REX_LINKLIST[id=i] 
+
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+
+###### Eingabe-Variable
+Gibt im Backend ein Eingabewidget aus, über das die Linkmap aufgerufen wird.
+    
+    // Ausführliche Schreibweise
+    REX_LINKLIST[id=i widget=1] 
+    REX_LINKLIST[id=i widget=1 category=i]
+    
+Parameter | Beschreibung  
+--- | ---    
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`widget=1` | Erzeugt das Eingabewidget.  
+`category=i` | ID der Kategorie, die beim Öffnen der Linkmap angezeigt werden soll (optional).
+
+###### Beispiel
+**Eingabemodul**
+
+    REX_LINKLIST[id=1 widget=1]
+    
+**Ausgabemodul**
+
+    <?php foreach (explode(',', REXLINKLIST[id=1]) as $article_id): ?>
+        <a href="<?=rex_getUrl(article_id);?>">zum Artikel mit der ID <?=article_id;?></a>
+    <?php endforeach;?>
 
 
 <a name="rex-media"></a>
@@ -88,7 +169,8 @@ Durch `REX_MEDIA` wird nur eine Datei eingefügt, durch `REX_MEDIALIST` ist das 
 *Wird vom AddOn `mediapool` bereitgestellt.*
 
 #### Syntax
-##### Ausgabe-Variable
+##### REX_MEDIA
+###### Ausgabe-Variable
 Gibt den Dateinamen eines Mediums zurück. Wird nur die ID angegeben, ist eine gekürzte Schreibweise erlaubt.
     
     // Kurze Schreibweise
@@ -102,24 +184,72 @@ Parameter | Beschreibung
 --- | ---
 `id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
 `field=xyz` | Abrufen eines Metadatenfeldes `xyz` (optional). Statt des Dateinamens wird der Inhalt des Metadatenfeldes zurückgegeben.
-`output=mimetype` | Statt des Dateinamens wird der Medientyp der Datei zurückgegeben.
-
-##### Eingabe-Variable
+`output=mimetype` | Statt des Dateinamens wird der Medientyp der Datei zurückgegeben (optional).
+  
+###### Eingabe-Variable
 Gibt im Backend ein Eingabewidget aus.
 
     // Kurze Schreibweise
-    REX_MEDIA[i] 
+    REX_MEDIA[id=i widget=1] 
     // Ausführliche Schreibweise
     REX_MEDIA[id=i widget=1 category=xyz types=xyz preview=1]
     
 Parameter | Beschreibung  
 --- | ---    
-`category=xyz` | Beschränkt die Auswahl auf die Medienkategorie `xyz` (optional).
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`widget=1` | Erzeugt das Eingabewidget.  
+`preview=1` | Aktiviert eine Voransicht im Widget (optional).
+`category=i` | Beschränkt die Auswahl auf die Medienkategorie `i` (optional).
 `types=xyz` | Beschränkt die Auswahl auf bestimmte Dateitypen (optional). Es können mehrere Typen kommagetrennt übergeben werden *(Achtung: es dürfen keine Leerzeichen in der Übergabe enthalten sein)*. 
-`preview=1` | Aktiviert eine Voransicht im Widget.
 
-##### Beispiele
-    TODO
+###### Beispiel
+**Eingabemodul**
+
+    REX_MEDIA[id=1 widget=1]
+    
+**Ausgabemodul**
+
+    <img src ="/media/REX_MEDIA[id=1]" alt="Bild" />
+
+
+##### REX_MEDIALIST
+###### Ausgabe-Variable
+Gibt die Dateinamen der gespeicherten Medien als kommagetrennten String zurück. Es ist eine gekürzte Schreibweise erlaubt.
+    
+    // Kurze Schreibweise
+    REX_MEDIALIST[i]
+    // Ausführliche Schreibweise
+    REX_MEDIALIST[id=i] 
+
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+
+###### Eingabe-Variable
+Gibt im Backend ein Eingabewidget aus.
+
+    // Ausführliche Schreibweise
+    REX_MEDIALIST[id=i widget=1] 
+    REX_MEDIALIST[id=i widget=1 category=xyz types=xyz preview=1]
+    
+Parameter | Beschreibung  
+--- | ---    
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`widget=1` | Erzeugt das Eingabewidget.  
+`preview=1` | Aktiviert eine Voransicht im Widget (optional).
+`category=i` | Beschränkt die Auswahl auf die Medienkategorie `i` (optional).
+`types=xyz` | Beschränkt die Auswahl auf bestimmte Dateitypen (optional). Es können mehrere Typen kommagetrennt übergeben werden *(Achtung: es dürfen keine Leerzeichen in der Übergabe enthalten sein)*. 
+
+###### Beispiel
+**Eingabemodul**
+
+    REX_MEDIALIST[id=1 widget=1]
+    
+**Ausgabemodul**
+
+    <?php foreach (explode(',', REX_MEDIALIST[id=1]) as $image): ?>
+        <img src ="/media/<?=$image;?>" alt="Bild" />
+    <?php endforeach;?>
 
 
 <a name="rex-value"></a>
@@ -176,6 +306,35 @@ Parameter | Beschreibung
 Ausgabe-Variablen bieten nur Lesezugriff. Mit ihrer hilfe können Daten des CMS im Ein- und Augabebereich abgerufen werden.
 
 
+<a name="rex-article"></a>
+### REX_ARTICLE
+Mit `REX_ARTICLE` werden die Inhalte eines Artikels abgerufen.
+
+*Wird vom Addon `structure` breitgestellt.*
+
+#### Syntax
+    
+    // Kurze Schreibweise
+    REX_ARTICLE[]
+    REX_ARTICLE[i]
+    // Ausführliche Schreibweise
+    REX_ARTICLE[id=i] 
+    REX_ARTICLE[id=i ctype=i clang=i]
+    REX_ARTICLE[id=i field=xyz clang=i]
+
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID des Artikels (optional). Wird nur die ID angegeben ist es erlaubt `id=i` zu `i` abzukürzen. Wird die ID weggelassen, wird der aktuelle Artikel abgerufen. 
+`ctype=i` | Durch die Angabe der ID einer Spalte `ctype` kann die Ausgabe auf den Inhalt dieser Spalte begrenzt werden (optional). Ohne diesen Parameter wird der gesamte Artikel abgerufen. 
+`clang=i` | Ruft den Inhalt oder eines Metadaten-Felds der Sprache `i` ab (optional). Ohne diesen Parameter wird der Inhalt / ein Metadaten-Feld der aktiven Sprache abgerufen.
+`field=xyz` | Statt des Artikelinhalts wird der Inhalt des Metadaten-Feldes `xyz` zurückgegeben (optional).    
+ 
+#### Beispiel
+    
+    // Artikel 5 in Sprache 2 abrufen
+    REX_ARTICLE[id=5 ctype=2] 
+
+
 <a name="rex-article-id"></a>
 ### REX_ARTICLE_ID
 Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
@@ -187,6 +346,32 @@ Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
     REX_ARTICLE_ID
     
     
+<a name="rex-article"></a>
+### REX_CATEGORY
+Mit `REX_CATEGORY` werden die Inhalte einer Kategorie abgerufen.
+
+*Wird vom Addon `structure` breitgestellt.*
+
+#### Syntax
+    
+    // Kurze Schreibweise
+    REX_CATEGORY[xyz]
+    // Ausführliche Schreibweise
+    REX_CATEGORY[id=i field=xyz] 
+    REX_CATEGORY[id=i field=xyz clang=i]
+
+Parameter | Beschreibung  
+--- | ---
+`field=xyz` | Gibt den Inhalt des Metadaten-Feldes `xyz` zurück.    
+`id=i`, `i` | Die ID der Kategorie (optional). Wird die ID weggelassen, wird die aktuelle Kategorie abgerufen. 
+`clang=i` | Ruft ein Metadaten-Feld der Sprache `i` ab (optional). Ohne diesen Parameter wird ein Metadaten-Feld der aktiven Sprache abgerufen.
+ 
+#### Beispiel
+    
+    // Feld 'title' der Kategorie 5 abrufen
+    REX_CATEGORY[id=5 field=title] 
+
+
 <a name="rex-category-id"></a>
 ### REX_CATEGORY_ID
 Liefert die ID der aktiven Kategorie. Es sind keine Parameter erforderlich.
@@ -292,7 +477,25 @@ Liefert die ID des aktiven Blocks (Slice). Es sind keine Parameter erforderlich.
     
     REX_SLICE_ID
     
+
+<a name="rex-template"></a>
+### REX_TEMPLATE
+Mit `REX_TEMPLATE` wird ein Template abgerufen.
+
+*Wird vom `structure` Plugin `content` breitgestellt.*
+
+#### Syntax
     
+    // Kurze Schreibweise
+    REX_TEMPLATE[i]
+    // Ausführliche Schreibweise
+    REX_TEMPLATE[id=i] 
+
+Parameter | Beschreibung  
+--- | ---
+`id=i`, `i` | Die ID des Templates. 
+
+
 <a name="rex-template-id"></a>
 ### REX_TEMPLATE_ID
 Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
