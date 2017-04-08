@@ -563,8 +563,8 @@ Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter)
     
     <?php
     /**
-     * Erstellen einer Variable REX_WEBSITE_TITLE[], mit der der Website-Titel ausgegeben werden kann.
-     * Als Option gibt es die Möglichkeit, die Ausgabe in Großbuchstaben oder Kleinbuchstaben umzuwandeln.
+     * Erstellt die Variable REX_WEBSITE_TITLE[]. Mit ihr kann der Website-Titel ausgegeben werden.
+     * Optional ist es möglich die Ausgabe in Großbuchstaben oder Kleinbuchstaben umzuwandeln.
      *
      * Syntax:
      *     REX_WEBSITE_TITLE[] // Gibt den Titel aus
