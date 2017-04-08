@@ -1,8 +1,5 @@
 # Redaktion 
 
-## Startartikel
-## Artikel
-## Erstellen eines Artikels
 ## Inhalte pflegen und verwalten
 ### Blöcke
 
