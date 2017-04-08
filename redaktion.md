@@ -5,9 +5,11 @@
 ## Erstellen eines Artikels
 ## Inhalte pflegen und verwalten
 ### Blöcke
-![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl)
+![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
 
 Die eigentlichen Inhalte werden aus Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons. Die Blöcke werden im Editiermodus (1) des Artikels eingepflegt. 
+
+![Blockauswahl](/assets/v5.2.0-redaktion-01-bloecke.png)
 
 Um einen Block hinzuzufügen, 
 - klickt man auf das Aufklappmenü „Block hinzufügen" (2)
