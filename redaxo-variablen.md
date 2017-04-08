@@ -555,18 +555,56 @@ Shortcut für `rex::getUser()->getLogin()`.
     
 <a name="eigene-variablen"></a>
 ## Eigene Variablen
-Um eine Variable zu erstellen, benötigt Redaxo im lib-Verzeichnis des Addons oder Plugins eine Klasse deren Namen mit `rex_var_` beginnt und die von `rex_var` erbt.
+Es ist sehr leicht möglich, eigene REDAXO-Variablen zu erstellen. Hierfür muss lediglich eine PHP-Klasse erstellt und im lib-Verzeichnis eines Addons (z.B. im Project-Addon) abgelegt werden. Die Klasse wird automatisch von REDAXO erkannt und eingebunden.
+Damit die Klasse erkannt wird, muss sie mit `rex_var_` beginnt und die Basisklasse `rex_var` erweitern. Die Methode `getOutput` muss zwingend vorhanden sein.
+Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter) automatisch zur Verfügung. Weitere Parameter lassen sich sehr einfach hinzufügen.
 
 ### Beispiel
     
     <?php
-    class rex_var_lorem extends rex_var 
+    /**
+     * Erstellen einer Variable REX_WEBSITE_TITLE[], mit der der Website-Titel ausgegeben werden kann.
+     * Als Option gibt es die Möglichkeit, die Ausgabe in Großbuchstaben oder Kleinbuchstaben umzuwandeln.
+     *
+     * Syntax:
+     *     REX_WEBSITE_TITLE[] // Gibt den Titel aus
+     *     REX_WEBSITE_TITLE[case=lower] // Gibt den Titel in Kleinbuchstaben aus
+     *     REX_WEBSITE_TITLE[case=upper] // Gibt den Titel in Großbuchstaben aus
+     */
+    class rex_var_website_title extends rex_var 
     {
         protected function getOutput() 
         {
-            return self::quote('Lorem Ipsum!');
+            // Website-Titel holen 
+            $title = rex::getServerName();        
+            
+            // Prüfen, ob der Parameter 'case' vorhanden ist.
+            // Durch ihn kann die Ausgabe manipuliert werden.
+            if ($this->hasArg('case') && $this->getArg('case')) {
+                switch ($this->getArg('case')) {
+                    // REX_WEBSITE_TITLE[case=upper]
+                    case 'upper':
+                        $title = strtoupper($title);
+                        break;
+                        
+                    // REX_WEBSITE_TITLE[case=lower]
+                    case 'lower':
+                        $title = strtolower($title);
+                        break;
+                    
+                    // REX_WEBSITE_TITLE[]
+                    default:
+                        // keine Änderung
+                }
+            }
+
+            // Reine Textausgaben müssen mit 'sel::quote()' als String maskiert werden.
+            return self::quote($title);
         }
     }
 
-Mit dem oben gezeigten Code, können wir nun die Variable `REX_LOREM[]` verwenden. Die Methode `getOutput();` liefert uns schlussendlich den gewünschten Inhalt als ausführbaren Code. Um einfach nur Text bzw. HTML-Code auszugeben, muss dieser mit der vererbten Methode `self::quote();` als String maskiert werden.
-Um ein nutzbares Array auszugeben, kann man das Array mit [var_export](http://php.net/manual/de/function.var-export.php) zurückgegeben werden.
+> **Hinweis:** 
+Je nachdem, welcher Art die Rückgabedaten sind, müssen sie anders vorbereitet werden:
+- Soll ein Array für die direkte Weiterverarbeitung zurückgegeben werden, kann es mit [var_export](http://php.net/manual/de/function.var-export.php) zurückgegeben werden: `return var_export($array);`
+- Ein PHP-Befehl, der erst zur Laufzeit ausgeführt werden soll, muss als String zurückgegeben werden: `return 'strtolower($title)'; // Die Anführungszeichen nicht vergessen` 
+
