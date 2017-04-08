@@ -5,12 +5,13 @@
 ## Erstellen eines Artikels
 ## Inhalte pflegen und verwalten
 ### Blöcke
-Einer der großen Vorteile von Redaxo sind die flexibel und leicht erstellbaren Module. Die Module liedern die Einplfegemasken und Ausgaben für einzelne Abschnitte der Artikel, die Blöcke. 
-Diese Blöcke kann man in beliebiger Reihenfolge und Anzahl in den Artikeln untereinander setzen.
-Jeder Block hat eine bestimmte Funktion, z.B.: Überschriften, Textabschnitte, Videos, Bereitstellung von Downloads und vieles mehr. 
+![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl)
+
+Die eigentlichen Inhalte werden aus Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons. Die Blöcke werden im Editiermodus (1) des Artikels eingepflegt. 
 
 Um einen Block hinzuzufügen, 
-- klickt man auf das Aufklappmenü „Block hinzufügen"
+- klickt man auf das Aufklappmenü „Block hinzufügen" (2)
+- und wählt den gewüschten Block (3)
 - füllt das Formular aus (sofern erforderlich)
 - speichert mit „Block speichern"
 
