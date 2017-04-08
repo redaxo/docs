@@ -9,14 +9,15 @@
       * [Interne Links](#interne-links)
       * [Medien](#medien)
       * [Medienlisten](#medienlisten)
-  * [Metadaten](#metadaten)
-  * [Sprachen](#sprachen)
-  * [Spalten](#spalten)
-  * [Metainfos](#metainfos)
   * [Funktionen](#funktionen)
     * [Artikel kopieren](#artikel-kopieren)
     * [Artikel verschieben](#artikel-verschieben)
     * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
+  * [Metadaten](#metadaten)
+  * [Sprachen](#sprachen)
+    * [Inhalte zwischen Sprachen kopieren ](#inhalte-zwischen-sprachen-kopieren-)
+  * [Spalten](#spalten)
+  * [Arbeitsversion](#arbeitsversion)
 
 ## Pflege eines Arikels
 
@@ -59,14 +60,26 @@ Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder u
 
 ##### Medienlisten
 
+### Funktionen
+#### Artikel kopieren
+#### Artikel verschieben
+#### Artikel in Kategorie umwandeln
 
 ### Metadaten
 Im Reiter Metadaten können zusätzliche Einstellungen für den Artikel durchgeführt werden. Dies können u.a. Timer-Einstellungen, Informationen für Suchmaschinen und soziale Netzwerke sein. Die Metadaten werden individuell für die Webpräsenz festgelegt und werden durch das Metainfo-AddOn bereitgestellt.
 
 ### Sprachen
+REDAXO ist Mehrsprachfähig. Sofern mehrere Sprachen aktiviert sind und der Redakteur die entsprechnden Berechtigungen hat, erscheint in REDAXO oben rechts neben der Pfadleiste eine Sprachauswahl. Damit kann innerhalb eines Artikels zwischen den einzelnen Sprachen gewechselt werden. 
+Ein Artikel ist immer in allen Sprachen vorhanden und unterscheidet sich durch die Inhalte und die Metadaten. Möchte man einen Artikel oder eine Kategorie in einer Sprache nicht in der Navigation oder in Artikellisten einer Sprache anzeigen, können diese mit dem Offline-Staus (sofern in der Programmierung der Website vorgesehen) ausgeblendet werden. 
+Die Sprachen werden vom Admin verwaltet und bereitgestellt. 
+
+> Wenn ein Artikel in einer Sprache gelöscht wird, werden auch alle alle weiteren Sprachversionen gelöscht.
+
+#### Inhalte zwischen Sprachen kopieren 
+Im Reiter **Funktionen** steht die Kopierfunktion **Inhalte kopieren** zur Verfügung. Hiermit kann ein ganzer Artikel mit all seinen Blöcken identisch in eine andere Sprache zur Übersetzung übertragen werden. Befinden sich in der gewünschetn Zielsprache bereits Inhalte, werden die Blöcke der Quelle ans Ende des Zielartikels gesetzt. 
+
 ### Spalten
-### Metainfos
-### Funktionen
-#### Artikel kopieren
-#### Artikel verschieben
-#### Artikel in Kategorie umwandeln
+Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewählten Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
+Um in eine Spalte zu gelangen, klicken Sie im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese finden Sie im Reiter **Editiermodus** als Untermenüpunkte. Die Pflege der Spalten erfolgt über Blöcke. 
+
+### Arbeitsversion
