@@ -1,4 +1,20 @@
 # Redaktion 
+* [Inhalte pflegen und verwalten](#inhalte-pflegen-und-verwalten)
+  * [Blöcke](#blöcke)
+  * [Bedienelemente in Blöcken](#bedienelemente-in-blöcken)
+    * [Texteingaben](#texteingaben)
+    * [Interne Links](#interne-links)
+    * [Medien](#medien)
+    * [Medienlisten](#medienlisten)
+* [Metadaten](#metadaten)
+* [Sprachen](#sprachen)
+* [Spalten](#spalten)
+* [Metainfos](#metainfos)
+* [Funktionen](#funktionen)
+  * [Artikel kopieren](#artikel-kopieren)
+  * [Artikel verschieben](#artikel-verschieben)
+  * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
+
 
 ## Inhalte pflegen und verwalten
 ### Blöcke
@@ -35,6 +51,9 @@ Um einen Block hinzuzufügen,
 
 
 ## Metadaten
+Im Reiter Metadaten können zusätzliche Einstellungen für den Artikel durchgeführt werden. Dies können u.a. Timer-Einstellungen, Informationen für Suchmaschinen und soziale Netzwerke sein. Die Metadaten werden individuell für die Webpräsenz festgelegt und werden durch das Metainfo-AddOn bereitgestellt.
+
+## Sprachen
 ## Spalten
 ## Metainfos
 ## Funktionen
