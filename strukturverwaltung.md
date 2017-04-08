@@ -11,7 +11,7 @@
     - [Kategorien und Artikel umbenennen](#rename)
     - [Artikel-Template ändern](#template)
     - [Metadaten einer Kategorie](#meta)
-- Sprachen
+- [Sprachen](#sprache)
 
 <a name="ueber"></a>
 ## Über
