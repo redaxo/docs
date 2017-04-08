@@ -1,22 +1,27 @@
 # Redaktion 
-* [Inhalte pflegen und verwalten](#inhalte-pflegen-und-verwalten)
+* [Pflege eines Arikels](#pflege-eines-arikels)
   * [Blöcke](#blöcke)
-  * [Bedienelemente in Blöcken](#bedienelemente-in-blöcken)
-    * [Texteingaben](#texteingaben)
-    * [Interne Links](#interne-links)
-    * [Medien](#medien)
-    * [Medienlisten](#medienlisten)
-* [Metadaten](#metadaten)
-* [Sprachen](#sprachen)
-* [Spalten](#spalten)
-* [Metainfos](#metainfos)
-* [Funktionen](#funktionen)
-  * [Artikel kopieren](#artikel-kopieren)
-  * [Artikel verschieben](#artikel-verschieben)
-  * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
+    * [Block bearbeiten](#block-bearbeiten)
+    * [Block löschen ](#block-löschen-)
+    * [Block verschieben](#block-verschieben)
+    * [Bedienelemente in Blöcken](#bedienelemente-in-blöcken)
+      * [Texteingaben](#texteingaben)
+      * [Interne Links](#interne-links)
+      * [Medien](#medien)
+      * [Medienlisten](#medienlisten)
+  * [Metadaten](#metadaten)
+  * [Sprachen](#sprachen)
+  * [Spalten](#spalten)
+  * [Metainfos](#metainfos)
+  * [Funktionen](#funktionen)
+    * [Artikel kopieren](#artikel-kopieren)
+    * [Artikel verschieben](#artikel-verschieben)
+    * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
 
+## Pflege eines Arikels
 
-## Inhalte pflegen und verwalten
+- Notiz - Artikeleinleitung erstellen 
+
 ### Blöcke
 
 Die Inhalte eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
@@ -35,28 +40,33 @@ Um einen Block hinzuzufügen,
 
 > Da in jeder Redaxo-Installation unterschiedliche, häufig individuell erstellte Blöcke, zur Verfügung stehen, wird deren Funktion hier nicht erläutert.
 
-### Bedienelemente in Blöcken
+#### Block bearbeiten
+Um einen vorhanden Block zu bearbeiten, klickt man auf das grüne Editier-Symbol
 
-#### Texteingaben
+#### Block löschen 
+Einen Block löscht man durch klick auf das rote Symbol mit dem Mülleimer
 
-#### Interne Links
+#### Block verschieben
+Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder unten verschoben werden. 
 
-#### Medien
-- Medienupload
-- Medienauswahl
-... Mehr Infos Medienpool
+#### Bedienelemente in Blöcken
 
-#### Medienlisten
-- Reihenfolge
+##### Texteingaben
+
+##### Interne Links
+
+##### Medien
+
+##### Medienlisten
 
 
-## Metadaten
+### Metadaten
 Im Reiter Metadaten können zusätzliche Einstellungen für den Artikel durchgeführt werden. Dies können u.a. Timer-Einstellungen, Informationen für Suchmaschinen und soziale Netzwerke sein. Die Metadaten werden individuell für die Webpräsenz festgelegt und werden durch das Metainfo-AddOn bereitgestellt.
 
-## Sprachen
-## Spalten
-## Metainfos
-## Funktionen
-### Artikel kopieren
-### Artikel verschieben
-### Artikel in Kategorie umwandeln
+### Sprachen
+### Spalten
+### Metainfos
+### Funktionen
+#### Artikel kopieren
+#### Artikel verschieben
+#### Artikel in Kategorie umwandeln
