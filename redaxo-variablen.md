@@ -21,7 +21,7 @@
     - [REX_TEMPLATE](#rex-template)
     - [REX_TEMPLATE_ID](#rex-template-id)
     - [REX_USER_ID](#rex-user-id)
-- [Arrays zurückwandeln](#arrays-zurueckwandeln)
+    - [REX_USER_LOGIN](#rex-user-login)
 - [Eigene Variablen](#eigene-variablen)
 
 
@@ -291,7 +291,7 @@ Parameter | Beschreibung
 --- | ---
 `i` | Die ID der Variable. Es sind Werte von 1 bis 20 erlaubt. Mit der Array-Schreibweise ist es möglich, mehrere Werte in einer Variable abzulegen. 
 
-##### Beispiele
+##### Beispiel
 **Eingabemodul**
 
     <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]" />
@@ -299,16 +299,34 @@ Parameter | Beschreibung
 **Ausgabemodul**
 
     <p>REX_VALUE[1]</p>
+    
+##### Arrays zurückwandeln
+Es ist möglich, mehere Werte in einer Variable zu speichern. 
+
+**Modul-Eingabe**
+
+    <input type="text" name="REX_INPUT_VALUE[1][text1]" value="" />
+    <input type="text" name="REX_INPUT_VALUE[1][text2]" value="" />
+
+**Modul-Ausgabe**
+
+    $value1 = rex_var::toArray("REX_VALUE[1]");
+    
+    echo $value1['text1'];  
+    echo $value1['text2']; 
 
 
 <a name="ausgabe-variablen"></a>
 ## 2. Ausgabe-Variablen
-Ausgabe-Variablen bieten nur Lesezugriff. Mit ihrer hilfe können Daten des CMS im Ein- und Augabebereich abgerufen werden.
+Ausgabe-Variablen bieten nur Lesezugriff. Mit ihrer Hilfe können Daten des CMS im Ein- und Augabebereich abgerufen werden. 
+Einige sind Shortcuts für vorhandene PHP-Befehle.
 
 
 <a name="rex-article"></a>
 ### REX_ARTICLE
 Mit `REX_ARTICLE` werden die Inhalte eines Artikels abgerufen.
+Die Feldabfragen sind Shortcuts für `rex_article::getCurrent()->getValue($field)` und `rex_article::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
+Die Inhaltsabfragen sind Shortcuts für den Zugriff auf `rex_article_content`.
 
 *Wird vom Addon `structure` breitgestellt.*
 
@@ -338,6 +356,7 @@ Parameter | Beschreibung
 <a name="rex-article-id"></a>
 ### REX_ARTICLE_ID
 Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
+Shortcut für `rex_article::getCurrentId()`.
 
 *Wird vom `structure` Plugin `content` breitgestellt.*
 
@@ -349,6 +368,7 @@ Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
 <a name="rex-article"></a>
 ### REX_CATEGORY
 Mit `REX_CATEGORY` werden die Inhalte einer Kategorie abgerufen.
+Shortcut für `rex_category::getCurrent()->getValue($field)` und `rex_category::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
 
 *Wird vom Addon `structure` breitgestellt.*
 
@@ -375,6 +395,7 @@ Parameter | Beschreibung
 <a name="rex-category-id"></a>
 ### REX_CATEGORY_ID
 Liefert die ID der aktiven Kategorie. Es sind keine Parameter erforderlich.
+Shortcut für `rex_category::getCurrentId()`.
 
 *Wird vom `structure` Plugin `content` breitgestellt.*
 
@@ -403,6 +424,7 @@ Parameter | Beschreibung
 <a name="rex-clang-id"></a>
 ### REX_CLANG_ID
 Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlich.
+Shortcut für `rex_clang::getCurrentId()`.
 
 *Wird vom `structure` Plugin `content` breitgestellt.*
 
@@ -510,42 +532,27 @@ Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
 <a name="rex-user-id"></a>
 ### REX_USER_ID
 Liefert die ID des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
+Shortcut für `rex::getUser()->getId()`.
 
 *Wird vom `structure` Plugin `content` breitgestellt.*
 
 #### Syntax
     
-    REX_USER_ID
+    REX_USER_ID 
     
     
 <a name="rex-user-login"></a>
 ### REX_USER_LOGIN
 Liefert den Login-Namen des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
+Shortcut für `rex::getUser()->getLogin()`.
 
 *Wird vom `structure` Plugin `content` breitgestellt.*
 
 #### Syntax
     
-    REX_USER_LOGIN
+    REX_USER_LOGIN 
     
     
-<a name="arrays-zurueckwandeln"></a>
-### Arrays zurückwandeln
-Es ist möglich, mehere Werte in einer Variable zu speichern. 
-
-**Modul-Eingabe**
-
-    <input type="text" name="REX_INPUT_VALUE[1][text1]" value="" />
-    <input type="text" name="REX_INPUT_VALUE[1][text2]" value="" />
-
-**Modul-Ausgabe**
-
-    $value1 = rex_var::toArray("REX_VALUE[1]");
-    
-    echo $value1['text1'];  
-    echo $value1['text2']; 
-
-
 <a name="eigene-variablen"></a>
 ## Eigene Variablen
 Um eine Variable zu erstellen, benötigt Redaxo im lib-Verzeichnis des Addons oder Plugins eine Klasse deren Namen mit `rex_var_` beginnt und die von `rex_var` erbt.
