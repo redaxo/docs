@@ -12,7 +12,7 @@
     - [Artikel-Template ändern](#template)
     - [Metadaten einer Kategorie](#meta)
 - [Sprachen](#sprache)
-- [Indirekte strukturbildende Funktionen](#more)
+- [Weitere strukturbildende Funktionen](#more)
   - [Artikel / Kategorien Kopieren und Verschieben](#copy)
   - [Artikel in Startartikel umwandeln](#convert)
   - [Artikel in Kategorie umwandeln](#convertcat)
@@ -78,8 +78,8 @@ Die Sprachen werden vom Admin verwaltet und bereitgestellt.
 > **Achtung** Wenn ein Artikel oder eine Kategorie in einer Sprache gelöscht wird, werden auch alle alle weiteren Sprachversionen gelöscht.
 
 <a name="more"></a>
-## Indirekte strukturbildende Funktionen
-Einige Funktionen stehen nicht direkt in der Struktur zur Verfügung und müssen in den Artikeln durchgeführt werden. Da diese die Struktur beinflussen, werden diese hier beschrieben. 
+## Weitere strukturbildende Funktionen
+Einige Funktionen stehen nicht direkt in der Struktur zur Verfügung und müssen in den Artikeln durchgeführt werden. Da diese die Struktur beinflussen, werden diese hier ebenfalls beschrieben. 
 
 <a name="copy"></a>
 ### Artikel oder Kategorien Kopieren und Verschieben
