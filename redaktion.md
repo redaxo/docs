@@ -22,8 +22,7 @@
 
 
 ## Pflege eines Arikels
-
-- Notiz - Artikeleinleitung erstellen 
+Artikel sind die Seiten der Werbpräsenz. Es gibt zwei Arten von Artikeln. Normale Artikel und Startartikel. Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Ein Startartikel kann auch nicht gelöscht werden. Normale Artikel können beliebig viele zusätzliche Artikel einer Kategorie sein, die ggf. durch Artikellisten im Startartikel verlinkt werden können. Artikel werden in der Strukturverwaltung angelegt. Dort legt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen können in den Metadaten hinterlegt werden. 
 
 ## Blöcke
 
