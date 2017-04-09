@@ -1,15 +1,16 @@
-# Redaktion 
-* [Pflege eines Arikels](#pflege-eines-arikels)
+# Redaktion
+* [Einleitung](#einleitung)
 * [Blöcke](#blöcke)
   * [Block bearbeiten](#block-bearbeiten)
   * [Block löschen ](#block-löschen-)
   * [Block verschieben](#block-verschieben)
-  * [Bedienelemente in Blöcken](#bedienelemente-in-blöcken)
-    * [Texteingaben](#texteingaben)
-    * [Interne Links](#interne-links)
-    * [Medien](#medien)
-    * [Medienlisten](#medienlisten)
-* [Funktionen](#funktionen)
+* [Bedienelemente in REDAXO ](#bedienelemente-in-redaxo-)
+  * [Formularfelder](#formularfelder)
+  * [Linkmap-Widget](#linkmap-widget)
+  * [Media-Widget](#media-widget)
+  * [Medialist-Widget](#medialist-widget)
+    * [Texteditoren und weitere Eingabemöglichkeiten](#texteditoren-und-weitere-eingabemöglichkeiten)
+* [Artikel-Funktionen](#artikel-funktionen)
   * [Artikel in Startartikel umwandeln](#artikel-in-startartikel-umwandeln)
   * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
   * [Inhalte kopieren](#inhalte-kopieren)
@@ -21,11 +22,10 @@
 * [Arbeitsversion](#arbeitsversion)
 
 
-## Pflege eines Arikels
-Artikel sind die Seiten der Werbpräsenz. Es gibt zwei Arten von Artikeln. Normale Artikel und Startartikel. Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Ein Startartikel kann auch nicht gelöscht werden. Normale Artikel können beliebig viele zusätzliche Artikel einer Kategorie sein, die ggf. durch Artikellisten im Startartikel verlinkt werden können. Artikel werden in der Strukturverwaltung angelegt. Dort legt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen können in den Metadaten hinterlegt werden. 
+## Einleitung
+Artikel sind die Seiten der Werbpräsenz. Es gibt zwei Artikeltypen. Normale Artikel und Startartikel. Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Normale Artikel können zusätzlich in einer Kategorie abgelegt. Artikel werden in der Strukturverwaltung angelegt. Dort wählt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen können in den Metadaten hinterlegt werden. 
 
 ## Blöcke
-
 Die Inhalte eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
 
 ![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
@@ -53,17 +53,27 @@ Einen Block löscht man durch klick auf das rote Symbol mit dem Mülleimer
 ### Block verschieben
 Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder unten verschoben werden. 
 
-### Bedienelemente in Blöcken
+## Bedienelemente in REDAXO 
+Es gibt einige Eingabemöglichkeiten die in REDAXO wiederkehren. Hierzu zählen Formulareingaben, Linkauswahl und Auswahlfelder für Medien. 
+- Notiz Screenshot anlegen -
 
-#### Texteingaben
+### Formularfelder
+Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier können über Textfelder, Checkboxen, Auswahllisten Einstellungen und die Texteinplfege durchgeführt werden. 
 
-#### Interne Links
+### Linkmap-Widget
+Über das Linkmap-Widget können Artikel innderhalb der Redaxo-Präsenz verlinkt werden. 
 
-#### Medien
+### Media-Widget
+Mit dem Media-Widget werden einzelte Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
-#### Medienlisten
+### Medialist-Widget
+Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
-## Funktionen
+#### Texteditoren und weitere Eingabemöglichkeiten
+Weitere Eingabemöglichkeiten werden über AddOns in REDAXO bereitgestellt. Hierzu zählen beispielhaft auch Markdown- und WYSIWYG-Editoren (MS-Word ähnlich).
+
+
+## Artikel-Funktionen
 Im Reiter ***Funktionen*** stehen folgende Funktionen je nach Artikeltyp zur Verfügung. 
 
 ### Artikel in Startartikel umwandeln
