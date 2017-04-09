@@ -4,7 +4,7 @@
 - [Funktionsbeschreibung](#funktionen)
   - [Pfad](#pfad)
   - [Kategorie erstellen](#kat_e)
-  - [Artikel erstellen](#art_e)
+  - [Artikel erstellen und pflegen](#art_e)
   - [Online / Offline](#ofon)
   - [Ändern](#aendern)
     - [Prio](#prio)
@@ -12,16 +12,21 @@
     - [Artikel-Template ändern](#template)
     - [Metadaten einer Kategorie](#meta)
 - [Sprachen](#sprache)
+- [Indirekte strukturbildende Funktionen](#more)
+  - [Artikel / Kategorien Kopieren und Verschieben](#copy)
+  - [Artikel in Startartikel umwandeln](#convert)
+  - [Artikel in Kategorie umwandeln](#convertcat)
 
 <a name="ueber"></a>
 ## Über
-Über die Strukturverwaltung werden Kategorien angelegt und verwaltet, die sowohl als Navigation im Backend dienen und optional als Navigationsmenü im Frontend verwendet werden können. Die verfügbaren Optionen hängen von den Rechten des jeweiligen Benutzers ab. Die Strukturverwaltung wird meistens direkt nach dem Login (je nach vergebenen Rechten) aufgerufen und ist über den Menüpunkt „Struktur“ erreichbar. Die Reihenfolge der einzelnen Kategorien wird über die Prioritätenspalte festgelegt. Den Kategorien sind Artikel zugeordnet, in denen die Inhalte der Website organisiert werden. 
-Ob die Inhalte im Frontend dargestellt werden sollen, lässt sich über die Funktion „online“ oder „offline“ bestimmen.
+Die Strukturverwaltung wird gewöhnlich direkt nach dem Login aufgerufen und ist über den Menüpunkt „Struktur“ erreichbar.
+Über die Strukturverwaltung werden Kategorien und Artikel angelegt und hierarchisch verwaltet, die sowohl als Navigation im Backend dienen und optional als Navigationsmenü im Frontend verwendet werden können. Den Kategorien sind Artikeln zugeordnet, in denen die Inhalte der Website organisiert werden. Jede Kategorie hat einen Startartikel. Startartikel sind die Einstiegsseiten einer Kategorie. Normale Artikel können in beliebiger Anzahl erstellt werden. Die Reihenfolge der einzelnen Kategorien und Artikel wird über die Prioritätenspalte festgelegt. Die verfügbaren Optionen hängen von den Rechten des jeweiligen Benutzers ab. Ob Artikel oder Kategorien im Frontend dargestellt werden sollen, lässt sich über die Funktion „online“ oder „offline“ bestimmen.
 
 ![Systemcheck](/assets/v5.2.0-Struktur-01-overview.png.png)
 Struktur nach dem Login / Hauptebene
 
-Die Strukturansicht  ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien der aktuell gewählten Kategorie dargestellt, darunter die Artikel der gerade aktiven Kategorie. 
+Die Strukturansicht ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien der aktuell gewählten Kategorie dargestellt, darunter die Artikel der gerade aktiven Kategorie. 
+
 
 <a name="funktionen"></a>
 ## Funktionsbeschreibung
@@ -37,8 +42,8 @@ Die Pfadanzeige zeigt an, wo man sich innerhalb der Struktur befindest. Bei Klic
 Das Erstellen einer neuen Kategorie erfolgt über das (+)-Symbol. Danach legt man den Namen der Kategorie fest und speichert die Eingabe über die Schaltfläche “Kategorie hinzufügen”. Die erstellte Kategorie ist zunächst offline gestellt. 
 
 <a name="art_e"></a>
-### Artikel erstellen
-Man erstellt einen neuen Artikel über das (+)-Symbol und gibt anschließend den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Nach Bestätigen über die Schaltfläche “Artikel hinzufügen” wird der Artikel angelegt. Der erstellte Artikel ist zunächst offline gestellt. Um den Artikel zur Bearbeitung aufzurufen, klickt man auf seinen Namen. 
+### Artikel erstellen und pflegen
+Man erstellt einen neuen Artikel über das (+)-Symbol und gibt anschließend den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit ein vorgegebenes Template für die Seitendarstellung auszuwählen. Nach Bestätigen über die Schaltfläche “Artikel hinzufügen” wird der Artikel angelegt. Der erstellte Artikel ist zunächst offline gestellt. Um den Artikel zur Bearbeitung aufzurufen, klickt man auf seinen Namen. Mehr im Kapitel:[Redaktion](/{{path}}/{{version}}/redaktion)
 
 <a name="ofon"></a>
 ### Online / Offline
@@ -71,3 +76,21 @@ REDAXO ist Mehrsprachfähig. Sofern mehrere Sprachen aktiviert sind und der Reda
 Die Sprachen werden vom Admin verwaltet und bereitgestellt. 
 
 > **Achtung** Wenn ein Artikel oder eine Kategorie in einer Sprache gelöscht wird, werden auch alle alle weiteren Sprachversionen gelöscht.
+
+## Indirekte strukturbildende Funktionen
+Einige Funktionen stehen nicht direkt in der Struktur zur Verfügung und müssen in den Artikeln durchgeführt werden. Da diese die Struktur beinflussen, werden diese hier beschrieben. 
+
+<a name="copy"></a>
+### Artikel oder Kategorien Kopieren und Verschieben
+Diese Funktionen müssen im Artikel im Reiter **Funktionen** durchgeführt werden. Kategorien können nur in den Funktionen des Startartikels kopiert oder verschoben werden, der diese Kategorie repräsentiert.
+
+<a name="convert"></a>
+### Artikel in Startartikel umwandeln
+Befinden sich mehrere Artikel in einer Kategorie, so ist es möglich einen normalen Artikel auszuwählen und diesen als neuen Startartikel der Kategorie festzulegen. Dies erfolgt im Funktionsreiter des entsprechenden Artikels. Der ursprüngliche Startartikel wird dann zu einem einfachen Artikel umgewandelt. 
+
+<a name="convertcat"></a>
+### Artikel in Kategorie umwandeln
+Normale Artikel können in eine Kategorie umgewandelt werden. Dies erfolgt im Funktionsreiter des entsprechenden Artikels. 
+
+
+
