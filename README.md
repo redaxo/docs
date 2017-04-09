@@ -9,7 +9,7 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 - Wenn man sich einen Inhalt vornimmt, bitte mit Namen und Status markieren in der [dokumentation.md](dokumentation.md)
 - **Hinweis:** Die Links in der Inhaltsverzeichnis-Datei [dokumentation.md](dokumentation.md) funktionieren nicht innerhalb von Github, da sie vorbereitet sind für den automatischen Import in die REDAXO-Website. Ihr müsst daher die gewünschte Datei selbst auswählen und öffnen.
 
-###Schreibstil
+### Schreibstil
 
 - Möglichst ohne direkte Anrede (Du / Sie) auskommen. Falls in Ausnahmefällen nicht möglich, dann "Du" verwenden statt "Sie"
 
