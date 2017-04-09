@@ -23,10 +23,10 @@
 
 
 ## Einleitung
-Artikel sind die Seiten der Werbpräsenz. Es gibt zwei Artikeltypen. Normale Artikel und Startartikel. Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Normale Artikel können zusätzlich in einer Kategorie abgelegt. Artikel werden in der Strukturverwaltung angelegt. Dort wählt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen können in den Metadaten hinterlegt werden. 
+Die Artikel der Webpräsenz findet und erstellt man in den Kategorien der Strukturverwaltung. Dort wählt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Es gibt zwei Artikeltypen: ***Normale Artikel*** und ***Startartikel***. Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Normale Artikel werden zusätzlich in einer Kategorie abgelegt. Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen können in den Metadaten hinterlegt werden. 
 
 ## Blöcke
-Die Inhalte eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
+Die Inhalte (Content) eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind beispielhaft: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
 
 ![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
 
@@ -104,3 +104,4 @@ Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängi
 Um in eine Spalte zu gelangen, klicken Sie im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese finden Sie im Reiter **Editiermodus** als Untermenüpunkte. Die Pflege der Spalten erfolgt über Blöcke. 
 
 ## Arbeitsversion
+- Notiz Screenshot anlegen -
