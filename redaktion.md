@@ -21,6 +21,7 @@
     * [Inhalte zwischen Sprachen kopieren ](#inhalte-zwischen-sprachen-kopieren-)
   * [Spalten](#spalten)
   * [Arbeitsversion / Liveversion](#arbeitsversion--liveversion)
+  * [History](#history)
 
 
 ## Einleitung
@@ -106,8 +107,11 @@ Um in eine Spalte zu gelangen, klicken Sie im Editiermodus auf die Bezeichnung d
 
 ## Arbeitsversion / Liveversion
 - Notiz Screenshot anlegen -
-- 
+
 Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
 Jeder Artikel hat zunächst eine leere Arbeitsversion zugeordnet. Es ist allerdings möglich die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um die Arbeitsversion ansehen zu können, klickt man auf „Voransicht“ Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden. .
 
 
+## History
+- Notiz Screenshot anlegen -
+- Notiz Screenshot anlegen -
