@@ -1,25 +1,26 @@
 # Redaktion
-* [Einleitung](#einleitung)
-* [Blöcke](#blöcke)
-  * [Block bearbeiten](#block-bearbeiten)
-  * [Block löschen ](#block-löschen-)
-  * [Block verschieben](#block-verschieben)
-* [Bedienelemente in REDAXO ](#bedienelemente-in-redaxo-)
-  * [Formularfelder](#formularfelder)
-  * [Linkmap-Widget](#linkmap-widget)
-  * [Media-Widget](#media-widget)
-  * [Medialist-Widget](#medialist-widget)
-    * [Texteditoren und weitere Eingabemöglichkeiten](#texteditoren-und-weitere-eingabemöglichkeiten)
-* [Artikel-Funktionen](#artikel-funktionen)
-  * [Artikel in Startartikel umwandeln](#artikel-in-startartikel-umwandeln)
-  * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
-  * [Inhalte kopieren](#inhalte-kopieren)
-  * [Artikel / Kategorien Kopieren und Verschieben](#artikel--kategorien-kopieren-und-verschieben)
-* [Metadaten](#metadaten)
-* [Sprachen](#sprachen)
-  * [Inhalte zwischen Sprachen kopieren ](#inhalte-zwischen-sprachen-kopieren-)
-* [Spalten](#spalten)
-* [Arbeitsversion](#arbeitsversion)
+* [Redaktion](#redaktion)
+  * [Einleitung](#einleitung)
+  * [Blöcke](#blöcke)
+    * [Block bearbeiten](#block-bearbeiten)
+    * [Block löschen ](#block-löschen-)
+    * [Block verschieben](#block-verschieben)
+  * [Bedienelemente in REDAXO ](#bedienelemente-in-redaxo-)
+    * [Formularfelder](#formularfelder)
+    * [Linkmap-Widget](#linkmap-widget)
+    * [Media-Widget](#media-widget)
+    * [Medialist-Widget](#medialist-widget)
+      * [Texteditoren und weitere Eingabemöglichkeiten](#texteditoren-und-weitere-eingabemöglichkeiten)
+  * [Artikel-Funktionen](#artikel-funktionen)
+    * [Artikel in Startartikel umwandeln](#artikel-in-startartikel-umwandeln)
+    * [Artikel in Kategorie umwandeln](#artikel-in-kategorie-umwandeln)
+    * [Inhalte kopieren](#inhalte-kopieren)
+    * [Artikel / Kategorien Kopieren und Verschieben](#artikel--kategorien-kopieren-und-verschieben)
+  * [Metadaten](#metadaten)
+  * [Sprachen](#sprachen)
+    * [Inhalte zwischen Sprachen kopieren ](#inhalte-zwischen-sprachen-kopieren-)
+  * [Spalten](#spalten)
+  * [Arbeitsversion / Liveversion](#arbeitsversion--liveversion)
 
 
 ## Einleitung
@@ -103,5 +104,10 @@ Im Reiter **Funktionen** steht die Kopierfunktion **Inhalte kopieren** zur Verf�
 Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewählten Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
 Um in eine Spalte zu gelangen, klicken Sie im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese finden Sie im Reiter **Editiermodus** als Untermenüpunkte. Die Pflege der Spalten erfolgt über Blöcke. 
 
-## Arbeitsversion
+## Arbeitsversion / Liveversion
 - Notiz Screenshot anlegen -
+- 
+Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
+Jeder Artikel hat zunächst eine leere Arbeitsversion zugeordnet. Es ist allerdings möglich die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um die Arbeitsversion ansehen zu können, klickt man auf „Voransicht“ Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden. .
+
+
