@@ -7,7 +7,7 @@
     * [Block verschieben](#block-verschieben)
   * [Bedienelemente in REDAXO ](#bedienelemente)
     * [Formularfelder](#formularfelder)
-    * [Linkmap-Widget](#linkmap)
+    * [Lin- und Linklisten](#linkmap)
     * [Media-Widget](#media)
     * [Medialist-Widget](#medialist)
       * [Texteditoren und weitere Eingabemöglichkeiten](#andere)
