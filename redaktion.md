@@ -57,7 +57,7 @@ Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder u
 
 ## Bedienelemente in REDAXO 
 Es gibt einige Eingabemöglichkeiten die in REDAXO wiederkehren. Hierzu zählen Formulareingaben, Linkauswahl und Auswahlfelder für Medien. 
-- Notiz Screenshot anlegen -
+![Beispiel-Block mit diversen Eingabemöglichkeiten](/assets/v5.2.0-redaktion-03-widgetsandforms.png)
 
 ### Formularfelder
 Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier können über Textfelder, Checkboxen, Auswahllisten Einstellungen und die Texteinplfege durchgeführt werden. 
@@ -65,13 +65,13 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 ### Linkmap-Widget
 Über das Linkmap-Widget können Artikel innderhalb der Redaxo-Präsenz verlinkt werden. 
 
-### Media-Widget
+### Media-Widget (4) 
 Mit dem Media-Widget werden einzelte Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
-### Medialist-Widget
+### Medialist-Widget (5) 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
-#### Texteditoren und weitere Eingabemöglichkeiten
+#### Texteditoren und weitere Eingabemöglichkeiten (6) 
 Weitere Eingabemöglichkeiten werden über AddOns in REDAXO bereitgestellt. Hierzu zählen beispielhaft auch Markdown- und WYSIWYG-Editoren (MS-Word ähnlich).
 
 
