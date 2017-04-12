@@ -71,7 +71,7 @@ Mit dem Media-Widget werden einzelte Medien aus dem Medienpool ausgewählt. Das 
 ### Medialist-Widget (5) 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
-#### Texteditoren und weitere Eingabemöglichkeiten (6) 
+### Texteditoren und weitere Eingabemöglichkeiten (6) 
 Weitere Eingabemöglichkeiten werden über AddOns in REDAXO bereitgestellt. Hierzu zählen beispielhaft auch Markdown- und WYSIWYG-Editoren (MS-Word ähnlich).
 
 
