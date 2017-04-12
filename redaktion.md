@@ -69,7 +69,7 @@ Es gibt einige Eingabemöglichkeiten die in REDAXO wiederkehren. Hierzu zählen 
 Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier können über Textfelder, Checkboxen, Auswahllisten Einstellungen und die Texteinplfege durchgeführt werden. 
 
 <a name="linkmap"></a>
-### Linkmap-Widget
+### Link- und Linklisten (6)(7) 
 Über das Linkmap-Widget können Artikel innderhalb der Redaxo-Präsenz verlinkt werden. 
 
 <a name="media"></a>
@@ -81,7 +81,7 @@ Mit dem Media-Widget werden einzelte Medien aus dem Medienpool ausgewählt. Das 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
 <a name="andere"></a>
-### Texteditoren und weitere Eingabemöglichkeiten (6) 
+### Texteditoren und weitere Eingabemöglichkeiten (8) 
 Weitere Eingabemöglichkeiten werden über AddOns in REDAXO bereitgestellt. Hierzu zählen beispielhaft auch Markdown- und WYSIWYG-Editoren (MS-Word ähnlich).
 
 <a name="funktionen"></a>
