@@ -113,5 +113,7 @@ Jeder Artikel hat zunächst eine leere Arbeitsversion zugeordnet. Es ist allerdi
 
 
 ## History
-- Notiz Screenshot anlegen -
-- Notiz Screenshot anlegen -
+In REDAXO ist eine Versionierung (History) intergriert. Ist diese aktiviert, erfasst REDAXO jeder Änderung in den Artikel-Blöcken und Metadaten. 
+![History](/assets/v5.2.0-redaktion-06-history.png)
+Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr), neben dem Reiter zum Editiermodus, öffnet sich eine Gegenüberstellung der Versionen. Über ein Drop-Down-Menü können die einzelnen Versionen ausgewählt werden und im rechten Fenster betrachtet werden. Möchte man eine ältere Version wiederherstellen, klickt man auf **Diese Version übernehmen**. Hierbei wird die aktuelle Version als neue Version gespeichert, so dass es jederzeit möglich ist, den Vorgang rückgängig zu machen. 
+
