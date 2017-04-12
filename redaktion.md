@@ -106,10 +106,13 @@ Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängi
 Um in eine Spalte zu gelangen, klicken Sie im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese finden Sie im Reiter **Editiermodus** als Untermenüpunkte. Die Pflege der Spalten erfolgt über Blöcke. 
 
 ## Arbeitsversion / Liveversion
-- Notiz Screenshot anlegen -
+![Version](/assets/v5.2.0-redaktion-04-version.png)
 
-Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
-Jeder Artikel hat zunächst eine leere Arbeitsversion zugeordnet. Es ist allerdings möglich die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um die Arbeitsversion ansehen zu können, klickt man auf „Voransicht“ Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden. .
+Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. Die Umschaltung zwischen Liveversion und Arbeitsversion erfolgt über das Drop-Down-Menü **Version**. 
+
+In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
+Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben füllen lässt. Es ist möglich die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um eine Vorschau der Arbeitsversion zu erhalten, klickt man auf „Voransicht“. Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden.
+> **Achtung!** Wird die Arbeitsversion als Liveversion freigegeben, wird die aktuelle Liveversion überschrieben bzw. gelöscht. Nutzt man jedoch auch das History-Plugin, so ist es möglich vorherige Versionen wiederherzustellen. 
 
 
 ## History
