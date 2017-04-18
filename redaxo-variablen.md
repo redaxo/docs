@@ -88,16 +88,19 @@ Mit `REX_LINK` wird ein einzelner Artikellink eingefügt, `REX_LINKLIST` erlaubt
 #### Syntax
 ##### REX_LINK
 ###### Ausgabe-Variable
-Gibt die ID des gewählten Artikels zurück. Es ist eine gekürzte Schreibweise erlaubt.
+Gibt die ID oder die URL des gewählten Artikels zurück. Es ist eine gekürzte Schreibweise erlaubt.
     
     // Kurze Schreibweise
     REX_LINK[i]
     // Ausführliche Schreibweise
-    REX_LINK[id=i] 
+    REX_LINK[id=i output=xyz] 
+    REX_LINK[id=i isset=1] 
     
 Parameter | Beschreibung  
 --- | ---
-`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 für `i` erlaubt. 
+`isset=1` | Fragt ab, ob die Redaxo-Variable gesetzt ist (optional). Ist sie gesetzt, wird `true` zruückgegeben, sonst `false`. 
+`output=xyz` | Bestimmt die Art des Rückgabewerts (optional). `output=url` bestimmt die URL des Artikels als Rückgabewert, `output=id` die ID. 
 
 ###### Eingabe-Variable
 Gibt im Backend ein Eingabewidget aus, über das die Linkmap aufgerufen wird.
@@ -120,7 +123,7 @@ Parameter | Beschreibung
     
 **Ausgabemodul**
 
-    <a href="<?=rex_getUrl(REX_LINK[id=1]);?>">zum Artikel mit der ID REX_LINK[id=1]</a>
+    <a href="REX_LINK[id=1 output=url]">zum Artikel mit der ID REX_LINK[id=1]</a>
 
 ##### REX_LINKLIST
 ###### Ausgabe-Variable
@@ -129,11 +132,12 @@ Gibt die IDs der gewählten Artikel als kommagetrennten String zurück. Es ist e
     // Kurze Schreibweise
     REX_LINKLIST[i]
     // Ausführliche Schreibweise
-    REX_LINKLIST[id=i] 
+    REX_LINKLIST[id=i isset=1] 
 
 Parameter | Beschreibung  
 --- | ---
 `id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
+`isset=1` | Fragt ab, ob die Redaxo-Variable gesetzt ist (optional). Ist sie gesetzt, wird `true` zruückgegeben, sonst `false`. 
 
 ###### Eingabe-Variable
 Gibt im Backend ein Eingabewidget aus, über das die Linkmap aufgerufen wird.
