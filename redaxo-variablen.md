@@ -602,7 +602,7 @@ Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter)
                 }
             }
 
-            // Reine Textausgaben müssen mit 'sel::quote()' als String maskiert werden.
+            // Reine Textausgaben müssen mit 'self::quote()' als String maskiert werden.
             return self::quote($title);
         }
     }
