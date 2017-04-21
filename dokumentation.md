@@ -31,6 +31,8 @@
 
 - Tutorials
     - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>in bearbeitung</b></sup>
+    - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates) <sup><b>in bearbeitung</b></sup>
+    
 
 
 ##### Labels vergeben
