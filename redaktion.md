@@ -19,7 +19,7 @@
     * [Artikel / Kategorien Kopieren und Verschieben](#move)
   * [Metadaten](#metadaten)
   * [Sprachen](#sprachen)
-    * [Inhalte zwischen Sprachen kopieren ](#icopylang)
+    * [Inhalte zwischen Sprachen kopieren ](#copylang)
   * [Spalten](#spalten)
   * [Arbeitsversion / Liveversion](#version)
   * [History](#history)
