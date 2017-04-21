@@ -2,7 +2,7 @@
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
-    - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
+    - [API-Dokumentation](/api/{{version}}/)
 
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
@@ -11,7 +11,7 @@
 
 - Anwender
     - [Profil](/{{path}}/{{version}}/profil)
-    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung)
     - [Redaktion](/{{path}}/{{version}}/redaktion) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Backup](/{{path}}/{{version}}/backup) <sup><b>abgeschlossen</b></sup> <sup><i>Skerbis</i></sup>
