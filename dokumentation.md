@@ -33,6 +33,7 @@
     - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>überprüfen</b></sup>
     - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
     - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
+     -[Modulausgaben erweitern](/{{path}}/{{version}}/tutorial-modulausgaben) <sup><b>überprüfen</b></sup>
     
 
 
