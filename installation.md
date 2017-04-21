@@ -12,7 +12,7 @@
 Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
 
 - Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren. 
-- Die neueste Version unter http://redaxo.org/de/download/ herunterladen.
+- Die neueste Version unter http://redaxo.org/download/ herunterladen.
 - Die ZIP-Datei auf deinem Rechner entpacken.
 - Die Dateien in das Webverzeichnis hochladen.
 Die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) ausführen.
@@ -26,7 +26,7 @@ Zunächst erstellt man eine leere MySQL-Datenbank. Bei einigen Hostern ist berei
 <a name="download"></a>
 ## Download
 
-Als Erstes sollte man die aktuelle Version von REDAXO unter http://redaxo.org/de/download/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
+Als Erstes sollte man die aktuelle Version von REDAXO unter http://redaxo.org/download/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
 
 <a name="upload"></a>
 ## Upload 
@@ -34,7 +34,7 @@ Als Erstes sollte man die aktuelle Version von REDAXO unter http://redaxo.org/de
 Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffentlichen Webserver verschoben. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
 Ausführliche Informationen zum Upload und zu denZugangsdaten liefert der Hostingpartner.
 
-> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch einen Dateimanager, mit dem man die Zip-Datei direkt hochladen und auf dem Server entpacken kann. 
+> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem man die Zip-Datei direkt hochladen und auf dem Server entpacken kann. 
 
 
 > **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen muss man diese erst einblenden. 
@@ -76,7 +76,7 @@ Direktiven für NGINX:
  location ^~ /redaxo/data { deny  all; }
  location ^~ /redaxo/cache { deny  all; }
 ```
-> Bei der Verwendung eines Rewriter-Addons bitte die Dokumentation des Addons beachten.
+> Bei der Verwendung eines Rewriter-AddOns bitte die Dokumentation des Addons beachten.
 
 
 ### Schritt 4: Konfiguration
@@ -102,7 +102,7 @@ Es muss eine der drei Optionen gewählt werden.
 Schritt 5: Datenbank
 
 ### Schritt 6: Administrator
-Nun muss ein Username und ein sicheres Passwort für den Administrator REDAXO-Installation definiert werden. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- wie Kleinbuchstaben sowie Sonderzeichen. Auch sollte man nicht unbedingt `Admin` oder `Administrator` als Benutzername anlegen; diese sind leicht zu erraten.  
+Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAXO-Installation definiert werden. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- wie Kleinbuchstaben sowie Sonderzeichen. Auch sollte man nicht unbedingt `Admin` oder `Administrator` als Benutzername anlegen; diese sind leicht zu erraten.  
 
 ![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
 Schritt 6: Administrator

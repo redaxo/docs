@@ -10,7 +10,7 @@
 <a name="voraussetzung"></a>
 ## Vorausetzung
 
-REDAXO muss bereits installiert sein.
+REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein.
 
 <a name="template"></a>
 ## Template
