@@ -8,7 +8,7 @@
 
 - Setup
     - [Installation - Systemanforderungen, Download, Upload, Installation](/{{path}}/{{version}}/installation) <sup><b>überprüfen</b></sup>
-    - [Login](/{{path}}/{{version}}/login) <sup><b>offen</b></sup>
+    - [Login](/{{path}}/{{version}}/login) <sup><b>überprüfen</b></sup>
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>offen</b></sup>
 
 - Redaktion
