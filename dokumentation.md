@@ -13,8 +13,8 @@
     - [Profil](/{{path}}/{{version}}/profil)
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung)
     - [Redaktion](/{{path}}/{{version}}/redaktion)
-    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Backup](/{{path}}/{{version}}/backup) <sup><b>abgeschlossen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Medienpool](/{{path}}/{{version}}/medienpool)
+    - [Backup](/{{path}}/{{version}}/backup)
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
