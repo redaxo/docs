@@ -55,11 +55,13 @@
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOns
+    - `In Arbeit`
     - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>offen</b></sup>
     - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>offen</b></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung) <sup><b>offen</b></sup>
 
 - Datenbank
+    - `In Arbeit`
     - [Queries](/{{path}}/{{version}}/datenbank-queries) <sup><b>offen</b></sup>
     - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>offen</b></sup>
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
