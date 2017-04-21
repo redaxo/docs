@@ -1,12 +1,12 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
-    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>abgeschlossen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>abgeschlossen</b></sup> <sup><i>Wolfgang</i>
+    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
+    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
 - Setup
-    - [Installation](/{{path}}/{{version}}/installation) <sup><b>abgeschlossen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Login](/{{path}}/{{version}}/login) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Installation](/{{path}}/{{version}}/installation)
+    - [Login](/{{path}}/{{version}}/login)
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Anwender
@@ -18,7 +18,7 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
-    - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>abgeschlossen</b></sup> <sup><i>Peter</i></sup>
+    - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
@@ -62,24 +62,4 @@
     - [Queries](/{{path}}/{{version}}/datenbank-queries) <sup><b>offen</b></sup>
     - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>offen</b></sup>
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
-
-
-
-##### Labels vergeben
-
-```
-<sup><b>offen</b></sup>
-<sup><b>in Bearbeitung</b></sup>
-<sup><b>unvollständig</b></sup>
-<sup><b>überprüfen</b></sup>
-<sup><b>abgeschlossen</b></sup>
-
-<sup><i>Gregor</i></sup>
-<sup><i>Jan</i></sup>
-<sup><i>Joachim</i></sup>
-<sup><i>Peter</i></sup>
-<sup><i>Thomas</i></sup>
-<sup><i>Wolfgang</i></sup>
-```
-
 
