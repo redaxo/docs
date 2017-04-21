@@ -62,6 +62,7 @@ Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder u
 <a name="bedienelemente"></a>
 ## Bedienelemente in REDAXO 
 Es gibt einige Eingabemöglichkeiten, die in REDAXO wiederkehren. Hierzu zählen Formulareingaben, Linkauswahl und Auswahlfelder für Medien. 
+
 ![Beispiel-Block mit diversen Eingabemöglichkeiten](/assets/v5.2.0-redaktion-03-widgetsandforms.png)
 
 <a name="formularfelder"></a>
