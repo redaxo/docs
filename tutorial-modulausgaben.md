@@ -57,7 +57,8 @@ REX_MEDIALIST[id="" prefix="" suffix="" instead="" ifempty="" callback=""]
 
 In Kombination mit dem Meta-Infos-AddOn kann man die “Handler” auch erweitern, zum Beispiel:
 
-```REX_ARTICLE[spaltenname]
+```
+REX_ARTICLE[spaltenname]
 ```
 
 ## Beispiel Verwendung Callback
