@@ -48,18 +48,18 @@ $REX_ACTION['MSG'] = 'Bitte geben Sie eine Überschrift ein!';
 
 Mit diesem Code ist folgende Aktion anzulegen:
 
--- BILD 1 --
+![Start der Installation](/assets/4-x-tutorial-aktionen-01.png)
 
 Als sinnvolle Events wären hier “ADD – Beim Hinzufügen des Moduls” und “EDIT – Beim Bearbeiten des Moduls” zu wählen, damit sowohl beim Erstellen als auch beim Ändern von Inhaltsblöcken eine Validierung erfolgt.
 
 Im Anschluss muss man die Aktion noch dem jeweiligen Modul zugeordnen. Dies geschieht durch Auswahl der Aktion innerhalb der Select-Box und Abschicken des Formulars durch den Klick auf “Aktion hinzufügen”:
 
 
---BILD 2 ---
+![Start der Installation](/assets/4-x-tutorial-aktionen-02.png)
 
 Eine Fehleingabe des Benutzers beim Verwalten der Inhalte würde zu folgender Meldung führen:
 
---BILD 3 ---
+![Start der Installation](/assets/4-x-tutorial-aktionen-03.png)
 
 Damit ist sichergestellt, dass keine leeren h1-Elemente auf der Webseite erscheinen.
 
