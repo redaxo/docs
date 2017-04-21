@@ -32,7 +32,7 @@
 
 - Service
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
-    - [Caching](/{{path}}/{{version}}/caching) <sup><b>offen</b></sup>
+    - [Caching](/{{path}}/{{version}}/caching) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i>
     - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>offen</b></sup>
     - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>offen</b></sup>
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
