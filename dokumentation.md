@@ -30,7 +30,7 @@
 - sinnvolle AddOns
 
 - Tutorials
-
+    - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>in bearbeitung</b></sup>
 
 
 ##### Labels vergeben
