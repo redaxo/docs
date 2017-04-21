@@ -30,8 +30,9 @@
 - sinnvolle AddOns
 
 - Tutorials
-    - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>in bearbeitung</b></sup>
-    - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates) <sup><b>in bearbeitung</b></sup>
+    - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>überprüfen</b></sup>
+    - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
+    - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
     
 
 
