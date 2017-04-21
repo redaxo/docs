@@ -9,7 +9,7 @@
       - [Vom Server laden](#fromserver)
 
 <a name="backup-hinweise"></a>
-##Backup-Hinweise
+## Backup-Hinweise
 
 Vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server sollte eine Datensicherung durchgeführt werden. 
 Für kleinere Webpräsenzen steht in Redaxo ein [Backup-AddOn](#addon) zur Sicherung der Datenbank und ausgewählter Dateiordner zur Verfügung. Zudem ist es möglich, in Kombination mit einem Cronjob regelmäßige Sicherungen der Datenbank durchzuführen.
