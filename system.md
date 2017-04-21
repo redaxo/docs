@@ -35,7 +35,7 @@ Die Inhalte selbst werden in REDAXO mit Modulen gepflegt. Diese Module können -
 Zusammenfassend muss man sich den Aufbau und die Ausgabe einer einzelnen Seite in Redaxo also folgendermaßen vorstellen:
 
 - Das **Template** bildet den Rahmen, quasi die Matrize für einen Artikel und steuert das Aussehen sowie die Struktur der Seite. Auch eine Navigation würde man normalerweise in einem Template speichern.
-- Der **Artikel** dient als Container zum Verwalten der Inhalte, ggf. in Spalten. Diese Inhalte pflegt man üblicherweise über Module. Wir werden jedoch sehen, dass man auch artikelspezifische Informationen in so genannten Metafeldern verwalten kann - typische Beispiele wären etwa ein Headerbilder oder HTML-Metatags wie Description oder Keywords.
+- Der **Artikel** dient als Container zum Verwalten der Inhalte, ggf. in Spalten. Diese Inhalte pflegt man üblicherweise über Module. Um artikelspezifische Informationen zu verwalten, eignen sich dagegen die so genannten Metafelder - typische Beispiele wären etwa ein Headerbilder oder HTML-Metatags wie Description oder Keywords.
 - **Module** dienen meist zur Pflege von Texten und Bildern. Module werden in einem Artikel als Blöcke beliebig untereinander gesetzt und bestehen aus einem Ein- und einem Ausgabebereich. Der Eingabebereich wird nur im Backend angezeigt und enthält Felder, um Texte eingeben und Bilder auswählen zu können. Der Ausgabebereich wird nur im Frontend, also für den Besucher sichtbar und zeigt diese Texte und Bilder an der im Template definierten Position an. Da Module als einzelne Blöcke mehrfach verwendet werden können, kann man eine Seite beliebig erweitern.
 
 Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären folgende:
@@ -65,3 +65,5 @@ Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären fol
 * **Backup:** Hier kann man Backup-Sicherungen der Website erstellen und auch wieder zurückspielen.
 * **Media Manager:** Diese REDAXO-Funktion dient für Bildanpassungen und kann Bildbearbeitungsketten ausführen. Vom Redakteur hochgeladene Bilder können beispielsweise vklerinert, beschnitten, geschärft und mit einem Wasserzeichen überlagert werden.
 * **Meta Infos:** Mit Meta-Infos kann man spezifische Felder für Artikel, Kategorien und Medien erstellen. Während die Module Datenbank-Felder für Inhalte bereitstellen, wird man in **Artikel-Metafeldern** zum Beispiel Headerfotos speichern, ob eine Seite zugangsgeschützt sein soll oder ob sie einer Zeitsteuerung unterliegen soll. **Kategorie-Metafelder** werden analog gern für Zusatzfunktionen in Navigationen genutzt, um z.B. für Unterkategorien Teaser-Fotos und -Texte zu verwalten. **Medien-Metafelder** könnte man beispielsweise einsetzen, um bei einem Bild Copyright-Hinweise zu vermerken.
+
+

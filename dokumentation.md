@@ -7,7 +7,7 @@
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
     - [Login](/{{path}}/{{version}}/login)
-    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
 
 - Anwender
     - [Profil](/{{path}}/{{version}}/profil) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
@@ -17,7 +17,7 @@
     - [Backup](/{{path}}/{{version}}/backup) <sup><b>abgeschlossen</b></sup> <sup><i>Skerbis</i></sup>
 
 - Basis
-    - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
+    - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
@@ -31,8 +31,9 @@
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
 - Service
+    - In Arbeit
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
-    - [Caching](/{{path}}/{{version}}/caching) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i>
+    - [Caching](/{{path}}/{{version}}/caching) <sup><b>offen</b></sup>
     - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>offen</b></sup>
     - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>offen</b></sup>
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
