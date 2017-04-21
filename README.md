@@ -17,6 +17,7 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 
 - REDAXO
 - AddOn
+- PlugIn
 
 ## Coding-Standard
 
