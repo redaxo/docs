@@ -82,7 +82,8 @@ Daneben kann man mit Meta-Infos natürlich auch sehr einfach Kategorie-Bilder od
 In neueren Redaxo-Versionen (ab Version 4.2) ist es noch einfacher und völig ohne den Einsatz von PHP möglich, Meta-Infos auszugeben. So könnte man beispielsweise eine Meta-Info (Spaltenname: “info”) für Texteingaben definieren:
 
 
-```<span class="cat_info">REX_CATEGORY[field="info"]</span>
+```
+<span class="cat_info">REX_CATEGORY[field="info"]</span>
 ```
 
 In diesem Tutorial wurde der Einsatz von Meta-Infos bei Kategorien erklärt. Darüber hinaus gibt es aber auch noch bei Artikeln und im Mediapool Meta-Infos. Typische Einsatzbereiche wären:
