@@ -6,6 +6,8 @@
 - [Navigation](#navigation)
 - [Ausgabe der Inhalte vorbereiten](#ausgabe)
 - [Module](#module)
+    - [Intro-Modul](#intro-modul)
+    - [Zwei-Spalten-Modul](#zwei-spalten-modul)
 
 <a name="voraussetzung"></a>
 ## Vorausetzung
@@ -166,6 +168,7 @@ Nun wird dieser Code in das bei der Installation standardmäßig angelegte Templ
 
 Wenn man nun Kategorien in Redaxo neu hinzufügt, sehen diese durch das Basis-Template schon ganz ansehnlich aus. Es fehlen noch Inhalte. Die werden durch Module eingepflegt, die man in jedem Artikel in beliebiger Anzahl aneinander reihen kann.
 
+<a name="intro-modul"></a>
 ### Intro-Modul
 
 Als Erstes wird ein Intro-Modul mit einer großen Überschrift und einem Absatz erstellt. Beim Menüpunkt "Module" kann dieses erste Modul neu angelegt werden. 
@@ -218,6 +221,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 
 Damit ist das erste Modul erstellt und einsatzbereit.
 
+<a name="zwei-spalten-modul"></a>
 ### Zwei-Spalten-Modul
 
 Ein zweites Modul dient zur Anzeige von Bildern und Texten in zwei Spalten.

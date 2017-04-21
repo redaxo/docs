@@ -10,7 +10,7 @@
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
 
 - Anwender
-    - [Profil](/{{path}}/{{version}}/profil) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Profil](/{{path}}/{{version}}/profil)
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Redaktion](/{{path}}/{{version}}/redaktion) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
