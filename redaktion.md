@@ -50,7 +50,7 @@ Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block 
 
 <a name="block-bearbeiten"></a>
 ### Block bearbeiten
-Um einen vorhanden Block zu bearbeiten, klickt man auf das grüne Editier-Symbol
+Um einen vorhanden Block zu bearbeiten, klickt man auf das grüne Editier-Symbol.
 
 <a name="block-loeschen"></a>
 ### Block löschen 
