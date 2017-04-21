@@ -2,24 +2,24 @@
 * [Redaktion](#redaktion)
   * [Einleitung](#einleitung)
   * [Blöcke](#bloecke)
-    * [Block bearbeiten](#block-bearbeiten)
-    * [Block löschen ](#block-loeschen-)
-    * [Block verschieben](#block-verschieben)
+        * [Block bearbeiten](#block-bearbeiten)
+        * [Block löschen ](#block-loeschen-)
+        * [Block verschieben](#block-verschieben)
   * [Bedienelemente in REDAXO ](#bedienelemente)
-    * [Formularfelder](#formularfelder)
-    * [Link](#linkmap)
-    * [Linkliste](#linklist)
-    * [Medien-Link](#media)
-    * [Medienliste](#medialist)
-      * [Texteditoren und weitere Eingabemöglichkeiten](#andere)
+        * [Formularfelder](#formularfelder)
+        * [Link](#linkmap)
+        * [Linkliste](#linklist)
+        * [Medien-Link](#media)
+        * [Medienliste](#medialist)
+        * [Texteditoren und weitere Eingabemöglichkeiten](#andere)
   * [Artikel-Funktionen](#funktionen)
-    * [Artikel in Startartikel umwandeln](#convert)
-    * [Artikel in Kategorie umwandeln](#convertcat)
-    * [Inhalte kopieren](#copycontent)
-    * [Artikel / Kategorien Kopieren und Verschieben](#move)
+        * [Artikel in Startartikel umwandeln](#convert)
+        * [Artikel in Kategorie umwandeln](#convertcat)
+        * [Inhalte kopieren](#copycontent)
+        * [Artikel / Kategorien Kopieren und Verschieben](#move)
   * [Metadaten](#metadaten)
   * [Sprachen](#sprachen)
-    * [Inhalte zwischen Sprachen kopieren ](#icopylang)
+         * [Inhalte zwischen Sprachen kopieren ](#icopylang)
   * [Spalten](#spalten)
   * [Arbeitsversion / Liveversion](#version)
   * [History](#history)
@@ -83,7 +83,7 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden.  
 
 <a name="media"></a>
-### Mediien-Link 
+### Medien-Link 
 
 ![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
 
