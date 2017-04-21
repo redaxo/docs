@@ -72,14 +72,14 @@ Anders als bei Artikeln werden Metadaten der Kategorien (optional) direkt in der
 
 <a name="sprache"></a>
 ### Sprachen
-REDAXO ist Mehrsprachfähig. Sofern mehrere Sprachen aktiviert sind und der Redakteur die entsprechnden Berechtigungen hat, erscheint in REDAXO oben rechts neben der Pfadleiste eine Sprachauswahl. Damit kann innerhalb der Struktur zwischen den einzelnen Sprachen gewechselt werden. Die Struktur der ist in allen Sprachen identisch. Sie unterscheidet sich in der Benennung der Kategorien und Artikel. Wird in einer Sprache ein neuer Artikel angelegt, steht dieser in allen Sprachen mit der gleichen Bezeichnung angelegt. Titel und  Metadaten können sprachabhängig gepflegt werden.  Möchte man einen Artikel oder eine Kategorie in einer Sprache nicht in der Navigation oder in Artikellisten einer Sprache anzeigen, können diese mit dem Offline-Staus (sofern in der Programmierung der Website vorgesehen) ausgeblendet werden. 
+REDAXO ist Mehrsprachfähig. Sofern mehrere Sprachen aktiviert sind und der Redakteur die entsprechenden Berechtigungen hat, erscheint in REDAXO oben rechts neben der Pfadleiste eine Sprachauswahl. Damit kann innerhalb der Struktur zwischen den einzelnen Sprachen gewechselt werden. Die Struktur ist in allen Sprachen identisch. Sie unterscheidet sich in der Benennung der Kategorien und Artikel. Werden in einer Sprache ein neuer Artikel oder eine neue Kategorie angelegt, werden diese in allen Sprachen mit dem gleichen Namen angelegt. Name und  Metadaten können sprachabhängig gepflegt werden.  Möchte man einen Artikel oder eine Kategorie in einer Sprache nicht in der Navigation oder in Artikellisten einer Sprache anzeigen, können diese mit dem Offline-Staus (sofern in der Programmierung der Website vorgesehen) ausgeblendet werden. 
 Die Sprachen werden vom Admin verwaltet und bereitgestellt. 
 
 > **Achtung** Wenn ein Artikel oder eine Kategorie in einer Sprache gelöscht wird, werden auch alle alle weiteren Sprachversionen gelöscht.
 
 <a name="more"></a>
 ## Weitere strukturbildende Funktionen
-Einige Funktionen stehen nicht direkt in der Struktur zur Verfügung und müssen in den Artikeln durchgeführt werden. Da diese die Struktur beinflussen, werden diese hier ebenfalls beschrieben. 
+Einige Funktionen stehen nicht direkt in der Struktur zur Verfügung und müssen in den Artikeln durchgeführt werden. Da diese die Struktur beinflussen, werden diese hier beschrieben. 
 
 <a name="copy"></a>
 ### Artikel oder Kategorien Kopieren und Verschieben
