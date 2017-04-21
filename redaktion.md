@@ -73,28 +73,28 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 
 ![Link-Widget](/assets/v5.2.0-redaktion-03-widget-link.png)
 
-Über das Link-Widget kann ein einzelner Artikel der REDAXO-Webpräsenz verlinkt werden. 
+Über das Link-Widget kann ein einzelner Artikel der REDAXO-Webpräsenz verlinkt werden. Zur Auswahl eines Links klickt man auf das Sitemap-Symbol. Es öffnet sich dann ein Fenster (Linkmap) in dem man innerhalb der Seitenstruktur den gewünschten Artikel auswählen kann. Um eine Kategorie zu verlinken wählt man den dazugehörigen Startartikel. Mit dem anderen Symbol kann man die Linkauswahl wieder aufheben. 
 
 <a name="linklist"></a>
 ### Linklist
 
 ![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linklist.png)
 
-Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden.  
+Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden. Sonst verhält sich diese Eingabe wie der Link.
 
 <a name="media"></a>
 ### Medien-Link 
 
 ![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
 
-Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
+Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein. Den Medienpool zur Auswahl des Mediums ruft man über das Listenmodul auf. Um den Uploaddialog des Medienpools aufzurufen klickt man auf das (+)-Symbol. Möchte man die Informationen zum aktuell ausgwählten Medium im Medienpool aufrufen klickt man auf das Auge. 
 
 <a name="medialist"></a>
 ### Medienliste
 
 ![Medialist](/assets/v5.2.0-redaktion-03-widget-medialist.png)
 
-Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
+Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. Sonst verhält sich diese Eingabe wie der Medien-Link.
 
 <a name="andere"></a>
 ### Texteditoren und weitere Eingabemöglichkeiten
