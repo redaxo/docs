@@ -20,7 +20,7 @@ Um die Kategorie den zwei Navigationstypen zuweisen zu können, wählen wir für
 ```1:Hauptnavigation|2:Unternavigation
 ```
 
---BILD 1--
+![Feld bearbeiten](/assets/4-x-tutorial-meta-01.jpg)
 
 Als Standdard-Wert tragen wir den Wert 1 für die Hauptnavigation ein.
 Über Speichern wird diese Info für alle Kategorien erstellt.
@@ -29,7 +29,7 @@ Wechselt man nun zurück in die Strukurverwaltung und ändert dort wieder die Ka
 
 Hier erscheint nun die von uns angelegte Select-Box, in der der Redakteur nun die der Kategorie einer der beiden Navigationen zuweisen kann.
 
---BILD 2--
+![Metapflege in der Struktur](/assets/4-x-tutorial-meta-02.jpg)
 
 ## Template
 
