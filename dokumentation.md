@@ -1,7 +1,7 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>abgeschlossen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i>
+    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>abgeschlossen</b></sup> <sup><i>Wolfgang</i>
     - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
 - Setup
