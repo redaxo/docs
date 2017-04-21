@@ -63,26 +63,40 @@ Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder u
 ## Bedienelemente in REDAXO 
 Es gibt einige Eingabemöglichkeiten, die in REDAXO wiederkehren. Hierzu zählen Formulareingaben, Linkauswahl und Auswahlfelder für Medien. 
 
-![Beispiel-Block mit diversen Eingabemöglichkeiten](/assets/v5.2.0-redaktion-03-widgetsandforms.png)
-
 <a name="formularfelder"></a>
 ### Formularfelder
 Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier können über Textfelder, Checkboxen, Auswahllisten Einstellungen und die Texteinplfege durchgeführt werden. 
 
 <a name="linkmap"></a>
-### Link- und Linklisten (6)(7) 
-Über das Linkmap-Widget können Artikel innderhalb der Redaxo-Präsenz verlinkt werden. 
+### Link
+
+![Link-Widget](/assets/v5.2.0-redaktion-03-widget-link.png)
+
+Über das Link-Widget kann ein einzelner Artikel der REDAXO-Webpräsenz verlinkt werden. 
+
+<a name="linklist"></a>
+### Linklist
+
+![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linkinklist.png)
+
+Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden.  
 
 <a name="media"></a>
-### Media-Widget (4) 
-Mit dem Media-Widget werden einzelte Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
+### Media-Link 
+
+![Media-Link](/assets/v5.2.0-redaktion-04-medium.png)
+
+Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
 <a name="medialist"></a>
-### Medialist-Widget (5) 
+### Medialist-Widget
+
+![Medialist](/assets/v5.2.0-redaktion-04-medialist.png)
+
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
 <a name="andere"></a>
-### Texteditoren und weitere Eingabemöglichkeiten (8) 
+### Texteditoren und weitere Eingabemöglichkeiten
 Weitere Eingabemöglichkeiten werden über AddOns in REDAXO bereitgestellt. Hierzu zählen beispielhaft auch Markdown- und WYSIWYG-Editoren (MS-Word ähnlich).
 
 <a name="funktionen"></a>
