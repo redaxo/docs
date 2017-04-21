@@ -7,9 +7,10 @@
     * [Block verschieben](#block-verschieben)
   * [Bedienelemente in REDAXO ](#bedienelemente)
     * [Formularfelder](#formularfelder)
-    * [Lin- und Linklisten](#linkmap)
-    * [Media-Widget](#media)
-    * [Medialist-Widget](#medialist)
+    * [Link](#linkmap)
+    * [Linkliste](#linklist)
+    * [Medien-Link](#media)
+    * [Medienliste](#medialist)
       * [Texteditoren und weitere Eingabemöglichkeiten](#andere)
   * [Artikel-Funktionen](#funktionen)
     * [Artikel in Startartikel umwandeln](#convert)
@@ -82,14 +83,14 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden.  
 
 <a name="media"></a>
-### Media-Link 
+### Mediien-Link 
 
 ![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
 
 Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
 <a name="medialist"></a>
-### Medialist-Widget
+### Medienliste
 
 ![Medialist](/assets/v5.2.0-redaktion-03-widget-medialist.png)
 
