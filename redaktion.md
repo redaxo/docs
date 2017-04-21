@@ -84,7 +84,7 @@ Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge
 <a name="media"></a>
 ### Media-Link 
 
-![Media-Link](/assets/v5.2.0-redaktion-04-widget-medium.png)
+![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
 
 Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
