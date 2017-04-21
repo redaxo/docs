@@ -1,6 +1,6 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
-    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>offen</b></sup>
     - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
