@@ -18,7 +18,7 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
-    - [Quickstart: eine Website in 10 Minuten](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>abgeschlossen</b></sup> <sup><i>Peter</i></sup>
+    - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>abgeschlossen</b></sup> <sup><i>Peter</i></sup>
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>

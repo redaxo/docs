@@ -1,10 +1,16 @@
-# Quickstart: Eine Website in 10 Minuten
+# Quickstart: Website in 15 Minuten
 
+- [Voraussetzung](#voraussetzung)
 - [Template](#template)
 - [Basis](#basis)
 - [Navigation](#navigation)
 - [Ausgabe der Inhalte vorbereiten](#ausgabe)
 - [Module](#module)
+
+<a name="voraussetzung"></a>
+## Vorausetzung
+
+REDAXO muss bereits installiert sein.
 
 <a name="template"></a>
 ## Template
