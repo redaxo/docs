@@ -37,6 +37,8 @@
     - [Medienkategorie vorselektieren](/{{path}}/{{version}}/tutorial-medienkategorie-vorselektieren) <sup><b>überprüfen</b>
     - [Aktionen - Moduleingaben überprüfen](/{{path}}/{{version}}/tutorial-aktionen) <sup><b>überprüfen</b>
     </sup>
+    - [Datenbankzugriff - rex_sql Klasse](/{{path}}/{{version}}/tutorial-rexsql) <sup><b>überprüfen</b>
+    </sup>
     
 
 
