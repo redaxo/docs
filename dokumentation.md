@@ -23,9 +23,9 @@
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Aktionen](/{{path}}/{{version}}/aktionen) <sup><b>abgeschlossen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
-    - [Installer](/{{path}}/{{version}}/installer) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
