@@ -1,7 +1,7 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i>
+    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i>
     - [Api Dokumentation](/docs/master/) <sup><b>offen</b></sup>
 
 - Setup
@@ -18,6 +18,7 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system) <sup><b>überprüfen</b></sup> <sup><i>Peter</i></sup>
+    - [Quickstart: eine Website in 10 Minuten](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>abgeschlossen</b></sup> <sup><i>Peter</i></sup>
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
@@ -62,9 +63,6 @@
     - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>offen</b></sup>
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
-- Tutorials
-    - [Quickstart](/{{path}}/{{version}}/tutorial-quickstart) <sup><b>in Bearbeitung</b></sup> <sup><i>Marco</i></sup>
-
 
 
 ##### Labels vergeben
@@ -81,7 +79,6 @@
 <sup><i>Joachim</i></sup>
 <sup><i>Peter</i></sup>
 <sup><i>Thomas</i></sup>
-<sup><i>Marco</i></sup>
 <sup><i>Wolfgang</i></sup>
 ```
 
