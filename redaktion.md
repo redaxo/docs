@@ -77,21 +77,21 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 <a name="linklist"></a>
 ### Linklist
 
-![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linkinklist.png)
+![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linklist.png)
 
 Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden.  
 
 <a name="media"></a>
 ### Media-Link 
 
-![Media-Link](/assets/v5.2.0-redaktion-04-medium.png)
+![Media-Link](/assets/v5.2.0-redaktion-04-widget-medium.png)
 
 Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein.
 
 <a name="medialist"></a>
 ### Medialist-Widget
 
-![Medialist](/assets/v5.2.0-redaktion-04-medialist.png)
+![Medialist](/assets/v5.2.0-redaktion-03-widget-medialist.png)
 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt werden und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. 
 
