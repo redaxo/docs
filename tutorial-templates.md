@@ -99,7 +99,7 @@ Als nächsten Schritt könnte man ein neues Template anlegen mit dem Namen “he
 
 Nun muss man im Default-Template den ausgeschnittenen Code einfach durch REX_TEMPLATE[4] ersetzen: REDAXO gibt dann an dieser Stelle den Header aus. Wichtig: darauf achten, dass die Template-ID mit der Zahl in den Klammern übereinstimmt.
 
---BILD 1--
+![Auslagern von Header und Footer](/assets/4-x-tutorial-templates-01.png)
 
 Nachdem der Header ausgelagert ist, könnte man nochmals ein neues Template mit dem Namen “footer” anlegen. Auch dieses Template sollte man nicht “aktiv” setzen, damit es in der Template-Auswahl beim Anlegen eines Artikels nicht erscheint. Den Quelltext nach der Zeile <br class="clear" /> bis zum Ende verschiebt man ins Footer-Template. Ähnlich wie auch beim Header wird dann das neue Template mit REX_TEMPLATE[5] inkludiert.
 
@@ -112,5 +112,5 @@ Natürlich muss man auch die Content-Spalten (ctypes) anlegen, indem man der ers
 Es bleibt nur noch, die Spalten im Template anzusprechen und deren Inhalt auszugeben. Dies gelingt mit `REX_ARTICLE[ctype=1]` für den Haupt-Spalte und `REX_ARTICLE[ctype=2]` für die Seitenleiste.
 Das Zweispalter-Template sieht nun so aus:
 
-BILD 2
+![Zweispalter](/assets/4-x-tutorial-templates-01.png)
 
