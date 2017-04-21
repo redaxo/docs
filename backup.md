@@ -24,7 +24,7 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 <a name="addon"></a>
 ## Backup-AddOn 
 
-Das Backup-AddOn ist über den Menüpunkt "Backup" erreichbar.
+Das Backup-AddOn ist über den Menüpunkt `Backup` erreichbar.
 Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
 
@@ -40,7 +40,7 @@ Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und In
 
 - Optional weitere Tabellen zur Sicherung auswählen
 - Gewünschten Speicherort auswählen
-- Ein Klick auf "Exportieren" startet die Sicherung
+- Ein Klick auf `Exportieren` startet die Sicherung
 
 > **Tipp:** Wenn auch die Zugangsdaten der Redakteure gesichert werden sollen, muss zusätzlich die Tabelle **rex_user** ausgewählt werden.
 
@@ -56,42 +56,42 @@ Beim Datei-Export werden die ausgewählten Dateien und/oder Verzeichnisse in kom
 
 - Die gewünschten Ordner auf dem Server zur Sicherung auswählen
 - Den gewünschten Speicherort auswählen
-- Ein Klick auf “Exportieren” startet die Sicherung
+- Ein Klick auf `Exportieren` startet die Sicherung
 
 <a name="import"></a>
 ### Daten importieren
 
-Im Reiter **Import** können Sicherungen vom Computer hochgeladen oder die auf dem Server gespeicherten Sicherungen wiederhergestellt werden. 
+Im Reiter `Import` können Sicherungen vom Computer hochgeladen oder die auf dem Server gespeicherten Sicherungen wiederhergestellt werden. 
 
 > **Hinweis:** Die vorhandenen Daten (Datenbank und Dateien) werden hierbei gelöscht. 
 
 <a name="upload"></a>
 #### Upload
 
-Im Abschnitt **Upload** können Sicherungsdateien hochgeladen und eingespielt werden.  
+Im Abschnitt `Upload` können Sicherungsdateien hochgeladen und eingespielt werden.  
 
 ![Screenshot](/assets/v5.2.0-backup-03-upload.png)
 Screenshot: Daten-Import Upload
 
-- Die Datenbank-Sicherung kann unter Datenbank-Export eingespielt werden
-- Die Datei-Sicherung kann unter Datei-Export einspielt werden
+- Die Datenbank-Sicherung kann unter Datenbankexport eingespielt werden
+- Die Datei-Sicherung kann unter Dateiexport einspielt werden
 
-Mit einem Klick auf das jeweilige Dateiauswahlfeld kann die lokal gespeicherte Sicherung ausgewählt und mit einem Klick auf **Import** hochgeladen werden. 
+Mit einem Klick auf das jeweilige Dateiauswahlfeld kann die lokal gespeicherte Sicherung ausgewählt und mit einem Klick auf `Import` hochgeladen werden. 
 
 > **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in REDAXO ausgeführt werden!
 
 <a name="fromserver"></a>
 #### Vom Server laden
 
-Im Abschnitt **Vom Server laden** kann man Sicherungen, die auf dem Server gespeichert wurden, wieder einspielen. 
+Im Abschnitt `Vom Server laden` kann man Sicherungen, die auf dem Server gespeichert wurden, wieder einspielen. 
 
 ![Screenshot](/assets/v5.2.0-backup-04-fromserver.png)
 Screenshot: Daten-Import vom Server
 
-- **Datenbank-Exporte** listet die Sicherungen der Datenbank auf.
-- **Datei-Exporte** zeigt die Liste der Dateisicherungen.
+- `Datenbank-Exporte` listet die Sicherungen der Datenbank auf.
+- `Datei-Exporte` zeigt die Liste der Dateisicherungen.
 
-Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klickt man in der jeweiligen Zeile auf **importieren**. 
+Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klickt man in der jeweiligen Zeile auf `importieren`. 
 
 > **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in REDAXO ausgeführt werden!
 
