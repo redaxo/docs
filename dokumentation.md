@@ -44,7 +44,7 @@
     - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration <sup>(rex_config)</sup>](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
-    - [Paginierung <sup>(rex_pager)</sup>](/{{path}}/{{version}}/paginierung)
+    - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade <sup>(rex_path, rex_url)</sup>](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
