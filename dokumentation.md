@@ -24,7 +24,7 @@
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
-    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
