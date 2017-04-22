@@ -7,8 +7,9 @@
 - [Einbindung von Artikeln](#artikeleinbindung)
 - [Das aktuelle Template in Modulen abfragen.](#aktuelles-template)
 - [Beispiele](#beispiele)
-		- [Template mit nur einer Spalte](#1spalte)
-		- [Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel](#2spalte)
+	- [Template mit nur einer Spalte](#1spalte)
+	- [Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel](#2spalte)
+	
 
 <a name="ueber"></a>
 ## Über
