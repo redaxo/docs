@@ -2,7 +2,7 @@
 
 Durch das Anlegen verschiedener Benutzer-Accounts regeln Sie die Rechtevergabe in REDAXO. Mit der Konfiguration des Accounts geben Sie Programmteile und Funktionen in REDAXO frei und können so auch sensible Bereiche verstecken und sperren.
 
-###Beispiele für die Rechtevergabe beziehungsweise für ihre Einschränkung können sein
+### Beispiele für die Rechtevergabe beziehungsweise für ihre Einschränkung können sein
 
 **REDAXO-Navigation**
 
