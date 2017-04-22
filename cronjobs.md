@@ -16,13 +16,13 @@ Eine aussagekräftige Beschreibung vervollständigt den informativen Teil des Ei
 
 ### Umgebung
 
-Im Feld [Umgebung] kann man einen oder mehrere Ereignisse wählen, unter denen der Cronjob ausgeführt wird.
+Im Feld [Umgebung] kann man ein oder mehrere Ereignisse wählen, bei denen der Cronjob ausgeführt wird.
 
 - Frontend
 - Backend
 - Skript
 
-Sobald ein eingestelltes Intervall erreicht ist, wartet das AddOn auf das eingestellte Ereignis: einen Seitenaufruf im Frontend, auf eine Aktion durch einen Nutzer im Backend oder den Aufruf der Skriptumgebung durch. Obwohl alle drei Einträge gleichzeitig aktiviert werden können, macht es keinen Sinn den Eintrag "Skript" gleichzeitig mit "Frontend" oder "Backend" auszuwählen - von Testzwecken einmal abgesehen.
+Sobald ein eingestelltes Intervall erreicht ist, wartet das AddOn auf das eingestellte Ereignis: einen Seitenaufruf im Frontend, auf eine Aktion durch einen Nutzer im Backend oder den Aufruf der Skriptumgebung. Tritt das eingestellte Ereignis ein, wird der Cronjob ausgeführt. Obwohl alle drei Einträge gleichzeitig aktiviert werden können, macht es keinen Sinn den Eintrag "Skript" gleichzeitig mit "Frontend" oder "Backend" auszuwählen - von Testzwecken einmal abgesehen.
 
 Somit können Cronjobs ausgelöst werden durch:
 
