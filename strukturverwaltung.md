@@ -21,7 +21,7 @@ Kategorien können auch in der Form genutzt werden, um Navigationsstrukturen abz
 
 
 <a name="kategorien"></a>
-## Kategorie
+## Kategorien
 
 Kategorien werden, wie in einem Explorer oder Finder, zur Strukturierung und Verwaltung der Artikel erstellt. Sie können wiederum andere Kategorien und Artikel enthalten.
 

@@ -6,7 +6,6 @@
 Wir werden dann sofort Gegenmaßnahmen ergreifen.
 > Stellen Sie diese Information nach Möglichkeit nicht ins Forum. Dies könnte sonst den Spieltrieb von Leuten wecken, die solche Lücken gerne mal für ihre Zwecke missbrauchen.
 
---
 
 Um es gleich vorwegzunehmen: Absolute Sicherheit gibt es nicht. Man kann nur eine Reihe von Maßnahmen ergreifen, um potenziellen Angreifern das Leben möglichst schwer zu machen.
 

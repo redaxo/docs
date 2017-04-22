@@ -18,7 +18,7 @@
     - [Medienpool](/{{path}}/{{version}}/medienpool)
 
 - Entwickler & Admin
-    - [Templates - inkl. aller Unterpunkte](/{{path}}/{{version}}/templates)
+    - [Templates](/{{path}}/{{version}}/templates)
     - [Module / Aktionen - inkl. aller Unterpunkte](/{{path}}/{{version}}/module-aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons)
