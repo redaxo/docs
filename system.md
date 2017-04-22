@@ -8,7 +8,7 @@
 ## Einstellungen
 
 
-###Cache löschen und Setup
+### Cache löschen und Setup
 
 Die Ansicht Einstellungen bietet die Features Cache löschen und Setup. Außerdem werden allgemeine Systemeinstellungen gelistet, die teilweise hier auch editiert werden können.
 
