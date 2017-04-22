@@ -42,7 +42,8 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 
 ### Einfaches Template mit 2 Spalten
 In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben.   In diesem Fall ist es möglich zusätzlich auf den Footer-Bereich zu befüllen. 
-Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-VAriablen `REX_ARTICLE[ctype=1] ` und `REX_ARTICLE[ctype=2] `
+Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1] ` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID der gewünschten Spalte fest. 
+Die ID der jeweiligen Spalten findet man im Reiter Spalten. 
 
 
 ```PHP
@@ -65,5 +66,16 @@ Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-VAriablen `REX_ARTICL
 </body>
 </html>
 ```
+
+## Einbindung von Templates
+Einige Bestandteile möchte man ggf. in mehreren Templates nutzen. Hierzu kann einzelne Bestandteile der Struktur in andren Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
+Templates, die inkludiert werden sollen, sollen nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Templateverwaltung inaktiv schalten. Die Einbindung dieser Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und die ID des gewünschten Templates.
+z.B.: `REX_TEMPLATE[2]` 
+
+## Das aktuelle Template in Modulen abfragen. 
+Manchmal ist es erforderlich in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. 
+Diese Information erhält man über die REDAXO-Variable REX_TEMPLATE_ID
+
+
 
 
