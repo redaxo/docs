@@ -15,7 +15,7 @@
 <a name="ueber"></a>
 ## Über
 Mit Hilfe von Templates wird das Layout der Artikel  festgelegt. 
-Redakteure wählen die zur Verfügung stehenden Templates bei der Erstellung eines Artikels aus. Templates definieren die generelle HTML-Struktur einer Artikelausgabe und binden die erforderlichen externen Dateien wie Stylesheets und Javascripte ein. Die Templates geben den Inhalt des Artikels auf der Website aus. Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wie Header, Footer oder Navigation in eigene Templates auslagern, die im Haupt-Template eingebunden werden. Templates unterstützen PHP-code und die REDAXO-Variablen. 
+Redakteure wählen die zur Verfügung stehenden Templates bei der Erstellung eines Artikels aus. Templates definieren die generelle HTML-Struktur einer Artikelausgabe und binden die erforderlichen externen Dateien wie Stylesheets und Javascript ein. Die Templates geben den Inhalt des Artikels auf der Website aus. Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wie Header, Footer oder Navigation in eigene Templates auslagern, die im Haupt-Template eingebunden werden. Templates unterstützen PHP-code und die REDAXO-Variablen. 
 
 <a name="erstellen"></a>
 ## Erstellen eines Templates
@@ -38,11 +38,11 @@ Die Artikelinhalte werden Wahlweise über die REDAXO-Variablen oder durch deren 
 ## Einbindung von Templates
 Einige Bestandteile möchte man ggf. in mehreren Templates nutzen. Hierzu kann einzelne Bestandteile der Struktur in andren Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
 Templates, die inkludiert werden sollen, sollen nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Templateverwaltung inaktiv schalten. Die Einbindung dieser Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und der ID des gewünschten Templates.
-Beiepiel: `REX_TEMPLATE[2]` 
+Beispiel: `REX_TEMPLATE[2]` 
 
 <a name="artikeleinbindung"></a>
 ## Einbindung von Artikeln
-In Templates können auch Artikel eingebunden werden. Das ermöglicht den Redakteuren ggf. einen Abschnitt des Templates selbst zu pflegen. Das können beispielsweise eine immer darzustellende Liste der Öffnungszeiten sein oder eine feste Linkliste die auf allen Seiten zu sehen sein sollen. Die Einbindung erfolgt über die REDAXO_VARIABLE REX_ARTICLE oder über den entprechenden PHP-Gegenpart.  
+In Templates können auch Artikel eingebunden werden. Das ermöglicht den Redakteuren ggf. einen Abschnitt des Templates selbst zu pflegen. Das können beispielsweise eine immer darzustellende Liste der Öffnungszeiten sein oder eine feste Linkliste die auf allen Seiten zu sehen sein sollen. Die Einbindung erfolgt über die REDAXO_VARIABLE REX_ARTICLE oder über den entsprechenden PHP-Gegenpart.  
 z.B.: `REX_ARTICLE[3]` 
 
 <a name="aktuelles-template"></a>
@@ -80,7 +80,7 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 
 <a name="2spalte"></a>
 ### Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel
-In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben. In diesem Fall können eine Content-Spalte und eine Sidbar gepflegt werden. Über das eingebundene Template werden Inhalte eines anderen Templates eingebunden. Im Footer werden Inhalte eunes Artikels ausgegeben. 
+In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben. In diesem Fall können eine Content-Spalte und eine Sidebar gepflegt werden. Über das eingebundene Template werden Inhalte eines anderen Templates eingebunden. Im Footer werden Inhalte eines Artikels ausgegeben. 
 Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1] ` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID der gewünschten Spalte fest. 
 Die ID der jeweiligen Spalten findet man im Reiter Spalten. 
 
@@ -109,3 +109,5 @@ Die ID der jeweiligen Spalten findet man im Reiter Spalten.
 </body>
 </html>
 ```
+
+
