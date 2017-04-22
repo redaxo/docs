@@ -14,7 +14,7 @@
 <a name="ueber"></a>
 ## Über
 Mit Hilfe von Templates wird das Layout der Artikel  festgelegt. 
-Redakteure wählen die zur Verfügung stehenden Templates bei der Erstellung eines Artikels aus. Templates definieren die generelle HTML-Struktur einer Artikelausgabe und binden die erforderlichen externen Dateien wie Stylesheets und Javascripte ein. Die geben den Inhalt des Artikels auf der Website aus. Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wie Header, Footer oder Navigation in eigene Templates auslagern, die im Haupt-Template eingebunden werden. auch ist es möglich über Templates eigene PHP-Funktionen einzubinden. 
+Redakteure wählen die zur Verfügung stehenden Templates bei der Erstellung eines Artikels aus. Templates definieren die generelle HTML-Struktur einer Artikelausgabe und binden die erforderlichen externen Dateien wie Stylesheets und Javascripte ein. Die Templates geben den Inhalt des Artikels auf der Website aus. Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wie Header, Footer oder Navigation in eigene Templates auslagern, die im Haupt-Template eingebunden werden. Templates unterstützen PHP-code und die REDAXO-Variablen. 
 
 <a name="erstellen"></a>
 ## Erstellen eines Templates
@@ -46,7 +46,7 @@ Manchmal ist es erforderlich in Modulen das aktuell verwendete Template zu ermit
 
 <a name="beispiele"></a>
 ## Beispiele 
-Die nachfolgenden Beispiele ze
+Die nachfolgenden Beispiele zeigen einfache Templates um mit dem Aufbau einer Website zu beginnen. 
 
 <a name="1spalte"></a>
 ### Template mit nur einer Spalte
