@@ -10,24 +10,31 @@ Dokumentationen zu weiteren  Versionen erreicht man über das Versionsauswahlmen
 ## Übersicht der Kategorien: 
 
 **Einleitung**
+
 Grundlegende Informationenen  zur aktuellen Version, Aktualisierung 
 
 **Setup**
+
 Installationsanleitung und erster Login
 
 **Anwender**
+
 Der Anwenderbereich ist primär an die Redakteure gerichtet. Hier wird die Bedienung des Systems erläutert.  
 
 **Basis**
+
 Grundlegende technische Informationen zum Aufbau einer REDAXO-Webpräsenz
 
 **Service**
+
 Informationen für Developer
 
 **Addons**
+
 Entwicklung und Bereitstellung eigener AddOns
 
 **Datenbank**
+
 Datenbankabfragen, Tabellen ändern und Prioritäten
 
 
