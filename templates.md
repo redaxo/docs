@@ -111,14 +111,13 @@ Die ID der jeweiligen Spalten findet man im Reiter `Spalten`.
    REX_TEMPLATE[2]
    <div class="content">
    REX_ARTICLE[ctype=1]
-   </div  
+   </div>  
    <div class="sidebar">
    REX_ARTICLE[ctype=2]
    </div> 
    <footer class="footer">
    REX_ARTICLE[3]
    </footer>
-
    </div> 
 </body>
 </html>
