@@ -2,6 +2,7 @@
 - [Über](#ueber)
 - [Erstellen eines Templates](#ertellen)
 - [Spalten  (CTYPES)](#ctype)
+- [Kategorieberechtigungen](#catrights)
 - [Ausgabe der Inhalte](#ausgabe)
 - [Einbindung von Templates](#einbindung)
 - [Einbindung von Artikeln](#artikeleinbindung)
@@ -23,7 +24,11 @@ Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen fest
 
 <a name="ctype"></a>
 ## Spalten  (CTYPES) 
-Eine Spalte oder auch CTYPE  unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche.  Spalten werden im Reiter ***Spalten*** angelegt und darin mit einem Namen versehen. Es ist dort auch möglich für jede  Spalte festzulegen, welche Module darin verwendet werden dürfen.   
+Eine Spalte oder auch CTYPE  unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche.  Spalten werden im Reiter ***Spalten*** angelegt und darin mit einem Namen versehen. Es ist dort auch möglich für jede  Spalte festzulegen, welche Module darin verwendet werden dürfen. 
+
+<a name="catrights"></a>
+## Kategorieberechtigungen 
+Die Verwendung eines Templates kann auf festgelegte Kategorien der Struktur eingeschränkt werden. Die Einstellung hierzu findet man im Reiter ***Kategorieberechtigungen*** der Template-Verwaltung. 
 
 <a name="ausgabe"></a>
 ## Ausgabe der Inhalte 
