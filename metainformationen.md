@@ -41,6 +41,13 @@ Die nachfolgenden Felder stehen zur Auswahl:
 
 ## Dynamische Metafelder
 
+Select–, Checkbox– und Radio–Felder können mit Daten von Datenbanktabellen befüllt werden und diese zur Auswahl bereitgestellt werden. Der Abruf ist aus beiden in REDAXO möglichen Datenbanken möglich. 
+
+**Mögliche Query-Abfragen**
+a) SELECT label,id FROM my_table WHERE a=4
+b) (DB2) SELECT label,id FROM my_table WHERE a=4
+
+
 ## Auslesen der Meta Infos
 
 ### Artikel
