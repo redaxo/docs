@@ -6,6 +6,7 @@
 	- [Einfaches Template mit nur einer Spalte](#)
 	- [Einfaches Template mit 2 Spalten](#)
 - [Einbindung von Templates](#)
+- [Einbindung von Artikeln](#)
 - [Das aktuelle Template in Modulen abfragen.](#)
 
 
@@ -81,6 +82,10 @@ Die ID der jeweiligen Spalten findet man im Reiter Spalten.
 Einige Bestandteile möchte man ggf. in mehreren Templates nutzen. Hierzu kann einzelne Bestandteile der Struktur in andren Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
 Templates, die inkludiert werden sollen, sollen nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Templateverwaltung inaktiv schalten. Die Einbindung dieser Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und die ID des gewünschten Templates.
 z.B.: `REX_TEMPLATE[2]` 
+
+## Einbindung von Artikeln
+In Templates können auch Artikel eingebunden werden. Das ermöglicht den Redakteuren ggf. einen Abschnitt des Templates selbst zu pflegen. Das können beispielsweise eine immer darzustellende Liste der Öffnungszeiten sein oder eine feste Linkliste die auf allen Seiten zu sehen sein sollen. Die Einbindung erfolgt über die REDAXO_VARIABLE REX_ARTICLE oder über den entprechenden PHP-Gegenpart.  
+z.B.: `REX_ARTICLE[3]` 
 
 ## Das aktuelle Template in Modulen abfragen. 
 Manchmal ist es erforderlich in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. 
