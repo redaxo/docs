@@ -13,7 +13,6 @@
 
 - Redaktion
     - [Vorwort](/{{path}}/{{version}}/redaktion-vorwort)
-    - [Profil](/{{path}}/{{version}}/profil)
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) 
     - [Inhaltsverwaltung](/{{path}}/{{version}}/inhaltsverwaltung)
     - [Medienpool](/{{path}}/{{version}}/medienpool)
