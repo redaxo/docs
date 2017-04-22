@@ -1,44 +1,45 @@
 - Erste Schritte
-    - [Über Redaxo](/{{path}}/{{version}}/ueber-redaxo) <sup><b>überprüfen</b></sup>
-    - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg) <sup><b>überprüfen</b></sup>
-    - [Sicherheitshinweise](/{{path}}/{{version}}/sicherheitshinweise) <sup><b>überprüfen</b></sup>
-    - [Updatehinweise](/{{path}}/{{version}}/updatehinweise) <sup><b>überprüfen</b></sup>
-    - [Die Redaxo-Demo](/{{path}}/{{version}}/demo) <sup><b>überprüfen</b></sup>
-    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit) <sup><b>offen</b></sup>
+    - [Über Redaxo](/{{path}}/{{version}}/ueber-redaxo)
+    - [Einstieg in Redaxo](/{{path}}/{{version}}/einstieg)
+    - [Sicherheitshinweise](/{{path}}/{{version}}/sicherheitshinweise)
+    - [Updatehinweise](/{{path}}/{{version}}/updatehinweise)
+    - [Die Redaxo-Demo](/{{path}}/{{version}}/demo)
+    - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
 
 - Setup
-    - [Installation - Systemanforderungen, Download, Upload, Installation](/{{path}}/{{version}}/installation) <sup><b>überprüfen</b></sup>
-    - [Login](/{{path}}/{{version}}/login) <sup><b>überprüfen</b></sup>
-    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen) <sup><b>offen</b></sup>
+    - [Installation - Systemanforderungen, Download, Upload, Installation](/{{path}}/{{version}}/installation)
+    - [Login](/{{path}}/{{version}}/login)
+    - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
 
 - Redaktion
-    - [Vorwort](/{{path}}/{{version}}/redaktion-vorwort) <sup><b>überprüfen</b></sup>
-    - [Profil](/{{path}}/{{version}}/profil) <sup><b>offen</b></sup>
-    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) <sup><b>überprüfen</b></sup>
-    - [Inhaltsverwaltung](/{{path}}/{{version}}/inhaltsverwaltung) <sup><b>überprüfen</b></sup>
-    - [Medienpool](/{{path}}/{{version}}/medienpool) <sup><b>überprüfen</b></sup>
+    - [Vorwort](/{{path}}/{{version}}/redaktion-vorwort)
+    - [Profil](/{{path}}/{{version}}/profil)
+    - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) 
+    - [Inhaltsverwaltung](/{{path}}/{{version}}/inhaltsverwaltung)
+    - [Medienpool](/{{path}}/{{version}}/medienpool)
 
 - Entwickler & Admin
-    - [Templates - inkl. aller Unterpunkte](/{{path}}/{{version}}/templates) <sup><b>offen</b></sup>
-    - [Module / Aktionen - inkl. aller Unterpunkte](/{{path}}/{{version}}/module-aktionen) <sup><b>offen</b></sup>
-    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>offen</b></sup>
-    - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons) <sup><b>offen</b></sup>
-    - [System - inkl. aller Unterpunkte](/{{path}}/{{version}}/system) <sup><b>offen</b></sup>
+    - [Templates - inkl. aller Unterpunkte](/{{path}}/{{version}}/templates)
+    - [Module / Aktionen - inkl. aller Unterpunkte](/{{path}}/{{version}}/module-aktionen)
+    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
+    - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons)
+    - [System - inkl. aller Unterpunkte](/{{path}}/{{version}}/system)
 
 - Entwicklerversion
 
 - sinnvolle AddOns
 
 - Tutorials
-    - [Installation](/{{path}}/{{version}}/tutorial-installation) <sup><b>überprüfen</b></sup>
-    - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
-    - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-templates) <sup><b>überprüfen</b></sup>
-    - [Modulausgaben erweitern](/{{path}}/{{version}}/tutorial-modulausgaben) <sup><b>überprüfen</b></sup>
-    - [Medienkategorie vorselektieren](/{{path}}/{{version}}/tutorial-medienkategorie-vorselektieren) <sup><b>überprüfen</b>
-    - [Aktionen - Moduleingaben überprüfen](/{{path}}/{{version}}/tutorial-aktionen) <sup><b>überprüfen</b></sup>
-    - [Datenbankzugriff - rex_sql Klasse](/{{path}}/{{version}}/tutorial-rexsql) <sup><b>überprüfen</b></sup>
-    
+    - [Installation](/{{path}}/{{version}}/tutorial-installation)
+    - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates)
+    - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-templates)
+    - [Modulausgaben erweitern](/{{path}}/{{version}}/tutorial-modulausgaben) 
+    - [Medienkategorie vorselektieren](/{{path}}/{{version}}/tutorial-medienkategorie-vorselektieren)
+    - [Aktionen - Moduleingaben überprüfen](/{{path}}/{{version}}/tutorial-aktionen) 
+    - [Datenbankzugriff - rex_sql Klasse](/{{path}}/{{version}}/tutorial-rexsql)
 
+
+   
 
 ##### Labels vergeben
 
