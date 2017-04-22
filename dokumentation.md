@@ -1,5 +1,5 @@
 - Einleitung
-    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
+    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
