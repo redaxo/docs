@@ -1,19 +1,30 @@
 # Metainformationen
-TOC
-
+- [Über](#ueber)
+- [Anwendungsbeispiel](#beispiel)
+- [Meta Infos-AddOn](#addon)
+- [Metafelder](#metafelder)
+- [Feldattribute](#attribute)
+- [Dynamische Metafelder](#dynamik)
+- [Auslesen der Meta Infos](#auslesen)
+	- [Artikel](#artikel)
+	- [Kategorien](#kategorien)
+	- [Medien](#medien)
+	- [Sprachen](#sprachen)
+- [Für AddOn-Developer](#developer)
+	
 <a name="ueber"></a>
 ## Über
 
 REDAXO bietet die Möglichkeit, für jeden Artikel, jede Kategorie, jede Sprache spezifische Meta-Angaben bereitzustellen. Das können zum Bespiel Definitionen für die Hintergrunddarstellung eines Artikels sein, Einstellungen für Galerien, Downloads oder zusätzliche SEO-Angaben sein.  
 
-Metadaten sind beschreibende Daten von Artikeln, Kategorien oder Medien. Über das System AddOn „MetaInfos“ (SystemAddOns sind immer in einer Standard REDAXO Installation vorhanden und können nicht gelöscht werden) lassen sich diese Daten erweitern.
+Metadaten sind beschreibende Daten von Artikeln, Kategorien, Sprachen oder Medien. Über das System AddOn „MetaInfos“ (SystemAddOns sind immer in einer Standard REDAXO Installation vorhanden und können nicht gelöscht werden) lassen sich diese Daten erweitern.
 
-Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können wie die schon vorhandenen Metadaten wie „Name“ über nachfolgende Codes abgerufen werden.  
+Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können können mittels PHP oder [REDAXO-Variablen]((/{{path}}/{{version}}/redaxo-variablen)) abgerufen werden.  
 
 <a name="besipiel"></a>
 ## Anwendungsbeispiel
 
-Möchte man eine Seite so aufbauen, dass Sie in manchen Artikeln nur eine Spalte und in anderen zwei Spalten verwenden will, kann eine Auswahl per Metainfos bereitgestellt werden. Das erspart die verwendung zusätzlicher Templates. 
+Möchte man eine Seite so aufbauen, dass Sie in manchen Artikeln nur eine Spalte und in anderen zwei Spalten verwenden will, kann eine Auswahl per Metainfos bereitgestellt werden. Das erspart die Verwendung oder Programmierung zusätzlicher Templates. 
 Man leget unter MetaInfo (Artikel) ein Select mit den Optionen 1-spaltig, 2-spaltig an. Dieses Merkmal muß dann bei den Artikeln entsprechend selektiert werden. Im Template selbst wird dann das Merkmal “ein- oder zweispaltig” abgefragt und danach ggf. eine weitere Spalte ergänzt.
 
 <a name="addon"></a>
@@ -153,6 +164,8 @@ REX_CLANG[field=clang_setlocale]
 REX_CLANG[id=2 field=clang_setlocale]
 ```
 <a name="developer"></a>
+
+
 ## Für AddOn-Developer
 
 Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
@@ -167,8 +180,3 @@ rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $
 ```PHP
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```
-
-
-
-
-
