@@ -1,4 +1,6 @@
 # Metainformationen
+TOC
+
 
 ## Über
 
@@ -45,13 +47,57 @@ Die nachfolgenden Felder stehen zur Auswahl:
 ## Beispiele
 
 ### Artikel
+Auslesen der Metadaten des aktuellen Artikels per PHP: 
+
+```
+// Beispiel Titelbild
+$titleimage  =  $this->getValue ('art_titleimage');
+// oder: 
+$titleimage  =  rex_article::getCurrent()->getValue('art_titleimage');
+```
+
+Variante als REDAXO-Variable
+
+```
+REX_ARTICLE[field="art_titleimage"]
+```
 
 ### Kategorien
 
 ### Medien
+Auslesen von Metadaten eines Mediums
+
+Der Abruf der Sprachinformationen in PHP:
+* `rex_clang::getCurrent()->getValue($field) `
+*  `rex_clang::getId($id)->getValue($field)`
+
+**Beispiel:**
+
+```PHP
+rex_clang::getCurrent()->getValue('clang_setlocale'));
+```
+Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben. 
+```
+REX_MEDIA[id=i field=copyright]
+```
 
 ### Sprachen
+Auslesen von Metadaten der aktuellen Sprache:
 
+Der Abruf der Sprachinformationen in PHP:
+* `rex_clang::getCurrent()->getValue($field) `
+*  `rex_clang::getId($id)->getValue($field)`
+
+**Beispiel:**
+
+```PHP
+rex_clang::getCurrent()->getValue('clang_setlocale'));
+```
+Variante als REDAXO-Variable
+
+```
+REX_CLANG[ field=clang_setlocale]
+```
 
 ## Für AddOn-Developer
 
@@ -60,17 +106,11 @@ Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mi
 ### Funktion
 
 ```PHP 
-rex_metainfo_add_field(
-$title, 
-$name, 
-$priority, 
-$attributes, 
-$type, 
-$default, 
-$params = null, $validate = null, $restrictions = '')
+rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
 ```
 ### Beispiel
 
 ```PHP
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```
+
