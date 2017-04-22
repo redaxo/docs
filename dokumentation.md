@@ -48,7 +48,7 @@
     - [Pfade <sup>(rex_path, rex_url)</sup>](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
-    - [REX_VARs <sup>(List, Anwendung, eigene Vars erstellen)</sup>](/{{path}}/{{version}}/redaxo-variablen) <sup><b>überprüfen</b></sup> <sup><i>Daniel</i></sup>
+    - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
