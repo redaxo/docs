@@ -1,4 +1,4 @@
-# # Inhalte von Iso auf Utf-8 konvertieren
+# Inhalte von Iso auf Utf-8 konvertieren
 
 Sagen wir mal wir haben REDAXO mit dem Zeichensatz iso-8859-1 erstellt (Standardeinstellung) und stellen fest das nun neue sprachen hinzukommen sollen und wir alles auf utf-8 konvertieren müssen.
 
