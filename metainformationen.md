@@ -49,3 +49,19 @@ Die nachfolgenden Felder stehen zur Auswahl:
 ## Medien
 
 ## Sprachen
+
+
+## Für Addon-Developer
+
+Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
+
+### Funktion
+
+```PHP 
+rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
+```
+### Beispiel
+
+```PHP
+rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
+```
