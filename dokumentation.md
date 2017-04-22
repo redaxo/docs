@@ -22,6 +22,7 @@
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Navigationen](/{{path}}/{{version}}/navigationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
@@ -33,7 +34,7 @@
 - Service
     - `In Arbeit`
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
-    - [Caching](/{{path}}/{{version}}/caching) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Caching](/{{path}}/{{version}}/caching)
     - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
