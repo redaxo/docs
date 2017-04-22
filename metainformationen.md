@@ -116,8 +116,8 @@ rex_clang::getCurrent()->getValue('clang_setlocale'));
 #### Abruf als REDAXO-Variable
 
 ```
-REX_CLANG[ field=clang_setlocale]
-REX_CLANG[ id=2 field=clang_setlocale]
+REX_CLANG[field=clang_setlocale]
+REX_CLANG[id=2 field=clang_setlocale]
 ```
 
 ## Für AddOn-Developer
