@@ -24,7 +24,7 @@ Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeld
 Im Meta Infos-Addon können die Metafelder für Artikel, Kategorien, Medien und Sprachen definiert und gestaltet werden.  
  Meta Infos  sind dafür vorgesehen, seiten- oder medienspezifische Informationen zu verwalten, wie beispielsweise Suchmaschinen-Keywords, ein individuelles Headerbild, ob als Newsteaser berücksichtigt, ob sie in bestimmten Navigationen auftauchen soll, Copyright-Infos zu bestimmten Fotos, usw. Sie können Metainfo-Felder für Artikel, Kategorien und/oder Medien definieren. Als Felder stehen alle üblichen Typen wie text, textarea, select, radio, checkbox und mehr zur Verfügung. 
  
-### Metafelder
+## Metafelder
 
 Die nachfolgenden Felder stehen zur Auswahl: 
 
@@ -42,16 +42,18 @@ Die nachfolgenden Felder stehen zur Auswahl:
 * **time:** Auswahlfeld für eine Urhzeit
 * **legend:** Dient zur Gruppierung der Metadaten in Fieldsets
 
-##Artikel
+## Beispiele
 
-## Kategorien
+### Artikel
 
-## Medien
+### Kategorien
 
-## Sprachen
+### Medien
+
+### Sprachen
 
 
-## Für Addon-Developer
+## Für AddOn-Developer
 
 Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
 
