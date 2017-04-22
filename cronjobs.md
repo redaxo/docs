@@ -1,71 +1,96 @@
 # Cronjobs
+- [Zweck des Cronjob-AddOns](#zweck)
+- [Einstellungen eines Cronjobs](#einstellungen)
+    - [Name](#name)
+    - [Beschreibung](#beschreibung)
+    - [Umgebung](#umgebung)
+    - [Ausführung](#ausfuehrung)
+    - [Status](#status)
+    - [Typ](#typ)
+    - [Intervall](#intervall)
+- [Neue Typen durch AddOns definieren](#neue-typen)
 
-Cronjobs dienen der regelmäßigen automatisierten Ausführung von Programmcode. Das Cronjobs AddOn ist Bestandteil der Redaxo Basisinstallation, muss jedoch bei Bedarf separat installiert werden.
+<a name="zweck"></a>
+## Zweck des Cronjob-AddOns
+
+Cronjobs dienen der regelmäßigen automatisierten Ausführung von Programmcode. Das Cronjobs-AddOn ist Bestandteil der REDAXO-Basisinstallation, muss jedoch bei Bedarf separat installiert werden.
 
 Im AddOn lassen sich dann beliebig viele Einträge erstellen, die gemäß den Einstellungen jedes Eintrages abgearbeitet werden.
 
-## Die Einstellungen eines Cronjobs
+<a name="einstellungen"></a>
+## Einstellungen eines Cronjobs
 
+<a name="name"></a>
 ### Name
 
-Zunächst gibt man den Namen eines Eintrags ein. Dies kann beispielsweise "RSS Feed lesen" oder "Monatliches Backup" sein.
+Zunächst gibt man den Namen eines Eintrags ein. Dies kann beispielsweise `RSS Feed lesen` oder `Monatliches Backup` sein.
 
+<a name="beschreibung"></a>
 ### Beschreibung
 
 Eine aussagekräftige Beschreibung vervollständigt den informativen Teil des Eintrages.
 
+<a name="umgebung"></a>
 ### Umgebung
 
-Im Feld [Umgebung] kann man ein oder mehrere Ereignisse wählen, bei denen der Cronjob ausgeführt wird.
+Im Feld `Umgebung` kann man ein oder mehrere Ereignisse wählen, bei denen der Cronjob ausgeführt wird.
 
 - Frontend
 - Backend
 - Skript
 
-Sobald ein eingestelltes Intervall erreicht ist, wartet das AddOn auf das eingestellte Ereignis: einen Seitenaufruf im Frontend, auf eine Aktion durch einen Nutzer im Backend oder den Aufruf der Skriptumgebung. Tritt das eingestellte Ereignis ein, wird der Cronjob ausgeführt. Obwohl alle drei Einträge gleichzeitig aktiviert werden können, macht es keinen Sinn den Eintrag "Skript" gleichzeitig mit "Frontend" oder "Backend" auszuwählen - von Testzwecken einmal abgesehen.
+Sobald ein eingestelltes Intervall erreicht ist, wartet das AddOn auf das eingestellte Ereignis: einen Seitenaufruf im Frontend, auf eine Aktion durch einen Nutzer im Backend oder den Aufruf der Skriptumgebung. Tritt das eingestellte Ereignis ein, wird der Cronjob ausgeführt.
+
+Obwohl alle drei Einträge gleichzeitig aktiviert werden können, sollte man die Umgebung `Skript` nicht gleichzeitig mit `Frontend` oder `Backend` auswählen - von Testzwecken einmal abgesehen.
 
 Somit können Cronjobs ausgelöst werden durch:
 
 - einen Seitenaufruf im Frontend
 - einen Seitenaufruf im Backend
-- einen direkten Aufruf der Cronjob Scriptumgebung durch einen externen Dienst
+- einen direkten Aufruf der Cronjob-Skriptumgebung durch einen externen Dienst
 
-Bei der Ausführung in der Umgebung "Frontend" und "Backend" läuft der Cronjob in der Session des jeweiligen Users, sodass dort auch ein Zugriff auf die Session möglich ist. Nur die Einstellung "Skript" erlaubt die Ausführung des Cronjobs unabhängig von einem Aufruf von Redaxo im Frontend oder im Backend.
+Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob in der Session des jeweiligen Users, sodass dort auch ein Zugriff auf die Session möglich ist. Nur die Umgebung `Skript` erlaubt die Ausführung des Cronjobs unabhängig von einem Aufruf von REDAXO im Frontend oder im Backend.
 
-Nur mit der Einstellung "Backend" ist es möglich den Cronjob manuell in den Einstellungen des AddOns zu starten.
+Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einstellungen des AddOns zu starten.
 
+<a name="ausfuehrung"></a>
 ### Ausführung
 
-Wenn eines der Ereignisse "Frontend" oder "Backend" eintritt, so kann der Cronjob seinen Dienst zu Beginn des Aufrufes erledigen oder am Ende. Nur in Ausnahmefällen sollte die Einstellung "Beginn" gewählt werden, da sie den jeweiligen Aufruf verzögert. Das fällt natürlich weniger ins Gewicht, wenn die Ausführung am Ende geschieht.
+Wenn eines der Ereignisse `Frontend` oder `Backend` eintritt, so kann der Cronjob seinen Dienst zu Beginn des Aufrufes erledigen oder am Ende. Nur in Ausnahmefällen sollte die Einstellung `Beginn` gewählt werden, da sie den jeweiligen Aufruf verzögert. Das fällt natürlich weniger ins Gewicht, wenn die Ausführung am Ende geschieht.
 
+<a name="status"></a>
 ### Status
 
-Im Feld "Status" kann ein Cronjob deaktiviert werden. Standard ist "aktiviert".
+Im Feld `Status` kann ein Cronjob deaktiviert werden. Standard ist `aktiviert`.
 
+<a name="typ"></a>
 ### Typ
 
-Im Feld "Typ" stehen die Auswahlmöglichkeiten
+Im Feld `Typ` bestehen die Auswahlmöglichkeiten:
 
 - PHP-Code
 - PHP-Callback
 - URL-Aufruf
 
-zur Verfügung. AddOns können dort weitere Einträge hinzufügen.
+AddOns können dort weitere Einträge hinzufügen.
 
 Beispielsweise:
 
-- Datenbankexport (durch das AddOn "Backup")
-- Search it: Reindexieren (durch das AddOn "Search it")
+- Datenbankexport (durch das AddOn `Backup`)
+- Search it: Reindexieren (durch das AddOn `Search it`)
 
-Je nach Einstellung im Feld "Typ" stehen unterschiedliche Eingabemöglichkeiten im Bereich "Typspezifische Parameter" zur Verfügung.
-So kann bei der Einstellung "PHP-Code" kompletter PHP-Code eingegeben werden, bei der Einstellung "PHP-Callback" lediglich ein Aufruf.
+Je nach Einstellung im Feld `Typ` stehen unterschiedliche Eingabemöglichkeiten im Bereich `Typspezifische Parameter` zur Verfügung.
+So kann bei der Einstellung `PHP-Code` kompletter PHP-Code eingegeben werden, bei der Einstellung `PHP-Callback` lediglich ein Aufruf.
 
 AddOns können eigene typspezifische Parameter zur Verfügung stellen.
 
+<a name="intervall"></a>
 ### Intervall
 
-Die Standardeinstellung für den Bereich "Intervall" ist die tägliche Ausführung, jeweils beim nächsten Aufruf der Umgebung nach 0:00 Uhr.
+Die Standardeinstellung für den Bereich `Intervall` ist die tägliche Ausführung, jeweils beim nächsten Aufruf der Umgebung nach 0:00 Uhr.
 
+<a name="neue-typen"></a>
 ## Neue Typen durch AddOns definieren
 
-AddOns können eigene Ausführungstypen definieren. Dies wird beispielsweise im System AddOn "Backup" verwendet, um automatisierte Backups auszuführen.
+AddOns können eigene Ausführungstypen definieren. Dies wird beispielsweise im System AddOn `Backup` verwendet, um automatisierte Backups auszuführen.
+

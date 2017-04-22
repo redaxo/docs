@@ -1,6 +1,5 @@
-- [Intro](/{{path}}/{{version}}/intro)
-
 - Einleitung
+    - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
@@ -36,7 +35,7 @@
 - Service
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
     - [Caching](/{{path}}/{{version}}/caching)
-    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Cronjobs](/{{path}}/{{version}}/cronjobs)
     - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
