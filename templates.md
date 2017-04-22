@@ -1,5 +1,12 @@
 #  Templates
 
+- [Spalten  (CTYPES)](#)
+- [Ausgabe der Inhalte](#)
+	- [Einfaches Template mit nur einer Spalte](#)
+	- [Einfaches Template mit 2 Spalten](#)
+- [Einbindung von Templates](#)
+- [Das aktuelle Template in Modulen abfragen.](#)
+
 Mit Hilfe von Templates wird das Layout der Artikel  festgelegt. 
 Redakteure wählen die zur Verfügung stehenden Templates bei der Erstellung eines Artikels aus. Templates definieren die generelle HTML-Struktur einer Artikelausgabe und binden die erforderlichen externen Dateien wie Stylesheets und Javascripte ein. Die geben den Inhalt des Artikels auf der Website aus. Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wie Header, Footer oder Navigation in eigene Templates auslagern, die im Haupt-Template eingebunden werden. auch ist es möglich über Templates eigene PHP-Funktionen einzubinden. 
 
