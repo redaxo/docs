@@ -69,7 +69,7 @@ rex_category::getId($id)->getValue($field)
 ```PHP
 $hintergrund = rex_category::getCurrent()->getValue('cat_background');
 ```
-Variante als REDAXO-Variable
+#### Abruf als REDAXO-Variable
 ```
 // Kurze Schreibweise, Aktuelle Kategorie
 REX_CATEGORY[cat_background]
@@ -91,6 +91,7 @@ $media = rex_media::get('dateiname.xyz');
 // Meta-Info auslesen
 $file_name = $media->getValue('med_copyright');
 ```
+#### Abruf als REDAXO-Variable
 Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben. 
 ```
 REX_MEDIA[id=i field=copyright]
@@ -112,7 +113,7 @@ rex_clang::getId($id)->getValue($field)
 ```PHP
 rex_clang::getCurrent()->getValue('clang_setlocale'));
 ```
-**Variante als REDAXO-Variable**
+#### Abruf als REDAXO-Variable
 
 ```
 REX_CLANG[ field=clang_setlocale]
