@@ -27,7 +27,7 @@
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager)
-    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Metainformationen](/{{path}}/{{version}}/metainformationen)
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
 - Service
