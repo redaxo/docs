@@ -38,10 +38,12 @@ Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informati
 Die Inhalte (der Content) eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind vielfältig, beispielhaft seien genannt: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
 
 ![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
+Editiermodus und Blockauswahl
 
 Die Blöcke werden im Editiermodus (1) des Artikels eingepflegt. 
 
 ![Blockauswahl](/assets/v5.2.0-redaktion-01-bloecke.png)
+Blockauswahlmenü
 
 Um einen Block hinzuzufügen, 
 - klickt man auf das Aufklappmenü `Block hinzufügen` (2)
@@ -77,6 +79,7 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 ### Link
 
 ![Link-Widget](/assets/v5.2.0-redaktion-03-widget-link.png)
+Link-widget
 
 Über das Link-Widget kann ein einzelner Artikel der REDAXO-Webpräsenz verlinkt werden. Zur Auswahl eines Links klickt man auf das Sitemap-Symbol. Es öffnet sich dann ein Fenster (die Linkmap), in dem man innerhalb der Seitenstruktur den gewünschten Artikel auswählen kann. Um eine Kategorie zu verlinken, wählt man den dazugehörigen Startartikel. Mit dem anderen Symbol kann man die Linkauswahl wieder aufheben. 
 
@@ -84,6 +87,7 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 ### Linklist
 
 ![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linklist.png)
+Linklist-Widget
 
 Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden. Sonst verhält sich diese Eingabe wie beim Link-Widget.
 
@@ -91,6 +95,7 @@ Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge
 ### Medien-Link 
 
 ![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
+Media-Widget
 
 Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein. Den Medienpool zur Auswahl des Mediums ruft man über das Listenmodul auf.
 
@@ -100,6 +105,7 @@ Um den Upload-Dialog des Medienpools aufzurufen, klickt man auf das (+)-Symbol. 
 ### Medienliste
 
 ![Medialist](/assets/v5.2.0-redaktion-03-widget-medialist.png)
+Medialist-Widget
 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. Sonst verhält sich diese Eingabe wie der Medien-Link.
 
@@ -150,6 +156,7 @@ Um in eine Spalte zu gelangen, klickt man im Editiermodus auf die Bezeichnung de
 <a name="version"></a>
 ## Arbeitsversion / Liveversion
 ![Version](/assets/v5.2.0-redaktion-04-version.png)
+Arbeitsversion / Liveversion
 
 Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich, Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. Die Umschaltung zwischen Liveversion und Arbeitsversion erfolgt über das Drop-Down-Menü `Version`. 
 
@@ -162,6 +169,7 @@ Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben f
 In REDAXO ist eine Versionierung (History) integriert. Ist diese aktiviert, erfasst REDAXO jede Änderung in den Artikel-Blöcken und Metadaten. 
 
 ![History](/assets/v5.2.0-redaktion-06-history.png)
+History-Gegenüberstellung
 
 Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über ein Drop-Down-Menü können die einzelnen Versionen ausgewählt werden und im rechten Fenster betrachtet werden.
 
