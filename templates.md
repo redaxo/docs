@@ -1,13 +1,5 @@
 #  Templates
 
-- [Über](#)
-- [Spalten  (CTYPES)](#)
-- [Ausgabe der Inhalte](#)
-	- [Einfaches Template mit nur einer Spalte](#)
-	- [Einfaches Template mit 2 Spalten](#)
-- [Einbindung von Templates](#)
-- [Einbindung von Artikeln](#)
-- [Das aktuelle Template in Modulen abfragen.](#)
 
 
 ## Über
@@ -25,9 +17,24 @@ Eine Spalte oder auch CTYPE  unterteilt in REDAXO ein Template in unterschiedlic
 ## Ausgabe der Inhalte 
 Die Artikelinhalte werden Wahlweise über die REDAXO-Variablen oder durch deren PHP-Gegenparts ausgegeben.  Die nachfolgenden Beispiele zeigen die Ausgabe der Inhalte über REDAXO-Variablen. Der Titel der Seite wird hier über PHP ausgelesen. Ausführliche Informationen hierzu im Kapitel [REDAXO-Variablen](/redaxo-variablen). 
 
+## Einbindung von Templates
+Einige Bestandteile möchte man ggf. in mehreren Templates nutzen. Hierzu kann einzelne Bestandteile der Struktur in andren Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
+Templates, die inkludiert werden sollen, sollen nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Templateverwaltung inaktiv schalten. Die Einbindung dieser Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und die ID des gewünschten Templates.
+z.B.: `REX_TEMPLATE[2]` 
 
-### Einfaches Template mit nur einer Spalte
-In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefinition Im DIV mit der CSS-Class .container mittels der REDAXO-Variable   `REX_ARTICLE[]` ausgegeben. 
+## Einbindung von Artikeln
+In Templates können auch Artikel eingebunden werden. Das ermöglicht den Redakteuren ggf. einen Abschnitt des Templates selbst zu pflegen. Das können beispielsweise eine immer darzustellende Liste der Öffnungszeiten sein oder eine feste Linkliste die auf allen Seiten zu sehen sein sollen. Die Einbindung erfolgt über die REDAXO_VARIABLE REX_ARTICLE oder über den entprechenden PHP-Gegenpart.  
+z.B.: `REX_ARTICLE[3]` 
+
+## Das aktuelle Template in Modulen abfragen. 
+Manchmal ist es erforderlich in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. Diese Information erhält man über die REDAXO-Variable REX_TEMPLATE_ID.
+
+
+## Beispiele 
+Die nachfolgenden Beispiele ze
+
+### Template mit nur einer Spalte
+In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefinition Im DIV mit der CSS-Class .content mittels der REDAXO-Variable  `REX_ARTICLE[]` ausgegeben. Der Titel der Seite wird per PHP ausgelesen. 
 
 ```PHP
 <!DOCTYPE html>
@@ -40,7 +47,7 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="content">
     REX_ARTICLE[]
     <footer class="footer">
         <p>&copy;  Company, Inc.</p>
@@ -51,8 +58,8 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 ```
 
 
-### Einfaches Template mit 2 Spalten
-In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben.   In diesem Fall ist es möglich zusätzlich auf den Footer-Bereich zu befüllen. 
+### Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel
+In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben. In diesem Fall können eine Content-Spalte und eine Sidbar gepflegt werden. Über das eingebundene Template werden Inhalte eines anderen Templates eingebunden. Im Footer werden Inhalte eunes Artikels ausgegeben. 
 Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1] ` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID der gewünschten Spalte fest. 
 Die ID der jeweiligen Spalten findet man im Reiter Spalten. 
 
@@ -68,28 +75,21 @@ Die ID der jeweiligen Spalten findet man im Reiter Spalten.
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+   REX_TEMPLATE[2]
+   <div class="content">
       REX_ARTICLE[ctype=1]
-    <footer class="footer">
+     <div class="sidebar">
       REX_ARTICLE[ctype=2]
+    </div> 
+    <footer class="footer">
+      REX_ARTICLE[3]
     </footer>
     </div> 
 </body>
 </html>
 ```
 
-## Einbindung von Templates
-Einige Bestandteile möchte man ggf. in mehreren Templates nutzen. Hierzu kann einzelne Bestandteile der Struktur in andren Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
-Templates, die inkludiert werden sollen, sollen nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Templateverwaltung inaktiv schalten. Die Einbindung dieser Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und die ID des gewünschten Templates.
-z.B.: `REX_TEMPLATE[2]` 
 
-## Einbindung von Artikeln
-In Templates können auch Artikel eingebunden werden. Das ermöglicht den Redakteuren ggf. einen Abschnitt des Templates selbst zu pflegen. Das können beispielsweise eine immer darzustellende Liste der Öffnungszeiten sein oder eine feste Linkliste die auf allen Seiten zu sehen sein sollen. Die Einbindung erfolgt über die REDAXO_VARIABLE REX_ARTICLE oder über den entprechenden PHP-Gegenpart.  
-z.B.: `REX_ARTICLE[3]` 
-
-## Das aktuelle Template in Modulen abfragen. 
-Manchmal ist es erforderlich in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. 
-Diese Information erhält man über die REDAXO-Variable REX_TEMPLATE_ID
 
 
 
