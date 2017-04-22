@@ -19,7 +19,7 @@
 
 - Entwickler & Admin
     - [Templates](/{{path}}/{{version}}/templates)
-    - [Module / Aktionen - inkl. aller Unterpunkte](/{{path}}/{{version}}/module-aktionen)
+    - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons)
     - [System - inkl. aller Unterpunkte](/{{path}}/{{version}}/system)
