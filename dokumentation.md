@@ -25,8 +25,6 @@
     - [System](/{{path}}/{{version}}/system)
 
 
-- sinnvolle AddOns
-
 - Tutorials
     - [Installation](/{{path}}/{{version}}/tutorial-installation)
     - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates)
