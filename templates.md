@@ -59,7 +59,7 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
+    <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
@@ -87,7 +87,7 @@ Die ID der jeweiligen Spalten findet man im Reiter Spalten.
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
+    <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
