@@ -37,7 +37,7 @@ Die nachfolgenden Felder stehen zur Auswahl:
 ## Auslesen der Meta Infos
 
 ### Artikel
-Auslesen der Metadaten des aktuellen Artikels per PHP: 
+Artikel-Metadaten werden vom Redakteur im Reiter Metadaten eines Artikels eingepflegt.   Die Daten können per PHP wie folgt ausgelesen werden: 
 
 ```
 // Beispiel Titelbild
@@ -46,7 +46,7 @@ $titleimage  =  $this->getValue ('art_titleimage');
 $titleimage  =  rex_article::getCurrent()->getValue('art_titleimage');
 ```
 
-Variante als REDAXO-Variable
+Die Daten können auch mittels REDAXO-Variable ausgelesen werden. 
 
 ```
 REX_ARTICLE[field="art_titleimage"]
@@ -54,11 +54,17 @@ REX_ARTICLE[field="art_titleimage"]
 
 ### Kategorien
 
-Auslesen der Meta Infos einer Kategorie in PHP
-*  `rex_category::getCurrent()->getValue($field) `
-*  `rex_category::getId($id)->getValue($field)`
+Kategorie-Metadaten werden von den Redakteuren in der Strukturverwaltung gepflegt.  Sie können per PHP mit folgenden Befehlen wie folgt ausgelesen werden: 
 
-**Beispiel:**
+
+```PHP
+// Metadaten der aktuellen Kategorie
+rex_category::getCurrent()->getValue($field) 
+// Metadaten eine bestimten Kategorie anhand der Kategorie-ID
+rex_category::getId($id)->getValue($field)
+```
+
+**Beispiele:**
 
 ```PHP
 $hintergrund = rex_category::getCurrent()->getValue('cat_background');
@@ -75,16 +81,14 @@ REX_CATEGORY[id=i field=cat_background clang=i]
 
 
 ### Medien
-Auslesen von Metadaten eines Mediums
+Metadaten für Medien werden in den Eigenschaften eines Mediums im Medienpool gepflegt. 
 
-Der Abruf der Sprachinformationen in PHP:
-* `rex_clang::getCurrent()->getValue($field) `
-*  `rex_clang::getId($id)->getValue($field)`
-
-**Beispiel:**
+Die Medien-Metadaten können per PHP wie folgt ausgelesen werden. 
 
 ```PHP
+// Datensatz des Mediums anhand des Dateinamens auslesen
 $media = rex_media::get('dateiname.xyz');
+// Meta-Info auslesen
 $file_name = $media->getValue('med_copyright');
 ```
 Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben. 
@@ -93,21 +97,26 @@ REX_MEDIA[id=i field=copyright]
 ```
 
 ### Sprachen
-Auslesen von Metadaten der aktuellen Sprache:
+Die Metadaten zur jeweiligen Sprache werden im System zu jeder Sprache eingepflegt. 
+Die Metadaten für Sprachen erhält man per PHP wie folgt: 
 
-Der Abruf der Sprachinformationen in PHP:
-* `rex_clang::getCurrent()->getValue($field) `
-*  `rex_clang::getId($id)->getValue($field)`
+```PHP
+// Auslesen einer Meta Info der aktuellen Sprache
+rex_clang::getCurrent()->getValue($field) 
+// Auslesen der Meta Info einer bestimmten Sprache anhand der Sprach ID
+rex_clang::getId($id)->getValue($field)
+```
 
 **Beispiel:**
 
 ```PHP
 rex_clang::getCurrent()->getValue('clang_setlocale'));
 ```
-Variante als REDAXO-Variable
+**Variante als REDAXO-Variable**
 
 ```
 REX_CLANG[ field=clang_setlocale]
+REX_CLANG[ id=2 field=clang_setlocale]
 ```
 
 ## Für AddOn-Developer
@@ -123,4 +132,3 @@ rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $
 
 ```PHP
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
-```
