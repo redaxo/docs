@@ -60,7 +60,14 @@ Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mi
 ### Funktion
 
 ```PHP 
-rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
+rex_metainfo_add_field(
+$title, 
+$name, 
+$priority, 
+$attributes, 
+$type, 
+$default, 
+$params = null, $validate = null, $restrictions = '')
 ```
 ### Beispiel
 
