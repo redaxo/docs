@@ -1,5 +1,5 @@
 - Einleitung
-    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise) <sup><b>offen</b></sup>
+    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
@@ -24,9 +24,9 @@
     - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
-    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
-    - [Media Manager](/{{path}}/{{version}}/media-manager) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Media Manager](/{{path}}/{{version}}/media-manager)
     - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
