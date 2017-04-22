@@ -1,15 +1,24 @@
 # Fragmente
+- [Prinzip der Fragmente](#prinzip)
+- [Variablen in Fragmenten](#variablen)
+- [REDAXO-Fragmente nutzen](#fragmente-nutzen)
+    - [Beispiel Paginierung](#paginierung)
+        - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
 
-Fragmente werden in REDAXO eingesetzt, um wiederkehrende Codeschnippsel übersichtlich zu verwalten. Fragmente sind PHP Dateien und werden bei der Ausgabe geparst, sodass Variablen ausgegeben und verarbeitet werden können. In REDAXO selbst werden zahlreiche Fragmente für die Ausgabe des Backends verwendet. Diese Fragmente können auch als Ausgangsbasis für eigene Fragmente genutzt werden. Grundsätzlich wird ein Fragment in dieser Form angesrochen und ausgegeben:
+<a name="prinzip"></a>
+## Prinzip der Fragmente
+
+Fragmente werden in REDAXO eingesetzt, um wiederkehrende Code-Schnipsel übersichtlich zu verwalten. Fragmente sind PHP-Dateien und werden bei der Ausgabe geparst, sodass Variablen ausgegeben und verarbeitet werden können. In REDAXO selbst werden zahlreiche Fragmente für die Ausgabe des Backends verwendet. Diese Fragmente können auch als Ausgangsbasis für eigene Fragmente genutzt werden. Grundsätzlich wird ein Fragment in dieser Form angesprochen und ausgegeben:
 
     $fragment = new rex_fragment();
     $fragment->parse('meinfragment.php');
     
-Fragmente, die in addons im Verzeichnis fragments abgelegt werden, werden ohne Pfadangabe gefunden.
+Fragmente, die in AddOns im Verzeichnis `fragments` abgelegt werden, werden ohne Pfadangabe gefunden.
 
+<a name="variablen"></a>
 ## Variablen in Fragmenten
 
-Fragmente können Variablen ausgeben, die zuvor dem Fragment per setVar zugewiesen wurden.
+Fragmente können Variablen ausgeben, die zuvor dem Fragment per `setVar` zugewiesen wurden.
 
     $fragment->setVar('meinevar','Ich bin der Inhalt',false);
     
@@ -21,7 +30,7 @@ oder
 
     echo $this->getVar('meinevar');
     
-Wenn eine Variable vom Typ Array übergeben wird, so kann dieses Array durchlaufen werden:
+Wenn eine Variable vom Typ `Array` übergeben wird, so kann dieses Array durchlaufen werden:
 
     $fragment->setVar('monate',['Januar','Februar','März','April','Mai','Juni','Juli','August','September','...']);
     
@@ -33,15 +42,17 @@ Ausgabe im Fragment:
     <?php endforeach ?>
     </ul>
 
-    
-## REDAXO Fragmente nutzen
+<a name="fragmente-nutzen"></a> 
+## REDAXO-Fragmente nutzen
 
 Die in REDAXO vorliegenden Fragmente können für die eigene Ausgabe im Frontend oder im Backend genutzt werden.
 
+<a name="paginierung"></a>
 ### Beispiel Paginierung
 
 Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginierung verwendet. Eine Paginierung steht in REDAXO bereits zur Verfügung. Diese Paginierung kann für eigene Zwecke verwendet und angepasst werden.
 
+<a name="ausgabe-paginierung"></a>
 #### Modulausgabe für die Paginierung
     
     // Anzahl Datensätze pro Seite
@@ -88,7 +99,8 @@ Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginie
     // Paginierung ausgeben
     echo $fragment->parse('core/navigations/pagination.php');
 
-Hierbei wird das Fragment /core/fragments/core/navigations/pagination.php für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes Addon in das Verzeichnis fragments kopiert und geändert werden. Wenn es dort unter dem Namen mypagination.php abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
+Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes AddOn in das Verzeichnis `fragments` kopiert und geändert werden. Wenn es dort unter dem Namen `mypagination.php` abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
 
     echo $fragment->parse('mypagination.php');
+
 

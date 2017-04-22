@@ -41,7 +41,7 @@
     - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
-    - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration <sup>(rex_config)</sup>](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Paginierung <sup>(rex_pager)</sup>](/{{path}}/{{version}}/paginierung) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
