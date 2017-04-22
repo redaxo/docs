@@ -1,4 +1,5 @@
 - Einleitung
+    - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
@@ -21,33 +22,33 @@
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Templates](/{{path}}/{{version}}/templates) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Templates](/{{path}}/{{version}}/templates)
+    - [Navigationen](/{{path}}/{{version}}/navigationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager)
-    - [Metainformationen](/{{path}}/{{version}}/metainformationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Metainformationen](/{{path}}/{{version}}/metainformationen)
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
 - Service
-    - `In Arbeit`
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
-    - [Caching](/{{path}}/{{version}}/caching) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Caching](/{{path}}/{{version}}/caching)
+    - [Cronjobs](/{{path}}/{{version}}/cronjobs)
+    - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
-    - [Fragmente](/{{path}}/{{version}}/fragmente) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration <sup>(rex_config)</sup>](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
-    - [Paginierung <sup>(rex_pager)</sup>](/{{path}}/{{version}}/paginierung) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade <sup>(rex_path, rex_url)</sup>](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
     - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
-    - [REX_VARs <sup>(List, Anwendung, eigene Vars erstellen)</sup>](/{{path}}/{{version}}/redaxo-variablen) <sup><b>überprüfen</b></sup> <sup><i>Daniel</i></sup>
+    - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
