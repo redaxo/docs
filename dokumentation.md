@@ -1,3 +1,5 @@
+- [Intro](/{{path}}/{{version}}/intro)
+
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
@@ -32,7 +34,6 @@
     - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
 
 - Service
-    - `In Arbeit`
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
     - [Caching](/{{path}}/{{version}}/caching)
     - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
