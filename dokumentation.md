@@ -22,9 +22,8 @@
     - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons)
-    - [System - inkl. aller Unterpunkte](/{{path}}/{{version}}/system)
+    - [System](/{{path}}/{{version}}/system)
 
-- Entwicklerversion
 
 - sinnvolle AddOns
 
