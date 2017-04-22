@@ -11,11 +11,11 @@ Dokumentationen zu weiteren  Versionen erreicht man über das Versionsauswahlmen
 
 **Einleitung**
 
-Grundlegende Informationenen  zur aktuellen Version, Aktualisierung 
+Grundlegende Informationenen  zur aktuellen Version, Aktualisierung, API 
 
 **Setup**
 
-Installationsanleitung und erster Login
+Installationsanleitung, erster Login, Passwort-Wiederherstellung
 
 **Anwender**
 
