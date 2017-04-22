@@ -34,8 +34,8 @@
     - `In Arbeit`
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
     - [Caching](/{{path}}/{{version}}/caching) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
-    - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>offen</b></sup>
+    - [Cronjobs](/{{path}}/{{version}}/cronjobs) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Eigenschaften <sup>(rex:: )</sup>](/{{path}}/{{version}}/eigenschaften) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
