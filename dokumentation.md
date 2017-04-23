@@ -21,7 +21,7 @@
     - [Templates](/{{path}}/{{version}}/templates)
     - [Module / Aktionen](/{{path}}/{{version}}/module-aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
-    - [AddOns - inkl. aller Unterpunkte](/{{path}}/{{version}}/addons)
+    - [AddOns](/{{path}}/{{version}}/addons)
     - [System](/{{path}}/{{version}}/system)
 
 
@@ -34,23 +34,3 @@
     - [Aktionen - Moduleingaben überprüfen](/{{path}}/{{version}}/tutorial-aktionen) 
     - [Datenbankzugriff - rex_sql Klasse](/{{path}}/{{version}}/tutorial-rexsql)
     - [ISO zu UTF-8 umwandeln](/{{path}}/{{version}}/convert-iso-utf8)
-   
-
-
-   
-
-##### Labels vergeben
-
-```
-<sup><b>offen</b></sup>
-<sup><b>in Bearbeitung</b></sup>
-<sup><b>unvollständig</b></sup>
-<sup><b>überprüfen</b></sup>
-<sup><b>abgeschlossen</b></sup>
-
-<sup><i>Gregor</i></sup>
-<sup><i>Jan</i></sup>
-<sup><i>Peter</i></sup>
-<sup><i>Thomas</i></sup>
-<sup><i>Olien</i></sup>
-```
