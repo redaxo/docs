@@ -398,7 +398,7 @@ echo rex_warning('Dieses Modul benötigt das "textile" Addon!');
 
 Der im Textfeld eingegebene Text wird in der Modulausgabe entsprechend der angegebenen Formatierungen in HTML-Code umgewandelt und angezeigt. Ist das Textile-AddOn nicht installiert, bekommen Sie statt der Eingaben eine Warnmeldung angezeigt ('Dieses Modul benötigt das “textile” Addon!').
 
-``
+```
 Die Zeile
 $text = str_replace("###","&#x20;",$text);
 ermöglicht es, zusätzliche, leere Absätze durch Eingabe von ### einzufügen.
@@ -412,7 +412,6 @@ Das ist ein zweiter Absatz
 
 Ausgabe:
 
-```
 <p>Das ist ein Absatz</p>
 <p>&#x20;</p>
 <p>Das ist ein zweiter Absatz</p>
