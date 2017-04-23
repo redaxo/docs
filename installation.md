@@ -1,10 +1,19 @@
 # Installation
 
+- [Systemanforderungen](#sytsen)
 - [Schnellanleitung](#schnell)
 - [Datenbank](#datenbank)
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
+
+<a name="system"></a>
+## Systemanforderungen
+
+Für die Version 5.3 benötigt man folgende Umgebung
+- PHP ab Version: 5.5.9
+- MySQL oder MariaDB 
+- Apache-Server ggf. Nginx
 
 <a name="schnell"></a>
 ## Schnellanleitung

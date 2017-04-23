@@ -24,7 +24,7 @@
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module](/{{path}}/{{version}}/module) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Module](/{{path}}/{{version}}/module) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
@@ -38,7 +38,7 @@
     - [Cronjobs](/{{path}}/{{version}}/cronjobs)
     - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
-    - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>offen</b></sup>
+    - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Fragmente](/{{path}}/{{version}}/fragmente)
