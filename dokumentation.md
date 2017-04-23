@@ -38,7 +38,7 @@
     - [Cronjobs](/{{path}}/{{version}}/cronjobs)
     - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
-    - [Extension Points <sup>(Liste, Anwendung)</sup>](/{{path}}/{{version}}/extension-points) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Extension Points</sup>](/{{path}}/{{version}}/extension-points)
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Fragmente](/{{path}}/{{version}}/fragmente)

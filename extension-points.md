@@ -2,25 +2,29 @@
 
 - [Einsatz eines Extension Points](#einsatz)
 - [Eigene Extension Points definieren](#definieren)
-- [Core](#core)
-- [Structure](#structure)
-- [Structure Content](#structure_content)
-- [Medienpool](#medienpool)
-- [Backup](#backup)
-- [Metainfo](#metainfo)
-- [BE Style](#bestyle)
-- [Media Manager](#mediamanager)
+- [Liste der Extension Points](#liste)
+    - [Core](#core)
+    - [Structure](#structure)
+    - [Structure Content](#structure_content)
+    - [Medienpool](#medienpool)
+    - [Backup](#backup)
+    - [Metainfo](#metainfo)
+    - [BE Style](#bestyle)
+    - [Media Manager](#mediamanager)
 
-Extension Points sind Stellen im REDAXO Programmcode, an denen eigener Code eingeklinkt und ausgeführt werden kann. Dadurch lässt sich auch das Coresystem erweitert werden und anpassen, ohne den Core selbst zu verändern. Extension Points ermöglichen die Manipulation eines bestimmten Wertes, der von der Funktion zurückgegeben wird, die man am Extension Point ausführen lässt.
+Extension Points sind Stellen im REDAXO-Programmcode, an denen eigener Code eingeklinkt und ausgeführt werden kann. Dadurch lässt sich auch das Core-System erweitern und anpassen, ohne den Core selbst zu verändern. Extension Points ermöglichen die Manipulation eines bestimmten Wertes, der von der Funktion zurückgegeben wird, die man am Extension Point ausführen lässt.
 
-Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als Übergabewerte, die sich von Extenstion Point zu Extension Point unterscheiden.
+Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als Übergabewerte, die sich von Extension Point zu Extension Point unterscheiden.
 
 <a name="einsatz"></a>
 ## Einsatz eines Extension Points
 
-Zunächst sucht man sich den geeigneten Extension Point, der für den eigenen Einsatz geeignet erscheint. Dann ordnet man dem Extension Point den Aufruf für die eigene Erweiterung zu. Diese Zuordnung muss an einer Stelle im Code gemacht werden, an dem der Extension Point noch nicht durchlaufen wurde. Am einfachsten geschieht dies beispielsweise in der boot.php eines eigenen AddOns.
+Zunächst sucht man sich den Extension Point, der für den eigenen Einsatz geeignet erscheint. Dann ordnet man dem Extension Point den Aufruf für die eigene Erweiterung zu. Diese Zuordnung muss an einer Stelle im Code erfolgen, an dem der Extension Point noch nicht durchlaufen wurde. Am einfachsten geschieht dies beispielsweise in der `boot.php` eines eigenen AddOns.
 Beispiel:
-`rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE);`
+
+```
+rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE);
+```
 
 Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` auf.
 
@@ -28,14 +32,14 @@ Die Funktion, die am Extension Point aufgerufen wird, bekommt in diesem Falle fo
 
 - den Namen des Extension Points
 - das Subject, welches in den meisten Fällen verändert werden kann und als Rückgabewert der eigenen Funktion wieder in den weiteren Ablauf eingefügt werden kann
-- als zusätzliche Parameter: article_id, clang, ctype, module_id, slice_id, function, function_slice_id
+- als zusätzliche Parameter: `article_id`, `clang`, `ctype`, `module_id`, `slice_id`, `function`, `function_slice_id`
 
-Die Registrierung eines Extenstion Points mit der Methode `rex_extension::register` kann mit dem Parameter `rex_extension::EARLY` (-1), `rex_extension::NORMAL` (0) oder `rex_extension::LATE` (1)aufgerufen werden. Standard ist NORMAL (0). Dadurch kann die Reihenfolge der Abarbeitung der Erweiterungen gesteuert werden.
+Die Registrierung eines Extension Points mit der Methode `rex_extension::register` kann mit dem Parameter `rex_extension::EARLY` (-1), `rex_extension::NORMAL` (0) oder `rex_extension::LATE` (1) aufgerufen werden. Standard ist NORMAL (0). Dadurch kann die Reihenfolge gesteuert werden, in der die Erweiterungen abgearbeitet werden.
 
 <a name="definieren"></a>
 ## Eigene Extension Points definieren
 
-Im eigenen Programmcode von Addons lassen sich eigene Extension Points setzen, die dann wiederum von anderen Entwicklern genutzt werden können.
+Im eigenen Programmcode von AddOns lassen sich eigene Extension Points setzen, die dann wiederum von anderen Entwicklern genutzt werden können.
 
 Beispiel:
 ```
@@ -46,8 +50,11 @@ $meine_var = rex_extension::registerPoint(new rex_extension_point(
 ));
 ```
 
+<a name="liste"></a>
+## Liste der Extension Points
+
 <a name="core"></a>
-## Core
+### Core
 
 CACHE_DELETED
 : Daten: rex_i18n::msg('delete_cache_message')
@@ -180,7 +187,7 @@ REX_LIST_GET
 
 
 <a name="structure"></a>
-## Structure
+### Structure
 
 ART_ADDED
 : Daten: $message
@@ -275,7 +282,7 @@ URL_REWRITE
 : Parameter: ['id' => $id, 'clang' => $clang, 'params' => $params, 'separator' => $separator]
 
 <a name="structure_content"></a>
-## Structure Content
+### Structure Content
 
 ART_CONTENT
 : Daten: $CONTENT
@@ -374,7 +381,7 @@ STRUCTURE_CONTENT_SLICE_UPDATED
 : Parameter: $epParams
 
 <a name="medienpool"></a>
-## Medienpool
+### Medienpool
 
 MEDIA_ADDED
 : Daten: keine
@@ -433,7 +440,7 @@ PAGE_MEDIAPOOL_HEADER
 : Parameter: ['subpage' => $subpage, 'category_id' => $rex_file_category]
 
 <a name="backup"></a>
-## Backup
+### Backup
 
 BACKUP_AFTER_DB_EXPORT
 : Daten: $content
@@ -468,7 +475,7 @@ BACKUP_BEFORE_FILE_IMPORT
 : Parameter: keine
 
 <a name="metainfo"></a>
-## Metainfo
+### Metainfo
 
 ART_META_UPDATED
 : Daten: keine
@@ -483,7 +490,7 @@ METAINFO_TYPE_FIELDS
 : Parameter: keine
 
 <a name="bestyle"></a>
-## BE Style
+### BE Style
 
 BE_STYLE_PAGE_CONTENT
 : Daten: keine
@@ -494,8 +501,10 @@ BE_STYLE_SCSS_FILES
 : Parameter: keine
 
 <a name="mediamanager"></a>
-## Media Manager
+### Media Manager
 
 MEDIA_MANAGER_FILTERSET
 : Daten: $set
 : Parameter: ['rex_media_type' => $type]
+
+
