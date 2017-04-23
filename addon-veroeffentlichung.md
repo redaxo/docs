@@ -36,36 +36,41 @@ Jede aktuelle REDAXO-Version hat einen Installer. Darüber werden AddOns install
 
 Einzelne Versionen müssen entwickelt und geprüft werden. Das macht man meistens lokal auf dem eigenen Rechner. Hier muss das AddOn, welches man veröffentlichen will, existieren. Zunächst muss aber der API-Key in den Installer Einstellungen eingetragen werden. Nur dadurch kann erkannt werden, zu welchen AddOns man Zugriff hat. 
 
-![Blockauswahl](/assets/v5.3.0-installer-settings.png)
+![Settings](/assets/v5.3.0-installer-settings.png)
+Einstellungsdialog
 
 <a name="anker-addon-version-meinepackages"></a>
 ### Meine Packages
 
 Nun kann man über **Core & Packages/Eigene hochladen** einsehen, welche AddOns bereits registriert sind und auch in der lokalen Installation vorhanden sind. 
-Das heißt, wenn mann Änderungen durchführen möchte und eine neue Version veröffentlichen möchte, muss genau dieses AddOn in der lokalen Installation zur Verfügung stehen. 
+Das heißt, wenn mann Änderungen durchführen möchte und eine neue Version eines AddOns veröffentlichen möchte, muss genau dieses AddOn in der lokalen Installation zur Verfügung stehen. 
 
-![Blockauswahl](/assets/v5.3.0-installer-meinepackages.png)
+![Meine Packages](/assets/v5.3.0-installer-meinepackages.png)
+Eigene hochladen - Meine Packeges
 
 <a name="anker-addon-version-eigenesaddon"></a>
 ### Eigenes AddOn
+Um ein ein Addon zu veröffentlichen oder eine neue Version aufzuspielen, wählt man das gewünschte AddOn in der Liste aus. 
+In dieser Liste können einzelne Versionen mit "Datei aktualisieren" aktualisiert werden oder über das "+" eine neue Version erstellt werden. 
 
-- Aus der Liste das entsprechende AddOn auswählen. 
-- Auf der Übersichtsseite können nun einzelne Versionen aktualisiert werden "Datei aktualisieren" oder über das "+" eine neue Version erstellen.
 
-![Blockauswahl](/assets/v5.3.0-installer-eigenesaddon.png)
+![Eigenes Addon](/assets/v5.3.0-installer-eigenesaddon.png)
+Eigenes Addon
 
 <a name="anker-addon-version-aktualisieren"></a>
 ### AddOn-Version aktualisieren / löschen
 
-Eine Aktualisierung wird mit dem vorhandenen Versionsinfos abgeglichen. D.h. wenn man lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt, oder man auf "ZIP-Datei erstellen und hochlanden" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
+Eine Aktualisierung wird mit den vorhandenen Versionsinfos abgeglichen. D.h. wenn lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt, oder man auf "ZIP-Datei erstellen und hochlanden" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
 
-Eine einzelne Version kann über den Löschen-Button aus dem Online-Archiv entfernen.
+Eine einzelne Version kann man über den Löschen-Button aus dem Online-Archiv entfernen.
 
-![Blockauswahl](/assets/v5.3.0-installer-addon-aktualisieren.png)
+![Addon aktualisieren](/assets/v5.3.0-installer-addon-aktualisieren.png)
+Addon aktualisieren
 
 <a name="anker-addon-version-erstellen"></a>
 ### AddOn-Version erstellen
 
-Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml). Diese Version ist entsprechend voreingestellt und Beschreibung und Status kann nun gesetzt werden. Sofern diese Version Online gestellt wird, ist sie sofort für anderen REDAXO User verfügbar. Mit "Assets aus dem Root-Assets-Ordner nehmen" können Assets aus der REDAXO Assets-Ordner übernommen werden.
+Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml). Diese Version ist entsprechend voreingestellt und die Beschreibung und der Status können gesetzt werden. Sofern diese Version online gestellt wird, ist sie sofort für anderen REDAXO User verfügbar. Mit "Assets aus dem Root-Assets-Ordner nehmen" können Assets aus dem REDAXO Assets-Ordner übernommen werden.
 
-![Blockauswahl](/assets/v5.3.0-installer-addon-version-erstellen.png)
+![AddOn erstellen](/assets/v5.3.0-installer-addon-version-erstellen.png)
+Addon erstellen
