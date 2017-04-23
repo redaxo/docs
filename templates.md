@@ -108,7 +108,9 @@ Die ID der jeweiligen Spalten findet man im Reiter `Spalten`.
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
+
     REX_TEMPLATE[2]
+
     <div class="content">
         REX_ARTICLE[ctype=1]
     </div>  
@@ -116,10 +118,11 @@ Die ID der jeweiligen Spalten findet man im Reiter `Spalten`.
     <div class="sidebar">
         REX_ARTICLE[ctype=2]
     </div> 
-   <footer class="footer">
-   REX_ARTICLE[3]
-   </footer>
-   </div> 
+
+    <footer class="footer">
+        REX_ARTICLE[3]
+    </footer>
+
 </body>
 </html>
 ```
