@@ -1,8 +1,23 @@
 # Module
+- [Einführung](#einfuehrung)
+- [Entwickler: Module erstellen](#entwickler)
+    - [Input](#input)
+    - [Output](#output)
+    - [Aktionen](#aktionen)
+- [Administratoren: Module verwalten](#redakteure)
+    - [Module in Templates und C-Types beschränken](#beschraenken)
+- [Redakteure: Module verwenden](#redakteure)
+    - [Inhaltsblöcke hinzufügen](#hinzufuegen)
+    - [Slices verschieben](#verschieben)
+- [Beispiele](#beispiele)
+    - [Einfaches Textmodul](#textmodul)
+    - [Bildmodul](#bildmodul)
+    - [Inhaltsübersicht für Artikel](#teaser)
 
+<a name="einfuehrung"></a>
 ## Einführung
 
-Jede Inhaltsseite in einer REDAXO Website ist aus einem oder mehreren Modulen zusammengesetzt. Module bilden die Inhaltscontainer und werden als Blöcke im Backend auf einer Seite platziert.
+Jede Inhaltsseite in einer REDAXO-Website ist aus einem oder mehreren Modulen zusammengesetzt. Module bilden die Inhaltscontainer und werden als Blöcke im Backend auf einer Seite (Artikel) platziert. 
 
 Jedes Modul hat einen Eingabeteil, der mit verschiedensten Eingabeelementen versehen werden kann. Der Eingabeteil kann auch entfallen, wenn keine redaktionellen Inhalte erfasst werden sollen.
 
@@ -13,45 +28,59 @@ Eingabeelemente können zum Beispiel sein:
 - Elemente für die Auswahl von Links
 - Auswahlelemente (Selectfelder)
 
-In einen Artikel eingesetzte Modulblöcke bilden die Slices, aus denen sich der gesamte Inhalt einer Seite zusammensetzt.
+In einen Artikel eingesetzte Modulblöcke bilden die so genannten Slices, aus denen sich der gesamte Inhalt einer Seite zusammensetzt.
 
-Ein Slice hat einen vordefinierten Satz an Variablen, der für die Benutzerelemente zur Verfügung stehen. Diese Variablen werden über eine eigene Syntax angesprochen. Variablen werden ausführlich im Kapitel [[[redaxo-variablen]]] beschrieben.
+Ein Slice hat einen vordefinierten Satz an Variablen, die für die Benutzerelemente zur Verfügung stehen. Diese Variablen werden über eine eigene Syntax angesprochen. Die Variablen sowohl für die EIngabe als auch für die Ausgabe werden ausführlich im Kapitel [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen) beschrieben.
 
+<a name="entwickler"></a>
+## Entwickler: Module erstellen
 
-## Modulerstellung für Entwickler
+Ein Modul wird im Backend beim Menüpunkt `Module` erstellt. Die Benennung der Modules kann frei gewählt werden. Da die Reihenfolge der Module in der Auswahlliste nach Namen sortiert wird, sind die Namen für eine gewisse Struktur relevant. Um die Reihenfolge besser kontrollieren zu kontrollieren, könnte man dem Namen Zahlen voranstellen.
 
-Ein Modul wird im Backend im Bereich `Module` erstellt. Die Benennung des Modules kann frei gewählt werden. Da die Reihenfolge der Module in der Auswahlliste nach Namen sortiert wird, sind die Namen für eine gewisse Struktur relevant.
-
+<a name="input"></a>
 ### Input
 
-Im Eingabeteil werden die Felder definiert, die der Redakteur bei der Eingabe der Inhalte sieht. Der Eingabeteil kann individuell gestaltet werden und mit beliebigem HTML Code formatiert werden. Der Eingabeteil kann aus PHP Code und HTML bestehen. Alle Klassen des Frameworks (Core, AddOns) stehen zur Verfügung.
+Im Eingabeteil werden die Felder definiert, die der Redakteur bei der Eingabe der Inhalte sieht. Der Eingabeteil kann individuell gestaltet werden und mit beliebigem HTML-Code formatiert werden. Da das REDAXO-Backend auf dem Frontend-Framework Bootstrap basiert, kann man Bootstrap-Markup verwenden. Der Eingabeteil kann aus PHP-Code und HTML bestehen. Alle Klassen des Frameworks (Core, AddOns) stehen zur Verfügung.
 
+<a name="output"></a>
 ### Output
 
 Der Ausgabecode wird von REDAXO ausgeführt und im Frontend ausgegeben. Auch hier stehen alle Klassen und Funktionen des Frameworks zur Verfügung.
 
-PHP Variablen, die in einem Modul definiert wurden, stehen in den folgenden Slices zur Verfügung. So kann beispielsweise die Anzahl der Module auf einer Seite gezählt werden.
+PHP-Variablen, die in einem Modul definiert wurden, stehen in den nachfolgenden Slices zur Verfügung. So kann beispielsweise die Anzahl der Module auf einer Seite gezählt werden.
 
+<a name="aktionen"></a>
 ### Aktionen
 
-Siehe Kapitel [[[aktionen]]]
+Beim Anzeigen oder Speichern eines Moduls können zusätzliche Aktionen ausgeführt werden. Siehe hierzu das Kapitel [Aktionen](/{{path}}/{{version}}/aktionen).
 
-## Verwaltung von Modulen für Administratoren und Redakteure
+<a name="administratoren"></a>
+## Administratoren: Module verwalten
 
-### Beschränkung von Modulen für Templates und C-Types
+<a name="beschraenken"></a>
+### Module in Templates und C-Types beschränken
 
-Der Administrator kann die Verwendung von Modulen für Benutzergruppen und Templates einschränken. In jedem Template lässt sich einstellen, ob bestimmte Module für bestimmte C-Types (Spalten) zur Verfügung stehen oder nicht. Auch für Benutzergruppen (Rollen) lässt sich einstellen, ob alle Module verfügbar sein sollen oder nur ausgewählte Module. Dadurch lässt sich die Übersicht bei der Modulauswahl verbessern. Auch lässt sich durch eine definierte Verfügbarkeit die fälschliche Verwendung von Inhaltsmodulen vermeiden. Wenn ein Modul erstellt wurde, welches nur in der Seitenspalte einer Seite verwendet werden soll, so kann es bei korrekter Einstellung nicht in der Hauptspalte eingesetzt werden.
+Der Administrator kann die Verwendung von Modulen für Benutzergruppen und Templates einschränken. In jedem Template lässt sich einstellen, ob bestimmte Module für bestimmte C-Types (Spalten) zur Verfügung stehen oder nicht.  Nähere Informationen dazu liefert das [Template-Kapitel](/{{path}}/{{version}}/templates).
 
-### Ein Modul als Inhaltsblock einsetzen
+Auch für Benutzergruppen (Rollen) lässt sich einstellen, ob alle Module verfügbar sein sollen oder nur ausgewählte Module. Dadurch kann man die Übersicht bei der Modulauswahl verbessern. Auch lässt sich durch eine definierte Verfügbarkeit die fälschliche Verwendung von Inhaltsmodulen vermeiden: Wenn ein Modul erstellt wurde, welches nur in der Seitenspalte einer Seite verwendet werden soll, so kann es bei korrekter Einstellung nicht in der Hauptspalte eingesetzt werden.
 
-REDAXO Artikel sind, wenn sie erstellt werden, zunächst leer. Über die Dropdownliste `Block hinzufügen` lässt sich ein neuer Inhaltsblock in den Artikel einsetzen. Es erscheint dann die Inhaltsmaske, die im Modul Input definiert wurde. Ein Block lässt sich vor oder hinter einem vorhandenen Block einfügen.
+<a name="redakteure"></a>
+## Redakteure: Module verwenden
 
-### Einen Slice verschieben
+<a name="hinzufuegen"></a>
+### Inhaltsblöcke hinzufügen
 
-Die eingesetzten Modulblöcke lassen sich bei Bedarf über die Pfeile nach oben oder unten verschieben und dadurch in ihrer Reihenfolge verändern.
+REDAXO Artikel sind, wenn sie erstellt werden, zunächst leer. Über die Dropdownliste `Block hinzufügen` lässt sich ein neuer Inhaltsblock in den Artikel einsetzen. Es erscheint dann die Inhaltsmaske mit Feldern, die im Modul Input definiert wurde. Ein Block lässt sich vor oder hinter einem vorhandenen Block einfügen.
 
+<a name="verschieben"></a>
+### Slices verschieben
+
+Die eingesetzten Modulblöcke kann man bei Bedarf über die Pfeile nach oben oder unten verschieben und dadurch in ihrer Reihenfolge verändern.
+
+<a name="beispiele"></a>
 ## Beispiele
 
+<a name="textmodul"></a>
 ### Einaches Textmodul
 
 **Eingabe**:
@@ -98,6 +127,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 </div>
 ```
 
+<a name="bildmodul"></a>
 ### Bildmodul
 
 **Eingabe**:
@@ -166,11 +196,14 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
         }
         ?>
     </div>
+</div>
+
+<div class="row">
     <?php
     foreach (explode(',', "REX_MEDIALIST[1]") as $img)
     {
-        echo '<div class="col-lg-6">';
-        echo '<img class="img-responsive" src="'.rex_url::base('media/'.$img).'">';
+        echo '<div class="col-lg-4">';
+            echo '<img class="img-responsive" src="'.rex_url::base('media/'.$img).'">';
         echo '</div>';
     }
     ?>
@@ -178,6 +211,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 </div>
 ```
 
+<a name="teaser"></a>
 ### Inhaltsübersicht für Artikel
 
 Dieses Modul listet alle Artikel innerhalb einer Kategorie auf, die den Status `online` haben und nicht der Startartikel sind.
@@ -186,27 +220,27 @@ Dieser Code kann als Basis für Artikelteaser verwendet werden.
 
 **Eingabe**
 
--- keine --
+nicht erforderlich
 
 **Ausgabe**
+
 ```
 <?php
 $articles = rex_category::getCurrent()->getArticles(true);
 
 echo '<ul>';
-foreach ($articles as $art) {
-   if ($art->isStartArticle()) {
-      continue;      
-   }
-   echo '<li>';
-   echo '<h3><a href="'.rex_getUrl($art->getId()).'">'.$art->getName().'</a></h3>';
-   echo '<p>'.$art->art_description.'</p>';
-   echo '</li>';
-}
+    foreach ($articles as $art) {
+        if ($art->isStartArticle()) {
+            continue;      
+        }
+        echo '<li>';
+            echo '<h3><a href="'.rex_getUrl($art->getId()).'">'.$art->getName().'</a></h3>';
+            echo '<p>'.$art->art_description.'</p>';
+        echo '</li>';
+    }
 echo '</ul>';
 ?>
 ```
 
-## Hinweise
+> **Hinweis:** Wenn ein Modulblock in einem Artikel neu hinzugefügt wird, so ist die Slice-ID noch nicht vergeben. Daher können dem Slice beim einfügen auch keine Aktionen zugewiesen werden.
 
-Wenn ein Modulblock in einem Artikel neu hinzugefügt wird, so ist die Slice Id noch nicht vergeben. Daher können dem Slice beim einfügen auch keine Aktionen zugewiesen werden.

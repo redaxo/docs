@@ -1,7 +1,7 @@
 #  Templates
 - [Über](#ueber)
 - [Erstellen eines Templates](#ertellen)
-- [Spalten  (CTYPES)](#ctype)
+- [Spalten (C-Types)](#ctype)
 - [Kategorieberechtigungen](#catrights)
 - [Ausgabe der Inhalte](#ausgabe)
 - [Einbindung von Templates](#einbindung)
@@ -26,8 +26,8 @@ Templates werden im Menüpunkt `Templates` erstellt.
 Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
 
 <a name="ctype"></a>
-## Spalten  (CTYPES) 
-Eine Spalte oder auch `CTYPE` unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies tatsächlcih "Spalten", also z.B. Hauptspalte und Seitenspalte. CTYPES kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
+## Spalten  (C-Types) 
+Eine Spalte oder auch `C-Type` unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies tatsächlcih "Spalten", also z.B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
 
 Spalten werden im Reiter `Spalten` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jede  Spalte festzulegen, welche Module in der Spalte verwendet werden dürfen. Denn es kann durchaus, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
 
@@ -108,13 +108,14 @@ Die ID der jeweiligen Spalten findet man im Reiter `Spalten`.
     <link href="/assets/css/mein.css" rel="stylesheet">
 </head>
 <body>
-   REX_TEMPLATE[2]
-   <div class="content">
-   REX_ARTICLE[ctype=1]
-   </div>  
-   <div class="sidebar">
-   REX_ARTICLE[ctype=2]
-   </div> 
+    REX_TEMPLATE[2]
+    <div class="content">
+        REX_ARTICLE[ctype=1]
+    </div>  
+
+    <div class="sidebar">
+        REX_ARTICLE[ctype=2]
+    </div> 
    <footer class="footer">
    REX_ARTICLE[3]
    </footer>

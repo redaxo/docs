@@ -15,7 +15,7 @@
 <a name="mitarbeit"></a>
 ## Mitarbeit an REDAXO
 
-REDAXO bietet als quelloffenes System viele Möglichkeiten der Mitarbeit.
+REDAXO bietet als quelloffenes System viele Möglichkeiten der Mitarbeit. Eine Mitarbeit kostet natürlich Zeit, bietet aber auch viele persönliche Vorteile: Das System und die Dokumentation wird nicht nur immer besser, sondern man lernt auch eine ganze Menge dabei.
 
 <a name="slack-channel"></a>
 ## Slack-Channel

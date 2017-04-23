@@ -24,7 +24,7 @@
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module](/{{path}}/{{version}}/module) <sup><b>überprüfen</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Module](/{{path}}/{{version}}/module)
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
@@ -56,10 +56,9 @@
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOns
-    - `In Arbeit`
     - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>offen</b></sup>
     - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>offen</b></sup>
-    - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung) <sup><b>offen</b></sup>
+    - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
 
 - Datenbank
     - `In Arbeit`
