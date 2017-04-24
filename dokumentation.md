@@ -2,7 +2,7 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-    - [Umzug einer Website](/{{path}}/{{version}}/migration) <sup><b>in Bearbeitung</b></sup> <sup><i>Thomas Skerbis</i></sup>
+    - [Umzug einer Website](/{{path}}/{{version}}/migration)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
