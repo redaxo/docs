@@ -10,7 +10,7 @@ Um eine Redaxo-Installation von einem Server auf einen anderen Server zu übertr
 
 Falls sich dabei auch die verwendete (Sub-)Domain ändert, sollte nach dem Umzug im Bereich `System` die Domain angepasst werden. Wenn ein Rewrite-Addon zum Einsatz kommt, müssen dort die Einstellungen ggf. vorab angepasst werden. Hierzu die Dokumentation des verwendeten Addons unbedingt beachten. 
 
-Die nachfolgenden Lösungen zeigen den klassischen Weg mittels via "FTP,SFTP, WebDAV"-Datensicherung. 
+Die nachfolgenden Lösungen zeigen den klassischen Weg via "FTP,SFTP, WebDAV"-Datensicherung. 
 
 > Tipps: Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem man die komplette Dateistruktur einer Webpräsenz zippen und entpacken kann. Websitebetreiber mit einem Shell-Zugriff können häufig auch einen direkten "Server zu Server"-Filefransfer z.B. per SCP durchführen. 
 
