@@ -2,6 +2,7 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
+    - [Migration](/{{path}}/{{version}}/migration)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
