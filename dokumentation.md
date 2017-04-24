@@ -2,7 +2,7 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-    - [Umzug einer Website](/{{path}}/{{version}}/migration)
+    - [Umzug einer Website](/{{path}}/{{version}}/umzug)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
