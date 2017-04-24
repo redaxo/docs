@@ -32,8 +32,8 @@ Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis
 	<title>Einfaches Basis-Template</title>
 
 	<!-- Load Bootstrap core CSS & Jumbotron Example -->
-	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,7 +60,7 @@ Im ersten Schritt wird also der Artikelname dynamisch als Title-tag gesetzt. Hie
 Am besten verwendet man den Artikelnamen als Title-Tag und wandelt Sonderzeichen in entsprechende HTML-Codes um:
 
 ```
-title<?php echo htmlspecialchars($this->getValue('name')); ?></title>
+<title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 ```
 
 Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü `System' hinterlegten  mit der aktuellen Jahreszahl anzeigen:
@@ -129,7 +129,7 @@ Das komplette Template sieht also nun so aus:
 	<title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 
 	<!-- Load Bootstrap core CSS -->
-	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
