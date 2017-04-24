@@ -17,7 +17,7 @@ Tipp: Zusätzlich die Tabelle `rex_user` mit auswählen, um die Redaxo-Benutzer 
 
 ## Via FTP (Möglichkeit 2)
 1. Sicherung der kompletten Datenbank über das `Backup`-Addon in Redaxo. 
-Tipp: Zusätzlich die Tabelle `rex_user` mit auswählen, um die Redaxo-Benutzer mit zu kopieren.
+> Tipp: Zusätzlich die Tabelle `rex_user` mit auswählen, um die Redaxo-Benutzer mit zu kopieren.
 2. Download der kompletten Redaxo-Installation über einen FTP-Client
 3. Upload der in Schritt 2 heruntergeladenen Dateien auf den Ziel-Server
 4. Unter `/redaxo/data/core/config.yml` die Zeile `setup` von `false` auf `true` stellen.
