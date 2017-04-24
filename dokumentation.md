@@ -2,7 +2,6 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-    - [Umzug einer Website](/{{path}}/{{version}}/umzug)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
@@ -10,6 +9,7 @@
     - [Installation](/{{path}}/{{version}}/installation)
     - [Login](/{{path}}/{{version}}/login)
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
+    - [Umzug einer Website](/{{path}}/{{version}}/umzug)
 
 - Anwender
     - [Profil](/{{path}}/{{version}}/profil)
