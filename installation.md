@@ -1,6 +1,6 @@
 # Installation
 
-- [Systemanforderungen](#sytsen)
+- [Systemanforderungen](#system)
 - [Schnellanleitung](#schnell)
 - [Datenbank](#datenbank)
 - [Download](#download)
