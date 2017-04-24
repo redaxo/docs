@@ -2,7 +2,11 @@
 
 Um eine Redaxo-Installation von einem Server auf einen anderen Server zu übertragen, gibt es verschiedene Möglichkeiten. Im Regelfall müssen dazu das Dateisystem (Redaxo, einschließlich Addons und Konfigurationsdateien) und die Datenbank umgezogen werden.
 
-> Tipp: Falls sich dabei auch die (Sub-)Domain ändert, sollte nach dem Umzug im Bereich `System` die Domain angepasst werden. Wenn ein Rewrite-Addon zum Einsatz kommt, müssen auch dort die Domain-Einstellungen angepasst werden. Hierzu die Dokomentation der verwendeten Addons unbedingt beachten. 
+> Tipp: Falls sich dabei auch die (Sub-)Domain ändert, sollte nach dem Umzug im Bereich `System` die Domain angepasst werden. Wenn ein Rewrite-Addon zum Einsatz kommt, müssen auch dort die Domain-Einstellungen angepasst werden. Hierzu die Dokumentation der verwendeten Addons unbedingt beachten. 
+
+
+
+
 
 ## Via FTP (Möglichkeit 1)
 1. Sicherung der kompletten Datenbank über das `Backup`-Addon in Redaxo. 
@@ -24,3 +28,4 @@ Tipp: Zusätzlich die Tabelle `rex_user` mit auswählen, um die Redaxo-Benutzer 
 5. Das Setup durchlaufen und in Schritt 4 des Setups die neuen Datenbank-Zugangsdaten angeben. Außerdem einen Test-Admin anlegen.
 6. Mit dem Test-Admin einloggen und über das `Backup-Addon` die Datenbank-Sicherung einspielen. Achtung: Hierbei wird der gerade angelegte Test-Admin mit der `id=1` überschrieben.
 7. Anschließend ggf. im Bereich `System` den Cache löschen.
+
