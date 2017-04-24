@@ -1,7 +1,7 @@
 # Umzug einer REDAXO Website
 - [Allgemeines](#allg)
 - [Umzug per Backup-Addon](#ba)
-- [Umzug mit manuellem Datenbank-Backup](#ba)
+- [Umzug mit manuellem Datenbank-Backup](#db)
 
 <a name="allg"></a>
 ## Allgemeines
@@ -14,6 +14,7 @@ Die nachfolgenden Lösungen zeigen den klassischen Weg mittels via "FTP,SFTP, We
 
 > Tipps: Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem man die komplette Dateistruktur einer Webpräsenz zippen und entpacken kann. Websitebetreiber mit einem Shell-Zugriff können häufig auch einen direkten "Server zu Server"-Filefransfer z.B. per SCP durchführen. 
 
+<a name="ba"></a>
 ## Umzug per Backup-Addon
 
 - Die Datenbank der Quell-Präsenz wird mit Hilfe des [Backup](/{{path}}/{{version}}/backup)-AddOns ***auf dem Server*** gesichert. 
@@ -25,7 +26,7 @@ Die nachfolgenden Lösungen zeigen den klassischen Weg mittels via "FTP,SFTP, We
 - Bei Schritt 5 unter ***Vorhandenen Export einspielen:*** die Datensicherung auswählen
 - Setup bis zum Ende durchführen - **fertig*** (ggf. anschließend im Bereich `System` den Cache löschen)
 
-
+<a name="db"></a>
 ## Umzug mit manuellem Datenbank-Backup 
 
 - Sicherung der kompletten Datenbank über das `Backup`-Addon in Redaxo. 
