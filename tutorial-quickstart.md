@@ -12,7 +12,7 @@
 <a name="voraussetzung"></a>
 ## Vorausetzung
 
-REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein.
+REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein. 
 
 <a name="template"></a>
 ## Template
@@ -337,6 +337,9 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
     </div>
 </div>
 ```
+Es kann mit der [Redaktion](/{{path}}/{{version}}/redaktion) begonnen werden.
+
+> **Nach Anlegen des ersten Artikels** nicht vergessen, unter **System** den Startartikel der Website festzulegen. Andernfalls wird die Website nicht angezeigt.
 
 Damit ist die kleine Mini-Website fertig gestellt. Wir haben eine mobiltaugliches Layout, die Navigation funktioniert, und Texte und Bilder können eingepflegt werden. Natürlich lässt sich die Website noch an vielen Stellen ergänzen und optimieren: Die Navigation könnte für mehrere Ebenen erweitert werden, man könnte weitere Inhalts-Module erstellen oder dank zahlreicher AddOns die Funktionen von REDAXO stark erweitern.
 
