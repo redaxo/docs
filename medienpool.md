@@ -35,7 +35,7 @@ Klickt man in der Übersicht einer Kategorie auf den Titel eines Mediums, erhäl
 
 Im Reiter `Medienkategorien verwalten` können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie, klickt man auf das (+)-Symbol neben der Bezeichnung `Name` und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Medien beinhalten. Ansonsten erscheint ein Warnhinweis. 
 
-> Tipp: Das Verschieben einer Kategorie ist aktuell nicht vorgesehen. Daher sollte man die Kategorisierung der Medien vor Projektbeginn ausführlich planen. 
+> **Tipp**: Das Verschieben einer Kategorie ist aktuell nicht vorgesehen. Daher sollte man die Kategorisierung der Medien vor Projektbeginn ausführlich planen. 
 
 <a name="upload"></a>
 ## Medien hinzufügen
@@ -84,6 +84,6 @@ Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die 
 
 Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion `Dateien synchronisieren`. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner `/media` geladenen Dateien werden dann unter `betroffene Dateien` gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und danach die gewünschte Medienkategorie, wo die Dateien einsortiert werden sollen. Durch Klick auf `Synchronisieren` werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
-> **Achtug**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte möglichst vorher erfolgen.  
+> **Achtung**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte möglichst vorher erfolgen.  
 
 
