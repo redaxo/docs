@@ -43,7 +43,7 @@
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Fragmente](/{{path}}/{{version}}/fragmente)
-    - [Konfiguration <sup>(rex_config)</sup>](/{{path}}/{{version}}/konfiguration) <sup><b>offen</b></sup>
+    - [Konfiguration <sup>(rex_config)</sup>](/{{path}}/{{version}}/konfiguration) <<sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade <sup>(rex_path, rex_url)</sup>](/{{path}}/{{version}}/pfade) <sup><b>offen</b></sup>
