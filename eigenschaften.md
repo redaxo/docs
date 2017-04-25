@@ -37,6 +37,8 @@ Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um s
 
 Die Werte werden in der Tabelle rex_config gespeichert.
 
+**Hinweis:** AddOns können ihre Konfiguration über das Package-Objekt in die Konfiguration schreiben: `rex_addon::get($addon)->setConfig($key, $value);` und lesen `$value = rex_addon::get($addon)->getConfig($key);`.
+
 <a name="property-methoden"></a>
 ## Property-Methoden
 
