@@ -54,7 +54,7 @@ Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären fol
 - **Medienpool:** der Bereich dient zur Verwaltung von allen Dateien (Medien), die vom Redakteur auf den Server geladen werden: Bilder, PDF, Word-Dokumente, etc.
 - **Templates:** wichtig für den Entwickler. Templates speichern den HTML-Rahmen der Webseite.
 * **Module:** wichtig für  Entwickler: Hier entstehen die Module, mit denen die Redaktion die Inhalte pflegt.
-* **Benutzer:** In diesem Bereich erstellt der Administrator weitere Userzugänge und und steuert deren jeweilige Rechte.
+* **Benutzer:** In diesem Bereich erstellt der Administrator weitere Userzugänge und steuert deren jeweilige Rechte.
 * **AddOns:** sind besondere Erweiterungen für REDAXO, die man sich wie kleine Applikationen vorstellen muss. Beispiele wären etwa eine Suche, ein Gästebuch oder ein Mechanismus zum Erzeugen von schönen URLs. AddOns können auch weitere Hauptmenüpunkte oder Systemfunktionen hinzufügen.
 * **System:** Auf dieser Seite kann man einige der während der Installation getätigten Einstellungen noch nachträglich ändern, zum Beispiel den Servernamen oder die Error-Emailadresse. Ebenso kann man aber dort den Startartikel, das Standardtemplate oder den "Fehler-Artikel" festlegen, der bei einer fehlerhaft eingegebenen URL angezeigt werden soll. Ein sehr wichtiger Punkt im Systembereich ist die Mehrsprachigkeit für das Frontend - man kann hier unkompliziert beliebig viele Sprachen anlegen. Und ein System-Log informiert über eventuelle Fehler.
 * **Installer:** AddOns lassen sich hier direkt online neu installieren oder bestehende updaten. Selbst der Redaxo-Code selbst kann upgedatet werden.
@@ -63,7 +63,7 @@ Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären fol
 ## Standard-AddOns in Redaxo
 
 * **Backup:** Hier kann man Backup-Sicherungen der Website erstellen und auch wieder zurückspielen.
-* **Media Manager:** Diese REDAXO-Funktion dient für Bildanpassungen und kann Bildbearbeitungsketten ausführen. Vom Redakteur hochgeladene Bilder können beispielsweise vklerinert, beschnitten, geschärft und mit einem Wasserzeichen überlagert werden.
+* **Media Manager:** Diese REDAXO-Funktion dient für Bildanpassungen und kann Bildbearbeitungsketten ausführen. Vom Redakteur hochgeladene Bilder können beispielsweise verkleinert, beschnitten, geschärft und mit einem Wasserzeichen überlagert werden.
 * **Meta Infos:** Mit Meta-Infos kann man spezifische Felder für Artikel, Kategorien und Medien erstellen. Während die Module Datenbank-Felder für Inhalte bereitstellen, wird man in **Artikel-Metafeldern** zum Beispiel Headerfotos speichern, ob eine Seite zugangsgeschützt sein soll oder ob sie einer Zeitsteuerung unterliegen soll. **Kategorie-Metafelder** werden analog gern für Zusatzfunktionen in Navigationen genutzt, um z.B. für Unterkategorien Teaser-Fotos und -Texte zu verwalten. **Medien-Metafelder** könnte man beispielsweise einsetzen, um bei einem Bild Copyright-Hinweise zu vermerken.
 
 
