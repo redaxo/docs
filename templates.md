@@ -27,9 +27,9 @@ Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen fest
 
 <a name="ctype"></a>
 ## Spalten  (C-Types) 
-Eine Spalte oder auch `C-Type` unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies tatsächlcih "Spalten", also z.B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
+Eine Spalte oder auch `C-Type` unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies tatsächlich "Spalten", also z.B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
 
-Spalten werden im Reiter `Spalten` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jede  Spalte festzulegen, welche Module in der Spalte verwendet werden dürfen. Denn es kann durchaus, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
+Spalten werden im Reiter `Spalten` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jede  Spalte festzulegen, welche Module in der Spalte verwendet werden dürfen. Denn es kann durchaus sein, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
 
 <a name="catrights"></a>
 ## Kategorieberechtigungen 
@@ -43,7 +43,7 @@ Die Artikelinhalte werden Wahlweise über die REDAXO-Variablen oder durch deren 
 ## Einbindung von Templates
 Einige Bestandteile möchte man gegebenenfalls in mehreren Templates nutzen. Hierzu kann man einzelne Bestandteile der Struktur in andere Templates auslagern. Diese Templates können bestimmte Abschnitte oder Funktionen liefern, beispielsweise eine Navigation oder eine PHP-Funktion. 
 
-Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das Template dass nicht als Seiten-Template für einen Artikel ausgewählt werden.
+Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das deaktivierte Template nicht als Seiten-Template für einen Artikel durch den Redakteur ausgewählt werden.
 
 Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und der ID des gewünschten Templates.
 Beispiel: `REX_TEMPLATE[2]` 
