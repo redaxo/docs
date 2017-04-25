@@ -41,7 +41,7 @@ Im Reiter `Medienkategorien verwalten` können neue Kategorien angelegt und vorh
 ## Medien hinzufügen
 
 Zum Hochladen von Dateien in den Medienpool wählt man den Reiter `Medium hinzufügen`. 
-Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation – weitere Felder ausfüllen. Um eine Datei einer Kategorie zuzuordnen, kann man vor dem Upload gleich die passende Medienkategorie festlegen. Das gewünschte Medium wählt man im Abschnitt `Datei`. Dort steht eine Schaltfläche zur Dateiausahl aus dem eigenen Dateisystem bereit. Der Ladevorgang wird dann ausgelöst mit der Schaltfläche `hinzufügen`. 
+Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation – weitere Felder ausfüllen. Um eine Datei einer Kategorie zuzuordnen, kann man vor dem Upload gleich die passende Medienkategorie festlegen. Das gewünschte Medium wählt man im Abschnitt `Datei`. Dort steht eine Schaltfläche zur Dateiauswahl aus dem eigenen Dateisystem bereit. Der Ladevorgang wird dann ausgelöst mit der Schaltfläche `hinzufügen`. 
 
 <a name="loeschen"></a>
 ## Medien löschen
