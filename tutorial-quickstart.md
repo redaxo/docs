@@ -141,7 +141,7 @@ Das komplette Template sieht also nun so aus:
             <ul class="nav nav-pills pull-right">
                 <?php
                 foreach (rex_category::getRootCategories(true) as $item) {
-                    echo '<li><a href="'.$item->getUrl().'">'.htmlspecialchars($item->getValue('name')).'</a>';
+                    echo '<li><a href="'.$item->getUrl().'">'.htmlspecialchars($item->getValue('name')).'</a></li>';
                 }
                 ?>
             </ul>
