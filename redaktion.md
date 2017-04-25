@@ -149,7 +149,7 @@ Im Reiter `Funktionen` steht die Kopierfunktion `Inhalte kopieren` zur Verfügun
 
 <a name="spalten"></a>
 ## Spalten
-Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewählten Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
+Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
 
 Um in eine Spalte zu gelangen, klickt man im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese findet man im Reiter `Editiermodus` als Untermenüpunkte. Die Pflege der Spalten erfolgt, indem man mit Modulen Inhaltsblöcke anlegt.
 
@@ -162,7 +162,7 @@ Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich, Arbei
 
 In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
 Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben füllen lässt. Es ist möglich, die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um eine Vorschau der Arbeitsversion zu erhalten, klickt man auf „Voransicht“. Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden.
-> **Achtung!** Wird die Arbeitsversion als Liveversion freigegeben, wird die aktuelle Liveversion überschrieben bzw. gelöscht. Nutzt man jedoch auch das History-Plugin, so ist es möglich, vorherige Versionen wiederherzustellen. 
+> **Achtung!** Wird die Arbeitsversion als Liveversion freigegeben, wird die aktuelle Liveversion überschrieben bzw. gelöscht. Nutzt man jedoch auch das History-PlugIn, so ist es möglich, vorherige Versionen wiederherzustellen. 
 
 <a name="history"></a>
 ## History
