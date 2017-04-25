@@ -51,7 +51,7 @@ Um einen Block hinzuzufügen,
 - füllt das Formular aus (sofern erforderlich)
 - speichert mit `Block speichern`
 
-Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten. um weiter zu arbeiten, klickt man auf `Block übernehmen`. Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen`.
+Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten. Um weiter zu arbeiten, klickt man auf `Block übernehmen`. Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen`.
 
 > Da in jeder Redaxo-Installation unterschiedliche, häufig individuell erstellte Module zur Verfügung stehen, wird deren Funktion hier nicht erläutert. 
 
