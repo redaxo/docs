@@ -1,4 +1,8 @@
-# Hinweise zur Mitarbeit
+# REDAXO Dokumentation
+Die aktuelle Live-Version ist hier ersichtlich: https://redaxo.org/doku/master
+
+
+## Hinweise zur Mitarbeit
 
 Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt gern jederzeit komplette Kapitel übernehmen (bitte mit polarpixel, tbaddade oder skerbis absprechen) oder einfach nur Verbesserungen und Korrekturen einbringen (dann am besten als Pull request)
 
