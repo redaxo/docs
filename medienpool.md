@@ -51,7 +51,7 @@ Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation �
 
 ### Löschen über Detailansicht
 - Zu löschende Dateien werden über die Checkboxen ausgewählt
-- Anschließend Scrollen zum Ende der Liste
+- Anschließend scrollen zum Ende der Liste
 - Bestätigen des Löschvorgangs durch Klick auf `löschen`
 
 > Möchte man die Aktion auf alle Medien der Kategorie anwenden, kann man alle Medien mit der Checkbox am Ende der Liste markieren. 
