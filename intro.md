@@ -4,7 +4,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 >Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. 
 Die Dokumentation wird durch die Community in [GitHub](https://github.com/redaxo/docs) gepflegt und erweitert.  Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden.
-[Zur Dokumentation auf github](https://github.com/redaxo/docs) 
+[Zur Dokumentation auf GitHub](https://github.com/redaxo/docs) 
 
 Dokumentationen zu weiteren  Versionen erreicht man über das Versionsauswahlmenü. 
 
