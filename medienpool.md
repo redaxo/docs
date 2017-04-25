@@ -35,13 +35,13 @@ Klickt man in der Übersicht einer Kategorie auf den Titel eines Mediums, erhäl
 
 Im Reiter `Medienkategorien verwalten` können neue Kategorien angelegt und vorhandene editiert oder gelöscht werden. Zum Anlegen einer neuen Kategorie, klickt man auf das (+)-Symbol neben der Bezeichnung `Name` und trägt den Kategorienamen in das entsprechende Textfeld ein. Das Editieren beschränkt sich auf eine Umbenennung der Kategorie. Kategorien können nur gelöscht werden, wenn sie keine Medien beinhalten. Ansonsten erscheint ein Warnhinweis. 
 
-> Tipp: Das Verschieben einer Kategorie ist aktuell nicht vorgesehen. Daher sollte man die Kategorisierung der Medien vor Projektbeginn ausführlich planen. 
+> **Tipp**: Das Verschieben einer Kategorie ist aktuell nicht vorgesehen. Daher sollte man die Kategorisierung der Medien vor Projektbeginn ausführlich planen. 
 
 <a name="upload"></a>
 ## Medien hinzufügen
 
 Zum Hochladen von Dateien in den Medienpool wählt man den Reiter `Medium hinzufügen`. 
-Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation – weitere Felder ausfüllen. Um eine Datei einer Kategorie zuzuordnen, kann man vor dem Upload gleich die passende Medienkategorie festlegen. Das gewünschte Medium wählt man im Abschnitt `Datei`. Dort steht eine Schaltfläche zur Dateiausahl aus dem eigenen Dateisystem bereit. Der Ladevorgang wird dann ausgelöst mit der Schaltfläche `hinzufügen`. 
+Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation – weitere Felder ausfüllen. Um eine Datei einer Kategorie zuzuordnen, kann man vor dem Upload gleich die passende Medienkategorie festlegen. Das gewünschte Medium wählt man im Abschnitt `Datei`. Dort steht eine Schaltfläche zur Dateiauswahl aus dem eigenen Dateisystem bereit. Der Ladevorgang wird dann ausgelöst mit der Schaltfläche `hinzufügen`. 
 
 <a name="loeschen"></a>
 ## Medien löschen
@@ -51,7 +51,7 @@ Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation �
 
 ### Löschen über Detailansicht
 - Zu löschende Dateien werden über die Checkboxen ausgewählt
-- Anschließend Scrollen zum Ende der Liste
+- Anschließend scrollen zum Ende der Liste
 - Bestätigen des Löschvorgangs durch Klick auf `löschen`
 
 > Möchte man die Aktion auf alle Medien der Kategorie anwenden, kann man alle Medien mit der Checkbox am Ende der Liste markieren. 
@@ -84,6 +84,6 @@ Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die 
 
 Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion `Dateien synchronisieren`. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner `/media` geladenen Dateien werden dann unter `betroffene Dateien` gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und danach die gewünschte Medienkategorie, wo die Dateien einsortiert werden sollen. Durch Klick auf `Synchronisieren` werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
-> **Achtug**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte möglichst vorher erfolgen.  
+> **Achtung**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte möglichst vorher erfolgen.  
 
 
