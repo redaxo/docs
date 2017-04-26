@@ -122,3 +122,4 @@ Die Installation ist erfolgreich. Man sollte die weiteren Hinweise auf der Seite
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 Schritt 7: Ende
 
+> ***Nach der Installation:*** Es ist durchaus möglich, dass nach einem Release noch Updates nachgereicht werden. Daher sollte man nach der Installation im Installer prüfen, ob Aktualisierungen vorliegen.
