@@ -56,7 +56,7 @@ Eigene Cache Dateien können im REDAXO Cache so angelegt werden:
     }
 ``` 
 
-In diesem Beispiel wird geprüft, ob das Verzeichnis `redaxo/cache/meinaddon` vorhanden ist und legt es gegebenenfalls an (`rex_file::put(..)` übernimmt das). `rex_path::addonCache('meinaddon')` erzeugt den passenden Pfad. Für die Verwaltung und die Entscheidung, wann und ob eine Cache Datei neu geschrieben werden muss, ist der Entwickler verantwortlich.
+In diesem Beispiel wird geprüft, ob das Verzeichnis `redaxo/cache/addons/meinaddon` vorhanden ist und legt es gegebenenfalls an (`rex_file::put(..)` übernimmt das). `rex_path::addonCache('meinaddon')` erzeugt den passenden Pfad. Für die Verwaltung und die Entscheidung, wann und ob eine Cache Datei neu geschrieben werden muss, ist der Entwickler verantwortlich.
 
 In AddOns kann es manchmal notwendig sein, den Cache zu löschen. Dies kann durch Aufruf der global zur Verfügung stehenden Funktion `rex_delete_cache()` ausgeführt werden. Das sollte jedoch nur in Ausnahmefällen notwendig sein.
 
