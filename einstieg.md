@@ -14,23 +14,23 @@ Bei der Arbeit mit Redaxo werden Ihnen die folgenden Begriffe immer wieder begeg
 * Artikel
 * Template
 * Modul
-* Block/Slice
+* Block
 
-Sie werden hier kurz erläutert. Eine ausführliche Beschreibung findet man in den spezifischen Kapiteln zu den Begriffen.
+Sie werden nachfolgend kurz erläutert. Eine ausführliche Beschreibung findet man in den spezifischen Kapiteln zu den Begriffen.
 
 ## Frontend/Backend
 
-Loginmaske
+**Loginmaske**
+
 Bei der Arbeit mit einem CMS unterscheidet man zwischen dem Frontend und dem Backend. Das Frontend ist die für jeden sichtbare Internetseite. Das Backend ist der Bearbeitungsbereich für die Inhalte. Zu diesem gelangt man über folgende Adresse:
 
 http://www.meine-adresse.tld/redaxo.
 
 “www.meine-adresse.tld” ist durch die eigene Adresse der Webseite zu ersetzen. Es erscheint nun die Login-Maske für das Backend.
 
-Backend
+**Backend**
 Nach erfolgreichem Einloggen gelangt man in das Backend. Alles, was nun in dieser Doku beschrieben wird, spielt sich hier ab.
 
---
 
 ## Erstellen einer Webseite mit REDAXO 
 
