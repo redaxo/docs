@@ -80,4 +80,4 @@ Wenn diese Schritte erledigt sind, das heißt: die Struktur ist festgelegt, Temp
 
 > Die detaillierten Informationen zu jedem einzelnen Schritt findet man in den weiteren Kapiteln dieser Dokumentation.
 
-Im Tutoral [Quickstart: Website in 15 Minuten] findet man eine kurze Anleitung zum Aufbau einer Webpräsenz mit REDAXO. 
+Im Tutoral [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart) findet man eine kurze Anleitung zum Aufbau einer Webpräsenz mit REDAXO. 
