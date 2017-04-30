@@ -31,6 +31,7 @@ Die Dateien aus den Versionen mit der des Downloads ersetzen.
 Es wird empfohlen ein reguläres Setup durchzuführen. Vorher sollten von der bestehenden Webseite sowohl ein Datei- als auch Datenbankexport angefertigt werden.
 
 **Updatehinweise von REX 4.3.x auf REX 4.5.1**
+
 Bitte folgende Datei herunterladen:
 
 [rex_diff_4.3.1_4.5.1.zip](/media/rex_diff_4.3.1_4.5.1.zip)
