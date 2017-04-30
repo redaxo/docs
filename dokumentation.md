@@ -20,7 +20,7 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
-    - [Einstieg](/{{path}}/{{version}}/einstieg) <sup><b>in Bearbeitung</b></sup> <sup><i>Thomas Skerbis</i></sup>
+    - [Einstieg](/{{path}}/{{version}}/einstieg) <sup><b>überprüfen</b></sup> <sup><i>Thomas Skerbis</i></sup>
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
