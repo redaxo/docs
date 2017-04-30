@@ -9,7 +9,7 @@
 
 Um ein Update von einer älteren Version auf eine neuere Version durchzuführen, sollte die neue Version immer eigenständig installiert werden. Das Überspielen der alten Version ist nicht ratsam.
 
-** Anleitung: **
+### Anleitung: 
 
 - Sichere ein Export der alten Seite
 - Spiele die neue Version in einen leeren Ordner auf dem Server und installiere sie
