@@ -32,7 +32,7 @@ Nach erfolgreichem Einloggen gelangt man in das Backend. Alles, was nun in diese
 
 --
 
-### Erstellen einer Webseite mit REDAXO 
+## Erstellen einer Webseite mit REDAXO 
 
 Wenn man REDAXO auf seinem Server [installiert](/{{path}}/{{version}}/installation) hat und nun eine Webpräsentation erstellen möchte, sind die folgenden Schritte durchzuführen. Diese Beschreibung ist nur eine Kurzfassung. Die Details sind in den Folgekapiteln dieser Dokumentation beschrieben.
 
@@ -54,8 +54,8 @@ Die einzelnen Seiten einer Präsentation werden bei REDAXO Artikel genannt. Dies
 
 Damit ein Artikel angezeigt werden kann, braucht er ein [Template](/{{path}}/{{version}}/templates), das ihm zugewiesen wird. Ein Template legt das Layout des Artikels fest. Templates werden in der eigenen Rubrik Templates definiert und gespeichert. Die Zuweisung zu einem Artikel erfolgt in der Strukturverwaltung. Dazu muss das Template als aktiv gekennzeichnet sein.
 
-<a name="styles"></a>**
-3. Erstellen eines Stylesheets**
+<a name="styles"></a>
+**3. Erstellen eines Stylesheets**
 
 Üblicherweise wird die komplette Formatierung einer Webseite in einem Stylesheet ausgelagert. Das wird auch für die Arbeit mit REDAXO empfohlen. Das Stylesheet wird – wie sonst auch in HTML-Seiten – in den head-Bereich des Templates eingebunden.
 
@@ -63,7 +63,8 @@ Beispiel für das Einbinden eines Stylesheets in ein Redaxo-Template:
 
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen" />
 
-<a name="zuweisung"></a>**4. Erstellen der seitenspezifischen Inhalte für einen Artikel**
+<a name="zuweisung"></a>
+**4. Erstellen der seitenspezifischen Inhalte für einen Artikel**
 
 Die Seiteninhalte werden in einzelnen Blöcken (auch Slices genannt) eingegeben. Die Anzahl der Blöcke auf einer Seite ist beliebig. Bei dem Anlegen eines Blocks müssen Sie ein Modul auswählen, mit dem der Block editiert werden soll. Module sind Minitemplates, die den jeweiligen Inhaltsbereich formatieren. Die Eingabe von Inhalten mittels Modulen erleichtert die Einhaltung eines durchgängigen Layouts.
 
@@ -78,3 +79,5 @@ Wenn diese Schritte erledigt sind, das heißt: die Struktur ist festgelegt, Temp
 >**Anmerkung** Diese Beschreibung gibt die einzelnen Arbeitsschritte nur in groben Zügen wieder, um einen kurzen Überblick zu geben.
 
 > Die detaillierten Informationen zu jedem einzelnen Schritt findet man in den weiteren Kapiteln dieser Dokumentation.
+
+Im Tutoral [Quickstart: Website in 15 Minuten] findet man eine kurze Anleitung zum Aufbau einer Webpräsenz mit REDAXO. 
