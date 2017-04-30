@@ -21,7 +21,7 @@ Für die Version 5.3 benötigt man folgende Umgebung
 Die folgenden Abschnitte erläutern, wie man REDAXO auf einem Server oder Webspace installiert. 
 
 - Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren. 
-- Die neueste Version unter http://redaxo.org/download/ herunterladen.
+- Die neueste Version unter https://redaxo.org/download/core/ herunterladen.
 - Die ZIP-Datei auf deinem Rechner entpacken.
 - Die Dateien in das Webverzeichnis hochladen.
 Die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) ausführen.
@@ -35,7 +35,7 @@ Zunächst erstellt man eine leere MySQL-Datenbank. Bei einigen Hostern ist berei
 <a name="download"></a>
 ## Download
 
-Als Erstes sollte man die aktuelle Version von REDAXO unter http://redaxo.org/download/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
+Als Erstes sollte man die aktuelle Version von REDAXO unter https://redaxo.org/download/core/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
 
 <a name="upload"></a>
 ## Upload 
