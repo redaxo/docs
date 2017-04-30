@@ -1,21 +1,29 @@
 # Updatehinweise
+- [Empfohlene Vorgehensweise](#empfohlen)
+	- [Update per DIFF-Dateien](#diff)
+- [Update von REX 3.x auf REX 4.0](#3x)
+
+<a name="empfohlen"></a>
 
 ## Empfohlene Vorgehensweise 
 
 Um ein Update von einer älteren Version auf eine neuere Version durchzuführen, sollte die neue Version immer eigenständig installiert werden. Das Überspielen der alten Version ist nicht ratsam.
 
-*** Anleitung:***
+*** Anleitung: ***
 
 - Sichere ein Export der alten Seite
 - Spiele die neue Version in einen leeren Ordner auf dem Server und installiere sie
 - Importiere den Export der älteren Version
 
+<a name="diff"></a>
 ## Update per DIFF-Dateien
 Die Dateien aus den Versionen mit der des Downloads ersetzen.
 
 **REX 4.6.1 auf REX 4.6.2**
+[rex_diff_4.6.1_4.6.2.zip](/media/rex_diff_4.6.1_4.6.2.zip)
 
 **REX 4.6.0 auf REX 4.6.1**
+[rex_diff_4.6_4.6.1.zip](/media/rex_diff_4.6_4.6.1.zip)
 
 **REX 4.x auf REX 4.6.x oder 4.7.x**
 
@@ -25,16 +33,22 @@ Es wird empfohlen ein reguläres Setup durchzuführen. Vorher sollten von der be
 **Updatehinweise von REX 4.3.x auf REX 4.5.1**
 Bitte folgende Datei herunterladen:
 
-rex_diff_4.3.1_4.5.1.zip
-rex_diff_4.3.2_4.5.1.zip
-rex_diff_4.3.3_4.5.1.zip
-rex_diff_4.4.0_4.5.1.zip
-rex_diff_4.4.1_4.5.1.zip
-rex_diff_4.5.0_4.5.1.zip
+[rex_diff_4.3.1_4.5.1.zip](/media/rex_diff_4.3.1_4.5.1.zip)
+
+[rex_diff_4.3.2_4.5.1.zip](/media/rex_diff_4.3.2_4.5.1.zip)
+
+[rex_diff_4.3.3_4.5.1.zip](/media/rex_diff_4.3.3_4.5.1.zip)
+
+[rex_diff_4.4.0_4.5.1.zip](/media/rex_diff_4.4.0_4.5.1.zip)
+
+[rex_diff_4.4.1_4.5.1.zip](/media/rex_diff_4.4.1_4.5.1.zip)
+
+[rex_diff_4.5.0_4.5.1.zip](/media/rex_diff_4.5.0_4.5.1.zip)
 
 Die Dateien aus den Versionen mit der des Downloads ersetzen.
 Im Ordner /redaxo/include/lang alle Dateien die auf _utf8.lang enden löschen.
 
+<a name="3x"></a>
 ## Update von REX 3.x auf REX 4.0
 
 ### Datenbank
