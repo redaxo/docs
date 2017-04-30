@@ -1,6 +1,43 @@
-# Update von REX 3.x auf REX 4.0
+# Updatehinweise
 
-## Datenbank
+## Empfohlene Vorgehensweise 
+
+Um ein Update von einer älteren Version auf eine neuere Version durchzuführen, sollte die neue Version immer eigenständig installiert werden. Das Überspielen der alten Version ist nicht ratsam.
+
+*** Anleitung:***
+
+- Sichere ein Export der alten Seite
+- Spiele die neue Version in einen leeren Ordner auf dem Server und installiere sie
+- Importiere den Export der älteren Version
+
+## Update per DIFF-Dateien
+Die Dateien aus den Versionen mit der des Downloads ersetzen.
+
+**REX 4.6.1 auf REX 4.6.2**
+
+**REX 4.6.0 auf REX 4.6.1**
+
+**REX 4.x auf REX 4.6.x oder 4.7.x**
+
+> Da sich seit der Version 4.6 ein Großteil an Dateien geändert hat, bieten wir dafür keine speziellen DIFF Dateien an.
+Es wird empfohlen ein reguläres Setup durchzuführen. Vorher sollten von der bestehenden Webseite sowohl ein Datei- als auch Datenbankexport angefertigt werden.
+
+**Updatehinweise von REX 4.3.x auf REX 4.5.1**
+Bitte folgende Datei herunterladen:
+
+rex_diff_4.3.1_4.5.1.zip
+rex_diff_4.3.2_4.5.1.zip
+rex_diff_4.3.3_4.5.1.zip
+rex_diff_4.4.0_4.5.1.zip
+rex_diff_4.4.1_4.5.1.zip
+rex_diff_4.5.0_4.5.1.zip
+
+Die Dateien aus den Versionen mit der des Downloads ersetzen.
+Im Ordner /redaxo/include/lang alle Dateien die auf _utf8.lang enden löschen.
+
+## Update von REX 3.x auf REX 4.0
+
+### Datenbank
 
 
 Die Datenbanktabellen wurde verändert. 
@@ -9,7 +46,7 @@ Im Setup kann ein Update der Datenbank automatisiert durchgeführt werden.
 
 Beim Setup werden die vorhandenen Tabellenstrukturen an die neue Version 4 angepasst. Es werden jedoch nicht die vorhandenen Tabelleninhalte verändert, so dass bestimmte Angaben in den Templates, Modulen und so weiter von Hand angepasst werden müssen. Dabei sind folgende Punkte zu beachten.
 
-## Templates
+### Templates
 	
 	alte Schreibweise, um ein Template einzubinden:
 	<?php include($REX['INCLUDE_PATH'] .'/generated/templates/2.template'); ?>
@@ -28,7 +65,7 @@ Alle Ctypes sind nun via Backend zu verwalten.
 Die Datei ctype.inc.php wurde komplett entfernt!
 Ctypes können nun pro Template hinterlegt werden.
 
-## Allgemeines
+### Allgemeines
 
 $REX['INCLUDE_PATH'], $REX['MEDIAFOLDER'] sind jetzt absolute Pfade!
 
