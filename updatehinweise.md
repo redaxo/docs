@@ -29,7 +29,7 @@ Die Dateien aus den Versionen mit der des Downloads ersetzen.
 
 **REX 4.x auf REX 4.6.x oder 4.7.x**
 
-> Da sich seit der Version 4.6 ein Großteil an Dateien geändert hat, bieten wir dafür keine speziellen DIFF Dateien an.
+> Da sich seit den Versionen 4.6 und 4.7 ein Großteil an Dateien geändert hat, bieten wir dafür keine speziellen DIFF Dateien an.
 Es wird empfohlen ein reguläres Setup durchzuführen. Vorher sollten von der bestehenden Webseite sowohl ein Datei- als auch Datenbankexport angefertigt werden.
 
 **Updatehinweise von REX 4.3.x auf REX 4.5.1**
