@@ -1,8 +1,7 @@
 # Einstieg
 
 ## Erstellen einer Webseite mit REDAXO 
-
-Wenn man REDAXO auf seinem Server [installiert](/{{path}}/{{version}}/installation) hat und eine Webpräsenz erstellen möchte, sind die folgenden Schritte durchzuführen. Diese Beschreibung ist nur eine Kurzfassung. Für detallierte Informationen sollten die weiteren Kapitel der Dokumentation betrachtet werden. 
+Ist die [Installation](/{{path}}/{{version}}/installation) von REDAXO abgeschlossen, kann man mit dem Aufbau der Webpräsenz beginnen. Hierzu müssen die folgenden Schritte durchgeführt werden. Diese Beschreibung ist nur eine Kurzfassung. Für detallierte Informationen sollten die weiteren Kapitel der Dokumentation betrachtet werden. 
 
 **Schritte zur Erstellung einer Webseite mit REDAXO**
 
