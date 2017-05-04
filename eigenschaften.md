@@ -185,7 +185,7 @@ Wenn ein Redaxo Benutzer im Backend angemeldet ist, liefert diese Methode den Be
 Beispiel:
 `rex::getUser()->getName()` => Administrator
 
-*Hinweis:* Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
+**Hinweis:** Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
 ```
 if (rex_backend_login::createUser()) { 
     $user = rex::getUser()->getName(); 
