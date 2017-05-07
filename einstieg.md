@@ -14,14 +14,14 @@ Ist die [Installation](/{{path}}/{{version}}/installation) von REDAXO abgeschlos
 <a name="template"></a>
 **1. Erstellen eines Templates**
 
-Damit ein Artikel angezeigt werden kann, braucht er ein [Template](/{{path}}/{{version}}/templates), das ihm zugewiesen wird. Ein Template legt das Layout des Artikels fest. Templates werden in der eigenen Rubrik Templates definiert und gespeichert. Die Zuweisung zu einem Artikel erfolgt in der [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung). Dazu muss das Template als aktiv gekennzeichnet sein. Zur Auslagerung von Stylesheets und Javascript-Dateien bietet sich der /assets-Ordner an.
+Damit ein Artikel angezeigt werden kann, braucht er ein [Template](/{{path}}/{{version}}/templates), das ihm im nächsten Schritt zugewiesen wird. Ein Template legt das Layout des Artikels fest. Templates werden in der eigenen Rubrik Templates definiert und gespeichert. Die Zuweisung zu einem Artikel erfolgt in der [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung). Dazu muss das Template als aktiv gekennzeichnet sein. Zur Auslagerung von Stylesheets und Javascript-Dateien bietet sich der /assets-Ordner an.
 Siehe: [Templates](/{{path}}/{{version}}/templates)
 
 
 <a name="defkatart"></a>
 **2. Definition der Kategorien und Artikel**
 
-Die einzelnen Seiten einer Präsentation werden bei REDAXO Artikel genannt. Diese müssen unter der [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) erzeugt und benannt werden. Zur besseren Gliederung und um die Navigation zu steuern, können Artikel unterschiedlichen Kategorien zugewiesen werden. Dazu definiert man zunächst die Kategorie und legt dann in den Kategorien die zugehörigen Artikel an. 
+Die einzelnen Seiten einer Präsentation werden bei REDAXO Artikel genannt. Diese werden in der [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung) erzeugt, benannt und mit TEMPLATES versehen. Zur besseren Gliederung und um die Navigation zu steuern, können Artikel unterschiedlichen Kategorien zugewiesen werden. Dazu definiert man zunächst die Kategorie und legt dann in den Kategorien die zugehörigen Artikel an. 
 Siehe: [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung)
 
 
