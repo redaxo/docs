@@ -13,7 +13,7 @@
 Für die Version 5.3 benötigt man folgende Umgebung
 - PHP ab Version: 5.5.9
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
-- Apache-Server ggf. Nginx
+- Apache2, Nginx oder vergleichbarer Webserver
 
 <a name="schnell"></a>
 ## Schnellanleitung
