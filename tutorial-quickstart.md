@@ -10,7 +10,7 @@
     - [Zwei-Spalten-Modul](#zwei-spalten-modul)
 
 <a name="voraussetzung"></a>
-## Vorausetzung
+## Voraussetzung
 
 REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein. 
 
