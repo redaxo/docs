@@ -2,6 +2,7 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
+    - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 

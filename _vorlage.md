@@ -67,7 +67,7 @@ Die Platzhalter `{{path}}` und `{{version}}` werden später auf redaxo.org angep
 
 **Beispiel**
 ```
-Alt| Neu
+Alt | Neu
 ------------- | -------------
 `$REX['SERVERNAME']`  |  `rex::getServername()`
 ```
