@@ -121,6 +121,12 @@ REX_CATEGORY[id=i field=cat_background]
 REX_CATEGORY[id=i field=cat_background clang=i]
 ```
 
+> **Hinweis:** In Redaxo 5 ist es nicht mehr nötig, das Prefix cat_ oder art_ zu verwenden; REDAXO Programm weiß, woher die Informationen kommen.
+```
+$category = rex_category::getCurrent()->getValue('metafeld');
+$article = rex_article::getCurrent()->getValue('metafeld');
+```
+Der Parameter wird nur dann benötigt, wenn Artikel und Kategorie ein gleichnamigen Metafeld haben.
 
 <a name="medien"></a>
 ### Medien
@@ -180,3 +186,5 @@ rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $
 ```PHP
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```
+
+
