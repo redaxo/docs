@@ -121,7 +121,7 @@ REX_CATEGORY[id=i field=cat_background]
 REX_CATEGORY[id=i field=cat_background clang=i]
 ```
 
-> **Hinweis:** In Redaxo 5 ist es nicht mehr nötig, das Prefix cat_ oder art_ zu verwenden; REDAXO weiß, woher die Informationen kommen.
+> **Hinweis:** In Redaxo 5 ist es nicht mehr nötig, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen.
 ```
 $category = rex_category::getCurrent()->getValue('metafeld');
 $article = rex_article::getCurrent()->getValue('metafeld');
