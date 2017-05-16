@@ -63,7 +63,7 @@ Am besten verwendet man den Artikelnamen als Title-Tag und wandelt Sonderzeichen
 <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 ```
 
-Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü `System' hinterlegten  mit der aktuellen Jahreszahl anzeigen:
+Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü `System` hinterlegten  mit der aktuellen Jahreszahl anzeigen:
 
 ```
 <footer class="footer">
