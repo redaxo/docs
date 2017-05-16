@@ -171,7 +171,7 @@ Wenn man nun Kategorien in Redaxo neu hinzufügt, sehen diese durch das Basis-Te
 <a name="intro-modul"></a>
 ### Intro-Modul
 
-Als Erstes wird ein Intro-Modul mit einer großen Überschrift und einem Absatz erstellt. Beim Menüpunkt "Module" kann dieses erste Modul neu angelegt werden. 
+Als Erstes wird ein Intro-Modul mit einer großen Überschrift und einem Absatz erstellt. Beim Menüpunkt `Module` kann dieses erste Modul neu angelegt werden. 
 
 Im Eingabe-Code - das ist das, was der Redakteur in REDAXO sieht - benötigt man also zwei Felder, ein Textfeld und ein Textarea-Feld für mehrzeiligen Text. Jedes Feld muss eine eigene Value-ID besitzen.
 
