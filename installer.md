@@ -38,6 +38,6 @@ Anschließend kann man das Addon unter "Addons" installieren.
 ## Eigene Addons hochladen
 Entwickler können eigene Addons direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die Addons stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myRedaxo-Account einsehen kann. 
 
-Weitere Informationen zur Erstellung und Bereitstellung eigener Addons im Abschnitt Entwicklung.
+Weitere Informationen zur Erstellung und Bereitstellung eigener Addons im Kapitel [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung).
 
 

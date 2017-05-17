@@ -2,6 +2,7 @@
     - [Intro](/{{path}}/{{version}}/intro)
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
+    - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
@@ -20,11 +21,13 @@
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
+    - [Einstieg](/{{path}}/{{version}}/einstieg)
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module)
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
