@@ -5,6 +5,7 @@
 - [Metafelder](#metafelder)
 - [Feldattribute](#attribute)
 - [Dynamische Metafelder](#dynamik)
+- [Callback](#callback)
 - [Auslesen der Meta Infos](#auslesen)
 	- [Artikel](#artikel)
 	- [Kategorien](#kategorien)
@@ -73,6 +74,28 @@ Select–, Checkbox– und Radio–Felder können mit Daten von Datenbanktabelle
 **Mögliche Query-Abfragen**
 a) SELECT label,id FROM my_table WHERE a=4
 b) (DB2) SELECT label,id FROM my_table WHERE a=4
+
+<a name="callback"></a>
+## Callback
+
+Das Feld `Callback` ermöglicht es Programmcode auszuführen, wenn ein Wert des Metafeldes in einem Artikel geändert wird. PHP Tags müssen angegeben werden. Im Callback Code kann man lesend auf folgende Werte zugreifen:
+
+* `$fieldName` - der Name des Metafeldes (z.B. art_mymetafield)
+* `$fieldValue` - der Wert
+* `$field` - rex_sql Objekt
+
+### Beispiel
+
+Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Datenbank Tabelle zugewiesen. In die Produkttabelle soll die REDAXO Artikel Id geschrieben werden, in der das Produkt zugeordnet wurde.
+
+```
+   <?php
+      $sql = rex_sql::factory();
+      $qry = 'UPDATE rex_meine_produkte SET redaxo_article_id = '.rex_article::getCurrentId().' '
+             . 'WHERE id = '.$fieldValue;
+      $sql->setQuery($qry);
+   ?>
+```
 
 <a name="auslesen"></a>
 ## Auslesen der Meta Infos
