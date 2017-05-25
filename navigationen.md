@@ -397,20 +397,20 @@ if (is_array($article)) {
     foreach ($article_stack as $var) {	
         if($var == $current_id) {
             if($i+1 < $catcount ) {
-                // ID des vorhergehenden Artikels ermitteln
+                // ID des nachfolgenden Artikels ermitteln
                 $next_id = $article_stack[$i+1];
 
                 // Artikel-Objekt holen, um den Namen des vorhergehenden Artikels zu ermitteln, danach Link schreiben
                 $article = rex_article::get($next_id);
                 $successor = '
-                <li class="prev">
+                <li class="next">
                     <a href="'.rex_getUrl($next_id).'">
                         weiter ('.$article->getName().')
                     </a>
                 </li>'; 
             }
 
-            // und das Ganze nochmal für den nachfolgenden Artikel
+            // und das Ganze nochmal für den vorhergenden Artikel
             if($i-1 > -1) {
                 $prev_id = $article_stack[$i-1];			
 
@@ -418,7 +418,7 @@ if (is_array($article)) {
 
                     $article = rex_article::get($prev_id);
                     $predecessor = '
-                    <li class="next">
+                    <li class="prev">
                         <a href="'.rex_getUrl($prev_id).'">
                             zurück ('.$article->getName().')
                         </a>
@@ -558,7 +558,7 @@ if ("REX_VALUE[1]" != '' && "REX_VALUE[2]" != '') {
 
 ```
 
-Im Template wird ganz zu Beginn das Array `anchors` definiert. dann wird der Inhalt geparst, um das Array mit Inhlaten zu füllen – was in der Modulausgabe passiert.
+Im Template wird ganz zu Beginn das Array `anchors` definiert. dann wird der Inhalt geparst, um das Array mit Inhalten zu füllen – was in der Modulausgabe passiert.
 Anschließend stehen die Daten zur Verfügung, um daraus die Navigation, bestehend aus Anker und Navigationstitel zu bauen. Anschließend an die Navigation wird der bereits geparste Content ausgegeben.
 
 ```
