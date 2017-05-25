@@ -149,28 +149,30 @@ Zum Schreiben eigener Navigationen ist der Wert im path-Feld eines Artikels von 
 
 ```
 <?php
-/* Indem an den path-Wert des aktuellen Artikels noch die eigene ID angehängt wird, entsteht ein Array mit allen IDs der Kategorien für den aktuellen Artikel */
-$path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
+// Indem an den path-Wert des aktuellen Artikels noch die eigene ID angehängt wird,
+// entsteht ein Array mit allen IDs der Kategorien für den aktuellen Artikel $path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
 
-/* Für eine Navigation mit nur einer Ebene wird nur das erste Element des Arrays benötigt, also die ID der obersten Elternkategorie. */
+// Für eine Navigation mit nur einer Ebene wird nur das erste Element des Arrays benötigt,
+// also die ID der obersten Elternkategorie.
 $path1 = ((!empty($path[1])) ? $path[1] : '');
 
 echo '<ul>';
 
-/* Mit der Methode `getRootCategories` werden alle Kategorien im Hauptverzeichnis durchlaufen */
+// Mit der Methode `getRootCategories` werden alle Kategorien im Hauptverzeichnis durchlaufen
 foreach (rex_category::getRootCategories() as $lev1) {
 
-	/* Es werden nur Kategorien mit dem Status `online` berücksichtigt. */
+	// Es werden nur Kategorien mit dem Status `online` berücksichtigt.
 	if ($lev1->isOnline(true)) {
 		
-		/* Sofern die in der Schleife durchlaufene Kategorie mit der eigenen Elternkategorie identisch ist, wird eine CSS-Klasse angehängt, um den Navigationspunkt als aktiv kennzeichnen zu können. */
-		if ($lev1->getId() == $path1) {
-			echo '<li class="active"><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a></li>';
-		} else {
-			echo '<li><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a></li>';
-		}
+        // Sofern die in der Schleife durchlaufene Kategorie mit der eigenen Elternkategorie identisch ist,
+        // wird eine CSS-Klasse angehängt, um den Navigationspunkt als aktiv kennzeichnen zu können. */
+        if ($lev1->getId() == $path1) {
+            echo '<li class="active"><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a></li>';
+        } else {
+            echo '<li><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a></li>';
+        }
 	 
-	}
+    }
 }
 
 echo '<ul>';
@@ -398,7 +400,8 @@ if (is_array($article)) {
                 // ID des nachfolgenden Artikels ermitteln
                 $next_id = $article_stack[$i+1];
 
-                // Artikel-Objekt holen, um den Namen des vorhergehenden Artikels zu ermitteln, danach Link schreiben
+                // Artikel-Objekt holen, um den Namen des vorhergehenden Artikels zu ermitteln,
+                // danach Link schreiben
                 $article = rex_article::get($next_id);
                 $successor = '
                 <li class="next">
@@ -428,7 +431,8 @@ if (is_array($article)) {
     }
 }
 
-// Startartikel-Objekt holen, um den Namen des Startartikels zu ermitteln, danach die Linkzeile schreiben
+// Startartikel-Objekt holen, um den Namen des Startartikels zu ermitteln,
+// danach die Linkzeile schreiben
 $start_article = $cat->getStartArticle();
 echo '
 <ul>
@@ -461,11 +465,14 @@ Die Erklärungen finden sich als Kommentare im Code.
 // Variable definieren für den Content
 $content = '';
 
-/* Zunächst werden für die ID des aktuellen Artikels alle Artikel ermittelt, die in der gleichen Kategorie liegen. Der Parameter `true` bewirkt, dass nur Artikel mit Status `online` berücksichtigt werden. */
+// Zunächst werden für die ID des aktuellen Artikels alle Artikel ermittelt,
+// die in der gleichen Kategorie liegen.
+// Der Parameter `true` bewirkt, dass nur Artikel mit Status `online` berücksichtigt werden.
 $cat = rex_category::get($this->article_id);
 $articles = $cat->getArticles(true);
 
-// Sofern sich Elemente in dem Array befinden, es also überhaupt Artikel gibt, wird die ul-Liste geöffnet.
+// Sofern sich Elemente in dem Array befinden,
+// es also überhaupt Artikel gibt, wird die ul-Liste geöffnet.
 if (is_array($articles) && count($articles) > 0) {
     echo '<ul>';
 							
@@ -474,10 +481,12 @@ if (is_array($articles) && count($articles) > 0) {
 
         // Der aktuelle Artikel der Seite selbst soll nicht berücksichtigt werden
         if ($article->getId() == $this->getValue('article_id')) continue;
-        // Auch der Startartikel der Kategorie, meistens die Seite selbst, soll nicht berücksichtigt werden
+        // Auch der Startartikel der Kategorie, meistens die Seite selbst,
+        // soll nicht berücksichtigt werden
         if ($article->isStartArticle()) continue;
 			
-			// Als Ankernamen werden Artikelnamen benutzt, Sonderzeichen werden durch die REDAXO-Funktion `normalize()` umschrieben.
+			// Als Ankernamen werden Artikelnamen benutzt,
+			// Sonderzeichen werden durch die REDAXO-Funktion `normalize()` umschrieben.
 			// Die Syntax lautet `normalize($string, $replaceChar = '_', $allowedChars = '')`
         echo '
         <li><a href="#'.rex_string::normalize($article->getName()).'">'.$article->getName().'</a></li>';				
