@@ -294,8 +294,8 @@ Eine gern genutzte Funktion für Hauptkategorie-Seiten ist das "Anteasern" der U
 ```
 <?php
 $cats = rex_category::get($this->getValue('article_id'));
-// Array mit allen Unterkategorien
-$children = $cats->getChildren();
+// Array mit allen Unterkategorien die den Status online haben (Parameter true)
+$children = $cats->getChildren(true);
 
 if (is_array($children)) {
 
@@ -303,26 +303,24 @@ if (is_array($children)) {
     <ul>';
 
     foreach ($children as $child) {
-        if ($child->isOnline()) {
 
-            $media = $child->getValue('art_category_pic');
-            $title = $child->getValue('name');
-            $desc = $child->getValue('art_category_desc');
+        $media = $child->getValue('art_category_pic');
+        $title = $child->getValue('name');
+        $desc = $child->getValue('art_category_desc');
+   
+        // Bild und Kurztext sind Pflichtfelder
+        if ($media != '' && $desc != '') {
     
-            // Bild und Kurztext sind Pflichtfelder
-            if ($media != '' && $desc != '') {
-    
-                // Das Bild wird mit mit einem Media Manager-Effekt namens "thumbnail" bearbeitet
-                echo '
-                <li>
-                    <a href="'.rex_getUrl($child->getValue('id')).'">
-                        <img src="index.php?rex_media_type=thumbnail&rex_media_file='.$media.'" alt="'.$desc.'">
-                        <h3>'.$title.'</h3>
-                        <p>'.$desc.'</p>
-                    </a>
-                </li>';
+            // Das Bild wird mit mit einem Media Manager-Effekt namens "thumbnail" bearbeitet
+            echo '
+            <li>
+                <a href="'.rex_getUrl($child->getValue('id')).'">
+                    <img src="index.php?rex_media_type=thumbnail&rex_media_file='.$media.'" alt="'.$desc.'">
+                    <h3>'.$title.'</h3>
+                    <p>'.$desc.'</p>
+                </a>
+            </li>';
     			
-            }
         }
     }
     echo '
