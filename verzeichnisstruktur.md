@@ -6,15 +6,15 @@
 <a name="hinweise"></a>
 ## Orderstruktur des CMS
 
-In vielen Fällen ist es hilfreich, die Verzeichnisstruktur von REDAXO selbst zu kennen: Wo liegen die Core-Dateien, wo die Klassen und Funktionen, die AddOns und PlugIns, wo die Cache-Dateien und die öffentlich erreichbaren Dateien wie die Assets (CSS, JS) von AddOns oder die durch den Redakteur hochgeladenen Dateien. 
+In vielen Fällen ist es hilfreich, die Verzeichnisstruktur von REDAXO selbst zu kennen: Wo liegen die Core-Dateien, wo die Klassen und Funktionen, die AddOns und PlugIns, wo die Cache-Dateien und die öffentlich erreichbaren Dateien wie die Assets (CSS, JS) von AddOns oder die durch den Redakteur hochgeladenen Dateien? 
 
 Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugriff geschützt, andere müssen frei erreichbar sein.
 
-> **Hinweis:** Die folgende Tabelle ist bewusst nicht vollständig und listet nur die wichtigsten Verzeichnisse aus.
+> **Hinweis:** Die folgende Tabelle gibt einen groben Überblick; sie ist bewusst nicht vollständig und listet nur die wichtigsten Verzeichnisse aus.
 
 | Pfad | Beschreibung |
 | ------------- | ------------- |
-| `/redaxo/data/` | von einer Website individuell generierte Dateien, z.B. die Konfigurationsdatei config.yml im core-Unterordner |
+| `/redaxo/data/` | der Basisordner für die von einer Website individuell generierten Dateien, z.B. die Konfigurationsdatei config.yml im core-Unterordner |
 | `/redaxo/cache/` | Speicherort für alle Cache-Dateien |
 | `/redaxo/src/` | Der Hauptordner (Source) für den Core |
 | `/redaxo/src/addons/` | Alle AddOns von Redaxo |
@@ -52,14 +52,14 @@ Da man bei der eigenen Programmierung – sei es bei eigenen AddOns oder auch be
 | `/redaxo/src/` | | `rex_path::src($file)` |
 | `/redaxo/src/core/` | libs, pages of  | `rex_path::core($file)` |
 | `/redaxo/src/addons/addonname/` | | `rex_path::addon($addon, $file)` |
-| `/redaxo/src/addons/addonname/pages/` | Seite eines AddOns | |
-| `/redaxo/src/addons/addonname/lib/` | Klassen und Bibliotheken eines AddOns, mit Autoload-Funktion | |
-| `/redaxo/src/addons/addonname/vendor/` | Klassen und Bibliotheken eines AddOns, die kein Autoload benötigen, oftmals auch Third-Party-Dateien | |
-| `/redaxo/src/addons/addonname/assets/` | öffentliche Hilfsdateien, sie werden bei der Installation des AddOns in den öffentlichen Ordner kopiert | |
-| `/redaxo/src/addons/addonname/tests/` | Automatisierte Tests für AddOn-Klassen und -Funktionen | |
-| `/redaxo/src/addons/addonname/(un)install.(sql/php)` | Datei zur Installation, bzw. Deinstallation des AddOns | |
-| `/redaxo/src/addons/addonname/config.inc.php` | Konfigurations-Datei des AddOns| |
-| `/redaxo/src/addons/addonname/package.yml` | AddOn-Definitionen wie Version, Author, einzelne Seiten | |
+| `/redaxo/src/addons/addonname/pages/` | Seite eines AddOns | `rex_path::addon($addon, $file).'pages/'` |
+| `/redaxo/src/addons/addonname/lib/` | Klassen und Bibliotheken eines AddOns, mit Autoload-Funktion | `rex_path::addon($addon, $file).'lib/'` |
+| `/redaxo/src/addons/addonname/vendor/` | Klassen und Bibliotheken eines AddOns, die kein Autoload benötigen, oftmals auch Third-Party-Dateien | `rex_path::addon($addon, $file).'vendor/'` |
+| `/redaxo/src/addons/addonname/assets/` | öffentliche Hilfsdateien, sie werden bei der Installation des AddOns in den öffentlichen Ordner kopiert | `rex_path::addon($addon, $file).'assets/'` |
+| `/redaxo/src/addons/addonname/tests/` | Automatisierte Tests für AddOn-Klassen und -Funktionen | `rex_path::addon($addon, $file).'tests/'` |
+| `/redaxo/src/addons/addonname/(un)install.(sql/php)` | Datei zur Installation, bzw. Deinstallation des AddOns | z.B. `rex_path::addon($addon, $file).'install.php'` |
+| `/redaxo/src/addons/addonname/config.inc.php` | Konfigurations-Datei des AddOns | `rex_path::addon($addon, $file).'config.inc.php'` |
+| `/redaxo/src/addons/addonname/package.yml` | AddOn-Definitionen wie Version, Author, einzelne Seiten | `rex_path::addon($addon, $file).'package.yml'` |
 | `/redaxo/src/addons/addonname/plugins/pluginname` | | `rex_path::plugin($addon, $plugin, $file)` |
 
 `$file`, `$params` and `$pathType` sind optionale Parameter. 
