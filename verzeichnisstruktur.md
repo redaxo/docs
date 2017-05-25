@@ -1,10 +1,10 @@
 # Verzeichnisstruktur
 
-- [Orderstruktur des CMS](#ordnerstruktur)
+- [Ordnerstruktur des CMS](#ordnerstruktur)
 - [Liste der wichtigsten Pfade samt ihrer Pfad-Variablen](#liste-der-pfade)
 
-<a name="hinweise"></a>
-## Orderstruktur des CMS
+<a name="ordnerstruktur"></a>
+## Ordnerstruktur des CMS
 
 In vielen Fällen ist es hilfreich, die Verzeichnisstruktur von REDAXO selbst zu kennen: Wo liegen die Core-Dateien, wo die Klassen und Funktionen, die AddOns und PlugIns, wo die Cache-Dateien und die öffentlich erreichbaren Dateien wie die Assets (CSS, JS) von AddOns oder die durch den Redakteur hochgeladenen Dateien? 
 
