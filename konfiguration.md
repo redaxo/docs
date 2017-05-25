@@ -107,3 +107,5 @@ rex::getProperty('accesskeys') | |Standard: Array
 ## AddOn Konfiguration
 
 Über `dump(rex::getConfig())` kann man sich eine Übersicht ausgeben der aktuellen AddOn Konfiguration ausgeben lassen.
+
+Siehe auch [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)

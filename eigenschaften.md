@@ -291,3 +291,4 @@ Beispiel:
 
 Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [removeProperty](#remove-property)
 
+Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
