@@ -294,7 +294,7 @@ Eine gern genutzte Funktion für Hauptkategorie-Seiten ist das "Anteasern" der U
 ```
 <?php
 $cats = rex_category::get($this->getValue('article_id'));
-// Array mit allen Unterkategorien die den Status online haben (Parameter true)
+// Array mit allen Unterkategorien, die den Status online haben (Parameter true)
 $children = $cats->getChildren(true);
 
 if (is_array($children)) {
@@ -408,7 +408,7 @@ if (is_array($article)) {
                 </li>'; 
             }
 
-            // und das Ganze nochmal für den vorhergenden Artikel
+            // und das Ganze nochmal für den vorhergehenden Artikel
             if($i-1 > -1) {
                 $prev_id = $article_stack[$i-1];			
 
