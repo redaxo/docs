@@ -1,4 +1,4 @@
-# Änderungen von REDAXO 4 zu REDAXO 5
+# Änderungen REDAXO 4 zu 5
 
 - [$REX](#rex)
 - [REX_VAR](#rex-var)
@@ -26,12 +26,11 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `$REX['START_ARTICLE_ID']` | `rex_article::getSiteStartArticleId()` |
 | `$REX['NOTFOUND_ARTICLE_ID']` | `rex_article::getNotfoundArticleId()` |
 | `$REX['CLANG']` | `rex_clang::getAll()` |
-| `$REX['MOD_REWRITE']` | *existiert nicht mehr* |
-| `$REX['TABLE_PREFIX']` | `rex::getTablePrefix()` `rex::getTable($table)` *(ergibt: `'rex_'.$table`)* |
-| `$REX['USER']` 
-`$REX['USER']->hasPerm('myperm[]')` | `rex::getUser()` 
+| `$REX['MOD_REWRITE']` | Existiert nicht mehr |
+| `$REX['TABLE_PREFIX']` | `rex::getTablePrefix()` `rex::getTable($table)` (ergibt: `'rex_'.$table`) |
+| `$REX['USER']`<br>`$REX['USER']->hasPerm('myperm[]')` | `rex::getUser()` 
 `rex::getUser()->hasPerm('myperm[]')` |
-| `$REX['PERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null)`<br>*zweiter (optionaler) Parameter ist ein Bezeichner, der in der Rechteverwaltung erscheint* |
+| `$REX['PERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null)`<br>Zweiter (optionaler) Parameter ist ein Bezeichner, der in der Rechteverwaltung erscheint |
 | `$REX['EXTPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::OPTIONS)` |
 | `$REX['EXTRAPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::EXTRAS)` |
 | `$REX['HTDOCS_PATH']`<br>`$REX['INCLUDE_PATH']`<br>`$REX['FRONTEND_PATH']`<br>`$REX['MEDIAFOLDER']`<br>`$REX['FRONTEND_FILE']` | `rex_path` [siehe hier](/{{path}}/{{version}}/pfade) |
@@ -59,29 +58,29 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `OOArticle`<br>`OOCategory`<br>`OOMedia`<br>`OOMediaCategory`<br>`OOArticleSlice` | `rex_article`<br>`rex_category`<br>`rex_media`<br>`rex_media_category`<br>`rex_article_slice` |
 | `rex_article` | `rex_article_content` |
 | `OOArticle::getArticleById()`<br>`OOCategory::getCategoryById()`<br>`OOMedia::getMediaByFilename()`<br>`OOMediaCategory::getCategoryById()` | `rex_article::get()`<br>`rex_category::get()`<br>`rex_media::get()`<br>`rex_media_category::get()` |
-| `OOArticle::isValid()`<br>`OOCategory::isValid()`<br>`OOMedia::isValid()`<br> `OOMediaCategory::isValid()` | *Entfernt, stattdessen: `$art instanceof rex_article` etc.* |
+| `OOArticle::isValid()`<br>`OOCategory::isValid()`<br>`OOMedia::isValid()`<br> `OOMediaCategory::isValid()` | Entfernt, stattdessen: `$art instanceof rex_article` etc. |
 | `$article->getDescription`()<br>`$article->isStartPage()` | `$article->getValue('art_description')`<br>`$article->isStartArticle()` |
 | `rex_register_extension()`<br>`rex_register_extension_point()`<br>`REX_EXTENSION_EARLY`<br>`REX_EXTENSION_LATE` | `rex_extension::register()`<br>`rex_extension::registerPoint()`<br>`rex_extension::EARLY`<br>`rex_extension::LATE` |
 | `rex_title()`<br>`rex_info()`<br>`rex_warning()`, etc. | `rex_view::title()`<br>`rex_view::info()`<br>`rex_view::warning()`<br>, etc. |
-| `rex_put_file_contents()` | `rex_file::put()`<br>`rex_file::putCache()` *(JSON-formatiert)*<br> `rex_file::putConfig()` *(YAML-formatiert)* |
+| `rex_put_file_contents()` | `rex_file::put()`<br>`rex_file::putCache()` (JSON-formatiert)<br> `rex_file::putConfig()` (YAML-formatiert) |
 | `rex_get_file_contents()` | `rex_file::get()`<br>`rex_file::getCache()`<br> `rex_file::getConfig()` |
-| `rex_replace_dynamic_contents()` | *Entfernt, da dynamische Inhalte in eigenen Dateien gespeichert werden sollen* |
+| `rex_replace_dynamic_contents()` | Entfernt, da dynamische Inhalte in eigenen Dateien gespeichert werden sollen |
 | `rex_deleteDir()`<br>`rex_deleteFiles()`<br>`rex_createDir()`<br>`rex_copyDir()` | `rex_dir::delete()`<br>`rex_dir::deleteFiles()`<br>`rex_dir::create()`<br>`rex_dir::copy()` |
 | `rex_absPath()` | `rex_path::absolute()` |
 | `rex_send_file()`<br>`rex_send_resource()`<br>`rex_send_article()`<br>`rex_send_content()` | `rex_response::sendFile()`<br>`rex_response::sendResource()`<br>`rex_response::sendArticle()`<br>`rex_response::sendContent()` |
 | `rex_generateAll()`<br>`rex_deleteAll()` | `rex_delete_cache()` |
-| `rex_call_func()`<br>`rex_check_callable()` | *Entfernt, stattdessen: `call_user_func()` / `call_user_func_array()`*<br /> *Entfernt, stattdessen: `is_callable()`* |
+| `rex_call_func()`<br>`rex_check_callable()` | Entfernt, stattdessen: `call_user_func()` / `call_user_func_array()`<br />Entfernt, stattdessen: `is_callable()` |
 | `rex_split_string()` | `rex_string::split()` |
-| `rex_addslashes()` | *Entfernt, stattdessen: `addslashes()` / `addcslashes()`* |
+| `rex_addslashes()` | Entfernt, stattdessen: `addslashes()` / `addcslashes()` |
 | `rex_highlight_string`()<br>`rex_highlight_file()` | `rex_string::highlight()` |
-| `rex_tabindex()` | *Entfernt* |
+| `rex_tabindex()` | Entfernt |
 | `rex_hasBackendSession()` | `rex_backend_login::hasSession()` |
 | `$I18N->msg`()<br>`rex_translate()` | `rex_i18n::msg()`<br>`rex_i18n::translate()` |
-| `rex_lang_is_utf8()` | *Entfernt, da REDAXO 5 immer UTF8 verwendet* |
-| `rex_create_lang()` | *Entfernt, da rex_i18n nun statisch ist* |
+| `rex_lang_is_utf8()` | Entfernt, da REDAXO 5 immer UTF8 verwendet |
+| `rex_create_lang()` | Entfernt, da rex_i18n nun statisch ist |
 | `OOAddon::getProperty($addon, $property)`<br>`OOAddon::isAvailable($addon)`<br>`OOPlugin::isInstalled($addon, $plugin)` etc. | `rex_addon::get($addon)->getProperty($property)`<br>`rex_addon::get($addon)->isAvailable()`<br>`rex_plugin::get($addon, $plugin)->isInstalled()` etc. |
 | `rex_install_dump()`<br>`rex_organize_priorities()` | `rex_sql_util::importDump()`<br>`rex_sql_util::organizePriorities()` |
-| `rex_getAttributes()`<br>`rex_setAttributes()` | *In der Form entfernt, stattdessen `rex_sql::getArrayValue()` und `rex_sql::setArrayValue()`* |
+| `rex_getAttributes()`<br>`rex_setAttributes()` | In der Form entfernt, stattdessen `rex_sql::getArrayValue()` und `rex_sql::setArrayValue()` |
 | `rex_a79_textile()` | `rex_textile::parse()` |
 
 <a name="extension-points"></a>
