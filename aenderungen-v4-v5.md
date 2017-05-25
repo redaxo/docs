@@ -5,6 +5,8 @@
 - [Funktionen und Klassen](#funktiopnen-klassen)
 - [Extension Points](#extension-points)
 - [rex_sql](#rex-sql)
+    - [Fehlermeldung in REDAXO 4](#fehler-rex4)
+    - [Fehlermeldung in REDAXO 5](#fehler-rex5)
 - [rex_form](#rex)
 - [Packages (AddOns/PlugIns)](#packages)
 
@@ -27,9 +29,8 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `$REX['NOTFOUND_ARTICLE_ID']` | `rex_article::getNotfoundArticleId()` |
 | `$REX['CLANG']` | `rex_clang::getAll()` |
 | `$REX['MOD_REWRITE']` | Existiert nicht mehr |
-| `$REX['TABLE_PREFIX']` | `rex::getTablePrefix()` `rex::getTable($table)` (ergibt: `'rex_'.$table`) |
-| `$REX['USER']`<br>`$REX['USER']->hasPerm('myperm[]')` | `rex::getUser()` 
-`rex::getUser()->hasPerm('myperm[]')` |
+| `$REX['TABLE_PREFIX']` | `rex::getTablePrefix()`<br>`rex::getTable($table)` (ergibt: `'rex_'.$table`) |
+| `$REX['USER']`<br>`$REX['USER']->hasPerm('myperm[]')` | `rex::getUser()`<br>`rex::getUser()->hasPerm('myperm[]')` |
 | `$REX['PERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null)`<br>Zweiter (optionaler) Parameter ist ein Bezeichner, der in der Rechteverwaltung erscheint |
 | `$REX['EXTPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::OPTIONS)` |
 | `$REX['EXTRAPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::EXTRAS)` |
@@ -58,7 +59,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `OOArticle`<br>`OOCategory`<br>`OOMedia`<br>`OOMediaCategory`<br>`OOArticleSlice` | `rex_article`<br>`rex_category`<br>`rex_media`<br>`rex_media_category`<br>`rex_article_slice` |
 | `rex_article` | `rex_article_content` |
 | `OOArticle::getArticleById()`<br>`OOCategory::getCategoryById()`<br>`OOMedia::getMediaByFilename()`<br>`OOMediaCategory::getCategoryById()` | `rex_article::get()`<br>`rex_category::get()`<br>`rex_media::get()`<br>`rex_media_category::get()` |
-| `OOArticle::isValid()`<br>`OOCategory::isValid()`<br>`OOMedia::isValid()`<br> `OOMediaCategory::isValid()` | Entfernt, stattdessen: `$art instanceof rex_article` etc. |
+| `OOArticle::isValid()`<br>`OOCategory::isValid()`<br>`OOMedia::isValid()`<br> `OOMediaCategory::isValid()` | Entfernt, stattdessen:<br>`$art instanceof rex_article` etc. |
 | `$article->getDescription`()<br>`$article->isStartPage()` | `$article->getValue('art_description')`<br>`$article->isStartArticle()` |
 | `rex_register_extension()`<br>`rex_register_extension_point()`<br>`REX_EXTENSION_EARLY`<br>`REX_EXTENSION_LATE` | `rex_extension::register()`<br>`rex_extension::registerPoint()`<br>`rex_extension::EARLY`<br>`rex_extension::LATE` |
 | `rex_title()`<br>`rex_info()`<br>`rex_warning()`, etc. | `rex_view::title()`<br>`rex_view::info()`<br>`rex_view::warning()`<br>, etc. |
@@ -100,12 +101,13 @@ Die Methoden `setQuery()`, `insert()`, `update()` etc. liefern keine boolschen W
 
 | REDAXO 4 | REDAXO 5 |
 | ------------- | ------------- |
-| `$sql->setWhere('myid="35" OR abc="zdf"')` | `$sql->setWhere('myid = :id OR abc = :abc', array(':id' => 3, ':abc' => 'zdf'))` oder `$sql->setWhere(array(array('id' => 3, 'abc' => 'zdf')))`|
+| `$sql->setWhere('myid="35" OR abc="zdf"')` | `$sql->setWhere('myid = :id OR abc = :abc', array(':id' => 3, ':abc' => 'zdf'))`<br>oder<br>`$sql->setWhere(array(array('id' => 3, 'abc' => 'zdf')))`|
 | `$sql->setQuery('UPDATE rex_table SET a="$i" WHERE myid="35" ')` | `$sql->setQuery('UPDATE rex_table SET a=? WHERE myid="35" ', array($i))` |
 | `$sql->setQuery('SELECT * FROM rex_table WHERE col_str = "$adf" and col_int = "4"')` | `$sql->setQuery('SELECT * FROM rex_table WHERE col_str = :mystr and col_int = :myint', array(':mystr' => $adf, ':myint' => 4))`|
 
  Bei Fehlern wird eine `rex_sql_exception` geworfen.
 
+<a name="fehler-rex4"></a>
 ### Fehlermeldung in REDAXO 4
 
 ```php
@@ -117,6 +119,7 @@ if ($sql->update()) {
 }
 ```
 
+<a name="fehler-rex5"></a>
 ### Fehlermeldung in REDAXO 5
 
 ```php
@@ -174,21 +177,14 @@ requires:
 
 Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']`, sondern über die neue Package-api. Das aktuelle Objekt (`rex_addon` oder `rex_plugin`) ist in den Dateien (`boot.php`, `install.php`, `pages/index.php` etc.) über `$this` erreichbar.
 
-Beispiel boot.php:
-
 ```
+// Beispiel boot.php
 $this->setProperty('author', 'Vorname Nachname');
-```
 
-Beispiel install.php:
-
-```
+// Beispiel install.php
 $error = '';
-```
 
 // Überprüfungen
-
-```
 if($error)
   $this->setProperty('installmsg', $error);
 else
