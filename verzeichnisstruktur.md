@@ -17,7 +17,7 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | `/redaxo/data/` | der Basisordner für die von einer Website individuell generierten Dateien, z.B. die Konfigurationsdatei config.yml im core-Unterordner |
 | `/redaxo/cache/` | Speicherort für alle Cache-Dateien |
 | `/redaxo/src/` | Der Hauptordner (Source) für den Core |
-| `/redaxo/src/addons/` | Alle AddOns von Redaxo |
+| `/redaxo/src/addons/` | Alle AddOns von REDAXO |
 | `/redaxo/src/core/assets/` | Assets für das Backend, im wesentlichen Javascripts |
 | `/redaxo/src/core/fragments/` | Die Fragmente enthalten PHP- und HTML-Code und dienen als kleine "Bausteine" dazu, das Backend einheitlich zu gestalten. Sie können auch für die eigene Programmierung verwendet und erweitert werden |
 | `/redaxo/src/core/functions/` | Die wesentlichen PHP-Funktionen |
