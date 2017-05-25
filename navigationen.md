@@ -198,7 +198,7 @@ echo '<ul>';
             $active = ($lev1->getId() == $path1) ? ' class="active"' : '';
             $nav_main .= '<li'.$active.'><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a>';
     
-            // 2nd level start
+            // START zweite Ebene
             $lev1Size = sizeof($lev1->getChildren());    
 
             // Soll nur der jeweils aktive Kategoriebaum erscheinen?
@@ -209,7 +209,6 @@ echo '<ul>';
     
                 echo '<ul>';
     
-                    // START zweite Ebene
                     foreach ($lev1->getChildren() as $lev2) {
                         if ($lev2->isOnline(true)) {
     
@@ -338,9 +337,9 @@ Man will nicht immer mit Unterkategorien arbeiten. Manchmal legt man auch mehrer
 
 ```
 <?php
-$currentCat = rex_category::get(REX_ARTICLE_ID);
+$current_cat = rex_category::get(REX_ARTICLE_ID);
 // Array aller Artikel in der aktuellen Kategorie
-$articles = $currentCat->getArticles(true);
+$articles = $current_cat->getArticles(true);
 
 if (is_array($articles) && count($articles) > 0) {
 	echo '<ul>';
