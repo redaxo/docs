@@ -25,3 +25,10 @@ Alle Validator-Typen außer notempty führen die Prüfung erst dann durch, wenn 
 
 ### Beispiele
 coming soon...
+
+
+
+
+## Editieren und Anlegen von Datensätzen
+
+Die `rex_form` Klasse ist "Part 2" der Redaxo eigenen Datenbankverwaltung für Addons. Mit Hilfe der `rex_form` klasse ist es möglich Datensätze editeren oder anlegen zu können. Dabei bietet `rex_form` alle nötigen Standard-Formular-Elemente und ermöglicht darüber hinaus den einsatz von Redaxo-Widgets wie Link-, Linklisten oder Media- und Media-Listen-Eingabe-Felder.
