@@ -25,9 +25,25 @@
     - [absolute](#absolute)
 
 
+- [URLs - rex_url](#rex_url)
+    - [init](#urlinit)
+    - [base](#urlbase)
+    - [frontend](#urlfrontend)
+    - [frontendController](#urlfrontendController)
+    - [backend](#urlbackend)
+    - [backendController](#urlbackendController)
+    - [backendPage](#urlbackendPage)
+    - [currentBackendPage](#urlcurrentBackendPage)
+    - [media](#urlmedia)
+    - [assets](#urlassets)
+    - [coreAssets](#urlcoreAssets)
+    - [addonAssets](#urladdonAssets)
+    - [pluginAssets](#urlpluginAssets)
+
+
 Zugriff auf das Dateisystem
 
-Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entsprechenden Ressourcen im Dateisystem (´rex_path´) bzw. per URL (`rex_url`).
+Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entsprechenden Ressourcen im Dateisystem (`rex_path`) bzw. per URL (`rex_url`).
 
 <a name="rex_path"></a>
 ## Dateisystem - rex_path
@@ -278,4 +294,144 @@ Beispiel:
 `rex_path::absolute('../../src/addons')` => 'src/addons'
 
 
+
+<a name="rex_url"></a>
+## URLs - rex_url
+
+
+> **Hinweis:** Bei allen URL Funktionen der Klasse rex_url wird eine Installation von Redaxo in einem Unterverzeichnis berücksichtigt.
+
+Funktionen, die Parameter zu URLs umschreiben, können die URL auch escaped zurückgeben.
+
+<a name="urlbase"></a>
+### base
+
+Liefert den Basispfad der Website.
+
+Beispiel:
+`rex_url::base()` => '/'
+`rex_url::base('file.txt')` => '/file.txt'
+
+
+
+<a name="urlfrontend"></a>
+### frontend
+
+Liefert den Frontendpfad der Website.
+
+Beispiel:
+`rex_url::frontend()` => '/'
+Bei Installation in einem Unterverzeichnis:
+`rex_url::frontend()` => '/verzeichnis/'
+`rex_url::frontend('file.txt')` => '/verzeichnis/file.txt'
+
+
+
+<a name="urlfrontendController"></a>
+### frontendController
+
+Generiert eine URL aus übergebenen Parametern
+
+Beispiel:
+`rex_url::frontendController(['key'=>'value'])` => '/index.php?key=value'
+`rex_url::frontendController(['k1'=>'v1','k2'=>'v2'], true)` => '/index.php?k1=v1&amp;k2=v2'
+
+
+
+<a name="urlbackend"></a>
+### backend
+
+Liefert den Backendpfad der Website.
+
+Beispiel:
+`rex_url::backend()` => '/redaxo/'
+`rex_url::backend('file.txt')` => '/redaxo/file.txt'
+
+
+
+<a name="urlbackendController"></a>
+### backendController
+
+Generiert eine Backend URL aus übergebenen Parametern
+
+Beispiel:
+`rex_url::backendController(['key'=>'value'])` => '/redaxo/index.php?key=value'
+`rex_url::backendController(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?k1=v1&amp;k2=v2'
+
+
+
+<a name="urlbackendPage"></a>
+### backendPage
+
+Generiert eine URL zu einer Backend Seite
+
+Beispiel:
+`rex_url::backendPage('mypage',['key'=>'value'])` => '/redaxo/index.php?page=mypage&key=value'
+`rex_url::backendPage('mypage',['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=mypage&amp;k1=v1&amp;k2=v2'
+
+
+
+<a name="urlcurrentBackendPage"></a>
+### currentBackendPage
+
+Generiert eine URL zur aktuelln Backend Seite. Sollte sinnvollerweise nur von einer Backend Page aufgerufen werden, ansonsten ist der Parameter page leer.
+
+Beispiel:
+`rex_url::currentBackendPage(['key'=>'value'])` => '/redaxo/index.php?page=currpage&key=value'
+`rex_url::currentBackendPage(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=currpage&amp;k1=v1&amp;k2=v2'
+
+
+
+<a name="urlmedia"></a>
+### media
+
+Liefert den Frontendpfad zum Media Verzeichnis.
+
+Beispiel:
+`rex_url::media()` => '/media/'
+`rex_url::media('file.txt')` => '/media/file.txt'
+
+
+
+<a name="urlassets"></a>
+### assets
+
+Liefert den Frontendpfad zum Assets Verzeichnis.
+
+Beispiel:
+`rex_url::assets()` => '/assets/'
+`rex_url::assets('file.txt')` => '/assets/file.txt'
+
+
+
+<a name="urlcoreAssets"></a>
+### assets
+
+Liefert den Frontendpfad zum Assets Verzeichnis des Core.
+
+Beispiel:
+`rex_url::coreAssets()` => '/assets/core/'
+`rex_url::coreAssets('file.txt')` => '/assets/core/file.txt'
+
+
+
+<a name="urladdonAssets"></a>
+### addonAssets
+
+Liefert den Frontendpfad zum Assets Verzeichnis eines AddOns.
+
+Beispiel:
+`rex_url::addonAssets('meinaddon')` => '/assets/addons/meinaddon/'
+`rex_url::addonAssets('meinaddon','file.txt')` => '/assets/addons/meinaddon/file.txt'
+
+
+
+<a name="urlpluginAssets"></a>
+### pluginAssets
+
+Liefert den Frontendpfad zum Assets Verzeichnis eines Plugins.
+
+Beispiel:
+`rex_url::pluginAssets('meinaddon','meinplugin')` => '/assets/addons/meinaddon/plugins/meinplugin/'
+`rex_url::pluginAssets('meinaddon','meinplugin','file.txt')` => '/assets/addons/meinaddon/plugins/meinplugin/file.txt'
 
