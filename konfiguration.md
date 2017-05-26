@@ -4,6 +4,7 @@
 - [Paketkonfiguration package_yml](#package_yml)
 - [Konfiguration des Core](#core)
 - [AddOn Konfiguration](#addon_config)
+- [Systemkonfiguration - Startartikel - Fehlerseite](#sysconf)
 
 
 AddOn-Entwickler können die Konfiguration der AddOns in der Tabelle `rex_config` ablegen und auslesen. Dateien im AddOn-, bzw. PlugIn-Ordner sollten nicht verändert werden, um automatische Updates zu ermöglichen. Konfigurationswerte können über die Klasse `rex_config` in der Datenbank gespeichert werden. Die Werte werden gecached:
@@ -112,4 +113,27 @@ rex::getProperty('accesskeys') | | Standard: Array
 Über `dump(rex::getConfig())` kann man sich eine Übersicht der aktuellen AddOn-Konfiguration ausgeben lassen.
 
 Siehe auch [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
+
+
+<a name="sysconf"></a>
+## Systemkonfiguration
+
+### Site Startartikel
+
+In den Einstellungen auf der Seite `System` muss ein Startartikel ausgewählt werden. Dieser Artikel wird angezeigt, wenn der Website Controller (index.php) ohne weitere Parameter aufgerufen wird, bildet also quasi die Home Seite einer Webpräsenz. Jeder beliebige Artikel in der Struktur kann Startartikel sein.
+
+Der Startartikel kann über die Klasse `rex_article` abgefragt werden.
+
+`rex_article::getSiteStartArticle($clang=null)` - Standardmäßig wird der Startartikel in der aktuellen Sprache zurück gegeben, optional kann man die gewünschte clang_id übergeben und bekommt den Artikel in der jeweiligen Sprache.
+`rex_article::getSiteStartArticleId()` - gibt die Artikel Id des Startartikels der Seite.
+
+### Fehlerartikel (404)
+
+Beim Aufruf eines nicht vorhandenen Artikels wird von REDAXO der im System eingestellte Fehlerartikel ausgegeben.
+
+Der Fehlerartikel kann über die Klasse `rex_article` abgefragt werden. Standardmäßig wird der Fehlerartikel in der aktuellen Sprache zurückgegeben, wird die Sprache mit angegeben, erhält man den Artikel in der jeweiligen Sprache
+
+`rex_article::getNotfoundArticle($clang=null)`
+Mit `rex_article::getNotfoundArticleId()` bekommt man die Id des Fehlerartikels.
+
 
