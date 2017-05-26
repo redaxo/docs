@@ -35,9 +35,9 @@ Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um s
 <a name="config-methoden"></a>
 ## Config-Methoden
 
-Die Werte werden in der Tabelle rex_config gespeichert.
+Die Werte werden in der Tabelle `rex_config` gespeichert.
 
-**Hinweis:** AddOns können ihre Konfiguration über das Package-Objekt in die Konfiguration schreiben: `rex_addon::get($addon)->setConfig($key, $value);` und lesen `$value = rex_addon::get($addon)->getConfig($key);`.
+> **Hinweis:** AddOns können ihre Konfiguration über das Package-Objekt in die Konfiguration schreiben: `rex_addon::get($addon)->setConfig($key, $value);` und lesen `$value = rex_addon::get($addon)->getConfig($key);`
 
 <a name="property-methoden"></a>
 ## Property-Methoden
@@ -185,7 +185,8 @@ Wenn ein Redaxo Benutzer im Backend angemeldet ist, liefert diese Methode den Be
 Beispiel:
 `rex::getUser()->getName()` => Administrator
 
-**Hinweis:** Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
+> **Hinweis:** Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
+
 ```
 if (rex_backend_login::createUser()) { 
     $user = rex::getUser()->getName(); 
@@ -292,3 +293,4 @@ Beispiel:
 Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [removeProperty](#remove-property)
 
 Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
+
