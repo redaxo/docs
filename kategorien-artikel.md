@@ -1,11 +1,24 @@
 # Kategorien & Artikel
 
+- [Die Strukturverwaltung](#strukturverwaltung)
+- [Kategorien erstellen die Struktur](#kategorien)
+- [Artikel nehmen die Inhalte auf](#artikel)
+- [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
+- [Content-Spalten (C-Types)](#ctypes)
+- [Metainformationen](#metainfos)
+- [Code-Beispiele](#code-beispiele)
+    - [Zentrale Artikel in den Website-Einstellungen](#zentrale-artikel)
+    - [Daten des aktuellen Artikels](#aktueller-artikel)
+    - [Zugriff auf Kategorie-Daten](#kategorie-daten)
+
+<a name="strukturverwaltung"></a>
 ## Die Strukturverwaltung
 
 In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Datenbanktechnisch gibt es nahezu keinen Unterschied; sowohl Kategorien wie auch Artikel werden in der Tabelle `rex_article`gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `start_article`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
 
 Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategorien** bilden die **Struktur**, **Artikel** speichern die **Inhalte**.
 
+<a name="kategorien"></a>
 ## Kategorien erstellen die Struktur
 
 Kategorien dienen vor allem zum Aufbau einer Navigation. Es gibt zwar in REDAXO durch die Flexibilität des Systems meist mehrere Wege, das gewünschte Ziel zu erreichen, aber man erstellt üblicherweise die Navigations-Struktur mit Kategorien. Weil Kategorien in beliebiger Tiefe Unterkategorien enthalten können, sind der Komplexität von Navigationen keine Grenzen gesetzt. Um eine neue Kategorie anzulegen, klickt man auf den Ordner mit dem Pluszeichen; um eine bestehende Kategorie zu bearbeiten auf "Ändern".
@@ -14,6 +27,7 @@ Dort kann man auch die Priorität, also die Reihenfolge festlegen. "Online/Offli
 
 Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel auch als Kategorie markiert.
 
+<a name="artikel"></a>
 ## Artikel nehmen die Inhalt auf
 
 Ein Artikel ist der Bereich, der Inhalte in Form von Modulen aufnehmen kann – im Normalfall ist ein Artikel eine einzelne Webseite, die ein Benutzer aufrufen und sehen kann. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B. so nutzen:
@@ -23,7 +37,7 @@ Ein Artikel ist der Bereich, der Inhalte in Form von Modulen aufnehmen kann – 
 
 Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-Grundgerüst und werden in einem eigenen Kapitel [Templates ausführlich erläutert](/{{path}}/{{version}}/templates).
 
-
+<a name="module"></a>
 ## Module/Blöcke liefern die einzelnen Inhaltsblöcke
 
 Ein Artikel enthält verschiedene Inhaltssegmente. Es gibt normalerweise immer mindestens Inhaltsblöcke für Überschriften, Texte, Bilder, etc.
@@ -35,6 +49,7 @@ Module bestehen aus Eingabe- und Ausgabebereichen. Ein Redakteur gibt bestimmte 
 
 Auch Module werden in in einem eigenen Kapitel [Module ausführlich behandelt](/{{path}}/{{version}}/module).
 
+<a name="ctypes"></a>
 ## Content-Spalten (C-Types)
 
 Modulinhalte müssen nicht auf eine Spalte – oder allgemeiner – einen Contenbereich limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z.B. Hauptspalte, Seitenspalte, Headerbereich, etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Contentbereichs erfolgt.
@@ -43,6 +58,7 @@ In der Rechteverwaltung kann festgelegt werden, welche Module in welcher Spalte 
 
 Die C-Types werden ebenfalls im Kapitel [Templates dokumentiert](/{{path}}/{{version}}/templates).
 
+<a name="metainfos"></a>
 ## Metainformationen
 
 Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft genutzt für Inhalte oder Einstellungen, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wäre etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
@@ -51,10 +67,12 @@ Metafelder, mit denen man Metainformationen pflegen kann, kann der Admin für Ar
 
 Den Umgang mit Metainformationen behandelt ein eigenes Kapitel [Metainformationen ausführlich](/{{path}}/{{version}}/metainformationen).
 
+<a name="code-beispiele"></a>
 ## Code-Beispiele
 
 Nachfolgend als Einstieg einige erste Beispiele für den Umgang mit Artikel- und Kategorie-Daten. Detaillierter findet man dies ersten Ansätze "zum Reinschnuppern" in den Kapiteln [Konfiguration](/{{path}}/{{version}}/konfiguration) sowie [Navigationen](/{{path}}/{{version}}/navigationen) erklärt.
 
+<a name="zentrale-artikel"></a>
 ### Zentrale Artikel in den Website-Einstellungen
 
 ```
@@ -65,6 +83,7 @@ echo rex_article::getSiteStartArticle();
 echo rex_article::getNotfoundArticleId();
 ```
 
+<a name="aktueller-artikel"></a>
 ### Daten des aktuellen Artikels
 
 ```
@@ -90,6 +109,7 @@ echo $this->getValue("art_headerbild");
 echo $this->getValue("cat_navigation_type");
 ```
 
+<a name="kategorie-daten"></a>
 ### Zugriff auf Kategorie-Daten
 
 ```
