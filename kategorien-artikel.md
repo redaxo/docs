@@ -110,3 +110,4 @@ $subcategories = rex_category::getCurrent()->getChildren();
 dump($subcategories);
 ```
 
+
