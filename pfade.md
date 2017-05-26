@@ -53,7 +53,7 @@ Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entspreche
 <a name="base"></a>
 ### base
 
-Gibt den Base Pfad der übergebenen Datei zurück.
+Gibt den Base Pfad der übergebenen Datei zurück
 
 Beispiel:
 `rex_path::base('media/meinbild.jpg')` => '/htdocs/meinverzeichnis/media/meinbild.jpg'
@@ -63,7 +63,7 @@ Beispiel:
 <a name="frontend"></a>
 ### frontend
 
-Gibt den Frontend Pfad der übergebenen Datei zurück.
+Gibt den Frontend Pfad der übergebenen Datei zurück
 
 Beispiel:
 `rex_path::base('media/meinbild.jpg')` => '/htdocs/meinverzeichnis/media/meinbild.jpg'
@@ -73,7 +73,7 @@ Beispiel:
 <a name="frontendController"></a>
 ### frontendController
 
-Pfad zum Frontend Controller.
+Pfad zum Frontend-Controller
 
 Beispiel:
 `rex_path::frontendController()` => '/htdocs/meinverzeichnis/index.php'
@@ -83,7 +83,7 @@ Beispiel:
 <a name="backend"></a>
 ### backend
 
-Pfad zum Backend.
+Pfad zum Backend
 
 Beispiel:
 `rex_path::backend()` => '/htdocs/meinverzeichnis/redaxo/'
@@ -94,7 +94,7 @@ Beispiel:
 <a name="backendController"></a>
 ### backendController
 
-Pfad zum Backend Controller.
+Pfad zum Backend-Controller
 
 Beispiel:
 `rex_path::backendController()` => '/htdocs/meinverzeichnis/redaxo/index.php'
@@ -104,7 +104,7 @@ Beispiel:
 <a name="media"></a>
 ### media
 
-Pfad zum Media Verzeichnis.
+Pfad zum Media-Verzeichnis
 
 Beispiel:
 `rex_path::media()` => '/htdocs/meinverzeichnis/media/'
@@ -114,7 +114,7 @@ Beispiel:
 <a name="assets"></a>
 ### assets
 
-Pfad zum Assets Verzeichnis.
+Pfad zum Assets-Verzeichnis
 
 Beispiel:
 `rex_path::assets()` => '/htdocs/meinverzeichnis/assets/'
@@ -124,7 +124,7 @@ Beispiel:
 <a name="coreAssets"></a>
 ### coreAssets
 
-Pfad zum Assets Verzeichnis des Core.
+Pfad zum Assets-Verzeichnis des Core
 
 Beispiel:
 `rex_path::coreAssets()` => '/htdocs/meinverzeichnis/assets/core/'
@@ -135,7 +135,7 @@ Beispiel:
 <a name="addonAssets"></a>
 ### addonAssets
 
-Pfad zum Assets Verzeichnis eines AddOns.
+Pfad zum Assets-Verzeichnis eines AddOns
 
 Beispiel:
 `rex_path::addonAssets('meinaddon')` => '/htdocs/meinverzeichnis/assets/addons/meinaddon/'
@@ -146,7 +146,7 @@ Beispiel:
 <a name="pluginAssets"></a>
 ### pluginAssets
 
-Pfad zum Assets Verzeichnis eines Plugins.
+Pfad zum Assets-Verzeichnis eines Plugins
 
 Beispiel:
 `rex_path::pluginAssets('meinaddon','meinplugin')` => '/htdocs/meinverzeichnis/assets/addons/meinaddon/plugins/meinplugin/'
@@ -157,7 +157,7 @@ Beispiel:
 <a name="data"></a>
 ### data
 
-Pfad zum Data Verzeichnis.
+Pfad zum Data-Verzeichnis
 
 Beispiel:
 `rex_path::data()` => '/htdocs/meinverzeichnis/data/'
@@ -167,7 +167,7 @@ Beispiel:
 <a name="coreData"></a>
 ### coreData
 
-Pfad zum Data Verzeichnis des Core.
+Pfad zum Data-Verzeichnis des Core
 
 Beispiel:
 `rex_path::coreData()` => '/htdocs/meinverzeichnis/data/core/'
@@ -178,7 +178,7 @@ Beispiel:
 <a name="addonData"></a>
 ### addonData
 
-Pfad zum Data Verzeichnis eines AddOns.
+Pfad zum Data-Verzeichnis eines AddOns
 
 Beispiel:
 `rex_path::addonData('meinaddon')` => '/htdocs/meinverzeichnis/data/addons/meinaddon/'
@@ -189,7 +189,7 @@ Beispiel:
 <a name="pluginData"></a>
 ### pluginData
 
-Pfad zum Data Verzeichnis eines Plugins.
+Pfad zum Data-Verzeichnis eines Plugins
 
 Beispiel:
 `rex_path::pluginData('meinaddon','meinplugin')` => '/htdocs/meinverzeichnis/data/addons/meinaddon/plugins/meinplugin/'
@@ -200,7 +200,7 @@ Beispiel:
 <a name="cache"></a>
 ### cache
 
-Pfad zum Cache Verzeichnis.
+Pfad zum Cache-Verzeichnis
 
 Beispiel:
 `rex_path::cache()` => '/htdocs/meinverzeichnis/redaxo/cache/'
@@ -211,7 +211,7 @@ Beispiel:
 <a name="coreCache"></a>
 ### coreCache
 
-Pfad zum Data Verzeichnis.
+Pfad zum Data-Verzeichnis
 
 Beispiel:
 `rex_path::coreCache()` => '/htdocs/meinverzeichnis/redaxo/cache/core/'
@@ -222,7 +222,7 @@ Beispiel:
 <a name="addonCache"></a>
 ### addonCache
 
-Pfad zum Cache Verzeichnis eines AddOns.
+Pfad zum Cache-Verzeichnis eines AddOns
 
 Beispiel:
 `rex_path::addonCache('meinaddon')` => '/htdocs/meinverzeichnis/redaxo/cache/addons/meinaddon/'
@@ -233,7 +233,7 @@ Beispiel:
 <a name="pluginCache"></a>
 ### pluginCache
 
-Pfad zum Cache Verzeichnis eines Plugins.
+Pfad zum Cache-Verzeichnis eines Plugins
 
 Beispiel:
 `rex_path::pluginCache('meinaddon','meinplugin')` => '/htdocs/meinverzeichnis/redaxo/cache/addons/meinaddon/plugins/meinplugin/'
@@ -244,7 +244,7 @@ Beispiel:
 <a name="src"></a>
 ### src
 
-Pfad zum src Verzeichnis.
+Pfad zum Src-Verzeichnis
 
 Beispiel:
 `rex_path::src()` => '/htdocs/meinverzeichnis/redaxo/src/'
@@ -255,7 +255,7 @@ Beispiel:
 <a name="core"></a>
 ### core
 
-Pfad zum core Verzeichnis.
+Pfad zum Core-Verzeichnis
 
 Beispiel:
 `rex_path::core()` => '/htdocs/meinverzeichnis/redaxo/src/core/'
@@ -266,7 +266,7 @@ Beispiel:
 <a name="addon"></a>
 ### addon
 
-Pfad zum addon Verzeichnis.
+Pfad zum AddOn-Verzeichnis
 
 Beispiel:
 `rex_path::addon('meinaddon')` => '/htdocs/meinverzeichnis/redaxo/src/addons/meinaddon/'
@@ -277,7 +277,7 @@ Beispiel:
 <a name="plugin"></a>
 ### plugin
 
-Pfad zum plugin Verzeichnis.
+Pfad zum PlugIn-Verzeichnis
 
 Beispiel:
 `rex_path::plugin('meinaddon','meinplugin')` => '/htdocs/meinverzeichnis/redaxo/src/addons/meinaddon/plugins/meinplugin/'
@@ -288,7 +288,7 @@ Beispiel:
 <a name="absolute"></a>
 ### absolute
 
-Wandelt einen relativen Pfad zu einem absoluten Pfad.
+Wandelt einen relativen Pfad zu einem absoluten Pfad
 
 Beispiel:
 `rex_path::absolute('../../src/addons')` => 'src/addons'
@@ -299,14 +299,14 @@ Beispiel:
 ## URLs - rex_url
 
 
-> **Hinweis:** Bei allen URL Funktionen der Klasse rex_url wird eine Installation von Redaxo in einem Unterverzeichnis berücksichtigt.
+> **Hinweis:** Bei allen URL-Funktionen der Klasse `rex_url` wird eine Installation von Redaxo in einem Unterverzeichnis berücksichtigt.
 
-Funktionen, die Parameter zu URLs umschreiben, können die URL auch escaped zurückgeben.
+Funktionen, die Parameter zu URLs umschreiben, können die URL auch "escaped" zurückgeben.
 
 <a name="urlbase"></a>
 ### base
 
-Liefert den Basispfad der Website.
+Liefert den Basispfad der Website
 
 Beispiel:
 `rex_url::base()` => '/'
@@ -317,7 +317,7 @@ Beispiel:
 <a name="urlfrontend"></a>
 ### frontend
 
-Liefert den Frontendpfad der Website.
+Liefert den Frontendpfad der Website
 
 Beispiel:
 `rex_url::frontend()` => '/'
@@ -341,7 +341,7 @@ Beispiel:
 <a name="urlbackend"></a>
 ### backend
 
-Liefert den Backendpfad der Website.
+Liefert den Backendpfad der Website
 
 Beispiel:
 `rex_url::backend()` => '/redaxo/'
@@ -352,7 +352,7 @@ Beispiel:
 <a name="urlbackendController"></a>
 ### backendController
 
-Generiert eine Backend URL aus übergebenen Parametern
+Generiert eine Backend-URL aus übergebenen Parametern
 
 Beispiel:
 `rex_url::backendController(['key'=>'value'])` => '/redaxo/index.php?key=value'
@@ -374,7 +374,7 @@ Beispiel:
 <a name="urlcurrentBackendPage"></a>
 ### currentBackendPage
 
-Generiert eine URL zur aktuelln Backend Seite. Sollte sinnvollerweise nur von einer Backend Page aufgerufen werden, ansonsten ist der Parameter page leer.
+Generiert eine URL zur aktuellen Backend-Seite. Sollte sinnvollerweise nur von einer Backend-Page aufgerufen werden, ansonsten ist der Parameter `page` leer.
 
 Beispiel:
 `rex_url::currentBackendPage(['key'=>'value'])` => '/redaxo/index.php?page=currpage&key=value'
@@ -385,7 +385,7 @@ Beispiel:
 <a name="urlmedia"></a>
 ### media
 
-Liefert den Frontendpfad zum Media Verzeichnis.
+Liefert den Frontendpfad zum Media-Verzeichnis
 
 Beispiel:
 `rex_url::media()` => '/media/'
@@ -396,7 +396,7 @@ Beispiel:
 <a name="urlassets"></a>
 ### assets
 
-Liefert den Frontendpfad zum Assets Verzeichnis.
+Liefert den Frontendpfad zum Assets-Verzeichnis
 
 Beispiel:
 `rex_url::assets()` => '/assets/'
@@ -407,7 +407,7 @@ Beispiel:
 <a name="urlcoreAssets"></a>
 ### assets
 
-Liefert den Frontendpfad zum Assets Verzeichnis des Core.
+Liefert den Frontendpfad zum Assets-Verzeichnis des Core
 
 Beispiel:
 `rex_url::coreAssets()` => '/assets/core/'
@@ -418,7 +418,7 @@ Beispiel:
 <a name="urladdonAssets"></a>
 ### addonAssets
 
-Liefert den Frontendpfad zum Assets Verzeichnis eines AddOns.
+Liefert den Frontendpfad zum Assets-Verzeichnis eines AddOns
 
 Beispiel:
 `rex_url::addonAssets('meinaddon')` => '/assets/addons/meinaddon/'
@@ -429,7 +429,7 @@ Beispiel:
 <a name="urlpluginAssets"></a>
 ### pluginAssets
 
-Liefert den Frontendpfad zum Assets Verzeichnis eines Plugins.
+Liefert den Frontendpfad zum Assets-Verzeichnis eines Plugins
 
 Beispiel:
 `rex_url::pluginAssets('meinaddon','meinplugin')` => '/assets/addons/meinaddon/plugins/meinplugin/'
