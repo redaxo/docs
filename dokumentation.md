@@ -24,7 +24,7 @@
     - [Einstieg](/{{path}}/{{version}}/einstieg)
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur)
-    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel)
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen)
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
@@ -49,7 +49,7 @@
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
-    - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
+    - [Pfade <sup>(rex_path, rex_url)</sup>](/{{path}}/{{version}}/pfade) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests) <sup><b>offen</b></sup>
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)

@@ -16,12 +16,12 @@ Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer K
 
 ## Artikel nehmen die Inhalt auf
 
-Ein Artikel ist der Bereich, der Inhalte in Form von Modulen aufnehmen kann – im Normalfall ist ein Artikel eine einzelne Webseite, die ein Benutzer aufrufen und sehen kann. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B: so nutzen:
+Ein Artikel ist der Bereich, der Inhalte in Form von Modulen aufnehmen kann – im Normalfall ist ein Artikel eine einzelne Webseite, die ein Benutzer aufrufen und sehen kann. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B. so nutzen:
 
 -	Der Startartikel liefert die Übersicht, z.B. von Neuigkeiten
 -	Die weiteren Artikel sind die einzelnen Neuigkeiten, die Detailseiten
 
-Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-Grundgerüst und werden in einem eigenen [Kapitel ausführlich erläutert](/{{path}}/{{version}}/templates).
+Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-Grundgerüst und werden in einem eigenen Kapitel [Templates ausführlich erläutert](/{{path}}/{{version}}/templates).
 
 
 ## Module/Blöcke liefern die einzelnen Inhaltsblöcke
@@ -29,23 +29,31 @@ Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-
 Ein Artikel enthält verschiedene Inhaltssegmente. Es gibt normalerweise immer mindestens Inhaltsblöcke für Überschriften, Texte, Bilder, etc.
 Blöcke kann man beliebig oft in einem Artikel verwenden. So kann man z.B. verschiedene Absätze wie auch Bilder nach Belieben anlegen und einen einzelnen Artikel immer mehr erweitern.
 
-Module werden im Normalfall vom Entwickler individuell für jede Website erstellt, so dass man die entsprechenden Besonderheiten gut abbilden kann.
+Module werden im Normalfall vom Entwickler individuell für jede Website erstellt, so dass man die entsprechenden Besonderheiten einer Website gut abbilden kann.
 
 Module bestehen aus Eingabe- und Ausgabebereichen. Ein Redakteur gibt bestimmte Inhalte ein (gesteuert durch den Eingabe-Code), und diese werden dann auf der Webseite ausgegeben (gesteuert durch den Ausgabebe-Code). Im Modul definiert der Entwickler also, welche Felder die Eingaben speichern und wie diese Inhalte in Form von Texten, Bilder, etc. ausgegeben werden.
 
-Auch Module werden in in einem eigenen [Kapitel ausführlich behandelt](/{{path}}/{{version}}/module)
+Auch Module werden in in einem eigenen Kapitel [Module ausführlich behandelt](/{{path}}/{{version}}/module).
+
+## Content-Spalten (C-Types)
+
+Modulinhalte müssen nicht auf eine Spalte – oder allgemeiner – einen Contenbereich limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z.B. Hauptspalte, Seitenspalte, Headerbereich, etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Contentbereichs erfolgt.
+
+In der Rechteverwaltung kann festgelegt werden, welche Module in welcher Spalte verwendet dürfen und von welchem Redakteur.
+
+Die C-Types werden ebenfalls im Kapitel [Templates dokumentiert](/{{path}}/{{version}}/templates).
 
 ## Metainformationen
 
-Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft genutzt für Inhalte oder Einstellungen, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wäre etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
+Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft genutzt für Inhalte oder Einstellungen, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wäre etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
 
 Metafelder, mit denen man Metainformationen pflegen kann, kann der Admin für Artikel, Kategorien und Medien anlegen.
 
-Den Umgang mit Metainformationen behandelt [ein eigenes Kapitel ausführlich](/{{path}}/{{version}}/metainformationen)
+Den Umgang mit Metainformationen behandelt ein eigenes Kapitel [Metainformationen ausführlich](/{{path}}/{{version}}/metainformationen).
 
 ## Code-Beispiele
 
-Nachfolgend als Einstig einige erste Beispiele für den Umgang mit Artikel- und Kategorie-Daten. Detaillierter finden sich diese 
+Nachfolgend als Einstieg einige erste Beispiele für den Umgang mit Artikel- und Kategorie-Daten. Detaillierter findet man dies ersten Ansätze "zum Reinschnuppern" in den Kapiteln [Konfiguration](/{{path}}/{{version}}/konfiguration) sowie [Navigationen](/{{path}}/{{version}}/navigationen) erklärt.
 
 ### Zentrale Artikel in den Website-Einstellungen
 
@@ -69,13 +77,16 @@ echo REX_ARTICLE_ID;
 
 // Online/Offline-Status des aktuellen Artikels
 echo rex_article::getCurrent()->getValue('status');
-// ebenfalls möglich:
+// Ebenfalls möglich:
 echo REX_ARTICLE[field='status'];
+// Ebenfalls möglich:
 echo $this->getValue("status");
 
-// Nach gleichem Prinzip kann man auf Artikel-Metadaten zugreifen, sofern man das Metafeld vorher angelegt hat:
+// Nach gleichem Prinzip kann man auf Artikel-Metadaten zugreifen,
+// sofern man das Metafeld vorher angelegt hat:
 echo $this->getValue("art_headerbild");
-// Nach gleichem Prinzip kann man auch auf Kategporie-Metadaten zugreifen, sofern man das Metafeld vorher angelegt hat:
+// Nach gleichem Prinzip kann man auch auf Kategporie-Metadaten zugreifen,
+// sofern man das Metafeld vorher angelegt hat:
 echo $this->getValue("cat_navigation_type");
 ```
 
@@ -83,29 +94,26 @@ echo $this->getValue("cat_navigation_type");
 
 ```
 // Alle Artikel in der aktuellen Kategorie zurückgeben
+$cat = rex_category::get(REX_CATEGORY_ID);
 $articles = $cat ? $cat->getArticles(true) : [];
 dump($articles);
 
-// Die Methoden zum Laden weiterer Kategorien besitzen meist
-// auch einen Parameter zum ignorieren von Offline-Inhalten.
+// Hinweis: Die Methoden zum Laden weiterer Kategorien besitzen meist
+// auch einen Parameter zum Ignorieren von Offline-Inhalten: (true).
 
-// Aktuelle Kategorie
-$cat = rex_category::get(REX_CATEGORY_ID);
-dump($cat);
-
-// Aktuelle Kategorie
+// Werte der aktuellen Kategorie
 $cat = rex_category::getCurrent();
-dump($cat);
+// Ebenfalls möglich:
 $cat = rex_category::get(REX_CATEGORY_ID);
-dump($cat);
+// Kategorie mit der ID 3
 $cat = rex_category::get(3);
 dump($cat);
 
-// Root
+// Rootkategorien in der obersten Ebene
 $root_categories = rex_category::getRootCategories();
 dump($root_categories);
 
-// Unterkategorien
+// Unterkategorien der aktuellen Kategorie
 $subcategories = rex_category::getCurrent()->getChildren();
 dump($subcategories);
 ```
