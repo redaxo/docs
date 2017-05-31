@@ -142,7 +142,7 @@ Benötigt man Navigationsvarianten, die Navigation Factory nicht darstellen kann
 
 Eine Hauptnavigation – sei es nur die erste Ebene oder eine Dropdown-Navigation mit mehrfachen Ebenen – benötigt eigentlich jede Website.
 
-<a name="erste-ebene"></a>
+<a name="custom-erste-ebene"></a>
 #### Erste Ebene
 
 Zum Schreiben eigener Navigationen ist der Wert im path-Feld eines Artikels von elementarer Bedeutung. Dort findet man über Pipe-Symbole getrennt die IDs der Eltern-Kategorien. Nehmen wir an, ein Artikel befindet sich in der dritten Kategorie-Ebene. Nehmen wir weiterhin an, die Eltern-Kategorie in der ersten Ebene hat eine 2, die Eltern-Kategorie in der zweiten Ebene hat eine 4. So hat unsere Unterkategorie in der dritten Ebene im path-Feld den Eintrag `2|4`. Mit diesem Wert lässt sich nun immer bestimmen, wo in der Struktur sich der aktuelle Artikel befindet.
@@ -182,7 +182,7 @@ echo '<ul>';
 <a name="custom-mehr-ebenen"></a>
 #### Zwei oder mehr Ebenen
 
-Nach dem gleichen Schema wie in der ersten Ebene können weitere Ebenen durchlaufen werden. Das Beispeil zeigt eine Navigation mit zwei Ebenen. Eine dritte und vierte Ebene kann dem Schema folgend rasch implementiert werden. Diese Navigation eignet sich übrigens auch zum Erstellen einer Sitemap.
+Nach dem gleichen Schema wie in der ersten Ebene können weitere Ebenen durchlaufen werden. Das Beispiel zeigt eine Navigation mit zwei Ebenen. Eine dritte und vierte Ebene kann dem Schema folgend rasch implementiert werden. Diese Navigation eignet sich übrigens auch zum Erstellen einer Sitemap.
 
 ```
 <?php
