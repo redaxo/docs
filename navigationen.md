@@ -149,9 +149,9 @@ Zum Schreiben eigener Navigationen ist der Wert im path-Feld eines Artikels von 
 
 ```
 <?php
-$path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
 // Indem an den path-Wert des aktuellen Artikels noch die eigene ID angehängt wird,
-// entsteht ein Array mit allen IDs der Kategorien für den aktuellen Artikel $path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
+// entsteht ein Array mit allen IDs der Kategorien für den aktuellen Artikel 
+$path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
 
 // Für eine Navigation mit nur einer Ebene wird nur das erste Element des Arrays benötigt,
 // also die ID der obersten Elternkategorie.
