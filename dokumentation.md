@@ -50,7 +50,7 @@
     - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
-    - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Requests <sup>(rex_get, rex_post, rex_request, etc.)</sup>](/{{path}}/{{version}}/requests)
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>offen</b></sup>
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
