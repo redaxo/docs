@@ -14,7 +14,6 @@ Für `var_type` sind folgende Werte gültig:
 Das Ergebnis wird dann in den entsprechenden Typ umgewandelt.
 
 
-```
 Funktion | Beispiel | Erklärung
 ------------- | ------------- | ------------- 
 rex_get  | `rex_get('meinevar','int',0)` | http://example.com/meineseite?meinevar=456 => 456
@@ -32,4 +31,3 @@ rex_request::isXmlHttpRequest | `rex_request::isXmlHttpRequest()` | Liefert true
 rex_request::isPJAXRequest | `rex_request::isPJAXRequest()` | Liefert true, wenn $_SERVER['HTTP_X_PJAX'] true ist, ansonsten false
 rex_request::isPJAXContainer | `rex_request::isPJAXContainer($containerId)` | Liefert true, wenn $_SERVER['HTTP_X_PJAX_CONTAINER'] gleich wie $containerId ist, ansonsten false. 
 
-```
