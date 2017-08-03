@@ -28,9 +28,9 @@ Dort kann man auch die Priorität, also die Reihenfolge festlegen. "Online/Offli
 Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel auch als Kategorie markiert.
 
 <a name="artikel"></a>
-## Artikel nehmen die Inhalt auf
+## Artikel geben die Inhalte aus
 
-Ein Artikel ist der Bereich, der Inhalte in Form von Modulen aufnehmen kann – im Normalfall ist ein Artikel eine einzelne Webseite, die ein Benutzer aufrufen und sehen kann. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B. so nutzen:
+Ein Artikel ist der Bereich, der Inhalte mit Hilfe der eingepflegten (Inhalts-)Blöcke auf einer Seite der Webpräsenz ausgibt. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B. so nutzen:
 
 -	Der Startartikel liefert die Übersicht, z.B. von Neuigkeiten
 -	Die weiteren Artikel sind die einzelnen Neuigkeiten, die Detailseiten
