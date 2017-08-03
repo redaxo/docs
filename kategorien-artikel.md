@@ -14,7 +14,7 @@
 <a name="strukturverwaltung"></a>
 ## Die Strukturverwaltung
 
-In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Datenbanktechnisch gibt es nahezu keinen Unterschied; sowohl Kategorien wie auch Artikel werden in der Tabelle `rex_article`gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `start_article`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
+In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Aatenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien wie auch Artikel werden in der Tabelle `rex_article`gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `start_article`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
 
 Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategorien** bilden die **Struktur**, **Artikel** speichern die **Inhalte**.
 
@@ -25,7 +25,7 @@ Kategorien dienen vor allem zum Aufbau einer Navigation. Es gibt zwar in REDAXO 
 
 Dort kann man auch die Priorität, also die Reihenfolge festlegen. "Online/Offline" schließlich vergibt einen Kategoriestatus – das heißt aber nicht, dass diese Kategorie nicht zu sehen ist. (Das entscheidet der Entwickler, wie mit Offline-Artikel verfahren wird.)
 
-Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel auch als Kategorie markiert.
+Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel als Kategorie markiert.
 
 <a name="artikel"></a>
 ## Artikel geben die Inhalte aus
