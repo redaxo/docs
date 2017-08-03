@@ -2,7 +2,7 @@
 
 - [Die Strukturverwaltung](#strukturverwaltung)
 - [Kategorien erstellen die Struktur](#kategorien)
-- [Artikel nehmen die Inhalte auf](#artikel)
+- [Artikel geben die Inhalte aus](#artikel)
 - [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
 - [Content-Spalten (C-Types)](#ctypes)
 - [Metainformationen](#metainfos)
