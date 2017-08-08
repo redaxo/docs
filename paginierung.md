@@ -20,7 +20,8 @@ Mit
 <?php $pager->setRowCount(123) ?>
 ```
     
-wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt. Der Wert kann mit
+wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt. 
+Der Wert kann mit
 
 ```
 <?php $numRowsTotal = $pager->getRowCount() ?>
@@ -28,7 +29,8 @@ wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt. Der Wert kann mit
     
 ausgelesen werden.
 
-Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden. Der Seitenzahl kann mit
+Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden. 
+Die Seitenzahl kann mit
 
 ```
 <?php $totalPages = $pager->getPageCount() ?>
