@@ -162,9 +162,9 @@ Zum Schreiben eigener Navigationen ist der Wert im path-Feld eines Artikels von 
 
 ```
 <?php
-// Indem an den path-Wert des aktuellen Artikels noch die eigene ID angehängt wird,
-// entsteht ein Array mit allen IDs der Kategorien für den aktuellen Artikel 
-$path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
+// Aktuellen Pfad zum Artikel mit allen Kategorien als Array auslesen
+// Das Array kann man sich mit dump($path) genau ausgeben lassen.
+$path = rex_article::getCurrent()->getPathAsArray();
 
 // Für eine Navigation mit nur einer Ebene wird nur das erste Element des Arrays benötigt,
 // also die ID der obersten Elternkategorie.
@@ -200,7 +200,7 @@ Nach dem gleichen Schema wie in der ersten Ebene können weitere Ebenen durchlau
 
 ```
 <?php
-$path = explode("|",$this->getValue("path").$this->getValue("article_id")."|");
+$path = rex_article::getCurrent()->getPathAsArray();
 $path1 = ((!empty($path[1])) ? $path[1] : '');
 $path2 = ((!empty($path[2])) ? $path[2] : '');
 
