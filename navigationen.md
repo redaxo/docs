@@ -49,10 +49,19 @@ Werden keine Parameter angegeben, startet die Navigation mit der Wurzelkategorie
 $nav = rex_navigation::factory();
 $nav->show(0, -1, TRUE, TRUE);
 ```
+#### Parameter 
 
+**$category_id**
 Mit dem ersten Parameter – hier “0” – definiert man, an welcher Stelle die Navigation startet. Man kann hier die ID der gewünschten Kategorie eintragen; mit "0" beginnt die Navigation in der obersten Ebene.
+
+**$depth**
 Der zweite Parameter legt die Anzahl der Ebenen fest: "-1" bedeutet, dass alle Ebenen ausgegeben werden. Ansonsten wird hier die Anzahl der gewünschten Ebenen eingetragen. Ein häufiger Wert ist 2 oder 3.
-Mit dem dritten Parameter legt man fest, ob alle oder nur die aktiven Kategorien ausgegeben werden. "TRUE" erzeugt quasi eine Sitemap mit allen Kategorien, "FALSE" eine "normale" Navigation: Unterkategorien werden dann nur angezeigt, wenn man sich in der jeweiligen Hauptkategorie befindet.
+
+**$open **
+Mit dem dritten Parameter legt man fest, ob alle oder nur die aktiven Kategorien ausgegeben werden. 
+"FALSE" erzeugt quasi eine Navigation mit allen Kategorien, "TRUE" eine "normale" Navigation: Unterkategorien werden erst dann gelistet, wenn die jeweilige Oberkategorie aufgerufen wurde. 
+
+**$ignore_offlines**
 Der vierte Parameter definiert, ob nur Artikel angezeigt werden, die online sind ("TRUE”") oder auch Offline-Artikel ("FALSE").
 
 Um eine Sitemap zu erzeugen, müssen alle Ebenen durchlaufen (2. Parameter: `-1`) und alle Zweige geöffnet angezeigt werden (3. Parameter: `TRUE`). In diesem Beispiel werden Offline-Artikel nicht angezeigt (4. Parameter: `TRUE`).
