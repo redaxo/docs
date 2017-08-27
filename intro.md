@@ -3,7 +3,7 @@
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen. 
 
 > Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Derzeit arbeiten Peter Bickel, Thomas Skerbis und Wolfgang Bund an der Dokumentation.
-Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), so dass sich jeder beteiligen kann. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden. 
+Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), so dass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden. 
 [Zur Dokumentation auf GitHub](https://github.com/redaxo/docs).
 
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü. 
@@ -12,15 +12,15 @@ Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmen�
 
 **Einleitung**
 
-Grundlegende Informationenen  zur aktuellen Version, Aktualisierung, API 
+Grundlegende Informationenen zur aktuellen Version, Aktualisierung, API 
 
 **Setup**
 
 Installationsanleitung, erster Login, Passwort-Wiederherstellung
 
-**Anwender**
+**Anwendung**
 
-Der Anwenderbereich ist primär an die Redakteure gerichtet. Hier wird die Bedienung des Systems erläutert.  
+Der Bereich zur Anwendung ist primär an Redakteurinnen und Redakteure gerichtet. Hier wird die Bedienung des Systems erläutert.  
 
 **Basis**
 
