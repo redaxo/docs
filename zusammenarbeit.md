@@ -4,13 +4,13 @@
 - [Slack-Channel](#slack-channel)
 - [Forum](#forum)
 - [Referenzen](#referenzen)
-- [Friends of Redaxo](#friends-of-redaxo)
+- [Friends Of REDAXO](#friends-of-redaxo)
 - [Dokumentation](#dokumentation)
 - [Fehler gefunden?](#fehler-gefunden)
-- [Git Issues](#git-issues)
+- [Git-Issues](#github-issues)
 - [Pull requests](#pull-requests)
 - [Eigene AddOns](#eigene-addons)
-- [Redaxo Entwickler](#redaxo-entwickler)
+- [REDAXO-Entwickelnde und Agenturen](#redaxo-entwickelnde)
 
 <a name="mitarbeit"></a>
 ## Mitarbeit an REDAXO
@@ -20,22 +20,26 @@ REDAXO bietet als quelloffenes System viele Möglichkeiten der Mitarbeit. Eine M
 <a name="slack-channel"></a>
 ## Slack-Channel
 
-Erster Anlaufpunkt ist in jedem Fall der **FOR Slack Channel**, in dem sich Entwickler und Anwender austauschen. Für den Slack-Channel gibt es eine direkte Anmeldemöglichkeit beim [Slack-Anmeldeformular](/slack/).
+Erster Anlaufpunkt ist in jedem Fall der **Slack-Channel von Friends Of REDAXO**, in dem sich Entwickelnde und Nutzer\_innen austauschen. Slack ist kostenlos und kann im Browser genutzt werden, es gibt aber auch Apps für alle wichtigen Systeme.
+
+Für den Slack-Channel könnte ihr euch hier mit eurer E-Mailadresse anmelden: [Slack-Anmeldeformular](/slack/).
 
 <a name="forum"></a>
 ## Forum
 
-Das [Forum](/forum/) ist ebenso eine Möglichkeit, sich auszutauschen, Fragen zu stellen oder anderen Anwendern zu helfen.
+Das [Forum](/forum/) ist ebenso eine Möglichkeit, sich auszutauschen, Fragen zu stellen oder anderen Anwenderinnen und Anwendern zu helfen.
 
 <a name="referenzen"></a>
-## Referenzen
+## Website-Referenzen
 
-Mit REDAXO erstellte Seiten können im Bereich [Referenzen](/cms/referenzen/) eingestellt werden.
+Mit REDAXO erstellte Websites können im Bereich [Referenzen](/cms/referenzen/) eingestellt werden.
 
 <a name="friends-of-redaxo"></a>
-## Friends of Redaxo (FOR)
+## Friends Of REDAXO (FOR)
 
-**Friends of Redaxo** ist eine Initiative von und für Entwickler, die eine offenere Zusammenarbeit anstreben. AddOns in diesem Bereich können grundsätzlich von jedem anderen FOR-Mitglied bearbeitet werden. FOR-Code wird immer unter der MIT-Lizenz veröffentlicht. Dennoch bleibt der Ersteller hauptverantwortlich für das AddOn, sofern er seine Verantwortlichkeit nicht abgeben möchte. Somit kann ein AddOn auch weiter entwickelt werden, selbst wenn der Hauptentwickler das AddOn nicht mehr weiter entwickelt. AddOns, die im FOR-Bereich veröffentlicht werden, kann man als vollständige Spende eines Entwicklers an die Community betrachten.
+Friends Of REDAXO ist eine Initiative von und für Entwickler\_innen, die eine **offene und gemeinschaftliche Zusammenarbeit** anstreben. FOR-Code wird immer unter der MIT-Lizenz veröffentlicht. Projekte werden von allen interessierten FOR-Mitgliedern abgestimmt und gemeinsam bearbeitet. Diejenigen, die ein Projekt gestartet haben, bleiben dabei in besonderem Maße verantwortlich. Sollten sie sich mal nicht mehr beteiligen wollen, wird das Projekt von anderen FOR-Mitgliedern aufgefangen und weiterentwickelt.
+
+Die Arbeit von Friends Of REDAXO kann als Spende an die REDAXO-Community betrachtet werden.
 
 <a name="dokumentation"></a>
 ## Dokumentation
@@ -45,33 +49,32 @@ Mitarbeit im Bereich Dokumentation ist ausdrücklich erwünscht. Auch hier gibt 
 <a name="fehler-gefunden"></a>
 ## Fehler gefunden?
 
-Bei Fehlern ist zunächst zu prüfen, ob es sich um Implementierungsfehler oder Fehler im Code handelt. In jedem Falle ist eine möglichst aussagekräftige Beschreibung des Fehlers für den Entwickler hilfreich, um das Phänomen nachzustellen und darauf zu reagieren. In eine Fehlerbeschreibung gehören immer folgende Angaben:
+Bei Fehlern ist zunächst zu prüfen, ob es sich um Implementierungsfehler oder Fehler im Code handelt. In jedem Falle ist eine möglichst aussagekräftige Beschreibung des Fehlers für die Entwickelnden hilfreich, um das Phänomen nachzustellen und darauf zu reagieren. In eine Fehlerbeschreibung gehören immer folgende Angaben:
 
 - Welche Bedienungsschritte führen zu dem Fehler?
-- Unter welcher Umgebung (PHP Version, Webserver, Provider, lokales System) tritt der Fehler auf?
-- Unter welchem Browser und in welcher Version des Browsers tritt der Fehler auf?
+- Unter welcher Umgebung (PHP-Version, Webserver, Provider, lokales System) tritt der Fehler auf?
+- In welchem Browser und in welcher Version des Browsers tritt der Fehler auf?
 - Was wurde zuletzt am System verändert (z.B. Installation von AddOns)?
 - Wie macht sich der Fehler bemerkbar?
 
 Die Fehlerbeschreibung kann um Errorlog-Meldungen ergänzt werden.
 
-<a name="git-issues"></a>
-## Git Issues
+<a name="github-issues"></a>
+## GitHub-Issues
 
-Der Core von REDAXO und die meisten AddOns werden als Git-Repositories gepflegt. Dort lassen sich Fehler oder Wünsche in "Issues" eintragen. Bevor ein Issue eingetragen wird, empfiehlt sich folgendes Vorgehen: Zunächst prüft man, ob man die aktuellste Version des AddOns aus dem Git-Repository im Einsatz hat. Anschließend prüft man, ob das Issue bereits eingetragen oder bearbeitet wurde. Eine kurze Nachfrage im Slack-Channel, ob das gewünschte Feature oder der gefundene Fehler sinnvoll als Issue erfasst werden sollte, kann die Recherche ergänzen. Anschließend erstellt man im entsprechenden Repository das Issue.
+Der Core von REDAXO und die meisten AddOns werden als GitHub-Repositories gepflegt. Dort lassen sich Fehler oder Wünsche in "Issues" eintragen. Bevor ein Issue eingetragen wird, empfiehlt sich folgendes Vorgehen: Zunächst prüfst du, ob du die aktuelle Version des AddOns aus dem Git-Repository im Einsatz hast. Anschließend prüfst du, ob das Issue bereits eingetragen oder bearbeitet wurde. Eine kurze Nachfrage im Slack-Channel, ob das gewünschte Feature oder der gefundene Fehler sinnvoll als Issue erfasst werden sollte, kann die Recherche ergänzen. Anschließend erstellst du im entsprechenden Repository das Issue. Vielen Dank für deine Mitarbeit!
 
 <a name="pull-requests"></a>
 ## Pull Requests
 
-Bei konkreten Codevorschlägen empfehlen sich "Pull Requests". Der Entwickler hat dann die Möglichkeit den Code zu prüfen und direkt zu übernehmen.
+Bei konkreten Codevorschlägen empfehlen sich "Pull Requests". Die Entwickelnden haben dann die Möglichkeit, den Code zu prüfen und direkt zu übernehmen.
 
 <a name="eigene-addons"></a>
 ## Eigene AddOns
 
-Ein eigenes AddOn zu entwickeln ist immer eine Möglichkeit, sich aktiv an der Entwicklung zu beteiligen. Ist das AddOn für eine größere Anzahl von Anwendern von Interesse, kann dieses in den Downloadbereich eingestellt werden.
+Ein eigenes AddOn zu entwickeln ist immer eine Möglichkeit, sich aktiv an der Entwicklung zu beteiligen. Ist das AddOn für eine größere Anzahl von Anwenderinnen und Anwendern von Interesse, kann dieses in den Downloadbereich eingestellt werden.
 
-<a name="redaxo-entwickler"></a>
-## Redaxo Entwickler
+<a name="redaxo-entwickelnde"></a>
+## REDAXO-Entwickelnde und Agenturen
 
-Im Loginbereich von REDAXO kann man sich selbst als Redaxo-Entwickler eintragen und wird dann auf der REDAXO-Website als Entwickler gelistet.
-
+Im Loginbereich von REDAXO (»MyREDAXO«) kannst du dich oder deine Agentur als REDAXO-Entwickelnde eintragen und wirst dann auf der REDAXO-Website im Bereich Support gelistet: [Agenturen](/support/agenturen/)
