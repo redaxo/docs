@@ -28,13 +28,13 @@
 Die Artikel der Webpräsenz findet und erstellt man in den Kategorien der Strukturverwaltung. Dort wählt man auch das Template aus, welches die Anzeige des Artikels und die Anzahl der zu pflegenden Spalten definiert. Es gibt zwei Artikeltypen: ***Normale Artikel*** und ***Startartikel***.
 
 Ein Startartikel repräsentiert immer die Kategorie und wird automatisch bei Erstellung einer Kategorie angelegt. Ein Startartikel ist erkennbar an seinem farblich hervorgehobenen Icon.
-Normale Artikel kann in einer Kategorie zusätzlich ablegen.
+Normale Artikel können zusätzlich in einer Kategorie abgelegt werden.
 
 Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informationen und Einstellungen können in den Metadaten hinterlegt werden. 
 
 <a name="bloecke"></a>
 ## Blöcke
-Die Inhalte (der Content) eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind vielfältig, beispielhaft seien genannt: Headlines, Fliesstext, Galerien und die Steuerung von Ausgaben installierter Addons.
+Die Inhalte (der Content) eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind vielfältig, beispielhaft seien genannt: Headlines, Fließtext, Galerien und die Steuerung von Ausgaben installierter Addons.
 
 ![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
 Editiermodus und Blockauswahl
@@ -50,7 +50,7 @@ Um einen Block hinzuzufügen,
 - füllt das Formular aus (sofern erforderlich)
 - speichert mit `Block speichern`
 
-Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten. Um weiter zu arbeiten, klickt man auf `Block übernehmen`. Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen`.
+Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten, um weiter zu arbeiten, klickt man auf `Block übernehmen`. Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen`.
 
 > Da in jeder Redaxo-Installation unterschiedliche, häufig individuell erstellte Module zur Verfügung stehen, wird deren Funktion hier nicht erläutert. 
 
@@ -148,7 +148,7 @@ Im Reiter `Funktionen` steht die Kopierfunktion `Inhalte kopieren` zur Verfügun
 
 <a name="spalten"></a>
 ## Spalten
-Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
+Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet, um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
 
 Um in eine Spalte zu gelangen, klickt man im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese findet man im Reiter `Editiermodus` als Untermenüpunkte. Die Pflege der Spalten erfolgt, indem man mit Modulen Inhaltsblöcke anlegt.
 
@@ -160,7 +160,7 @@ Arbeitsversion / Liveversion
 Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich, Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. Die Umschaltung zwischen Liveversion und Arbeitsversion erfolgt über das Drop-Down-Menü `Version`. 
 
 In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
-Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben füllen lässt. Es ist möglich, die Inhalte der Liveversion in die Arbeitsversion zu übertragen, so dass man an der aktuellen Version weiterarbeiten kann. Um eine Vorschau der Arbeitsversion zu erhalten, klickt man auf „Voransicht“. Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden.
+Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben füllen lässt. Es ist möglich, die Inhalte der Liveversion in die Arbeitsversion zu übertragen, sodass man an der aktuellen Version weiterarbeiten kann. Um eine Vorschau der Arbeitsversion zu erhalten, klickt man auf „Voransicht“. Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden.
 > **Achtung!** Wird die Arbeitsversion als Liveversion freigegeben, wird die aktuelle Liveversion überschrieben bzw. gelöscht. Nutzt man jedoch auch das History-PlugIn, so ist es möglich, vorherige Versionen wiederherzustellen. 
 
 <a name="history"></a>
@@ -170,7 +170,7 @@ In REDAXO ist eine Versionierung (History) integriert. Ist diese aktiviert, erfa
 ![History](/assets/v5.2.0-redaktion-06-history.png)
 History-Gegenüberstellung
 
-Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über ein Drop-Down-Menü können die einzelnen Versionen ausgewählt werden und im rechten Fenster betrachtet werden.
+Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über ein Drop-Down-Menü können die einzelnen Versionen ausgewählt und im rechten Fenster betrachtet werden.
 
-Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen`. Hierbei wird die aktuelle Version als neue Version gespeichert, so dass es jederzeit möglich ist, den Vorgang rückgängig zu machen. 
+Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen`. Hierbei wird die aktuelle Version als neue Version gespeichert, sodass es jederzeit möglich ist, den Vorgang rückgängig zu machen. 
 
