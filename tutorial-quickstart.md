@@ -166,7 +166,7 @@ Nun wird dieser Code in das bei der Installation standardmäßig angelegte Templ
 <a name="module"></a>
 ## Module
 
-Wenn man nun Kategorien in Redaxo neu hinzufügt, sehen diese durch das Basis-Template schon ganz ansehnlich aus. Es fehlen noch Inhalte. Die werden durch Module eingepflegt, die man in jedem Artikel in beliebiger Anzahl aneinander reihen kann.
+Wenn man nun Kategorien in REDAXO neu hinzufügt, sehen diese durch das Basis-Template schon ganz ansehnlich aus. Es fehlen noch Inhalte. Die werden durch Module eingepflegt, die man in jedem Artikel in beliebiger Anzahl aneinanderreihen kann.
 
 <a name="intro-modul"></a>
 ### Intro-Modul
@@ -252,7 +252,7 @@ REX_MEDIA[id="2" widget="1"]
 <textarea rows="6" name="REX_INPUT_VALUE[4]">REX_VALUE[4]</textarea>
 ```
 
-Auch dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
+Auch für dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
 
 **Optisch gestylte Eingabe**:
 
@@ -341,5 +341,5 @@ Es kann mit der [Redaktion](/{{path}}/{{version}}/redaktion) begonnen werden.
 
 > **Nach Anlegen des ersten Artikels** nicht vergessen, unter **System** den Startartikel der Website festzulegen. Andernfalls wird die Website nicht angezeigt.
 
-Damit ist die kleine Mini-Website fertig gestellt. Wir haben eine mobiltaugliches Layout, die Navigation funktioniert, und Texte und Bilder können eingepflegt werden. Natürlich lässt sich die Website noch an vielen Stellen ergänzen und optimieren: Die Navigation könnte für mehrere Ebenen erweitert werden, man könnte weitere Inhalts-Module erstellen oder dank zahlreicher AddOns die Funktionen von REDAXO stark erweitern.
+Damit ist die kleine Mini-Website fertiggestellt. Wir haben eine mobiltaugliches Layout, die Navigation funktioniert, und Texte und Bilder können eingepflegt werden. Natürlich lässt sich die Website noch an vielen Stellen ergänzen und optimieren: Die Navigation könnte für mehrere Ebenen erweitert werden, man könnte weitere Inhalts-Module erstellen oder dank zahlreicher AddOns die Funktionen von REDAXO stark erweitern.
 

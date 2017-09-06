@@ -40,8 +40,8 @@ Als Erstes sollte man die aktuelle Version von REDAXO unter https://redaxo.org/d
 <a name="upload"></a>
 ## Upload 
 
-Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner deines lokalen Servers oder via FTP,SFTP, WebDAV auf deinen öffentlichen Webserver verschoben. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
-Ausführliche Informationen zum Upload und zu denZugangsdaten liefert der Hostingpartner.
+Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner deines lokalen Servers oder via FTP, SFTP, WebDAV auf deinen öffentlichen Webserver verschoben. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
+Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem man die Zip-Datei direkt hochladen und auf dem Server entpacken kann. 
 
@@ -98,7 +98,7 @@ An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 - Datenbankverbindung
 
 Befindet sich die Datenbank auf dem lokalen Server, kann man hier `localhost` stehen lassen. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall muss man hier die Adresse des Datenbankservers eingeben. 
-Besitzt der Datenbank-User das Recht, auch neue Datenbanken zu erstellen, so kann man hier direkt eine neue Datenbank mit der oben angegebenen Bezeichnung anlegen lassen. 
+Besitzt der Datenbank-User das Recht auch neue Datenbanken zu erstellen, so kann man hier direkt eine neue Datenbank mit der oben angegebenen Bezeichnung anlegen lassen. 
 
 ![Config](/assets/v5.2.0-installation-04-config.png)
 Schritt 4: Systemcheck

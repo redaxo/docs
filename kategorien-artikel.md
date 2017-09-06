@@ -14,7 +14,7 @@
 <a name="strukturverwaltung"></a>
 ## Die Strukturverwaltung
 
-In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Aatenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien wie auch Artikel werden in der Tabelle `rex_article`gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `start_article`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
+In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Datenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien als auch Artikel werden in der Tabelle `rex_article` gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `start_article`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
 
 Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategorien** bilden die **Struktur**, **Artikel** speichern die **Inhalte**.
 
@@ -40,28 +40,28 @@ Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-
 <a name="module"></a>
 ## Module/Blöcke liefern die einzelnen Inhaltsblöcke
 
-Ein Artikel enthält verschiedene Inhaltssegmente. Es gibt normalerweise immer mindestens Inhaltsblöcke für Überschriften, Texte, Bilder, etc.
+Ein Artikel enthält verschiedene Inhaltssegmente. Es gibt normalerweise immer mindestens Inhaltsblöcke für Überschriften, Texte, Bilder etc.
 Blöcke kann man beliebig oft in einem Artikel verwenden. So kann man z.B. verschiedene Absätze wie auch Bilder nach Belieben anlegen und einen einzelnen Artikel immer mehr erweitern.
 
-Module werden im Normalfall vom Entwickler individuell für jede Website erstellt, so dass man die entsprechenden Besonderheiten einer Website gut abbilden kann.
+Module werden im Normalfall vom Entwickler individuell für jede Website erstellt, sodass man die entsprechenden Besonderheiten einer Website gut abbilden kann.
 
-Module bestehen aus Eingabe- und Ausgabebereichen. Ein Redakteur gibt bestimmte Inhalte ein (gesteuert durch den Eingabe-Code), und diese werden dann auf der Webseite ausgegeben (gesteuert durch den Ausgabebe-Code). Im Modul definiert der Entwickler also, welche Felder die Eingaben speichern und wie diese Inhalte in Form von Texten, Bilder, etc. ausgegeben werden.
+Module bestehen aus Eingabe- und Ausgabebereichen. Ein Redakteur gibt bestimmte Inhalte ein (gesteuert durch den Eingabe-Code), und diese werden dann auf der Webseite ausgegeben (gesteuert durch den Ausgabebe-Code). Im Modul definiert der Entwickler also, welche Felder die Eingaben speichern und wie diese Inhalte in Form von Texten, Bilder etc. ausgegeben werden.
 
 Auch Module werden in in einem eigenen Kapitel [Module ausführlich behandelt](/{{path}}/{{version}}/module).
 
 <a name="ctypes"></a>
 ## Content-Spalten (C-Types)
 
-Modulinhalte müssen nicht auf eine Spalte – oder allgemeiner – einen Contenbereich limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z.B. Hauptspalte, Seitenspalte, Headerbereich, etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Contentbereichs erfolgt.
+Modulinhalte müssen nicht auf eine Spalte – oder allgemeiner – einen Contenbereich limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z.B. Hauptspalte, Seitenspalte, Headerbereich etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Contentbereichs erfolgt.
 
-In der Rechteverwaltung kann festgelegt werden, welche Module in welcher Spalte verwendet dürfen und von welchem Redakteur.
+In der Rechteverwaltung kann festgelegt werden, welche Module in welcher Spalte verwendet werden dürfen und von welchem Redakteur.
 
 Die C-Types werden ebenfalls im Kapitel [Templates dokumentiert](/{{path}}/{{version}}/templates).
 
 <a name="metainfos"></a>
 ## Metainformationen
 
-Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft genutzt für Inhalte oder Einstellungen, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wäre etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
+Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft für Inhalte oder Einstellungen genutzt, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wären etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
 
 Metafelder, mit denen man Metainformationen pflegen kann, kann der Admin für Artikel, Kategorien und Medien anlegen.
 

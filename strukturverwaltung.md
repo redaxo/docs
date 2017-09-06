@@ -21,7 +21,7 @@
 ## Über die Struktur
 Die Strukturverwaltung wird gewöhnlich direkt nach dem Login aufgerufen und ist über den Menüpunkt „Struktur“ erreichbar.
 
-Über die Strukturverwaltung werden Kategorien und Artikel angelegt und hierarchisch verwaltet, die sowohl als Navigation im Backend dienen und als auch optional als Navigationsmenü im Frontend verwendet werden können.
+Über die Strukturverwaltung werden Kategorien und Artikel angelegt und hierarchisch verwaltet, die sowohl als Navigation im Backend dienen als auch optional als Navigationsmenü im Frontend verwendet werden können.
 
 Den Kategorien sind Artikeln zugeordnet, in denen die Inhalte der Website organisiert werden. Jede Kategorie hat einen Startartikel. Startartikel sind die Einstiegsseiten einer Kategorie. Normale Artikel können in beliebiger Anzahl erstellt werden. Die Reihenfolge der einzelnen Kategorien und Artikel wird über die Prioritätenspalte festgelegt.
 
@@ -30,7 +30,7 @@ Die verfügbaren Optionen hängen von den Rechten des jeweiligen Benutzers ab. O
 ![Systemcheck](/assets/v5.2.0-Struktur-01-overview.png.png)
 Struktur nach dem Login / Hauptebene
 
-Die Strukturansicht ist zweigeteilt. Im Oberen Abschnitt werden immer die Unterkategorien der aktuell gewählten Kategorie dargestellt, darunter die Artikel der gerade aktiven Kategorie. 
+Die Strukturansicht ist zweigeteilt. Im oberen Abschnitt werden immer die Unterkategorien der aktuell gewählten Kategorie dargestellt, darunter die Artikel der gerade aktiven Kategorie. 
 
 
 <a name="funktionen"></a>
@@ -48,7 +48,7 @@ Das Erstellen einer neuen Kategorie erfolgt über das (+)-Symbol. Danach legt ma
 
 <a name="art_e"></a>
 ### Artikel erstellen und pflegen
-Man erstellt einen neuen Artikel über das (+)-Symbol und gibt anschließend den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit, ein vorgegebenes Template für die Seitendarstellung auszuwählen. Nach Bestätigen über die Schaltfläche `Artikel hinzufügen` wird der Artikel angelegt. Der erstellte Artikel ist zunächst offline gestellt. Um den Artikel zur Bearbeitung aufzurufen, klickt man auf seinen Namen. Mehr dazu im Kapitel [Redaktion](/{{path}}/{{version}}/redaktion)
+Man erstellt einen neuen Artikel über das (+)-Symbol und gibt anschließend den Namen des Artikels ein. Hierbei besteht auch die Möglichkeit, ein vorgegebenes Template für die Seitendarstellung auszuwählen. Nach Bestätigen über die Schaltfläche `Artikel hinzufügen` wird der Artikel angelegt. Der erstellte Artikel ist zunächst offline gestellt. Um den Artikel zur Bearbeitung aufzurufen, klickt man auf seinen Namen. Mehr dazu im Kapitel [Redaktion](/{{path}}/{{version}}/redaktion).
 
 <a name="ofon"></a>
 ### Online / Offline
@@ -82,7 +82,7 @@ REDAXO ist mehrsprachenfähig. Sofern mehrere Sprachen aktiviert sind und der Re
 
 Werden in einer Sprache ein neuer Artikel oder eine neue Kategorie angelegt, werden diese in allen Sprachen mit dem gleichen Namen angelegt. Name und  Metadaten können sprachabhängig gepflegt werden.  
 
-Möchte man einen Artikel oder eine Kategorie in einer Sprache nicht in der Navigation oder in Artikellisten einer Sprache anzeigen, können diese mit dem Offline-Staus (sofern in der Programmierung der Website vorgesehen) ausgeblendet werden.
+Möchte man einen Artikel oder eine Kategorie in einer Sprache nicht in der Navigation oder in Artikellisten einer Sprache anzeigen, können diese mit dem Offline-Status (sofern in der Programmierung der Website vorgesehen) ausgeblendet werden.
 
 Die Sprachen werden vom Admin verwaltet und bereitgestellt. 
 
