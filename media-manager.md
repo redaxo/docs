@@ -91,7 +91,7 @@ Beispiel einer Modulausgabe:
     <ul class="meinebildgalerie">
     <?php foreach ($imagelist as $img) : ?>
         <li class="meinebildergalerie_li">
-            <img src="<?= rex::getServer ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
+            <img src="<?= rex::getServer() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
         </li>    
     <?php endforeach ?>
     </ul>
