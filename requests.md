@@ -13,7 +13,7 @@ Für `var_type` sind folgende Werte gültig:
 
 Das Ergebnis wird dann in den entsprechenden Typ umgewandelt.
 
-> **Hinweis:** Die Daten sollten in der weiteren Verarbeitung "gesäubert" werden. Z.B. sollte mit rex_get, rex_post und rex_request übernommenen Strings vor der Ausgabe auf der Website mit htmlspecialchars($string, ENT_QUOTES, ‘UTF-8’) bearbeitet werden, um mögliches HTML umzuwandeln. Damit wird Cross-Site-Scripting (XSS) zu verhindert.
+> **Hinweis:** Die Daten sollten in der weiteren Verarbeitung "gesäubert" werden. Z.B. sollten mit *rex_get*, *rex_post* und *rex_request* übernommene Strings vor der Ausgabe auf der Website mit *htmlspecialchars($string, ENT_QUOTES, ‘UTF-8’)* bearbeitet werden, um mögliches HTML umzuwandeln. Damit wird Cross-Site-Scripting (XSS) verhindert.
 
 
 
