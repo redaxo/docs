@@ -14,22 +14,19 @@
   * [Yaml](#anker-faq-yaml)
 
 
-Für die Entwicklung von AddOns gibt es behilfliche AddOns, eine Liste dazu kann auf dieser Seite unter
-[Software](#anker-software) gefunden werden.
-
 <a name="anker-minimal"></a>
 ## Minimale Erfordernisse
-Jedes Addon hat einen eigenen Ordner mit einem einzigartigem und möglichst beschreibendem Namen.  
+Jedes AddOn hat einen eigenen Ordner mit einem einzigartigem und möglichst beschreibendem Namen.  
   
 [@TODO:][SCREENSSHOT ORDNER]  
   
 AddOns werden bei der Installation in Redaxo registriert, dazu sind einige Basisinformationen notwendig.
 Diese Basisinformationen werden in der Datei "package.yml" abgelegt. Prinzipiell sind mit dieser Datei
-alle Erfordernisse erfüllt, dass Redaxo ein Addon installieren kann.  
+alle Erfordernisse erfüllt, dass Redaxo ein AddOn installieren kann.  
   
 [@TODO:][SCREENSSHOT ODER CODE VON PACKAGE.YML]  
   
-Da in der Datei "package.yml" direkt Referenzen zu Dateien innerhalb des Addons notiert werden können, können in
+Da in der Datei "package.yml" direkt Referenzen zu Dateien innerhalb des AddOns notiert werden können, können in
 der Folge weitere Dateien notwendig werden. Mehr dazu erforderlichen und optionalen Angaben in dieser Datei
 unter [package.yml](#anker-package-yml).
 
@@ -61,7 +58,7 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 * **help.php**  
   Ist eine Datei "help.php" im AddOn-Ordner enthalten wird diese automatisch im AddOn-Manager eingebunden und die Ausgabe angezeigt.  
   Ist die Datei nicht enthalten wird im AddOn-Manager ein Hinweis angezeigt, daß die Datei fehlt.  
-  Es sollten Hinweise zur Funktionalität des Addons enthalten sein, auch Versionshinweise bzw. Changelog können angezeigt werden.
+  Es sollten Hinweise zur Funktionalität des AddOns enthalten sein, auch Versionshinweise bzw. Changelog können angezeigt werden.
 * **install.php**  
   Ist eine Datei "install.php" im AddOn-Ordner enthalten wird diese automatisch bei der AddOn-Installation ausgeführt.  
   Die dort integrierte Funktionalität kann viele Aktionen umfassen und ist dem Entwickler somit vollkommen freigstellt.  
