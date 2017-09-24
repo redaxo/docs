@@ -27,7 +27,7 @@ alle Erfordernisse erfüllt, dass Redaxo ein AddOn installieren kann.
 [@TODO:][SCREENSSHOT ODER CODE VON PACKAGE.YML]  
   
 Da in der Datei "package.yml" direkt Referenzen zu Dateien innerhalb des AddOns notiert werden können, können in
-der Folge weitere Dateien notwendig werden. Mehr dazu erforderlichen und optionalen Angaben in dieser Datei
+der Folge weitere Dateien notwendig werden. Mehr zu erforderlichen und optionalen Angaben in dieser Datei
 unter [package.yml](#anker-package-yml).
 
 <a name="anker-package-yml"></a>
@@ -117,6 +117,11 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 
 <a name="anker-software"></a>
 ## Software
+* Editoren  
+  * **Frei verfügbare Markdown-Editoren:**  
+    @TODO  
+  * **Kommerzielle Markdown-Editoren:**    
+    @TODO  
 @TODO  
 
 <a name="anker-faq"></a>
@@ -156,11 +161,9 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   * Eine etwas umständliche, aber letztendlich einfache Methode ist, das Zeichen in einer Datei abzuspeichern und zu kopieren.  
     Meistens kann das Zeichen in SQL-Dateien oder fertigen Markdown-Dateien gefunden werden, hier kann das Zeichen natürlich auch kopiert werden, bitteschön: **`**
 * **Welche Editoren für Markdown kann das Redaxo-Team empfehlen?**  
-  * **Frei verfügbare Markdown-Editoren:**  
-    @TODO  
-  * **Kommerzielle Markdown-Editoren:**    
-    @TODO  
+  Siehe unter [Software](#anker-software)
 
 <a name="anker-faq-yaml"></a>
 **Yaml**
 * **Welches Dateiformat haben Dateien mit der Endung ".yml" ?**  
+@TODO  
