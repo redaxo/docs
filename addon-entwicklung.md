@@ -10,7 +10,7 @@
 * [Weitere nützliche Ordner](#anker-useful-folders)
 * [Software](#anker-software)
 * [Fragen und Antworten](#anker-faq)
-  * [Mardown](#anker-faq-markdown)
+  * [MarkDown](#anker-faq-markdown)
   * [Yaml](#anker-faq-yaml)
 
 
@@ -127,7 +127,7 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 <a name="anker-faq"></a>
 ## Fragen und Antworten
 <a name="anker-faq-markdown"></a>
-**Mardown**
+**MarkDown**
 * **Welches Dateiformat haben Dateien mit der Endung ".md" ?**  
   Dateien mit der Endung "md" enhalten Inhalt in der MarkDown-Syntax.  
   Es handelt sich dabei um normalen Text, der mit einigen wenigen Mitteln für eine formatierte Ausgabe vorbereitet werden kann.  
@@ -137,27 +137,27 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 * Was ist der Unterschied zwischen MarkUp und MarkItUp?  
   @TODO  
 * **Warum wird die Markdown-Syntax in so vielen Dateien verwendet, geht das nicht in Text-Dateien?**  
-  Mardown hat sich zum defacto-Standard entwickelt, da es auf gihub.com verwendet wird, wo auch viele Redaxo-AddOns verwaltet werden.
+  MarkDown hat sich zum defacto-Standard entwickelt, da es auf gihub.com verwendet wird, wo auch viele Redaxo-AddOns verwaltet werden.
   Auch innerhalb von Redaxo findet das Format in einigen optional installierbaren Editoren Verwendung.  
   Markdown erlaubt die Integration von Bildern und Hyperlinks, wie auch die lesefreundliche Formatierung von Text, und hat
   dem einfachen Text-Format gegenüber eine Menge Vorteile.
 * **Warum wird die Markdown-Syntax in so vielen Dateien verwendet, geht das nicht im HTML-Format?**  
-  Mardown hat sich zum defacto-Standard entwickelt, da es auf gihub.com verwendet wird, wo auch viele Redaxo-AddOns verwaltet werden.
+  MarkDown hat sich zum defacto-Standard entwickelt, da es auf gihub.com verwendet wird, wo auch viele Redaxo-AddOns verwaltet werden.
   Auch innerhalb von Redaxo findet das Format in einigen optional installierbaren Editoren Verwendung.    
   Die Bereitstellung von Inhalten per HTML ist durchaus möglich und jedem freigestellt, allerdings tauchen dort Gestaltungsfragen auf,
   die bei Markdown nicht gegeben sind. HTML ist bei den Optionen umfangreicher aber auch schwieriger zu erlernen.
   Das Format Markdown stellt limitierte Bereicherungen für Dateien bereit, die gerne für Standard-Dateien wie README, LICENSE und CHANGELOG
   verwendet werden und zuvor üblicherweise als reine Text-Dateien bereitgestellt wurden.
 * **Wo gibt es eine Erklärung zum Markdown-Standard?**  
-  Eine Beschreibung in englischer Sprache vom Autor des Standards findet man hier: [Mardown:Syntax](https://daringfireball.net/projects/markdown/syntax).  
-  [@TODO: besseren Link] Eine deutschsprachige Beschreibung vom Redaxo-Team findet man hier: [Mardown:Vorlage](https://redaxo.org/doku/master/_vorlage).  
+  Eine Beschreibung in englischer Sprache vom Autor des Standards findet man hier: [MarkDown:Syntax](https://daringfireball.net/projects/markdown/syntax).  
+  [@TODO: besseren Link] Eine deutschsprachige Beschreibung vom Redaxo-Team findet man hier: [MarkDown:Vorlage](https://redaxo.org/doku/master/_vorlage).  
 * **Wo findet man die Backticks zur Auszeichnung von Kode in Markdown-Dateien?**  
   * Es handelt sich bei dem Backtick um den französischen Akzent "Gravis".
     Auf einer deutschen Tastatur findet man diesen rechts neben den Ziffern und dem "ß".
 	Man drückt die Tasten "Umschalten" und die Akzent-Taste gleichzeitig und anschließend die Leerzeichen Taste.  
 	[@TODO: Screenshot Keyboard mit markierten Tasten]
   * In manchen Editoren braucht man die Backticks nicht selbst zu schreiben, sondern kann sie über Buttons einfügen.  
-    Es gibt auch spezielle Editoren für Mardown-Dateien.
+    Es gibt auch spezielle Editoren für MarkDown-Dateien.
   * Eine etwas umständliche, aber letztendlich einfache Methode ist, das Zeichen in einer Datei abzuspeichern und zu kopieren.  
     Meistens kann das Zeichen in SQL-Dateien oder fertigen Markdown-Dateien gefunden werden, hier kann das Zeichen natürlich auch kopiert werden, bitteschön: **`**
 * **Welche Editoren für Markdown kann das Redaxo-Team empfehlen?**  
