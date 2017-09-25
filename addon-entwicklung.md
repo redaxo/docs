@@ -76,8 +76,8 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   Einige AddOns führen beim Deinstallieren auch Datenbankaktionen durch.  
   Ein Entwickler sollte berücksichtigen, daß ein Löschen von Daten trotz Deinstallation des AddOns ungewünscht sein kann.
 * **boot.php**  
-  Ist eine Datei `boot.php` im AddOn-Ordner enthalten wird diese automatisch bei jedem Aufruf des AddOns ausgeführt, dies
-  bezieht sich auf Frontend und Backend.  
+  Ist eine Datei `boot.php` im AddOn-Ordner enthalten wird diese automatisch bei jeder REDAXO Instanz aufgerufen,
+  sofern das Addon installiert und aktiviert ist.
   Übliche Verwendungen sind die Definition von Variablen und die Einbindung von Dateien.  
   Funktionell kommt dieser Datei eine hohe Wichtigkeit zu, dennoch ist die Einbindung optional und nicht unbedingt notwendig.
 * **README.md**  
