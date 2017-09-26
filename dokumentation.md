@@ -60,8 +60,8 @@
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOns
-    - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>offen</b></sup>
-    - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><b>Doku-Team</b></sup>
+    - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i>
+    - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
 
 - Datenbank
