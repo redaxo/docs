@@ -1,158 +1,152 @@
 # Listen
     
-- [Auswahllisten `rex_select`](#rex-select)
 - [Tabellen `rex_list`](#rex-list)
-
-
-<a name="rex-select"></a>
-## Auswahllisten `rex_select `
-
+- [Listenansicht von Datenbank-Tabellen](#listenansicht)
+	- [Aufruf von rex_list und Parameter](#aufruf_von_rex_list)
+	- [Ein einfaches Beispiel](#einfaches_beispiel)
+	- [Beschreibung der Methoden zur Formatierung und zum Verhalten der Liste](#beschreibung_der_methoden)
+	- [Ausgabe der Liste](#ausgabe_der_liste)
+	- [Extension Point](#extension_point)
+- [Ausgabe einer rex_list in einem Fragment](#ausgabe_im_fragment)
+	
 
 <a name="rex-list"></a>
 ## Tabellen `rex_list`
 
 
+<a name="listenansicht"></a>
 ## Listenansicht von Datenbank-Tabellen
 
-Die `rex_list` Klasse ist "Part 1" der Redaxo eigenen Datenbankverwaltung für Addons, kann aber auch darüberhinaus eingesetzt werden. `rex_list` ermöglicht das Anzeigen von Datensätzen einer Datenbanktabelle in tabellarischer Listen-Ansicht. 
-Die Darstellung der `rex_list` Liste kann durch diverse Optionen modifiziert werden. `rex_list` nutzt zur Paginierung die `rex_pager` Klasse, durch welche das Handling von vielen Datensätzen erheblich erleichtert wird.
+Die Klasse `rex_list` ist eines der heimlichen Heinzelmännchen von REDAXO. Mit `rex_list` können Datenbankabfragen als tabellarische Listen dargestellt werden. Die Verwendung von `rex_list` kann sowohl im Backend als auch im Frontend sinnvoll sein. Eine Listenansicht kann über die `rex_list` Klassen mit verschiedenen Funktionen ausgestattet werden, z.B. mit einer Sortierfunktion für bestimmte Spalten oder mit Links, um Datensätze zu editieren, zu löschen oder mit eigenen Funktionen zu manipulieren.
+Die Klasse verfügt von Haus aus über eine Paging Funktion über die Klasse `rex_pager`.
 
+<a name="aufruf_von_rex_list"></a>
+### Aufruf von rex_list und Parameter
 
-* TODO GENERELL Übergabe Parameter auflisten für alle besprochenen Methoden!
-
-
-### Instanzierung
-
-* TODO listName Parameter
-* TODO debug Modus
-
-
-Die `rex_list` Klasse wurde als Singelton design und nutzt die `rex_factory_trait` zur wiederkehrenden Instanzierung des `rex_list` Objekts. Für die entsprechende Instanzierung des Objekts ist die statische Methode `factory` implementiert. 
+Ein Listenobjekt erzeugen:
 
 ```
 $list = rex_list::factory($query, $rowsPerPage, $listName, $debug);
 ```
 
-Durch den Übergabe-Parameter `$query` wird der `factory` Methode ein SQL-Select-Statement übergeben, dieses ist zwingend notwendig und sorgt dafür, dass die `rex_list` Klasse die entsprechenden Datensätze aus der im SELECT definierten Datenbanktabelle zur Anzeige in der Tabellen-Ansicht verwenden kann. 
-
-Alle durch das SELECT selektierten Zeilen der Datenbanktabelle werden per default ohne Ausnahme in die Listen-Tabelle geschrieben. Per default ist die Paginierung auf 30 Datensätze gestellt. Zu berücksichtigen hierbei ist, dass die Records der Paginierungsviews durch ein automatisch generiertes LIMIT, dass dem SQL-Select-Statement angehangen wird, erzeugt werden.
-
-Im folgenden Beispiel sollen alle Datensätze aus der Tabelle `locations` durch die Listen-Ansicht der `rex_list` Klasse zugänglich gemacht werden.
-
-```
-$list = rex_list::factory('SELECT * FROM rex_locations ORDER BY id');
-```
+Parameter | Erklärung
+------------- | ------------- 
+`$query`  | ein SQL Query String. Die in der Query angegebenen Felder werden in der Liste angezeigt.
+`$rowsPerPage`  | Anzahl Zeilen pro Seite. Standard ist 30. Werden mehr Datensätze angezeigt, wird automatisch eine Blätterfunktion aktiviert
+`$listName`  | Der Wert wird an alle Links als GET Variable `list` angehängt. Wird dieser Parameter nicht angegeben wird ein md5 Wert aus dem Query erzeugt
+`$debug`  | true oder false, Standard ist false. Bei true wird die Debug Ausgabe eingeschaltet, sodass Fehler in der SQL Query angezeigt werden 
 
 
-### Tabellen Parameter
-
-TODO `addParam`
-
-
-### Tabellen Attribute
-
-TODO `addTableAttribute`
-
-
-### Tabellen Titel
-
-TODO `setCaption`
-
-
-### Ausschluss
-
-Zum Ausschließen einzelner Spalten dient die Methode `removeColumn` durch welche im folgenden Beispiel einige Stammdaten der Location ausgeblendet werden.
+<a name="einfaches_beispiel"></a>
+### Ein einfaches Beispiel
 
 ```
-$list->removeColumn('id');
-$list->removeColumn('phone');
-$list->removeColumn('street');
-$list->removeColumn('house_number');
-$list->removeColumn('county');
-$list->removeColumn('zip_code');
-$list->removeColumn('lat');
-$list->removeColumn('lon');
+$list = rex_list::factory('SELECT name,vorname,plz,ort,telefon FROM rex_adressen');
+$list->show();
 ```
 
-### Selektierung
+Zeigt aus der Tabelle rex_adressen die Felder name, vorname, plz, ort und telefon an.
 
-Es bietet sich natürlich alternativ an ausschließlich die Spalten im Select-Statement zu definieren, welche man nutzen möchte. 
+> **Hinweis:** In diesem einfachen Beispiel funktioniert der Pager im Frontend nicht. Damit der Pager im Frontend funktioniert, muss noch folgende Zeile eingefügt werden: `$list->addParam('article_id',REX_ARTICLE_ID);`
 
+<a name="beschreibung_der_methoden"></a>
+### Beschreibung der Methoden zur Formatierung und zum Verhalten der Liste
+
+Die Formatierung und das Verhalten der Liste kann weitestgehend konfiguriert werden. Hier werden die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der api Dokumentation von REDAXO https://redaxo.org/api/master/class-rex_list.html
+
+#### `addColumn( string $columnHead, string $columnBody, integer $columnIndex = -1, array $columnLayout = null )`
+
+Fügt der Tabelle eine weitere Spalte hinzu. `$list->addColumn('edit','Bearbeiten');` fügt der Tabelle an der letzten Stelle eine Spalte hinzu. `edit` steht im Tabellenkopf, in jeder Tabellenzelle steht `Bearbeiten`.
+
+#### `addLinkAttribute( mixed $columnName, mixed $attrName, mixed $attrValue )`
+
+Definiert für einen Link in der angegebenen Spalte ein zusätzliches Link-Attribut. `$list->addLinkAttribute( 'name', 'data-id', '###id###' );` gibt im Link zusätzlich `data-id="999"` aus. Pro Spalte können mehrere Link Attribute definiert werden.
+
+#### `addParam( mixed $name, mixed $value )`
+
+Setzt einen klassenweiten Parameter, der für die Generierung von Links verwendet wird. Wird `rex_list` im Frontend eingesetzt, kann hier die Zielseite angegeben werden, in der ein Link geöffnet wird. Beispiel: `$list->addParam('article_id',REX_ARTICLE_ID)` - öffnet den Link in der aktuellen Seite.
+
+#### `addTableAttribute( mixed $attrName, mixed $attrValue )`
+
+Mit der Methode `addTableAttribute` können der Tabelle weitere Attribute hinzugefügt werden.
+Mit `$list->addTableAttribute('class', 'table-striped');` wird die Tabelle mit dem Attribut class="table-striped" ausgegeben
+
+#### `addTableColumnGroup( array $columns, integer $columnGroupSpan = null )`
+
+Die Methode kann verwendet werden, um die Spaltenbreiten über das HTML Element `colgroup` zu definieren.
+Beispiele:
 ```
-$list = rex_list::factory('SELECT id, location_name, city, country FROM rex_locations ORDER BY id');
+$list->addTableColumnGroup([40, '*', 240, 140, 200]);
+$list->addTableColumnGroup([ ['width' => 40], ['width' => 240, 'span' => 2], ['width' => 240] ]);
+$list->addTableColumnGroup([ ['class' => 'classname-a'], ['class' => 'classname-b'], ['class' => 'classname-c'] ]);
 ```
 
-### Sortierung
+#### `getColumnLabel( string $columnName, mixed $default = null )`
 
-Die rex_list Klasse ermöglicht es durch die `setColumnSortable` Methode eine bestimmte Datenbankspalte auf- und absteigend sortierbar zu machen.
+Mit der Methode `setColumnLabel` bekommen die Tabellenspalten eine aussagekräftige Bezeichnung.
+Mit `$list->setColumnLabel('name', 'Name des Teilnehmers');` wird die Tabellenspalte name mit "Name des Teilnehmers" überschrieben
 
-```
-$list->setColumnSortable('country');
-$list->setColumnSortable('city');
-```
+#### `getHeader()`
 
-### Spaltenlabel
+Der Header wird standardmäßig bereits im Kopf ausgegeben, wenn `$list->show()` verwendet wird. Mit `echo $list->getHeader();` kann man den Header (Pager sowie Anzahl Datensätze) zusätzlich auch noch nach der Tabelle ausgeben lassen.
 
-Per default werden die Row-Namen der Datenbankspalten als Label der Tabellenspalten angezeigt. Alternativ ist es durch die `setColumnLabel` Methode möglich ein spezifischen Label für eine Tabellenspalte zu definieren. 
+#### `removeColumn( string $columnName )`
 
-```
-$list->setColumnLabel('location_name', 'Niederlassung');
-```
+Eine Spalte wird aus der Tabelle entfernt. Dies kann sinnvoll sein, wenn in der SQL-Abfrage Werte stehen, die nicht angezeigt werden sollen (z.B. die id des Datensatzes) `removeColumn( 'id' )`
 
-### Linkparameter
+#### `setCaption( string $caption )`
 
-Mithilfe der `setColumnParams` Methode kann der Value einer jeweiligen Tabellenspalte als Link mit entsprechend deklarierten Parametern formatiert werden.
+Setzt einen Titel über die Tabelle. Beispiel: `setCaption( 'Teilnehmerliste' )`. Es wird innerhalb der Tabelle das `<caption>` Tag gesetzt.
 
-```
-$list->setColumnParams('location_name', ['func' => 'edit', 'id' => '###id###', 'start' => rex_request::request('start', 'int', NULL)]);
-```
+#### `setColumnFormat( string $columnName, string $format_type, mixed $format = '', array $params = [] )`
 
-Im obigen Beispiel werden also die Values der Tabellenzeile 'location_name' als Link formatiert. Die Links sind mit den nötigen Parametern versehen, welche von einem rex_form-Formular benötigt würden um den entsprechenden Datensatz editier zu können.
+Setzt das Format einer Tabellenspalte. Um die Spalte datum als formatiertes Datum auszugeben, kann man `$list->setColumnFormat('datum', 'date','d.m.Y');` verwenden.
+Die Methode erlaubt auch eine Custom Function. So kann man mit `$list->setColumnFormat('datum', 'custom','myclass::myfunction',['param1'=>'value1']);` eine Funktion aufrufen, die den anzuzeigenden Wert zurück liefert. Die Funktion bekommt als Parameter ein Array mit dem Listenobjekt (list), den Feldnamen (field), den Wert (value), das Format (format, in diesem Falle `custom`) und die Parameter (params) übergeben.
+Als Parameter können auch Platzhalter in der Form `###fieldname###` gesetzt werden. Somit können auch andere Werte aus der Datenbankabfrage an die Funktion übergeben werden. So kann in eine mit `addColumn` hinzugefügte Spalte ein Link eingefügt werden: `$list->setColumnFormat('delete', 'custom', ['myclass','mydeletefunc'],['id' => '###id###']);` Die Funktion myclass::mydeletefunc kann dann mittels `return '<a href="'.rex_getUrl(rex_article::getCurrentId(),'',['func'=>'delete']).'&id='.$params['params']['id'].'" onclick="return confirm(\'Wirklich löschen?\')">löschen</a>'` einen Link zum Löschen des Datensatzes in der Tabelle ausgeben. Die Löschfunktion selbst wird nicht von der rex_list Klasse zur Verfügung gestellt, sondern muss selbst programmiert werden.
 
-* Der Parameter-Key `func` kann genutzt werden um entsprechend eine `rex_form` Instanz ansteuern zu können. 
-* Mit der Parameter-Key `start` übergeben wir die Position der Paginierungs-Seite, wodurch ein zurückkehren auf von der `rex_form` Instanz auf diese Position ermöglicht wird.
-* Durch `###id###` wird als Value des Parameters-Keys `id` des Get-Parameters dem Link die entsprechende inkrementelle ID es jeweiligen Datensatzes geliefert. Nach diesem Muster können auch andere Werte eines Datensatzes an die Link-Parameter übergeben werden.
+#### `setColumnParams( string $columnName, array $params = [] )`
 
+Verlinkt eine Spalte mit den übergebenen Parametern. `$list->setColumnParams('name', ['func' => 'edit', 'id' => '###id###', 'start' => rex_request('start','int',0) ]);` Erzeugt in der Spalte `name` bei jedem Wert einen Link mit dem Parametern ...?func=edit&id=999&start=990. Die Verarbeitung muss durch die Applikation durchgeführt werden.
 
-### Linkattribute
+#### `setColumnSortable( string $columnName, string $direction = 'asc' )`
 
-TODO `addLinkAttribute`
+`$list->setColumnSortable('name');` definiert die Spalte als sortierbar. Sie kann im Tabellenkopf angeklickt werden und wird dann automatisch sortiert nach dieser Spalte ausgegeben.
 
+#### `setNoRowsMessage( mixed $msg )`
 
-### Format
-
-Es kommt durchaus vor, dass man auf die Erscheinung der Werte in den Tabellenspalten einfluss nehmen möchte. Zudem ergibt es sich auch, dass man die breite der jeweiligen Spalten der Tabelle explizit definieren möchte, beides ermöglicht die `rex_list` Klasse.
+Damit kann ein Text definiert werden, der angezeigt wird, wenn keine Datensätze gefunden werden. Als Standard wird der über rex_i18n übersetzte String aus `list_no_rows` verwendet.
 
 
-#### Format von Werten
-
-Mit der Methode `setColumnFormat` besteht die Möglichkeit einfluss auf die Anzeige der Werte in der jeweiligen Spalte nehmen zu können. 
-
-
-### Spalten Gruppierungen
-
-TODO `addTableColumnGroup`
-
-
-### Zusätzliche Spalten
-
-Die Methode `addColumn` ermöglicht das hinzufügen zusätzlicher Spalten deren Inhalt den Parametern der Methode übergeben werden kann. Wie bereits den Linkparametern durch die Verwendung des Schemas `###value###` im obigen Beispiel die inkrementelle ID des Datensatze geliefert werden konnte so ist es hier auch möglich auf die selektierten Spalten eines Datensatzes zur Anzeige zurück greifen zu können.
-
-
-### Keine Einträge vorhanden
-
-TODO `setNoRowsMessage`
-
-
-
-### View
-
+<a name="ausgabe_der_liste"></a>
+### Ausgabe der Liste
 
 Durch die `get` Methode wird die Liste final ausgegeben.
 
 ```
 echo $list->get();
 ```
+
+Alternativ kann auch `$list->show();` verwendet werden.
+
+
+<a name="extension_point"></a>
+### Extension Point
+
+Die `rex_list` Klasse bringt einen Extensionpoint mit: `REX_LIST_GET`. Der Extensionpoint wird vor der Listenausgabe aufgerufen.
+
+
+<a name="zusammenspiel_mit_rex_form"></a>
+## Zusammenspiel mit rex_form
+
+Die `rex_list` Klasse kann sehr gut mit der `rex_form` Klasse zusammen eingesetzt werden, um einen Datensatz zu editieren.
+
+* Der Parameter-Key `func` kann genutzt werden, um entsprechend eine `rex_form` Instanz ansteuern zu können. 
+* Mit der Parameter-Key `start` übergeben wir die Position der Paginierungs-Seite, wodurch ein zurückkehren auf von der `rex_form` Instanz auf diese Position ermöglicht wird.
+* Durch `###id###` wird als Value des Parameters-Keys `id` des Get-Parameters dem Link die entsprechende ID es jeweiligen Datensatzes geliefert. Nach diesem Muster können auch andere Werte eines Datensatzes an die Link-Parameter übergeben werden.
+
+
+<a name="ausgabe_im_fragment"></a>
+## Ausgabe einer rex_list in einem Fragment
 
 Im Addon-Kontext bietet es sich an für die Anzeige der Liste im Redaxo-Backend das Content-Fragment zu nutzen.
 
