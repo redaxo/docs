@@ -44,10 +44,10 @@
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points</sup>](/{{path}}/{{version}}/extension-points)
     - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
-    - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
+    - [Formulare <sup>(rex_form)</sup>](/{{path}}/{{version}}/formulare)  <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
-    - [Listen](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
+    - [Listen <sup>(rex_list)</sup>](/{{path}}/{{version}}/listen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
