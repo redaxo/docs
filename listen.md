@@ -90,6 +90,16 @@ Mit `$list->setColumnLabel('name', 'Name des Teilnehmers');` wird die Tabellensp
 
 Der Header wird standardmäßig bereits im Kopf ausgegeben, wenn `$list->show()` verwendet wird. Mit `echo $list->getHeader();` kann man den Header (Pager sowie Anzahl Datensätze) zusätzlich auch noch nach der Tabelle ausgeben lassen.
 
+#### `getUrl( array $params = [], boolean $escape = true )`
+
+Erstellt eine Url für die aktuelle Seite. Kann verwendet werden, um ein Formular aufzurufen:
+`echo '<a href="'.$list->getUrl(['func'=>'add']).'">Hinzufügen</a>';`
+
+#### `getParsedUrl( array $params = [], boolean $escape = true )`
+
+Erstellt eine Url für die aktuelle Seite. Der Url werden die Standard rexList Variablen (z.B. sort, sorttype) hinzugefügt. Kann verwendet werden, um ein Formular aufzurufen:
+`echo '<a href="'.$list->getParsedUrl(['func'=>'add']).'">Hinzufügen</a>';`
+
 #### `removeColumn( string $columnName )`
 
 Eine Spalte wird aus der Tabelle entfernt. Dies kann sinnvoll sein, wenn in der SQL-Abfrage Werte stehen, die nicht angezeigt werden sollen (z.B. die id des Datensatzes) `removeColumn( 'id' )`
@@ -155,5 +165,4 @@ $fragment = new rex_fragment();
 $fragment->setVar('title', 'Locations');
 $fragment->setVar('content', $list->get(), false);
 echo $fragment->parse('core/page/section.php');
-
 ```
