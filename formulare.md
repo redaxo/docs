@@ -1,5 +1,8 @@
 # Formulare
 
+
+- [Eingabefelder validieren](#eingabefelder-validieren)
+
 Die Klasse `rex_form` bietet die Möglichkeit Eingabeformulare in AddOn-Seiten zu erstellen. Die Verwendung im Frontend ist auch möglich, wird aber nicht empfohlen. `rex_form` bietet sich an gemeinsam mit `rex_list` zu verwenden.
 
 Die Erstellung eines `rex_form`-Objektes geschieht über die Factory Methode:
@@ -133,7 +136,7 @@ $field->setAttribute('class', 'selectpicker form-control');
 $field->setLabelField('name');
 ```
 
-**Hinweis:** Das Prio-Feld muss vom Typ int sein. Die Angabe von setLabelField ist zwingend. Das LabelField wird bei der Anzeige des Prio Feldes benötigt, um einen Datensatz zu identifizieren.
+**Hinweis:** Das Prio-Feld muss vom Typ int sein. Die Angabe von setLabelField ist zwingend. Das LabelField wird bei der Anzeige des Prio Feldes benötigt, um einen Datensatz bei der Auswahl zu identifizieren.
 
 #### `addMediaField($name, $value = null, array $attributes = [])`
 
@@ -221,14 +224,65 @@ Prüft ob sich das Formular im Edit-Modus befindet.
 Setzt die Url die bei der apply-action genutzt wird.
 Beispiel: `$form->setApplyUrl(rex_url::currentBackendPage());`
 
-
-
 ### Beispiel mit im Zusammenspiel mit `rex_list`
 
-...
+Dies ist ein einfaches Beispiel für die Darstellung einer Liste und eines Bearbeitungsformulars mit den Funktionen *bearbeiten*, *hinzufügen* und *löschen* (im Formular) auf Basis einer einfachen Datentabelle `rex_adressen`. In diesem Beispiel werden nur die Felder id, name und vorname verwendet.
 
+Zusätzlich wird für die Ausgabe ein Fragment verwendet.
 
-- [Eingabefelder validieren](#eingabefelder-validieren)
+```
+$func = rex_request('func','string','');
+$table = 'adressen'; // rex_adressen - Prefix wird durch rex::getTable hinzugefügt
+
+// Das Formular wird angezeigt, wenn der Request Parameter func (get oder post) gleich "add" oder "edit" ist
+if (in_array($func,['add','edit'])) {
+    // Formular Objekt erstellen
+    $form = rex_form::factory(rex::getTable($table), 'Adressen', 'id=' . rex_request('id', 'int', 0),'post',false);
+    // Die Id muss immer mit übergeben werden, sonst funktioniert das Speichern nicht
+    $form->addParam('id',rex_request('id', 'int', 0));
+    // Sortierparameter werden ebenso behalten wie die Position in der Liste
+    $form->addParam('sort',rex_request('sort', 'string', ''));
+    $form->addParam('sorttype',rex_request('sorttype', 'string', ''));
+    $form->addParam('start',rex_request('start', 'int', 0));
+    
+    // Textfeld Name mit Label Nachname
+    $field = $form->addTextField('name');
+    $field->setLabel('Nachname');
+	$field->getValidator()->add( 'notEmpty', 'Das Feld Nachname darf nicht leer sein.');
+    
+    // Textfeld vorname mit Label Vorname
+    $field = $form->addTextField('vorname');
+    $field->setLabel('Vorname');
+    
+    // Formular auslesen
+    $content = $form->get();
+    
+} else {
+    // Listenobjekt erstellen. 10 Datensätze pro Seite
+    $list = rex_list::factory('SELECT id,name,vorname FROM '.rex::getTable($table), 5, $table, 0);
+    
+    // Icon für die erste Spalte "+" = hinzufügen
+    $th_icon = '<a href="'.$list->getUrl(['func' => 'add']).'" title="'.rex_i18n::msg('add').'"><i class="rex-icon rex-icon-add-action"></i></a>';
+    // Edit-Icon
+    $td_icon = '<i class="rex-icon fa-file-text-o"></i>';
+    $list->addColumn($th_icon, $td_icon, 0, ['<th class="rex-table-icon">###VALUE###</th>', '<td class="rex-table-icon">###VALUE###</td>']);
+    $list->setColumnParams($th_icon, ['func' => 'edit', 'id' => '###id###', 'start' => rex_request('start', 'int', NULL)]);
+    
+    // die Spalte name wird sortierbar
+    $list->setColumnSortable('name');
+    // Liste auslesen
+    $content = $list->get();
+}
+
+// Listen- und Formularinhalt in Fragment "section" ausgeben
+$fragment = new rex_fragment();
+$fragment->setVar('class', 'edit', false);
+$fragment->setVar('title', 'Formlabel', false);
+$fragment->setVar('body', $content, false);
+$content = $fragment->parse('core/page/section.php');
+
+echo $content;
+```
 
 <a name="eingabefelder-validieren"></a>
 ## Eingabefelder validieren
@@ -240,23 +294,21 @@ $type bezeichnet die Validator-Funktion, $message die auszugebende Fehlermeldung
 
 Folgende Validatoren sind verfügbar:
 
-Name | Beschreibung | Parameter
-------------- | ------------- | -------------
-notEmpty	| prüft, ob ein Eingabefeld leer ist | -
-type	| prüft den Wert des Eingabefelds auf einen Variablentyp | Variablentyp: (int/integer, float, real)
-minLength | prüft auf eine Mindestlänge des Feldinhalts | Anzahl Zeichen Mindestlänge
-maxLength | prüft auf eine Maximallänge des Feldinhalts | Anzahl Zeichen Maximallänge
-to be continued | ...
+Name | Beschreibung | Parameter | Beispiel
+------------- | ------------- | ------------- | -------------
+notEmpty	| prüft, ob ein Eingabefeld leer ist | - | `$field->getValidator()->add( 'notEmpty', 'Das Feld Nachname darf nicht leer sein.');`
+type	| prüft den Wert des Eingabefelds auf einen Variablentyp | Variablentyp: (int/integer, float, real) | `$field->getValidator()->add( 'type', 'Bitte einen ganzzahligen Wert eingeben', 'int');`
+minLength | prüft auf eine Mindestlänge des Feldinhalts | Anzahl Zeichen Mindestlänge | `$field->getValidator()->add( 'minLength', 'Min 10 Zeichen', 10);`
+maxLength | prüft auf eine Maximallänge des Feldinhalts | Anzahl Zeichen Maximallänge | `$field->getValidator()->add( 'maxLength', 'Max 12 Zeichen', 12);`
+match | Wendet einen regulären Ausdruck an | regulärer Ausdruck | `$field->getValidator()->add( 'match', 'Das Feld PLZ muss fünf Ziffern enthalten.', '/^[0-9]{5}$/');`
+notMatch | prüft, ob regulärer Ausdruck nicht erfüllt ist. | regulärer Ausdruck | `$field->getValidator()->add( 'notMatch', 'Bitte keine Ziffern eingeben', '/[0-9]/');`
+min  | prüft, ob der eingegebene Wert größer oder gleich dem Vergleichswert ist.  | Vergleichswert  | $field->getValidator()->add( 'min', 'Mindestens 9999 eingeben', 9999);
+max  | prüft, ob der eingegebene Wert kleiner oder gleich dem Vergleichswert ist.  | Vergleichswert  | $field->getValidator()->add( 'max', 'Mindestens 9999 eingeben', 9999);
+url  | prüft auf url  | - | `$field->getValidator()->add( 'url', 'Bitte eine url eingeben');`
+email  | prüft auf E-Mail Adresse  | - | `$field->getValidator()->add( 'email', 'Bitte eine E-Mail Adresse eingeben');`
+values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);`
+custom  | prüft über eine Custom Function. Die Funktion erhält als Parameter den Wert des Feldes  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');`
 
-  > **Hinweis:** 
+
+> **Hinweis:** 
 Alle Validator-Typen außer notempty führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z.B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum match auf /^[0-9]{5}$/' auch ein notempty-Validator hinzugefügt werden.
-
-### Beispiele
-coming soon...
-
-
-
-
-## Editieren und Anlegen von Datensätzen
-
-Die `rex_form` Klasse ist "Part 2" der Redaxo eigenen Datenbankverwaltung für Addons. Mit Hilfe der `rex_form` klasse ist es möglich Datensätze editeren oder anlegen zu können. Dabei bietet `rex_form` alle nötigen Standard-Formular-Elemente und ermöglicht darüber hinaus den einsatz von Redaxo-Widgets wie Link-, Linklisten oder Media- und Media-Listen-Eingabe-Felder.
