@@ -1,14 +1,28 @@
 # Formulare
 
+- [Formulare `rex_form`](#rex-form)
+- [Formularansicht von Datensätzen](#formularansicht)
+	- [Aufruf von rex_form und Parameter](#aufruf_von_rex_form)
+	- [Ein einfaches Beispiel](#einfaches_beispiel)
+	- [Beschreibung der Methoden zur Formatierung und zum Verhalten des Formulars](#beschreibung_der_methoden)
+	- [Beispiel mit im Zusammenspiel mit `rex_list`](#beispiel_mit_rex_list)
+	- [Eingabefelder validieren](#eingabefelder-validieren)
 
-- [Eingabefelder validieren](#eingabefelder-validieren)
+<a name="rex-form"></a>
+## Formular `rex_form`
+
+<a name="formularansicht"></a>
+## Formularansicht von Datensätzen
 
 Die Klasse `rex_form` bietet die Möglichkeit Eingabeformulare in AddOn-Seiten zu erstellen. Die Verwendung im Frontend ist auch möglich, wird aber nicht empfohlen. `rex_form` bietet sich an gemeinsam mit `rex_list` zu verwenden.
+
+<a name="aufruf_von_rex_form"></a>
+### Aufruf von rex_form und Parameter
 
 Die Erstellung eines `rex_form`-Objektes geschieht über die Factory Methode:
 
 ```
-factory( string $tableName, string $fieldset, string $whereCondition, string $method = 'post', boolean $debug = false )
+$form = rex_form::factory( string $tableName, string $fieldset, string $whereCondition, string $method = 'post', boolean $debug = false )
 ```
 
 Parameter | Erklärung
@@ -35,8 +49,7 @@ $field->setLabel('Notizen');
 $form->show();
 ```
 
-Erstellt ein Bearbeitungsformular für die Tabelle rex_adressen und fügt drei Felder ein: name (input/text), vorname (input/text) und text (textarea). Das Formular muss mit einer gültigen Datensatz id aufgerufen werden.
-
+Erstellt ein Bearbeitungsformular für die Tabelle rex_adressen und fügt drei Felder in das Formular ein: name (input/text), vorname (input/text) und text (textarea). Das Formular muss mit einer gültigen Datensatz id aufgerufen werden.
 
 <a name="beschreibung_der_methoden"></a>
 ### Beschreibung der Methoden zur Formatierung und zum Verhalten des Formulars
@@ -224,6 +237,7 @@ Prüft ob sich das Formular im Edit-Modus befindet.
 Setzt die Url die bei der apply-action genutzt wird.
 Beispiel: `$form->setApplyUrl(rex_url::currentBackendPage());`
 
+<a name="beispiel_mit_rex_list"></a>
 ### Beispiel mit im Zusammenspiel mit `rex_list`
 
 Dies ist ein einfaches Beispiel für die Darstellung einer Liste und eines Bearbeitungsformulars mit den Funktionen *bearbeiten*, *hinzufügen* und *löschen* (im Formular) auf Basis einer einfachen Datentabelle `rex_adressen`. In diesem Beispiel werden nur die Felder id, name und vorname verwendet.
@@ -285,7 +299,8 @@ echo $content;
 ```
 
 <a name="eingabefelder-validieren"></a>
-## Eingabefelder validieren
+### Eingabefelder validieren
+
 Die Eingaben von rex_form-Eingabefeldern können vor dem Absenden des Formulars validiert werden. Dazu werden dem validator-Objekt des Eingabefelds ein oder mehrere Validatoren hinzugefügt:
 
     $field->getValidator()->add( string $type, null|string $message = null, mixed $option = null )
@@ -307,8 +322,7 @@ max  | prüft, ob der eingegebene Wert kleiner oder gleich dem Vergleichswert is
 url  | prüft auf url  | - | `$field->getValidator()->add( 'url', 'Bitte eine url eingeben');`
 email  | prüft auf E-Mail Adresse  | - | `$field->getValidator()->add( 'email', 'Bitte eine E-Mail Adresse eingeben');`
 values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);`
-custom  | prüft über eine Custom Function. Die Funktion erhält als Parameter den Wert des Feldes  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');`
-
+custom  | prüft über eine Custom Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion false zurück gibt, wird die Fehlermeldung ausgegeben.  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');`
 
 > **Hinweis:** 
 Alle Validator-Typen außer notempty führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z.B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum match auf /^[0-9]{5}$/' auch ein notempty-Validator hinzugefügt werden.
