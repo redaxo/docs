@@ -40,7 +40,7 @@ Als Erstes sollte man die aktuelle Version von REDAXO unter https://redaxo.org/d
 <a name="upload"></a>
 ## Upload 
 
-Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner deines lokalen Servers oder via FTP, SFTP, WebDAV auf deinen öffentlichen Webserver verschoben. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
+Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver verschoben. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
 Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem man die Zip-Datei direkt hochladen und auf dem Server entpacken kann. 
@@ -116,7 +116,7 @@ Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAX
 ![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
 Schritt 6: Administrator
 
-### Schritt 7: Geschafft, Heureka, Hurra
+### Schritt 7: Heureka
 Die Installation ist erfolgreich. Man sollte die weiteren Hinweise auf der Seite beachten und sich am besten direkt über den Button `Zum Login` anmelden. Alternativ kann man auch `/redaxo/` hinter die URL der Installation im Browser eingeben, um in das Backend zu gelangen. (Zum Beispiel *www.domain.xy/redaxo*)
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
