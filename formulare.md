@@ -440,8 +440,8 @@ min  | prüft, ob der eingegebene Wert größer oder gleich dem Vergleichswert i
 max  | prüft, ob der eingegebene Wert kleiner oder gleich dem Vergleichswert ist.  | Vergleichswert  | $field->getValidator()->add( 'max', 'Mindestens 9999 eingeben', 9999);
 url  | prüft auf URL  | - | `$field->getValidator()->add( 'url', 'Bitte eine url eingeben');`
 email  | prüft auf E-Mail-Adresse  | - | `$field->getValidator()->add( 'email', 'Bitte eine E-Mail Adresse eingeben');`
-values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);` |
-custom  | prüft über eine Custom-Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion *false* zurück gibt, wird die Fehlermeldung ausgegeben.  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');` |
+values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | - |`$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);` |
+custom  | prüft über eine Custom-Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion *false* zurück gibt, wird die Fehlermeldung ausgegeben. | - | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');` |
 
 > **Hinweis:** 
 Alle Validator-Typen außer *notempty* führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z.B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum *match* auf */^[0-9]{5}$/'* auch ein *notempty*-Validator hinzugefügt werden.
