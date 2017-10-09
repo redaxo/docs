@@ -11,7 +11,7 @@
 	
 
 <a name="rex-list"></a>
-## Tabellen `rex_list`
+## Tabellen rex_list
 
 
 <a name="listenansicht"></a>
@@ -55,24 +55,34 @@ Zeigt aus der Tabelle rex_adressen die Felder name, vorname, plz, ort und telefo
 
 Die Formatierung und das Verhalten der Liste kann weitestgehend konfiguriert werden. Hier werden nur die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der api Dokumentation von REDAXO [https://redaxo.org/api/master/class-rex_list.html](https://redaxo.org/api/master/class-rex_list.html)
 
-#### `addColumn(string $columnHead, string $columnBody, integer $columnIndex = -1, array $columnLayout = null)`
+#### addColumn
+
+`addColumn(string $columnHead, string $columnBody, integer $columnIndex = -1, array $columnLayout = null)`
 
 Fügt der Tabelle eine weitere Spalte hinzu. `$list->addColumn('edit','Bearbeiten');` fügt der Tabelle an der letzten Stelle eine Spalte hinzu. `edit` steht im Tabellenkopf, in jeder Tabellenzelle steht `Bearbeiten`.
 
-#### `addLinkAttribute(mixed $columnName, mixed $attrName, mixed $attrValue)`
+#### addLinkAttribute
+
+`addLinkAttribute(mixed $columnName, mixed $attrName, mixed $attrValue)`
 
 Definiert für einen Link in der angegebenen Spalte ein zusätzliches Link-Attribut. `$list->addLinkAttribute( 'name', 'data-id', '###id###' );` gibt im Link zusätzlich `data-id="999"` aus. Pro Spalte kann man mehrere Link-Attribute definieren.
 
-#### `addParam( mixed $name, mixed $value )`
+#### addParam
+
+`addParam( mixed $name, mixed $value )`
 
 Setzt einen klassenweiten Parameter, der für die Generierung von Links verwendet wird. Wird `rex_list` im Frontend eingesetzt, kann dadurch die Zielseite angegeben werden, in der ein Link geöffnet wird. Beispiel: `$list->addParam('article_id',REX_ARTICLE_ID)` - öffnet den Link in der aktuellen Seite.
 
-#### `addTableAttribute( mixed $attrName, mixed $attrValue )`
+#### addTableAttribute
+
+`addTableAttribute( mixed $attrName, mixed $attrValue )`
 
 Mit der Methode `addTableAttribute` können der Tabelle weitere Attribute hinzugefügt werden.
 `$list->addTableAttribute('class', 'table-striped');` gibt die Tabelle mit dem Attribut `class="table-striped"` aus
 
-#### `addTableColumnGroup( array $columns, integer $columnGroupSpan = null )`
+#### addTableColumnGroup
+
+`addTableColumnGroup( array $columns, integer $columnGroupSpan = null )`
 
 Die Methode kann verwendet werden, um die Spaltenbreiten über das HTML Element `colgroup` zu definieren.
 Beispiele:
@@ -82,49 +92,69 @@ $list->addTableColumnGroup([ ['width' => 40], ['width' => 240, 'span' => 2], ['w
 $list->addTableColumnGroup([ ['class' => 'classname-a'], ['class' => 'classname-b'], ['class' => 'classname-c'] ]);
 ```
 
-#### `getColumnLabel( string $columnName, mixed $default = null )`
+#### getColumnLabel
+
+`getColumnLabel( string $columnName, mixed $default = null )`
 
 Mit der Methode `setColumnLabel` bekommen die Tabellenspalten eine aussagekräftige Bezeichnung.
 Beispiel: `$list->setColumnLabel('name', 'Name des Teilnehmers');` überschreibt die Tabellenspalte `name` mit `Name des Teilnehmers`
 
-#### `getHeader()`
+#### getHeader()
+
+`getHeader()`
 
 Der Header wird standardmäßig bereits im Kopf ausgegeben, wenn `$list->show()` verwendet wird. Mit `echo $list->getHeader();` kann man den Header (Pager sowie Anzahl Datensätze) zusätzlich auch noch nach der Tabelle ausgeben lassen.
 
-#### `getUrl(array $params = [], boolean $escape = true)`
+#### getUrl
+
+`getUrl(array $params = [], boolean $escape = true)`
 
 Erstellt eine Url für die aktuelle Seite. Kann verwendet werden, um ein Formular aufzurufen:
 `echo '<a href="'.$list->getUrl(['func'=>'add']).'">Hinzufügen</a>';`
 
-#### `getParsedUrl(array $params = [], boolean $escape = true)`
+#### getParsedUrl
+
+`getParsedUrl(array $params = [], boolean $escape = true)`
 
 Erstellt eine Url für die aktuelle Seite. Der Url werden die Standard-rexList-Variablen (z.B. `sort`, `sorttype`) hinzugefügt. Kann verwendet werden, um ein Formular aufzurufen:
 `echo '<a href="'.$list->getParsedUrl(['func'=>'add']).'">Hinzufügen</a>';`
 
-#### `removeColumn(string $columnName)`
+#### removeColumn
+
+`removeColumn(string $columnName)`
 
 Eine Spalte wird aus der Tabelle entfernt. Dies kann sinnvoll sein, wenn in der SQL-Abfrage Werte stehen, die nicht angezeigt werden sollen (z.B. die id des Datensatzes): `removeColumn('id')`
 
-#### `setCaption(string $caption)`
+#### setCaption
+
+`setCaption(string $caption)`
 
 Setzt einen Titel über die Tabelle. Beispiel: `setCaption( 'Teilnehmerliste' )`.
 Es wird innerhalb der Tabelle das `<caption>` Tag gesetzt.
 
-#### `setColumnFormat(string $columnName, string $format_type, mixed $format = '', array $params = [])`
+#### setColumnFormat
+
+`setColumnFormat(string $columnName, string $format_type, mixed $format = '', array $params = [])`
 
 Setzt das Format einer Tabellenspalte. Um die Spalte `datum` als formatiertes Datum auszugeben, kann man `$list->setColumnFormat('datum', 'date','d.m.Y');` verwenden.
 Die Methode erlaubt auch eine Custom-Function. So kann man mit `$list->setColumnFormat('datum', 'custom','myclass::myfunction',['param1'=>'value1']);` eine Funktion aufrufen, die den anzuzeigenden Wert zurückliefert. Die Funktion bekommt als Parameter ein Array mit dem Listenobjekt (`list`), den Feldnamen (`field`), den Wert (`value`), das Format (`format`, in diesem Falle `custom`) und die Parameter (`params`) übergeben.
 Als Parameter können auch Platzhalter in der Form `###fieldname###` gesetzt werden. Somit können auch andere Werte aus der Datenbankabfrage an die Funktion übergeben werden. So kann in eine mit `addColumn` hinzugefügte Spalte ein Link eingefügt werden: `$list->setColumnFormat('delete', 'custom', ['myclass','mydeletefunc'],['id' => '###id###']);` Die Funktion `myclass::mydeletefunc` kann dann mittels `return '<a href="'.rex_getUrl(rex_article::getCurrentId(),'',['func'=>'delete']).'&id='.$params['params']['id'].'" onclick="return confirm(\'Wirklich löschen?\')">löschen</a>'` einen Link zum Löschen des Datensatzes in der Tabelle ausgeben. Die Löschfunktion selbst wird allerdings nicht von der rex_list Klasse zur Verfügung gestellt, sondern muss selbst programmiert werden.
 
-#### `setColumnParams(string $columnName, array $params = [])`
+#### setColumnParams
+
+`setColumnParams(string $columnName, array $params = [])`
 
 Verlinkt eine Spalte mit den übergebenen Parametern. `$list->setColumnParams('name', ['func' => 'edit', 'id' => '###id###', 'start' => rex_request('start','int',0) ]);` Dadurch erhält jeder Wert in der Spalte `name` einen Link mit dem Parametern `?func=edit&id=999&start=990`. Die Verarbeitung muss durch die Applikation durchgeführt werden.
 
-#### `setColumnSortable(string $columnName, string $direction = 'asc')`
+#### setColumnSortable
+
+`setColumnSortable(string $columnName, string $direction = 'asc')`
 
 `$list->setColumnSortable('name');` definiert die Spalte als sortierbar. Durch Anklicken im Tabellenkopf wird die Tabelle dann automatisch sortiert nach dieser Spalte ausgegeben.
 
-#### `setNoRowsMessage(mixed $msg)`
+#### setNoRowsMessage
+
+`setNoRowsMessage(mixed $msg)`
 
 Damit wird ein Text definiert, der angezeigt wird, falls keine Datensätze gefunden werden. Als Standard wird der über `rex_i18n` übersetzte String aus `list_no_rows` verwendet.
 

@@ -9,7 +9,7 @@
 	- [Eingabefelder validieren](#eingabefelder-validieren)
 
 <a name="rex-form"></a>
-## Formular `rex_form`
+## Formular rex_form
 
 <a name="formularansicht"></a>
 ## Formularansicht von Datensätzen
@@ -56,48 +56,68 @@ Erstellt ein Bearbeitungsformular für die Tabelle rex_adressen und fügt drei F
 
 Die Formatierung und das Verhalten des Formulars kann weitestgehend konfiguriert werden. Hier werden die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der api Dokumentation von REDAXO https://redaxo.org/api/master/class-rex_form.html
 
-#### `getUrl(array $params = [], $escape = true)`
+#### getUrl
+
+`getUrl(array $params = [], $escape = true)`
 
 Gibt eine Formular-Url zurück.
 Beispiel: `echo '<a href="'.$form->getUrl(['id'=>0,'func'=>'add']).'">neuer Datensatz</a>'` erstellt ein leeres Formular, um einen neuen Datensatz zu erfassen.
 
-#### `addFieldset($fieldset)`
+#### addFieldset
+
+`addFieldset($fieldset)`
 
 Es wird ein neues Fieldset angelegt. Ein bereits geöffnetes Fieldset wird automatisch geschlossen. Beispiel: `$form->addFieldset('Details')`
 
 > ***Hinweis:*** Alle Methoden, die Felder zum Formular hinzufügen, geben ein Objekt der Klasse `rex_form_element` zurück, welches weiter formatiert werden kann.
 
-#### `addField($tag, $name, $value = null, array $attributes = [], $addElement = true)`
+#### addField
+
+`addField($tag, $name, $value = null, array $attributes = [], $addElement = true)`
 
 Fügt dem Formular ein Feld vom Typ `$tag` hinzu. Alle Methoden, welche Felder hinzufügen, rufen `addField` auf. Man benötigt diese Methode eher selten und nur für spezielle Fälle, in denen man das Feld besonders behandeln will. Im Normalfall werden die Standardmethoden verwendet.
 Beispiel: `$form->addField('input','ort');` fügt ein Input type=text Feld für das Datenbankfeld ort in das Formular.
 
-#### `addContainerField($name, $value = null, array $attributes = [])`
+#### addContainerField
+
+`addContainerField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Container-Feld hinzu. Ein Container-Feld kann weitere Felder enthalten. +++++ offen +++++
 
-#### `addInputField($type, $name, $value = null, array $attributes = [], $addElement = true)`
+#### addInputField
+
+`addInputField($type, $name, $value = null, array $attributes = [], $addElement = true)`
 
 Fügt dem Formular ein Input-Feld mit dem Type `$type` hinzu. Alle Methoden, welche Felder hinzufügen, rufen `addInputField` auf. Wird nur im Ausnahmefall direkt benötigt.
 
-#### `addTextField($name, $value = null, array $attributes = [])`
+#### addTextField
+
+`addTextField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Text-Feld hinzu. Beispiel: `$field = $form->addTextField('vorname');` erzeugt ein Input Feld für das Datenbankfeld vorname.
 
-#### `addReadOnlyTextField($name, $value = null, array $attributes = [])`
+#### addReadOnlyTextField
+
+`addReadOnlyTextField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Readonly Text-Feld hinzu. Beispiel: `$field = $form->addReadOnlyTextField('vorname');` erzeugt ein Input Feld für das Datenbankfeld vorname, welches mit dem HTML Attribute readonly versehen ist.
 
-#### `addReadOnlyField($name, $value = null, array $attributes = [])`
+#### addReadOnlyField
+
+`addReadOnlyField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular den Wert eines Feldes in einem `<p>`-Tag hinzu. Beispiel: `$field = $form->addReadOnlyField('vorname');`
 
-#### `addHiddenField($name, $value = null, array $attributes = [])`
+#### addHiddenField
+
+`addHiddenField($name, $value = null, array $attributes = [])`
 
 Fügt dem Fomular ein Hidden-Feld hinzu. Beispiel: `$form->addHiddenField('createdate', date())`. Ins Feld createdate wird das aktuelle Datum geschrieben.
 ***Hinweis:*** Da der Feldname von rex_form in ein Array umgewandelt wird, kann man Hidden Felder nicht zur Steuerung des Programms verwenden. Hierzu sollte man die Methode `addRawField` verwenden.
 
-#### `addCheckboxField($name, $value = null, array $attributes = [])`
+#### addCheckboxField
+
+`addCheckboxField($name, $value = null, array $attributes = [])`
 
 Fügt dem Fomular eine Checkbox-Gruppe hinzu. `addOption` fügt jeweils eine weitere Checkbox zur Gruppe hinzu, wie das Beispiel zeigt. Die Werte werden im Datenbankfeld mit Pipe (senkrechter Strich `|`) getrennt abgelegt. Daher ist es sinnvoll auf senkrechte Striche in den Werten zu verzichten.
 
@@ -108,7 +128,9 @@ $field->addOption('Pizza Margherita', 'pizza_436');
 $field->addOption('Pasta Gorgonzola', 'pasta_768');
 ```
 
-#### `addRadioField($name, $value = null, array $attributes = [])`
+#### addRadioField
+
+`addRadioField($name, $value = null, array $attributes = [])`
 
 Fügt dem Fomular eine Radiobutton-Gruppe hinzu. `addOption` fügt jeweils einen weiteren Radiobutton zur Gruppe hinzu, wie das Beispiel zeigt.
 
@@ -119,11 +141,15 @@ $field->addOption ('Bier (0,33l)', 'bier_033');
 $field->addOption ('Limo (0,5l)', 'limo_05');
 ```
 
-#### `addTextAreaField($name, $value = null, array $attributes = [])`
+#### addTextAreaField
+
+`addTextAreaField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Textarea-Feld hinzu. Beispiel: `$field = $form->addTextAreaField('text');`. Die rex_form Klasse prüft keine Datentypen. Daher ist die Programmiererin selbst dafür verantwortlich, dass das Datenbankfeld auch vom Typ text ist.
 
-#### `addSelectField($name, $value = null, array $attributes = [])`
+#### addSelectField
+
+`addSelectField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Select/Auswahl-Feld hinzu. Das Beispiel zeigt die Optionen für das Select-Feld:
 
@@ -138,7 +164,9 @@ $select->addOption('Fleisch', 'fleisch');
 $select->addOption('Vegetarisch', 'vegetarisch');
 ```
 
-#### `addPrioField($name, $value = null, array $attributes = [])`
+#### addPrioField
+
+`addPrioField($name, $value = null, array $attributes = [])`
 
 Etwas ganz tolles: das Prio-Feld aktualisiert automatisch einen Sortierschlüssel, der für eine sortierte Ausgabe verwendet werden kann.
 
@@ -151,36 +179,50 @@ $field->setLabelField('name');
 
 **Hinweis:** Das Prio-Feld muss vom Typ int sein. Die Angabe von setLabelField ist zwingend. Das LabelField wird bei der Anzeige des Prio Feldes benötigt, um einen Datensatz bei der Auswahl zu identifizieren.
 
-#### `addMediaField($name, $value = null, array $attributes = [])`
+#### addMediaField
+
+`addMediaField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Feld hinzu mit dem der Medienpool angebunden wird. Es kann nur ein Element aus dem Medienpool eingefügt werden.
 Beispiel: `$field = $form->addMediaField('bild');` fügt ein Mediafeld für die Tabellenspalte *bild* ein.
 
-#### `addMedialistField($name, $value = null, array $attributes = [])`
+#### addMedialistField
+
+`addMedialistField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Feld hinzu mit dem der Medienpool angebunden wird. Damit können mehrere Elemente aus dem Medienpool eingefügt werden. Die einzelnen Medien werden im Datenfeld durch Komma getrennt.
 Beispiel: `$field = $form->addMedialistField('bilder');` fügt ein Medialistfeld für die Tabellenspalte *bilder* ein.
 
-#### `addLinkmapField($name, $value = null, array $attributes = [])`
+#### addLinkmapField
+
+`addLinkmapField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Feld hinzu mit dem die Struktur-Verwaltung angebunden wird. Es kann nur ein Element aus der Struktur eingefügt werden.
 Beispiel: `$field = $form->addLinkmapField('link');` fügt ein Linkfeld für die Tabellenspalte *link* ein.
 
-#### `addLinklistField($name, $value = null, array $attributes = [])`
+#### addLinklistField
+
+`addLinklistField($name, $value = null, array $attributes = [])`
 
 Fügt dem Formular ein Feld hinzu mit dem die Struktur-Verwaltung angebunden wird. Es können mehrere Elemente aus der Struktur eingefügt werden.
 Beispiel: `$field = $form->addLinklistField('links');` fügt ein Linklistfeld für die Tabellenspalte *links* ein.
 
-#### `addRawField($html)`
+#### addRawField
+
+`addRawField($html)`
 
 Fügt dem Formular beliebiges HTML zu. Braucht man auch immer mal wieder.
 Beispiel: `$field = $form->addRawField('<input type="hidden" name="id" value="'.rex_request('id', 'int', 0).'">');` fügt dem Formular ein Hidden Field per HTML hinzu, welches mit einem Wert aus dem Request gefüllt wird.
 
-#### `addErrorMessage($errorCode, $errorMessage)`
+#### addErrorMessage
 
-Fügt dem Formular eine Fehlermeldung hinzu. ??????????
+`addErrorMessage($errorCode, $errorMessage)`
 
-#### `addParam($name, $value)`
+Fügt dem Formular eine Fehlermeldung hinzu.
+
+#### addParam
+
+`addParam($name, $value)`
 
 Fügt dem Formular einen Parameter hinzu. Diese werden an den Stellen eingefuegt, an denen das Fomular neue Requests erzeugt.
 Damit lassen sich Werte "merken", z.B. die aktuelle Position des Pagers, oder Sortiereinstellung und Sortierrichtung der aufrufenden Liste.
@@ -190,7 +232,9 @@ $form->addParam('sort',rex_request('sort', 'string', ''));
 $form->addParam('sorttype',rex_request('sorttype', 'string', ''));
 $form->addParam('start',rex_request('start', 'int', 0));`
 
-#### `getParams()`
+#### getParams
+
+`getParams()`
 
 Gibt alle Parameter des Fomulars zurück.
 Beispiel: `dump($form->getParams())`
@@ -210,35 +254,47 @@ Beispiel: `dump($form->getParams())`
 Gibt die Where-Bedingung des Formulars als String zurück.
 Beispiel: `dump($form->getWhereCondition())` zeigt `id=8`
 
-#### `getParam($name, $default = null)`
+#### getParam
+
+`getParam($name, $default = null)`
 
 Gibt den Wert des Parameters `$name` zurück oder `$default` wenn kein Parameter mit dem Namen exisitiert.
 Beispiel: `dump($form->getParam('id',0);)` zeigt z.B. `8`
 
-#### `createInput($inputType, $name, $value = null, array $attributes = [])`
+#### createInput
+
+`createInput($inputType, $name, $value = null, array $attributes = [])`
 
 Erstellt ein Input-Element anhand des Strings `$inputType`.
 
-#### `setLanguageSupport($idField, $clangField)`
+#### setLanguageSupport
+
+`setLanguageSupport($idField, $clangField)`
 
 Mehrsprachigkeit unterstützen.
 
-#### `setEditMode($isEditMode)`
+#### setEditMode
+
+`setEditMode($isEditMode)`
 
 Wechselt den Modus des Formulars.
 Beispiel: `$form->setEditMode($func == 'edit');`
 
-#### `isEditMode()`
+#### isEditMode
+
+`isEditMode()`
 
 Prüft ob sich das Formular im Edit-Modus befindet.
 
-#### `setApplyUrl($url)`
+#### setApplyUrl
+
+`setApplyUrl($url)`
 
 Setzt die Url die bei der apply-action genutzt wird.
 Beispiel: `$form->setApplyUrl(rex_url::currentBackendPage());`
 
 <a name="beispiel_mit_rex_list"></a>
-### Beispiel mit im Zusammenspiel mit `rex_list`
+### Beispiel mit im Zusammenspiel mit rex_list
 
 Dies ist ein einfaches Beispiel für die Darstellung einer Liste und eines Bearbeitungsformulars mit den Funktionen *bearbeiten*, *hinzufügen* und *löschen* (im Formular) auf Basis einer einfachen Datentabelle `rex_adressen`. In diesem Beispiel werden nur die Felder id, name und vorname verwendet.
 
@@ -321,8 +377,8 @@ min  | prüft, ob der eingegebene Wert größer oder gleich dem Vergleichswert i
 max  | prüft, ob der eingegebene Wert kleiner oder gleich dem Vergleichswert ist.  | Vergleichswert  | $field->getValidator()->add( 'max', 'Mindestens 9999 eingeben', 9999);
 url  | prüft auf url  | - | `$field->getValidator()->add( 'url', 'Bitte eine url eingeben');`
 email  | prüft auf E-Mail Adresse  | - | `$field->getValidator()->add( 'email', 'Bitte eine E-Mail Adresse eingeben');`
-values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);`
-custom  | prüft über eine Custom Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion false zurück gibt, wird die Fehlermeldung ausgegeben.  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');`
+values  | prüft, ob der eingegebene Wert einem der Werte entspricht  | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);` |
+custom  | prüft über eine Custom Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion false zurück gibt, wird die Fehlermeldung ausgegeben.  | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');` |
 
 > **Hinweis:** 
 Alle Validator-Typen außer notempty führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z.B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum match auf /^[0-9]{5}$/' auch ein notempty-Validator hinzugefügt werden.
