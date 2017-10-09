@@ -190,13 +190,13 @@ Alternativ kann auch `$list->show();` verwendet werden.
 <a name="extension_point"></a>
 ### Extension Point
 
-Die `rex_list`-Klasse bringt einen Extension-Point mit: `REX_LIST_GET`. Der Extension-Point wird vor der Listenausgabe aufgerufen.
+Die *rex_list*-Klasse bringt einen Extension-Point mit: `REX_LIST_GET`. Der Extension-Point wird vor der Listenausgabe aufgerufen.
 
 
 <a name="zusammenspiel_mit_rex_form"></a>
 ## Zusammenspiel mit rex_form
 
-Die *rex_list*-Klasse kann sehr gut mit der [`rex_form`-Klasse](/{{path}}/{{version}}/formulare) zusammen eingesetzt werden, um einen Datensatz zu editieren.
+Die *rex_list*-Klasse kann sehr gut mit der [*rex_form*-Klasse](/{{path}}/{{version}}/formulare) zusammen eingesetzt werden, um einen Datensatz zu editieren.
 
 * Mit dem Parameter-Key *func* kann kann man entsprechend eine `rex_form` Instanz ansteuern. 
 * Mit dem Parameter-Key *start* lässt sich die Position der Paginierungs-Seite übergeben, wodurch ein Zurückkehren auf diese Position in der *rex_form*-Instanz ermöglicht wird.
