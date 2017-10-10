@@ -29,6 +29,7 @@
     - [Navigationen](/{{path}}/{{version}}/navigationen)
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module)
+    - [AddOns](/{{path}}/{{version}}/addons) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
@@ -59,9 +60,16 @@
     - [Urls <sup>(rex_getUrl)</sup>](/{{path}}/{{version}}/urls) <sup><b>offen</b></sup>
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
-- AddOns
-    - [Installation](/{{path}}/{{version}}/addon-installation) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i>
-    - [Entwicklung](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
+- AddOn-Entwicklung
+    - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur) <sup><b>skerbis</b></sup>
+    - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>skerbis</b></sup>
+    - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>skerbis</b></sup>
+    - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>skerbis</b></sup>
+    - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>skerbis</b></sup>
+    - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
+    - [Datenerfassung / Konfiguration](/{{path}}/{{version}}/addon-config-data) <sup><b>offen</b></sup>
+    - [*Entwicklung*](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
+    - [Quickstart: Das erste eigene AddOn](/{{path}}/{{version}}/addon-config-data) <sup><b>skerbis</b></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
 
 - Datenbank
