@@ -1,6 +1,6 @@
 # Formulare
 
-- [Formulare `rex_form`](#rex-form)
+- [Formulare rex_form](#rex-form)
 - [Formularansicht von Datensätzen](#formularansicht)
 	- [Aufruf von rex_form und Parameter](#aufruf_von_rex_form)
 	- [Ein einfaches Beispiel](#einfaches_beispiel)
@@ -115,7 +115,62 @@ Beispiel: `$form->addField('input','ort');` fügt ein Input *type=text*-Feld fü
 
 `addContainerField($name, $value = null, array $attributes = [])`
 
-Fügt dem Formular ein Container-Feld hinzu. Ein Container-Feld kann weitere Felder enthalten.
+Fügt dem Formular ein Container-Feld hinzu. Ein Container-Feld kann weitere Felder enthalten. rex_form speichert die Werte eines Container-Feldes als json, sodass mehrere Werte in einem Feld abgelegt werden können. Das ist besonders nützlich, wenn man dynamische Felder benötigt und nicht jedesmal die Datenstruktur anpassen will. Die einzelnen Felder werden dem Container mit der Methode `addGroupedField` hinzugefügt.
+
+```
+// Fieldcontainer erstellen. Die Werte werden in das Datenfeld gaeste als json gespeichert
+$fieldContainer = $form->addContainerField('gaeste');
+
+// HTML Prefix für den Container
+$fieldContainer->setPrefix('<fieldset><legend>Gast 1</legend>');
+// HTML Sufix für den Container
+$fieldContainer->setSuffix('</fieldset>');
+
+// Für den ersten Gast werden die Werte als Wertegruppe unter "gast1" im json abgelegt
+// Textfelder für Vorname und Nachname
+$f = $fieldContainer->addGroupedField('gast1', 'text', 'vorname');
+$f->setLabel('Vorname');
+$f->setAttribute('placeholder','Vorname');
+$f = $fieldContainer->addGroupedField('gast1', 'text', 'nachname');
+$f->setLabel('Nachname');
+$f->setNotice('Der Name muss immer vollständig ausgefüllt werden.');
+
+// Selectfeld mit Mehrfachauswahlmöglichkeit
+$f = $fieldContainer->addGroupedField('gast1', 'select', 'service','',['class'=>'selectpicker','multiple'=>'multiple']);
+
+$f->setLabel('Service');
+$select = $f->getSelect();
+$select->addOptions(['Garage','Parkplatz','Bettwäsche','Handtücher','Endreinigung'], true);
+
+$f = $fieldContainer->addGroupedField('gast1', 'select', 'schuhgroesse','',['class'=>'selectpicker']);
+$f->setLabel('Schuhgröße');
+$select = $f->getSelect();
+$select->addOptions([36,37,38,39,40,41,42,43,44,45,46,47,48], true);
+```
+
+***Methoden für den Container***
+
+Methode | Beschreibung
+------------- | ------------- 
+`addGroupedField($group, $type, $name, $value = null, array $attributes = [])` | Fügt dem Container ein Eingabefeld hinzu. Mögliche Werte für `$type` sind `text`, `textarea`, `select`, `radio`, `checkbox`, `media`, `medialist`, `link`, `linklist`. Attributes ist ein Array, welches Attribute für das jeweilige Feld enthalten kann. z.B. `['class'=>'selectpicker','multiple'=>'multiple']`
+`setAttribute($name, $value)` | Setzt Attribute für den Container. Beispiel `$fieldContainer->setAttribute('style', 'display: none');`
+`setPrefix` | HTML Code, der zum Beginn des Containers ausgegeben wird.
+`setSuffix` | HTML Code, der am Ende des Containers ausgegeben wird.
+`setHeader` | HTML Code, der vor dem Container ausgegeben wird.
+`setFooter` | HTML Code, der nach dem Container ausgegeben wird.
+
+***Methoden für die Felder***
+
+Methode | Beschreibung
+------------- | ------------- 
+`setHeader($header);` | HTML Code, der vor dem Feld ausgegeben wird.
+`setFooter($footer);` | HTML Code, der nach dem Feld ausgegeben wird.
+`setPrefix($prefix);` | HTML Code, der zum Beginn des Feldes ausgegeben wird.
+`setSuffix($sufix);` | HTML Code, der am Ende des Feldes ausgegeben wird.
+`setAttribute($name, $value);` | Attribute für das Feld
+`setLabel($label);` | Label für das Feld
+`setNotice($notice);` | Notiz für das Feld
+
 
 <a name="addinputfield"></a>
 #### addInputField
@@ -270,7 +325,8 @@ Beispiel: `$field = $form->addRawField('<input type="hidden" name="id" value="'.
 
 `addErrorMessage($errorCode, $errorMessage)`
 
-Fügt dem Formular eine Fehlermeldung hinzu.
+Über den Errorcode REX_FORM_ERROR_VIOLATE_UNIQUE_KEY kann geprüft werden, ob ein Unique Feld auch tatsächlich mit einem Unique-Wert gefüllt wurde. Andernfalls wird die in `$errorMessage` angegebene Fehlermeldung ausgegeben. Das Feld muss als Unique in der Datenbank definiert sein.
+Beispiel: `$form->addErrorMessage(REX_FORM_ERROR_VIOLATE_UNIQUE_KEY, 'Artikelnummer nicht eindeutig.');`
 
 <a name="addparam"></a>
 #### addParam
@@ -331,7 +387,20 @@ Erstellt ein Input-Element anhand des Strings *$inputType*.
 
 `setLanguageSupport($idField, $clangField)`
 
-Dient zum Unterstützen der Mehrsprachigkeit.
+Dient zum Unterstützen der Mehrsprachigkeit. Bei einer Datenbank, bei der für jede Sprache ein Datensatz angelegt ist und das Feld id jeweils den gleichen Wert hat, kann ein eindeutiger Datensatz über die Funktion `setLanguageSupport` definiert werden.
+Beispiel: `$form->setLanguageSupport('id','clang_id');`
+
+Beispieltabelle:
+
+pid | id | clang_id
+------------- | ------------- | -------------
+1 | 1 | 1
+2 | 1 | 2
+3 | 1 | 3
+4 | 2 | 1
+5 | 2 | 2
+6 | 2 | 3
+
 
 <a name="seteditmode"></a>
 #### setEditMode
