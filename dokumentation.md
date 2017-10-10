@@ -65,9 +65,11 @@
     - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
-    - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>skerbis</b></sup>
+    - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [Datenbank-Tabellen](/{{path}}/{{version}}/addon-datenbanktabellen) <sup><b>offen</b></sup>
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
     - [Datenerfassung / Konfiguration](/{{path}}/{{version}}/addon-config-data) <sup><b>offen</b></sup>
+    - [Installation / Update](/{{path}}/{{version}}/addon-intall-update) <sup><b>offen</b></sup>
     - [*Entwicklung*](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
     - [Quickstart: Das erste eigene AddOn](/{{path}}/{{version}}/addon-config-data) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
