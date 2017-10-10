@@ -65,6 +65,7 @@
     - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [Autoload](/{{path}}/{{version}}/addon-autoload) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Datenbank-Tabellen](/{{path}}/{{version}}/addon-datenbanktabellen) <sup><b>offen</b></sup>
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
