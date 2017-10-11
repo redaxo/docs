@@ -30,6 +30,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `$REX['CLANG']` | `rex_clang::getAll()` |
 | `$REX['MOD_REWRITE']` | Existiert nicht mehr |
 | `$REX['TABLE_PREFIX']` | `rex::getTablePrefix()`<br>`rex::getTable($table)` (ergibt: `'rex_'.$table`) |
+| `$REX['DB']` | `rex::getProperty('db')` |
 | `$REX['USER']`<br>`$REX['USER']->hasPerm('myperm[]')` | `rex::getUser()`<br>`rex::getUser()->hasPerm('myperm[]')` |
 | `$REX['PERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null)`<br>Zweiter (optionaler) Parameter ist ein Bezeichner, der in der Rechteverwaltung erscheint |
 | `$REX['EXTPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::OPTIONS)` |
