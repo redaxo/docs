@@ -13,7 +13,7 @@
     - [BE Style](#bestyle)
     - [Media Manager](#mediamanager)
 
-Extension Points sind Stellen im REDAXO-Programmcode, an denen eigener Code eingeklinkt und ausgeführt werden kann. Dadurch lässt sich auch das Core-System erweitern und anpassen, ohne den Core selbst zu verändern. Extension Points ermöglichen die Manipulation eines bestimmten Wertes, der von der Funktion zurückgegeben wird, die man am Extension Point ausführen lässt.
+Extension Points sind Stellen im REDAXO-Programmcode, an denen eigener Code eingeklinkt und ausgeführt werden kann. Dadurch lässt sich auch das Core-System erweitern und anpassen, ohne den Core selbst zu verändern. Extension Points ermöglichen die Manipulation eines bestimmten Wertes, der von der Funktion zurückgegeben wird, die man am Extension Point ausführen lässt. Extension Points stehen im Frontend und im Backend zur Verfügung.
 
 Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als Übergabewerte, die sich von Extension Point zu Extension Point unterscheiden.
 
@@ -36,6 +36,7 @@ Methode | Beschreibung | Beispiel
 `getName` | Liefert den Namen des Extensionpoints | `echo $ep->getName()` ergibt z.B. "SLICE_SHOW"
 `getSubject` | Liefert den Inhalt | `echo $ep->getSubject()` liefert den Inhalt des aktuellen Extensionpoints, der bearbeitet und verändert wieder zurückgegeben werden kann.
 `getParams` | Liefert zusätzliche Umgebungsparameter als Array, z.B. `article_id`, `clang`, `ctype`, `module_id`, `slice_id`, `function`, `function_slice_id` | `dump($ep->getParams())`
+`getParam` | Liefert einen einzelnen Wert aus params. | `echo $ep->getParam('article_id')` gibt die Artikel Id aus.
 
 Die Registrierung eines Extension Points mit der Methode `rex_extension::register` kann mit dem Parameter `rex_extension::EARLY` (-1), `rex_extension::NORMAL` (0) oder `rex_extension::LATE` (1) aufgerufen werden. Standard ist NORMAL (0). Dadurch kann die Reihenfolge gesteuert werden, in der die Erweiterungen abgearbeitet werden.
 
