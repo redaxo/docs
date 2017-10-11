@@ -19,14 +19,14 @@ be_style | | Addon für die Backenddarstellung
 || redaxo | Liefert das Default-Design des Backend
 || customizer | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung
 cronjob | | Ausführung Regelmäßiger, geplanter Aufgaben
-|| article_status | Ändert den Online-Status entsprechend Meza-Angabe
+|| article_status | Ändert den Online-Status entsprechend Meta-Angabe
 || optimize_tables | Optimiert die Datenbanktabellen
 install | | Veröffentlichung und Download von AddOns
 media_manager | | Ausgabe und Manipulation von Medien
 mediapool | | Medienverwaltung
-metainfo | | Stellt Metadfelder im System zur Vefügung
+metainfo | | Stellt Metafelder im System zur Vefügung
 phpmailer | | Bindet die PHPMailer Class ein zum Versand von E-Mails
-project | | Ein leeres AddOn um eigene Funktionen zu integirern (*updatesicher*)
+project | | Ein leeres AddOn um eigene Funktionen zu integrieren (*updatesicher*)
 structure | | Liefert die Strukturverwaltung für Kategorien und Artikel
 || content | Stellt die Funktionen zur Inhaltsbearbeitung bereit
 || history | Versionierung von Artikeln
