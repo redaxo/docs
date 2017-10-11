@@ -1,6 +1,7 @@
 # Extension Points
 
 - [Einsatz eines Extension Points](#einsatz)
+	- [Beispiel für den Einsatz eines Extension Points](#beispiel)
 - [Eigene Extension Points definieren](#definieren)
 - [Liste der Extension Points](#liste)
     - [Core](#core)
@@ -28,13 +29,56 @@ rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extens
 
 Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` auf.
 
-Die Funktion, die am Extension Point aufgerufen wird, bekommt in diesem Falle folgende Werte übergeben:
+Die Funktion, die am Extension Point aufgerufen wird, bekommt ein Objekt vom Typ `rex_extension_point` übergeben, welches ausgewertet werden kann.
 
-- den Namen des Extension Points
-- das Subject, welches in den meisten Fällen verändert werden kann und als Rückgabewert der eigenen Funktion wieder in den weiteren Ablauf eingefügt werden kann
-- als zusätzliche Parameter: `article_id`, `clang`, `ctype`, `module_id`, `slice_id`, `function`, `function_slice_id`
+Methode | Beschreibung | Beispiel
+---------- | ---------- | ----------
+`getName` | Liefert den Namen des Extensionpoints | `echo $ep->getName()` ergibt z.B. "SLICE_SHOW"
+`getSubject` | Liefert den Inhalt | `echo $ep->getSubject()` liefert den Inhalt des aktuellen Extensionpoints, der bearbeitet und verändert wieder zurückgegeben werden kann.
+`getParams` | Liefert zusätzliche Umgebungsparameter als Array, z.B. `article_id`, `clang`, `ctype`, `module_id`, `slice_id`, `function`, `function_slice_id` | `dump($ep->getParams())`
 
 Die Registrierung eines Extension Points mit der Methode `rex_extension::register` kann mit dem Parameter `rex_extension::EARLY` (-1), `rex_extension::NORMAL` (0) oder `rex_extension::LATE` (1) aufgerufen werden. Standard ist NORMAL (0). Dadurch kann die Reihenfolge gesteuert werden, in der die Erweiterungen abgearbeitet werden.
+
+<a name="beispiel"></a>
+### Beispiel für den Einsatz eines Extension Points
+
+Im aktuellen Beispiel soll die Sidebar im Backend bei der Artikelbearbeitung um ein Infofeld erweitert werden. Hierfür kann der Extensionpoint `STRUCTURE_CONTENT_SIDEBAR` genutzt werden.
+
+In die Datei boot.php des AddOns (z.B. des project AddOns) kommt folgender Code:
+
+```
+// Die Funktion wird nur im Backend aufgerufen, wenn ein User eingeloggt ist
+if (rex::isBackend() && rex::getUser()) {
+	// Am Extensionpoint wird die Funktion be_helper::addfield aufgerufen.
+    rex_extension::register('STRUCTURE_CONTENT_SIDEBAR', ['be_helper','addfield'], rex_extension::LATE);	
+}
+```
+
+Die aufzurufende Funktion wird im Verzeichnis lib des AddOns z.B. in der Datei be_helper.php definiert
+
+```
+class be_helper {
+    public static function addfield($ep) {
+        
+        // den aktuellen Inhalt auslesen
+        $subject = $ep->getSubject();
+        
+        // Beispielinhalt
+        $text = '<p>In diesem Beispiel wird in der Sidebar des Backends ein zusätzliches Feld eingeblendet.</p>';
+
+        // den Inhalt in einem Fragment ausgeben
+        $fragment = new rex_fragment();
+        $fragment->setVar('title', 'Beispiel', false);
+        $fragment->setVar('body', $text, false);
+        $fragment->setVar('collapse', true); // das Feld erhält eine Akkordeon-Funktion
+        $fragment->setVar('collapsed', true); // das Feld ist erstmal zusammengeklappt, bei false ist es ausgeklappt
+        $content = $fragment->parse('core/page/section.php');
+
+		// Der Inhalt des Fragmentes wird an der geeigneten Stelle eingesetzt
+        return preg_replace('~</section>~','</section>'.$content,$subject,1);
+    }
+}
+```
 
 <a name="definieren"></a>
 ## Eigene Extension Points definieren
