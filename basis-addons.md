@@ -15,7 +15,7 @@ REDAXO liefert bereits bei der Installation einige AddOns und PlugIns mit:
 AddOn | PlugIn | Beschreibung
 ------------- | ------------- | -------------
 backup | |Erstellung und Wiederherstellung von Backups
-BE_style | | Addon für die Backenddarstellung
+be_style | | Addon für die Backenddarstellung
 || redaxo | Liefert das Default-Design des Backend
 || customizer | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung
 cronjob | | Ausführung Regelmäßiger, geplanter Aufgaben
