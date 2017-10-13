@@ -80,7 +80,7 @@ Siehe: [Installer](/{{path}}/{{version}}/installer)
 - Download des AddOns als ZIP
 - Entpacken des ZIP
 - ggf. README.md beachten, sofern vorhanden
-- Upload in den Ordner `/redaxo/core/addons/`
+- Upload in den Ordner `/redaxo/src/addons/`
 
 > Der Ordner-Name des AddOs sollte identisch mit dem in der darin befindlichen package.yml hinterlegten AddOn-Key sein. 
 
