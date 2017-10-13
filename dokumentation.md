@@ -29,7 +29,7 @@
     - [Navigationen](/{{path}}/{{version}}/navigationen)
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [Module](/{{path}}/{{version}}/module)
-    - [AddOns](/{{path}}/{{version}}/addons) <sup><b>in Bearbeitung</b></sup> <sup><i>Skerbis</i></sup>
+    - [AddOns](/{{path}}/{{version}}/addons) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
