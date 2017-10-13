@@ -1,4 +1,4 @@
-# # # Media Manager
+# Media Manager
 - [Prinzip](#prinzip)
 - [Effekte](#effekte)
 - [Konfiguration des Media Managers](#konfiguration)
