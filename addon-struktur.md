@@ -1,8 +1,8 @@
 # AddOn: Aufbau und Struktur 
 
 | Ordner | Datei | Beschreibung |
-| ------ | ---------- | -------------------- |
-|   | package.yml | Definiert das Addon, grundlegende Einstellungen - Diese Detei ist unbedingt erforderlich.  |
+| ------ | ------------- | ---------- |
+|   | **package.yml** | Definiert das Addon, grundlegende Einstellungen - Diese Detei ist **unbedingt erforderlich**.  |
 |  | boot.php | Die boot.php wird bei jeder Aktion in Redaxo ausgeführt. Hier können beliebige Befehle ausgeführt werden.  |
 |  | install.php | Wird automatisch bei der Installation ausgeführt. (z.B. Anlage von Datenbanken, Installation von Modulen, bestimmte Prüfungen, Festlegen erster Konfigurationswerte. |
 |  | uninstall.php | Gegenstück zu install.php. Hier können zusätzliche Deinstallationsschritte eingefügt werden.  |
@@ -15,4 +15,5 @@
 | pages |  | Ordner für die Backendseiten des AddOns (z.B. Hilfe, Setup)  |
 | plugins |  | Hier findet man die mitgelieferten PlugIns |
 |  |  |  |
+
 
