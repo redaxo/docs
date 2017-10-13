@@ -9,7 +9,7 @@
 |  | uninstall.php | Gegenstück zu install.php. Hier können zusätzliche Deinstallationsschritte eingefügt werden.  |
 |  | install.sql | SQL-Datei, die bei Installation ausgeführt werden soll |
 |  | uninstall.sql | SQL-Datei, die bei Deinstallation ausgeführt werden soll |
-| assets | *.css, *.js | Hier werden die Assets des AddOns abgelegt. Bei Installation werden diese in den Ordner **/assets/addon/addon_name/** kopiert. Sie stehen somit öffentlich zur Verfügung. Es sind Unterordner möglich.  |
+| assets | *.css, *.js, *.png etc. | Hier werden die Assets des AddOns abgelegt. Bei Installation werden diese in den Ordner **/assets/addon/addon_name/** kopiert. Sie stehen somit öffentlich zur Verfügung. Es sind Unterordner möglich.  |
 | data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden im Ordner  /redaxo/data/addons/addon_name abgelegt |
 | fragments |  | Ordner für Fragmente  |
 | lang | *.lang | Hier werden die Sprachdateien abgelegt |
