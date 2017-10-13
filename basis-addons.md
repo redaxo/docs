@@ -5,7 +5,7 @@
 - [AddOnverwaltung](#addons)
 - [Upload](#upload)
  - [Upload per Installer](#upinstaller)
- - [Upload per (S)FTP](#upftp) 
+ - [Manueller Upload per (S)FTP](#upftp) 
  - [Hinweis zu AddOns aus GitHub](#github)  
 - [AddOn-Installation](#install)
 - [Update](#update)
@@ -15,11 +15,14 @@
 <a name="ueber"></a>
 ## Über
 
-AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, verbessern oder erweitern die Benutzeroberfläche und Bedienung oder liefern die nötigen Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder im einfachsten Fall nur zusätzliche PHP-Classes im System bereitstellen (PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
+AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, erweitern die Benutzeroberfläche, liefern Bedienelemnte und installieren nötige Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder ,im einfachsten Fall, stellen zusätzliche PHP-Classes im System bereit (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
 
 Ein großer Teil der Grundfunktionen von REDAXO wird als AddOns bereitgestellt (Core-AddOns). Diese Core-AddOns können so leicht aktualisiert und ggf. durch individuelle Lösungen ausgetauscht werden. 
 
-Einige AddOns liefern eigene PlugIns mit. Diese erweitern das AddOn um weitere Funktionalitäten.
+> AddOns in REDAXO sind vergleichbar mit den in anderen CMSs verfügbaren Plugins oder Extensions
+
+Einige AddOns liefern eigene PlugIns mit. Diese erweitern die AddOns um weitere Funktionen. Plugins   werden nur mit dem AddOn ausgeliefert. Eine nachträglich Installation eines PlugIns ist nicht vorgesehen und wird auch nicht empfohlen. 
+
 
 <a name="included"></a>
 ## Im Lieferumfang enthaltene AddOns
@@ -49,22 +52,24 @@ users | |Benutzer- und Rollenverwaltung
 
 <a name="addons"></a>
 ## AddOn-Verwaltung 
-In der AddOn-Verwaltung, die im Hauptmenü unter **AddOns** zu finden ist, werden die verfügbaren AddOns gelistet und verwaltet sowie neue AddOns installiert bzw. aktiviert. Die AddOn-Verwaltung ist kein Katalog, sie listet nur die auf das System bereits hochgeladenen AddOns.
+In der AddOn-Verwaltung, die im Hauptmenü unter **AddOns** zu finden ist, werden die verfügbaren AddOns und zugehörigen PlugIns verwaltet. Sie liefert die Funktionen zur Installation, Deinstallation und Aktivierung sowie Informationen zum Namen und Links zu Hilfeseiten. 
 
-Die AddOn-Verwaltung listet die AddOns und deren Plugins, deren Versionsnummer, einen Link zu einer Hilfsdatei und die entsprechenden Funktionen zur Verwaltung. 
+> Die AddOn-Verwaltung **ist kein Download-Katalog** 
+
+   
+<a name="upload"></a>
+## Upload 
+Bevor ein AddOn installiert werden kann muss dieses hochgeladen werden. 
 
 Der schnellste Weg neue AddOns in das System zu laden ist der Download über den **Installer**. 
 
-**Weitere AddOnquellen sind: **
+**Weitere AddOn-Quellen sind:**
 
 - AddOn-Bereich auf [www.redaxo.org](https://redaxo.org/download/addons/) (Identisch mit Installer) 
 - GitHub-Repos
 - Ihre Agentur / Ihr Dienstleister
 
-   
-<a name="upload"></a>
-## Upload 
-Bevor ein AddOn installiert werden kann muss dieses hochgeladen werden. Nachfolgend zeigen wir hier gängige Upload-Methoden. 
+Nachfolgend zeigen wir hier gängige Upload-Methoden. 
 
 <a name="upinstaller"></a>
 ### Upload per Installer
@@ -77,6 +82,7 @@ Siehe: [Installer](/{{path}}/{{version}}/installer)
 - ggf. README.md beachten, sofern vorhanden
 - Upload in den Ordner `/redaxo/core/addons/`
 
+> Der Ordner-Name des AddOs sollte identisch mit dem in der darin befindlichen package.yml hinterlegten AddOn-Key sein. 
 
 <a name="github"></a> 
 ### Hinweis zu AddOns aus GitHub. 
@@ -111,5 +117,3 @@ Möchte man ein AddOn deinstallieren, klickt man auf  `de-installieren`. Möchte
 
 > Einige AddOns löschen beim Deinstallieren nicht die angelegten Datenbank-Tabellen und die darin erfassten Daten. Hierzu bitte zu zugehörige Dokumentation beachten.
 `
-
-
