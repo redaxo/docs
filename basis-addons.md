@@ -1,13 +1,21 @@
 # AddOns
 
+- [Über](#ueber)
+- [Im Lieferumfang enthaltene AddOns](#included)
+- [Installation](#install)
+- [Update](#update)
+- [Reinstallieren / Reparatur](#reinstall)
+- [Deinstallation](#uninstall)
+
 ## Über
 
 AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, verbessern oder erweitern die Benutzeroberfläche und Bedienung oder liefern die nötigen Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder im einfachsten Fall nur zusätzliche PHP-Classes im System bereitstellen (PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
 
-Ein großer Teil der Grundfunktionen wird als AddOns bereitgestellt (Core-AddOns). Diese Core-AddOns können so leicht aktualisiert und durch individuelle Lösungen ausgetauscht werden. 
+Ein großer Teil der Grundfunktionen von REDAXO wird als AddOns bereitgestellt (Core-AddOns). Diese Core-AddOns können so leicht aktualisiert und ggf. durch individuelle Lösungen ausgetauscht werden. 
 
 Einige AddOns liefern eigene PlugIns mit. Diese erweitern das AddOn um weitere Funktionalitäten.
 
+<a name="included"></a>
 ## Im Lieferumfang enthaltene AddOns
 
 REDAXO liefert bereits bei der Installation einige AddOns und PlugIns mit:
@@ -33,10 +41,18 @@ structure | | Liefert die Strukturverwaltung für Kategorien und Artikel
 || version | Pflege von Arbeitsversionen
 users | |Benutzer- und Rollenverwaltung
 
-
+<a name="install"></a>
 ## AddOn-Installation
 
-### Installation per Insstaller
+### Installation per Installer
 
 ###  Manuelle Installation 
 
+<a name="update"></a>
+## Update
+
+<a name="reinstall"></a>
+## Reinstallieren / Reparatur
+
+<a name="uninstall"></a>
+## Deinstallation
