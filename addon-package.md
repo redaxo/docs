@@ -1,5 +1,34 @@
 # package.yml
 
+## Beispiel einer package.yml
+
+```yml
+package: meinaddon 
+version: '1.0.0' 
+author: Rex Red
+supportpage: https://meinesupportseite.tld
+page:
+    title: 'translate:Mein Addon'
+    perm: meinaddon[]
+    pjax: false
+    icon: rex-icon fa-television
+    subpages:
+        main:  
+             title: 'translate:main'    
+        help:  
+             title: 'translate:help' 
+        module: 
+             title: 'translate:module' 
+             perm: admin
+requires:
+    redaxo: '^5.1'
+    packages:
+        media_manager: '^2.0.1'
+conflicts:
+    packages:
+        irgendein_addon: '>=1.0.0'
+```
+
 ## Die package.yml definiert das AddOn oder PlugIn. 
 
 Hier werden alle nötigen Einstellungen und Informationen hinterlegt, damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
@@ -89,18 +118,20 @@ Für den Menüpunkt des AddOns kann ein Icon aus Font-Awsome festgelegt werden. 
 ```yml
 page:
     title: 'translate:title' 
-    icon: rex-icon fa-wrench 
+    icon: rex-icon fa-television 
 ```
 
 Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` definiert. Danach folgen frei wählbare Keys für die einzelnen Unterseiten. 
 
 ```yml
 subpages:
-        main:
-            title: 'translate:main'
-        config:
-            title: 'translate:config'
-            icon: rex-icon fa-wrench
+    main:  
+      title: 'translate:main'    
+    help:  
+     title: 'translate:help' 
+    module: 
+      title: 'translate:module' 
+      perm: admin
 ``` 
 Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 
@@ -142,35 +173,13 @@ Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. D
 
 Möchte man auf PJAX auf den Seiten des AddOns verzichten kann man dies per `pjax: false` REDAXO mitteilen. 
 
-
-## Beispiel einer package.yml
-
 ```yml
-package: meinaddon 
-version: '1.0.0' 
-author: REX Red
-supportpage: https://meinesupportseite.tld 
 page:
     title: 'translate:Mein Addon'
     perm: meinaddon[]
     pjax: false
-    icon: rex-icon fa-television
-    subpages:
-        main:  
-             title: 'translate:main'    
-        help:  
-             title: 'translate:help' 
-        module: 
-             title: 'translate:module' 
-requires:
-    redaxo: '^5.3' 
-    php:
-        version: '>=5.6'
-conflicts:
-    packages:
-        irgendein_addon: '>=1.0.0'
+    icon: rex-icon fa-television
 ```
-
 
 ## PlugIn
 
