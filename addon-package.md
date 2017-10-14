@@ -28,9 +28,11 @@ page:
     icon: rex-icon fa-television
     subpages:
         main:  
-             title: 'translate:main'    
+             title: 'translate:main'
+             icon: rex-icon fa-television
         help:  
-             title: 'translate:help' 
+             title: 'translate:help'
+             icon: rex-icon fa-help
         module: 
              title: 'translate:module' 
              perm: admin
@@ -147,9 +149,11 @@ Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe
 ```yml
 subpages:
     main:  
-      title: 'translate:main'    
+      title: 'translate:main'
+      icon: rex-icon fa-television
     help:  
-     title: 'translate:help' 
+     title: 'translate:help'
+     icon: rex-icon fa-help
     module: 
       title: 'translate:module' 
       perm: admin
