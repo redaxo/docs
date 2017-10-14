@@ -102,7 +102,7 @@ Dieses Beispielmodul gibt im Backend die Bilder aus der `REX_MEDIALIST[1]` in ei
 <a name="mediainfo"></a>
 ## Auslesen der Medieninformationen nach Anwendung der Effekte
 
-Zur korrekten Darstellung eines Mediums ist häufig die Angabe von Höhen und Breitenangaben in den Tags als Attribute erfordelich. Die berechneten Werte erhält man, indem man das Medium über die create-Methode der rex_media_manager-Class erstellt.    
+Zur korrekten Darstellung eines Mediums ist häufig die Angabe von Höhen und Breitenangaben in den Tags als Attribute erforderlich. Die berechneten Werte erhält man, indem man das Medium über die create-Methode der rex_media_manager-Class erstellt.    
 
 ```php
 // Erstellen der Mediendatei
