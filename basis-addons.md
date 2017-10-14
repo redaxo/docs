@@ -2,7 +2,7 @@
 
 - [Über](#ueber)
 - [Im Lieferumfang enthaltene AddOns](#included)
-- [AddOnverwaltung](#addons)
+- [AddOn Verwaltung](#addons)
 - [Upload](#upload)
  - [Upload per Installer](#upinstaller)
  - [Manueller Upload per (S)FTP](#upftp) 
@@ -15,13 +15,13 @@
 <a name="ueber"></a>
 ## Über
 
-AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, erweitern die Benutzeroberfläche, liefern Bedienelemnte und installieren nötige Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder ,im einfachsten Fall, stellen zusätzliche PHP-Classes im System bereit (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
+AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, erweitern die Benutzeroberfläche, liefern Bedienelemente und installieren nötige Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder, im einfachsten Fall, stellen sie zusätzliche PHP-Classes im System bereit (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
 
 Ein großer Teil der Grundfunktionen von REDAXO wird als AddOns bereitgestellt (Core-AddOns). Diese Core-AddOns können so leicht aktualisiert und ggf. durch individuelle Lösungen ausgetauscht werden. 
 
 > AddOns in REDAXO sind vergleichbar mit den in anderen CMSs verfügbaren Plugins oder Extensions
 
-Einige AddOns liefern eigene PlugIns mit. Diese erweitern die AddOns um weitere Funktionen. Plugins   werden nur mit dem AddOn ausgeliefert. Eine nachträglich Installation eines PlugIns ist nicht vorgesehen und wird auch nicht empfohlen. 
+Einige AddOns liefern eigene PlugIns mit. Diese erweitern die AddOns um weitere Funktionen. Plugins werden nur mit dem AddOn ausgeliefert. Eine nachträglich Installation eines PlugIns ist nicht vorgesehen und wird auch nicht empfohlen. 
 
 
 <a name="included"></a>
