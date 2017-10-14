@@ -1,12 +1,33 @@
 # package.yml
 
+## Die package.yml definiert das AddOn oder PlugIn. 
+
+Hier werden alle nötigen Einstellungen und Informationen hinterlegt, damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
+Die Verwendete Sprache ist das auf Markup verzichtende YAML.
+
+> Es ist zu beachten, dass in YAML keine Tabs unterstützt werden. Die Einrückungen werden mit Leerzeichen realisiert. 
+
+Die Definition erfolgt in Schlüssel-Wert-Paaren (key value pairs). Das Trennzeichen zwischen Schlüssel und Wert ist der Doppelpunkt. Die Zugehörigkeit zu Oberpunkten wird durch Einrückungen (per Leerzeichen) definiert.
+
+## Pflichtfelder
+
+Die nachfolgenden Felder sind die einzigen Pflichtfelder in der package.yml. Diese reichen aus um ein funktionsloses Addon zu erstellen. 
+
+```yml
+package: meinaddon 
+version: '1.0.0' 
+```
+**package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutige und unverwechselbar sein. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt, sollte der Key in MyREDAXO registriert sein. 
+
+**version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die Vorgaben für [Semver](http://semver.org/lang/de/) eingehalten werden. 
+
+Alle hier gesetzten Werte können über `$addon->getProperty($key)` abgefragt werden
 
 ```yml
 
-# Alle hier gesetzten Werte können über `$addon->getProperty($key)` abgefragt werden
-
 package: demo_addon # Pflichtfeld
 version: '1.0.0' # Pflichtfeld
+title: Maintenance
 author: Friends Of REDAXO
 supportpage: https://github.com/FriendsOfREDAXO/demo_addon
 
@@ -42,3 +63,5 @@ conflicts:
         media_manager: '>=3' # Ist Media Manager in Version 3 vorhanden, führt das zum Konflikt mit diesem AddOn
 
 ```
+
+
