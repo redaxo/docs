@@ -20,12 +20,12 @@ Nachfolgend aufleistet sehen wir die gängigen in REDAXO-AddOns verwendeten Ordn
 | data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden im Ordner  /redaxo/data/addons/addon_name abgelegt |
 | fragments |  | Ordner für [Fragmente](/{{path}}/{{version}}/fragmente)  |
 | lang | *.lang | Hier werden die Sprachdateien abgelegt |
-| lib |  | Autolord-Ordner, alle hier gefundenen PHP-Classes und Functions werden automatisch eingebunden. |
+| lib |  | Autoload-Ordner, alle hier gefundenen PHP-Classes und Functions werden automatisch eingebunden. |
 | pages |  | Ordner für die Backendseiten des AddOns (z.B. Hilfe, Setup)  |
 |  | index.php | Wird automatisch beim Aufruf des Menüpunktes aufgerufen und bindet ggf. zusätzliche seiten ein.  |
 | plugins |  | Hier findet man die mitgelieferten PlugIns |
 | vendor |  | Vendor-Ordner, hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen abgelegt. Wie beim Lib-Ordner werden deren Classes automatisch geladen. Beispiel: PHPMailer |
 
-> Zusätzlich zu den hier genannten empfiehlt sich, gerade bei Veröffentlichung des Codes in öffentlichen Portalen oder Repositories ein CHANGELOG.md und eine Lizenz-Datei LICENSE / oder LICENSE.md beizulegen. 
+> Zusätzlich zu den hier genannten, empfiehlt sich, gerade bei Veröffentlichung des Codes in öffentlichen Portalen oder Repositories, ein CHANGELOG.md und eine Lizenz-Datei LICENSE / oder LICENSE.md beizulegen. 
 
 
