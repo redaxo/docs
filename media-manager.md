@@ -4,10 +4,11 @@
 - [Konfiguration des Media Managers](#konfiguration)
 - [Beispiel: Einen Effekt definieren und anwenden](#beispiel)
 - [Vordefinierte Medientypen](#vordefiniert)
+- [Auslesen der Medieninformationen nach Anwendung der Effekte](#mediainfo)
 
 <a name="prinzip"></a>
 ## Prinzip
-Pronzip und Effekte
+Prinzip und Effekte
 Der Media Manager ist ein Basis-AddOn von REDAXO, das bereits mit der Grundinstallation installiert und aktiviert wird.
 Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden (Beispiel siehe unten).
 
@@ -98,4 +99,21 @@ Beispiel einer Modulausgabe:
 
 Dieses Beispielmodul gibt im Backend die Bilder aus der `REX_MEDIALIST[1]` in einer Größe von maximal 246 x 246 Pixel aus; im Frontend werden die Bilder mit dem selbst definierten Medientyp `mein_eigener_medientyp` ausgegeben.
 
+<a name="mediainfo"></a>
+## Auslesen der Medieninformationen nach Anwendung der Effekte
+
+Zur korrekten Darstellung eines Mediums ist häufig die Angabe von Höhen und Breitenangaben in den Tags als Attribute erfordelich. Die berechneten Werte erhält man, indem man das Medium über die create-Methode der rex_media_manager-Class erstellt.    
+
+```php
+// Erstellen der Mediendatei
+$media = rex_media_manager::create($type, $file)->getMedia();
+// Informationen zum Format ermitteln
+$media->getFormat();
+// Breite auslesen
+$media->getWidth();
+// Höhe auslesen
+$media->getHeight();
+// Header-Informationen auslesen
+$media->getHeader();
+```
 
