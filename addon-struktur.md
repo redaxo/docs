@@ -4,7 +4,7 @@ Ein AddOn kann aus mehreren Verzeichnissen und Dateien bestehen, nachfolgend gel
 
 ## Ordner- und Datei-Struktur
 
-Nachfolgend aufleistet sehen wir die gängigen in REDAXO-AddOns verwendeten Ordner und Dateien
+Nachfolgend auflistet sehen wir die gängigen in REDAXO-AddOns verwendeten Ordner und Dateien
 
 | Ordner | Datei | Beschreibung |
 | --- | --- | --- |
