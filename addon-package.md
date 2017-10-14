@@ -7,9 +7,10 @@
 - [Abhängigkeiten (requires:)](#requires)
 - [Konflikte (conflicts:)](#conflicts)
 - [Seiten (page: / subpages:)](#seiten)
- - [Seiten verstecken](#hidden)
+  - [Seiten verstecken](#hidden)
 - [Rechte](#rechte)
 - [Übersetzung](#uebersetzung)
+- [Eigene Properties)](#eigene)
 - [PJAX deaktivieren](#pjax)
 - [PlugIn](#plugin)
 
@@ -30,9 +31,11 @@ page:
         main:  
              title: 'translate:main'
              icon: rex-icon fa-television
+             eigener: extra
         help:  
              title: 'translate:help'
              icon: rex-icon fa-help
+             eigener: default
         module: 
              title: 'translate:module' 
              perm: admin
@@ -68,7 +71,7 @@ Die nachfolgenden Felder sind die einzigen Pflichtfelder in der package.yml. Die
 package: meinaddon 
 version: '1.0.0' 
 ```
-**package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutige und unverwechselbar sein. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt, sollte der Key in MyREDAXO registriert sein. 
+**package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutig und unverwechselbar sein. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt. Es bietet sich daher an den Key in MyREDAXO zu registrieren. 
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
 
@@ -87,11 +90,11 @@ supportpage: https://meinesupportseite.tld
 Es sollte im AddOn festgelegt werden, welche Umgebung es erwartet. Hierzu zählen:
 
 - die erforderliche REDAXO-Version
-- erforderliche AddOns auf denen das AddOn ggf. aufbaut oder deren Funktionen nutzt.
+- erforderliche AddOns und PlugIns auf denen das AddOn ggf. aufbaut oder deren Funktionen nutzt.
 - die erwartete PHP-Version 
 - erforderliche PHP-Extensions
 
-Werden diese  Bedingungen nicht erfüllt, ist eine Installation nicht möglich. 
+Werden diese Bedingungen nicht erfüllt, ist eine Installation nicht möglich. 
 
 **Beispiel:**
 
@@ -107,28 +110,28 @@ requires:
 ```
 Abhängigkeiten werden eingeleitet mit `requires:`.
 
-Darunter eingerückt werden die Subkeys, hier. redaxo, packages, php. packages und php haben wiederum eigene Subkeys.
+Darunter eingerückt werden die Subkeys, hier: redaxo, packages, php; packages und php haben wiederum eigene Subkeys.
 
-Hier wird *mindesten REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation z.B. unter PHP 7 möglich ist. `addonname/pluginname: '^2.4'` prüft ob ein bestimmtes PlugIn vorhanden ist. 
+Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation unter PHP 7 möglich ist. `addonname/pluginname: '^2.4'` prüft ob ein bestimmtes PlugIn vorhanden ist. 
 
 <a name="conflicts"></a>
 ## Konflikte (conflicts:)
 
-Manchmal vertragen einige AddOns nicht oder es liegt einfach eine Umgebung vor die zu Problemen führen kann, dann sollte vor der Installation geprüft werden ob ein Konflikt vorliegt. Die Definition ist identisch mit `requires:`, wird jedoch durch `conflicts:` eingeleitet.
+Manchmal vertragen sich einige AddOns nicht weil sie die gleichen Bibliotheken mitbringen oder es liegt einfach eine Umgebung vor die zu Problemen führen kann, dann sollte vor der Installation geprüft werden ob ein Konflikt vorliegt. Die Definition ist identisch mit `requires:`, wird jedoch durch `conflicts:` eingeleitet.
 
 ```yml 
 conflicts:
     packages:
         irgendein_addon: '>=1.0.0'
 ```
-Wird die Version 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
+Wird die Version größer/gleich 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
 
 <a name="seiten"></a>
 ## Seiten (page: / subpages:) 
  
-Die Hauptseite wird über den Key `page` definiert. Diese wird aufgerufen, wenn man auf den Menüpunkt des AddOns klickt. 
+Die Hauptseite wird über die Property `page` definiert. Diese wird aufgerufen, wenn man auf den Menüpunkt des AddOns klickt. 
 
-Jede Seite erhält einen Titel durch den Key `title`. 
+Jede Seite erhält einen Titel mit dem Key `title`. 
 
 ```yml
 page:
@@ -144,7 +147,7 @@ page:
     icon: rex-icon fa-television 
 ```
 
-Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` definiert. Danach folgen frei wählbare Keys für die einzelnen Unterseiten. 
+Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` eingeleitet. Danach folgen eingerückt frei wählbare Keys für die einzelnen Unterseiten. 
 
 ```yml
 subpages:
@@ -204,6 +207,13 @@ rex::getUser()->hasPerm('meinaddon[delete]')
 
 Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. Der Addon-Präfix (hier z.B: `meinaddon_`) kann in den Lang-Files des AddOns weggelassen werden.
 
+<a name="eigene"></a>
+## Eigene Properties
+
+Die package.yml ist sehr offen gestaltet. Daher kann man auch eigene Properties in ihr ablegen. 
+Der Abruf erfolgt wie oben gezeigt per `$this->getProperty($eigenrkey)`.
+
+
 <a name="pjax"></a>
 ## PJAX deaktivieren
 
@@ -220,7 +230,7 @@ page:
 <a name="plugin"></a>
 ## PlugIn
 
-PlugIns unterscheiden sich durch AddOns in der package.yml nur durch ihre Definition im Key `package`. 
+PlugIns unterscheiden sich durch AddOns in der package.yml nur durch ihre Definition im Value des Keys `package`. 
 
 ```yml
 package: meinaddon/meinplugin
