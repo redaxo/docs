@@ -25,9 +25,9 @@ version: '1.0.0'
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
 
-## Empfohlene Meta-Angaben
+## Empfohlene Angaben
 
-Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhält sollten die Informationen zu Author und Supportseite hinterlegt werden.  
+Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhält sollten die Informationen zu Author und Supportseite hinterlegt werden. 
 
 ```yml
 author: Rex Red
@@ -72,46 +72,106 @@ conflicts:
 ```
 Wird die Version 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
 
-## Seiten (pages:)
+## Seiten (page: / subpages:) 
+ 
+Die Hauptseite wird über den Key `page` definiert. Diese wird aufgerufen, wenn man auf den Menüpunkt des AddOns klickt. 
+
+Jede Seite erhält einen Titel durch den Key `title`. 
 
 ```yml
-
-package: demo_addon # Pflichtfeld
-version: '1.0.0' # Pflichtfeld
-author: Friends Of REDAXO
-supportpage: https://github.com/FriendsOfREDAXO/demo_addon
-
-# Seiten
 page:
-    title: 'translate:title' # Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. Der Addon-Präfix (hier `demo_addon_`) kann weggelassen werden.
-    perm: admin # Seite ist nur für Admins erreichbar
-    # Unterseiten
-    subpages:
+    title: 'translate:title' 
+```
+Der in der Hauptseite hinterlegte Titel ist zugleich die Bezeichnung für den Menüpunkt. 
+
+Für den Menüpunkt des AddOns kann ein Icon aus Font-Awsome festgelegt werden. Für die korrekte Darstellung sollte es immer in Kombination mit der CSS-Class `rex-icon` angegeben werden.  
+
+```yml
+page:
+    title: 'translate:title' 
+    icon: rex-icon fa-wrench 
+```
+
+Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` definiert. Danach folgen frei wählbare Keys für die einzelnen Unterseiten. 
+
+```yml
+subpages:
         main:
             title: 'translate:main'
-            perm: demo_addon[] # Das AddOn stellt ein Benutzerrecht bereit, das aktiviert sein muss, um diese Unterseite zu erreichen. Admins haben alle Rechte.
         config:
             title: 'translate:config'
-            perm: demo_addon[config] # Das noch spezifischer AddOn-Benutzerrecht 'config' ist für diese Unterseite erforderlich. Admins haben alle Rechte.
-            icon: rex-icon fa-wrench # Icon von Font Awesome
+            icon: rex-icon fa-wrench
+``` 
+Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 
-# Abhängigkeiten
-# Anforderungen ans System oder anderere AddOns, um dieses AddOn installieren oder update zu können
+**Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: main.php, config.php). 
+Die Hauptseite ist die **index.php im /pages-Ordner**. 
+
+## Rechte
+
+In der package.yml können auch Rechte für Benutzer festgelegt und abgefragt werden. 
+
+Möchte man z.B. dass nur Admins das AddOn nutzen dürfen, fügt man im Kopfbereich, z.B. nach Author `perm: admin` hinzu.
+Möchte man das nur auf eine Unterseite beziehen, legt man den Key in der Definition der entsprechenden Unterseite ab. 
+
+Gut, manchmal reicht die Festlegung auf den Admin nicht, man braucht evtl. eine ausgefeiltere Rechte-Vergabe. (Beispiel: Redakteur darf Daten einpflegen, aber evtl. nicht löschen) 
+
+Daher legt man am besten ein eigenes Recht an. 
+Hierzu bietet sich der Hauptbereich der package.yml an. 
+
+Damit die Rechte später leicht identifiziert werden können sollten diese den addonkey wiederspiegeln.
+
+z.B.: `perm: meinaddon[]`
+
+Wird dieser Key angelegt, ist das Recht bereits in der Benutzerverwaltung auswählbar. Weitere davon abgeleitete Rechte können durch einen zusätzlichen key in den Klammern definiert werden. 
+
+z.B: meinaddon[delete]
+
+Die Rechte können im AddOn per PHP abgefragt werden:
+
+
+```php
+rex::getUser()->hasPerm('meinaddon[delete]')
+```
+
+## Übersetzung
+
+Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. Der Addon-Präfix (hier z.B: `meinaddon_`) kann in den Lang-Files des AddOns weggelassen werden.
+
+## PJAX deaktivieren
+
+Möchte man auf PJAX auf den Seiten des AddOns verzichten kann man dies per `pjax: false` REDAXO mitteilen. 
+
+
+## Beispiel einer package.yml
+
+```yml
+package: meinaddon 
+version: '1.0.0' 
+author: REX Red
+supportpage: https://meinesupportseite.tld 
+page:
+    title: 'translate:Mein Addon'
+    perm: meinaddon[]
+    pjax: false
+    icon: rex-icon fa-television
+    subpages:
+        main:  
+             title: 'translate:main'    
+        help:  
+             title: 'translate:help' 
+        module: 
+             title: 'translate:module' 
 requires:
-    redaxo: '^5.1' # benötigt mindestens REDAXO 5.1
-    packages:
-        media_manager: '^2.0.1' # benötigt mindestens das Addon Media Manager 2.0.1
+    redaxo: '^5.3' 
     php:
-        version: '>=5.6' # benötigt mindestens PHP 5.6
-        extensions: [gd, xml] # benötigt die PHP-Extensions GDlib und XML
-
-# Konflikte
-# Verhindert die Installation und Updates, wenn AddOns die genannten Anforderungen erfüllen
-# Siehe auch https://github.com/FriendsOfREDAXO/cache_warmup/pull/55#issuecomment-280906737
+        version: '>=5.6'
 conflicts:
     packages:
-        media_manager: '>=3' # Ist Media Manager in Version 3 vorhanden, führt das zum Konflikt mit diesem AddOn
-
+        irgendein_addon: '>=1.0.0'
 ```
+
+
+## PlugIn
 
 
