@@ -6,7 +6,7 @@ Ein AddOn kann aus mehreren Verzeichnissen und Dateien bestehen, nachfolgend gel
 
 Der AddOn-Ordner (wie auch das AddOn selbst) muss einen **eindeutigen, unverwechselbaren** Namen haben, der AddOnkey. Damit es nicht zu Konflikten mit anderen AddOns mit gleicher Bezeichnung kommt, sollte der Key in MyREDAXO registriert sein. Er wird in der [**package.yml**](/{{path}}/{{version}}/addon-package) hinterlegt. 
 
-Abhängig vom Projekt, werden in AddOns folgende Ordner und Dateien verwendet. 
+Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet.
 
 | Ordner | Datei | Beschreibung |
 | --- | --- | --- |
