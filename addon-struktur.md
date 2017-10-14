@@ -1,10 +1,12 @@
 # AddOn: Aufbau und Struktur 
 
-Ein AddOn kann aus mehreren Verzeichnissen und Dateien bestehen, nachfolgend gelistet zeigen wir hier die gebräuchlichsten. Das AddOn besteht aus einer verpflichtenden Konfigurationsdatei package.yml und den nachfolgenden optionalen Ordnern und Dateien. **Richtig gelesen:** Nur die [**package.yml**](/{{path}}/{{version}}/addon-package) ist erforderlich. Ein solches AddOn hätte sicher einen sehr geringen Nutzen, daher gibt es mehrere Dateien und Ordner, die den Aufbau und die Ausführung eines AddOns vereinfachen. AddOn-Entwickelnde sind aber frei weitere Ordner z.B. für Module und Templates oder anderes zu erstellen. Dann verzichtet man jedoch auf sehr hilfreiche Automatismen und muss sich selbst um die Einbindung, z.B. von PHP-Classes, kümmern. 
+Ein AddOn kann aus mehreren Verzeichnissen und Dateien bestehen, nachfolgend gelistet zeigen wir hier die gebräuchlichsten. Das AddOn besteht aus einer verpflichtenden Konfigurationsdatei package.yml und den nachfolgenden optionalen Ordnern und Dateien. **Richtig gelesen:** Nur die [**package.yml**](/{{path}}/{{version}}/addon-package) ist erforderlich. Ein solch leeres AddOn hätte sicher einen sehr geringen Nutzen, daher gibt es mehrere Dateien und Ordner, die den Aufbau und die Ausführung eines AddOns vereinfachen. AddOn-Entwickelnde sind aber frei weitere Ordner z.B. für Module und Templates oder anderes zu erstellen. Dann verzichtet man jedoch auf sehr hilfreiche Automatismen und muss sich selbst um die Einbindung, z.B. von PHP-Classes, kümmern. 
 
 ## Ordner- und Datei-Struktur
- 
-Hier sehen wir die gängigen in REDAXO-AddOns verwendeten Ordner und Dateien
+
+Der AddOn-Ordner (wie auch das AddOn selbst) muss einen **eindeutigen, unverwechselbaren** Namen haben, der AddOnkey. Damit es nicht zu Konflikten mit anderen AddOns mit gleicher Bezeichnung kommt, sollte der Key in MyREDAXO registriert sein. Er wird in der [**package.yml**](/{{path}}/{{version}}/addon-package) hinterlegt. 
+
+Abhängig vom Projekt, werden in AddOns folgende Ordner und Dateien verwendet. 
 
 | Ordner | Datei | Beschreibung |
 | --- | --- | --- |
