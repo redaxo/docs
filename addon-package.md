@@ -1,5 +1,18 @@
-# package.yml
+# package.yml 
 
+- [Beispiel einer package.yml](#beispiel)
+- [Die package.yml definiert das AddOn oder PlugIn](#ueber)
+- [Pflichtangaben](#pflicht)
+- [Empfohlene Angaben](#empfohlen)
+- [Abhängigkeiten (requires:)](#requires)
+- [Konflikte (conflicts:)](#conflicts)
+- [Seiten (page: / subpages:)](#seiten)
+- [Rechte](#rechte)
+- [Übersetzung](#uebersetzung)
+- [PJAX deaktivieren](#pjax)
+- [PlugIn](#plugin)
+
+<a name="beispiel"></a>
 ## Beispiel einer package.yml
 
 ```yml
@@ -28,10 +41,10 @@ conflicts:
     packages:
         irgendein_addon: '>=1.0.0'
 ```
+<a name="ueber"></a>
+## Die package.yml definiert das AddOn oder PlugIn 
 
-## Die package.yml definiert das AddOn oder PlugIn. 
-
-Hier werden alle nötigen Einstellungen und Informationen hinterlegt, damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
+In der package.yml werden alle nötigen Einstellungen und Informationen hinterlegt, damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
 Die Verwendete Sprache ist das auf Markup verzichtende YAML.
 
 > Es ist zu beachten, dass in YAML keine Tabs unterstützt werden. Die Einrückungen werden mit Leerzeichen realisiert. 
@@ -42,7 +55,8 @@ Diese Definitionen heißen in REDAXO Properties und können innerhalb des AddOns
 
 Die Properties eines anderen AddOns erhält man durch: `rex_addon::get('addonkey')->getProperty('author')`.  
 
-## Pflichtfelder
+<a name="pflicht"></a>
+## Pflichtangaben
 
 Die nachfolgenden Felder sind die einzigen Pflichtfelder in der package.yml. Diese reichen aus um ein funktionsloses Addon zu erstellen. 
 
@@ -54,6 +68,7 @@ version: '1.0.0'
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
 
+<a name="empfohlen"></a>
 ## Empfohlene Angaben
 
 Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhält sollten die Informationen zu Author und Supportseite hinterlegt werden. 
@@ -62,6 +77,7 @@ Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhäl
 author: Rex Red
 supportpage: https://meinesupportseite.tld
 ```
+<a name="requires"></a>
 ## Abhängigkeiten (requires:)
 
 Es sollte im AddOn festgelegt werden, welche Umgebung es erwartet. Hierzu zählen:
@@ -90,6 +106,7 @@ Darunter eingerückt werden die Subkeys, hier. redaxo, packages, php. packages u
 
 Hier wird *mindesten REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation z.B. unter PHP 7 möglich ist. 
 
+<a name="conflicts"></a>
 ## Konflikte (conflicts:)
 
 Manchmal vertragen einige AddOns nicht oder es liegt einfach eine Umgebung vor die zu Problemen führen kann, dann sollte vor der Installation geprüft werden ob ein Konflikt vorliegt. Die Definition ist identisch mit `requires:`, wird jedoch durch `conflicts:` eingeleitet.
@@ -101,6 +118,7 @@ conflicts:
 ```
 Wird die Version 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
 
+<a name="seiten"></a>
 ## Seiten (page: / subpages:) 
  
 Die Hauptseite wird über den Key `page` definiert. Diese wird aufgerufen, wenn man auf den Menüpunkt des AddOns klickt. 
@@ -138,6 +156,7 @@ Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 **Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: main.php, config.php). 
 Die Hauptseite ist die **index.php im /pages-Ordner**. 
 
+<a name="rechte"></a>
 ## Rechte
 
 In der package.yml können auch Rechte für Benutzer festgelegt und abgefragt werden. 
@@ -164,11 +183,12 @@ Die Rechte können im AddOn per PHP abgefragt werden:
 ```php
 rex::getUser()->hasPerm('meinaddon[delete]')
 ```
-
+<a name="uebersetzung"></a>
 ## Übersetzung
 
 Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. Der Addon-Präfix (hier z.B: `meinaddon_`) kann in den Lang-Files des AddOns weggelassen werden.
 
+<a name="pjax"></a>
 ## PJAX deaktivieren
 
 Möchte man auf PJAX auf den Seiten des AddOns verzichten kann man dies per `pjax: false` REDAXO mitteilen. 
@@ -181,6 +201,7 @@ page:
     icon: rex-icon fa-television
 ```
 
+<a name="plugin"></a>
 ## PlugIn
 
 
