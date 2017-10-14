@@ -7,6 +7,7 @@
 - [Abhängigkeiten (requires:)](#requires)
 - [Konflikte (conflicts:)](#conflicts)
 - [Seiten (page: / subpages:)](#seiten)
+ - [Seiten verstecken](#hidden)
 - [Rechte](#rechte)
 - [Übersetzung](#uebersetzung)
 - [PJAX deaktivieren](#pjax)
@@ -37,6 +38,7 @@ requires:
     redaxo: '^5.1'
     packages:
         media_manager: '^2.0.1'
+        addonname/pluginname: '^2.4.6'
 conflicts:
     packages:
         irgendein_addon: '>=1.0.0'
@@ -96,6 +98,7 @@ requires:
     redaxo: '^5.1'
     packages:
         media_manager: '^2.0.1'
+        addonname/pluginname: '^2.4.6'
     php:
         version: '>=5.6' 
         extensions: [gd, xml]
@@ -104,7 +107,7 @@ Abhängigkeiten werden eingeleitet mit `requires:`.
 
 Darunter eingerückt werden die Subkeys, hier. redaxo, packages, php. packages und php haben wiederum eigene Subkeys.
 
-Hier wird *mindesten REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation z.B. unter PHP 7 möglich ist. 
+Hier wird *mindesten REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation z.B. unter PHP 7 möglich ist. `addonname/pluginname: '^2.4'` prüft ob ein bestimmtes PlugIn vorhanden ist. 
 
 <a name="conflicts"></a>
 ## Konflikte (conflicts:)
@@ -156,6 +159,15 @@ Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 **Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: main.php, config.php). 
 Die Hauptseite ist die **index.php im /pages-Ordner**. 
 
+<a name="hidden"></a>
+### Seiten verstecken
+
+Manchmal benötigt man Seiten, die nicht über die Navigation erreichbar sind. Hierzu steht der Parameter hidden zur Verfügung mit TRUE oder FALSE wird die Sichtbarkeit gesteuert:
+
+```yml
+seitenkey: { title: 'translate:seitenname', hidden: true}
+```
+
 <a name="rechte"></a>
 ## Rechte
 
@@ -204,4 +216,11 @@ page:
 <a name="plugin"></a>
 ## PlugIn
 
+PlugIns unterscheiden sich durch AddOns in der package.yml nur durch ihre Definition im Key `package`. 
+
+```yml
+package: meinaddon/meinplugin
+```
+
+Die Seiten eines PlugIns werden automatisch dem AddOn hinzugefügt. 
 
