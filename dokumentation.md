@@ -61,7 +61,7 @@
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOn-Entwicklung
-    - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
     - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
