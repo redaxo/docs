@@ -68,9 +68,9 @@ Manchmal vertragen einige AddOns nicht oder es liegt einfach eine Umgebung vor d
 ```yml 
 conflicts:
     packages:
-        irgendein_addon: '=3.0.2'
+        irgendein_addon: '>=1.0.0'
 ```
-Wird die Version 3.0.2. des genannten AddOns gefunden, bricht die Installation ab. 
+Wird die Version 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
 
 ## Seiten (pages:)
 
