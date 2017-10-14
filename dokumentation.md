@@ -28,8 +28,8 @@
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen)
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [Module](/{{path}}/{{version}}/module)
     - [AddOns](/{{path}}/{{version}}/addons) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [Module](/{{path}}/{{version}}/module)
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
@@ -62,8 +62,8 @@
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
-    - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
-    - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
+    - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>offen</b></sup> <sup><b></b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Autoload](/{{path}}/{{version}}/addon-autoload) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
