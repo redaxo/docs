@@ -7,7 +7,11 @@ Die Verwendete Sprache ist das auf Markup verzichtende YAML.
 
 > Es ist zu beachten, dass in YAML keine Tabs unterstützt werden. Die Einrückungen werden mit Leerzeichen realisiert. 
 
-Die Definition erfolgt in Schlüssel-Wert-Paaren (key value pairs). Das Trennzeichen zwischen Schlüssel und Wert ist der Doppelpunkt. Die Zugehörigkeit zu Oberpunkten wird durch Einrückungen (per Leerzeichen) definiert.
+Die Definition erfolgt in Schlüssel-Wert-Paaren (key value pairs). Das Trennzeichen zwischen Schlüssel und Wert ist der Doppelpunkt. Die Zugehörigkeit zu Oberpunkten wird durch Einrückungen (per Leerzeichen) definiert. 
+
+Diese Definitionen heißen in REDAXO Properties und können innerhalb des AddOns mit `$this->getProperty($key)` abgefragt werden. 
+
+Die Properties eines anderen AddOns erhält man durch: `rex_addon::get('addonkey')->getProperty('author')`.  
 
 ## Pflichtfelder
 
@@ -19,15 +23,61 @@ version: '1.0.0'
 ```
 **package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutige und unverwechselbar sein. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt, sollte der Key in MyREDAXO registriert sein. 
 
-**version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die Vorgaben für [Semver](http://semver.org/lang/de/) eingehalten werden. 
+**version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
 
-Alle hier gesetzten Werte können über `$addon->getProperty($key)` abgefragt werden
+## Empfohlene Meta-Angaben
+
+Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhält sollten die Informationen zu Author und Supportseite hinterlegt werden.  
+
+```yml
+author: Rex Red
+supportpage: https://meinesupportseite.tld
+```
+## Abhängigkeiten (requires:)
+
+Es sollte im AddOn festgelegt werden, welche Umgebung es erwartet. Hierzu zählen:
+
+- die erforderliche REDAXO-Version
+- erforderliche AddOns auf denen das AddOn ggf. aufbaut oder deren Funktionen nutzt.
+- die erwartete PHP-Version 
+- erforderliche PHP-Extensions
+
+Werden diese  Bedingungen nicht erfüllt, ist eine Installation nicht möglich. 
+
+**Beispiel:**
+
+```yml
+requires:
+    redaxo: '^5.1'
+    packages:
+        media_manager: '^2.0.1'
+    php:
+        version: '>=5.6' 
+        extensions: [gd, xml]
+```
+Abhängigkeiten werden eingeleitet mit `requires:`.
+
+Darunter eingerückt werden die Subkeys, hier. redaxo, packages, php. packages und php haben wiederum eigene Subkeys.
+
+Hier wird *mindesten REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation z.B. unter PHP 7 möglich ist. 
+
+## Konflikte (conflicts:)
+
+Manchmal vertragen einige AddOns nicht oder es liegt einfach eine Umgebung vor die zu Problemen führen kann, dann sollte vor der Installation geprüft werden ob ein Konflikt vorliegt. Die Definition ist identisch mit `requires:`, wird jedoch durch `conflicts:` eingeleitet.
+
+```yml 
+conflicts:
+    packages:
+        irgendein_addon: '=3.0.2'
+```
+Wird die Version 3.0.2. des genannten AddOns gefunden, bricht die Installation ab. 
+
+## Seiten (pages:)
 
 ```yml
 
 package: demo_addon # Pflichtfeld
 version: '1.0.0' # Pflichtfeld
-title: Maintenance
 author: Friends Of REDAXO
 supportpage: https://github.com/FriendsOfREDAXO/demo_addon
 
