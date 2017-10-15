@@ -15,8 +15,8 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 |  | help.php | Wird als Hilfeseite zum AddOn eingebunden |
 |  | install.php | Wird automatisch bei der Installation ausgeführt. (z.B. Anlage von Datenbanken, Installation von Modulen, bestimmte Prüfungen, Festlegen erster Konfigurationswerte. |
 |  | uninstall.php | Gegenstück zu install.php. Hier können zusätzliche Deinstallationsschritte eingefügt werden.  |
-|  | install.sql | SQL-Datei, die bei der Installation ausgeführt werden soll |
-|  | uninstall.sql | SQL-Datei, die bei der Deinstallation ausgeführt werden soll |
+|  | install.sql | SQL-Datei, die bei der Installation ausgeführt wird |
+|  | uninstall.sql | SQL-Datei, die bei der Deinstallation ausgeführt wird |
 |  | README.md | Sofern gefunden und eine help.php liegt nicht vor, wird diese automatisch als Hilfeseite eingebunden |
 | assets | *.css, *.js, *.png etc. | Hier werden die Assets des AddOns abgelegt. Bei Installation werden diese in den Ordner **/assets/addon/addon_name/** kopiert. Sie stehen somit öffentlich zur Verfügung. Es sind Unterordner möglich.  |
 | data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden im Ordner  /redaxo/data/addons/addon_name abgelegt |
