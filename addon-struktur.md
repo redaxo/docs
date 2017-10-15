@@ -26,7 +26,7 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 | pages |  | Ordner für die Backendseiten des AddOns (z.B. Hilfe, Setup)  |
 |  | index.php | Wird automatisch beim Aufruf des Menüpunktes aufgerufen und bindet ggf. zusätzliche seiten ein.  |
 | plugins |  | Hier findet man die mitgelieferten PlugIns |
-| vendor |  | Vendor-Ordner, hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen abgelegt. Wie beim Lib-Ordner werden deren Classes automatisch geladen. Beispiel: PHPMailer |
+| vendor |  | Vendor-Ordner, hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen abgelegt.|
 
 > Zusätzlich zu den hier genannten, empfiehlt sich, gerade bei Veröffentlichung des Codes in öffentlichen Portalen oder Repositories, ein CHANGELOG.md und eine Lizenz-Datei LICENSE / oder LICENSE.md beizulegen. 
 
