@@ -8,7 +8,7 @@
 - [Konflikte (conflicts:)](#conflicts)
 - [Seiten (page: / subpages:)](#seiten)
   - [Seiten verstecken](#hidden)
-- [Rechte](#rechte)
+- [Rechte (perm:)](#rechte)
 - [Übersetzung](#uebersetzung)
 - [Eigene Properties)](#eigene)
 - [PJAX deaktivieren](#pjax)
@@ -176,7 +176,7 @@ seitenkey: { title: 'translate:seitenname', hidden: true}
 ```
 
 <a name="rechte"></a>
-## Rechte
+## Rechte (perm:)
 
 In der package.yml können auch Rechte für Benutzer festgelegt und abgefragt werden. 
 
