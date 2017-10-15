@@ -22,11 +22,13 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 | data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden im Ordner  /redaxo/data/addons/addon_name abgelegt |
 | fragments |  | Ordner für [Fragmente](/{{path}}/{{version}}/fragmente)  |
 | lang | *.lang | Hier werden die Sprachdateien abgelegt |
-| lib |  | Autoload-Ordner, alle hier gefundenen PHP-Classes werden automatisch eingebunden. |
+| lib |  | Ordner für eigene Classes und Funktionen, eigenentwickelte Dateien |
 | pages |  | Ordner für die Backendseiten des AddOns (z.B. Hilfe, Setup)  |
 |  | index.php | Wird automatisch beim Aufruf des Menüpunktes aufgerufen und bindet ggf. zusätzliche seiten ein.  |
 | plugins |  | Hier findet man die mitgelieferten PlugIns |
-| vendor |  | Vendor-Ordner, hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen abgelegt.|
+| vendor |  | Vendor-Ordner, hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen/Vendors abgelegt.|
+
+>**Autoload** lib und vendor werden rekursiv nach PHP-Classes durchsucht. Die gefundenen Classes werden automatisch eingebunden.
 
 > Zusätzlich zu den hier genannten, empfiehlt sich, gerade bei Veröffentlichung des Codes in öffentlichen Portalen oder Repositories, ein CHANGELOG.md und eine Lizenz-Datei LICENSE / oder LICENSE.md beizulegen. 
 
