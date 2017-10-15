@@ -78,7 +78,7 @@ version: '1.0.0'
 <a name="empfohlen"></a>
 ## Empfohlene Angaben
 
-Damit die Nutzer erfahren wer das AddOn geschrieben hat und wo er Support erhält sollten die Informationen zu Author und Supportseite hinterlegt werden. 
+Damit die Nutzer erfahren, wer das AddOn geschrieben hat und wo man Support erhält, sollten die Informationen zu Author und Supportseite hinterlegt werden. 
 
 ```yml
 author: Rex Red
@@ -112,7 +112,7 @@ Abhängigkeiten werden eingeleitet mit `requires:`.
 
 Darunter eingerückt werden die Subkeys, hier: redaxo, packages, php; packages und php haben wiederum eigene Subkeys.
 
-Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, so dass eine Installation unter PHP 7 möglich ist. `addonname/pluginname: '^2.4'` prüft ob ein bestimmtes PlugIn vorhanden ist. 
+Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf die aktuelle Major Release bezieht. D.h. Eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, sodass eine Installation unter PHP 7 möglich ist. "`addonname/pluginname: '^2.4'`" prüft ob ein bestimmtes PlugIn vorhanden ist. 
 
 <a name="conflicts"></a>
 ## Konflikte (conflicts:)
