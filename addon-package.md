@@ -147,7 +147,7 @@ page:
     icon: rex-icon fa-television 
 ```
 
-Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` eingeleitet. Danach folgen eingerückt frei wählbare Keys für die einzelnen Unterseiten. 
+Soll die Hauptseite in **Unterseiten** unterteilt werden, werden diese mit Hilfe des Keys `subpages` eingeleitet. Danach folgen eingerückt frei wählbare Properties für die einzelnen Unterseiten. 
 
 ```yml
 subpages:
@@ -169,7 +169,7 @@ Die Hauptseite ist die **index.php im /pages-Ordner**.
 <a name="hidden"></a>
 ### Seiten verstecken
 
-Manchmal benötigt man Seiten, die nicht über die Navigation erreichbar sind. Hierzu steht der Parameter hidden zur Verfügung mit TRUE oder FALSE wird die Sichtbarkeit gesteuert:
+Manchmal benötigt man Seiten, die nicht über die Navigation erreichbar sind. Hierzu steht der Parameter `hidden` zur Verfügung mit `true` oder `false' wird die Sichtbarkeit gesteuert:
 
 ```yml
 seitenkey: { title: 'translate:seitenname', hidden: true}
@@ -198,7 +198,6 @@ z.B: meinaddon[delete]
 
 Die Rechte können im AddOn per PHP abgefragt werden:
 
-
 ```php
 rex::getUser()->hasPerm('meinaddon[delete]')
 ```
@@ -211,7 +210,7 @@ Werte die mit `translate:` beginnen, werden anhand der Sprachdatei übersetzt. D
 ## Eigene Properties
 
 Die package.yml ist sehr offen gestaltet. Daher kann man auch eigene Properties in ihr ablegen. 
-Der Abruf erfolgt wie oben gezeigt per `$this->getProperty($eigenrkey)`.
+Der Abruf erfolgt wie oben gezeigt per `$this->getProperty($eigenerkey)`.
 
 
 <a name="pjax"></a>
