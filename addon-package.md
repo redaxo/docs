@@ -188,7 +188,7 @@ Gut, manchmal reicht die Festlegung auf den Admin nicht, man braucht evtl. eine 
 Daher legt man am besten ein eigenes Recht an. 
 Hierzu bietet sich der Hauptbereich der package.yml an. 
 
-Damit die Rechte später leicht identifiziert werden können sollten diese den addonkey wiederspiegeln.
+Damit die Rechte später leicht identifiziert werden können, sollten diese den AddOnkey wiederspiegeln.
 
 z.B.: `perm: meinaddon[]`
 
