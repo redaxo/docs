@@ -86,7 +86,7 @@ Siehe: [Installer](/{{path}}/{{version}}/installer)
 
 <a name="github"></a> 
 ### Hinweis zu AddOns aus GitHub. 
-Soweit möglich sollte man nicht das aktuelle Repository herunterladen, hierbei handelt es sich meist um Entwicklungsversionen, die nicht für den produktiven Einsatz gedacht sind. Hier sollte man immer auf eine aktuelle Release zurückgreifen. Vorher bitte auch, die dort hinterlegten Issues beachten. 
+Soweit möglich, sollte man nicht das aktuelle Repository herunterladen. Hierbei handelt es sich meist um Entwicklungsversionen, die nicht für den produktiven Einsatz gedacht sind. Für den produktiven Einsatz sollte man immer auf ein aktuelles Release zurückgreifen. Vorher vorher empfiehlt es sich auch die dort hinterlegten Issues beachten. 
 
 <a name="install"></a> 
 ## AddOn-Installation
