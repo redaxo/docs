@@ -14,7 +14,7 @@ Auf die Dateien eines Addons zeigt die Variable `$this` über die Class [rex_add
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Class [rex_view](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
-```
+```php
 //CSS-Datei einbinden
 rex_view::addCssFile( /*Pfad zur Datei*/ );
 
@@ -23,7 +23,7 @@ rex_view::addJSFile( /*Pfad zur Datei*/ );
 ```
 Da die assets nach der Addon-Installation im asset-Verzeichnis gespeichert werden, kann man den Pfad ganz einfach mit folgender Funktion ausgeben:
 
-```
+```php
 $this->getAssetsUrl('styles.css') // wird zu /assets/addons/addonname/styles.css
 
 rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
