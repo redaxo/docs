@@ -10,7 +10,7 @@
   - [Seiten verstecken](#hidden)
 - [Rechte (perm:)](#rechte)
 - [Übersetzung](#uebersetzung)
-- [Eigene Properties)](#eigene)
+- [Eigene Properties](#eigene)
 - [PJAX deaktivieren](#pjax)
 - [PlugIn](#plugin)
 
