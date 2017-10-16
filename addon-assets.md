@@ -8,7 +8,7 @@
 <a name="ueber"></a>
 ## Über 
 
-Assets sind statische Dateien, wie CSS-Files, Javascripte, Fonts oder Bilder die öffentlich zugänglich für den Browser sein müssen. Hierzu gehören auch CSS und Javascripte für Editoren und für die Frontendausgabe oder Modifikationen für das Backend.   
+Assets sind statische Dateien, wie CSS-Files, Javascripte, Fonts oder Bilder die öffentlich zugänglich für den Browser sein müssen. Hierzu gehören u.a. auch CSS und Javascripte für Editoren im Backend, Dateien für die Frontendausgabe oder Modifikationen für das Backend.   
 
 <a name="speicherort"></a>
 ## Speicherort
