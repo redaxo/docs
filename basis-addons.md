@@ -15,7 +15,7 @@
 <a name="ueber"></a>
 ## Über
 
-AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, erweitern die Benutzeroberfläche, liefern Bedienelemente und installieren nötige Skripte für die Frontendausgabe. AddOns können auch komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder, im einfachsten Fall, stellen sie zusätzliche PHP-Classes im System bereit (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
+AddOns sind Erweiterungen für REDAXO. Sie liefern zusätzliche Funktionen, erweitern die Benutzeroberfläche, liefern Bedienelemente und installieren nötige Skripte für die Frontendausgabe. AddOns können komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder, im einfachsten Fall, stellen sie zusätzliche PHP-Classes im System bereit (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemen). 
 
 Ein großer Teil der Grundfunktionen von REDAXO wird als AddOns bereitgestellt (Core-AddOns). Diese Core-AddOns können so leicht aktualisiert und ggf. durch individuelle Lösungen ausgetauscht werden. 
 
