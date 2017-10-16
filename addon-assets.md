@@ -32,7 +32,7 @@ rex_view::addJsFile( $this->getAssetsUrl('script.js') );
 
 ## Sass
 
-Es ist mäglich `.scss` Dateien mit der Class `rex_scss_compiler()` zu kompilieren. Für solche Dateien bietet sich an, diese in einem separaten Ordner anzulegen und diese in den assets-ordner beim kompilieren abzulegen. Kompilierte Versionen der Dateien sollten bei Bereitstellung des AddOns bereis im Assets-Ordner vorliegen. Die scss-Dateien sollten nur für Anpaasungen oder Fehlerbehebungen durch REDAXO neu kompiliert werden. 
+Es ist möglich `.scss` Dateien mit der Class `rex_scss_compiler()` zu kompilieren. Für solche Dateien bietet sich an, diese in einem separaten Ordner anzulegen. Kompilierte Versionen der Dateien sollten bei Bereitstellung des AddOns bereis im Assets-Ordner vorliegen. Die scss-Dateien sollten nur für Anpassungen oder Fehlerbehebungen durch REDAXO neu kompiliert werden. 
 
 Der nachfolgend kommentierte Code für die `boot.php` zeigt, wie man die Kompilierung bei aktiviertem DEBUG-Mode ausführt. 
 
@@ -52,7 +52,7 @@ if (rex::isBackend() && rex::getUser())
             // Kompilierung starten
             $compiler->compile();
             // kopiere das kompilierte css in den öffentlichen assets-Ordner
-            rex_file::copy($this->getPath('assets/uploader.css'), $this->getAssetsPath('meinestile.css'));
+            rex_file::copy($this->getPath('assets/meinestile.css'), $this->getAssetsPath('meinestile.css'));
         }
 
 ```
