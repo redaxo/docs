@@ -16,7 +16,7 @@ Um eigene AddOns zu veröffentlichen sollten man folgenden Weg nehmen.
 <a name="anker-addon-key"></a>
 ## Erstellung des AddOn-Keys
 
-Jedes AddOn hat eine eindeutige Kennung. Diese Kennung nennen wir Key und ist gleichzeitig auch der Ordnername. Um einen passenden Key zu registrieren und auch die Bezeichung und Beschreibung des AddOns festzulegen, muss man sich zunächst in MyREDAXO [registrieren](/registrierung/) und dann [einloggen](/myredaxo/login/). Unter *Meine AddOns* kann dann die AddOn-Definition mit dem passenden Key angelegt werden. 
+Jedes AddOn hat eine eindeutige Kennung. Diese Kennung nennen wir Key und ist gleichzeitig auch der Ordnername. Um einen passenden Key zu registrieren und auch die Bezeichnung und Beschreibung des AddOns festzulegen, muss man sich zunächst in MyREDAXO [registrieren](/registrierung/) und dann [einloggen](/myredaxo/login/). Unter *Meine AddOns* kann dann die AddOn-Definition mit dem passenden Key angelegt werden. 
 
 <a name="anker-api-key"></a>
 ## Mein API-Key
@@ -50,17 +50,17 @@ Eigene hochladen - Meine Packeges
 
 <a name="anker-addon-version-eigenesaddon"></a>
 ### Eigenes AddOn
-Um ein Addon zu veröffentlichen oder eine neue Version aufzuspielen, wählt man das gewünschte AddOn in der Liste aus. 
+Um ein AddOn zu veröffentlichen oder eine neue Version aufzuspielen, wählt man das gewünschte AddOn in der Liste aus. 
 In dieser Liste können einzelne Versionen mit "Datei aktualisieren" aktualisiert werden oder über das "+" eine neue Version erstellt werden. 
 
 
-![Eigenes Addon](/assets/v5.3.0-installer-eigenesaddon.png)
-Eigenes Addon
+![Eigenes AddOn](/assets/v5.3.0-installer-eigenesaddon.png)
+Eigenes AddOn
 
 <a name="anker-addon-version-aktualisieren"></a>
 ### AddOn-Version aktualisieren / löschen
 
-Eine Aktualisierung wird mit den vorhandenen Versionsinfos abgeglichen. D.h. wenn lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt, oder man auf "ZIP-Datei erstellen und hochlanden" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
+Eine Aktualisierung wird mit den vorhandenen Versionsinfos abgeglichen. D.h. wenn lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt oder man auf "ZIP-Datei erstellen und hochlanden" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
 
 Eine einzelne Version kann man über den Löschen-Button aus dem Online-Archiv entfernen.
 
