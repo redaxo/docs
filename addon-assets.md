@@ -1,13 +1,23 @@
 # Assets
 
+- [Über](#plugin)
+- [Speicherort](#speicherort)
+- [Dateien einbinden](#einbinden)
+- [Sass](#sass)
+
+<a name="ueber"></a>
+## Über 
+
 Assets sind statische Dateien, wie CSS-Files, Javascripte, Fonts oder Bilder die öffentlich zugänglich für den Browser sein müssen. Hierzu gehören auch CSS und Javascripte für Editoren und für die Frontendausgabe oder Modifikationen für das Backend.   
 
+<a name="speicherort"></a>
 ## Speicherort
 
-Assets werden in REDAXO im `assets`-Ordner des AddOn abgelegt. Bei Installation, Reinstallation und Update eines AddOn, werden die Dateien aus `assets` in den öffentlich zugänglichen Ornder `ROOT/assets/addons/addonname/` kopiert. 
+Assets werden in REDAXO im `assets`-Ordner des AddOn abgelegt. Bei Installation, Reinstallation und Update eines AddOn, werden die Dateien aus `assets` in den öffentlich zugänglichen Ordner `/assets/addons/addonname/` kopiert. 
 
 > Werden während der Entwicklung Änderungen an den Dateien durchgeführt, muss ein neuer Kopiervorgang per Reinstallation angestoßen werden.   
 
+<a name="einbinden"></a>
 ## Dateien einbinden
 
 Auf die Dateien eines Addons zeigt die Variable `$this` über die Class [rex_addon](http://www.redaxo.org/docs/master/class-rex_addon.html).
@@ -30,6 +40,7 @@ rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
 rex_view::addJsFile( $this->getAssetsUrl('script.js') );
 ```
 
+<a name="sass"></a>
 ## Sass
 
 Es ist möglich `.scss` Dateien mit der Class `rex_scss_compiler()` zu kompilieren. Für solche Dateien bietet sich an, diese in einem separaten Ordner anzulegen. Kompilierte Versionen der Dateien sollten bei Bereitstellung des AddOns bereis im Assets-Ordner vorliegen. Die scss-Dateien sollten nur für Anpassungen oder Fehlerbehebungen durch REDAXO neu kompiliert werden. 
@@ -49,6 +60,8 @@ if (rex::isBackend() && rex::getUser())
             $compiler->setRootDir($this->getPath());
             // Festlegen des SCSS-Files
             $compiler->setScssFile($this->getPath('scss/meinestile.scss'));
+            // Wohin soll die kompilierte Version erstellt werden?
+            $compiler->setCssFile($this->getPath('assets/meinestile.css'));
             // Kompilierung starten
             $compiler->compile();
             // kopiere das kompilierte css in den öffentlichen assets-Ordner
