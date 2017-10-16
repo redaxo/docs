@@ -174,6 +174,7 @@ Manchmal benötigt man Seiten, die nicht über die Navigation erreichbar sind. H
 ```yml
 seitenkey: { title: 'translate:seitenname', hidden: true}
 ```
+Auch der eigentliche Menüpunkt des AddOns kann so versteckt werden. 
 
 <a name="rechte"></a>
 ## Rechte (perm:)
