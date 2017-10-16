@@ -71,7 +71,7 @@ Die nachfolgenden Felder sind die einzigen Pflichtfelder in der package.yml. Die
 package: meinaddon 
 version: '1.0.0' 
 ```
-**package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutig und unverwechselbar sein. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt. Es bietet sich daher an den Key in MyREDAXO zu registrieren. 
+**package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutig und unverwechselbar sein, darf nur aus Buchstaben, _ (Unterstrich) und Zahlen bestehen. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt sollte man den AddOn-Key in MyREDAXO zu registrieren. 
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, sollten die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
 
