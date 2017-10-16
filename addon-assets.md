@@ -67,5 +67,5 @@ if (rex::isBackend() && rex::getUser())
             // kopiere das kompilierte css in den öffentlichen assets-Ordner
             rex_file::copy($this->getPath('assets/meinestile.css'), $this->getAssetsPath('meinestile.css'));
         }
-
+    }
 ```
