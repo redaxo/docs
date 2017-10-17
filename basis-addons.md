@@ -100,8 +100,10 @@ Klickt man auf `installieren`, wird das AddOn installiert. Hierbei werden die n�
 <a name="update"></a>
 ## Update
 
-Wenn das AddOn im Installer gelistet ist, kann es über diesen schnell und unkompliziert aktualisiert werden.. 
-Weitere Informationen im Abschnitt: [Installer](/{{path}}/{{version}}/installer). Bei einem Update sollten immer die Hinweise z.B. im Installer oder einer evtl. vorhandenen README beachtet werden. Ein vorheriges Backup wird empfohlen.  
+Wenn das AddOn im Installer gelistet ist, kann es über diesen schnell und unkompliziert aktualisiert werden. 
+Weitere Informationen im Abschnitt: [Installer](/{{path}}/{{version}}/installer). Möchte man ein Update manuell durchführen, reicht häufig das Ersetzen des AddOn-Ordners durch den neuen und ein anschließender Aufruf der Reinstall-Funktion in der AddOn-Verwaltung. 
+
+> Bei einem Update sollten immer die Hinweise im Installer oder einer evtl. vorhandenen README beachtet werden. Ein vorheriges Backup wird empfohlen.
 
 <a name="reinstall"></a>
 ## Reinstallieren / Reparatur
