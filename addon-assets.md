@@ -37,7 +37,7 @@ Den Pfad zu den Dateien erhält man per `getAssetsUrl`.
 $this->getAssetsUrl('styles.css') // wird zu /assets/addons/addonname/styles.css
 ```
 
-Die Einbindung erfolgt per rex_view. 
+Beispiel:
 
 ```php
 rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
