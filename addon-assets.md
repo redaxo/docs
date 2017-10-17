@@ -31,11 +31,15 @@ rex_view::addCssFile( /*Pfad zur Datei*/ );
 //JS-Datei einbinden
 rex_view::addJSFile( /*Pfad zur Datei*/ );
 ```
-Da die assets nach der Addon-Installation im asset-Verzeichnis gespeichert werden, kann man den Pfad ganz einfach mit folgender Funktion ausgeben:
+Den Pfad zu den Dateien erhält man per `getAssetsUrl`.
 
 ```php
 $this->getAssetsUrl('styles.css') // wird zu /assets/addons/addonname/styles.css
+```
 
+Die Einbindung erfolgt per rex_view. 
+
+```php
 rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
 rex_view::addJsFile( $this->getAssetsUrl('script.js') );
 ```
