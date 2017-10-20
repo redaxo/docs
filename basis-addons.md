@@ -106,14 +106,18 @@ Weitere Informationen im Abschnitt: [Installer](/{{path}}/{{version}}/installer)
 <a name="reinstall"></a>
 ## Reinstallieren / Reparatur
 
-Sollte es mal zu einem Problem mit dem AddOn kommen (evtl. nach einem Update), kann man das AddOn reinstallieren. Hierbei wird das AddOn erneut installiert und Einstellungen und Dateien werden ggf. korrigiert. 
+Sollte es mal zu einem Problem mit dem AddOn kommen (evtl. nach einem Update), kann man das AddOn reinstallieren. Hierbei wird das AddOn erneut installiert und Einstellungen und Dateien werden ggf. korrigiert.
+
+Konkret werden vom Core die Bedingungen aus der package.yml neu geprüft, `install.php` und anschließend `install.sql` werden geladen und die Assets werden frisch kopiert.
 
 > Bei einem Reinstall sollten keine Daten oder Einstellungen verloren gehen. Da einzelne AddOns aber von dieser Regel abweichen könnten, bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten. 
 
 <a name="uninstall"></a>
 ## Deinstallation / Löschen
 
-Möchte man ein AddOn deinstallieren, klickt man auf  `de-installieren`. Möchte man das AddOn komplett löschen, klickt man auf `löschen`. 
+Möchte man ein AddOn deinstallieren, klickt man auf  `de-installieren`. Möchte man das AddOn komplett löschen, klickt man auf `löschen`.
+
+Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` geladen; die Assets sowie die Einträge aus `rex_config` werden gelöscht.
 
 > Hinweis:
 Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine angelegten Dateien und Tabellen vollständig entfernen. Einige AddOns weichen jedoch bewusst von dieser Regel ab. Zum Beispiel löscht yForm seine eigenen Tabellen, aber nicht die eigentlichen Datentabellen. Auch das Backup-AddOn löscht bewusst nicht die angelegten Backups im data-Ordner. Daher bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten.
