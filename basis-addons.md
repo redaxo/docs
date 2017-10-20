@@ -108,7 +108,7 @@ Weitere Informationen im Abschnitt: [Installer](/{{path}}/{{version}}/installer)
 
 Sollte es mal zu einem Problem mit dem AddOn kommen (evtl. nach einem Update), kann man das AddOn reinstallieren. Hierbei wird das AddOn wieder installiert und ggf. Einstellungen und Dateien korrigiert. 
 
-> Bei einem Reinstall werden keine Daten entfernt.  
+> Hierzu bitte zu zugehörige Dokumentation beachten. 
 
 <a name="uninstall"></a>
 ## Deinstallation / Löschen
