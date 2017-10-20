@@ -273,7 +273,7 @@ REX_MEDIALIST[id=1 widget=1]
 In `REX_VALUE` können alle möglichen Inhalte gespeichert werden. Sie ist daher die am häufigsten eingesetzte REDAXO-Variable.
 Inhalte werden mit `REX_INPUT_VALUE` aus üblichen HTML-Formularen übernommen. Mit `REX_VALUE` werden diese Inhalte abgerufen und könnne mit PHP weiterverarbeitet oder über HTML direkt ausgegeben werden.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.*
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.*
 
 #### REX_VALUE als Eingabe-Variable
 Übernimmt den Inhalt eines Formularelements und weist ihn der Variable mit der ID `i` zu. Um mehrere Werte in einer Variable zu speichern, kann die Array-Schreibweise genutzt werden.
@@ -352,7 +352,7 @@ Mit `REX_ARTICLE` werden die Inhalte eines Artikels abgerufen.
 Die Feldabfragen sind Shortcuts für `rex_article::getCurrent()->getValue($field)` und `rex_article::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
 Die Inhaltsabfragen sind Shortcuts für den Zugriff auf `rex_article_content`.
 
-**Hinweis:** Wird vom Addon `structure` breitgestellt.
+**Hinweis:** Wird vom Addon `structure` bereitgestellt.
 
 #### Syntax
 
@@ -385,7 +385,7 @@ REX_ARTICLE[id=5 ctype=2]
 Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
 Shortcut für `rex_article::getCurrentId()`.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.*
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.*
 
 #### Syntax
 
@@ -398,7 +398,7 @@ REX_ARTICLE_ID
 Mit `REX_CATEGORY` werden die Inhalte einer Kategorie abgerufen.
 Shortcut für `rex_category::getCurrent()->getValue($field)` und `rex_category::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
 
-**Hinweis:** Wird vom Addon `structure` breitgestellt.*
+**Hinweis:** Wird vom Addon `structure` bereitgestellt.*
 
 #### Syntax
 
@@ -428,7 +428,7 @@ REX_CATEGORY[id=5 field=title]
 Liefert die ID der aktiven Kategorie. Es sind keine Parameter erforderlich.
 Shortcut für `rex_category::getCurrentId()`.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.*
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.*
 
 #### Syntax
 
@@ -441,7 +441,7 @@ REX_CATEGORY_ID
 Ermöglicht den Zugriff auf die Metadaten-Felder der Ausgabe-Sprachen im Frontend. 
 Shortcut für `rex_clang::getCurrent()->getValue($field)` und `rex_clang::getId($id)->getValue($field)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert.
 
-**Hinweis:** Wird vom REDAXO-Core breitgestellt.* 
+**Hinweis:** Wird vom REDAXO-Core bereitgestellt.* 
 
 #### Syntax
 
@@ -460,7 +460,7 @@ Parameter | Beschreibung
 Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlich.
 Shortcut für `rex_clang::getCurrentId()`.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -473,7 +473,7 @@ REX_CLANG_ID
 Erlaubt den Zugriff auf Datenfelder der REDAXO-Konfigurationstabelle. 
 Shortcut für `rex_config::get($namespace, $key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
 
-**Hinweis:** Wird vom REDAXO-Core breitgestellt.
+**Hinweis:** Wird vom REDAXO-Core bereitgestellt.
 
 #### Syntax
 
@@ -491,7 +491,7 @@ Parameter | Beschreibung
 ### REX_CTYPE_ID
 Liefert die ID der aktiven Artikel-Spalte. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -503,7 +503,7 @@ REX_CTYPE_ID
 ### REX_MODULE_ID
 Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -516,7 +516,7 @@ REX_MODULE_ID
 Bietet Zugriff auf die in den `package.yml` der AddOns und in der `config.yml` des Cores definierten Datenfelder. 
 Shortcut für `rex_package::get($namespace)->getProperty($key)` und `rex::getProperty($key)`. Die Ausgabe wird dabei stets durch `htmlspecialchars` gefiltert. 
 
-**Hinweis:** Wird vom REDAXO-Core breitgestellt.
+**Hinweis:** Wird vom REDAXO-Core bereitgestellt.
 
 #### Syntax
 
@@ -534,7 +534,7 @@ Parameter | Beschreibung
 ### REX_SLICE_ID
 Liefert die ID des aktiven Blocks (Slice). Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -546,7 +546,7 @@ REX_SLICE_ID
 ### REX_TEMPLATE
 Mit `REX_TEMPLATE` wird ein Template abgerufen.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -566,7 +566,7 @@ Parameter | Beschreibung
 ### REX_TEMPLATE_ID
 Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -579,7 +579,7 @@ REX_TEMPLATE_ID
 Liefert die ID des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
 Shortcut für `rex::getUser()->getId()`.
 
-**Hinweis:** Wird vom `structure` Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure` Plugin `content` bereitgestellt.
 
 #### Syntax
 
@@ -592,7 +592,7 @@ REX_USER_ID
 Liefert den Login-Namen des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
 Shortcut für `rex::getUser()->getLogin()`.
 
-**Hinweis:** Wird vom `structure` Plugin `content` breitgestellt.
+**Hinweis:** Wird vom `structure` Plugin `content` bereitgestellt.
 
 #### Syntax
 
