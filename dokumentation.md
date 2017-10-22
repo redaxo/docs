@@ -28,7 +28,7 @@
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen)
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
-    - [AddOns](/{{path}}/{{version}}/addons) <sup><b>überprüfen</b></sup> <sup><i>Skerbis</i></sup>
+    - [AddOns](/{{path}}/{{version}}/addons)
     - [Module](/{{path}}/{{version}}/module)
     - [Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
