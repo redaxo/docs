@@ -62,10 +62,10 @@
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
 - AddOn-Entwicklung
-    - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
-    - [package.yml](/{{path}}/{{version}}/addon-package) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
+    - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
+    - [package.yml](/{{path}}/{{version}}/addon-package)
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>offen</b></sup> <sup><b></b></sup>
-    - [Assets](/{{path}}/{{version}}/addon-assets) <sup><b>überprüfen</b></sup> <sup><b>skerbis</b></sup>
+    - [Assets](/{{path}}/{{version}}/addon-assets)
     - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Datenbank-Tabellen](/{{path}}/{{version}}/addon-datenbanktabellen) <sup><b>offen</b></sup>
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
