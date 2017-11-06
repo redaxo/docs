@@ -1,10 +1,10 @@
 # Benutzerrechte
 
-Neu in Redaxo 5 sind die Rollen. In Redaxo 4 war es noch notwendig jedem neuen Benutzer die gleichen Rechte neu zu vergeben. Rollen sind eine Gruppe von Berechtigungen die einem bzw. mehreren Benutzern zugeteilt werden können. Beachtet dazu auch die Klasse [rex_perm](http://www.redaxo.org/docs/master/class-rex_perm.html);
+In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen die den Benutzern zugeteilt werden können.  Die zuständige Klasse findet man hier: [rex_perm](http://www.redaxo.org/docs/master/class-rex_perm.html)
 
 ## Definieren
 
-Berechtigungen können in sofort in der Datei `package.yml` definiert werden, oder später im PHP-Code des Addons.
+Berechtigungen können in der Datei `package.yml` definiert werden, oder später im PHP-Code des Addons.
 
 ### Package.yml
 
