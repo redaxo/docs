@@ -1,4 +1,4 @@
-# package.yml 
+# Package (package.yml) 
 
 - [Beispiel einer package.yml](#beispiel)
 - [Die package.yml definiert das AddOn oder PlugIn](#ueber)
@@ -51,7 +51,7 @@ conflicts:
 <a name="ueber"></a>
 ## Die package.yml definiert das AddOn oder PlugIn 
 
-In der package.yml werden alle nötigen Einstellungen und Informationen hinterlegt, damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
+In der package.yml werden alle nötigen Einstellungen und Informationen hinterlegt (das Package), damit das AddOn oder PlugIn korrekt von REDAXO gefunden und ausgeführt werden kann. 
 Die verwendete Sprache ist das auf Markup verzichtende YAML.
 
 > In YAML werden keine Tabs unterstützt. Die Einrückungen müssen mit Leerzeichen realisiert werden.
