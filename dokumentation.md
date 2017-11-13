@@ -30,7 +30,7 @@
     - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [AddOns](/{{path}}/{{version}}/basis-addons)
     - [Module](/{{path}}/{{version}}/module)
-    - [Aktionen](/{{path}}/{{version}}/aktionen)
+    - [Mudul-Aktionen](/{{path}}/{{version}}/aktionen)
     - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
     - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager)
