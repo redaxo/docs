@@ -63,7 +63,7 @@
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
-    - [package.yml](/{{path}}/{{version}}/addon-package)
+    - [Package](/{{path}}/{{version}}/addon-package)
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>offen</b></sup> <sup><b></b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets)
     - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
