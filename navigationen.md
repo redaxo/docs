@@ -210,7 +210,7 @@ echo '<ul>';
         if ($lev1->isOnline(true)) {
     
             $active = ($lev1->getId() == $path1) ? ' class="active"' : '';
-            $nav_main .= '<li'.$active.'><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a>';
+            echo '<li'.$active.'><a href="'.$lev1->getUrl().'">'.htmlspecialchars($lev1->getValue('name')).'</a>';
     
             // START zweite Ebene
             $lev1Size = sizeof($lev1->getChildren());    
