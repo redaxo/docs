@@ -460,7 +460,7 @@ Parameter | Beschreibung
 Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlich.
 Shortcut für `rex_clang::getCurrentId()`.
 
-**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt. Die erste Sprache liefert die Id 1.
 
 #### Syntax
 
