@@ -44,7 +44,7 @@ rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
 rex_view::addJsFile( $this->getAssetsUrl('script.js') );
 ```
 
-Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden hierzu kann folgendes Snippet hilfreich sein: 
+Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden. Hierzu kann das folgende Snippet behilflich sein: 
 
 ```php
 // Ermitteln welche Backendseite aufgerufen ist:
