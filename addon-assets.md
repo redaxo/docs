@@ -48,7 +48,7 @@ Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden 
 
 ```php
 // Ermitteln welche Backendseite aufgerufen ist:
-if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'deinaddon/unterseite') { 
+if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'addonkey/unterseite') { 
 
 // Hier z.B. Assets einbinden
 
