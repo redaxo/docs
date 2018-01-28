@@ -44,6 +44,17 @@ rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
 rex_view::addJsFile( $this->getAssetsUrl('script.js') );
 ```
 
+Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden. Hierzu kann das folgende Snippet behilflich sein: 
+
+```php
+// Ermitteln welche Backendseite aufgerufen ist:
+if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'addonkey/unterseite') { 
+
+// Hier z.B. Assets einbinden
+
+}
+```
+
 <a name="sass"></a>
 ## Sass
 
