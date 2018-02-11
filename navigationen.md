@@ -285,14 +285,14 @@ $parent = $article->getParentTree();
 $breadcrumb = '<ul>';
 
     // Startartikel als Erstes anzeigen
-    $breadcrumb = '<li><a href="'.rex_getUrl(rex_article::getSiteStartArticle()).'">Start</a></li>';
+    $breadcrumb .= '<li><a href="'.rex_getUrl(rex_article::getSiteStartArticle()).'">Start</a></li>';
     
     // rekursiv den Kategoriebaum der gerade aktiven Kategorien durchlaufen
     foreach($parent as $cat) {
         $breadcrumb .= '<li><a href="'.$cat->getUrl().'">'.$cat->getName().'</a></li>';
     }
 
-$breadcrumb .= '<ul>';
+$breadcrumb .= '</ul>';
 ?>
 ```
 
