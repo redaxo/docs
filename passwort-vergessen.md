@@ -9,7 +9,7 @@ Suche die Datenbank die du bei der Installation angegeben hast und öffne dort d
 
 Ersetze das kryptische Passwort durch folgende Zeile:
 
-          $2y$10$j3WXi9dV9ft0osXCj/QfS.XGXYEnCxFEHx8LJ/PbrvjOjbKObrCV2
+    $2y$10$j3WXi9dV9ft0osXCj/QfS.XGXYEnCxFEHx8LJ/PbrvjOjbKObrCV2
           
 Diese Zeile entspricht dem Passwort 123456789. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
 
