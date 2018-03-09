@@ -2,7 +2,7 @@
 
 - [$REX](#rex)
 - [REX_VAR](#rex-var)
-- [Funktionen und Klassen](#funktiopnen-klassen)
+- [Funktionen und Klassen](#funktionen-klassen)
 - [Extension Points](#extension-points)
 - [rex_sql](#rex-sql)
     - [Fehlermeldung in REDAXO 4](#fehler-rex4)
