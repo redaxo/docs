@@ -10,7 +10,7 @@
 <a name="system"></a>
 ## Systemanforderungen
 
-Für die Version 5.3 wird folgende Umgebung benötigt:
+Für die Version 5.5 wird folgende Umgebung benötigt:
 - PHP ab Version: 5.5.9
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
 - Apache2, Nginx oder vergleichbarer Webserver
