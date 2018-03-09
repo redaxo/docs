@@ -83,6 +83,7 @@ Direktiven für NGINX:
  location ^~ /redaxo/src { deny  all; }
  location ^~ /redaxo/data { deny  all; }
  location ^~ /redaxo/cache { deny  all; }
+ location ^~ /redaxo/bin { deny  all; }
 ```
 > Bei der Verwendung eines Rewriter-AddOns bitte die Dokumentation des Addons beachten.
 
