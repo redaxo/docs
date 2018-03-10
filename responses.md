@@ -1,1 +1,146 @@
 # Responses
+
+- [Die Klasse rex_response](#rex_response)
+- [Funktionen](#funktionen)
+   - [setStatus](#setstatus)
+   - [getStatus](#getstatus)
+   - [sendRedirect](#sendredirect)
+   - [sendFile](#sendfile)
+   - [sendResource](#sendresource)
+   - [sendPage](#sendpage)
+   - [sendContent](#sendcontent)
+   - [cleanOutputBuffers](#cleanoutputbuffers)
+   - [sendContentType](#sendcontenttype)
+   - [sendCacheControl](#sendcachecontrol)
+   - [sendLastModified](#sendlastmodified)
+   - [sendEtag](#sendetag)
+   - [sendGzip](#sendgzip)
+   - [md5](#md5)	
+
+<a name="rex_response"></a>
+## Die Klasse rex_response
+
+Die Klasse `rex_response` bietet Funktionen für das Handling von
+
+	- Inhalte senden
+	- http(s) Statuscodes
+	- Redirects
+	- Outputbuffer
+
+<a name="funktionen"></a>
+## Funktionen
+
+<a name="setstatus"></a>
+#### setStatus
+
+`setStatus($httpStatus)`
+
+Setzt den Statuscode. Beispiel: `rex_response::setStatus(HTTP_OK)`.
+
+<a name="getstatus"></a>
+#### getStatus
+
+`getStatus()`
+
+Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
+
+<a name="sendredirect"></a>
+#### sendRedirect
+
+`sendRedirect($url)`
+
+Bewirkt einen Redirect auf die übergebene Url mit dem über die Funktion setStatus gesetzten Statuscode. Die Ausführung von weiterem Code wird per `exit` beendet.
+
+<a name="getstatus"></a>
+#### getStatus
+
+`getStatus()`
+
+Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
+
+<a name="sendredirect"></a>
+#### sendRedirect
+
+`sendRedirect($url)`
+
+Bewirkt einen Redirect auf die übergebene Url mit dem über die Funktion setStatus gesetzten Statuscode.
+
+<a name="sendfile"></a>
+#### sendFile
+
+`sendFile($file, $contentType, $contentDisposition = 'inline')`
+
+Leert den Outputbuffer, prüft, ob die in $file übergebene Datei vorhanden ist.
+Wenn die Datei nicht im Filesystem gefunden wurde, wird ein HTTP_NOT_FOUND Statuscode verschickt und die Ausführung per exit beendet.
+Wenn die Datei gefunden wurde, wird standardmäßig ein Cachecontrol Header geschickt. Der Cachecontrol Header kann über die Funktion sendCacheControl selber gesetzt werden.
+Wenn keine automatische Kompression verfügbar ist, wird der Header für Content-Length gesetzt, damit der Browser einen Ladebalken anzeigen kann.
+
+<a name="sendresource"></a>
+#### sendResource
+
+`sendResource($content, $contentType = null, $lastModified = null, $etag = null)`
+
+Verschickt eine Resource über die Funktionen `sendCacheControl` und `sendContent`
+
+<a name="sendpage"></a>
+#### sendPage
+
+`sendPage($content, $lastModified = null)`
+
+Verschickt den Inhalt von `$content`. Optional kann ein Last Modified Wert als Timestamp übergeben werden. Der Inhalt von `$content` kann über den Extionsionpoint OUTPUT_FILTER modifiziert werden.
+
+<a name="sendcontent"></a>
+#### sendContent
+
+`sendContent($content, $contentType = null, $lastModified = null, $etag = null)`
+
+Verschickt den Inhalt von `$content`. 
+
+<a name="cleanoutputbuffer"></a>
+#### cleanOutputBuffer
+
+`cleanOutputBuffers()`
+
+Löscht alle Ausgabepuffer.
+
+<a name="sendcontenttype"></a>
+#### sendContentType
+
+`sendContentType($contentType = null)`
+
+Verschickt einen Content-Type Header. Standard ist `text/html; charset=utf-8`
+
+<a name="sendcachecontrol"></a>
+#### sendCacheControl
+
+`sendCacheControl($cacheControl = 'must-revalidate, proxy-revalidate, private, no-cache, max-age=0')`
+
+Verschickt den Cache Control Header
+
+<a name="sendlastmodified"></a>
+#### sendLastModified
+
+`sendLastModified($lastModified = null)`
+
+Verschickt den Last Modified Header. Standard ist das aktuelle Datum und die aktuelle Uhrzeit. Wenn die Zeit identisch ist mit dem vom Browser übermittelten Wert `HTTP_IF_MODIFIED_SINCE` wird der Ausgabepuffer verworfen und der Statuscode `NOT_MODIFIED` (304) übermittelt.
+
+<a name="sendetag"></a>
+#### sendEtag
+
+`sendEtag($cacheKey)`
+
+Prüft, ob der Inhalt den ETAG Cache Schlüssel geändert hat.
+
+<a name="sendgzip"></a>
+#### sendGzip
+
+`sendGzip($content)`
+
+Wenn der Browser Gzip/x-Gzip unterstützt, wird der `$content` komprimiert übertragen.
+
+<a name="md5"></a>
+#### md5
+
+`md5($content)`
+
+Erzeugt einen md5 Hash aus `$content`. Inhalt, der von `<!--DYN-->.*<!--/DYN-->` umschlossen ist, wird ignoriert.
