@@ -1,6 +1,6 @@
 # Das Cutomizer PlugIn für das Backendstyle Addon
 
-Das Customizer Plugin stellte den JavaScript-Quelltext-Editor CodeMirror (http://codemirror.net) zur Vefügung, der - sofern er aktiviert ist - auch bei selbst erstelletn Textareas verwendet werden kann.
+Das Customizer Plugin stellte den JavaScript-Quelltext-Editor CodeMirror (http://codemirror.net) zur Vefügung, der - sofern er aktiviert ist - auch bei selbst erstellten Textareas verwendet werden kann.
 
 Des weiteren kann ein farblich konfigurierbarer Balken im Header des Backends angezeigt werden um so unterschiedliche REDAXO Installtionen leichter unterscheiden zu können.
 
