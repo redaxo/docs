@@ -1,15 +1,15 @@
 #  Templates
 - [Über](#ueber)
 - [Erstellen eines Templates](#ertellen)
-- [Spalten (C-Types)](#ctype)
+- [Contentbereiche (C-Types)](#ctype)
 - [Kategorieberechtigungen](#catrights)
 - [Ausgabe der Inhalte](#ausgabe)
 - [Einbindung von Templates](#einbindung)
 - [Einbindung von Artikeln](#artikeleinbindung)
 - [Das aktuelle Template in Modulen abfragen.](#aktuelles-template)
 - [Beispiele](#beispiele)
-	- [Template mit nur einer Spalte](#1spalte)
-	- [Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel](#2spalte)
+	- [Template mit nur einem Bereich](#1bereich)
+	- [Erweitertes Template mit 2 Bereichen, eingebundenem Template und Artikel](#2bereiche)
 	
 
 <a name="ueber"></a>
@@ -26,10 +26,10 @@ Templates werden im Menüpunkt `Templates` erstellt.
 Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
 
 <a name="ctype"></a>
-## Spalten  (C-Types) 
-Eine Spalte oder auch `C-Type` unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies tatsächlich "Spalten", also z.B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
+## Contentbereiche  (C-Types) 
+Ein Contentbereich ()oder auch Contentspalte, bzw. `C-Type`) unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies "Spalten", also z.B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Contentbereiche verwenden, wie Header, Slider, etc.
 
-Spalten werden im Reiter `Spalten` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jede  Spalte festzulegen, welche Module in der Spalte verwendet werden dürfen. Denn es kann durchaus sein, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
+Contentbereiche werden im Reiter `Bereiche (ctypes)` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jeden Bereich festzulegen, welche Module in dem Bereich verwendet werden dürfen. Denn es kann durchaus sein, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
 
 <a name="catrights"></a>
 ## Kategorieberechtigungen 
@@ -61,8 +61,8 @@ Manchmal ist es erforderlich, in Modulen das aktuell verwendete Template zu ermi
 ## Beispiele 
 Die nachfolgenden Beispiele zeigen zwei einfache Templates, um mit dem Aufbau einer Website zu beginnen. 
 
-<a name="1spalte"></a>
-### Template mit nur einer Spalte
+<a name="1bereich"></a>
+### Template mit nur einem Bereich
 In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefinition im DIV-Container mit der CSS-Klasse `.content` mittels der REDAXO-Variable `REX_ARTICLE[]` ausgegeben. Der Titel der Seite wird per PHP ausgelesen. 
 
 ```PHP
@@ -86,15 +86,15 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 </html>
 ```
 
-<a name="2spalte"></a>
-### Erweitertes Template mit 2 Spalten, eingebundenem Template und Artikel
-In diesem Beispiel werden Inhalte getrennt nach ihren Spalten ausgegeben. So könnte etwa eine Content-Spalte und eine Sidebar (Seitenspalte) gepflegt werden.
+<a name="2bereiche"></a>
+### Erweitertes Template mit 2 Bereichen, eingebundenem Template und Artikel
+In diesem Beispiel werden Inhalte getrennt nach ihren Bereichen ausgegeben. So könnte etwa eine Content-Spalte und eine Sidebar (Seitenspalte) gepflegt werden.
 
 Über das eingebundene Template werden außerdem die Inhalte eines anderen Templates eingebunden, beispielsweise ein Brotkrumenpfad im Headerbereich. 
 Zuletzt werden im Footer die Inhalte eines anderen Artikels ausgegeben.
 
-Die Ausgabe der einzelnen Spalten erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1]` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID der gewünschten Spalte fest. 
-Die ID der jeweiligen Spalten findet man im Reiter `Spalten`. 
+Die Ausgabe der einzelnen Bereiche erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1]` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID des gewünschten Bereichs fest. 
+Die ID des jeweiligen Bereichs findet man im Reiter `Bereiche`. 
 
 
 ```PHP

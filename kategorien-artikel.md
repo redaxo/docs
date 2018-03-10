@@ -4,7 +4,7 @@
 - [Kategorien erstellen die Struktur](#kategorien)
 - [Artikel geben die Inhalte aus](#artikel)
 - [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
-- [Content-Spalten (C-Types)](#ctypes)
+- [Contentbereiche (C-Types)](#ctypes)
 - [Metainformationen](#metainfos)
 - [Code-Beispiele](#code-beispiele)
     - [Zentrale Artikel in den Website-Einstellungen](#zentrale-artikel)
