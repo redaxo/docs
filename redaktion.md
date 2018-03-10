@@ -19,7 +19,7 @@
   * [Metadaten](#metadaten)
   * [Sprachen](#sprachen)
     * [Inhalte zwischen Sprachen kopieren ](#copylang)
-* [Spalten](#spalten)
+* [Bereiche](#bereiche)
 * [Arbeitsversion / Liveversion](#version)
 * [History](#history)
 
@@ -146,11 +146,11 @@ Die Sprachen werden vom Admin verwaltet und bereitgestellt.
 ### Inhalte zwischen Sprachen kopieren 
 Im Reiter `Funktionen` steht die Kopierfunktion `Inhalte kopieren` zur Verfügung. Hiermit kann ein ganzer Artikel mit all seinen Blöcken identisch in eine andere Sprache zur Übersetzung übertragen werden. Befinden sich in der gewünschten Zielsprache bereits Inhalte, werden die Blöcke der Quelle ans Ende des Zielartikels gesetzt.
 
-<a name="spalten"></a>
-## Spalten
-Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Spalten zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet, um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
+<a name="bereiche"></a>
+## Bereiche
+Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Bereiche zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet, um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren. 
 
-Um in eine Spalte zu gelangen, klickt man im Editiermodus auf die Bezeichnung der gewünschten Spalte. Diese findet man im Reiter `Editiermodus` als Untermenüpunkte. Die Pflege der Spalten erfolgt, indem man mit Modulen Inhaltsblöcke anlegt.
+Um in einen Bereich zu gelangen, klickt man im Editiermodus auf die Bezeichnung des gewünschten Bereichs. Diese findet man im Reiter `Editiermodus` als Untermenüpunkte. Die Pflege der Bereiche erfolgt, indem man mit Modulen Inhaltsblöcke anlegt.
 
 <a name="version"></a>
 ## Arbeitsversion / Liveversion
