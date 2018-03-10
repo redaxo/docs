@@ -26,7 +26,6 @@
     - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel)
     - [Templates](/{{path}}/{{version}}/templates)
     - [Navigationen](/{{path}}/{{version}}/navigationen)
-    - [Medien / Dateien](/{{path}}/{{version}}/medien) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
     - [AddOns](/{{path}}/{{version}}/basis-addons)
     - [Module](/{{path}}/{{version}}/module)
     - [Modul-Aktionen](/{{path}}/{{version}}/modul-aktionen)
