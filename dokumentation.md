@@ -62,8 +62,8 @@
 
 - Weitere System AddOns / PlugIns
     - [Backup](/{{path}}/{{version}}/backup)
-    - [Backendstyle / Customizer</sup>](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
-    - [PHPMailer](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
+    - [Backendstyle / Customizer</sup>](/{{path}}/{{version}}/addon-be_style-customizer)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
+    - [PHPMailer](/{{path}}/{{version}}/addon-phpmailer)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
