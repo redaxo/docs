@@ -1,5 +1,6 @@
 # Pfade
 
+- [Zugriff auf Dateisystem](#zugriff)
 - [Dateisystem - rex_path](#rex_path)
     - [base](#base)
     - [frontend](#frontend)
@@ -41,8 +42,8 @@
     - [addonAssets](#urladdonAssets)
     - [pluginAssets](#urlpluginAssets)
 
-
-Zugriff auf das Dateisystem
+<a name="zugriff"></a>
+## Zugriff auf das Dateisystem
 
 Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entsprechenden Ressourcen im Dateisystem (`rex_path`) bzw. per URL (`rex_url`).
 
