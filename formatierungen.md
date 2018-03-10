@@ -1,3 +1,5 @@
+# Formatierungen
+
 - [Formatierungen rex_formatter](#rex_formatter)
     - [Aufruf von rex_formatter](#aufruf_von_rex_formatter)
     - [Formattypen](#formattypen)
@@ -16,8 +18,8 @@
 
 
 <a name="rex_formatter"></a>
-# Formatierungen rex_formatter
-Der `rex_formatter` formatiert Strings zu einem bestimmten Formattyp.
+## Formatierungen rex_formatter
+Der `rex_formatter` formatiert Strings zu einem bestimmten Formattyp. Eine komplette Liste findet sich in der https://redaxo.org/api/master/source-class-rex_formatter.html
 
 
 <a name="aufruf_von_rex_formatter"></a>
@@ -156,21 +158,23 @@ flexibel,
 sinnvoll!';
 
 echo rex_formatter::format($nl2br,'nl2br','');
-// gibt aus:
-// REDAXO<br>
-// ist<br>
-// einfach,<br>
-// flexibel,<br>
-// sinnvoll!
+/* gibt aus:
+REDAXO<br>
+ist<br>
+einfach,<br>
+flexibel,<br>
+sinnvoll!
+*/
 
 $nl2br = 'REDAXO'.PHP_EOL.'ist'.PHP_EOL.'einfach,'.PHP_EOL.'flexibel,'.PHP_EOL.'sinnvoll!';
 echo rex_formatter::nl2br($nl2br);
-// gibt aus:
-// REDAXO<br>
-// ist<br>
-// einfach,<br>
-// flexibel,<br>
-// sinnvoll!
+/* gibt aus:
+REDAXO<br>
+ist<br>
+einfach,<br>
+flexibel,<br>
+sinnvoll!
+*/
 ```
 
 <a name="truncate"></a>
@@ -270,5 +274,3 @@ echo rex_formatter::format($custom,'custom','test');
 echo rex_formatter::custom($custom,'htmlentities');
 // gibt aus (im Quelltext): REDAX&Ouml;
 ```
-
-
