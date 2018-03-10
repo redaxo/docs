@@ -61,6 +61,11 @@
     - [Urls <sup>(rex_getUrl)</sup>](/{{path}}/{{version}}/urls) <sup><b>offen</b></sup>
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
+- Weitere System AddOns / PlugIns
+    - [Backup](/{{path}}/{{backup}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
+    - [Backendstyle / Customizer</sup>](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
+    - [PHPMailer](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
+
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
     - [Package](/{{path}}/{{version}}/addon-package)
