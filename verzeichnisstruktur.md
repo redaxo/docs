@@ -24,7 +24,7 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | `/redaxo/src/core/functions/` | Die wesentlichen PHP-Funktionen |
 | `/redaxo/src/core/lang/` | Die Sprachdateien für das Backend |
 | `/redaxo/src/core/layout/` | Die zwei Dateien in diesem Ordner generieren den Footer, bzw. Header des Backends |
-| `/redaxo/src/core/lib/` | Der Kernbereich von REDAXO |
+| `/redaxo/src/core/lib/` | Der Kernbereich von REDAXO (Klassen) |
 | `/redaxo/src/core/pages/` | Einige zentrale Seiten des Backends, wie z.B. Login, Profil, Setup, etc. |
 | `/redaxo/src/core/tests/` | Automatisierte Tests für Core-Klassen und -Funktionen |
 | `/redaxo/src/core/vendor/` | Funktionen von externen Bibliotheken, z.B: Composer, Symfony, etc. |
