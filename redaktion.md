@@ -165,12 +165,12 @@ Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben f
 
 <a name="history"></a>
 ## History
-In REDAXO ist eine Versionierung (History) integriert. Ist diese aktiviert, erfasst REDAXO jede Änderung in den Artikel-Blöcken und Metadaten. 
+In REDAXO ist eine Versionierung (History) integriert. Ist diese aktiviert, erfasst REDAXO jede Änderung in den Artikel-Blöcken. 
 
 ![History](/assets/v5.2.0-redaktion-06-history.png)
 History-Gegenüberstellung
 
-Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über ein Drop-Down-Menü können die einzelnen Versionen ausgewählt und im rechten Fenster betrachtet werden.
+Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über den Schieberegler oder das Drop-Down-Menü können die einzelnen Versionen ausgewählt und im rechten Fenster betrachtet werden.
 
 Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen`. Hierbei wird die aktuelle Version als neue Version gespeichert, sodass es jederzeit möglich ist, den Vorgang rückgängig zu machen. 
 
