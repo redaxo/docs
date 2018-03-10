@@ -34,7 +34,7 @@
     - [Installer](/{{path}}/{{version}}/installer)
     - [Media Manager](/{{path}}/{{version}}/media-manager)
     - [Metainformationen](/{{path}}/{{version}}/metainformationen)
-    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit) <sup><b>in Bearbeitung</b></sup> <sup><i>Peter</i></sup>
+    - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit)
 
 - Service
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
@@ -52,7 +52,7 @@
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
-    - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>zu ergänzen</b></sup>
+    - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses)
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
@@ -62,8 +62,8 @@
 
 - Weitere System AddOns / PlugIns
     - [Backup](/{{path}}/{{version}}/backup)
-    - [Backendstyle / Customizer</sup>](/{{path}}/{{version}}/addon-be_style-customizer)  <sup><b>Überprüfen</b></sup>
-    - [PHPMailer](/{{path}}/{{version}}/addon-phpmailer)  <sup><b>Überprüfen</b></sup>
+    - [Backendstyle / Customizer</sup>](/{{path}}/{{version}}/addon-be_style-customizer)
+    - [PHPMailer](/{{path}}/{{version}}/addon-phpmailer)
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
