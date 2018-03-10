@@ -17,7 +17,6 @@
     - [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung)
     - [Redaktion](/{{path}}/{{version}}/redaktion)
     - [Medienpool](/{{path}}/{{version}}/medienpool)
-    - [Backup](/{{path}}/{{version}}/backup)
 
 - Basis
     - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
@@ -39,6 +38,8 @@
 
 - Service
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
+    - [Backup](/{{path}}/{{version}}/backup)    
+    - [Backendstyle / Customizer</sup>](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>    
     - [Benutzerrechte](/{{path}}/{{version}}/benutzerrechte) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Caching](/{{path}}/{{version}}/caching)
     - [Cronjobs](/{{path}}/{{version}}/cronjobs)
@@ -52,6 +53,7 @@
     - [Listen (rex_list)](/{{path}}/{{version}}/listen)
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
+    - [PHPMailer](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>    
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
     - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
@@ -60,11 +62,6 @@
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
     - [Urls <sup>(rex_getUrl)</sup>](/{{path}}/{{version}}/urls) <sup><b>offen</b></sup>
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
-
-- Weitere System AddOns / PlugIns
-    - [Backup](/{{path}}/{{backup}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
-    - [Backendstyle / Customizer</sup>](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
-    - [PHPMailer](/{{path}}/{{be_sytle_cutomizer}}/api)  <sup><b>in Bearbeitung</b></sup> <sup><b>Oliver</b></sup>
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
