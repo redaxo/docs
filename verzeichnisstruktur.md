@@ -16,6 +16,7 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | ------------- | ------------- |
 | `/redaxo/data/` | der Basisordner für die von einer Website individuell generierten Dateien, z.B. die Konfigurationsdatei config.yml im core-Unterordner |
 | `/redaxo/cache/` | Speicherort für alle Cache-Dateien |
+| `/redaxo/bin/` | Speicherort für Konsolen-Skripte |
 | `/redaxo/src/` | Der Hauptordner (Source) für den Core |
 | `/redaxo/src/addons/` | Alle AddOns von REDAXO |
 | `/redaxo/src/core/assets/` | Assets für das Backend, im wesentlichen Javascripts |
