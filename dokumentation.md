@@ -44,7 +44,7 @@
     - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
     - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
     - [Extension Points](/{{path}}/{{version}}/extension-points)
-    - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Joachim</i></sup>
+    - [Formatierungen <sup>(rex_formatter)</sup>](/{{path}}/{{version}}/formatierungen)  <sup><b>in Bearbeitung</b></sup> <sup><i>Tim</i></sup>
     - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
     - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
@@ -63,7 +63,7 @@
 - Weitere System AddOns / PlugIns
     - [Backup](/{{path}}/{{version}}/backup)
     - [Backendstyle / Customizer</sup>](/{{path}}/{{version}}/addon-be_style-customizer)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
-    - [PHPMailer](/{{path}}/{{version}}/addon-phpmailer)  <sup><b>in Bearbeitung</b></sup> <sup><i>Oliver</i></sup>
+    - [PHPMailer](/{{path}}/{{version}}/addon-phpmailer)  <sup><b>Überprüfen</b></sup>
 
 - AddOn-Entwicklung
     - [Aufbau und Struktur](/{{path}}/{{version}}/addon-struktur)
