@@ -25,17 +25,17 @@ Artikel dagegen sind der Container für Inhalt - quasi das Blatt Papier, das Tex
 <a name="templates"></a>
 ## Templates
 
-Dass überhaupt Inhalte wie Texte oder Bilder auf einer HTML-Seite erscheinen, steuert das Template. Das Template wirkt sich nur auf die Frontend-Ausgabe aus; dort wird üblicherweise die HTML-Struktur der Website, die eingebundenen CSS- und Javascript-Dateien hinterlegt, aber auch einige PHP-Befehle, die die Inhalte des jeweiligen Artikel auslesen. Sofern man mit mehreren Spalten oder Inhaltbsereichen arbeitet, kann man in einem Template beliebig viele dieser "Spalten" anlegen. Bei der Pflege eines Artikels erscheinen daraufhin im REDAXO-Backend Links, um in die jeweilige Spalte zu wechseln und dort Inhalte hinzuzufügen.
+Dass überhaupt Inhalte wie Texte oder Bilder auf einer HTML-Seite erscheinen, steuert das Template. Das Template wirkt sich nur auf die Frontend-Ausgabe aus; dort wird üblicherweise die HTML-Struktur der Website, die eingebundenen CSS- und Javascript-Dateien hinterlegt, aber auch einige PHP-Befehle, die die Inhalte des jeweiligen Artikel auslesen. Sofern man mit mehreren Inhaltsbereichen (auch Spalten oder ctypes genannt) arbeitet, kann man in einem Template beliebig viele dieser "Bereiche" anlegen. Bei der Pflege eines Artikels erscheinen daraufhin im REDAXO-Backend Links, um in den jeweiligen Bereich zu wechseln und dort Inhalte hinzuzufügen.
 
 <a name="module"></a>
 ## Module
 
-Die Inhalte selbst werden in REDAXO mit Modulen gepflegt. Diese Module können - im Gegensatz zu den meisten anderen CMS - sehr leicht selbst erstellt und erweitert werden, um sie dem jeweiligen Anwendungszweck perfekt anpassen zu können. Man kann - in jeder Spalte - beliebig viele dieser Module auf einer Seite untereinander setzen. Module lassen sich optional nur bestimmten Templates und/oder bestimmten Spalten und/oder bestimmten Kategorien zuweisen.
+Die Inhalte selbst werden in REDAXO mit Modulen gepflegt. Diese Module können - im Gegensatz zu den meisten anderen CMS - sehr leicht selbst erstellt und erweitert werden, um sie dem jeweiligen Anwendungszweck perfekt anpassen zu können. Man kann - in jedem Inhaltsbereich - beliebig viele dieser Module auf einer Seite untereinander setzen. Module lassen sich optional nur bestimmten Templates und/oder bestimmten Bereichen und/oder bestimmten Kategorien zuweisen.
 
 Zusammenfassend muss man sich den Aufbau und die Ausgabe einer einzelnen Seite in Redaxo also folgendermaßen vorstellen:
 
 - Das **Template** bildet den Rahmen, quasi die Matrize für einen Artikel und steuert das Aussehen sowie die Struktur der Seite. Auch eine Navigation würde man normalerweise in einem Template speichern.
-- Der **Artikel** dient als Container zum Verwalten der Inhalte, ggf. in Spalten. Diese Inhalte pflegt man üblicherweise über Module. Um artikelspezifische Informationen zu verwalten, eignen sich dagegen die so genannten Metafelder - typische Beispiele wären etwa ein Headerbilder oder HTML-Metatags wie Description oder Keywords.
+- Der **Artikel** dient als Container zum Verwalten der Inhalte, ggf. in Bereichen. Diese Inhalte pflegt man üblicherweise über Module. Um artikelspezifische Informationen zu verwalten, eignen sich dagegen die so genannten Metafelder - typische Beispiele wären etwa ein Headerbilder oder HTML-Metatags wie Description oder Keywords.
 - **Module** dienen meist zur Pflege von Texten und Bildern. Module werden in einem Artikel als Blöcke beliebig untereinander gesetzt und bestehen aus einem Ein- und einem Ausgabebereich. Der Eingabebereich wird nur im Backend angezeigt und enthält Felder, um Texte eingeben und Bilder auswählen zu können. Der Ausgabebereich wird nur im Frontend, also für den Besucher sichtbar und zeigt diese Texte und Bilder an der im Template definierten Position an. Da Module als einzelne Blöcke mehrfach verwendet werden können, kann man eine Seite beliebig erweitern.
 
 Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären folgende:
