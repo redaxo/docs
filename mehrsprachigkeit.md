@@ -1,7 +1,7 @@
 # Mehrsprachigkeit
 
 - [Sprachen verwalten](#sprachen-verwalten)
-- [neue Sprachen anlegen](#neue-sprachen-anlegen)
+- [Neue Sprachen anlegen](#neue-sprachen-anlegen)
 - [Links](#links)
     - [Gleicher Artikel, andere Sprache](#gleicher-artikel-andere-sprache)
     - [Gleiche Sprache, anderer Artikel](#gleiche-sprache-anderer-artikel)
@@ -12,14 +12,14 @@
 <a name="sprachen-verwalten"></a>
 ## Sprachen verwalten
 
-Mehrsprachige Websites sind mit REDAXO sehr einfach umsetzbar. Unter dem Menüpunkt `Einstellungen` gibt es den Unterpunkt `Sprachen`. In jeder neuen REDAXO-Installation existiert bereits eine aktive Sprache, diese ist nicht löschbar. Standardmäßig hat diese Sprache den Code `de` und den Namen `deutsch`; dies kann aber geändert werden. Der Status kann auf `offline` gestellt werden – das hat aber wie bei den Artikeln und Kategorien zunächst keine Auswirkung auf das Frontend, kann aber selbstverständlich in der Frontend-Ausgabe genutzt werden.
+Mehrsprachige Websites sind mit REDAXO sehr einfach umsetzbar. Unter dem Menüpunkt `System` gibt es den Unterpunkt `Sprachen`. In jeder neuen REDAXO-Installation existiert bereits eine aktive Sprache, diese ist nicht löschbar. Standardmäßig hat diese Sprache den Code `de` und den Namen `deutsch`; dies kann aber geändert werden. Der Status kann auf `offline` gestellt werden – das hat aber wie bei den Artikeln und Kategorien zunächst keine Auswirkung auf das Frontend, kann aber selbstverständlich in der Frontend-Ausgabe genutzt werden.
 
 <a name="neue-sprache-anlegen"></a>
 ## Neue Sprache anlegen
 
 Eine neue Sprache wird über das Pluszeichen angelegt. Nach diesem Schritt – also wenn mindestens zwei Sprachen vorhanden sind – findet man in der Strukturansicht Links zum Wechsel in die anderen Sprachen.
 
-Was ist durch diesen Schritt datenbanktechnisch passiert? Alle Artikel, also  alle Datensätze der Tabelle `rex_article`, wurden dupliziert und mit der neuen Sprach-ID 2 gespeichert. Die ursprüngliche Sprache hat die ID 1, die zweite Sprache die ID 2, usw.
+Was ist durch diesen Schritt datenbanktechnisch passiert? Alle Artikel, also  alle Datensätze der Tabelle `rex_article`, wurden dupliziert und als leere Artikel mit der neuen Sprach-ID 2 gespeichert. Die ursprüngliche Sprache hat die ID 1, die zweite Sprache die ID 2, usw.
 
 > **Hinweis:** In alten REDAXO-Version (4 und älter) fingen die Sprach-IDs mit der 0 an.
 
@@ -75,7 +75,7 @@ Das standardmäßig vorhandene Sprach-Metafeld `Code ` kann sinnvoll genutzt wer
 <html lang="<?php echo rex_clang::getCurrent()->getCode(); ?>">
 ```
 
-Oder man könnte ein neues Sprach-Metafeld `setlocale` anlegen und damit in PHP die Lokalisierung definieren, um regional individuelle Datumsangaben und  Dezimatrennzeichen zu erhalten:
+Oder man könnte ein neues Sprach-Metafeld `setlocale` anlegen und damit in PHP die Lokalisierung definieren, um regional individuelle Datumsangaben und Dezimatrennzeichen zu erhalten:
 
 ```
 setlocale (LC_ALL, rex_clang::getCurrent()->getValue('clang_setlocale'));
@@ -95,7 +95,7 @@ Bei nur zwei Sprachen wird nur ein Link zur anderen Sprache angezeigt. Als Linkt
 // dump(rex_clang::getAll());
 
 
-// zwei Sprachen online -> nur den Link zur zur anderen Sprache anzeigen
+// zwei Sprachen online -> nur den Link zur anderen Sprache anzeigen
 if (count(rex_clang::getAll(true)) == 2) {
 
 	foreach (rex_clang::getAll(true) as $lang) {
@@ -128,8 +128,3 @@ if (count(rex_clang::getAll(true)) == 2) {
 Das AddOn **Sprog** leistet bei der Arbeit mit mehrsprachigen Websites unschätzbare Dienste. Mittels Platzhalter können sprachabhängige Ersetzungen realisiert werden. Auch kann eine Sprache die Ersetzungen einer anderen Sprache verwenden.
 
 Sprog kann außerdem Artikelnamen und Kategoriename innerhalb derselben Sprache sowie die Metadaten oder das Template zwischen den Sprachen synchronisieren. Und: Inhalte lassen sich rasch von einer Sprache zur anderen Sprache kopieren.
-
-
-
-
-
