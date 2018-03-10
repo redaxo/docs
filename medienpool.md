@@ -1,15 +1,15 @@
 # Medienpool
 - [Zweck des Medienpools](#zweck)
+- [Liste der Medien](#liste)
 - [Detailansicht](#detail)
 - [Medienkategorien verwalten](#kategorien)
 - [Medien hinzufühen](#upload)
 - [Medien löschen](#loeschen)
 - [Datei austauschen](#tausch)
 - [Medien verschieben](#schieben)
-- [Medien verschieben](#schieben)
 - [Dateien Synchronisieren](#sync)
 
-<a name="liste"></a>
+<a name="zweck"></a>
 ## Zweck des Medienpools
 Der Medienpool stellt die Funktionen zur Verwaltung von Mediendateien wie Bilder, Dokumente und Videos bereit. Die Medien können über Kategorien organisiert werden. Der Medienpool wird nach einem Klick auf den Link `Medienpool` in einem eigenen Fenster geöffnet.
 
