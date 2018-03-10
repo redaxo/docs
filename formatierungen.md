@@ -1,7 +1,8 @@
 # Formatierungen
 
-- [Formatierungen rex_formatter](#rex_formatter)
-    - [Aufruf von rex_formatter](#aufruf_von_rex_formatter)
+- [Formatierungen rex_formatter](#rex-formatter)
+    - [Aufruf von rex_formatter](#aufruf-von-rex-formatter)
+    - [Ein einfaches Beispiel](#einfaches-beispiel)
     - [Formattypen](#formattypen)
         - [date](#date)
         - [strftime](#strftime)
@@ -17,14 +18,14 @@
         - [custom](#custom)
 
 
-<a name="rex_formatter"></a>
+<a name="rex-formatter"></a>
 ## Formatierungen rex_formatter
 Der `rex_formatter` formatiert Strings zu einem bestimmten Formattyp. Eine komplette Liste findet sich in der https://redaxo.org/api/master/source-class-rex_formatter.html
 
 
-<a name="aufruf_von_rex_formatter"></a>
+<a name="aufruf-von-rex-formatter"></a>
 ## Aufruf von rex_formatter
-Folgendermaßen kann der `rex_formatter` generell aufgerufen werden:
+Folgendermaßen lässt sich der `rex_formatter` generell aufrufen:
 
 ```php
 $formattedString = rex_formatter::( string $value, string 'formatType', string 'format'); 
@@ -32,12 +33,12 @@ $formattedString = rex_formatter::( string $value, string 'formatType', string '
 
 Parameter | Erklärung
 ------------- | ------------- 
-`$value` | Die Variable die formatiert werden soll
-`formatType` | Die Formatierung die angewandt werden soll
-`format` | Das Format in der die Variable ausgegeben werden soll
+`$value` | Die Variable, die formatiert werden soll
+`formatType` | Die Formatierung, die angewandt werden soll
+`format` | Das Format, in der die Variable ausgegeben werden soll
 
 
-<a name="einfaches_beispiel"></a>
+<a name="einfaches-beispiel"></a>
 ## Ein einfaches Beispiel
 ```php
 $date = 'March 9. 2018 10:31 PM';
@@ -66,7 +67,7 @@ Folgende Formattypen stehen zur Verfügung:
 
 <a name="date"></a>
 ### date
-Formatiert den übergebenen String in ein Datum zu dem vorgegebenen Format.
+Formatiert den übergebenen String in ein Datum mit dem gewählten Format.
 Die zu verwendenden Format-Zeichen finden sich im [date-Manual](http://php.net/manual/de/function.date.php) von PHP.
 ```php
 $value = 'March 9. 2018 10:31 PM';
@@ -76,8 +77,8 @@ echo rex_formatter::format($value,'date','Y.m.d H:i');
 
 <a name="strftime"></a>
 ### strftime
-Formatiert den übergebenen String zu dem vorgegebenen Format. Dabei ist es möglich eine Timestamp oder ein Datetime-String zu übergeben.
-Die zu verwendenen Format-Zeichen finden sich im [strftime-Manual](http://php.net/manual/de/function.strftime.php) von PHP.
+Formatiert den übergebenen String in das gewählte Format. Dabei ist es möglich, einen Timestamp oder einen Datetime-String zu übergeben.
+Die zu verwendenden Format-Zeichen finden sich im [strftime-Manual](http://php.net/manual/de/function.strftime.php) von PHP.
 
 ```php
 $datetime = 'March 9. 2018 10:31 PM';
@@ -91,7 +92,7 @@ $formattedString = rex_formatter::format($timestamp,'date','%a KW %V');
 
 <a name="number"></a>
 ### number
-Formatiert das übergebene Value in ein Nummer-Format zu dem vorgebenen Format. Das übergebene Format muss als Array angelegt sein, wie im [number_format-Manual](http://www.php.net/manual/en/function.number-format.php) von PHP angegeben. Der voreingestellte Standard, wenn keine `$number_format` übergeben wird, ist `array(2, ',', ' ')`.
+Formatiert das übergebene Value in eine Nummer mit dem gewählten Format. Das übergebene Format muss als Array angelegt sein, wie im [number_format-Manual](http://www.php.net/manual/en/function.number-format.php) von PHP angegeben. Der voreingestellte Standard, wenn kein `$number_format` übergeben wird, ist `array(2, ',', ' ')`.
 
 ```php
 $number = '12345.6789';
@@ -107,18 +108,18 @@ $formattedString = rex_formatter::number($number,$numberFormat);
 $number_format = [decimal_numbers 2, decimals_point ',', thousands_seperator ' ']
 ```
 
-#### Number Format
+#### Number-Format-Parameter
 Parameter | Erklärung
 ------------- | ------------- 
-`decimal_numbers` | Die Anzahl an Stellen die hinter dem Komma ausgegeben werden sollen
+`decimal_numbers` | Die Anzahl an Stellen, die hinter dem Komma ausgegeben werden sollen
 `decimals_point` | Das Trennzeichen für Komma-Zahlen
-`thousands_sepearator` | Das Trennzeichen für tausender Trennung
+`thousands_sepearator` | Das Trennzeichen für Tausender-Trennung
 
 
 
 <a name="bytes"></a>
 ### bytes
-Formatiert das übergebene Value zu einem String bei dem die Größe angehängt wird. Das Format formatiert wie die Nummer angezeigt werden soll (s. [number](#number)).
+Formatiert das übergebene Value zu einem String, bei dem die Größe angehängt wird. Das Format definiert, wie die Nummer angezeigt werden soll (s. [number](#number)).
 Je nach Größe des übergebenen Values werden automatisch folgende Byte-Größen angehängt:
 `'B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'`
 
@@ -134,7 +135,7 @@ echo rex_formatter::bytes($bytes,$numberFormat);
 
 <a name="sprintf"></a>
 ### sprintf
-Formatiert / ersetzt das übergebene Value in das übergebene Format. Fallback ist `%s` wenn kein Format angegeben ist. Beim `rex_formatter` kann immer nur ein Value formatiert werden. Will man verschiedene Values in einem String ersetzen / formatieren lohnt es sich eher die [sprintf-Funktion](http://www.php.net/manual/en/function.sprintf.php) direkt von PHP zu nutzen. Alle weiteren Formate können im [sprintf-Manual](http://www.php.net/manual/en/function.sprintf.php) eingesehen werden.
+Formatiert / ersetzt das übergebene Value in das gewählte Format. Fallback ist `%s`, wenn kein Format angegeben wurde. Beim `rex_formatter` kann immer nur ein Value formatiert werden. Will man verschiedene Values in einem String ersetzen / formatieren, lohnt es sich eher, die [sprintf-Funktion](http://www.php.net/manual/en/function.sprintf.php) direkt von PHP zu nutzen. Alle weiteren Formate können im [sprintf-Manual](http://www.php.net/manual/en/function.sprintf.php) eingesehen werden.
 
 ```php
 $format = 'REDAXO ist %s';
@@ -148,7 +149,7 @@ echo rex_formatter::sprintf($whatitis,$format);
 
 <a name="nl2br"></a>
 ### nl2br
-Formatiert das übergebene Value in einen String mit `<br>` wenn das Value eine `new line` enthält, z.B. `\n` oder `PHP_EOL`. Achtung: Wenn `rex_formatter::format()` genutzt werden muss hier zum Schluss ein leeres Format `''` übergeben werden.
+Formatiert das übergebene Value in einen String mit `<br>`, wenn das Value eine `new line` enthält, z.B. `\n` oder `PHP_EOL`. Achtung: Wenn `rex_formatter::format()` genutzt wird, muss hier zum Schluss ein leeres Format `''` übergeben werden.
 
 ```php
 $nl2br = 'REDAXO
@@ -179,7 +180,7 @@ sinnvoll!
 
 <a name="truncate"></a>
 ### truncate
-Schneidet das übergebene Value nach der eingestellten Länge `length` im Format Array ab und hängt Trennzeichen `etc` aus dem Format-Array an. Der Parameter `break_words` im Format-Array ist Boolean `(false/true)`. Standard-Einstellung für das Format bei `truncate` ist `array('length' => 80, 'etc' => '...', 'break_words' => false)`.  
+Schneidet das übergebene Value nach der eingestellten Länge `length` im Format-Array ab und hängt die bei `etc` definierten Trennzeichen an. Der Parameter `break_words` im Format-Array ist Boolean `(false/true)`. Standard-Einstellung für das Format bei `truncate` ist `array('length' => 80, 'etc' => '...', 'break_words' => false)`.  
 
 ```php
 $truncateThis = 'REDAXO ist einfach, flexibel, sinnvoll!';
@@ -194,13 +195,13 @@ echo rex_formatter::truncate($truncateThis,array('length' => '9','etc' => '!!!',
 #### truncate Format-Array
 Parameter | Erklärung
 ------------- | ------------- 
-`length` | Die Länge auf die das Value gekürzt werden soll - Standard ist `80`
+`length` | Die Länge, auf die das Value gekürzt werden soll - Standard ist `80`
 `etc` | Die anzuhängenden Trennzeichen - Standard ist `...`
 `break_words` | Boolean `false/true` - Ob die Länge hart berücksichtigt und innerhalb von Wörtern abgeschnitten werden soll - Standard ist `false`
 
 <a name="widont"></a>
 ### widont
-Sollte ein Wort allein auf einer Zeile vorkommen, wird dies unterbunden. Das letzte Leerzeichen wird durch ein geschütztes Leerzeichen ersetzt, so dass die letzten beiden Worte in die nächste Zeile rutschen. Achtung: Wenn `rex_formatter::format()` genutzt werden muss hier zum Schluss ein leeres Format `''` übergeben werden.
+Sollte ein Wort allein in einer Zeile vorkommen, wird dies unterbunden. Das letzte Leerzeichen wird durch ein geschütztes Leerzeichen ersetzt, so dass die letzten beiden Worte in die nächste Zeile rutschen. Achtung: Wenn `rex_formatter::format()` genutzt wird, muss hier zum Schluss ein leeres Format `''` übergeben werden.
 
 ```php
 $widow = 'REDAXO ist einfach, flexibel, sinnvoll!';
@@ -215,7 +216,7 @@ echo rex_formatter::widont($widow);
 
 <a name="version"></a>
 ### version
-Formatiert den übergebenen Versionsstring wie man diesen gerade benötigt.
+Formatiert den übergebenen Versions-String. Die zur Verfügung stehenden Formate können im [sprintf-Manual](http://www.php.net/manual/en/function.sprintf.php) eingesehen werden.
 
 ```php
 $version = 5.5.1;
@@ -260,7 +261,7 @@ echo rex_formatter::email($email);
 
 <a name="custom"></a>
 ### custom
-Über `custom`-Format lässt sich eine z.B. eine Funktion aufrufen, die dann die gewünschte Formatierung ausführt. Es können auch direkt PHP-Funktionen aufgerufen werden.
+Über `custom`-Format lässt sich z.B. eine Funktion aufrufen, die dann die gewünschte Formatierung ausführt. Es können auch direkt PHP-Funktionen aufgerufen werden.
 
 ```php
 function test($param = '') {
@@ -274,3 +275,5 @@ echo rex_formatter::format($custom,'custom','test');
 echo rex_formatter::custom($custom,'htmlentities');
 // gibt aus (im Quelltext): REDAX&Ouml;
 ```
+
+
