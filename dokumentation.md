@@ -52,7 +52,7 @@
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
-    - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>in Bearbeitung</b></sup> <sup><i>Wolfgang</i></sup>
+    - [Responses <sup>(rex_response)</sup>](/{{path}}/{{version}}/responses) <sup><b>zu ergänzen</b></sup>
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
