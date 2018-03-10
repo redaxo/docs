@@ -25,8 +25,6 @@
     - [addon](#addon)
     - [plugin](#plugin)
     - [absolute](#absolute)
-
-
 - [URLs - rex_url](#rex_url)
     - [init](#urlinit)
     - [base](#urlbase)
@@ -436,4 +434,3 @@ Liefert den Frontendpfad zum Assets-Verzeichnis eines Plugins
 Beispiel:
 `rex_url::pluginAssets('meinaddon','meinplugin')` => '/assets/addons/meinaddon/plugins/meinplugin/'
 `rex_url::pluginAssets('meinaddon','meinplugin','file.txt')` => '/assets/addons/meinaddon/plugins/meinplugin/file.txt'
-
