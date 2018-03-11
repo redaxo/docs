@@ -81,6 +81,6 @@
 - Datenbank
     - `In Arbeit`
     - [Queries <sup>(rex_sql)</sup>](/{{path}}/{{version}}/datenbank-queries) <sup><b>Wolfgang</b></sup>
-    - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>offen</b></sup>
+    - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen) <sup><b>prüfen</b></sup>
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
