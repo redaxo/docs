@@ -139,7 +139,7 @@ page:
 ```
 Der in der Hauptseite hinterlegte Titel ist zugleich die Bezeichnung für den Menüpunkt. 
 
-Für den Menüpunkt des AddOns kann ein Icon aus Font-Awsome festgelegt werden. Für die korrekte Darstellung sollte die CsS-Klasse des Icons immer in Kombination mit `rex-icon` angegeben werden:
+Für den Menüpunkt des AddOns kann ein Icon aus Font-Awsome festgelegt werden. Für die korrekte Darstellung sollte die CSS-Klasse des Icons immer in Kombination mit `rex-icon` angegeben werden:
 
 ```yml
 page:
@@ -152,14 +152,14 @@ Will die Hauptseite in **Unterseiten** unterteilen, werden diese mit Hilfe des K
 ```yml
 subpages:
     main:  
-      title: 'translate:main'
-      icon: rex-icon fa-television
+        title: 'translate:main'
+        icon: rex-icon fa-television
     help:  
-     title: 'translate:help'
-     icon: rex-icon fa-help
+        title: 'translate:help'
+        icon: rex-icon fa-help
     module: 
-      title: 'translate:module' 
-      perm: admin
+        title: 'translate:module' 
+        perm: admin
 ``` 
 Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 
@@ -181,7 +181,7 @@ Auch der eigentliche Menüpunkt des AddOns kann so versteckt werden.
 
 In der package.yml können auch Rechte für Benutzer festgelegt und abgefragt werden. 
 
-Möchte man z.B. nur Admins die Nutzung dss AddOns gestatten, so fügt man im Kopfbereich – z.B. nach Author – `perm: admin` hinzu.
+Möchte man z.B. nur Admins die Nutzung des AddOns gestatten, so fügt man der `page`-Definition `perm: admin` hinzu.
 Möchte man das nur auf eine Unterseite beziehen, legt man den Key in der Definition der entsprechenden Unterseite ab. 
 
 Oftmals reicht die Festlegung auf den Admin nicht und man möchte eine ausgefeiltere Rechte-Vergabe definieren. (Beispiel: der Redakteur darf Daten einpflegen, aber nicht löschen.) 
@@ -195,7 +195,7 @@ z.B.: `perm: meinaddon[]`
 
 Wird dieser Key angelegt, ist das Recht in der Benutzerverwaltung auswählbar. Weitere, davon abgeleitete Rechte können durch einen zusätzlichen key in den Klammern definiert werden. 
 
-z.B: meinaddon[delete]
+z.B: `perm: meinaddon[delete]`
 
 Die Rechte können dann im AddOn per PHP abgefragt werden:
 
@@ -217,13 +217,13 @@ Der Abruf erfolgt wie oben gezeigt per `$this->getProperty($eigenerkey)`.
 <a name="pjax"></a>
 ## PJAX deaktivieren
 
-Möchte man auf PJAX auf den Seiten des AddOns verzichten, kann man dies per `pjax: false` erreichen.
+Möchte man PJAX auf den Seiten des AddOns nutzen, kann man dies per `pjax: true` erreichen.
 
 ```yml
 page:
     title: 'translate:Mein Addon'
     perm: meinaddon[]
-    pjax: false
+    pjax: true
     icon: rex-icon fa-television
 ```
 
