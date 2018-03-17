@@ -82,11 +82,11 @@ Die zu verwendenden Format-Zeichen finden sich im [strftime-Manual](http://php.n
 
 ```php
 $datetime = 'March 9. 2018 10:31 PM';
-echo rex_formatter::format($datetime,'date','%a KW %V');
+echo rex_formatter::format($datetime,'strftime','%a KW %V');
 // gibt aus: Fri KW 10
 
 $timestamp = '1520631060';
-$formattedString = rex_formatter::format($timestamp,'date','%a KW %V');
+$formattedString = rex_formatter::format($timestamp,'strftime','%a KW %V');
 // gibt aus: Fri KW 10
 ```
 
