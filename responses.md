@@ -58,13 +58,6 @@ Bewirkt einen Redirect auf die übergebene Url mit dem über die Funktion `setSt
 
 Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
 
-<a name="sendredirect"></a>
-#### sendRedirect
-
-`sendRedirect($url)`
-
-Bewirkt einen Redirect auf die übergebene Url mit dem über die Funktion `setStatus` gesetzten Statuscode.
-
 <a name="sendfile"></a>
 #### sendFile
 
