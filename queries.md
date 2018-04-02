@@ -28,6 +28,9 @@ $sql = rex_sql::factory();
 $sql->setQuery('SELECT name, id FROM rex_article WHERE parent_id = :pid', ['pid'=>5]);
 ```
 
+### Rückgabewerte
+
+Die meisten Funktionen geben das aktuelle rex_sql Objekt zurück.
 
 <a name="getquerytype"></a>
 ## getQueryType
@@ -140,4 +143,127 @@ Formatiert einen `timestamp` in das SQL Datumsformat und setzt ihn für die Spal
 
 Setzt ein Array als Inhalt. Der Schlüssel des Arrays muss dem passenden Feldnamen der Tabelle entsprechen.
 
+<a name="setarrayvalue"></a>
+## setArrayValue
 
+`setArrayValue($colName, array $value)`
+
+Ein Array in der Datenbank ablegen. Der Wert von array wird per `json_encode` codiert. Siehe auch `getArrayValue`
+
+<a name="setdatetimevalue"></a>
+## setDateTimeValue
+
+`setDateTimeValue($colName, $timestamp)`
+
+Legt in der Spalte `$colName` einen Timestamp im Format `Y-m-d H:i:s` ab. Wird in `$timestamp` kein Wert übergeben, wird der aktuelle Unix Timestamp verwendet.
+
+<a name="setvalues"></a>
+## setValues
+
+`setValues(array $valueArray)`
+
+Ein assoziatives Array ablegen, wobei die `keys` den Feldnamen entsprechen, die `values` den Werten.
+
+`$sql->setValues(['vorname'=>'Rupert','nachname'=>'Neudeck']);`
+
+<a name="hasvalues"></a>
+## hasValues
+
+`hasValues()`
+
+Gibt `true` zurück, wenn das rex_sql Objekt Werte enthält, ansonsten `false`. Es sind keine Parameter erlaubt.
+
+<a name="isvalueof"></a>
+## isValueOf
+
+`isValueOf($feld, $prop)`
+
+Prüft den Wert einer Spalte der aktuellen Zeile ob ein Wert enthalten ist. Wenn für `$prop = ""` übergeben wird, wird stets `true` zurückgegeben.
+
+<a name="setwhere"></a>
+## setWhere
+
+`setWhere($where, $whereParams = null)`
+
+Setzt die `WHERE`-Bedingung der Abfrage.
+
+`$sql->setWhere(['id' => 3, 'field' => '']);` ergibt `id = 3 AND field = ''`
+`$sql->setWhere([['id' => 3, 'field' => '']]);` ergibt `id = 3 OR field = ''`
+
+mit Parameter:
+`$sql->setWhere('myid = :id OR anotherfield = :field', ['id' => 3, 'field' => '']);` ergibt `myid = 3 OR anotherfield = ''`
+
+Es wird **nicht empfohlen** den gesamten Where-String mit Parametern und Werten zu übergeben:
+`$sql->setWhere('myid="35" OR abc="zdf"');` (deprecated)
+
+<a name="getvalue"></a>
+## getValue
+
+`getValue($colName)`
+
+Gibt den Wert von `colName` des aktuellen Datensatzes zurück. Wird für `colName` kein Wert übergeben, wird ein Fehler vom Typ `rex_sql_exception` generiert.
+
+Wenn der Name des Feldes in der Form `tablename.fieldname` übergeben wurde, wird direkt auf den Tabellennamen zugegriffen. Andernfalls versucht die Funktion den Feldnamen in der Abfrage zu finden. Ist dieser nicht eindeutig, wird ein Fehler generiert.
+
+<a name="getarrayvalue"></a>
+## getArrayValue
+
+`getArrayValue($colName)`
+
+Das in `colName` abgelegte Array wird per `json_decode` decodiert und zurückgegeben. Sie auch `setArrayValue`.
+
+<a name="getdatetimevalue"></a>
+## getDateTimeValue
+
+`getDateTimeValue($colName)`
+
+Gibt den in `colName` abgelegte als String abgelegten Datum-Zeit Wert als Unix Timestamp zurück. Siehe auch `setDateTimeValue`.
+
+<a name="getrow"></a>
+## getRow
+
+`getRow($fetch_type = PDO::FETCH_ASSOC)`
+
+Gibt den Wert der aktuellen Zeile zurück. Über `fetch_type` kann festgelegt werden von welchem Typ das Ergebnis ist. So gibt `PDO::FETCH_OBJ` das Ergebnis als Objekt zurück. Standard ist `PDO::FETCH_ASSOC`, womit ein assoziatives Array zurückgegeben wird.
+
+<a name="hasvalue"></a>
+## hasValue
+
+`hasValue($feldname)`
+
+Prüft, ob eine Spalte vorhanden ist. Gibt `true` zurück, wenn die Spalte gefunden wurde, `flase`, wenn sie nicht gefunden wurde. Die Funktion kann auch mit einem vorangestellten Alias aufgerufen werden: `tablename.feldname`.
+
+<a name="isnull"></a>
+## isNull
+
+`isNull($feldname)`
+
+Prüft, ob das Feld mit dem Namen `feldname` null ist. Es wird `true` oder `false` zurückgegeben.
+
+<a name="getrows"></a>
+## getRows
+
+`getRows()`
+
+Gibt die Anzahl der Zeilen für eine gesetze Abfrage zurück.
+
+<a name="getfields"></a>
+## getFields
+
+`getFields()`
+
+Gibt die Anzahl der Spalten für eine gesetze Abfrage zurück.
+
+<a name="getwhere"></a>
+## getWhere
+
+`getWhere()`
+
+Gibt das aktuelle `where` Statement zurück.
+
+<a name="select"></a>
+## select
+
+`select($fields = '*')`
+
+Setzt eine Select-Abfrage auf die aktuelle Tabelle mit dem aktuellen `where` Statement ab. Die Angabe von `fields` ist optional, Standard ist `*`.
