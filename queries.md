@@ -419,9 +419,11 @@ Gibt die treiberspezifische MySql Fehlernummer zurück.
 
 Gibt ein Array mit Informationen des zuletzt aufgetretenen Fehlers zurück. Der Aufbau des Arrays entspricht folgendem Muster:
 
+```
 [0] => 5-stelliger Fehlercode
 [1] => Fehlernummer des MySQL Treibers
 [2] => Fehlerbeschreibung
+```
 
 <a name="haserror"></a>
 ## hasError
