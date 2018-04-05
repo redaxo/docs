@@ -1,17 +1,70 @@
 # Queries - rex_sql
 
 - [Queries - rex_sql](#queries_rex_sql)
-- [Überschriften](#ueberschriften)
-- [Links](#links)
-- [Listen](#listen)
-- [Tabellen](#tabellen)
-- [Code](#code)
-- [Hinweise](#hinweise)
-- [Anker 3](#anker-3)
-    - [Anker 3a](#anker-3a)
-    - [Anker 3b](#anker-3b)
-    - [Anker 3c](#anker-3c)
-- [Anker 4](#anker-4)
+    - [Syntax](#syntax)
+    - [Rückgabewerte](#rueckgabewerte)
+- [getQueryType](#getquerytype)
+- [datetime](#datetime)
+- [setDBQuery](#setdbquery)
+- [setDebug](#setdebug)
+- [prepareQuery](#preparequery)
+- [execute](#execute)
+- [setQuery](#setquery)
+- [setTable](#settable)
+- [setRawValue](#setrawvalue)
+- [setValue](#setvalue)
+- [setArrayValue](#setarrayvalue)
+- [setDateTimeValue](#setdatetimevalue)
+- [setValues](#setvalues)
+- [setArrayValue](#setarrayvalue)
+- [setDateTimeValue](#setdatetimevalue)
+- [setValues](#setvalues)
+- [hasValues](#hasvalues)
+- [isValueOf](#isvalueof)
+- [setWhere](#setwhere)
+- [getValue](#getvalue)
+- [getArrayValue](#getarrayvalue)
+- [getDateTimeValue](#getdatetimevalue)
+- [getRow](#getrow)
+- [hasValue](#hasvalue)
+- [isNull](#isnull)
+- [getRows](#getrows)
+- [getFields](#getfields)
+- [getWhere](#getwhere)
+- [select](#select)
+- [update](#update)
+- [insert](#insert)
+- [replace](#replace)
+- [delete](#delete)
+- [flush](#flush)
+- [flushValues](#flushvalues)
+- [hasNext](#hasnext)
+- [reset](#reset)
+- [getLastId](#getlastid)
+- [getDBArray](#getdbarray)
+- [getArray](#getarray)
+- [getErrno](#geterrno)
+- [getMysqlErrno](#getmysqlerrno)
+- [getError](#geterror)
+- [hasError](#haserror)
+- [setNewId](#setnewid)
+- [getFieldnames](#getfieldnames)
+- [getTablenames](#gettablenames)
+- [escape](#escape)
+- [escapeIdentifier](#escapeidentifier)
+- [addGlobalUpdateFields](#addglobalupdatefields)
+- [addGlobalCreateFields](#addglobalcreatefields)
+- [rewind](#rewind)
+- [current](#current)
+- [key](#key)
+- [next](#next)
+- [valid](#valid)
+- [showCreateTable](#showcreatetable)
+- [showTables](#showtables)
+- [showColumns](#showcolumns)
+- [getServerVersion](#getserverversion)
+- [factory](#factory)
+- [checkDbConnection](#checkdbconnection)
 
 <a name="queries_rex_sql"></a>
 ## Queries - rex_sql
@@ -267,3 +320,263 @@ Gibt das aktuelle `where` Statement zurück.
 `select($fields = '*')`
 
 Setzt eine Select-Abfrage auf die aktuelle Tabelle mit dem aktuellen `where` Statement ab. Die Angabe von `fields` ist optional, Standard ist `*`.
+
+<a name="update"></a>
+## update
+
+`update()`
+
+Setzt eine Update-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`) und mit `setWhere` gesetzten WHERE Parametern ab.
+
+<a name="insert"></a>
+## insert
+
+`insert()`
+
+Setzt eine Insert-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`). Bei Verstoß gegen eine NOT NULL Regel wird eine rex_sql_exception ausgelöst.
+
+<a name="replace"></a>
+## replace
+
+`replace()`
+
+Setzt eine Replace-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`) und mit `setWhere` gesetzten WHERE Parametern ab.
+
+<a name="delete"></a>
+## delete
+
+`delete()`
+
+Setzt eine Delete-Anweisung auf die angegebene Tabelle mit den WHERE Parametern ab, die mit `setWhere` gesetzten wurden.
+
+<a name="flush"></a>
+## flush
+
+`flush()`
+
+Setzt alle Werte auf den Ursprungszustand zurück. Gibt das rex_sql Objekt zurück.
+
+<a name="flushvalues"></a>
+## flushValues
+
+`flushValues()`
+
+Stellt alle Values, die mit `setValue` oder `setValues` gesetzt wurden, zurück.
+
+<a name="hasnext"></a>
+## hasNext
+
+`hasNext()`
+
+Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, ansonsten `false`.
+
+<a name="reset"></a>
+## reset
+
+`reset()`
+
+Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `rewind`.
+
+<a name="getlastid"></a>
+## getLastId
+
+`getLastId()`
+
+Gibt die letzte InsertId zurück.
+
+<a name="getdbarray"></a>
+## getDBArray
+
+`getDBArray($query = null, array $params = [], $fetchType = PDO::FETCH_ASSOC)`
+
+Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die DBID, falls vorhanden. Identisch mit `getArray`.
+
+<a name="getarray"></a>
+## getArray
+
+`getArray($query = null, array $params = [], $fetchType = PDO::FETCH_ASSOC)`
+
+Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die DBID, falls vorhanden. Identisch mit `getDBArray`.
+
+<a name="geterrno"></a>
+## getErrno
+
+`getErrno()`
+
+Gibt die zuletzt aufgetretene Fehlernummer zurück.
+
+<a name="getmysqlerrno"></a>
+## getMysqlErrno
+
+`getMysqlErrno()`
+
+Gibt die treiberspezifische MySql Fehlernummer zurück.
+
+<a name="geterror"></a>
+## getError
+
+`getError()`
+
+Gibt ein Array mit Informationen des zuletzt aufgetretenen Fehlers zurück. Der Aufbau des Arrays entspricht folgendem Muster:
+
+[0] => 5-stelliger Fehlercode
+[1] => Fehlernummer des MySQL Treibers
+[2] => Fehlerbeschreibung
+
+<a name="haserror"></a>
+## hasError
+
+`hasError()`
+
+Prüft, ob ein Fehler aufgetreten ist. Bei einem Rückgabewert von `true` ist ein Fehler aufgetreten, bei `false` nicht.
+
+<a name="setnewid"></a>
+## setNewId
+
+`setNewId($field, $start_id = 0)`
+
+Setzt eine Spalte auf den nächstmöglichen `auto_increment` Wert. Um zu verhindern, dass das rex_sql Objekt verändert wird, wird in dieser Funktion ein eigenes rex_sql Objekt verwendet.
+
+<a name="getfieldnames"></a>
+## getFieldnames
+
+`getFieldnames()`
+
+Gibt die Spaltennamen des Resultsets zurück.
+
+<a name="gettablenames"></a>
+## getTablenames
+
+`getTablenames()`
+
+Gibt die Tabellennamen des Resultsets zurück.
+
+<a name="escape"></a>
+## escape
+
+`escape($value)`
+
+Escaped den übergeben Wert für den DB Query.
+
+<a name="escapeidentifier"></a>
+## escapeIdentifier
+
+`escapeIdentifier($name)`
+
+Escaped den übergebenen Wert und fügt Backticks am Anfang und am Ende dazu.
+
+Aus `"Das sind Backticks: ``"` wird `"``Das sind Backticks: `````"`
+
+<a name="addglobalupdatefields"></a>
+## addGlobalUpdateFields
+
+`addGlobalUpdateFields($user = null)`
+
+Standardfelder `updatedate` und `updateuser` setzen. `updatedate` ist der aktuelle Wert von time() als Date Time String (über `setDateTimeValue`).
+`user` ist standardmäßig der Login Name des aktuellen REDAXO Backend User oder ein übergebener String.
+
+<a name="addglobalcreatefields"></a>
+## addGlobalCreateFields
+
+`addGlobalCreateFields($user = null)`
+
+Standardfelder `createdate` und `createuser` setzen. `createdate` ist der aktuelle Wert von time() als Date Time String (über `setDateTimeValue`).
+`user` ist standardmäßig der Login Name des aktuellen REDAXO Backend User oder ein übergebener String.
+
+<a name="rewind"></a>
+## rewind
+
+`rewind()`
+
+Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `reset`.
+
+<a name="current"></a>
+## current
+
+`current()`
+
+Gibt das aktuelle rex_sql Objekt zurück.
+
+<a name="key"></a>
+## key
+
+`key()`
+
+Gibt den aktuellen Wert des Zeigers im Resultset zurück.
+
+<a name="next"></a>
+## next
+
+`next()`
+
+Setzt den Zeiger im Resultset um einen Datensatz vor.
+
+<a name="valid"></a>
+## valid
+
+`valid()`
+
+Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, ansonsten `false`. Identisch mit `hasNext`.
+
+<a name="showcreatetable"></a>
+## showCreateTable
+
+`rex_sql::showCreateTable($table, $DBID = 1)` (public static)
+
+Erstellt das CREATE TABLE Statement um die Tabelle `$table` der Datenbankverbindung `$DBID` zu erstellen. Die Tabelle `$table` muss vorhanden sein, sonst wird ein Fehler ausgegeben.
+
+<a name="showtables"></a>
+## showTables
+
+`rex_sql::showTables($DBID = 1, $tablePrefix = null)` (public static)
+
+Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Es wird ein Array mit den Namen aller in der Datenbank vorhandenen Tabellen zurückgegeben.
+
+<a name="showcolumns"></a>
+## showColumns
+
+`rex_sql::showColumns($table, $DBID = 1)` (public static)
+
+Gibt ein Array mit den Spalten der Tabelle `$table` zurück. Die Spalten werden ebenfalls als Array zurückgegeben.
+
+```
+ [
+	[0] => [
+		"name" => "pid",
+		"type" => "int(11)",
+		"null" => "NO",
+		"key" => "PRI",
+		"default" => null,
+		"extra" => "auto_increment"
+		],
+	[1] => [
+		"name" => "id",
+		"type" => "int(11)",
+		"null" => "NO",
+		"key" => "MUL",
+		"default" => null,
+		"extra" => ""
+		]
+]
+```
+
+<a name="getserverversion"></a>
+## getServerVersion
+
+`getServerVersion($DBID = 1)` (public static)
+
+Gibt die Serverversion zurück.
+
+<a name="factory"></a>
+## factory
+
+`factory($DBID = 1)` (public static)
+
+Factory Methode. Erstellt eine neue Instanz des rex_sql Objekte und gibt diese zurück.
+
+<a name="checkdbconnection"></a>
+## checkDbConnection
+
+`checkDbConnection($host, $login, $pw, $dbname, $createDb = false)` (public static)
+
+Prüft die übergebenen Zugangsdaten auf Gültigkeit und legt ggf. die Datenbank an.
