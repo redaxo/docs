@@ -405,7 +405,7 @@ Beispiel:
 
 
 <a name="urlcoreAssets"></a>
-### assets
+### coreAssets
 
 Liefert den Frontendpfad zum Assets-Verzeichnis des Core
 
