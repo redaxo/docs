@@ -278,7 +278,7 @@ Für einen Brotkrumenpfad benötigt man nicht alle Kategorien, sondern nur den l
 ```
 <?php
 // Aktuellen Artikel ermitteln
-$article = rex_article::get($this->article_id);
+$article = rex_article::getCurrent();
 // Array der Elternkategorien
 $parent = $article->getParentTree();
 
