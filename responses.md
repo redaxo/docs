@@ -1,7 +1,7 @@
 # Responses
 
 - [Die Klasse rex_response](#rex_response)
-- [Funktionen](#funktionen)
+- [Methoden](#methoden)
    - [setStatus](#setstatus)
    - [getStatus](#getstatus)
    - [sendRedirect](#sendredirect)
@@ -20,15 +20,15 @@
 <a name="rex_response"></a>
 ## Die Klasse rex_response
 
-Die Klasse `rex_response` bietet Funktionen für das Handling von
+Die Klasse `rex_response` bietet Methoden für das Handling von
 
 	- Inhalte senden
 	- http(s) Statuscodes
 	- Redirects
 	- Outputbuffer
 
-<a name="funktionen"></a>
-## Funktionen
+<a name="methoden"></a>
+## Methoden
 
 <a name="setstatus"></a>
 #### setStatus
@@ -49,7 +49,7 @@ Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
 
 `sendRedirect($url)`
 
-Bewirkt einen Redirect auf die übergebene Url mit dem über die Funktion `setStatus` gesetzten Statuscode. Die Ausführung von weiterem Code wird per `exit` beendet.
+Bewirkt einen Redirect auf die übergebene Url mit dem über die Methode `setStatus` gesetzten Statuscode. Die Ausführung von weiterem Code wird per `exit` beendet.
 
 <a name="getstatus"></a>
 #### getStatus
@@ -65,7 +65,7 @@ Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
 
 Leert den Outputbuffer und prüft, ob die in `$file` übergebene Datei vorhanden ist.
 Wenn die Datei nicht im Filesystem gefunden wurde, wird ein `HTTP_NOT_FOUND` Statuscode verschickt und die Ausführung per `exit` beendet.
-Wenn die Datei gefunden wurde, wird standardmäßig ein `Cachecontrol Header` geschickt. Der Cachecontrol Header kann über die Funktion `sendCacheControl` selbst gesetzt werden.
+Wenn die Datei gefunden wurde, wird standardmäßig ein `Cachecontrol Header` geschickt. Der Cachecontrol Header kann über die Methode `sendCacheControl` selbst gesetzt werden.
 Wenn keine automatische Kompression verfügbar ist, wird der Header für `Content-Length` gesetzt, damit der Browser einen Ladebalken anzeigen kann.
 
 <a name="sendresource"></a>
@@ -73,7 +73,7 @@ Wenn keine automatische Kompression verfügbar ist, wird der Header für `Conten
 
 `sendResource($content, $contentType = null, $lastModified = null, $etag = null)`
 
-Verschickt eine Ressource über die Funktionen `sendCacheControl` und `sendContent`.
+Verschickt eine Ressource über die Methoden `sendCacheControl` und `sendContent`.
 
 <a name="sendpage"></a>
 #### sendPage
