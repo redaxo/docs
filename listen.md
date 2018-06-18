@@ -223,14 +223,12 @@ Bei der Ausgabe mehrerer rex_list-Instanzen auf einer Addon-Seite gilt zu beacht
 ```
 // 1. rex_list
 $list = rex_list::factory('SELECT * FROM ...', 10, 'liste1');
-$list->addParam('liste1_start', rex_request('liste1_start', 'int'));
 $list->addParam('liste2_start', rex_request('liste2_start', 'int'));
 echo $list->get();
 
 // 2. rex_list
 $list = rex_list::factory('SELECT * FROM ...', 10, 'liste2');
 $list->addParam('liste1_start', rex_request('liste1_start', 'int'));
-$list->addParam('liste2_start', rex_request('liste2_start', 'int'));
 echo $list->get();
 
 ```
