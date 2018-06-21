@@ -4,6 +4,8 @@ REDAXO wird fortwährend aktualisiert.  Im nachfolgenden Changelog können die �
 
 ### Changelogs auf GitHub 
 
+- [Version 5.6.1](https://github.com/redaxo/redaxo/releases/tag/5.6.1)
+- [Version 5.6.0](https://github.com/redaxo/redaxo/releases/tag/5.6.0)
 - [Version 5.5.1](https://github.com/redaxo/redaxo/releases/tag/5.5.1)
 - [Version 5.5.0](https://github.com/redaxo/redaxo/releases/tag/5.5.0)
 - [Version 5.4.0](https://github.com/redaxo/redaxo/releases/tag/5.4.0)
