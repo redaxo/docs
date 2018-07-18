@@ -80,7 +80,7 @@
 
 - Datenbank
     - `In Arbeit`
-    - [Queries <sup>(rex_sql)</sup>](/{{path}}/{{version}}/datenbank-queries)
-    - [Tabellen verändern <sup>(rex_sql_table, rex_sql_column)</sup>](/{{path}}/{{version}}/datenbank-tabellen)
+    - [Queries (rex_sql)](/{{path}}/{{version}}/datenbank-queries)
+    - [Tabellen verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
