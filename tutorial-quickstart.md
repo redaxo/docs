@@ -96,9 +96,8 @@ Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisc
         <ul class="nav nav-pills pull-right">
             <?php
             foreach (rex_category::getRootCategories(true) as $item) {
-                echo '
-                <li><a href="'.$item->getUrl().'">'.htmlspecialchars($item->getValue('name')).'</a>';
-}
+                echo '<li><a href="'.$item->getUrl().'">'.htmlspecialchars($item->getValue('name')).'</a></li>';
+	    }
             ?>
         </ul>
     </nav>
