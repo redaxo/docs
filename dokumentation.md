@@ -80,6 +80,6 @@
 
 - Datenbank
     - [Queries (rex_sql)](/{{path}}/{{version}}/datenbank-queries)
-    - [Tabellen verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
+    - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 
