@@ -185,7 +185,7 @@ Erstellt die Tabelle mit der zuvor angegebenen Definition. Falls die Tabelle ber
 
 `ensure()`
 
-Stellt die zuvor angegebene Definition sicher. Falls die Tabelle noch nicht existiert, wird sie angelegt. Ansonsten wird sie bei Bedarf entsprechend der Definition geändert. Dabei wird auch sichergestellt, das die Spalten in der definierten Reihenfolge (Reihenfolge der `ensureColumn()`-Aufrufe, oder über explizite Positionsangaben) vorliegen. Daher sollte diese Methode nur verwendet werden, wenn die komplette Tabelle-Definition angegeben wurde, die sicherzustellen ist. Bei Angabe von nur einzelnen Änderungen sollte stattdessen `alter()` verwendet werden.
+Stellt die zuvor angegebene Definition sicher. Falls die Tabelle noch nicht existiert, wird sie angelegt. Ansonsten wird sie bei Bedarf entsprechend der Definition geändert. Dabei wird auch sichergestellt, dass die Spalten in der definierten Reihenfolge (Reihenfolge der `ensureColumn()`-Aufrufe, oder über explizite Positionsangaben) vorliegen. Daher sollte diese Methode nur verwendet werden, wenn die komplette Tabellen-Definition angegeben wurde, die sicherzustellen ist. Bei Angabe von nur einzelnen Änderungen sollte stattdessen `alter()` verwendet werden.
 
 <a name="drop"></a>
 #### drop
@@ -212,15 +212,15 @@ Die folgenden Methoden führen die jeweiligen Änderungen nicht sofort aus, sond
 `addColumn(rex_sql_column $column, $afterColumn = null)`
 
 Fügt eine neue Spalte hinzu. Falls eine Spalte mit dem Namen bereits existiert, wird eine Exception geworfen.
-Optional kann die Position für die neue Spalte mit dem zweiten Parameter gesetzt wird, entweder durch Angabe eines anderen Spaltennamens, nach der die Spalte eingefügt werden soll, oder `rex_sql_table::FIRST`.
+Optional kann die Position für die neue Spalte mit dem zweiten Parameter gesetzt werden, entweder durch Angabe eines anderen Spaltennamens, nach der die Spalte eingefügt werden soll, oder `rex_sql_table::FIRST`.
 
 <a name="ensurecolumn"></a>
 #### ensureColumn
 
 `ensureColumn(rex_sql_column $column, $afterColumn = null)`
 
-Stellt sicher, dass die Spalte mit der angegebenen Definition existiert. Die Spalte wird also ggf. angelegt, oder geändert.
-Optional kann die Position für die neue Spalte mit dem zweiten Parameter gesetzt wird, entweder durch Angabe eines anderen Spaltennamens, nach der die Spalte eingefügt werden soll, oder `rex_sql_table::FIRST`.
+Stellt sicher, dass die Spalte mit der angegebenen Definition existiert. Die Spalte wird also ggf. angelegt oder geändert.
+Optional kann die Position für die neue Spalte mit dem zweiten Parameter gesetzt werden, entweder durch Angabe eines anderen Spaltennamens, nach der die Spalte eingefügt werden soll, oder `rex_sql_table::FIRST`.
 
 <a name="ensureprimaryidcolumn"></a>
 #### ensurePrimaryIdColumn
@@ -269,7 +269,7 @@ Entfernt eine Spalte.
 
 `setPrimaryKey($columns)`
 
-Setz den Primärschlüssel. Falls dieser nur für eine Spalte gesetzt werden soll, kann diese als String angegeben werden (`$table->setPrimaryKey('id')`), ansonsten als Array (`$table->setPrimaryKey(['namespace', 'key'])`).
+Setzt den Primärschlüssel. Falls dieser nur für eine Spalte gesetzt werden soll, kann diese als String angegeben werden (`$table->setPrimaryKey('id')`), ansonsten als Array (`$table->setPrimaryKey(['namespace', 'key'])`).
 
 <a name="hasindex"></a>
 #### addIndex
@@ -311,7 +311,7 @@ Fügt einen neuen Fremdschlüssel hinzu. Falls ein Fremdschlüssel mit dem Namen
 
 `ensureForeignKey(rex_sql_foreign_key $foreignKey)`
 
-Stellt sicher, dass der Fremdschlüssel mit der angegebenen Definition existiert. Der Fremdschlüssel wird also ggf. angelegt, oder geändert.
+Stellt sicher, dass der Fremdschlüssel mit der angegebenen Definition existiert. Der Fremdschlüssel wird also ggf. angelegt oder geändert.
 
 <a name="renameforeignkey"></a>
 #### renameForeignKey
