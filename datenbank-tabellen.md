@@ -40,6 +40,7 @@
 - [rex_sql_index](#index)
 - [rex_sql_foreign_key](#foreign-key)
 
+<a name="table"></a>
 ## rex_sql_table
 
 Mit der Klasse `rex_sql_table` kann man die Struktur der Datenbanktabellen auslesen und verändern.
