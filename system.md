@@ -40,8 +40,8 @@ Zusammenfassend muss man sich den Aufbau und die Ausgabe einer einzelnen Seite i
 
 Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären folgende:
 
-- Definition der Kategorien und Artikel
 - Erstellen eines oder mehrerer Templates
+- Definition der Kategorien und Artikel
 - Erstellen eines Stylesheets (CSS-Datei)
 - Zuweisung der seitenspezifischen Inhalte zu den Artikeln mit selbst definierten Modulen
 - Festlegung eines Startartikels. Der als Erstes angelegte Artikel wird automatisch der Startartikel. Man kann diese jedoch ändern unter dem Menüpunkt "System".
