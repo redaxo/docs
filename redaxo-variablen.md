@@ -149,8 +149,8 @@ REX_LINKLIST[id=1 widget=1]
 **Beispiel in der Modul-Ausgabe**
 
 ```
-<?php foreach (explode(',', REXLINKLIST[id=1]) as $article_id): ?>
-<a href="<?=rex_getUrl(article_id);?>">zum Artikel mit der ID <?=article_id;?></a>
+<?php foreach (explode(',', 'REX_LINKLIST[id=1]') as $article_id): ?>
+<a href="<?=rex_getUrl($article_id);?>">zum Artikel mit der ID <?=$article_id;?></a>
 <?php endforeach;?>
 ```
 
