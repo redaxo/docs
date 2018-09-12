@@ -106,7 +106,7 @@ Gibt einen Datumsstring im SQL Datetime Format (Y-m-d H:i:s) aus dem übergebene
 
 `setDBQuery($query, array $params = [], array $options = [])`
 
-Setzt eine Abfrage ($query) ab, wechselt die DBID falls vorhanden und stellt sie anschließ
+Setzt eine Abfrage ($query) ab und wechselt die DBID falls vorhanden.
 
 Beispiel:
 ```
