@@ -2,6 +2,7 @@
 - [Prinzip und Bestandteile](#prinzip)
 - [System-Cache löschen](#system-cache)
 - [Media Manager-Cache löschen](#media-manager-cache)
+- [System Cache aufwärmen](#cache-warmup)
 - [Hinweise für Entwickler](#hinweise)
 - [Anmerkung für Anwender](#anmerkung)
 
@@ -33,6 +34,11 @@ Der Media Manager Cache kann für jeden Medientyp separat gelöscht werden. Um d
 Der Medien-Cache kann im Media Manager-AddOn auch komplett gelöscht werden.
 
 Wenn ein Medientyp geändert wird, muss man den Cache des Media Managers nicht löschen. Das System erkennt, wenn ein Medientyp geändert wurde und löscht die entsprechenden Dateien automatisch.
+
+<a name="cache-warmup"></a>
+## System-Cache aufwärmen
+
+Mittels <a href="https://github.com/FriendsOfREDAXO/cache_warmup">cache_warmup</a>-Addon ist es möglich den System-Cache aufzuwärmen. Dabei werden Großteile der Cacheinhalte vorgeneriert, sodass diese sofort zur Verfügung stehen und die REDAXO Webseite ab dem 1. Besucher in bestmöglicher Geschwindigkeit ausgeliefert werden kann.
 
 <a name="hinweise"></a>
 ## Hinweise für Entwickler
