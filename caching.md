@@ -38,7 +38,7 @@ Wenn ein Medientyp geändert wird, muss man den Cache des Media Managers nicht l
 <a name="cache-warmup"></a>
 ## System-Cache aufwärmen
 
-Mittels <a href="https://github.com/FriendsOfREDAXO/cache_warmup">cache_warmup</a>-Addon ist es möglich den System-Cache aufzuwärmen. Dabei werden Großteile der Cacheinhalte vorgeneriert, sodass diese sofort zur Verfügung stehen und die REDAXO Webseite ab dem 1. Besucher in bestmöglicher Geschwindigkeit ausgeliefert werden kann.
+Mittels <a href="https://github.com/FriendsOfREDAXO/cache_warmup">cache_warmup</a>-Addon ist es möglich den System-Cache aufzuwärmen. Dabei werden Großteile der Cacheinhalte vorgeneriert sodass diese sofort zur Verfügung stehen und die REDAXO Webseite ab dem 1. Besucher in bestmöglicher Geschwindigkeit ausgeliefert werden kann.
 
 <a name="hinweise"></a>
 ## Hinweise für Entwickler
