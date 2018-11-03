@@ -130,4 +130,4 @@ Soweit wie möglich einfach die Website und das Backend absurfen und schauen ob 
 Häufig sind die gefundenen Fehler Codefragmente, die bereits in REDAXO 4.x als veraltet angesehen wurden und ausgetauscht werden sollten. Bei der Korrektur des Codes könnten folgende Seiten hilfreich sein:
 
 - [Änderungen REDAXO 4 zu 5](https://redaxo.org/doku/master/aenderungen-v4-v5)
-- [FOR Tricks](https://friendsofredaxo.github.io/tricks/)
+- [Weiterführende Tipps nach Konvertierung von REDAXO 4.x zu 5 in den FOR Tricks](https://friendsofredaxo.github.io/tricks/howto/redaxo_4_5_upgrade)
