@@ -122,15 +122,12 @@ Eigene Ordner, die Assets für die Darstellung beinhalten (z.B. für CSS und JS)
 
 Nach der Übertragung der Daten ist die Präsenz meist noch nicht voll einsatzfähig. 
 
-Sofern es Warnmeldungen bei der Konvertierung gab, sollten diese Stellen alas erste abgearbeitet werden. Die entsprechenden Zeilennummern und Codestellen in Modulen und Templates wurden hierfür angegeben. 
+Sofern es Warnmeldungen bei der Konvertierung gab, sollten diese Stellen als erste abgearbeitet werden. Die entsprechenden Zeilennummern und Codestellen in Modulen und Templates wurden hierfür angegeben. 
 
-REDAXO hilft bei der Suche der Fehler. Die REDAXO-Whoops-Meldung liefert die nötigen Informationen und Codestellen in denen eine Überarbeitung erforderlich ist. Damit dies geschehen kann muss man im Backend eingeloggt sein. 
-Soweit wie möglich einfach die Website und das Backend absurfen und schauen ob ein Fehler erscheint.
+REDAXO hilft bei der Suche der Fehler. Die REDAXO-Whoops-Meldung liefert die nötigen Informationen und Codestellen in denen eine Überarbeitung erforderlich ist. Damit dies geschehen kann, muss man im Backend eingeloggt sein. 
+Soweit wie möglich einfach die Website und das Backend absurfen und schauen ob ein Fehler erscheint. Des weiteren sollte man regelmäßig das ***Systemlog*** von REDAXO aufsuchen und nach gefundenen Fehlern Ausschau halten.   
 
 Häufig sind die gefundenen Fehler Codefragmente, die bereits in REDAXO 4.x als veraltet angesehen wurden und ausgetauscht werden sollten. Bei der Korrektur des Codes könnten folgende Seiten hilfreich sein:
 
 - [Änderungen REDAXO 4 zu 5](https://redaxo.org/doku/master/aenderungen-v4-v5)
 - [FOR Tricks](https://friendsofredaxo.github.io/tricks/)
-
-
-
