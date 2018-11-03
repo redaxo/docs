@@ -1,4 +1,4 @@
-#Upgrade REDAXO 4.x zu REDAXO 5.x
+# Upgrade REDAXO 4.x zu REDAXO 5.x
 
 * [Einleitung](#einleitung)
 * [Erste Schritte](#1st)
@@ -11,7 +11,7 @@
 
 
 <a name="einleitung"></a>
-##Einleitung
+## Einleitung
 
 Voraussetzungen:
 
@@ -27,7 +27,7 @@ REDAXO 5 ist mit den Vorgängerversionen nicht kompatibel. Die Projekte (z.B. ei
 >Benutzerkonten werden nicht konvertiert und müssen in REDAXO 5 neu angelegt werden.
 
 <a name="1st"></a>
-##Erste Schritte
+## Erste Schritte
 
 Vor Beginn sollten folgende Schritte durchgeführt werden.
 
@@ -35,7 +35,7 @@ Vor Beginn sollten folgende Schritte durchgeführt werden.
 - Backup der Webpräsenz durchführen, z.B. mit dem Backup-AddOn oder mit den vom Hoster bereitgestellten Backuplösungen. 
 
 <a name="install"></a>
-##YConverter installieren
+## YConverter installieren
 
 YConverter ist nicht im Installer verfügbar und muss in GitHub heruntergeladen werden und dann in die REDAXO 4.x Installation hochgeladen werden. 
 
@@ -47,7 +47,7 @@ Man erhält eine Zip-Datei mit der Bezeichnung yconverter-master.zip. Die Datei 
 >Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um das Zip direkt auf dem Server hochzuladen und zu entpacken. 
 
 <a name="convert"></a>
-##Konvertierung der Daten
+## Konvertierung der Daten
 
 Nach erfolgter Installation findet man in der Navigation des REDAXO 4.x Projektes den Navigationspunkt YConverter. 
 
@@ -78,7 +78,7 @@ Findet YConverter Stellen im konvertierten Quellcode, die später nachgearbeitet
 [SCREENSHOT einsetzen]
 
 <a name="xform"></a>
-###XForm konvertieren
+### XForm konvertieren
 
 YConverter bietet auch die Konvertierung von XForm-Tabellen an. Auch hier werden die Tabellen wie oben beschrieben konvertiert und können mittels Formular in die neue Instanz kopiert werden. 
 
@@ -87,13 +87,13 @@ Nach der Übertragung der Daten installiert man in REDAXO 5.x YForm und die Tabe
 <a name="transfer"></a>
 ## Übertragung der Datenbank zu REDAXO 5
 
-###Variante 1 
+### Variante 1 
 
 Die konvertierten Tabellen können mit dem Formular direkt in die REDAXO 5 Präsenz übertragen werden. 
 
 > Hinweis: Nach der Übertragung wird keine Meldung angezeigt. Es sollte in der REDAXO 5 Präsenz geprüft werden ob die Daten übertragen wurden. 
 
-###Variante 2 
+### Variante 2 
 
 Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die externe Datenbank von extern hat, ist eine manuelle Übertragung der Daten erforderlich. Hierzu wird in YConverter Adminer mitgeliefert. 
 
@@ -110,14 +110,14 @@ Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die
 > Hinweis: Funktioniert der Import nicht wie gewünscht, sollte man sich den Export als Datei erstellen lassen. Die heruntergeladene Datei kann man dann im Adminer von REDAXO 5 importieren.
 
 <a name="copyfiles"></a>
-##Dateien kopieren
+## Dateien kopieren
 
 Da sich die Dateistruktur in REDAXO 5 geändert hat, müssen die Dateien aus dem `/files`-Ordner in den neuen media-Ordner `/media` in REDAXO 5 kopiert werden. Unterordner, die durch AddOns erstellt wurden, werden nicht benötigt.
 
 Eigene Ordner, die Assets für die Darstellung beinhalten (z.B. für CSS und JS) können ihre ursprüngliche Position kopiert werden.
 
 <a name="service"></a>
-##Nachbearbeitung, Fehlerbereinigung
+## Nachbearbeitung, Fehlerbereinigung
 
 Nach der Übertragung der Daten ist die Präsenz meist noch nicht voll einsatzfähig. 
 
