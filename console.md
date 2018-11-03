@@ -4,13 +4,20 @@
 - [run.php](#run)
 - [package.yml](#package)
 - [Aufruf](#console)
- 
 
 <a name="einfuehrung"></a>
 ## Einführung
 
 Die Console ermöglicht REDAXO Funktionen direkt über die Console des Systems auszuführen. Dies kann genutzt werden, um Code unabhängig von einem HTTP Request direkt auf dem Server über die Systemconsole auszuführen.
 
+Console Befehle können für folgende Aufgaben eingesetzt werden:
+
+	- Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
+	- Automatisierung/Skripting von Abläufen mit Zugriff auf das System
+	- Umgebung um sehr aufwändige prozesse wie migrationen o.ä. Ablaufen zu lassen, ohne timeouts etc.
+	- Fernwartung des Systems
+	- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (wird von ydeploy eingesetzt)
+	- via AddOns erweiterbar (Kommandos registrierbar, siehe ydeploy und untenstehendes Beispiel)
 
 <a name="run"></a>
 ## run.php
