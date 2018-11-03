@@ -75,7 +75,8 @@ Nach Bestätigen mit ***Nun auf geht's!*** wird die Konvertierung durchgeführt.
 
 Findet YConverter Stellen im konvertierten Quellcode, die später nachgearbeitet werden müssen zeigt YConverter diese im Protokoll an. Es empfiehlt sich diese Meldungen zu kopieren und für die spätere Nachbereitung zu sichern. 
 
-[SCREENSHOT einsetzen]
+![Meldungen bei der Konvertierung](/assets/v5.6.3.yconverter_screen.png)
+Meldungen bei der Konvertierung
 
 <a name="xform"></a>
 ### XForm konvertieren
