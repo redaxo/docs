@@ -3,6 +3,7 @@
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5)
+    - [Upgrade REDAXO 4.x zu 5](/{{path}}/{{version}}/upgrade-v4-v5)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
