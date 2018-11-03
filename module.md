@@ -49,6 +49,14 @@ Der Ausgabecode wird von REDAXO ausgeführt und im Frontend ausgegeben. Auch hie
 
 PHP-Variablen, die in einem Modul definiert wurden, stehen in den nachfolgenden Slices zur Verfügung. So kann beispielsweise die Anzahl der Module auf einer Seite gezählt werden.
 
+**TIPP** Die Abarbeitung eines Moduls kann in der Ausgabe mittels `return` beendet werden. Die Verarbeitung wird dann mit dem nächsten Modul fortgesetzt.
+
+```
+<p>Dieser Text wird ausgegeben</p>
+<?php return; ?>
+<p>Dieser Text wird nicht ausgegeben</p>
+```
+
 <a name="aktionen"></a>
 ### Aktionen
 
