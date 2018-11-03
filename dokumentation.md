@@ -59,7 +59,7 @@
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
     - [Urls <sup>(rex_getUrl)</sup>](/{{path}}/{{version}}/urls) <sup><b>in Bearbeitung</b></sup> <sup><b>polarpixel</b></sup>
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
-    - [Console](/{{path}}/{{version}}/console) <sup><b>offen</b></sup> <sup><b></b></sup>
+    - [Console](/{{path}}/{{version}}/console)
 
 - Weitere System AddOns / PlugIns
     - [Backup](/{{path}}/{{version}}/backup)
