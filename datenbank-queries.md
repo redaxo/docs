@@ -576,6 +576,8 @@ Gibt die Serverversion zurück.
 
 Factory Methode. Erstellt eine neue Instanz des rex_sql Objekte und gibt diese zurück.
 
+Standardmäßig wird auf die im System definierte Datenbankresource zugegriffen, die auch von REDAXO selbst genutzt wird. Optional unterstützt REDAXO eine weitere Datenbankquelle. Die Konfiguration kann in der Datei `redaxo/data/core/config.yml` eingetragen werden. Diese Datenbank ist dann über `$sql2 = rex_sql::factory(2)` angesprochen werden.
+
 <a name="checkdbconnection"></a>
 ## checkDbConnection
 
