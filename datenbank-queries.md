@@ -26,6 +26,7 @@
 - [getArrayValue](#getarrayvalue)
 - [getDateTimeValue](#getdatetimevalue)
 - [getRow](#getrow)
+- [getTablesAndViews](#gettablesandviews)
 - [hasValue](#hasvalue)
 - [isNull](#isnull)
 - [getRows](#getrows)
@@ -60,7 +61,7 @@
 - [next](#next)
 - [valid](#valid)
 - [showCreateTable](#showcreatetable)
-- [showTables](#showtables)
+- [showTables (deprecated)](#showtables)
 - [showColumns](#showcolumns)
 - [getServerVersion](#getserverversion)
 - [factory](#factory)
@@ -528,11 +529,20 @@ Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, anson
 Erstellt das CREATE TABLE Statement um die Tabelle `$table` der Datenbankverbindung `$DBID` zu erstellen. Die Tabelle `$table` muss vorhanden sein, sonst wird ein Fehler ausgegeben.
 
 <a name="showtables"></a>
-## showTables
+## showTables (deprecated)
 
 `rex_sql::showTables($DBID = 1, $tablePrefix = null)` (public static)
 
 Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Es wird ein Array mit den Namen aller in der Datenbank vorhandenen Tabellen zurückgegeben.
+
+Die Funktion ist seit Version 5.6.2 deprecated. Es wird die Verwendung der nicht statischen Funktion `getTablesAndViews` empfohlen.
+
+<a name="gettablesandviews"></a>
+## getTablesAndViews
+
+`$sql->getTablesAndViews($tablePrefix = null)`
+
+Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Es wird ein Array mit den Namen aller in der Datenbank vorhandenen Tabellen und Views zurückgegeben. Ersetzt die statische Funktion `showTables`.
 
 <a name="showcolumns"></a>
 ## showColumns
