@@ -1,6 +1,6 @@
 # Metainformationen
 - [Über](#ueber)
-- [Anwendungsbeispiel](#beispiel)
+- [Anwendungsbeispiel](#anwendungsbeispiel)
 - [Meta Infos-AddOn](#addon)
 - [Metafelder](#metafelder)
 - [Feldattribute](#attribute)
