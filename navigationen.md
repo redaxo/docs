@@ -201,8 +201,8 @@ Nach dem gleichen Schema wie in der ersten Ebene können weitere Ebenen durchlau
 ```
 <?php
 $path = rex_article::getCurrent()->getPathAsArray();
-$path1 = ((!empty($path[1])) ? $path[1] : '');
-$path2 = ((!empty($path[2])) ? $path[2] : '');
+$path1 = ((!empty($path[0])) ? $path[0] : '');
+$path2 = ((!empty($path[1])) ? $path[1] : '');
 
 echo '<ul>';
 
