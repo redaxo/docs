@@ -1,12 +1,14 @@
-# URLs
+#URLs
 
 - [Standard-URL-Schema](#standard-url-schema)
-- [URL-Rewrite-AddOns](#standard-url-schema)
-- [URLs formatieren mit rex_getUrl()](#standard-url-schema)
-    - [Artikel-ID](#standard-url-schema)
-    - [Sprach-ID](#standard-url-schema)
-    - [Parameter](#standard-url-schema)
-    - [Trennzeichen](#standard-url-schema)
+- [URL-Rewrite-AddOns](#rewrite)
+- [URLs formatieren mit rex_getUrl()](#rex-get-url)
+    - [Artikel-ID](#artikel-id)
+    - [Sprach-ID](#sprach-id)
+    - [Parameter](#parameter)
+    - [Trennzeichen](#trennzeichen)
+- [Link aus Artikel- oder Kategorieobjekt erstellen mit toLink](#toLink)
+- [Artikelumleitung](#umleitung)
 
 <a name="standard-url-schema"></a>
 ## Standard-URL-Schema
@@ -19,22 +21,22 @@ Das standardmäßige URL-Schema des REDAXO-Frontends arbeitet mit der Artikel-ID
 
 Sofern mehr als eine Sprache in REDAXO existiert, also eine oder mehrere Sprachen angelegt wurden, taucht zusätzlich die Sprach-ID mit in der URL auf:
 ```
-// Dieser Link führt zum Artikel mit der ID 3 in der SPrache mit der ID 2
+// Dieser Link führt zum Artikel mit der ID 3 in der Sprache mit der ID 2
 ./index.php?article_id=3&clang=2
 ```
 
 > Hinweis: Auch Links zu Artikeln der aktuellen Sprache enthalten diesen Sprachparameter, obwohl er nicht nötig wäre.
 
-<a name="url-rewrite-addons"></a>
+<a name="rewrite"></a>
 ## URL-Rewrite-AddOns
 
-Beim Einsatz von URL-Rewrite-AddOns wie beispielsweise yRewrite werden "schönere" URLs generiert, die für den Besucher angenehmer zu erfassen und auch für Suchmaschinen leichter auszuwerten sind. Diese URLs orientieren sich am klassischen Ordner--Schema von statischen Websites aund lauten z.B. so:
+Beim Einsatz von URL-Rewrite-AddOns wie beispielsweise yRewrite werden "schönere" URLs generiert, die für den Besucher angenehmer zu erfassen und auch für Suchmaschinen leichter auszuwerten sind. Diese URLs orientieren sich am klassischen Ordner--Schema von statischen Websites und lauten z.B. so:
 ```
 /ueber-uns/kontakt/
 ```
 
 <a name="rex-get-url"></a>
-## URLs formulieren mit rex_getUrl
+## URLs formulieren mit [rex_getUrl](https://redaxo.org/api/master/source-function-rex_getUrl.html#9-55)
 
 Wenn man Frontend-URLs zu internen REDAXO-Artikeln setzt, möchte man dies natürlich in einer Weise tun, die unabhängig von jeglichen Rewrite-Mechanismen immer funktioniert. Hierbei hilft die Funktion `rex_getUrl`.
 
@@ -48,8 +50,9 @@ Parameter | Erklärung
 <a name="artikel-id"></a>
 ### Artikel-ID
 
-Beim Aufruf übergibt man rex_getUrl im Normlfall eine gültige Artikel-ID. Die Artikel-ID kann als feste Zahl oder auch dynamisch mittels einer Variable übergeben werden:
-```
+Beim Aufruf übergibt man rex_getUrl im Normalfall eine gültige Artikel-ID. Die Artikel-ID kann als feste Zahl oder auch dynamisch mittels einer Variable übergeben werden:
+
+```php
 // Die URL des aktuellen Artikels wird ausgegeben
 $aktuelle_id = $this->getValue('article_id');
 <?php echo rex_getUrl($aktuelle_id); ?>
@@ -70,7 +73,7 @@ Mehr Information über Links in mehrsprachigen Websites findet sich im Kapitel [
 <a name="parameter"></a>
 ### Parameter
 
-```
+```php
 // Die URL des aktuellen Artikels in der Sprache mit der ID 2 ausgegeben
 $aktuelle_id = $this->getValue('article_id');
 <?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array ('chapters' => 2, 'page' => 3) ); ?>
@@ -78,27 +81,63 @@ $aktuelle_id = $this->getValue('article_id');
 
 
 <a name="trennzeichen"></a>
+
 ### Trennzeichen
 
+```php
+// Die Schreibweise des Trennzeichens(Separators) wird auf &amp; festgelegt
+$aktuelle_id = $this->getValue('article_id');
+<?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array $params = [], '&amp'); ?>
+```
+
+## Link aus Artikel- oder Kategorieobjekt erstellen mit toLink()
+
+Es ist möglich, direkt aus einem Artikel-Objekt heraus einen Link zu diesem mit toLink() zu erstellen. Hierbei können Parameter-, Attribute und auch der Surrounding-Tag mit Parameter übergeben werden. 
+
+***Beispiel:***
+
+```php
+
+// Einfacher Aufruf erzeugt einen Link ohne Attribute und Parameter
+echo  $article->toLink();
+```
+
+```php
+// Mit Parameter, Attribute, Surround-Tags und dazugehörige Attribute
+echo  $article->toLink(
+  [ 'pdf' => '1'
+  ],
+  [
+  'class' =>  $class,
+  'rel' => '_blank',
+  'alt' => $article->getName()
+  ],
+  'li',
+  [
+  'class' =>  $class,
+  'title' => $article->getName()
+  ]
+);
 
 ```
-/**
-58  * Leitet auf einen anderen Artikel weiter.
-59  *
-60  * @param null|int|string $article_id
-61  * @param null|int|string $clang      SprachId des Artikels
-62  *
-63  * @throws InvalidArgumentException
-64  *
-65  * @package redaxo\structure
-66  */
-67 function rex_redirect($article_id, $clang = null, array $params = [])
-68 {
-69     if (null !== $article_id && '' !== $article_id && !is_int($article_id) && $article_id !== (string) (int) $article_id) {
-70         throw new InvalidArgumentException(sprintf('"%s" is not a valid article_id!', $article_id));
-71     }
-72 
-73     rex_response::sendRedirect(rex_getUrl($article_id, $clang, $params, '&'));
-74 }
+
+## Artikelumleitung
+
+Mit rex_redirect() kann eine Umleitung zu einem anderen Artikel erzeugt werden. Es handelt sich hierbei nicht um eine Url. Die Funktion wird innerhalb eines Templates, Moduls oder AddOn aufgerufen um eine Umleitung direkt anzustoßen. 
+
+```php
+rex_redirect($article_id, $clang = null, array $params = [])
+```
+
+Die rex_redirect ist eine Kurzform von:
+
+```php
+rex_response::sendRedirect(rex_getUrl($article_id, $clang, $params, '&'));
 
 ```
+mit `rex_response::sendRedirect` kann man auch Umleitungen zu externen Seiten erstellen. 
+
+
+Weitere Infos zu rex_response in der [REDAXO API Dokumentation](https://redaxo.org/api/master/class-rex_response.html)
+
+
