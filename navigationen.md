@@ -168,7 +168,7 @@ $path = rex_article::getCurrent()->getPathAsArray();
 
 // Für eine Navigation mit nur einer Ebene wird nur das erste Element des Arrays benötigt,
 // also die ID der obersten Elternkategorie.
-$path1 = ((!empty($path[1])) ? $path[1] : '');
+$path1 = ((!empty($path[0])) ? $path[0] : '');
 
 echo '<ul>';
 
