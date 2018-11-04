@@ -81,7 +81,7 @@ $aktuelle_id = $this->getValue('article_id');
 ### Trennzeichen
 
 
-
+```
 /**
 58  * Leitet auf einen anderen Artikel weiter.
 59  *
@@ -101,3 +101,4 @@ $aktuelle_id = $this->getValue('article_id');
 73     rex_response::sendRedirect(rex_getUrl($article_id, $clang, $params, '&'));
 74 }
 
+```
