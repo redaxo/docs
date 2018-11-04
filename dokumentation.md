@@ -3,7 +3,7 @@
     - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5)
-    - [Upgrade REDAXO 4.x zu 5](/{{path}}/{{version}}/upgrade-v4-v5)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [Upgrade REDAXO 4.x zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
 
@@ -57,7 +57,7 @@
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
-    - [Urls <sup>(rex_getUrl)</sup>](/{{path}}/{{version}}/urls) <sup><b>in Bearbeitung</b></sup> <sup><b>polarpixel</b></sup>
+    - [Urls <sup>(rex_getUrl, toLink)</sup>](/{{path}}/{{version}}/urls)
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
     - [Console](/{{path}}/{{version}}/console)
 
