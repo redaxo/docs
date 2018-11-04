@@ -54,6 +54,7 @@ AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
 ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
 
 https://github.com/FriendsOfREDAXO/sked
+
 [mehr lesen ...](https://redaxo.org/cms/addons/sked-der-kalender/)
 
 ### Aufgaben
