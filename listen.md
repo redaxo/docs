@@ -57,7 +57,7 @@ Parameter | Erklärung
 <a name="einfaches_beispiel"></a>
 ### Ein einfaches Beispiel
 
-```
+```php
 $list = rex_list::factory('SELECT name,vorname,plz,ort,telefon FROM rex_adressen');
 $list->show();
 ```
@@ -103,7 +103,7 @@ Mit der Methode *addTableAttribute* können der Tabelle weitere Attribute hinzug
 
 Die Methode kann verwendet werden, um die Spaltenbreiten über das HTML Element *colgroup* zu definieren.
 Beispiele:
-```
+```php
 $list->addTableColumnGroup([40, '*', 240, 140, 200]);
 $list->addTableColumnGroup([ ['width' => 40], ['width' => 240, 'span' => 2], ['width' => 240] ]);
 $list->addTableColumnGroup([ ['class' => 'classname-a'], ['class' => 'classname-b'], ['class' => 'classname-c'] ]);
@@ -181,7 +181,7 @@ Damit wird ein Text definiert, der angezeigt wird, falls keine Datensätze gefun
 
 Durch die *get*-Methode wird die Liste final ausgegeben.
 
-```
+```php
 echo $list->get();
 ```
 
@@ -209,7 +209,7 @@ Die *rex_list*-Klasse kann sehr gut mit der [*rex_form*-Klasse](/{{path}}/{{vers
 
 Im Addon-Kontext bietet es sich an, für die Anzeige der Liste im Redaxo-Backend das Content-Fragment zu nutzen.
 
-```
+```php
 $fragment = new rex_fragment();
 $fragment->setVar('title', 'Locations');
 $fragment->setVar('content', $list->get(), false);
@@ -219,8 +219,9 @@ echo $fragment->parse('core/page/section.php');
 <a name="ausgabe_im_fragment"></a>
 ## Ausgabe mehrerer rex_list-Instanzen mit Paginierung
 
-Bei der Ausgabe mehrerer rex_list-Instanzen auf einer Addon-Seite gilt zu beachten, dass das Offset beider Listen in der jeweils anderen als Parameter mitgegeben werden. Andernfalls wird, wenn man die Paginierung einer Liste verwendet, die Paginierung aller anderen Listen zurückgesetzt.
-```
+Bei der Ausgabe mehrerer rex_list-Instanzen auf einer Addon-Seite gilt zu beachten, dass das Offset beider Listen in der jeweils anderen als Parameter mitgegeben werden muss. Andernfalls wird, wenn man die Paginierung einer Liste verwendet, die Paginierung aller anderen Listen zurückgesetzt.
+
+```php
 // 1. rex_list
 $list = rex_list::factory('SELECT * FROM ...', 10, 'liste1');
 $list->addParam('liste2_start', rex_request('liste2_start', 'int'));
@@ -232,5 +233,3 @@ $list->addParam('liste1_start', rex_request('liste1_start', 'int'));
 echo $list->get();
 
 ```
-
-
