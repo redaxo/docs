@@ -25,12 +25,13 @@ Zunächst sucht man sich den Extension Point, der für den eigenen Einsatz geeig
 Beispiele:
 
 
-*** Aufruf einer Methode einer Klasse ***
+**Aufruf einer Methode einer Klasse**
 ```php
 rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE); 
 ```
 
-*** Aufruf einer Funktiom ***
+*Alternativ: Aufruf einer Funktion*
+
 ```php
 rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE); 
 ```
