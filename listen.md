@@ -23,6 +23,7 @@
 	- [Ausgabe der Liste](#ausgabe_der_liste)
 	- [Extension Point](#extension_point)
 - [Ausgabe einer rex_list in einem Fragment](#ausgabe_im_fragment)
+- [Ausgabe mehrerer rex_list-Instanzen mit Paginierung](#ausgabe_multiple)
 	
 
 <a name="rex-list"></a>
@@ -199,7 +200,7 @@ Die *rex_list*-Klasse bringt einen Extension-Point mit: `REX_LIST_GET`. Der Exte
 Die *rex_list*-Klasse kann sehr gut mit der [*rex_form*-Klasse](/{{path}}/{{version}}/formulare) zusammen eingesetzt werden, um einen Datensatz zu editieren.
 
 * Mit dem Parameter-Key *func* kann kann man entsprechend eine `rex_form` Instanz ansteuern. 
-* Mit dem Parameter-Key *start* lässt sich die Position der Paginierungs-Seite übergeben, wodurch ein Zurückkehren auf diese Position in der *rex_form*-Instanz ermöglicht wird.
+* Mit dem Parameter-Key *[Instanzname]_start* lässt sich die Position der Paginierungs-Seite übergeben, wodurch ein Zurückkehren auf diese Position in der *rex_form*-Instanz ermöglicht wird.
 * Durch *###id###* wird die entsprechende ID des jeweiligen Datensatzes als Value des Parameters-Keys *id* dem Link als Get-Parameter geliefert. Nach diesem Muster können auch andere Werte eines Datensatzes an die Link-Parameter übergeben werden.
 
 
@@ -213,6 +214,23 @@ $fragment = new rex_fragment();
 $fragment->setVar('title', 'Locations');
 $fragment->setVar('content', $list->get(), false);
 echo $fragment->parse('core/page/section.php');
+```
+
+<a name="ausgabe_im_fragment"></a>
+## Ausgabe mehrerer rex_list-Instanzen mit Paginierung
+
+Bei der Ausgabe mehrerer rex_list-Instanzen auf einer Addon-Seite gilt zu beachten, dass das Offset beider Listen in der jeweils anderen als Parameter mitgegeben werden. Andernfalls wird, wenn man die Paginierung einer Liste verwendet, die Paginierung aller anderen Listen zurückgesetzt.
+```
+// 1. rex_list
+$list = rex_list::factory('SELECT * FROM ...', 10, 'liste1');
+$list->addParam('liste2_start', rex_request('liste2_start', 'int'));
+echo $list->get();
+
+// 2. rex_list
+$list = rex_list::factory('SELECT * FROM ...', 10, 'liste2');
+$list->addParam('liste1_start', rex_request('liste1_start', 'int'));
+echo $list->get();
+
 ```
 
 
