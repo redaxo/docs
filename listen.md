@@ -42,7 +42,7 @@ Eine Listenansicht kann über die `rex_list`-Klassen mit verschiedenen Funktione
 
 Ein Listenobjekt erzeugen:
 
-```
+```php
 $list = rex_list::factory($query, $rowsPerPage, $listName, $debug);
 ```
 
