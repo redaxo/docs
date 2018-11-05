@@ -387,6 +387,10 @@ Shortcut für `rex_article::getCurrentId()`.
 
 **Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.*
 
+Wird innerhalb eines Artikels ein anderer Artikel über `rex_article_content` eingebunden, unterscheidet sich die Rückgabe von `rex_article::getCurrentId()` und `REX_ARTICLE_ID`: 
+- `rex_article::getCurrentId()` gibt stets die ID des einbindenden Artikels zurück, auch beim Aufruf im eingebundenen Artikel
+- `REX_ARTICLE_ID` gibt jeweils die ID des Artikels zurück, in dem es aufgerufen wird
+
 #### Syntax
 
 ```
