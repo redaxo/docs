@@ -24,12 +24,29 @@ Zunächst sucht man sich den Extension Point, der für den eigenen Einsatz geeig
 Beispiel:
 
 ```
-rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE);
+rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE); // Aufruf der Methode einer Klasse
+# rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE); // Alternativ: Aufruf einer Funktion
 ```
 
 Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` auf.
 
 Die Funktion, die am Extension Point aufgerufen wird, bekommt ein Objekt vom Typ `rex_extension_point` übergeben, welches ausgewertet werden kann.
+
+Am Beispiel des Extension Point `MEDIA_UPDATED`:
+
+```
+rex_extension::register('MEDIA_UPDATED', "meineUpdateFunction");
+
+function meineUpdateFunction($ep) {
+    # dump($ep); // auskommentieren, um alle Informationen des EP-Objekts zu erhalten
+    $name = $ep->getParams();
+    $subject = $ep->getParams();
+    $params = $ep->getParams();
+    $filename = $ep->getParam('filename');
+    
+    return $subject;
+}    
+```
 
 Methode | Beschreibung | Beispiel
 ---------- | ---------- | ----------
@@ -45,7 +62,7 @@ Die Registrierung eines Extension Points mit der Methode `rex_extension::registe
 
 Im aktuellen Beispiel soll die Sidebar im Backend bei der Artikelbearbeitung um ein Infofeld erweitert werden. Hierfür kann der Extensionpoint `STRUCTURE_CONTENT_SIDEBAR` genutzt werden.
 
-In die Datei boot.php des AddOns (z.B. des project AddOns) kommt folgender Code:
+In die Datei boot.php des AddOns kommt folgender Code:
 
 ```
 // Die Funktion wird nur im Backend aufgerufen, wenn ein User eingeloggt ist
@@ -55,7 +72,9 @@ if (rex::isBackend() && rex::getUser()) {
 }
 ```
 
-Die aufzurufende Funktion wird im Verzeichnis lib des AddOns z.B. in der Datei be_helper.php definiert
+> Tipp: Füge diesen Code in die boot.php des project AddOns. Das ist der richtige Ort, um eigene Erweiterungen für REDAXO abzulegen, ohne ein eigenes AddOn programmieren zu müssen.
+
+Anschließend wird die aufzurufende Funktion  im Verzeichnis lib des AddOns z.B. in der Datei be_helper.php definiert
 
 ```
 class be_helper {
@@ -80,6 +99,8 @@ class be_helper {
     }
 }
 ```
+
+> Tipp: Füge diesen Code in den /lib/-Ordner des project AddOns. Das ist der richtige Ort, um eigene Erweiterungen für REDAXO abzulegen, ohne ein eigenes AddOn programmieren zu müssen.
 
 <a name="definieren"></a>
 ## Eigene Extension Points definieren
