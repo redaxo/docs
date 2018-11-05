@@ -21,20 +21,27 @@ Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als �
 ## Einsatz eines Extension Points
 
 Zunächst sucht man sich den Extension Point, der für den eigenen Einsatz geeignet erscheint. Dann ordnet man dem Extension Point den Aufruf für die eigene Erweiterung zu. Diese Zuordnung muss an einer Stelle im Code erfolgen, an dem der Extension Point noch nicht durchlaufen wurde. Am einfachsten geschieht dies beispielsweise in der `boot.php` eines eigenen AddOns.
-Beispiel:
 
-```
-rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE); // Aufruf der Methode einer Klasse
-# rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE); // Alternativ: Aufruf einer Funktion
+Beispiele:
+
+
+*** Aufruf einer Methode einer Klasse ***
+```php
+rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE); 
 ```
 
-Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` auf.
+*** Aufruf einer Funktiom ***
+```php
+rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE); 
+```
+
+Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` aus.
 
 Die Funktion, die am Extension Point aufgerufen wird, bekommt ein Objekt vom Typ `rex_extension_point` übergeben, welches ausgewertet werden kann.
 
 Am Beispiel des Extension Point `MEDIA_UPDATED`:
 
-```
+```php
 rex_extension::register('MEDIA_UPDATED', "meineUpdateFunction");
 
 function meineUpdateFunction($ep) {
@@ -64,7 +71,7 @@ Im aktuellen Beispiel soll die Sidebar im Backend bei der Artikelbearbeitung um 
 
 In die Datei boot.php des AddOns kommt folgender Code:
 
-```
+```php
 // Die Funktion wird nur im Backend aufgerufen, wenn ein User eingeloggt ist
 if (rex::isBackend() && rex::getUser()) {
 	// Am Extensionpoint wird die Funktion be_helper::addfield aufgerufen.
@@ -76,7 +83,7 @@ if (rex::isBackend() && rex::getUser()) {
 
 Anschließend wird die aufzurufende Funktion  im Verzeichnis lib des AddOns z.B. in der Datei be_helper.php definiert
 
-```
+```php
 class be_helper {
     public static function addfield($ep) {
         
@@ -108,7 +115,8 @@ class be_helper {
 Im eigenen Programmcode von AddOns lassen sich eigene Extension Points setzen, die dann wiederum von anderen Entwicklern genutzt werden können.
 
 Beispiel:
-```
+
+```php
 $meine_var = rex_extension::registerPoint(new rex_extension_point(
     'MEIN_EXTENSION_POINT',
     $meine_var,
@@ -122,7 +130,8 @@ $meine_var = rex_extension::registerPoint(new rex_extension_point(
 <a name="core"></a>
 ### Core
 
-CACHE_DELETED
+
+```CACHE_DELETED
 : Daten: rex_i18n::msg('delete_cache_message')
 : Parameter: keine
 
@@ -251,11 +260,13 @@ REX_LIST_GET
 : Daten: $this
 : Parameter: []
 
+```
 
 <a name="structure"></a>
 ### Structure
 
-ART_ADDED
+
+```ART_ADDED
 : Daten: $message
 : Parameter: ['id' => $id, 'clang' => $key, 'status' => 0, 'name' => $data['name'], 'parent_id' => $data['category_id'], 'priority' => $data['priority'], 'path' => $path, 'template_id' => $data['template_id'], 'data' => $data]
 
@@ -348,9 +359,11 @@ URL_REWRITE
 : Parameter: ['id' => $id, 'clang' => $clang, 'params' => $params, 'separator' => $separator]
 
 <a name="structure_content"></a>
+```
 ### Structure Content
 
-ART_CONTENT
+
+```ART_CONTENT
 : Daten: $CONTENT
 : Parameter: ['ctype' => $curctype, 'article' => $this]
 
@@ -446,10 +459,12 @@ STRUCTURE_CONTENT_SLICE_UPDATED
 : Daten: $info
 : Parameter: $epParams
 
+```
 <a name="medienpool"></a>
 ### Medienpool
 
-MEDIA_ADDED
+
+```MEDIA_ADDED
 : Daten: keine
 : Parameter: $RETURN
 
@@ -505,10 +520,12 @@ PAGE_MEDIAPOOL_HEADER
 : Daten: keine
 : Parameter: ['subpage' => $subpage, 'category_id' => $rex_file_category]
 
+```
 <a name="backup"></a>
 ### Backup
 
-BACKUP_AFTER_DB_EXPORT
+
+```BACKUP_AFTER_DB_EXPORT
 : Daten: $content
 : Parameter: keine
 
@@ -540,10 +557,12 @@ BACKUP_BEFORE_FILE_IMPORT
 : Daten: $tar
 : Parameter: keine
 
+```
 <a name="metainfo"></a>
 ### Metainfo
 
-ART_META_UPDATED
+
+```ART_META_UPDATED
 : Daten: keine
 : Parameter: $params
 
@@ -555,22 +574,27 @@ METAINFO_TYPE_FIELDS
 : Daten: [REX_METAINFO_FIELD_SELECT, REX_METAINFO_FIELD_RADIO, REX_METAINFO_FIELD_CHECKBOX, REX_METAINFO_FIELD_REX_MEDIA_WIDGET, REX_METAINFO_FIELD_REX_MEDIALIST_WIDGET, REX_METAINFO_FIELD_REX_LINK_WIDGET, REX_METAINFO_FIELD_REX_LINKLIST_WIDGET]
 : Parameter: keine
 
+```
 <a name="bestyle"></a>
 ### BE Style
 
-BE_STYLE_PAGE_CONTENT
+
+```BE_STYLE_PAGE_CONTENT
 : Daten: keine
 : Parameter: []
 
 BE_STYLE_SCSS_FILES
 : Daten: [$this->getPath('scss/master.scss')]
 : Parameter: keine
+```
 
 <a name="mediamanager"></a>
 ### Media Manager
 
-MEDIA_MANAGER_FILTERSET
+
+```MEDIA_MANAGER_FILTERSET
 : Daten: $set
 : Parameter: ['rex_media_type' => $type]
 
+```
 
