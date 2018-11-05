@@ -127,7 +127,7 @@ Kategorie-Metadaten werden von den Redakteuren in der Strukturverwaltung gepfleg
 // Metadaten der aktuellen Kategorie
 rex_category::getCurrent()->getValue($field) 
 // Metadaten eine bestimten Kategorie anhand der Kategorie-ID
-rex_category::getId($id)->getValue($field)
+rex_category::get($id)->getValue($field)
 ```
 
 **Beispiele:**
@@ -178,7 +178,7 @@ Die Metadaten für Sprachen erhält man per PHP wie folgt:
 // Auslesen einer Meta Info der aktuellen Sprache
 rex_clang::getCurrent()->getValue($field) 
 // Auslesen der Meta Info einer bestimmten Sprache anhand der Sprach ID
-rex_clang::getId($id)->getValue($field)
+rex_clang::get($id)->getValue($field)
 ```
 
 **Beispiel:**
