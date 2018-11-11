@@ -50,6 +50,7 @@
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
     - [Listen (rex_list)](/{{path}}/{{version}}/listen)
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
+    - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls) 
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
     - [Responses (rex_response)](/{{path}}/{{version}}/responses)
@@ -57,7 +58,6 @@
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
-    - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/urls) 
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
     - [Console](/{{path}}/{{version}}/console)
 
