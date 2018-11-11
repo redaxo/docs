@@ -57,7 +57,7 @@
     - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
-    - [Urls(rex_getUrl, toLink)](/{{path}}/{{version}}/urls)
+    - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/urls) 
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
     - [Console](/{{path}}/{{version}}/console)
 
