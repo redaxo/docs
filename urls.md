@@ -89,7 +89,7 @@ $aktuelle_id = $this->getValue('article_id');
 $aktuelle_id = $this->getValue('article_id');
 <?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array $params = [], '&amp'); ?>
 ```
-
+<a name="tolink"></a>
 ## Link aus Artikel- oder Kategorieobjekt erstellen mit toLink()
 
 Es ist möglich, direkt aus einem Artikel-Objekt heraus einen Link zu diesem mit toLink() zu erstellen. Hierbei können Parameter-, Attribute und auch der Surrounding-Tag mit Parameter übergeben werden. 
