@@ -120,7 +120,7 @@ echo  $article->toLink(
 );
 
 ```
-
+<a name="umleitung"></a>
 ## Artikelumleitung
 
 Mit rex_redirect() kann eine Umleitung zu einem anderen Artikel erzeugt werden. Es handelt sich hierbei nicht um eine Url. Die Funktion wird innerhalb eines Templates, Moduls oder AddOn aufgerufen um eine Umleitung direkt anzustoßen. 
