@@ -6,7 +6,7 @@
 * [Konvertierung der Daten](#convert)
     * [XForm konvertieren](#xform)
 * [Übertragung der Datenbank zu REDAXO 5](#transfer)
-* [Dateien kopieren](copyfiles)
+* [Dateien kopieren](#copyfiles)
 * [Nachbearbeitung, Fehlerbereinigung](#service)
 
 
