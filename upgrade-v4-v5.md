@@ -117,7 +117,7 @@ Da sich die Dateistruktur in REDAXO 5 geändert hat, müssen die Dateien aus dem
 
 Eigene Ordner, die Assets für die Darstellung beinhalten (z.B. für CSS und JS) können ihre ursprüngliche Position kopiert werden.
 
-> Sollten Assets in Unterordnern von /files angelegt sein, z.B. /files/styles/ könnte es zu Problemen bei der Verwendung in Verbindung von Rewrite-AddOns und dem MeniaManager kommen. Eine Verschiebung in einen anderen Ordner z.B: /assets/styles/ und Anpassung der Templates und Module sorgt für Abhilfe.  
+> Sollten Assets in Unterordnern von /files angelegt sein, z.B. /files/styles/ könnte es zu Problemen bei der Verwendung in Verbindung von Rewrite-AddOns und dem MediaManager kommen. Eine Verschiebung in einen anderen Ordner z.B: /assets/styles/ und Anpassung der Templates und Module sorgt für Abhilfe.  
 
 <a name="service"></a>
 ## Nachbearbeitung, Fehlerbereinigung
