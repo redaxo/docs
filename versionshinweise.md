@@ -1,16 +1,6 @@
 # Versionshinweise / Changelog
 
-REDAXO wird fortwährend aktualisiert.  Im nachfolgenden Changelog können die Änderungen und Hinweise je Version verfolgt werden. Die Changelogs zu den jeweiligen Versionen findet man direkt beim Downloadlink im [Download-Bereich](/download/core/) oder beim jeweiligen Release in Github. 
+REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
 
-### Changelogs auf GitHub 
-
-- [Version 5.6.1](https://github.com/redaxo/redaxo/releases/tag/5.6.1)
-- [Version 5.6.0](https://github.com/redaxo/redaxo/releases/tag/5.6.0)
-- [Version 5.5.1](https://github.com/redaxo/redaxo/releases/tag/5.5.1)
-- [Version 5.5.0](https://github.com/redaxo/redaxo/releases/tag/5.5.0)
-- [Version 5.4.0](https://github.com/redaxo/redaxo/releases/tag/5.4.0)
-- [Version 5.3.0](https://github.com/redaxo/redaxo/releases/tag/5.3.0)
-- [Version 5.2.0](https://github.com/redaxo/redaxo/releases/tag/5.2.0)
-- [Version 5.1.0](https://github.com/redaxo/redaxo/releases/tag/5.1.0)
-- [Version 5.0.1](https://github.com/redaxo/redaxo/releases/tag/5.0.1)
-
+Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
+[Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
