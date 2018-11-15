@@ -34,3 +34,11 @@ rex_request::isXmlHttpRequest | `rex_request::isXmlHttpRequest()` | Liefert true
 rex_request::isPJAXRequest | `rex_request::isPJAXRequest()` | Liefert true, wenn $_SERVER['HTTP_X_PJAX'] true ist, ansonsten false
 rex_request::isPJAXContainer | `rex_request::isPJAXContainer($containerId)` | Liefert true, wenn $_SERVER['HTTP_X_PJAX_CONTAINER'] gleich wie $containerId ist, ansonsten false. 
 
+
+Wird im Frontend eine Session benötigt, so muss diese explizit gestartet werden. Hierzu genügt in der Datei boot.php eines AddOns folgender Code:
+
+```php
+if (!rex::isBackend()) {
+    rex_login::startSession();
+}
+```
