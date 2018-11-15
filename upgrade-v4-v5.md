@@ -1,4 +1,4 @@
-# Upgrade REDAXO 4.x zu REDAXO 5.x
+# Upgrade REDAXO 4 zu REDAXO 5
 
 * [Einleitung](#einleitung)
 * [Erste Schritte](#1st)
