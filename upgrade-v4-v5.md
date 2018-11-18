@@ -17,12 +17,12 @@ Voraussetzungen:
 
 - Website REDAXO ab 4.6
 - Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace unter einer Subdomain oder in einer lokal. 
-- Installiertes Adminer-AddOn in der REDAXO 5.x Instanz
+- Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> hier danach suchen: ***Installer/Neue herunterladen*** und installieren)
 - Die Templates sollten nicht per require oder include eingebunden sein, sondern direkt eingepflegt sein, andernfalls kann yconverter keine Konvertierung hier durchführen. 
 
 REDAXO 5 ist mit den Vorgängerversionen nicht vollständig kompatibel. Die Projekte (z.B. eine Website) müssen zum neuen System migriert werden. Dies erfolgt durch eine Datenbank-Konvertierung, Nachbearbeitung von Modulen und Templates sowie Verschieben von Dateien des files-Ordners. 
 
->Daten zusätzlich installierter AddOns, außer yform, können nicht konvertiert werden und müssen ggf. separat migriert werden. Es empfiehlt sich vorher zu prüfen, welche AddOns in REDAXO 5 fortgeführt werden und ob diese eine Lösung zum Import älterer Versionen anbieten. Alternativ bieten sich ähnliche AddOns an, die die gewünschte Funktionalität wiederherzustellen. 
+>Daten zusätzlich installierter AddOns, außer yform, können nicht konvertiert werden und müssen ggf. separat migriert werden. Es empfiehlt sich vorher zu prüfen, welche AddOns in REDAXO 5 fortgeführt werden und ob diese eine Lösung zum Import älterer Versionen anbieten. Alternativ bieten sich ähnliche AddOns an, die die gewünschte Funktionalität wiederherstellen. 
 
 >Benutzerkonten werden nicht konvertiert und müssen in REDAXO 5 neu angelegt werden.
 
@@ -42,7 +42,7 @@ YConverter ist nicht im Installer verfügbar und muss in GitHub heruntergeladen 
 - [Zum GitHub-Repo](https://github.com/yakamara/yconverter)
 - [Direkter Download](https://github.com/yakamara/yconverter/archive/master.zip)
 
-Man erhält eine Zip-Datei mit der Bezeichnung yconverter-master.zip. Die Datei muss lokal entpackt werden und der Ordner un yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren. 
+Man erhält eine Zip-Datei mit der Bezeichnung yconverter-master.zip. Die Datei muss lokal entpackt werden und der Ordner in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren. 
 
 >Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um das Zip direkt auf dem Server hochzuladen und zu entpacken. 
 
