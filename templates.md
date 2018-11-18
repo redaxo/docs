@@ -46,7 +46,8 @@ Einige Bestandteile möchte man gegebenenfalls in mehreren Templates nutzen. Hie
 Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das deaktivierte Template nicht als Seiten-Template für einen Artikel durch den Redakteur ausgewählt werden.
 
 Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und der ID des gewünschten Templates.
-Beispiel: `REX_TEMPLATE[2]` 
+Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[2]`
+Innerhalb von PHP-Tags wird das Template so eingebunden: `echo 'REX_TEMPLATE[2]';`
 
 <a name="artikeleinbindung"></a>
 ## Einbindung von Artikeln
