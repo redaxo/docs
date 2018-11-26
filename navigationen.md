@@ -189,7 +189,7 @@ foreach (rex_category::getRootCategories() as $lev1) {
     }
 }
 
-echo '<ul>';
+echo '</ul>';
 ?>
 ```
 
