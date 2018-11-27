@@ -26,6 +26,7 @@
     - [removeProperty](#remove-property)
     - [setConfig](#set-config)
     - [setProperty](#set-property)
+- [Beispiele](#beispiele)
 
 <a name="rex-klasse"></a>
 ## "rex"-Klasse
@@ -294,3 +295,29 @@ Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [remo
 
 Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
 
+
+
+<a name="beispiele"></a>
+## Beispiele
+
+### Informationen aus Artikel im Template auslesen
+
+Via `rex::getProperty('variablenname')` kann man in Blöcken gesetzte Properties im Template auslesen. 
+Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen. 
+
+z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`. 
+
+Im gewünschten Modul wird mit `rex::setProperty('variablenname',"wert")` die gewünschte Information hinterlegt.
+Danach kann der Inhalt der Variable im Template über `rex::getProperty('variablenname')` ausgelesen werden. 
+
+> Der Artikel sollte je Template nur einmal eingelesen werden. Zur Weiterverarbeitung sollte er in einer Variable zwischengespeichert werden. 
+
+```php 
+if (rex::getProperty('key') != "") {
+echo 	'<title>'.rex_escape(rex::getProperty('key')).'</title>';
+}
+else {
+echo '<title>'. rex_escape($this->getValue('name')).'</title>';
+}
+
+```
