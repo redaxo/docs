@@ -313,6 +313,8 @@ Danach kann der Inhalt der Variable im Template über `rex::getProperty('variabl
 > Der Artikel sollte je Template nur einmal eingelesen werden. Zur Weiterverarbeitung sollte er in einer Variable zwischengespeichert werden. 
 
 ```php 
+$article = $this->getArticle();
+
 if (rex::getProperty('key') != "") {
 echo 	'<title>'.rex_escape(rex::getProperty('key')).'</title>';
 }
