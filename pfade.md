@@ -53,20 +53,23 @@ Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entspreche
 <a name="base"></a>
 ### base
 
-Gibt den Base Pfad der übergebenen Datei zurück
+Gibt den Base Pfad mit der übergebenen Datei oder dem Ordner zurück
 
-Beispiel:
-`rex_path::base('media/meinbild.jpg')` => '/htdocs/meinverzeichnis/media/meinbild.jpg'
+Beispiele:
 
+`rex_path::base()` => '/htdocs/meinverzeichnis/'
+`rex_path::base('index.php')` => '/htdocs/meinverzeichnis/index.php'
 
 
 <a name="frontend"></a>
 ### frontend
 
-Gibt den Frontend Pfad der übergebenen Datei zurück
+Gibt den Frontend-Pfad mit der übergebenen Datei oder dem Ordner zurück
 
-Beispiel:
-`rex_path::base('media/meinbild.jpg')` => '/htdocs/meinverzeichnis/media/meinbild.jpg'
+Beispiele:
+
+`rex_path::frontend()` => '/htdocs/meinverzeichnis/'
+`rex_path::frontend('index.php')` => '/htdocs/meinverzeichnis/index.php'
 
 
 
