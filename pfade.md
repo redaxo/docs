@@ -58,6 +58,7 @@ Gibt den Base Pfad mit der übergebenen Datei oder dem Ordner zurück
 Beispiele:
 
 `rex_path::base()` => '/htdocs/meinverzeichnis/'
+
 `rex_path::base('index.php')` => '/htdocs/meinverzeichnis/index.php'
 
 
@@ -69,6 +70,7 @@ Gibt den Frontend-Pfad mit der übergebenen Datei oder dem Ordner zurück
 Beispiele:
 
 `rex_path::frontend()` => '/htdocs/meinverzeichnis/'
+
 `rex_path::frontend('index.php')` => '/htdocs/meinverzeichnis/index.php'
 
 
@@ -90,6 +92,7 @@ Pfad zum Backend
 
 Beispiel:
 `rex_path::backend()` => '/htdocs/meinverzeichnis/redaxo/'
+
 `rex_path::backend('meinedatei.php')` => '/htdocs/meinverzeichnis/redaxo/meinedatei.php'
 
 
