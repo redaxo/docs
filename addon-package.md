@@ -8,6 +8,7 @@
 - [Konflikte (conflicts:)](#conflicts)
 - [Seiten (page: / subpages:)](#seiten)
   - [Seiten verstecken](#hidden)
+  - [Seiten ohne Layout ausgeben](#haslayout)
 - [Rechte (perm:)](#rechte)
 - [Übersetzung](#uebersetzung)
 - [Eigene Properties](#eigene)
@@ -175,6 +176,14 @@ Manchmal benötigt man Seiten, die nicht über die Navigation erreichbar sind. H
 seitenkey: { title: 'translate:seitenname', hidden: true}
 ```
 Auch der eigentliche Menüpunkt des AddOns kann so versteckt werden. 
+
+<a name="haslayout"></a>
+### Seiten nicht im REDAXO-Layout ausgeben
+
+Möchte man die Seite im eigenen Design ausgeben (z.B. in einem Popup) oder man benötigt eine Ausgabe nicht im HTML-Format (z.B. für JSON,TXT,YML) hilft folgender Code in der Seiten-Definiton. 
+
+`hasLayout: false`
+
 
 <a name="rechte"></a>
 ## Rechte (perm:)
