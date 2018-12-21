@@ -11,7 +11,7 @@
 ## Systemanforderungen
 
 Für die Version 5.5 wird folgende Umgebung benötigt:
-- PHP ab Version: 5.5.9
+- PHP ab Version: 5.5.9 (Empfohlen ist PHP 7.X)
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
 - Apache2, Nginx oder vergleichbarer Webserver
 
@@ -20,7 +20,7 @@ Für die Version 5.5 wird folgende Umgebung benötigt:
 
 Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf einem Server oder Webspace.
 
-- Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren. 
+- Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
 - Die neueste Version unter https://redaxo.org/download/core/ herunterladen.
 - Die ZIP-Datei auf dem eigenen Rechner entpacken.
 - Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) ausführen.
@@ -37,37 +37,37 @@ Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bere
 Als Erstes die aktuelle Version von REDAXO unter https://redaxo.org/download/core/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
 
 <a name="upload"></a>
-## Upload 
+## Upload
 
-Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`. 
+Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`.
 Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
-> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann. 
+> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
 
 
-> **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden. 
+> **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
 Die Ordner- und Dateirechte müssen auf `755` gestellt werden, falls der Server dies beim Upload nicht selbst erledigt haben sollte.
 
 <a name="install"></a>
 ## Installationsvorgang
 
-Nachdem REDAXO hochgeladen wurde, kann die Installation mit http://deinedomain.tld/redaxo/ aufgerufen werden. 
-Die folgenden sieben Schritte führen durch die Installation. 
+Nachdem REDAXO hochgeladen wurde, kann die Installation mit http://deinedomain.tld/redaxo/ aufgerufen werden.
+Die folgenden sieben Schritte führen durch die Installation.
 
 ### Schritt 1: Sprachauswahl
 
-Im ersten Schritt wird die Sprache für den Installationsvorgang und für das Backend festgelegt. 
+Im ersten Schritt wird die Sprache für den Installationsvorgang und für das Backend festgelegt.
 
 ![Sprachwahl](/assets/v5.2.0-installation-01-language.png)
 
-> **Hinweis :** Die Sprache kann später im Setup oder für den User geändert werden. 
+> **Hinweis :** Die Sprache kann später im Setup oder für den User geändert werden.
 
 ### Schritt 2: Lizenz
 REDAXO ist ein Open Source Projekt und kostenfrei. Allerdings gibt es Lizenzbedingungen, die akzeptiert werden müssen.
 
 ![Lizenz](/assets/v5.2.0-installation-02-license.png)
-Schritt 2: Lizenz 
+Schritt 2: Lizenz
 
 ### Schritt 3: Systemcheck
 An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gibt ggf. Warnungen aus. Wenn etwas nicht stimmt, müssen eventuell auch die Systemvoraussetzungen überprüft werden.  
@@ -89,22 +89,22 @@ Direktiven für NGINX:
 
 
 ### Schritt 4: Konfiguration
-An dieser Stelle wird die grundlegende Konfiguration durchgeführt. 
-   
+An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
+
 - URL der Website mit abschließendem / (Slash)
 - Name der Website  
 - E-Mail-Adressse bei Fehlern
 - Zeitzone
 - Datenbankverbindung
 
-Befindet sich die Datenbank auf dem lokalen Server, kann hier `localhost` stehen gelassen werden. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall muss hier die Adresse des Datenbankservers eingeben werden. 
+Befindet sich die Datenbank auf dem lokalen Server, kann hier `localhost` stehen gelassen werden. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall muss hier die Adresse des Datenbankservers eingeben werden.
 Besitzt der Datenbank-User das Recht auch neue Datenbanken zu erstellen, so kann hier direkt eine neue Datenbank mit der oben angegebenen Bezeichnung anlegt werden.
 
 ![Config](/assets/v5.2.0-installation-04-config.png)
 Schritt 4: Systemcheck
 
 ### Schritt 5: Datenbank
-Es muss eine der drei Optionen gewählt werden. 
+Es muss eine der drei Optionen gewählt werden.
 > **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 ist aktuell nicht vorgesehen.
 
 ![Datenbank](/assets/v5.2.0-installation-05-database.png)
