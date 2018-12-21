@@ -11,7 +11,7 @@
 ## Systemanforderungen
 
 Für die Version 5.5 wird folgende Umgebung benötigt:
-- PHP ab Version: 5.5.9 (Empfohlen ist PHP 7.X)
+- PHP ab Version: 5.5.9 (Empfohlen ist PHP 7.x)
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
 - Apache2, Nginx oder vergleichbarer Webserver
 
