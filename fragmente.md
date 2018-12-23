@@ -4,6 +4,7 @@
 - [REDAXO-Fragmente nutzen](#fragmente-nutzen)
     - [Beispiel Paginierung](#paginierung)
         - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
+- [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
 
 <a name="prinzip"></a>
 ## Prinzip der Fragmente
@@ -102,5 +103,8 @@ Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginie
 Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes AddOn in das Verzeichnis `fragments` kopiert und geändert werden. Wenn es dort unter dem Namen `mypagination.php` abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
 
     echo $fragment->parse('mypagination.php');
+    
+<a name="fragmente-ueberschreiben"></a> 
+## REDAXO-Fragmente überschreiben
 
-
+REDAXO Fragmente können auch überschrieben werden. Es genügt hierbei eine Fragment-Datei mit gleichem Namen in das Fragment-Verzeichnis des eigenen AddOns zu legen. REDAXO lädt bzw. überschreibt die Fragmente in der Reihenfolge, in der AddOns geladen werden. Daher wird das project-AddOn mit `load late` geladen.
