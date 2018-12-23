@@ -16,8 +16,8 @@
 Voraussetzungen:
 
 - Website REDAXO ab 4.6
-- Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace unter einer Subdomain oder in einer lokal. 
-- Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> hier danach suchen: ***Installer/Neue herunterladen*** und installieren)
+- Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace unter einer Subdomain oder in einer lokaleln Installation. 
+- Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> ***Installer->Neue herunterladen*** und installieren)
 - Die Templates sollten nicht per require oder include eingebunden sein, sondern direkt eingepflegt sein, andernfalls kann yconverter keine Konvertierung hier durchführen. 
 
 REDAXO 5 ist mit den Vorgängerversionen nicht vollständig kompatibel. Die Projekte (z.B. eine Website) müssen zum neuen System migriert werden. Dies erfolgt durch eine Datenbank-Konvertierung, Nachbearbeitung von Modulen und Templates sowie Verschieben von Dateien des files-Ordners. 
@@ -44,7 +44,7 @@ YConverter ist nicht im Installer verfügbar und muss in GitHub heruntergeladen 
 
 Man erhält eine Zip-Datei mit der Bezeichnung yconverter-master.zip. Die Datei muss lokal entpackt werden und der Ordner in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren. 
 
->Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um das Zip direkt auf dem Server hochzuladen und zu entpacken. 
+>Tipp: Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um das Zip direkt auf dem Server hochzuladen und zu entpacken. 
 
 <a name="convert"></a>
 ## Konvertierung der Daten
@@ -81,7 +81,7 @@ Meldungen bei der Konvertierung
 <a name="xform"></a>
 ### XForm konvertieren
 
-YConverter bietet auch die Konvertierung von XForm-Tabellen an. Auch hier werden die Tabellen wie oben beschrieben konvertiert und können mittels Formular in die neue Instanz kopiert werden. 
+YConverter bietet auch die Konvertierung von XForm-Tabellen an. Auch hier werden die Tabellen wie oben beschrieben konvertiert und können mittels Formular in die neue Instanz migriert werden. 
 
 Nach der Übertragung der Daten installiert man in REDAXO 5.x YForm und die Tabellen sollten dann wird wie gewohnt erscheinen. 
 
@@ -121,6 +121,8 @@ Eigene Ordner, die Assets für die Darstellung beinhalten (z.B. für CSS und JS)
 
 <a name="service"></a>
 ## Nachbearbeitung, Fehlerbereinigung
+
+Nach erfolgreichem Import den Cache unter System in REDAXO 5 löschen und somit neu anlegen lassen.
 
 Nach der Übertragung der Daten ist die Präsenz meist noch nicht voll einsatzfähig. 
 
