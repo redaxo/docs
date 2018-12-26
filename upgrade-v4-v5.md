@@ -16,7 +16,7 @@
 Voraussetzungen:
 
 - Website REDAXO ab 4.6
-- Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace unter einer Subdomain oder in einer lokaleln Installation. 
+- Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace, unter einer Subdomain oder in einer lokaleln Installation. 
 - Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> ***Installer->Neue herunterladen*** und installieren)
 - Die Templates sollten nicht per require oder include eingebunden sein, sondern direkt eingepflegt sein, andernfalls kann yconverter keine Konvertierung hier durchführen. 
 
@@ -25,6 +25,8 @@ REDAXO 5 ist mit den Vorgängerversionen nicht vollständig kompatibel. Die Proj
 >Daten zusätzlich installierter AddOns, außer yform, können nicht konvertiert werden und müssen ggf. separat migriert werden. Es empfiehlt sich vorher zu prüfen, welche AddOns in REDAXO 5 fortgeführt werden und ob diese eine Lösung zum Import älterer Versionen anbieten. Alternativ bieten sich ähnliche AddOns an, die die gewünschte Funktionalität wiederherstellen. 
 
 >Benutzerkonten werden nicht konvertiert und müssen in REDAXO 5 neu angelegt werden.
+
+Wer Hilfe bei der Konvertierung benötigt oder diese beuftragen möchte, findet im ***[Slack-Channel](https://redaxo.org/support/community/#slack)*** sicher bereitwillige Helfer. 
 
 <a name="1st"></a>
 ## Erste Schritte
