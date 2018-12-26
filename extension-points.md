@@ -132,7 +132,8 @@ $meine_var = rex_extension::registerPoint(new rex_extension_point(
 ### Core
 
 
-```CACHE_DELETED
+```
+CACHE_DELETED
 : Daten: rex_i18n::msg('delete_cache_message')
 : Parameter: keine
 
@@ -267,7 +268,8 @@ REX_LIST_GET
 ### Structure
 
 
-```ART_ADDED
+```
+ART_ADDED
 : Daten: $message
 : Parameter: ['id' => $id, 'clang' => $key, 'status' => 0, 'name' => $data['name'], 'parent_id' => $data['category_id'], 'priority' => $data['priority'], 'path' => $path, 'template_id' => $data['template_id'], 'data' => $data]
 
@@ -364,7 +366,8 @@ URL_REWRITE
 ### Structure Content
 
 
-```ART_CONTENT
+```
+ART_CONTENT
 : Daten: $CONTENT
 : Parameter: ['ctype' => $curctype, 'article' => $this]
 
@@ -465,7 +468,8 @@ STRUCTURE_CONTENT_SLICE_UPDATED
 ### Medienpool
 
 
-```MEDIA_ADDED
+```
+MEDIA_ADDED
 : Daten: keine
 : Parameter: $RETURN
 
@@ -526,7 +530,8 @@ PAGE_MEDIAPOOL_HEADER
 ### Backup
 
 
-```BACKUP_AFTER_DB_EXPORT
+```
+BACKUP_AFTER_DB_EXPORT
 : Daten: $content
 : Parameter: keine
 
@@ -563,7 +568,8 @@ BACKUP_BEFORE_FILE_IMPORT
 ### Metainfo
 
 
-```ART_META_UPDATED
+```
+ART_META_UPDATED
 : Daten: keine
 : Parameter: $params
 
@@ -580,7 +586,8 @@ METAINFO_TYPE_FIELDS
 ### BE Style
 
 
-```BE_STYLE_PAGE_CONTENT
+```
+BE_STYLE_PAGE_CONTENT
 : Daten: keine
 : Parameter: []
 
@@ -593,7 +600,8 @@ BE_STYLE_SCSS_FILES
 ### Media Manager
 
 
-```MEDIA_MANAGER_FILTERSET
+```
+MEDIA_MANAGER_FILTERSET
 : Daten: $set
 : Parameter: ['rex_media_type' => $type]
 
