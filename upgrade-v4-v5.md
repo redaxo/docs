@@ -26,7 +26,7 @@ REDAXO 5 ist mit den Vorgängerversionen nicht vollständig kompatibel. Die Proj
 
 >Benutzerkonten werden nicht konvertiert und müssen in REDAXO 5 neu angelegt werden.
 
-Wer Hilfe bei der Konvertierung benötigt oder diese beuftragen möchte, findet im ***[Slack-Channel](https://redaxo.org/support/community/#slack)*** sicher bereitwillige Helfer. 
+Wer Hilfe bei der Konvertierung benötigt oder diese beauftragen möchte, findet im ***[Slack-Channel](https://redaxo.org/support/community/#slack)*** sicher bereitwillige Helfer. 
 
 <a name="1st"></a>
 ## Erste Schritte
