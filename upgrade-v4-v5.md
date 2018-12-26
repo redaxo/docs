@@ -149,7 +149,7 @@ Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 
 - Installation von YConverter wie [oben](#install) beschrieben in dieser aktuellen Installation
 - Export der Datenbank der Live-Version mittels Import-/Export-AddOn
 - Import der exportierten Datenbank in der neuen Installation, dadurch wird diese konvertiert und ist geeignet für die Bearbeitung durch YConverter. 
-- Überprüfen ob die Umlaute der Module im Backend korrekt sind. War es zuvor eine Installation mit ISO-Datensatz (bei Versionen vor 4.5), sollte folgernder Tipp berücksichtigt werden und die die Daten müssen konvertiert werden: [Inhalte von Iso auf Utf-8 konvertieren](https://redaxo.org/doku/4.6/convert-iso-utf8)
+- Überprüfen ob die Umlaute der Module im Backend korrekt sind. War es zuvor eine Installation mit ISO-Format (bei Versionen vor 4.5), sollte folgernder Tipp berücksichtigt werden und die die Daten müssen konvertiert werden: [Inhalte von Iso auf Utf-8 konvertieren](https://redaxo.org/doku/4.6/convert-iso-utf8)
 - Anschließend die Datenbank mit YConverter konvertieren: [Konvertierung der Daten](#convert) und nach REDAXO 5.x übertragen
 
 > **Tipp**: Beim späteren Kopieren der Dateien des /files-Ordners darauf achten, dass dort befindliche Cache-Files nicht kopiert werden müssen. (Ältere Versionen von REDAXO erstellen im Files-Ordner Cache-Dateien, die nicht benötigt werden). Ggf. den Cache vor dem Kopieren der Dateien unter **System** löschen. 
