@@ -17,7 +17,7 @@
 
 Voraussetzungen:
 
-- Website REDAXO ab 4.6 ***[hinweis für ältere Versionen](#less46)***
+- Website REDAXO ab 4.6 ***[Hinweis für ältere Versionen](#less46)***
 - Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace, unter einer Subdomain oder in einer lokaleln Installation. 
 - Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> ***Installer->Neue herunterladen*** und installieren)
 - Die Templates sollten nicht per require oder include eingebunden sein, sondern direkt eingepflegt sein, andernfalls kann yconverter keine Konvertierung hier durchführen. 
