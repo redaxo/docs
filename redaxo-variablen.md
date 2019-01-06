@@ -607,7 +607,7 @@ REX_USER_LOGIN
 <a name="eigene-variablen"></a>
 ## Eigene Variablen
 Es ist sehr leicht möglich, eigene REDAXO-Variablen zu erstellen. Hierfür muss lediglich eine PHP-Klasse erstellt und im lib-Verzeichnis eines AddOns (z.B. im Project-Addon) abgelegt werden. Die Klasse wird automatisch von REDAXO erkannt und eingebunden.
-Damit die Klasse erkannt wird, muss sie mit `rex_var_` beginnt und die Basisklasse `rex_var` erweitern. Die Methode `getOutput` muss zwingend vorhanden sein.
+Damit die Klasse erkannt wird, muss sie mit `rex_var_` beginnen und die Basisklasse `rex_var` erweitern. Die Methode `getOutput` muss zwingend vorhanden sein.
 Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter) automatisch zur Verfügung. Weitere Parameter lassen sich sehr einfach hinzufügen.
 
 ### Beispiel
