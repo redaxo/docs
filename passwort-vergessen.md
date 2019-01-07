@@ -17,7 +17,7 @@ Diese Zeile entspricht dem Passwort 123456789. Melde dich nun mit deinem Benutze
 
 ## Änderung eines Passworts über die Console (ab REDAXO 5.6+)
 
-Ein Passwort kann sehr einfach über die Console aktualisiert werden. Hierzu muss man sich im bin Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen. 
+Ein Passwort kann sehr einfach über die Console aktualisiert werden. Hierzu muss man sich im `bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen. 
 
 Wurde das neue Passwort gespeichert, sollte folgende Meldung erscheinen:
 
