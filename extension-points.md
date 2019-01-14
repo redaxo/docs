@@ -48,7 +48,7 @@ rex_extension::register('MEDIA_UPDATED', "meineUpdateFunction");
 function meineUpdateFunction($ep) {
     # dump($ep); // auskommentieren, um alle Informationen des EP-Objekts zu erhalten
     $name = $ep->getParams();
-    $subject = $ep->getParams();
+    $subject = $ep->getSubject();
     $params = $ep->getParams();
     $filename = $ep->getParam('filename');
     
