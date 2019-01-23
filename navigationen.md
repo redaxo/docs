@@ -10,7 +10,7 @@
     - [Dropdown-Navigation](#custom-dropdown)
         - [Erste Ebene](#custom-erste-ebene)
         - [Zwei oder mehr Ebenen](#custom-mehr-ebenen)
-    - [Sidebar-Navigation](custom-sidebar)
+    - [Sidebar-Navigation](#custom-sidebar)
     - [Breadcrumb](#custom-breadcrumb)
     - [Artikellisten](#custom-artikellisten)
         - [Artikel-Teaser für Unterkategorien](#custom-teaser)
