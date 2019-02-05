@@ -49,7 +49,7 @@ echo '</ul>';
 ?>
 ```
 
-Eine etwas komplexere Ausgabe steht im Fragment `fragments/core/navigations/pagination.php`. Ein Beispiel einer kompletten Ausgabe einer Paginierung mit diesem Fragment steht im Kapitel [Fragmente](/{{path}}/{{version}}/fragmente).
+Eine etwas komplexere Ausgabe steht im Fragment `fragments/core/navigations/pagination.php`. Ein [Beispiel einer kompletten Ausgabe einer Paginierung](/{{path}}/{{version}}/fragmente) mit diesem Fragment steht im Kapitel Fragmente.
 
 Weitere Methoden der `rex_pager`-Klasse sind
 
