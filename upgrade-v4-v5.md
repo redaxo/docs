@@ -103,13 +103,13 @@ Die konvertierten Tabellen können mit dem Formular direkt in die REDAXO 5 Präs
 Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die externe Datenbank von extern hat, ist eine manuelle Übertragung der Daten erforderlich. Hierzu wird in YConverter Adminer mitgeliefert. 
 
 1. Den Adminer im REDAXO 4 in neuem Tab aufrufen.
-2. Im Adminer von REDAXO 4 oben links auf Exportieren klicken.
+2. Im Adminer von REDAXO 4 oben links auf `Exportieren` klicken.
 3. Tabellen und Daten alle wegklicken (im Tabellenkopf).
-4. Nur die Tabellen und Daten auswählen, bei den die Tabelle mit yconverter_ beginnen.
+4. Nur die `Daten` auswählen, bei den die Tabelle mit yconverter_ beginnen. ***Es muss keine Checkbox bei Tabelle aktiviert werden***. 
 5. Button Exportieren klicken.
-6. Erstellte Daten kopieren.
+6. Erstellte Daten in die Zwischenablage kopieren
 7. Im Adminer von REDAXO 5 oben links SQL-Kommando klicken und das Kopierte in das Textfeld einfügen.
-8. Nach `yconverter_` im Textfeld suchen und löschen.
+8. Nach `yconverter_` im Textfeld suchen und löschen. (ggf. in einem Texteditor per suchen und Ersetzen)
 9. Den Button Ausführen klicken.
 
 > Hinweis: Funktioniert der Import nicht wie gewünscht, sollte man sich den Export als Datei erstellen lassen. Die heruntergeladene Datei kann man dann im Adminer von REDAXO 5 importieren.
