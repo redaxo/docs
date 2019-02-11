@@ -112,8 +112,6 @@ Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die
 8. Nach `yconverter_` im Textfeld suchen und löschen. (ggf. in einem Texteditor per suchen und Ersetzen)
 9. Den Button Ausführen klicken.
 
-> Hinweis: Funktioniert der Import nicht wie gewünscht, sollte man sich den Export als Datei erstellen lassen. Die heruntergeladene Datei kann man dann im Adminer von REDAXO 5 importieren.
-
 <a name="copyfiles"></a>
 ## Dateien kopieren
 
