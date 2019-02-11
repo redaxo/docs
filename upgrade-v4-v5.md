@@ -105,7 +105,7 @@ Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die
 1. Den Adminer im REDAXO 4 in neuem Tab aufrufen.
 2. Im Adminer von REDAXO 4 oben links auf `Exportieren` klicken.
 3. Tabellen und Daten alle wegklicken (im Tabellenkopf).
-4. Nur die `Daten` auswählen, bei den die Tabelle mit yconverter_ beginnen. ***Es muss keine Checkbox bei Tabelle aktiviert werden***. 
+4. Nur die `Daten` auswählen, bei deren Tabelle mit yconverter_ beginnen. ***Es muss keine Checkbox bei Tabelle aktiviert werden***. 
 5. Button Exportieren klicken.
 6. Erstellte Daten in die Zwischenablage kopieren
 7. Im Adminer von REDAXO 5 oben links SQL-Kommando klicken und das Kopierte in das Textfeld einfügen.
