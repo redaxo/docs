@@ -51,6 +51,13 @@ Gibt den aktuellen Statuscode zurück. Beispiel: `rex_response::getStatus()`.
 
 Bewirkt einen Redirect auf die übergebene Url mit dem über die Methode `setStatus` gesetzten Statuscode. Die Ausführung von weiterem Code wird per `exit` beendet.
 
+**Beispiel:**
+Es soll ein Redirect mit dem Status `301` ausgeführt werden. Das kann z.B. im Template oder auch aus einem Modul heraus geschehen.
+
+    <?php
+    rex_response::setStatus(301);
+    rex_response::sendRedirect(rex_getUrl(article_id));
+
 <a name="getstatus"></a>
 #### getStatus
 
