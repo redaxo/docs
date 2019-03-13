@@ -20,7 +20,7 @@ REDAXO bietet die Möglichkeit, für jeden Artikel, jede Kategorie, jede Sprache
 
 Metadaten sind beschreibende Daten von Artikeln, Kategorien, Sprachen oder Medien. Über das System AddOn „MetaInfos“ (SystemAddOns sind immer in einer Standard REDAXO Installation vorhanden und können nicht gelöscht werden) lassen sich diese Daten erweitern.
 
-Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können können mittels PHP oder [REDAXO-Variablen]((/{{path}}/{{version}}/redaxo-variablen)) abgerufen werden.  
+Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können können mittels PHP oder [REDAXO-Variablen](/{{path}}/{{version}}/redaxo-variablen) abgerufen werden.  
 
 <a name="besipiel"></a>
 ## Anwendungsbeispiel
