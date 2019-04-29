@@ -3,7 +3,7 @@
 - [Aktions-Übersicht](#aktions-uebersicht)
 - [Aktion erstellen](#aktion-erstellen)
     - [Auf Werte zugreifen](#auf-werte-zugreifen)
-    - [Speichern (verhindern)](#speichern-verindern)
+    - [Speichern (verhindern)](#speichern-verhindern)
     - [Meldung ausgeben](#meldung-ausgeben)
 - [Beispiele](#beispiele)
     - [Preview-Aktion](#beispiel-preview-aktion)
