@@ -19,6 +19,7 @@
     - [hasConfig](#has-config)
     - [hasProperty](#has-property)
     - [isBackend](#is-backend)
+    - [isFrontend](#is-frontend)
     - [isDebugMode](#is-debug-mode)
     - [isSafeMode](#is-safe-mode)
     - [isSetup](#is-setup)
@@ -225,10 +226,20 @@ Siehe auch: [setProperty](#set-property), [getProperty](#get-property) und [remo
 <a name="is-backend"></a>
 ### isBackend
 
-Prüft, ob gerade das Backend aufgerufen wird. Wird oft in Modulen verwendet, um die Backend-Ausgabe anders zu gestalten als die Frontend-Ausgabe.
+Prüft, ob gerade das Backend aufgerufen wird. Wird oft in Modulen und AddOns verwendet, um die Backend-Ausgabe anders zu gestalten als die Frontend-Ausgabe.
 
 Beispiel:
 `rex::isBackend()` => true im Backend, false im Frontend
+
+
+<a name="is-frontend"></a>
+### isFrontend
+
+Prüft, ob gerade das Frontend aufgerufen wird. Wird oft in Modulen und AddOns verwendet, um die Frontend-Ausgabe anders zu gestalten als die Backend-Ausgabe.
+
+Beispiel:
+`rex::isFrontend()` => true im Frontend, false im Backend
+
 
 <a name="is-debug-mode"></a>
 ### isDebugMode
