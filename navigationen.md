@@ -564,7 +564,7 @@ if ("REX_VALUE[1]" != '' && "REX_VALUE[2]" != '') {
 	$counter++;
 
 	// Daten für das Frontend in ein Array schreiben, aber sie nicht anzeigen
-	if (!rex::isBackend()) {
+	if (rex::isFrontend()) {
 		$items = array();
 		$items = ['anchor' => 'REX_VALUE[2]', 'title' => 'REX_VALUE[1]'];
 		rex::getProperty('anchors')->append($items);
