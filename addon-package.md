@@ -6,6 +6,7 @@
 - [Empfohlene Angaben](#empfohlen)
 - [Abhängigkeiten (requires:)](#requires)
 - [Konflikte (conflicts:)](#conflicts)
+- [Dateien ignorieren](#ignore)
 - [Seiten (page: / subpages:)](#seiten)
   - [Seiten verstecken](#hidden)
   - [Seiten ohne Layout ausgeben](#haslayout)
@@ -126,6 +127,19 @@ conflicts:
         irgendein_addon: '>=1.0.0'
 ```
 Wird die Version größer/gleich 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
+
+<a name="ignore"></a>
+## Dateien ignorieren
+
+Bei der Erstellung des Installationspaketes können ausgwählte Ordner und Dateien ignoriert werden 
+
+```yml
+installer_ignore:
+    - node_modules
+    - .env
+```
+
+> Das ignore-Pattern greift nur auf der Root-Ebene des AddOns und arbeitet nicht rekursiv. Dementsprechend sind auch keine Patterns möglich wie assets/css/* oder source/js.
 
 <a name="seiten"></a>
 ## Seiten (page: / subpages:) 
