@@ -38,7 +38,16 @@ rex_request::isPJAXContainer | `rex_request::isPJAXContainer($containerId)` | Li
 Wird im Frontend eine Session benötigt, so muss diese explizit gestartet werden. Hierzu genügt in der Datei boot.php eines AddOns folgender Code:
 
 ```php
+if (rex::isFrontend()) {
+    rex_login::startSession();
+}
+```
+
+alternativ
+
+```php
 if (!rex::isBackend()) {
     rex_login::startSession();
 }
 ```
+
