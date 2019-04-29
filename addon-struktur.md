@@ -31,6 +31,7 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 |  | index.php | Wird automatisch beim Aufruf des Menüpunktes aufgerufen und bindet ggf. zusätzliche Seiten ein.  |
 | plugins |  | Hier findet man die mitgelieferten PlugIns |
 | vendor |  | Vendor-Ordner – hier werden fertige Classes, Skripte, Applikationen von „Lieferanten“-Quellen/Vendors abgelegt.|
+| ignore_installer |  | Zun Ausschluss von Ordnern und Dateien bei der Erstellung des Installationspaketes
 
 >**Autoload** lib und vendor werden rekursiv nach PHP-Klassen durchsucht. Die gefundenen Klassen werden automatisch eingebunden.
 
