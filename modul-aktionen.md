@@ -3,6 +3,8 @@
 - [Aktions-Übersicht](#aktions-uebersicht)
 - [Aktion erstellen](#aktion-erstellen)
     - [Auf Werte zugreifen](#auf-werte-zugreifen)
+    - [Speichern (verhindern)](#speichern-verindern)
+    - [Meldung ausgeben](#meldung-ausgeben)
 - [Beispiele](#beispiele)
     - [Preview-Aktion](#beispiel-preview-aktion)
     - [Presave-Aktionen](#beispiel-presave-aktionen)
@@ -60,6 +62,31 @@ oder
 
 
 Man kann auf alle Werte im Slice zugreifen, also auf alle Felder, die in einem Modulblock eingetragen wurden. Auch eigene Datenfelder, die zuvor in der Tabelle `rex_article_slice` angelegt wurden, können mit Aktionen bearbeitet werden.
+
+<a name="speichern-verhindern"></a>
+### Speichern verhindern
+
+Die die Werte werden gewohnt verarbeitet. 
+
+Möchte man das Speichern verhindern steht folgedne Methode zur Verfügung
+
+```php
+$this->setSave(false);
+```
+
+Um das Speichern durchzuführen 
+
+```php
+$this->setSave(true);
+```
+
+<a name="meldung-ausgeben"></a>
+### Medlung ausgeben 
+
+```php
+ $this->messages[] = 'Beliebieger Text';   
+``` 
+
 
 <a name="beispiele"></a>
 ## Beispiele
