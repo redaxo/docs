@@ -5,6 +5,7 @@
     - [Beispiel Paginierung](#paginierung)
         - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
 - [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
+   - [Eigene Fehlerseiten erstellen](#fehlerseiten)
 
 <a name="prinzip"></a>
 ## Prinzip der Fragmente
@@ -108,3 +109,22 @@ Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für
 ## REDAXO-Fragmente überschreiben
 
 REDAXO Fragmente können auch überschrieben werden. Es genügt hierbei eine Fragment-Datei mit gleichem Namen in das Fragment-Verzeichnis des eigenen AddOns zu legen. REDAXO lädt bzw. überschreibt die Fragmente in der Reihenfolge, in der AddOns geladen werden. Daher wird das project-AddOn mit `load late` geladen.
+
+<a name="fehlerseiten"></a> 
+### Eigene Fehlerseiten erstellen
+Seit R5.7 ist es möglich dass man die "Oooops Fehlerseiten" im Frontend als auch Backend individualisiert.
+
+Die beiden Fehlerseiten sind als core-fragment im system enthalten und können z.b. via `fragments` Ordner im project addon (oder in einem beliebigen anderen addon) überschrieben werden.
+
+Es gibt insgesamt 3 Fehlerseiten in REDAXO, davon sind aktuell zwei änderbar:
+
+- Whooops Fehlerseite, die man nur sieht wenn man als Admin im backend eingeloggt ist. Diese enthält debugging informationen und taucht sowohl in frontend und backend auf. Sie ist nicht änderbar.
+
+- die Oooops Fehlerseite im REDAXO-Backend (als Fragment `core/be_ooops.php` überschreibbar), wenn man nicht als Admin user im Backend eingeloggt ist
+![Ooops](/assets/v5.7.0-fragmente_ooops.png)
+
+- Die Oooops Fehlerseite im Frontend (als fragment `core/fe_ooops.php` überschreibbar), wenn man nicht als Admin-user im backend eingeloggt ist
+
+![Ooops Frontend ](/assets/v5.7.0-fragmente_ooops_fe.png)
+
+> Eine Fehlerseite sollte eine vollständige HTML-Seite sein (inkl. html, head, body,..), die keine externen Abhängigkeiten enthält (keine externen css-, js- Dateien, Bilder oder Fonts etc).
