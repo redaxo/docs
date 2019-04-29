@@ -6,7 +6,7 @@
 - [Empfohlene Angaben](#empfohlen)
 - [Abhängigkeiten (requires:)](#requires)
 - [Konflikte (conflicts:)](#conflicts)
-- [Dateien ignorieren](#ignore)
+- [Dateien/Ordner ignorieren](#ignore)
 - [Seiten (page: / subpages:)](#seiten)
   - [Seiten verstecken](#hidden)
   - [Seiten ohne Layout ausgeben](#haslayout)
@@ -129,9 +129,9 @@ conflicts:
 Wird die Version größer/gleich 1.0.0 des genannten AddOns gefunden, bricht die Installation ab. 
 
 <a name="ignore"></a>
-## Dateien ignorieren
+## Dateien/Ordner ignorieren
 
-Bei der Erstellung des Installationspaketes können ausgwählte Ordner und Dateien ignoriert werden 
+Bei der Erstellung des Installationspaketes können ausgwählte Dateien und Ordner ignoriert werden 
 
 ```yml
 installer_ignore:
