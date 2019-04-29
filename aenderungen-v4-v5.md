@@ -22,7 +22,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `$REX['KEY']` etc. | `rex::getProperty('key')` `rex::setProperty('key', $value)` |
 | `$REX['SERVER']` | `rex::getServer()` |
 | `$REX['SERVERNAME']` | `rex::getServerName()` |
-| `$REX['REDAXO']` | `rex::isBackend()` |
+| `$REX['REDAXO']` | `rex::isBackend()` zusätzlich `rex::isFrontend()` um zu prüfen ob Frontend|
 | `$REX['CUR_CLANG']` | `rex_clang::getCurrentId()`<br>Erste Sprache = 1 |
 | `$REX['ARTICLE_ID']` | `rex_article::getCurrentId()` |
 | `$REX['START_ARTICLE_ID']` | `rex_article::getSiteStartArticleId()` |
