@@ -84,10 +84,10 @@ Auch hier gibt es wieder Parameter, um die Ausgabe zu beeinflussen.
 
 ```php
 $nav = rex_navigation::factory();
-$nav->showBreadcrumb(true, true, 3);
+$nav->showBreadcrumb('Start', true, 3);
 ```
 
-Der erste Parameter bestimmt, ob die Startseite auch im Breadcrumb erscheinen soll. Der zweite Parameter steuert, ob der aktuelle Artikel auch im Breadcrumb berücksichtig wird, dies kommt vor allem bei Artikeln zum Tragen, die kein Startartikel sind. Über den letzten Parameter kann gezielt man die Artikel-ID definieren, wo der Breadcrumb starten soll.
+Der erste Parameter bestimmt, ob und wie die Startseite im Breadcrumb erscheinen soll. Ist dieser String gesetzt, wird er angezeigt und mit der Startseite verlinkt. Der zweite Parameter steuert, ob der aktuelle Artikel auch im Breadcrumb berücksichtig wird, dies kommt vor allem bei Artikeln zum Tragen, die kein Startartikel sind. Über den letzten Parameter kann gezielt man die Artikel-ID definieren, wo der Breadcrumb starten soll.
 
 
 <a name="factory-komplex"></a>
