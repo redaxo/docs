@@ -33,7 +33,7 @@
 <a name="rex-klasse"></a>
 ## "rex"-Klasse
 Die Methoden der Klasse `rex` sind global in Templates, Modulen und AddOns verfügbar und ermöglichen Zugriff auf Grundeinstellungen und Zustände des Systems.
-Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um systemweit eigene Eigenschaften abzulegen.
+Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um systemweit eigene Eigenschaften bereitzustellen.
 
 <a name="config-methoden"></a>
 ## Config-Methoden
@@ -45,9 +45,9 @@ Die Werte werden in der Tabelle `rex_config` gespeichert.
 <a name="property-methoden"></a>
 ## Property-Methoden
 
-Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z.B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegten Informationen. 
+Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z.B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegt sind. 
 
-Zur Verwendung der Properties in eigenen Prokjekten sollten diese im Namespace eines AddOns verwaltet werden um so Kollisionen mit den Core-Definitionen und weiteren AddOns zu vermeiden. 
+Zur Verwendung der Properties in eigenen Prokjekten, sollten diese im Namespace eines AddOns verwaltet werden. Kollisionen mit den Core-Definitionen und weiteren AddOns werden so vermieden. 
 
 <a name="eigene_properties"></a>
 ## Verwendung eigener Properties in Projekten
