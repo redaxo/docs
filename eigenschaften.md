@@ -2,6 +2,7 @@
 - [rex-Klasse](#rex-klasse)
 - [Config-Methoden](#config-methoden)
 - [Property-Methoden](#property-methoden)
+    - [Verwendung eigener Properties in Projekten](#eigene_properties)
 - [Beschreibung der Methoden](#beschreibung)
     - [getAccesskey](#get-accesskey)
     - [getConfig](#get-config)
@@ -44,7 +45,33 @@ Die Werte werden in der Tabelle `rex_config` gespeichert.
 <a name="property-methoden"></a>
 ## Property-Methoden
 
-Die Werte werden dynamisch während der Laufzeit verwaltet.
+Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z.B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegten Informationen. 
+
+Zur Verwendung der Properties in eigenen Prokjekten sollten diese im Namespace eines AddOns verwaltet werden um so Kollisionen mit den Core-Definitionen und weiteren AddOns zu vermeiden. 
+
+<a name="eigene-properties"></a>
+## Verwendung eigener Properties in Projekten
+
+Properties sollten in einem eigenen Namespace unabhängig vom Core (rex:) verwendet werden. Es bietet sich an hierzu z.B. das project-AddOn oder ein anderes AddOn zu verwenden. So werden Kollisionen mit anderen AddOns und dem Core vermieden. 
+
+Setzen einer AddOn spezifischen Property
+```php 
+$project = rex_addon::get('project');
+$project->setProperty($key, $value);
+```
+
+Auslesen einer AddOn spezifischen Property
+```php 
+$project = rex_addon::get('project');
+$project->getProperty($key);
+```
+
+Auslesen über REDAXO-Variablen in Templates und Modulen
+
+```html
+REX_PROPERTY[namespace=project key=foo]
+```
+
 
 <a name="beschreibung"></a>
 ## Beschreibung der Methoden
