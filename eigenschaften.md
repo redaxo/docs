@@ -340,24 +340,31 @@ Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
 
 ### Informationen aus Artikel im Template auslesen
 
-Via `rex::getProperty('variablenname')` kann man in Blöcken gesetzte Properties im Template auslesen. 
-Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen. 
+Über Properties die im Namespace eines AddOns hinterlegt sind, lassen sich kann man Properties die in  Modulen gesetzt wurden in Templates auslesen. Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen, z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`. 
 
-z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`. 
+Im gewünschten Modul wird mit 
 
-Im gewünschten Modul wird mit `rex::setProperty('variablenname',"wert")` die gewünschte Information hinterlegt.
-Danach kann der Inhalt der Variable im Template über `rex::getProperty('variablenname')` ausgelesen werden. 
+```php 
+$project = rex_addon::get('project');
+$project->setProperty('key',"wert")` 
+```
 
-> Der Artikel sollte je Template nur einmal eingelesen werden. Zur Weiterverarbeitung sollte er in einer Variable zwischengespeichert werden. 
+die gewünschte Information im project-AddOn hinterlegt.
+
+Danach kann der Inhalt der Variable im Template ausgelesen werden
+
+***Ausgabe im Template*** 
 
 ```php 
 $article = $this->getArticle();
+$project = rex_addon::get('project');
 
-if (rex::getProperty('key') != "") {
-echo 	'<title>'.rex_escape(rex::getProperty('key')).'</title>';
+// ist eine Property gesetzt? 
+if ($project->getProperty('key') != "") {
+echo '<title>'.rex_escape($project->getProperty('key')).'</title>';
 }
+// sonst: 
 else {
 echo '<title>'. rex_escape($this->getValue('name')).'</title>';
 }
-
 ```
