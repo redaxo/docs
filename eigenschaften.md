@@ -2,6 +2,7 @@
 - [rex-Klasse](#rex-klasse)
 - [Config-Methoden](#config-methoden)
 - [Property-Methoden](#property-methoden)
+    - [Verwendung eigener Properties in Projekten](#eigene_properties)
 - [Beschreibung der Methoden](#beschreibung)
     - [getAccesskey](#get-accesskey)
     - [getConfig](#get-config)
@@ -32,7 +33,7 @@
 <a name="rex-klasse"></a>
 ## "rex"-Klasse
 Die Methoden der Klasse `rex` sind global in Templates, Modulen und AddOns verfügbar und ermöglichen Zugriff auf Grundeinstellungen und Zustände des Systems.
-Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um systemweit eigene Eigenschaften abzulegen.
+Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um systemweit eigene Eigenschaften bereitzustellen.
 
 <a name="config-methoden"></a>
 ## Config-Methoden
@@ -44,7 +45,33 @@ Die Werte werden in der Tabelle `rex_config` gespeichert.
 <a name="property-methoden"></a>
 ## Property-Methoden
 
-Die Werte werden dynamisch während der Laufzeit verwaltet.
+Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z.B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegt sind. 
+
+Zur Verwendung der Properties in eigenen Prokjekten, sollten diese im Namespace eines AddOns verwaltet werden. Kollisionen mit den Core-Definitionen und weiteren AddOns werden so vermieden. 
+
+<a name="eigene_properties"></a>
+## Verwendung eigener Properties in Projekten
+
+Properties sollten in einem eigenen Namespace unabhängig vom Core (rex:) verwendet werden. Es bietet sich an hierzu z.B. das project-AddOn oder ein anderes AddOn zu verwenden. So werden Kollisionen mit anderen AddOns und dem Core vermieden. 
+
+Setzen einer AddOn spezifischen Property
+```php 
+$project = rex_addon::get('project');
+$project->setProperty($key, $value);
+```
+
+Auslesen einer AddOn spezifischen Property
+```php 
+$project = rex_addon::get('project');
+$project->getProperty($key);
+```
+
+Auslesen über REDAXO-Variablen in Templates und Modulen
+
+```html
+REX_PROPERTY[namespace=project key=foo]
+```
+
 
 <a name="beschreibung"></a>
 ## Beschreibung der Methoden
@@ -313,24 +340,31 @@ Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
 
 ### Informationen aus Artikel im Template auslesen
 
-Via `rex::getProperty('variablenname')` kann man in Blöcken gesetzte Properties im Template auslesen. 
-Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen. 
+Über Properties die im Namespace eines AddOns hinterlegt sind, lassen sich kann man Properties die in  Modulen gesetzt wurden in Templates auslesen. Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen, z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`. 
 
-z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`. 
+Im gewünschten Modul wird mit 
 
-Im gewünschten Modul wird mit `rex::setProperty('variablenname',"wert")` die gewünschte Information hinterlegt.
-Danach kann der Inhalt der Variable im Template über `rex::getProperty('variablenname')` ausgelesen werden. 
+```php 
+$project = rex_addon::get('project');
+$project->setProperty('key',"wert")` 
+```
 
-> Der Artikel sollte je Template nur einmal eingelesen werden. Zur Weiterverarbeitung sollte er in einer Variable zwischengespeichert werden. 
+die gewünschte Information im project-AddOn hinterlegt.
+
+Danach kann der Inhalt der Variable im Template ausgelesen werden
+
+***Ausgabe im Template*** 
 
 ```php 
 $article = $this->getArticle();
+$project = rex_addon::get('project');
 
-if (rex::getProperty('key') != "") {
-echo 	'<title>'.rex_escape(rex::getProperty('key')).'</title>';
+// ist eine Property gesetzt? 
+if ($project->getProperty('key') != "") {
+echo '<title>'.rex_escape($project->getProperty('key')).'</title>';
 }
+// sonst: 
 else {
 echo '<title>'. rex_escape($this->getValue('name')).'</title>';
 }
-
 ```
