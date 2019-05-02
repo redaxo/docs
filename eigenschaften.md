@@ -49,7 +49,7 @@ Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace de
 
 Zur Verwendung der Properties in eigenen Prokjekten sollten diese im Namespace eines AddOns verwaltet werden um so Kollisionen mit den Core-Definitionen und weiteren AddOns zu vermeiden. 
 
-<a name="eigene-properties"></a>
+<a name="eigene_properties"></a>
 ## Verwendung eigener Properties in Projekten
 
 Properties sollten in einem eigenen Namespace unabhängig vom Core (rex:) verwendet werden. Es bietet sich an hierzu z.B. das project-AddOn oder ein anderes AddOn zu verwenden. So werden Kollisionen mit anderen AddOns und dem Core vermieden. 
