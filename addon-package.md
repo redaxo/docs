@@ -178,7 +178,7 @@ subpages:
 ``` 
 Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 
-**Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: `main.php`, `config.php`).
+**Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: `main.php`, `help.php`, `module.php`).
 Die Hauptseite ist die `index.php` im /pages-Ordner.
 
 <a name="hidden"></a>
