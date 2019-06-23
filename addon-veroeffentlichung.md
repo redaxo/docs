@@ -9,6 +9,7 @@
   - [Eigenes AddOn](#anker-addon-version-eigenesaddon)
   - [AddOn-Version aktualisieren / löschen](#anker-addon-version-aktualisieren)
   - [AddOn-Version erstellen](#anker-addon-version-erstellen)
+- [Updates testen, geheime AddOns](#testing)
 
 
 Um eigene AddOns zu veröffentlichen sollten man folgenden Weg nehmen.
@@ -74,3 +75,12 @@ Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml).
 
 ![AddOn erstellen](/assets/v5.3.0-installer-addon-version-erstellen.png)
 Addon erstellen
+
+ <a name="testing"></a>
+## Updates testen, geheime AddOns
+
+Mit hinterlegtem API-Key kann man über den Installer eigene, offline gestellte, AddOns/Versionen laden. Diese AddOn-Versionen sind nicht öffentlich. Auf diese Weise können Updates in Ruhe über den Installer getestet werden oder der Installer ggf. für private AddOn-Installationen genutzt werden. 
+
+> Zu bedenken dabei ist, dass der API-Key auch Schreibrechte hat. Also **alle Administratoren** der REDAXO-Installation hätten damit Zugriff auf die eigenen AddOns. Sie könnten diese verändern, **zerstören** und auch **löschen**. Daher sollte der Key unbedingt wieder entfernt werden. 
+
+
