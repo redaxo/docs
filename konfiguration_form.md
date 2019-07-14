@@ -40,7 +40,8 @@ Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt we
 
 
 ```php
-$form = rex_config_form::factory($this->name);
+$addon = rex_addon::get('beispiel_addon');
+$form = rex_config_form::factory($addon->name);
 
 $field = $form->addInputField('text');
 $field->setLabel("Text");
