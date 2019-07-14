@@ -85,6 +85,6 @@
     - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 	
-- AddOns
+- Tipps und Links 
 	- [Übersicht wichtiger AddOns ()](/{{path}}/{{version}}/addons-list) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
 
