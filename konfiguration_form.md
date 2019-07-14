@@ -36,8 +36,29 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 
+Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt werden: 
 
-Beispiel eines Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
+
+```php
+$form = rex_config_form::factory($this->name);
+
+$field = $form->addInputField('text');
+$field->setLabel("Text");
+
+$field = $form->addInputField('farbe');
+$field->setLabel("Farbe");
+
+
+$fragment = new rex_fragment();
+$fragment->setVar('class', 'edit', false);
+$fragment->setVar('title', "Beispiel-Einstellungen", false);
+$fragment->setVar('body', $form->get(), false);
+echo $fragment->parse('core/page/section.php');
+
+```
+
+
+Zum Vergleich: Beispiel eines Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
@@ -94,26 +115,6 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 
-Mit `rex_config_form` kann der Code wie folgt verkürzt werden: 
-
-
-```php
-$form = rex_config_form::factory($this->name);
-
-$field = $form->addInputField('text');
-$field->setLabel("Text");
-
-$field = $form->addInputField('farbe');
-$field->setLabel("Farbe");
-
-
-$fragment = new rex_fragment();
-$fragment->setVar('class', 'edit', false);
-$fragment->setVar('title', "Beispiel-Einstellungen", false);
-$fragment->setVar('body', $form->get(), false);
-echo $fragment->parse('core/page/section.php');
-
-```
 
 
 
