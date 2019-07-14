@@ -32,7 +32,9 @@ Die Navigation-Factory ist Teil des Structure-Addons und befindet sich in `redax
 
 Das [Beispiel 4](#factory-komplex) verwendet alle aktuell verfügbaren Methoden der Factory, um eine sehr umfangreiche Navigation zu erstellen. Beachte die Kommentare im Code, sie erklären die einzelnen Methoden und ihre Parameter.
 
-#### Parameter 
+#### Parameter der get- bzw. show-Methode
+
+`public function show($category_id = 0, $depth = 3, $open = false, $ignore_offlines = false)`
 
 **$category_id**
 
