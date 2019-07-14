@@ -10,14 +10,14 @@ Zuständig ist dafür die auf der `rex_form_base` aufsetzende Class `rex_config_
 
 Instanzieren der `rex_config_form`
 
-```
+```php
     $form = rex_config_form::factory("addonxyz");
 ```
 
 `addonxyz` ist der Namespace in der Tabelle `rex_config`
 
 
-```
+```php
     $field = $form->addTextField('field_key');
 ```
 
@@ -27,7 +27,7 @@ Der Absende-Button und die Routinen zum Speichern der Daten werden automatisch h
 
 Damit das Formular im REDAXO-Stil ausgegeben werden kann, wird es an das section-Fragment übergeben. 
 
-```
+```php
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
 $fragment->setVar('title', $this->i18n('example_title'), false);
