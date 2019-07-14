@@ -32,23 +32,6 @@ Die Navigation-Factory ist Teil des Structure-Addons und befindet sich in `redax
 
 Das [Beispiel 4](#factory-komplex) verwendet alle aktuell verfügbaren Methoden der Factory, um eine sehr umfangreiche Navigation zu erstellen. Beachte die Kommentare im Code, sie erklären die einzelnen Methoden und ihre Parameter.
 
-<a name="factory-einfach"></a>
-### Einfache Navigation
-
-```php
-$nav = rex_navigation::factory();
-$nav->show();
-```
-
-Werden keine Parameter angegeben, startet die Navigation mit der Wurzelkategorie, durchläuft bis zu 3 Ebenen, zeigt nur den aktuellen Zweig geöffnet und berücksichtigt auch Offline-Artikel. Die möglichen Parameter werden im nächsten Sitemap-Beispiel erklärt, können aber natürlich ebenso in der "normalen" Navigation genutzt werden.
-
-<a name="factory-sitemap"></a>
-### Sitemap
-
-```php
-$nav = rex_navigation::factory();
-$nav->show(0, -1, TRUE, TRUE);
-```
 #### Parameter 
 
 **$category_id**
@@ -69,7 +52,26 @@ Mit dem dritten Parameter legt man fest, ob alle oder nur die aktiven Kategorien
 Der vierte Parameter definiert, ob nur Artikel angezeigt werden, die online sind ("TRUE”") oder auch Offline-Artikel ("FALSE").
 
 Um eine Sitemap zu erzeugen, müssen alle Ebenen durchlaufen (2. Parameter: `-1`) und alle Zweige geöffnet angezeigt werden (3. Parameter: `TRUE`). In diesem Beispiel werden Offline-Artikel nicht angezeigt (4. Parameter: `TRUE`).
- 
+
+
+<a name="factory-einfach"></a>
+### Einfache Navigation
+
+```php
+$nav = rex_navigation::factory();
+$nav->show();
+```
+
+Werden keine Parameter angegeben, startet die Navigation mit der Wurzelkategorie, durchläuft bis zu 3 Ebenen, zeigt nur den aktuellen Zweig geöffnet und berücksichtigt auch Offline-Artikel. Die möglichen Parameter werden im nächsten Sitemap-Beispiel erklärt, können aber natürlich ebenso in der "normalen" Navigation genutzt werden.
+
+<a name="factory-sitemap"></a>
+### Sitemap
+
+```php
+$nav = rex_navigation::factory();
+$nav->show(0, -1, TRUE, TRUE);
+```
+
 <a name="factory-breadcrumb"></a>
 ### Breadcrumbs
 
