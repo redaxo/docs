@@ -53,9 +53,6 @@ Mit dem dritten Parameter legt man fest, ob alle oder nur die aktiven Kategorien
 
 Der vierte Parameter definiert, ob nur Artikel angezeigt werden, die online sind ("TRUE”") oder auch Offline-Artikel ("FALSE").
 
-Um eine Sitemap zu erzeugen, müssen alle Ebenen durchlaufen (2. Parameter: `-1`) und alle Zweige geöffnet angezeigt werden (3. Parameter: `TRUE`). In diesem Beispiel werden Offline-Artikel nicht angezeigt (4. Parameter: `TRUE`).
-
-
 <a name="factory-einfach"></a>
 ### Einfache Navigation
 
@@ -73,6 +70,8 @@ Werden keine Parameter angegeben, startet die Navigation mit der Wurzelkategorie
 $nav = rex_navigation::factory();
 $nav->show(0, -1, TRUE, TRUE);
 ```
+
+Um eine Sitemap zu erzeugen, müssen alle Ebenen durchlaufen (2. Parameter: `-1`, $depth) und alle Zweige geöffnet angezeigt werden (3. Parameter: `TRUE`). In diesem Beispiel werden Offline-Artikel nicht angezeigt (4. Parameter: `TRUE`).
 
 <a name="factory-breadcrumb"></a>
 ### Breadcrumbs
