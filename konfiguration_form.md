@@ -58,7 +58,7 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 
-Zum Vergleich: Beispiel eines Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
+Zum Vergleich: Beispiel des gleichen Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
