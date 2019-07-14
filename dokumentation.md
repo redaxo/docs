@@ -48,7 +48,6 @@
     - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
     - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
-    - [Konfigurationsformualre (rex_config_form)](/{{path}}/{{version}}/konfiguration_form)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Listen (rex_list)](/{{path}}/{{version}}/listen)
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls) 
@@ -75,6 +74,7 @@
     - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Datenbank-Tabellen](/{{path}}/{{version}}/addon-datenbanktabellen) <sup><b>offen</b></sup>
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
+    - [Addon-Konfigurations-Formulare(rex_config_form)](/{{path}}/{{version}}/konfiguration_form)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Datenpflege / Konfiguration](/{{path}}/{{version}}/addon-config-data) <sup><b>offen</b></sup>
     - [Installation / Update](/{{path}}/{{version}}/addon-intall-update) <sup><b>offen</b></sup>
     - [*Entwicklung*](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
