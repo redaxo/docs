@@ -48,6 +48,7 @@
     - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
     - [Fragmente](/{{path}}/{{version}}/fragmente)
     - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
+    - [Konfigurationsformualre (rex_config_form)](/{{path}}/{{version}}/konfiguration_form)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Listen (rex_list)](/{{path}}/{{version}}/listen)
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls) 
