@@ -5,7 +5,7 @@ Möchte man individuelle Einstellungen durch den Nutzer festlegen lassen, benöt
 Hierzu mussten bis REDAXO 5.5.0 die Formulare manuell erstellt werden und die Config selbst gespeichert werden. Mit `rex_config_form` hat sich das grundlegend geeändert.
 `rex_config_form` erlaubt es Konfigurationen mittels `rex_form` zu erstellen. 
 
-Zuständig ist dafür die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
+Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
 
 
 Instanzieren der `rex_config_form`
