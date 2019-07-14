@@ -8,7 +8,36 @@ Hierzu mussten bis REDAXO 5.5.0 die Formulare manuell erstellt werden und die Co
 Zuständig ist dafür die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
 
 
-Beispiel eines Konfigurationsformulars vor REDAXO Version 5.4.0
+Instanzieren der `rex_config_form`
+
+```
+    $form = rex_config_form::factory("addonxyz");
+```
+
+`addonxyz` ist der Namespace in der Tabelle `rex_config`
+
+
+```
+    $field = $form->addTextField('field_key');
+```
+
+`field_key` ist der Schlüssel in der Tabelle `rex_config`
+
+Der Absende-Button und die Routinen zum Speichern der Daten werden automatisch hinzugefügt. 
+
+Damit das Formular im REDAXO-Stil ausgegeben werden kann, wird es an das section-Fragment übergeben. 
+
+```
+$fragment = new rex_fragment();
+$fragment->setVar('class', 'edit', false);
+$fragment->setVar('title', $this->i18n('example_title'), false);
+$fragment->setVar('body', $form->get(), false);
+echo $fragment->parse('core/page/section.php');
+```
+
+
+
+Beispiel eines Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
