@@ -163,8 +163,7 @@ Eine Hauptnavigation – sei es nur die erste Ebene oder eine Dropdown-Navigatio
 
 Zum Schreiben eigener Navigationen ist der Wert im path-Feld eines Artikels von elementarer Bedeutung. Dort findet man über Pipe-Symbole getrennt die IDs der Eltern-Kategorien. Nehmen wir an, ein Artikel befindet sich in der dritten Kategorie-Ebene. Nehmen wir weiterhin an, die Eltern-Kategorie in der ersten Ebene hat eine 2, die Eltern-Kategorie in der zweiten Ebene hat eine 4. So hat unsere Unterkategorie in der dritten Ebene im path-Feld den Eintrag `2|4`. Mit diesem Wert lässt sich nun immer bestimmen, wo in der Struktur sich der aktuelle Artikel befindet.
 
-```
-<?php
+```php
 // Aktuellen Pfad zum Artikel mit allen Kategorien als Array auslesen
 // Das Array kann man sich mit dump($path) genau ausgeben lassen.
 $path = rex_article::getCurrent()->getPathAsArray();
@@ -193,7 +192,6 @@ foreach (rex_category::getRootCategories() as $lev1) {
 }
 
 echo '</ul>';
-?>
 ```
 
 <a name="custom-mehr-ebenen"></a>
@@ -201,8 +199,7 @@ echo '</ul>';
 
 Nach dem gleichen Schema wie in der ersten Ebene können weitere Ebenen durchlaufen werden. Das Beispiel zeigt eine Navigation mit zwei Ebenen. Eine dritte und vierte Ebene kann dem Schema folgend rasch implementiert werden. Diese Navigation eignet sich übrigens auch zum Erstellen einer Sitemap.
 
-```
-<?php
+```php
 $path = rex_article::getCurrent()->getPathAsArray();
 $path1 = ((!empty($path[0])) ? $path[0] : '');
 $path2 = ((!empty($path[1])) ? $path[1] : '');
@@ -247,7 +244,6 @@ echo '<ul>';
     }
 
 echo '</ul>';
-?>
 ```
 
 <a name="custom-sidebar"></a>
@@ -255,8 +251,7 @@ echo '</ul>';
 
 Oftmals möchte man in der Seitenspalte als Navigation die Unterkategorien der gerade aktiven Hauptkategorie ausgeben. dazu könnte man beispielsweise die rex_category-Klasse nutzen.
 
-```
-<?php
+```php
 $thisCat = rex_category::get($this->getValue('article_id'));
 $children = $thisCat->getChildren();
 echo '<ul>';
@@ -278,8 +273,7 @@ In der ersten Zeile erfolgt der Zugriff auf die rex_category-Klasse, wobei gefil
 
 Für einen Brotkrumenpfad benötigt man nicht alle Kategorien, sondern nur den linear in die Tiefen gehenden Kategoriebaum des gerade aktiven Artikels. Dafür kann man `getParentTree()` nutzen, das ein Array aller Elternkategorien zurückgibt.
 
-```
-<?php
+```php
 // Aktuellen Artikel ermitteln
 $article = rex_article::getCurrent();
 // Array der Elternkategorien
@@ -296,7 +290,6 @@ $breadcrumb = '<ul>';
     }
 
 $breadcrumb .= '</ul>';
-?>
 ```
 
 <a name="custom-artikellisten"></a>
@@ -309,8 +302,7 @@ Oftmals will man neben den klassischen Navigationen noch verschiedene Artikel-Au
 
 Eine gern genutzte Funktion für Hauptkategorie-Seiten ist das "Anteasern" der Unterkategorien, z.B. in einem Kasten mit zusätzlichem Bild und einem Kurztext. Das Bild und der Kurztext wird mit Artikel-Metafeldern `category_pic` und `category_desc` realisiert, die natürlich vorher angelegt werden müssen.
 
-```
-<?php
+```php
 $cats = rex_category::get($this->getValue('article_id'));
 // Array mit allen Unterkategorien, die den Status online haben (Parameter true)
 $children = $cats->getChildren(true);
@@ -352,8 +344,7 @@ if (is_array($children)) {
 
 Man will nicht immer mit Unterkategorien arbeiten. Manchmal legt man auch mehrere Artikel innerhalb einer Kategorie an – ein typischer Anwendungsfall könnte ein Text sein, der auf mehrere Artikel aufgeteilt wird und für den man eine Navigation anbieten will. Das Code-Beispiel listet alle Artikel in der aktuellen Kategorie auf.
 
-```
-<?php
+```php
 $current_cat = rex_category::get(REX_ARTICLE_ID);
 // Array aller Artikel in der aktuellen Kategorie
 $articles = $current_cat->getArticles(true);
@@ -383,8 +374,7 @@ if (is_array($articles) && count($articles) > 0) {
 
 Diese Navigation ähnelt der obigen, aber sie zeigt nicht alle Artikel, sondern verlinkt nur den vorhergehenden und den nachfolgenden in der Reihenfolge der Artikelpriorität.
 
-```
-<?php
+```php
 $predecessor = '';
 $successor = '';
 $article_stack[] = array();
@@ -476,8 +466,7 @@ Eine andere Lösung wäre, die Navigation und Sprunganker mit einem Modul umzuse
 
 Die Erklärungen finden sich als Kommentare im Code.
 
-```
-<?php
+```php
 // Variable definieren für den Content
 $content = '';
 
@@ -527,7 +516,7 @@ Hier erzeugt ein Modul "Navigations-Anker" sowohl die Sprunganker als auch die N
 
 Im Eingabe-Code kann man den Navigationstitel und den Anker manuell setzen. Für den Anker könnte man auch den Titel nehmen und wie im Beispiel oben die Sonderzeichen mit `normalize()` entfernen.
 
-```
+```php
 <!-- *******************************************************
 NAVIGATIONS-ANKER INPUT
 ******************************************************** -->
@@ -551,7 +540,7 @@ NAVIGATIONS-ANKER INPUT
 
 Der Ausgabe-Code setzt immer den Sprunganker an die Stelle, wo sich das Modul befindet. Um die Navigation aufzubauen, müssen die Werte gesammelt werden, um sie an der passenden Stelle im Template auszugeben. Dafür werden die Methoden `rex::getProperty()` und `rex::setProperty` verwendet, die im Kapitel [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften) näher erläutert werden.
 
-```
+```php
 <!-- *******************************************************
 NAVIGATIONS-ANKER OUTPUT
 ******************************************************** -->
@@ -584,8 +573,7 @@ if ("REX_VALUE[1]" != '' && "REX_VALUE[2]" != '') {
 Im Template wird ganz zu Beginn das Array `anchors` definiert. dann wird der Inhalt geparst, um das Array mit Inhalten zu füllen – was in der Modulausgabe passiert.
 Anschließend stehen die Daten zur Verfügung, um daraus die Navigation, bestehend aus Anker und Navigationstitel zu bauen. Anschließend an die Navigation wird der bereits geparste Content ausgegeben.
 
-```
-<?php
+```php
 rex::setProperty('anchors', new ArrayIterator());
 
 // Parse Content
