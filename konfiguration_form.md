@@ -107,7 +107,7 @@ $formElements = [];
 
 $n = [];
 $n['label'] = '<label for="rex-out5-border-text">Vorname</label>';
-$n['field'] = '<input class="form-control"  type="text" id="rex-out5-border-text" name="config[nachname]" value="' . $addon->getConfig('vorname') . '"/>';
+$n['field'] = '<input class="form-control"  type="text" id="rex-out5-border-text" name="config[vorname]" value="' . $addon->getConfig('vorname') . '"/>';
 $formElements[] = $n;
 
 $n['label'] = '<label for="rex-out5-border-farbe">Nachname</label>';
