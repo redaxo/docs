@@ -8,6 +8,14 @@ Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die Co
 Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
 
 
+* [Instanzieren des Formulars](#Instanz)
+* [Formularfelder](#felder)
+* [Ausgabe](#ausgabe)
+* [Überprüfen ob Formular gesendet wurde](#versendet)
+* [Beipsiel](#beispiel)
+
+
+<a name="Instanz"></a>
 ## Instanzieren des Formulars
 
 ```php
@@ -16,7 +24,7 @@ $form = rex_config_form::factory("addonxyz");
 
 `addonxyz` ist der Namespace in der Tabelle `rex_config`
 
-
+<a name="felder"></a>
 ## Formularfelder
 ```php
 $field = $form->addTextField('field_key');
@@ -26,7 +34,7 @@ $field = $form->addTextField('field_key');
 
 Der Absende-Button und die Routinen zum Speichern der Daten werden automatisch hinzugefügt. 
 
-
+<a name="ausgabe"></a>
 ## Ausgabe
 Damit das Formular im REDAXO-Stil ausgegeben werden kann, wird es an das section-Fragment übergeben. 
 
@@ -38,6 +46,7 @@ $fragment->setVar('body', $form->get(), false);
 echo $fragment->parse('core/page/section.php');
 ```
 
+<a name="versendet"></a>
 ## Überprüfen ob Formular gesendet wurde 
 
 Um weiteren Code auszuführen nachdem das Formular abgesendet wurde, kann zusätzlich folgende Code eingesetzt werden:
@@ -48,6 +57,7 @@ if (rex_post($form_name.'_save') == 1) {
 }
 ```
 
+<a name="beispiel"></a>
 ## Beispiel
 
 Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt werden: 
