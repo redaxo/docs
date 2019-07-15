@@ -128,5 +128,3 @@ $fragment->setVar('body', $content, false);
 echo $fragment->parse('core/page/section.php');
 ```
 
-
-```
