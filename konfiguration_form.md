@@ -1,5 +1,5 @@
 
-# Addon-Konfigurations-Formulare
+# Konfigurations-Formulare für AddOns
 
 Möchte man individuelle Einstellungen durch den Nutzer festlegen lassen, benötigt man Formulare zur Pflege der AddOn-Konfiguration. 
 Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die Config selbst gespeichert werden. Mit `rex_config_form` hat sich das grundlegend geeändert.
