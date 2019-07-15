@@ -121,6 +121,8 @@ Developer kopiert und synct Module, Templates und Aktionen zwischen Dateisystem 
 
 ICEcoder ist ein Web-IDE / browserbasierter Code-Editor, der durch Plugins erweiterbar ist.
 
+**Installation in der AddOn-Verwaltungr**
+
 [**Github-Repo**](https://github.com/FriendsOfREDAXO/icecoder/)
 
 
