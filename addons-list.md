@@ -78,7 +78,7 @@ Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den T
 
 
 <a name="development"></a>
-## AddOns
+## Development
 
 <a name="adminer"></a>
 ### Adminer
