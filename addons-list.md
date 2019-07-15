@@ -83,7 +83,7 @@ Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den T
 <a name="adminer"></a>
 ### Adminer
 
-Adminer für REDAXO. Seit Version 1.3.0 kann der rex_sql_table code für die ausgewählte Tabelle in der Tabellenstruktur angezeigt werden. Sehr hilfreich bei der AddOn-Erstellung für die install.php. 
+Adminer für REDAXO. Seit Version 1.3.0 kann der `rex_sql_table` code für die ausgewählte Tabelle in der Tabellenstruktur generiert werden. Sehr hilfreich bei der AddOn-Erstellung für die install.php. 
 
 **Installation per Installer**
 
