@@ -38,6 +38,16 @@ $fragment->setVar('body', $form->get(), false);
 echo $fragment->parse('core/page/section.php');
 ```
 
+## Überprüfen ob Formular gesendet wurde 
+
+Um weiteren Code auszuführen nachdem das Formular abgesendet wurde, kann zusätzlich folgende Code eingesetzt werden:
+```php
+$form_name = $form->getName();
+if (rex_post($form_name.'_save') == 1) {
+  #Code
+}
+```
+
 ## Beispiel
 
 Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt werden: 
@@ -119,10 +129,4 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 
-Um weiteren Code auszuführen nachdem das Formular abgesendet wurde, kann folgender Code eingefügt werden:
-```
-$form_name = $form->getName();
-if (rex_post($form_name.'_save') == 1) {
-  #Code
-}
 ```
