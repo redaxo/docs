@@ -72,7 +72,8 @@ https://github.com/FriendsOfREDAXO/sked
 
 Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den Todo Workflow abbilden kann sondern auch für andere Zwecke verwendbar ist.
 
-https://github.com/FriendsOfREDAXO/aufgaben
+**Installation per Installer**
+[**Github-Repo**](https://github.com/FriendsOfREDAXO/aufgaben)
 
 
 <a name="development"></a>
