@@ -12,7 +12,7 @@ Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_con
 * [Formularfelder](#felder)
 * [Ausgabe](#ausgabe)
 * [Überprüfen ob Formular gesendet wurde](#versendet)
-* [Beipsiel](#beispiel)
+* [Beispiel](#beispiel)
 
 
 <a name="Instanz"></a>
