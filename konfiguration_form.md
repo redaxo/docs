@@ -2,7 +2,7 @@
 # Addon-Konfigurations-Formulare
 
 Möchte man individuelle Einstellungen durch den Nutzer festlegen lassen, benötigt man Formulare zur Pflege der AddOn-Konfiguration. 
-Hierzu mussten bis REDAXO 5.5.0 die Formulare manuell erstellt werden und die Config selbst gespeichert werden. Mit `rex_config_form` hat sich das grundlegend geeändert.
+Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die Config selbst gespeichert werden. Mit `rex_config_form` hat sich das grundlegend geeändert.
 `rex_config_form` erlaubt es Konfigurationen mittels `rex_form` zu erstellen. 
 
 Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
@@ -11,14 +11,14 @@ Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_con
 Instanzieren der `rex_config_form`
 
 ```php
-    $form = rex_config_form::factory("addonxyz");
+$form = rex_config_form::factory("addonxyz");
 ```
 
 `addonxyz` ist der Namespace in der Tabelle `rex_config`
 
 
 ```php
-    $field = $form->addTextField('field_key');
+$field = $form->addTextField('field_key');
 ```
 
 `field_key` ist der Schlüssel in der Tabelle `rex_config`
@@ -43,12 +43,11 @@ Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt we
 $addon = rex_addon::get('beispiel_addon');
 $form = rex_config_form::factory($addon->name);
 
-$field = $form->addInputField('text');
-$field->setLabel("Text");
+$field = $form->addInputField('vorname');
+$field->setLabel("Vorname");
 
-$field = $form->addInputField('farbe');
-$field->setLabel("Farbe");
-
+$field = $form->addInputField('nachname');
+$field->setLabel("Nachname");
 
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
