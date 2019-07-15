@@ -119,10 +119,10 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 
-
-
-
-
-
-
-
+Um weiteren Code auszuführen nachdem das Formular abgesendet wurde, kann folgender Code eingefügt werden:
+```
+$form_name = $form->getName();
+if (rex_post($form_name.'_save') == 1) {
+  #Code
+}
+```
