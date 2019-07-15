@@ -9,8 +9,8 @@
   - [Cheatsheat für Extensionpoints](#cheatsheet)
   - [Demo-AddOn](#demo)
   - [Developer - Module, Templates und Aktionen syncen](#developer)
+  - [ICEcoder](#icecoder)
   - [Project - Schnell mal eine PHP-Class einbinden](#project)
-  - [Strukturierte Daten - HilfsAddOn für Jason-LD](#strucdata)
   - [Theme - Verwalten aller Projektdateien für Frontend und Backend](#theme)
   - [YConverter - Migration REDAXO 4.x zu 5.x](#yconverter)
   - [YTraduko - Übersetzungshelfer](#ytraduko)
@@ -115,21 +115,21 @@ Developer kopiert und synct Module, Templates und Aktionen zwischen Dateisystem 
 
 [**Github-Repo**](https://github.com/FriendsOfREDAXO/developer)
 
+
+<a name="icecoder"></a>
+### ICEcoder Web-IDE
+
+ICEcoder ist ein Web-IDE / browserbasierter Code-Editor, der durch Plugins erweiterbar ist.
+
+[**Github-Repo**](https://github.com/FriendsOfREDAXO/icecoder/)
+
+
 <a name="project"></a>
 ### Project
 
 In REDAXO bereits vorhanden, ist das Project-AddOn. Hier können einfach eigene PHP-Classes und Assets eingebunden werden, die nach einem Update nicht gelöscht werden. Man erspart sich so also die Entwicklung eines eigenen AddOns, wenn man das System einfach nur mit einer PHP-Class bereichern möchte. 
 
 **Installation in der AddOn-Verwaltungr**
-
-
-<a name="strucdata"></a>
-### Strukturierte Daten (JSON-LD)
-
-Gerne vergessen, von Google aber gern gesehen. JSON-LD - Informationen auf der Website. Dieses AddOn hilft bei der Erstellung. 
-
-[**Github-Repo**](https://github.com/eaCe/strucdata)
-
 
 
 <a name="theme"></a>
