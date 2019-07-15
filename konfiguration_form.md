@@ -8,7 +8,7 @@ Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die Co
 Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
 
 
-## Instanzieren der `rex_config_form`
+## Instanzieren des Formulars
 
 ```php
 $form = rex_config_form::factory("addonxyz");
