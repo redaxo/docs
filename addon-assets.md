@@ -4,6 +4,7 @@
 - [Speicherort](#speicherort)
 - [Dateien einbinden](#einbinden)
 - [Sass](#sass)
+- [Nutzung von JQuery im Backend / rex:ready](#rexready)
 
 <a name="ueber"></a>
 ## Über Asssets
@@ -84,5 +85,31 @@ if (rex::isBackend() && rex::getUser())
         }
     }
 ```
+
+<a name="rexready"></a>
+
+## Nutzung von JQuery im Backend / Event: rex:ready
+
+Da REDAXO im Backend PJAX nutzt, sollte anstelle `document:ready` das `rex:ready` event als Auslöser für eigene Skripte und Plugins verwendet werden. 
+Das rex:ready event greift immer auch, wenn PJAX nicht im Einsatz ist. 
+
+Anwendung: 
+
+```js
+$(document).on('rex:ready', function() {
+  // eigener Code
+});
+```
+
+Beispiel: 
+
+Das findet sich so zum Beispiel im be_style-Plugin. container ist immer der Container, der ausgetauscht wurde. Initial bei document:ready ist es der <body>.
+
+```
+$(document).on('rex:ready', function (event, container) {
+    container.find('.selectpicker').selectpicker();
+});
+```
+
 
 
