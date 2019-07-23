@@ -39,9 +39,10 @@ Der Absende-Button und die Routinen zum Speichern der Daten werden automatisch h
 Damit das Formular im REDAXO-Stil ausgegeben werden kann, wird es an das section-Fragment übergeben. 
 
 ```php
+$addon = rex_addon::get('beispiel_addon');
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
-$fragment->setVar('title', $this->i18n('example_title'), false);
+$fragment->setVar('title', $addon->i18n('example_title'), false);
 $fragment->setVar('body', $form->get(), false);
 echo $fragment->parse('core/page/section.php');
 ```
