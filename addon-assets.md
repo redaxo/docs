@@ -3,6 +3,7 @@
 - [Über](#plugin)
 - [Speicherort](#speicherort)
 - [Dateien einbinden](#einbinden)
+  - [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte)   
 - [Sass](#sass)
 - [Nutzung von JQuery im Backend / rex:ready](#rexready)
 
@@ -55,6 +56,21 @@ if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'addonkey/unterse
 
 }
 ```
+
+<a name="javascripte"></a>
+### Javascripte (JS_IMMUTABLE, Async, JS_DEFERED)
+
+rex_view::addJsFile bietet weitere Funktionen um das Caching sowie das Ladeverhalten der Javascripte zu beinflussen. 
+
+Hier ein Beispiel mit allen möglichen Optionen: 
+
+```js
+rex_view::addJsFile(
+  rex_url::addonAssets('my_addon', 'js/myscript.min.js'),
+  [rex_view::JS_IMMUTABLE => false, rex_view::JS_ASYNC => true, rex_view::JS_DEFERED => true]
+);
+```
+
 
 <a name="sass"></a>
 ## Sass
