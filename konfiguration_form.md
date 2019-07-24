@@ -62,26 +62,6 @@ if (rex_post($form_name.'_save')) {
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
-$form = rex_config_form::factory($addon->name);
-
-$field = $form->addInputField('vorname');
-$field->setLabel("Vorname");
-
-$field = $form->addInputField('nachname');
-$field->setLabel("Nachname");
-
-$fragment = new rex_fragment();
-$fragment->setVar('class', 'edit', false);
-$fragment->setVar('title', "Beispiel-Einstellungen", false);
-$fragment->setVar('body', $form->get(), false);
-echo $fragment->parse('core/page/section.php');
-
-```
-
-Zum Vergleich: Beispiel des gleichen Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
-
-```php
-$addon = rex_addon::get('beispiel_addon');
 
 $content = '';
 
@@ -103,11 +83,11 @@ $formElements = [];
 
 $n = [];
 $n['label'] = '<label for="rex-out5-border-text">Vorname</label>';
-$n['field'] = '<input class="form-control"  type="text" id="rex-out5-border-text" name="config[vorname]" value="' . $addon->getConfig('vorname') . '"/>';
+$n['field'] = '<input class="form-control"  type="text" name="config[vorname]" value="' . $addon->getConfig('vorname') . '"/>';
 $formElements[] = $n;
 
 $n['label'] = '<label for="rex-out5-border-farbe">Nachname</label>';
-$n['field'] = '<input class="form-control" type="text" id="rex-out5-border-farbe" name="config[nachname]" value="' . $addon->getConfig('nachname'). '"/>';
+$n['field'] = '<input class="form-control" type="text" name="config[nachname]" value="' . $addon->getConfig('nachname'). '"/>';
 $formElements[] = $n;
 
 $fragment = new rex_fragment();
@@ -118,7 +98,7 @@ $content .= '
         <fieldset class="rex-form-action">';
 $formElements = [];
 $n = [];
-$n['field'] = '<div class="btn-toolbar"><button id="rex-out5-border-save" type="submit" name="config-submit" class="btn btn-save rex-form-aligned" value="1">Einstellungen speichern</button></div>';
+$n['field'] = '<div class="btn-toolbar"><button type="submit" name="config-submit" class="btn btn-save rex-form-aligned" value="1">Einstellungen speichern</button></div>';
 $formElements[] = $n;
 $fragment = new rex_fragment();
 $fragment->setVar('elements', $formElements, false);
