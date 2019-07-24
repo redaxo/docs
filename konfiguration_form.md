@@ -1,17 +1,16 @@
 
 # Konfigurations-Formulare für AddOns
 
-Möchte man individuelle Einstellungen durch den Nutzer festlegen lassen, benötigt man Formulare zur Pflege der AddOn-Konfiguration. 
-Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die Config selbst gespeichert werden. Mit `rex_config_form` hat sich das grundlegend geeändert.
-`rex_config_form` erlaubt es Konfigurationen mittels `rex_form` zu erstellen. 
+Möchte man individuelle Einstellungen durch den Redakteur festlegen lassen, benötigt man Formulare zur Pflege der AddOn-Konfiguration. Diese werden in der Tabelle `rex_config` abgespeichert und können per `rex_config`-Klasse abgerufen oder gespeichert werden. 
 
-Zuständig ist dafür ist die auf der `rex_form_base` aufsetzende Class `rex_config_form`.
+Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die übermittelten Werte in einem Formular manuell abgerufen und abgespeichert werden. Mit der Klasse `rex_config_form` hat sich das grundlegend geeändert. `rex_config_form` erlaubt es, Formulare mittels `rex_form` zu erstellen und diese direkt zu speichern. Die Klasse `rex_config_form` basiert auf `rex_form_base`.
 
+Somit stehen `rex_config_form` alle Eingabe- und Validierungsmöglichkeiten zur Verfügung, die in der Doku zu `rex_form` aufgezählt werden.
 
 * [Instanzieren des Formulars](#Instanz)
 * [Formularfelder](#felder)
 * [Ausgabe](#ausgabe)
-* [Überprüfen ob Formular gesendet wurde](#versendet)
+* [Überprüfen, ob Formular gesendet wurde](#versendet)
 * [Beispiel](#beispiel)
 
 
@@ -48,21 +47,18 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 <a name="versendet"></a>
-## Überprüfen ob Formular gesendet wurde 
+## Überprüfen, ob das Formular gesendet wurde 
 
-Um weiteren Code auszuführen nachdem das Formular abgesendet wurde, kann zusätzlich folgende Code eingesetzt werden:
+Um weiteren Code auszuführen, nachdem das Formular abgesendet wurde, kann zusätzlich folgende Code eingesetzt werden:
 ```php
 $form_name = $form->getName();
-if (rex_post($form_name.'_save') == 1) {
+if (rex_post($form_name.'_save')) {
   #Code
 }
 ```
 
 <a name="beispiel"></a>
 ## Beispiel
-
-Mit `rex_config_form` kann ein Konfigurationsformular also wie folgt erstellt werden: 
-
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
@@ -81,7 +77,6 @@ $fragment->setVar('body', $form->get(), false);
 echo $fragment->parse('core/page/section.php');
 
 ```
-
 
 Zum Vergleich: Beispiel des gleichen Konfigurationsformulars vor REDAXO Version 5.4.0 (manuell gebaute Formular) 
 
