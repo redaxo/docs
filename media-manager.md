@@ -8,13 +8,23 @@
 
 <a name="prinzip"></a>
 ## Prinzip
-Prinzip und Effekte
+
+**Prinzip und Effekte**
+
 Der Media Manager ist ein Basis-AddOn von REDAXO, das bereits mit der Grundinstallation installiert und aktiviert wird.
-Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden (Beispiel siehe unten).
+Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden.
 
-Die durch den Media Manager erstellten Bilddateien werden in einem eigenen Cache abgelegt, der bei Bedarf auch für jeden einzelnen Bildtyp gelöscht werden kann.
+Erzeugung der URL:
 
-Die am häufigsten benutzten Effekte für den Media Manager sind resize und crop. Damit können Bilder auf eine einheitliche Größe gebracht werden (siehe Beispiel unten).
+```php
+<?= rex::getServer() ?>index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
+```
+
+> MediaTypeName = Der MediaManager-Typ, MediaFileName = Dateiname des Mediums. Der Pfad zum Medium muss nicht angegeben werden.  
+
+Die durch den Media Manager erstellten Dateien, werden in einem eigenen Cache abgelegt, der bei Bedarf auch für jeden einzelnen Typ gelöscht werden kann.
+
+Häufig benutzte Effekte für den Media Manager sind resize und crop. Damit können Bilder auf eine einheitliche Größe gebracht und zugeschnitten werden (siehe Beispiel unten).
 
 <a name="effekte"></a>
 ## Effekte
@@ -23,7 +33,7 @@ Folgende Effekte stehen zur Verfügung:
 
 Effekt| Beschreibung
 ------------- | -------------
-convert2img | Konvertiert eine Quelldatei in ein Web-Format. Mögliche Formate für die Bildquelle: .pdf, .ps, .psd, .tif,     .tiff, .bmp, .eps, .ico. Mögliche Formate für das Ziel: .jpg, .png
+convert2img | Konvertiert eine Quelldatei in ein Web-Format. Mögliche Formate für die Bildquelle: .pdf, .ps, .psd, .tif,     .tiff, .bmp, .eps, .ico. Mögliche Formate für das Ziel: .jpg, .png **ImageMagick** sollte über *exec* verfügbar sein. 
 crop | Beschneidet ein Bild auf die angegebene Größe (Angabe in Pixel)
 filter_blur | Weichzeichnungsfilter
 filter_colorize | Einfärben eines Bildes
@@ -40,7 +50,7 @@ rotate | Effekt zum Drehen eines Bilds (90, 180 oder 270 Grad)
 rounded_corners | runde Ecken
 workspace | Hier kann eine Zeichenfläche inklusive Hintergrundfarbe definiert werden, auf der das Medium platziert wird.
 
-Alle Effekte können kaskadiert, also hintereinander als "Bearbeitungskette" werden.
+Alle Effekte können kaskadiert, also hintereinander als "Bearbeitungskette" verwendet werden.
 
 <a name="konfiguration"></a>
 ## Konfiguration des Media Managers
