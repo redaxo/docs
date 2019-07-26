@@ -94,18 +94,19 @@ Diese Medientypen können auch für eigene Zwecke verwendet werden, beispielswei
 
 Beispiel einer Modulausgabe:
 
-    <?php
-    $imagelist = explode(',', "REX_MEDIALIST[1]");
-    $mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medientyp';
-    ?>
+```php
+$imagelist = explode(',', "REX_MEDIALIST[1]");
+$mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medientyp';
+?>
     
-    <ul class="meinebildgalerie">
-    <?php foreach ($imagelist as $img) : ?>
-        <li class="meinebildergalerie_li">
-            <img src="<?= rex::getServer() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
-        </li>    
-    <?php endforeach ?>
-    </ul>
+<ul class="meinebildgalerie">
+ <?php foreach ($imagelist as $img) : ?>
+   <li class="meinebildergalerie_li">
+       <img src="<?= rex::getServer() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
+   </li>    
+<?php endforeach ?>
+</ul>
+```
 
 Dieses Beispielmodul gibt im Backend die Bilder aus der `REX_MEDIALIST[1]` in einer Größe von maximal 246 x 246 Pixel aus; im Frontend werden die Bilder mit dem selbst definierten Medientyp `mein_eigener_medientyp` ausgegeben.
 
