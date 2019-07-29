@@ -17,7 +17,7 @@ Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Me
 Erzeugung der URL:
 
 ```php
-<?= rex::getServer() ?>index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
+<?= rex_url::frontend() ?>index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
 ```
 
 > MediaTypeName = Der MediaManager-Typ, MediaFileName = Dateiname des Mediums. Der Pfad zum Medium muss nicht angegeben werden.  
@@ -102,7 +102,7 @@ $mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medien
 <ul class="meinebildgalerie">
  <?php foreach ($imagelist as $img) : ?>
    <li class="meinebildergalerie_li">
-       <img src="<?= rex::getServer() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
+       <img src="<?= rex_url::frontend() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
    </li>    
 <?php endforeach ?>
 </ul>
