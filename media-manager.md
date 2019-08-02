@@ -14,7 +14,12 @@
 Der Media Manager ist ein Basis-AddOn von REDAXO, das bereits mit der Grundinstallation installiert und aktiviert wird.
 Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden.
 
-Erzeugung der URL:
+**Erzeugung der URL:**
+
+```php
+$url = rex_url::frontend().rex_media_manager::getUrl($type,$file); 
+```
+alternativ:  
 
 ```php
 <?= rex_url::frontend() ?>index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
@@ -98,11 +103,11 @@ Beispiel einer Modulausgabe:
 $imagelist = explode(',', "REX_MEDIALIST[1]");
 $mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medientyp';
 ?>
-    
+
 <ul class="meinebildgalerie">
  <?php foreach ($imagelist as $img) : ?>
    <li class="meinebildergalerie_li">
-       <img src="<?= rex_url::frontend() ?>index.php?rex_media_type=<?= $mediatype ?>&rex_media_file=<?= $img ?>">
+       <img src="<?= rex_url::frontend().rex_media_manager::getUrl($mediatype,$img); ?>">
    </li>    
 <?php endforeach ?>
 </ul>
