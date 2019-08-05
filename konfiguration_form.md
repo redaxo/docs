@@ -57,7 +57,7 @@ if (rex_post($form_name.'_save')) {
   #Code
 }
 ```
-<a name="beispiel1"></a
+<a name="beispiel1"></a>
 ## Beispiel eines rex_config_form Formulars
 
 
