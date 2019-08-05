@@ -121,6 +121,7 @@ Es gibt insgesamt 3 Fehlerseiten in REDAXO, davon sind aktuell zwei änderbar:
 - Whooops Fehlerseite, die man nur sieht wenn man als Admin im Backend eingeloggt ist. Diese enthält Debugging-Informationen und taucht sowohl im Front- und Backend auf. Sie ist nicht änderbar.
 
 - die ***Oooops Fehlerseite*** im REDAXO-Backend (als Fragment `core/be_ooops.php` überschreibbar), wenn man nicht als Admin user im Backend eingeloggt ist
+
 ![Ooops](/assets/v5.7.0-fragmente_ooops.png)
 
 - Die ***Oooops Fehlerseite im Frontend*** (als Fragment `core/fe_ooops.php` überschreibbar), wenn man nicht als Admin-User im Backend eingeloggt ist
