@@ -61,7 +61,7 @@ if (rex_post($form_name.'_save')) {
 ## Beispiel eines rex_config_form Formulars
 
 
-``php
+```php
 $addon = rex_addon::get('addonxyz');
 $form = rex_config_form::factory($addon->name);
 
