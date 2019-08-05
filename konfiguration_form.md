@@ -73,7 +73,7 @@ $field->setLabel('Nachname');
 
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
-$fragment->setVar('title', "Matomo Settings", false);
+$fragment->setVar('title', "Settings", false);
 $fragment->setVar('body', $form->get() , false);
 echo $fragment->parse('core/page/section.php');
 
