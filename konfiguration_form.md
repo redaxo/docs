@@ -58,7 +58,7 @@ if (rex_post($form_name.'_save')) {
 ```
 
 <a name="beispiel"></a>
-## Beispiel
+## Beispiel einer klassischen Konfiguration ohne rex_config_form
 
 ```php
 $addon = rex_addon::get('beispiel_addon');
