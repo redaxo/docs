@@ -11,7 +11,8 @@ Somit stehen `rex_config_form` alle Eingabe- und Validierungsmöglichkeiten zur 
 * [Formularfelder](#felder)
 * [Ausgabe](#ausgabe)
 * [Überprüfen, ob Formular gesendet wurde](#versendet)
-* [Beispiel](#beispiel)
+* [Beispiel-Formular mit rex_config_form](#beispiel1)
+* [Beispiel-Formular klassisch](#beispiel2)
 
 
 <a name="Instanz"></a>
@@ -56,8 +57,30 @@ if (rex_post($form_name.'_save')) {
   #Code
 }
 ```
+<a name="beispiel1"></a
+## Beispiel eines rex_config_form Formulars
 
-<a name="beispiel"></a>
+
+``php
+$addon = rex_addon::get('addonxyz');
+$form = rex_config_form::factory($addon->name);
+
+$field = $form->addInputField('text', 'vorname', null, ["class" => "form-control"]);
+$field->setLabel('Vroname'));
+
+$field = $form->addInputField('text', 'nachname', null, ["class" => "form-control"]);
+$field->setLabel('Nachname');
+
+$fragment = new rex_fragment();
+$fragment->setVar('class', 'edit', false);
+$fragment->setVar('title', "Matomo Settings", false);
+$fragment->setVar('body', $form->get() , false);
+echo $fragment->parse('core/page/section.php');
+
+```
+
+
+<a name="beispiel2"></a>
 ## Beispiel einer klassischen Konfiguration ohne rex_config_form
 
 ```php
