@@ -253,7 +253,7 @@ Fügt dem Formular ein Textarea-Feld hinzu. Beispiel: `$field = $form->addTextAr
 Fügt dem Formular ein Select/Auswahl-Feld hinzu. Das Beispiel zeigt die Optionen für das Select-Feld:
 
 ```
-$field = $form->addSelectField('bestellung','',['class'=>'form-control selectpicker']); // die Klasse selectpicker aktiviert den Selectpicker von Bootstrap
+$field = $form->addSelectField('bestellung',$value = null,['class'=>'form-control selectpicker']); // die Klasse selectpicker aktiviert den Selectpicker von Bootstrap
 $field->setAttribute('multiple', 'multiple');
 $field->setLabel("Select");
 $select = $field->getSelect();
