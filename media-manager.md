@@ -1,5 +1,6 @@
 # Media Manager
 - [Prinzip](#prinzip)
+- [Erzeugung der URL](#url)
 - [Effekte](#effekte)
 - [Konfiguration des Media Managers](#konfiguration)
 - [Beispiel: Einen Effekt definieren und anwenden](#beispiel)
@@ -11,18 +12,22 @@
 
 **Prinzip und Effekte**
 
-Der Media Manager ist ein Basis-AddOn von REDAXO, das bereits mit der Grundinstallation installiert und aktiviert wird.
-Das AddOn dient zum Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden.
+Das AddOn erlaubt das Anpassen von Grafiken und Handling von Dateien anhand von Mediatypen. Die Mediatypen werden in der Verwaltung des AddOns erstellt und konfiguriert. Jeder Mediatyp kann beliebig viele Effekte enthalten, die auf das aktuelle Medium angewendet werden. Zum Einbinden eines Mediums muss dazu der Mediatyp in der URL notiert werden.
 
-**Erzeugung der URL:**
+<a name="url"></a>
+## Erzeugung der URL:
+
+### Mittels PHP-Methode
 
 ```php
-$url = rex_url::frontend().rex_media_manager::getUrl($type,$file); 
+$url = rex_media_manager::getUrl($type,$file); 
 ```
-alternativ:  
+> Der Pfad zum Medium muss nicht angegeben werden.
+
+### Direkter Auruf per URL 
 
 ```php
-<?= rex_url::frontend() ?>index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
+index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
 ```
 
 > MediaTypeName = Der MediaManager-Typ, MediaFileName = Dateiname des Mediums. Der Pfad zum Medium muss nicht angegeben werden.  
