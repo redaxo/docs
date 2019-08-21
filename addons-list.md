@@ -37,9 +37,13 @@ Der Natur der Sache ist geschuldet, dass diese Aufstellung immer unvollständig 
 
 Eine multidomainfähige Lösung für schöne Urls und Seo-Optimierung
 
+**Installation per Installer**
+
 ### YForm - der Datenbankmanager
 
 Mit yform lassen sich Datentabellen anlegen und verwalten, Formulare aufbauen und verarbeiten, E-Mail Templates erstellen und einiges mehr.
+
+**Installation per Installer**
 
 <a name="backend"></a>
 ## Backend AddOns
@@ -50,9 +54,13 @@ AddOns, die für die Programmierung, und die Verwaltung im Backend hilfreich sin
 
 Mit MBlock lassen sich Module erstellen, die mehrere gleichartige Inhaltselemente enthalten. Ideal für Galerien, Teamseiten, Akkordeons usw.
 
+**Installation per Installer**
+
 ### Quick Navigation
 
 Das AddOn ermöglicht den schnellen Zugriff auf die ganze Struktur im Backend. Es sollte in keinem Projekt fehlen mit einem Umfang von mehr als zwei Seiten.
+
+**Installation per Installer**
 
 <a name="applikationen"></a>
 ## Applikationen, thematische AddOns
@@ -63,7 +71,9 @@ AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
 
 ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
 
-https://github.com/FriendsOfREDAXO/sked
+**Installation per Installer**
+
+[**Github-Repo**]https://github.com/FriendsOfREDAXO/sked)
 
 [mehr lesen ...](https://redaxo.org/cms/addons/sked-der-kalender/)
 
