@@ -28,9 +28,10 @@
 - Tutorials
     - [Installation](/{{path}}/{{version}}/tutorial-installation)
     - [Templates nutzen](/{{path}}/{{version}}/tutorial-templates)
-    - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-templates)
+    - [Erstellen einer Navigation](/{{path}}/{{version}}/tutorial-navigation)
     - [Modulausgaben erweitern](/{{path}}/{{version}}/tutorial-modulausgaben) 
     - [Medienkategorie vorselektieren](/{{path}}/{{version}}/tutorial-medienkategorie-vorselektieren)
     - [Aktionen - Moduleingaben überprüfen](/{{path}}/{{version}}/tutorial-aktionen) 
     - [Datenbankzugriff - rex_sql Klasse](/{{path}}/{{version}}/tutorial-rexsql)
     - [ISO zu UTF-8 umwandeln](/{{path}}/{{version}}/convert-iso-utf8)
+    - [Kategorieeigenschaften - Metainfo-Addon](/{{path}}/{{version}}/tutorial-meta)
