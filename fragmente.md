@@ -12,26 +12,34 @@
 
 Fragmente werden in REDAXO eingesetzt, um wiederkehrende Code-Schnipsel übersichtlich zu verwalten. Fragmente sind PHP-Dateien und werden bei der Ausgabe geparst, sodass Variablen ausgegeben und verarbeitet werden können. In REDAXO selbst werden zahlreiche Fragmente für die Ausgabe des Backends verwendet. Diese Fragmente können auch als Ausgangsbasis für eigene Fragmente genutzt werden. Grundsätzlich wird ein Fragment in dieser Form angesprochen und ausgegeben:
 
-    $fragment = new rex_fragment();
-    $fragment->parse('meinfragment.php');
+```php
+$fragment = new rex_fragment();
+echo $fragment->parse('meinfragment.php');
+```
     
 Fragmente, die in AddOns im Verzeichnis `fragments` abgelegt werden, werden ohne Pfadangabe gefunden.
 
 <a name="variablen"></a>
 ## Variablen in Fragmenten
 
-Fragmente können Variablen ausgeben, die zuvor dem Fragment per `setVar` zugewiesen wurden.
+Fragmente können Variablen ausgeben, die zuvor dem Fragment per `setVar` zugewiesen wurden. 
 
-    $fragment->setVar('meinevar','Ich bin der Inhalt',false);
+```php
+$fragment->setVar('meinevar','Ich bin der Inhalt',false);
+```
     
-Die Ausgabe im Fragment erfolgt per
+Das Auslesen der Variablen rfolgt per
 
-    echo $this->meinevar;
+```php
+$this->meinevar;
+```
     
-oder
+alternativ: 
 
-    echo $this->getVar('meinevar');
-    
+```php
+$this->getVar('meinevar');
+```   
+
 Wenn eine Variable vom Typ `Array` übergeben wird, so kann dieses Array durchlaufen werden:
 
     $fragment->setVar('monate',['Januar','Februar','März','April','Mai','Juni','Juli','August','September','...']);
