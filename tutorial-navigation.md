@@ -9,7 +9,8 @@ Es empfiehlt sich, ein eigenes Template für die Navigation zu nutzen und dieses
 Eine einfache Navigation könnte so aussehen:
 
 
-```php <?php 
+```php
+<?php 
 $nav = rex_navigation::factory();
 
 echo '<div id="navi">';
