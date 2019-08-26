@@ -46,11 +46,13 @@ Wenn eine Variable vom Typ `Array` übergeben wird, so kann dieses Array durchla
     
 Ausgabe im Fragment:
 
+```php
     <ul>
     <?php foreach ($this->monate as $monat) : ?>
       <li><?= $monat ?></li>
     <?php endforeach ?>
     </ul>
+```    
 
 <a name="fragmente-nutzen"></a> 
 ## REDAXO-Fragmente nutzen
@@ -65,7 +67,8 @@ Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginie
 <a name="ausgabe-paginierung"></a>
 #### Modulausgabe für die Paginierung
     
-    // Anzahl Datensätze pro Seite
+```php 
+// Anzahl Datensätze pro Seite
     $rows_per_page = 15;
     
     if ("REX_VALUE[1]") {
@@ -108,11 +111,15 @@ Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginie
 
     // Paginierung ausgeben
     echo $fragment->parse('core/navigations/pagination.php');
-
+    
+```    
+    
 Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes AddOn in das Verzeichnis `fragments` kopiert und geändert werden. Wenn es dort unter dem Namen `mypagination.php` abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
 
-    echo $fragment->parse('mypagination.php');
-    
+```php
+echo $fragment->parse('mypagination.php');
+```
+
 <a name="fragmente-ueberschreiben"></a> 
 ## REDAXO-Fragmente überschreiben
 
