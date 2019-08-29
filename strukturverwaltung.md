@@ -10,7 +10,7 @@
     - [Prio](#prio)
     - [Kategorien und Artikel umbenennen](#rename)
     - [Artikel-Template ändern](#template)
-    - [Metadaten einer Kategorie](#meta)
+    - [Metadaten/Einstellungen einer Kategorie](#meta)
 - [Sprachen](#sprache)
 - [Weitere strukturbildende Funktionen](#more)
   - [Artikel / Kategorien Kopieren und Verschieben](#copy)
@@ -73,8 +73,10 @@ Das umbenennen einer Kategorie oder eines Arikels erfolgt über die “Ändern�
 Nach Aufruf der `Ändern`-Funktion erscheint beim Artikel ein Auswahlfeld zur Festlegung des Templates. Nach Bestätigung mit `Artikel speichern` wird die Auswahl übernommen. 
 
 <a name="meta"></a>
-#### Metadaten einer Kategorie (optional) 
-Anders als bei Artikeln werden Metadaten der Kategorien (optional) direkt in der Struktur bearbeitet. Hierzu ruft man die `Ändern`-Funktion auf. Es erscheint (sofern im Projekt vorgesehen) ein (+)-Symbol, das es ermöglicht, weitere Einstellungen zur Kategorie durchzuführen. 
+#### Metadaten / Einstellungen einer Kategorie
+Anders als bei Artikeln werden Metadaten der Kategorien direkt in der Struktur bearbeitet. Hierzu ruft man die `Ändern`-Funktion auf. Es erscheint ein `(+)`-Symbol, das es ermöglicht, weitere Einstellungen zur Kategorie durchzuführen. 
+
+>Das `(+)`-Symbol erscheint nur, wenn Metafelder für die Kategorie hinterlegt wurden. 
 
 <a name="sprache"></a>
 ### Sprachen
