@@ -16,9 +16,9 @@
   * [Artikel in Kategorie umwandeln](#convertcat)
   * [Inhalte kopieren](#copycontent)
   * [Artikel / Kategorien Kopieren und Verschieben](#move)
-  * [Metadaten](#metadaten)
   * [Sprachen](#sprachen)
     * [Inhalte zwischen Sprachen kopieren ](#copylang)
+* [Metadaten](#metadaten)
 * [Bereiche](#bereiche)
 * [Arbeitsversion / Liveversion](#version)
 * [History](#history)
@@ -129,9 +129,6 @@ Im Reiter `Funktionen` stehen je nach Artikeltyp folgende Funktionen zur Verfüg
 ### Artikel / Kategorien kopieren und verschieben
 [Siehe: Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung#convert)
 
-<a name="metadaten"></a>
-## Metadaten
-Im Reiter `Metadaten` können zusätzliche Einstellungen für den Artikel durchgeführt werden. Dies können u.a. Timer-Einstellungen, Informationen für Suchmaschinen und soziale Netzwerke sein. Die Metadaten werden individuell für die jeweilige Webpräsenz festgelegt und werden durch das Metainfo-AddOn bereitgestellt.
 
 <a name="sprachen"></a>
 ## Sprachen
@@ -145,6 +142,16 @@ Die Sprachen werden vom Admin verwaltet und bereitgestellt.
 <a name="copylang"></a>
 ### Inhalte zwischen Sprachen kopieren 
 Im Reiter `Funktionen` steht die Kopierfunktion `Inhalte kopieren` zur Verfügung. Hiermit kann ein ganzer Artikel mit all seinen Blöcken identisch in eine andere Sprache zur Übersetzung übertragen werden. Befinden sich in der gewünschten Zielsprache bereits Inhalte, werden die Blöcke der Quelle ans Ende des Zielartikels gesetzt.
+
+<a name="metadaten"></a>
+## Metadaten
+Im Reiter `Metadaten` können zusätzliche Einstellungen für den Artikel durchgeführt werden. Dies können u.a. Timer-Einstellungen, Informationen für Suchmaschinen und soziale Netzwerke sein. Die Metadaten werden individuell für die jeweilige Webpräsenz festgelegt und werden durch das Metainfo-AddOn bereitgestellt und können sich je nach Kategorie unterscheiden.
+
+Neben Artikeln können auch für Kategorien und Medien Metadaten verwendet werden. Diese werden an folgenden Stellen gepflegt:
+
+[Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung#meta)
+
+[Medienpool](/{{path}}/{{version}}/medienpool#detail)
 
 <a name="bereiche"></a>
 ## Bereiche
@@ -173,4 +180,3 @@ History-Gegenüberstellung
 Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über den Schieberegler oder das Drop-Down-Menü können die einzelnen Versionen ausgewählt und im rechten Fenster betrachtet werden.
 
 Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen`. Hierbei wird die aktuelle Version als neue Version gespeichert, sodass es jederzeit möglich ist, den Vorgang rückgängig zu machen. 
-
