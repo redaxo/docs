@@ -46,7 +46,7 @@ YConverter ist nicht im Installer verfügbar und muss in GitHub heruntergeladen 
 - [Zum GitHub-Repo](https://github.com/yakamara/yconverter/tree/redaxo4)
 - [Direkter Download](https://github.com/yakamara/yconverter/archive/redaxo4.zip)
 
-Man erhält eine Zip-Datei mit der Bezeichnung yconverter-master.zip. Die Datei muss lokal entpackt werden und der Ordner in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren. 
+Man erhält eine Zip-Datei mit der Bezeichnung `redaxo4.zip`. Die Datei muss lokal entpackt werden und der Ordner ggf. in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren. 
 
 >Tipp: Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um das Zip direkt auf dem Server hochzuladen und zu entpacken. 
 
