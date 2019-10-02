@@ -98,9 +98,11 @@ Die konvertierten Tabellen können mit dem Formular direkt in die REDAXO 5 Präs
 
 > Hinweis: Nach der Übertragung wird keine Meldung angezeigt. Es sollte in der REDAXO 5 Präsenz geprüft werden ob die Daten übertragen wurden. 
 
-### Variante 2 
+### Variante 2 Manueller Weg
 
 Ist eine direkte Übertragung nicht möglich, da man z.B. keinen Zugriff auf die externe Datenbank von extern hat, ist eine manuelle Übertragung der Daten erforderlich. Hierzu wird in YConverter Adminer mitgeliefert. 
+
+> **Hinweis** Es ist ggf. erforderlich, dass in der REDAXO 5 Präsenz vorab z.B. Metainfo-Felder oder sonstige Tabellenspalten von AddOns, die in der REDAXO 4 Präsenz existieren, vorab angelegt werden müssen. Hierbei sollte man auf die SQL-Fehlermeldungen achten. 
 
 1. Den Adminer in REDAXO 4 in neuem Tab aufrufen.
 2. Im Adminer von REDAXO 4 oben links auf `Exportieren` klicken.
