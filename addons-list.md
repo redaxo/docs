@@ -67,15 +67,17 @@ Das AddOn ermöglicht den schnellen Zugriff auf Artikel und YForm-Datensätze, �
 
 AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
 
+
+### Aufgaben
+
+Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den Todo Workflow abbilden kann sondern auch für andere Zwecke verwendbar ist.
+
 ### Sked-Kalender
 
 Sked ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
 
 [mehr lesen ...](https://redaxo.org/cms/addons/sked-der-kalender/)
 
-### Aufgaben
-
-Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den Todo Workflow abbilden kann sondern auch für andere Zwecke verwendbar ist.
 
 <a name="development"></a>
 ## Development
@@ -102,7 +104,7 @@ Das Cheatsheet-AddOn scant die REDAXO-Installation nach Extension-Points im Core
 
 Das Demo-AddOn zeigt wie AddOns entwickelt und dokumentiert werden. Gut kommentierter Quellcode, Hilfe und Hints im AddOn selbst helfen beim Verständnis der AddOn-Programmierung und der Dokumentation. Es liefert auch ein Doku-Plugin, das den Aufbau einer Hilfe für das eigne AddOn ermöglicht.   
 
-[**Github-Repo:**](https://github.com/FriendsOfREDAXO/demo_addon)
+[**Github-Repo**](https://github.com/FriendsOfREDAXO/demo_addon)
 
 
 <a name="developer"></a>
@@ -110,15 +112,11 @@ Das Demo-AddOn zeigt wie AddOns entwickelt und dokumentiert werden. Gut kommenti
 
 Developer kopiert und synct Module, Templates und Aktionen zwischen Dateisystem und Datenbank, So können diese direkt über einen Dateieditor oder per FTP bearbeitet werden, statt über das REDAXO-Backend.
 
-[**Github-Repo**](https://github.com/FriendsOfREDAXO/developer)
-
 
 <a name="icecoder"></a>
 ### ICEcoder Web-IDE
 
 ICEcoder ist ein Web-IDE / browserbasierter Code-Editor, der durch Plugins erweiterbar ist.
-
-[**Github-Repo**](https://github.com/FriendsOfREDAXO/icecoder/)
 
 
 <a name="project"></a>
@@ -131,7 +129,6 @@ In REDAXO bereits vorhanden, ist das Project-AddOn. Hier können einfach eigene 
 
 Das Theme-AddOn erleichtert die Verwaltung aller für das Projekt erforderlichen Prajektdateien in einem zusätzlichen /theme-Ordner im Web-Root. Theme erlaubt es auch das System oder die Website mit zusätzlichen CSS, JS und PHP-Classes zu breichern. Ist das Developer-AddOn installiert, synct es sich mit diesem um die Modul- und Template-Dateien an einer zugänglicheren Stelle bereitzustellen. 
 
-[**Github-Repo**](https://github.com/FriendsOfREDAXO/theme)
 
 <a name="yconverter"></a>
 ### YConverter
@@ -145,14 +142,12 @@ Eine REDAXO 4.x - Datenbank kann mit Hilfe dieses AddOns für REDAXO 5.x vorbere
 
 Ytraduko hilft bei der Übersetzung der eigenen AddOns. Anstelle selbst für die weiteren Sprachen neue .lang - Dateien anzulegen, erledigt dieses AddOn es selbst. Die Übersetzungen können übersichtlich und schnell eingepflegt werden. 
 
-[**Installation aus Github-Repo**](https://github.com/yakamara/ytraduko)
+[**Github-Repo**](https://github.com/yakamara/ytraduko)
 
 <a name="zip"></a>
 ### ZIP-Install 
 
 Das ZIP-Install ermöglicht es gezippte AddOns ohne Umweg per FTP auf den Server zu laden und zu entpacken. Ganz praktisch vor allem, wenn es sich um AddOns handelt, die es nur als GitHub-Repo gibt und nicht im Installer zur Vefügung stehen.  
-
-[**GitHub-Repo**](https://github.com/FriendsOfREDAXO/zip_install)
 
 
 <a name="workflows"></a>
