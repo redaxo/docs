@@ -9,15 +9,17 @@ Suche die Datenbank die du bei der Installation angegeben hast und öffne dort d
 
 Ersetze das kryptische Passwort durch folgende Zeile:
 
-    $2y$10$j3WXi9dV9ft0osXCj/QfS.XGXYEnCxFEHx8LJ/PbrvjOjbKObrCV2
-          
-Diese Zeile entspricht dem Passwort 123456789. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
+```
+$2y$10$GQripq8LDWMGNsnw5b/u8uFG/fkzC2p2uVlrQFx49F0BzbjATDE1u	
+```
+
+Diese Zeile entspricht dem Passwort `REDAXO-cms`. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
 
 > Dein Passwort muss unter allen Umständen geändert werden, um Fremdzugriffe zu verhindern! Dieses Passwort wird vermutlich als erstes von Dritten getestet, die sich unerlaubt Zugriff auf das System verschaffen wollen!
 
 ## Änderung eines Passworts über die Console (ab REDAXO 5.6+)
 
-Ein Passwort kann sehr einfach über die Console aktualisiert werden. Hierzu muss man sich im `bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen. 
+Ein Passwort kann sehr einfach über die Console aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen. 
 
 Wurde das neue Passwort gespeichert, sollte folgende Meldung erscheinen:
 
