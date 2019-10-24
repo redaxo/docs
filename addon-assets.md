@@ -3,7 +3,8 @@
 - [Über](#plugin)
 - [Speicherort](#speicherort)
 - [Dateien einbinden](#einbinden)
-  - [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte)   
+  - [Cachebuster](#buster) 
+  - [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte) 
 - [Sass](#sass)
 - [Javascript im Backend / rex:ready](#rexready)
 
@@ -25,8 +26,6 @@ Assets werden innerhalb von REDAXO im `assets`-Ordner des AddOns abgelegt. Eine 
 Auf die Dateien eines Addons zeigt die Variable `$this` mittels der Klasse [rex_addon](http://www.redaxo.org/docs/master/class-rex_addon.html).
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
-
-> REDAXO kümmert sich selbst um ein Cachbusting. Eigene Lösungen hierfür sind nicht erforderlich. Beispeil: `index.php?asset=../assets/core/jquery.min.js&amp;buster=1566304624`
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
@@ -60,6 +59,12 @@ if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'addonkey/unterse
 
 }
 ```
+
+<a name="buster"></a>
+### Cachenbuster
+
+REDAXO liefert selbst einen Cachebuster. Eigene Lösungen hierfür sind nicht erforderlich. Der Buster wird automatisch gesetzt. Beispiel: `index.php?asset=../assets/addon/skript.min.js&amp;buster=1566304624`
+
 
 <a name="javascripte"></a>
 ### Javascripte (JS_IMMUTABLE, Async, JS_DEFERED)
