@@ -26,7 +26,8 @@ Auf die Dateien eines Addons zeigt die Variable `$this` mittels der Klasse [rex_
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
-> REDAXO kümmert sich selbst um ein Cachbusting. Eigene Lösungen hierfür sind nicht erforderlich. Beispeil: 'index.php?asset=../assets/core/jquery.min.js&amp;buster=1566304624`
+> REDAXO kümmert sich selbst um ein Cachbusting. Eigene Lösungen hierfür sind nicht erforderlich. Beispeil: `index.php?asset=../assets/core/jquery.min.js&amp;buster=1566304624`
+
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
 ```php
