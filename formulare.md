@@ -288,35 +288,34 @@ Das Prio-Feld muss vom Typ *int* sein. Die Angabe von *setLabelField* ist zwinge
 F체gt dem Formular ein Feld hinzu, mit dem der Medienpool aufgerufen wird. Es kann nur ein Element aus dem Medienpool eingef체gt werden.
 Beispiel: `$field = $form->addMediaField('bild');` f체gt ein Mediafeld f체r die Tabellenspalte *bild* ein.
 
-**Beispiel mit Attributen** 
+**Beispiel mit Parameter** 
 
 ```php
 $field = $form->addMediaField('image');
 // Aktiviert die Vorschau 
-$field->setAttribute('preview','1');
+$field->setPreview(1); 
 // legt die Start-Medienkategorie fest 
-$field->setAttribute('category','1');
+$field->setCategoryId('10');
 // Legt die erlaubten Typen fest 
-$field->setAttribute('types','jpg,png'); 
+$field->setTypes('jpg,gif,png'); 
 $field->setLabel('Bild');
 ```
-
 
 <a name="addmedialistfield"></a>
 #### addMedialistField
 
 `addMedialistField($name, $value = null, array $attributes = [])`
 
-**Beispiel mit Attributen** 
+**Beispiel mit Parameter** 
 
 ```php
 $field = $form->addMedialistField('images');
 // Aktiviert die Vorschau 
-$field->setAttribute('preview','1');
+$field->setPreview(1); 
 // legt die Start-Medienkategorie fest 
-$field->setAttribute('category','1');
+$field->setCategoryId('10');
 // Legt die erlaubten Typen fest 
-$field->setAttribute('types','jpg,png'); 
+$field->setTypes('jpg,gif,png');  
 $field->setLabel('Bilder');
 ```
 
@@ -336,7 +335,7 @@ Beispiel: `$field = $form->addLinkmapField('link');` f체gt ein Linkfeld f체r die
 ```php
 $field = $form->addLinkmapField('link');
 // legt die Strukturkategorie fest 
-$field->setAttribute('category','1');
+$field->setCategoryId('10');
 $field->setLabel('Link');
 
 ```
@@ -355,7 +354,7 @@ Beispiel: `$field = $form->addLinklistField('links');` f체gt ein Linklistfeld f�
 ```php
 $field = $form->addLinkmapField('links');
 // legt die Strukturkategorie fest 
-$field->setAttribute('category','1');
+$field->setCategoryId('10');
 $field->setLabel('Links');
 ```
 
