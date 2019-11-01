@@ -288,10 +288,37 @@ Das Prio-Feld muss vom Typ *int* sein. Die Angabe von *setLabelField* ist zwinge
 Fügt dem Formular ein Feld hinzu, mit dem der Medienpool aufgerufen wird. Es kann nur ein Element aus dem Medienpool eingefügt werden.
 Beispiel: `$field = $form->addMediaField('bild');` fügt ein Mediafeld für die Tabellenspalte *bild* ein.
 
+**Beispiel mit Attributen** 
+
+```php
+$field = $form->addMediaField('image');
+// Aktiviert die Vorschau 
+$field->setAttribute('preview','1');
+// legt die Start-Medienkategorie fest 
+$field->setAttribute('category','1');
+// Legt die erlaubten Typen fest 
+$field->setAttribute('types','jpg,png'); 
+$field->setLabel('Bild');
+```
+
+
 <a name="addmedialistfield"></a>
 #### addMedialistField
 
 `addMedialistField($name, $value = null, array $attributes = [])`
+
+**Beispiel mit Attributen** 
+
+```php
+$field = $form->addMedialistField('images');
+// Aktiviert die Vorschau 
+$field->setAttribute('preview','1');
+// legt die Start-Medienkategorie fest 
+$field->setAttribute('category','1');
+// Legt die erlaubten Typen fest 
+$field->setAttribute('types','jpg,png'); 
+$field->setLabel('Bilder');
+```
 
 Fügt dem Formular ein Feld hinzu, mit dem der Medienpool angebunden wird. Damit können mehrere Elemente aus dem Medienpool eingefügt werden. Die einzelnen Medien werden im Datenfeld durch Komma getrennt.
 Beispiel: `$field = $form->addMedialistField('bilder');` fügt ein Medialistfeld für die Tabellenspalte *bilder* ein.
@@ -304,6 +331,17 @@ Beispiel: `$field = $form->addMedialistField('bilder');` fügt ein Medialistfeld
 Fügt dem Formular ein Feld hinzu, mit dem die Struktur-Verwaltung angebunden wird. Es kann nur ein Element aus der Struktur eingefügt werden.
 Beispiel: `$field = $form->addLinkmapField('link');` fügt ein Linkfeld für die Tabellenspalte *link* ein.
 
+**Beispiel mit Attributen** 
+
+```php
+$field = $form->addLinkmapField('link');
+// legt die Strukturkategorie fest 
+$field->setAttribute('category','1');
+$field->setLabel('Link');
+
+```
+
+
 <a name="addlinklistfield"></a>
 #### addLinklistField
 
@@ -311,6 +349,15 @@ Beispiel: `$field = $form->addLinkmapField('link');` fügt ein Linkfeld für die
 
 Fügt dem Formular ein Feld hinzu, mit dem die Struktur-Verwaltung angebunden wird. Es können mehrere Elemente aus der Struktur eingefügt werden.
 Beispiel: `$field = $form->addLinklistField('links');` fügt ein Linklistfeld für die Tabellenspalte *links* ein.
+
+**Beispiel mit Attributen** 
+
+```php
+$field = $form->addLinkmapField('links');
+// legt die Strukturkategorie fest 
+$field->setAttribute('category','1');
+$field->setLabel('Links');
+```
 
 <a name="addrawfield"></a>
 #### addRawField
