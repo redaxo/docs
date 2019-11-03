@@ -162,7 +162,7 @@ page:
     icon: rex-icon fa-television 
 ```
 
-Will die Hauptseite in **Unterseiten** unterteilen, werden diese mit Hilfe des Keys `subpages` eingeleitet. Danach folgen eingerückt frei wählbare Properties für die einzelnen Unterseiten. 
+Will man die Hauptseite in **Unterseiten** unterteilen, werden diese mit Hilfe des Keys `subpages` eingeleitet. Danach folgen eingerückt frei wählbare Properties für die einzelnen Unterseiten. 
 
 ```yml
 subpages:
