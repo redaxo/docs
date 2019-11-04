@@ -27,7 +27,6 @@ Auf die Dateien eines Addons zeigt die Variable `$this` mittels der Klasse [rex_
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
-Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile`.
 
 ```php
 //CSS-Datei einbinden
