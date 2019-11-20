@@ -6,6 +6,7 @@
 - [Beispiel: Einen Effekt definieren und anwenden](#beispiel)
 - [Vordefinierte Medientypen](#vordefiniert)
 - [Auslesen der Medieninformationen nach Anwendung der Effekte](#mediainfo)
+- [Medien außerhalb des media-Ordners verarbeiten](#extmedia)
 
 <a name="prinzip"></a>
 ## Prinzip
@@ -138,3 +139,12 @@ $media->getHeight();
 $media->getHeader();
 ```
 
+<a name="extmedia"></a>
+## Medien außerhalb des media-Ordners verarbeiten
+
+Mit dem Effekt `Datei: Pfad anpassen`ist es möglich auf Dateien außerhalb des media-Ordners zuzugreifen und diese zu verarbeiten. 
+
+1. Im Media Manager einen neuen Mediatypen anlegen
+2. Die gewünschten Effekte anlegen -> Wichtig: `Datei: Pfad anpassen` muss am Anfang stehen (Prio 1)
+3. Beim Effekt "Datei: Pfad anpassen" im Feld Medienordner den Pfad eintragen (Bsp.: "assets/logos/")
+4. Im Addon auf den Mediatypen zugreifen: `$url = rex_media_manager::getUrl('medientyp','bild.jpg');`
