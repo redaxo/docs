@@ -10,10 +10,14 @@
 <a name="system"></a>
 ## Systemanforderungen
 
-Für die Version 5.5 wird folgende Umgebung benötigt:
-- PHP ab Version: 5.5.9 (Empfohlen ist PHP 7.x)
+Für die Version 5.8 wird folgende Umgebung benötigt:
+
+- Php ab 7.1.3
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
-- Apache2, Nginx oder vergleichbarer Webserver
+- Apache2 (mit aktiviertem [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)), Nginx oder vergleichbarer Webserver
+
+Alle Versionen unter 5.8 können Php ab 5.5.9 verwenden, empfohlen ist jedoch 7.x. 
+
 
 <a name="schnell"></a>
 ## Schnellanleitung
@@ -25,6 +29,7 @@ Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf
 - Die ZIP-Datei auf dem eigenen Rechner entpacken.
 - Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) ausführen.
 - Alle [Installationschritte](#install) durchgehen.
+- Falls es zu Problemen mit Ordnerrechten kommt, achtet darauf, dass der Besitzer des Webverzeichnises der Webserver-User ist und unter Apache2, dass [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) aktiv ist. 
 
 <a name="datenbank"></a>
 ## Datenbank
