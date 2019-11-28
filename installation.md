@@ -10,10 +10,13 @@
 <a name="system"></a>
 ## Systemanforderungen
 
-Für die Version 5.5 wird folgende Umgebung benötigt:
-- PHP ab Version: 5.5.9 (Empfohlen ist PHP 7.x)
+Für die Version 5.8 wird folgende Umgebung benötigt:
+- PHP ab 7.1.3
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
 - Apache2, Nginx oder vergleichbarer Webserver
+
+Alle REDAXO-Versionen unter 5.8 können PHP ab 5.5.9 verwenden, empfohlen ist jedoch 7.x.
+
 
 <a name="schnell"></a>
 ## Schnellanleitung
@@ -47,7 +50,8 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 
 > **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-Die Ordner- und Dateirechte müssen auf `755` gestellt werden, falls der Server dies beim Upload nicht selbst erledigt haben sollte.
+Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern. 
+
 
 <a name="install"></a>
 ## Installationsvorgang
