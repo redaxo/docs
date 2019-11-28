@@ -50,9 +50,7 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 
 > **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden.
-
-> **Tipp falls ein SSH-Zugang besteht:** Es ist sinnvoller den Besitzer des Installationsordners mit `$ chown -R $WEBSERVER_USER $DOCUMENT_ROOT` zu ändern, als die Ordner- und Dateirecht anzupassen. $WEBSERVER\_USER kann mithilfe ```$ ps -ef | egrep '(httpd|apache2|apache)' | grep -v `whoami` | grep -v root | head -n1 | awk '{print $1}'``` ermittelt werden. $DOCUMENT\_ROOT ist das Webverzeichnis in dem die Installationsdateien abgelegt werden. 
+Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern. 
 
 
 <a name="install"></a>
