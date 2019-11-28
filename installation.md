@@ -11,12 +11,11 @@
 ## Systemanforderungen
 
 Für die Version 5.8 wird folgende Umgebung benötigt:
-
 - Php ab 7.1.3
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
-- Apache2 (mit aktiviertem [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)), Nginx oder vergleichbarer Webserver
+- Apache2, Nginx oder vergleichbarer Webserver
 
-Alle Versionen unter 5.8 können Php ab 5.5.9 verwenden, empfohlen ist jedoch 7.x. 
+Alle Versionen unter 5.8 können Php ab 5.5.9 verwenden, empfohlen ist jedoch 7.x.
 
 
 <a name="schnell"></a>
@@ -52,7 +51,10 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 
 > **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-Die Ordner- und Dateirechte müssen auf `755` gestellt werden, falls der Server dies beim Upload nicht selbst erledigt haben sollte.
+Die Ordner- und Dateirechte müssen auf `755` gestellt werden, falls der Server dies beim Upload nicht selbst erledigt haben sollte. 
+
+> **Falls ein SSH-Zugang besteht:** Es ist sinnvoller `chown -R $WEBSERVER_USER $DOCUMENT_ROOT` zu verwenden, als die Rechte aller Nutzer für den Ordner zu ändern. $WEBSERVER\_USER kann mithilfe ```ps -ef | egrep '(httpd|apache2|apache)' | grep -v `whoami` | grep -v root | head -n1 | awk '{print $1}'``` gefunden werden. $DOCUMENT\_ROOT ist das Webverzeichnis, welches in der httpd.conf zu finden ist. 
+
 
 <a name="install"></a>
 ## Installationsvorgang
