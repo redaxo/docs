@@ -7,6 +7,7 @@
     - [Gleiche Sprache, anderer Artikel](#gleiche-sprache-anderer-artikel)
 - [Sprach-Metafelder](#sprach-metafelder)
 - [Beispiel einer einfachen Sprachnavigation](#beispiel-sprachnavigation)
+- [Beispiel Sprachnavigation zeigt nur aktive Sprachen](#beispiel-nuronline)
 - [Hilfreiche AddOns](#hilfreiche-addons)
 	
 <a name="sprachen-verwalten"></a>
@@ -121,6 +122,40 @@ if (count(rex_clang::getAll(true)) == 2) {
 }
 ?>
 ```
+
+<a name="beispiel-nuronline"></a>
+## Beispiel Sprachnavigation zeigt nur aktive Sprachen 
+
+```php
+<?php
+// aktuelle Sprache ermitteln
+$current_lang = rex_clang::getCurrent();
+// Sprachcode ermitteln 
+$langcode     = $current_lang->getCode();
+// gibt es mehr als eine Sprache?
+
+if (count(rex_clang::getAll(true)) > 1) {
+    if (count(rex_clang::getAll(true))) {
+        // Sprachen auslesen 
+        foreach (rex_clang::getAll(true) as $lang) {
+            // aktuelle Sprache soll nicht klickbar sein
+            if (rex_clang::getCurrentId() == $lang->getValue('id')) {
+                echo '<strong>' . $lang->getCode() . '</strong>';
+                // alle anderen klickbar
+            } else {
+	        // ermittle Artikel-Infos der ermittelten Sprache 
+                $art = rex_article::get($this->getValue('article_id'), $lang->getValue('id'));
+                // prüfen ob Artikel online, wenn ja anzeigen. 
+                if ($art->isOnline() != false) {
+                    echo '<a href="' . rex_getUrl($this->getValue('article_id'), $lang->getValue('id')) . '">' . $lang->getCode() . '</a>';
+                }
+            }
+        }
+    }
+}
+?>
+```
+
 
 <a name="hilfreiche-addons"></a>
 ## Hilfreiche AddOns
