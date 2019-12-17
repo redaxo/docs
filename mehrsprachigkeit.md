@@ -146,7 +146,7 @@ if (count(rex_clang::getAll(true)) > 1) {
 	        // ermittle Artikel-Infos der ermittelten Sprache 
                 $art = rex_article::get($this->getValue('article_id'), $lang->getValue('id'));
                 // prüfen ob Artikel online, wenn ja anzeigen. 
-                if ($art->isOnline() != false) {
+                if ($art->isOnline()) {
                     echo '<a href="' . rex_getUrl($this->getValue('article_id'), $lang->getValue('id')) . '">' . $lang->getCode() . '</a>';
                 }
             }
