@@ -57,6 +57,13 @@ Es soll ein Redirect mit dem Status `301` ausgeführt werden. Das kann z.B. im T
     <?php
     rex_response::setStatus(301);
     rex_response::sendRedirect(rex_getUrl(article_id));
+    
+**Erweitertes Beispiel:**
+Es soll ein Redirect zu einer bestimmten Sprache (clang_id), mit URL-Parametern (param=foo) sowie einem Sprunganker (#anchor) ausgeführt werden.
+
+    <?php
+    rex_response::setStatus(301);
+    rex_response::sendRedirect(rex_getUrl(article_id,clang_id,["param"=>"foo"],"&")."#anchor");
 
 <a name="getstatus"></a>
 #### getStatus
