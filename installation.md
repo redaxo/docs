@@ -13,7 +13,7 @@
 
 Für die Version 5.9 wird folgende Umgebung benötigt:
 - PHP ab 7.1.3 
-- MySQL ab Version 5.5 oder MariaDB ab Version 10.0
+- MySQL ab Version 5.5 oder MariaDB ab Version 10.0<br>
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 - Apache2, Nginx oder vergleichbarer Webserver
 
