@@ -130,7 +130,7 @@ Schritt 7: Ende
 <a name="console"></a>
 ## Installation per Console
 
-REDAXO kann alternativ auch über die Console installiert werdern. 
+REDAXO kann alternativ auch über die Console ` redaxo/bin/console` installiert werdern. 
 
 Der Befehl lautet `console setup:run` für den interaktiven Modus. 
 Die Hilfe per `console setup:run --help` liefert mögliche Optionen und Modi. 
