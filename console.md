@@ -3,9 +3,9 @@
 - [Einführung](#einfuehrung)
 - [Aufruf der Console](#aufruf)
 - [Entwicklung eigener Consolen-Skripte](#dev)
- - [run.php](#run)
- - [package.yml](#package)
- - [Aufruf](#console)
+  - [run.php](#run)
+  - [package.yml](#package)
+  - [Aufruf](#console)
 
 <a name="einfuehrung"></a>
 ## Einführung
