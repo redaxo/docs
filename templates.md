@@ -1,6 +1,6 @@
 #  Templates
 - [Über](#ueber)
-- [Erstellen eines Templates](#ertellen)
+- [Erstellen eines Templates](#erstellen)
 - [Contentbereiche (C-Types)](#ctype)
 - [Kategorieberechtigungen](#catrights)
 - [Ausgabe der Inhalte](#ausgabe)
