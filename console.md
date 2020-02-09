@@ -14,13 +14,13 @@ Die Console ermöglicht REDAXO Funktionen direkt über das Commandline Interface
 
 Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 
-	- Installation
-	- Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
-	- Automatisierung/Skripting von Abläufen mit Zugriff auf das System
-	- Umgebung um sehr aufwändige prozesse wie migrationen o.ä. Ablaufen zu lassen, ohne timeouts etc.
-	- Fernwartung des Systems
-	- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (wird von `ydeploy` eingesetzt)
-	- via AddOns erweiterbar (Kommandos registrierbar, siehe ydeploy und untenstehendes Beispiel)
+- Installation
+- Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
+- Automatisierung/Skripting von Abläufen mit Zugriff auf das System
+- Umgebung um sehr aufwändige prozesse wie migrationen o.ä. Ablaufen zu lassen, ohne timeouts etc.
+- Fernwartung des Systems
+- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (wird von `ydeploy` eingesetzt)
+- via AddOns erweiterbar (Kommandos registrierbar, siehe ydeploy und untenstehendes Beispiel)
 
 <a name="aufruf"></a>
 ## Aufruf der Console
