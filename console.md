@@ -2,6 +2,7 @@
 
 - [Einführung](#einfuehrung)
 - [Aufruf der Console](#aufruf)
+- [Hilfe](#hilfe)
 - [Entwicklung eigener Consolen-Skripte](#dev)
   - [run.php](#run)
   - [package.yml](#package)
@@ -36,6 +37,16 @@ Je nach System ist es ggf. erforderlich die Console unter dem PHP-User bzw. Eige
 `sudo -u username php redaxo/bin/console`
 
 Für docker exec bietet sich an `-u username` an den Befehl anzufügen.  
+
+<a name="hilfe"></a>
+## Hilfe
+
+Der einfache Aufruf der Console per `console` ohne Parameter liefert eine Liste aller 
+aktuell verfügbaren Consolen-Kommandos. 
+
+Um mehr Informationen und Optionen zu den einzelnen Kommandos zu erhalten fügt man dem Aufruf des Kommandos `--help` als Parameter an.
+
+z.B: `console cache:clear --help`
 
 <a name="dev"></a>
 ## Entwicklung eigener Consolen-Skripte
