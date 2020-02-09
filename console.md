@@ -29,7 +29,7 @@ Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 
 oder
 
-`redaxo/bin/console` (DATEI console muss ausführbar sein)
+`redaxo/bin/console` (Die Datei console muss ausführbar sein)
 
 Je nach System ist es ggf. erforderlich, die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall bietet lautet der Befehl: 
 
