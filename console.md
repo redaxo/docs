@@ -35,7 +35,7 @@ Je nach System ist es ggf. erforderlich die Console unter dem PHP-User bzw. Eige
 
 `sudo -u username php redaxo/bin/console`
 
-Für docker exec bietet sich an `-u mycmsrex5` an den Befehl anzufügen.  
+Für docker exec bietet sich an `-u username` an den Befehl anzufügen.  
 
 <a name="dev"></a>
 ## Entwicklung eigener Consolen-Skripte
