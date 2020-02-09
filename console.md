@@ -6,7 +6,6 @@
 - [Entwicklung eigener Consolen-Skripte](#dev)
   - [run.php](#run)
   - [package.yml](#package)
-  - [Aufruf](#console)
 
 <a name="einfuehrung"></a>
 ## Einführung
@@ -26,17 +25,17 @@ Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 <a name="aufruf"></a>
 ## Aufruf der Console
 
-`redaxo/bin/console`
+`php redaxo/bin/console` 
 
 oder
 
-`php redaxo/bin/console`
+`redaxo/bin/console` (DATEI console muss ausführbar sein)
 
-Je nach System ist es ggf. erforderlich die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall bietet sich der folgende Aufruf an: 
+Je nach System ist es ggf. erforderlich, die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall bietet lautet der Befehl: 
 
 `sudo -u username php redaxo/bin/console`
 
-Für docker exec bietet sich an `-u username` an den Befehl anzufügen.  
+Für Docker exec sollte man `-u username` an den Befehl anfügen.  
 
 <a name="hilfe"></a>
 ## Hilfe
@@ -78,11 +77,3 @@ console_commands:
     meinaufruf:befehl: mein_console_befehl
 ```
 
-<a name="console"></a>
-### Console Aufruf
-
-Der Console Aufruf muss über PHP erfolgen:
-
-```
-/apache/php/php redaxo/bin/console meinaufruf:befehl
-```
