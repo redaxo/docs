@@ -53,7 +53,7 @@ z.B: `console cache:clear --help`
 <a name="run"></a>
 ### run.php
 
-Die Ausführung eines Console Befehls erfordert eine eigene Klasse, die auf `rex_console_commands` aufbaut und den ausführbaren Code selbst enthält bzw. aufruft. In dieser Klasse muss es eine Funktion `execute` geben. Die einfachste Form sieht etwa so aus:
+Die Ausführung eines Console Befehls erfordert eine eigene Klasse, die auf `rex_console_command` aufbaut und den ausführbaren Code selbst enthält bzw. aufruft. In dieser Klasse muss es eine Methode `execute` geben. Die einfachste Form sieht etwa so aus:
 
 ```php
 class mein_console_befehl extends rex_console_command {
