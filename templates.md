@@ -23,7 +23,7 @@ Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wi
 <a name="erstellen"></a>
 ## Erstellen eines Templates
 Templates werden im Menüpunkt `Templates` erstellt. 
-Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen und Sclüssel(key) fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
+Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen und Schlüssel (key) fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
 
 <a name="ctype"></a>
 ## Contentbereiche  (C-Types) 
