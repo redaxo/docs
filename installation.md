@@ -130,15 +130,16 @@ Schritt 7: Ende
 <a name="console"></a>
 ## Installation per Console
 
-REDAXO kann alternativ auch über die Console ` redaxo/bin/console` installiert werdern. 
+REDAXO kann alternativ auch über die Console `redaxo/bin/console` installiert werdern. 
 
-Der Befehl lautet `console setup:run` für den interaktiven Modus. 
-Die Hilfe per `console setup:run --help` liefert mögliche Optionen und Modi. 
+Der Befehl lautet `php console setup:run` für den interaktiven Modus. 
+Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi. 
 
 u.a.: 
 
 * `--quiet`für eine Unterdrückung aller Ausgaben
 * `--no-interaction` für keine Interaktion
 
+[Siehe: Console](/{{path}}/{{version}}/console)
 
 > Mit der REDAXO Console können viele gängige Operationen durchführt werden, wie z.B. Installation, setzen von Config-Settings, Installation / Deinstallation von Addons (packages) 
