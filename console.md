@@ -14,6 +14,7 @@ Die Console ermöglicht REDAXO Funktionen direkt über das Commandline Interface
 
 Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 
+	- Installation
 	- Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
 	- Automatisierung/Skripting von Abläufen mit Zugriff auf das System
 	- Umgebung um sehr aufwändige prozesse wie migrationen o.ä. Ablaufen zu lassen, ohne timeouts etc.
