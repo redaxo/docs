@@ -51,7 +51,7 @@ Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[key=haupt]` oder `REX_TEMPLATE
 
 Innerhalb von PHP-Tags wird das Template so eingebunden: `echo 'REX_TEMPLATE[key=haupt]';` oder `echo 'REX_TEMPLATE[2]';`
 
-> Bei Verwendung von Schlüsseln sind Templates leichter übertagbar in andere Präsenzen. Die Anpassung der IDs bei Projekten wo bereits Templates bestehen entfällt. 
+> Durch Schlüssel sind Templates leichter übertagbar in andere Präsenzen. Die Anpassung der IDs bei Projekten wo bereits Templates bestehen entfällt. 
 
 <a name="artikeleinbindung"></a>
 ## Einbindung von Artikeln
