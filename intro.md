@@ -1,4 +1,4 @@
-# Dokumentation REDAXO 5.7 – 5.8
+# Dokumentation REDAXO 5.9
 
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen. 
 
