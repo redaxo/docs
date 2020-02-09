@@ -23,7 +23,7 @@ Templates können verschachtelt angelegt werden. Dadurch kann man Komponenten wi
 <a name="erstellen"></a>
 ## Erstellen eines Templates
 Templates werden im Menüpunkt `Templates` erstellt. 
-Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
+Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen und Sclüssel(key) fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt. 
 
 <a name="ctype"></a>
 ## Contentbereiche  (C-Types) 
@@ -45,9 +45,11 @@ Einige Bestandteile möchte man gegebenenfalls in mehreren Templates nutzen. Hie
 
 Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das deaktivierte Template nicht als Seiten-Template für einen Artikel durch den Redakteur ausgewählt werden.
 
-Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und der ID des gewünschten Templates.
-Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[2]`
-Innerhalb von PHP-Tags wird das Template so eingebunden: `echo 'REX_TEMPLATE[2]';`
+Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und dem Schlüssel(key) oder ID des gewünschten Templates.
+Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[key=haupt]` oder `REX_TEMPLATE[2]`
+Innerhalb von PHP-Tags wird das Template so eingebunden: `echo 'REX_TEMPLATE[key=haupt]';` oder `echo 'REX_TEMPLATE[2]';`
+
+> Bei Verwendung von Schlüsseln sind Templates leichter übertagbar in andere Präsenzen. Die Anpassung der IDs bei Projekten wo bereits Templates bestehen entfällt. 
 
 <a name="artikeleinbindung"></a>
 ## Einbindung von Artikeln
