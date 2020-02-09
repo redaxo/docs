@@ -17,9 +17,6 @@ Für die Version 5.9 wird folgende Umgebung benötigt:
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 - Apache2, Nginx oder vergleichbarer Webserver
 
-Alle REDAXO-Versionen unter 5.8 können PHP ab 5.5.9 verwenden, empfohlen ist jedoch 7.x.
-
-
 <a name="schnell"></a>
 ## Schnellanleitung
 
