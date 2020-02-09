@@ -46,7 +46,9 @@ Einige Bestandteile möchte man gegebenenfalls in mehreren Templates nutzen. Hie
 Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das deaktivierte Template nicht als Seiten-Template für einen Artikel durch den Redakteur ausgewählt werden.
 
 Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und dem Schlüssel(key) oder ID des gewünschten Templates.
+
 Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[key=haupt]` oder `REX_TEMPLATE[2]`
+
 Innerhalb von PHP-Tags wird das Template so eingebunden: `echo 'REX_TEMPLATE[key=haupt]';` oder `echo 'REX_TEMPLATE[2]';`
 
 > Bei Verwendung von Schlüsseln sind Templates leichter übertagbar in andere Präsenzen. Die Anpassung der IDs bei Projekten wo bereits Templates bestehen entfällt. 
@@ -93,7 +95,8 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 ### Erweitertes Template mit 2 Bereichen, eingebundenem Template und Artikel
 In diesem Beispiel werden Inhalte getrennt nach ihren Bereichen ausgegeben. So könnte etwa eine Content-Spalte und eine Sidebar (Seitenspalte) gepflegt werden.
 
-Über das eingebundene Template werden außerdem die Inhalte eines anderen Templates eingebunden, beispielsweise ein Brotkrumenpfad im Headerbereich. 
+Über das eingebundene Template werden außerdem die Inhalte eines anderen Templates eingebunden, beispielsweise ein Brotkrumenpfad im Headerbereich mit dem Schlüssel `bradcrumb`. 
+
 Zuletzt werden im Footer die Inhalte eines anderen Artikels ausgegeben.
 
 Die Ausgabe der einzelnen Bereiche erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1]` und `REX_ARTICLE[ctype=2] `.  Der Parameter `ctype` legt hierbei die ID des gewünschten Bereichs fest. 
@@ -112,7 +115,7 @@ Die ID des jeweiligen Bereichs findet man im Reiter `Bereiche`.
 </head>
 <body>
 
-    REX_TEMPLATE[2]
+    REX_TEMPLATE[key=breadcrumb]
 
     <div class="content">
         REX_ARTICLE[ctype=1]
