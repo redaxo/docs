@@ -1,9 +1,11 @@
 # Console
 
 - [Einführung](#einfuehrung)
-- [run.php](#run)
-- [package.yml](#package)
-- [Aufruf](#console)
+- [Aufruf der Console](#aufruf)
+- [Entwicklung eigener Consolen-Skripte](#dev)
+ - [run.php](#run)
+ - [package.yml](#package)
+ - [Aufruf](#console)
 
 <a name="einfuehrung"></a>
 ## Einführung
@@ -19,8 +21,26 @@ Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 	- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (wird von `ydeploy` eingesetzt)
 	- via AddOns erweiterbar (Kommandos registrierbar, siehe ydeploy und untenstehendes Beispiel)
 
+<a name="aufruf"></a>
+## Aufruf der Console
+
+`redaxo/bin/console`
+
+oder
+
+`php redaxo/bin/console`
+
+Je nach System ist es ggf.  erforderluch die Console unter dem  PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall bietet sich der folgende Aufruf an: 
+
+`sudo -u username php redaxo/bin/console`
+
+Für docker exec bietet sich an `-u mycmsrex5` an den Befehl anzufügen.  
+
+<a name="dev"></a>
+## Entwicklung eigener Consolen-Skripte
+
 <a name="run"></a>
-## run.php
+### run.php
 
 Die Ausführung eines Console Befehls erfordert eine eigene Klasse, die auf `rex_console_commands` aufbaut und den ausführbaren Code selbst enthält bzw. aufruft. In dieser Klasse muss es eine Funktion `execute` geben. Die einfachste Form sieht etwa so aus:
 
@@ -35,7 +55,7 @@ class mein_console_befehl extends rex_console_command {
 Falls die implementierte Funktionalität sowohl via Weboberfläche als auch REDAXO Console zugreifbar sein sollte, würde es sich anbieten die entsprechende Logik in einer separaten PHP Klasse zu implementieren und diese aus der o.g. Klasse heraus aufzurufen.
 
 <a name="package"></a>
-## package.yml
+### package.yml
 
 Damit der ausführbare Befehl in der REDAXO Console zugänglich ist, muss er noch in der package.yml eines AddOns als solcher definiert werden.
 
@@ -47,7 +67,7 @@ console_commands:
 ```
 
 <a name="console"></a>
-## Console Aufruf
+### Console Aufruf
 
 Der Console Aufruf muss über PHP erfolgen:
 
