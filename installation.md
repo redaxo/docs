@@ -6,13 +6,15 @@
 - [Download](#download)
 - [Upload](#upload)
 - [Installationsvorgang](#install)
+- [Installation per Console](#console)
 
 <a name="system"></a>
 ## Systemanforderungen
 
-Für die Version 5.8 wird folgende Umgebung benötigt:
-- PHP ab 7.1.3
+Für die Version 5.9 wird folgende Umgebung benötigt:
+- PHP ab 7.1.3 
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0
+**Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 - Apache2, Nginx oder vergleichbarer Webserver
 
 Alle REDAXO-Versionen unter 5.8 können PHP ab 5.5.9 verwenden, empfohlen ist jedoch 7.x.
@@ -127,3 +129,19 @@ Die Installation ist erfolgreich. Beachte die weiteren Hinweise auf der Seite. D
 Schritt 7: Ende
 
 > ***Nach der Installation:*** Es ist durchaus möglich, dass nach einem Release noch Updates nachgereicht werden. Daher sollte nach der Installation im Installer geprüft werden, ob Aktualisierungen vorliegen.
+
+<a name="console"></a>
+## Installation per Console
+
+REDAXO kann alternativ auch über die Console installiert werdern. 
+
+Der Befehl lautet `console setup:run` für den interaktiven Modus. 
+Die Hilfe per `console setup:run --help` liefert mögliche Optionen und Modi. 
+
+u.a.: 
+
+* `--quiet`für eine Unterdrückung aller Ausgaben
+* `--no-interaction` für keine Interaktion
+
+
+> Mit der REDAXO Console können viele gängige Operationen durchführt werden, wie z.B. Installation, setzen von Config-Settings, Installation / Deinstallation von Addons (packages) 
