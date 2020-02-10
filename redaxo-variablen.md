@@ -554,16 +554,26 @@ Mit `REX_TEMPLATE` wird ein Template abgerufen.
 
 #### Syntax
 
+Bei Verwendung eines Keys
+
+```
+REX_TEMPLATE[key=string]
+```
+
+Bei Verwendung der ID
+
 ```
 // Kurze Schreibweise
 REX_TEMPLATE[i]
 // Ausführliche Schreibweise
-REX_TEMPLATE[id=i] 
+REX_TEMPLATE[id=i]
 ```
+
 
 Parameter | Beschreibung  
 --- | ---
-`id=i`, `i` | Die ID des Templates. 
+`key=string`, `string` | Key des Templates  
+`id=i`, `i` | Die ID des Templates.
 
 
 <a name="rex-template-id"></a>
