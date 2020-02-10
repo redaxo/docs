@@ -556,13 +556,13 @@ Mit `REX_TEMPLATE` wird ein Template abgerufen.
 
 Bei Verwendung eines Keys
 
-```
+```php
 REX_TEMPLATE[key=string]
 ```
 
 Bei Verwendung der ID
 
-```
+```php
 // Kurze Schreibweise
 REX_TEMPLATE[i]
 // Ausführliche Schreibweise
