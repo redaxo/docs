@@ -40,22 +40,23 @@ Um das Einbinden von dynamischen Daten innerhalb von Modulen und Templates zu er
 ----
 **Hinweis:** Da REDAXO Variablen vom CMS vor der Laufzeit in PHP kompiliert werden, wirken sie auf PHP wie Platzhalter. Obwohl die Syntax an ein Array erinnert, ist es daher z.B. nicht möglich, mehrere Variablen über eine for-next-Schleife abzurufen:
 
-    // Falsch:
-    for ($i = 1; $i <= 5; $i++) {
-        echo '<p>REX_VALUE['.$i.']</p>';
-    }
+```php
+// Falsch:
+for ($i = 1; $i <= 5; $i++) {
+echo '<p>REX_VALUE['.$i.']</p>';
+}
 
-    // Richtig
-    $values = [
-        REX_VALUE[1],
-        REX_VALUE[2],
-        REX_VALUE[3],
-        REX_VALUE[4],
-        REX_VALUE[5]
+// Richtig
+$values = [
+    REX_VALUE[1],
+    REX_VALUE[2],
+    REX_VALUE[3],
+    REX_VALUE[4],
+    REX_VALUE[5]
         ];
-    for ($i = 1; $i <= 5; $i++) {
-        echo '<p>'.$values[$i].'</p>';
-    }
+for ($i = 1; $i <= 5; $i++) {
+     echo '<p>'.$values[$i].'</p>';
+}
  
  
 <a name="allgemeine-parameter"></a>
@@ -87,12 +88,14 @@ Mit `REX_LINK` wird ein einzelner Artikel-Link eingefügt, `REX_LINKLIST` erlaub
 
 ### REX_LINK als Eingabe-Variable
 Gibt im Backend ein Eingabe-Widget aus, über das die Linkmap aufgerufen wird.
-    
-    // Kurze Schreibweise
-    REX_LINK[id=i widget=1] 
-    // Ausführliche Schreibweise
-    REX_LINK[id=i widget=1 category=i]
-    
+
+```php    
+// Kurze Schreibweise
+REX_LINK[id=i widget=1] 
+// Ausführliche Schreibweise
+REX_LINK[id=i widget=1 category=i]
+```
+
 Parameter | Beschreibung  
 --- | ---    
 `id=i`, `i` | Die ID der Variable. Es sind Werte von 1 bis 10 erlaubt. 
@@ -116,19 +119,19 @@ Parameter | Beschreibung
 
 **Beispiel in der Modul-Eingabe**
 
-```
+```html
 REX_LINK[id=1 widget=1]
 ``` 
 **Beispiel in der Modul-Ausgabe**
 
-```
+```html
 <a href="REX_LINK[id=1 output=url]">zum Artikel mit der ID REX_LINK[id=1]</a>
 ```
 
 #### REX_LINKLIST als Eingabe-Variable
 Gibt im Backend ein Eingabe-Widget aus, über das die Linkmap aufgerufen wird.
 
-```
+```html
 // Ausführliche Schreibweise
 REX_LINKLIST[id=i widget=1] 
 REX_LINKLIST[id=i widget=1 category=i]
@@ -148,7 +151,7 @@ REX_LINKLIST[id=1 widget=1]
 
 **Beispiel in der Modul-Ausgabe**
 
-```
+```php
 <?php foreach (explode(',', 'REX_LINKLIST[id=1]') as $article_id): ?>
 <a href="<?=rex_getUrl($article_id);?>">zum Artikel mit der ID <?=$article_id;?></a>
 <?php endforeach;?>
@@ -157,7 +160,7 @@ REX_LINKLIST[id=1 widget=1]
 #### REX_LINKLIST als Ausgabe-Variable
 Gibt die IDs der gewählten Artikel als kommagetrennten String zurück. Es ist eine gekürzte Schreibweise erlaubt.
 
-```
+```html
 // Kurze Schreibweise
 REX_LINKLIST[i]
 // Ausführliche Schreibweise
@@ -180,7 +183,7 @@ Durch `REX_MEDIA` wird nur eine Datei eingefügt, durch `REX_MEDIALIST` ist das 
 #### REX_MEDIA als Eingabe-Variable
 Gibt im Backend ein Eingabe-Widget aus.
 
-```
+```html
 // Kurze Schreibweise
 REX_MEDIA[id=i widget=1] 
 // Ausführliche Schreibweise
@@ -198,7 +201,7 @@ Parameter | Beschreibung
 #### REX_MEDIA als Ausgabe-Variable
 Gibt den Dateinamen eines Mediums zurück. Wird nur die ID angegeben, ist eine gekürzte Schreibweise erlaubt.
 
-```
+```html
 // Kurze Schreibweise
 REX_MEDIA[i]
 // Ausführliche Schreibweise
@@ -215,20 +218,20 @@ Parameter | Beschreibung
   
 **Beispiel in der Modul-Eingabe**
 
-```
+```html
 REX_MEDIA[id=1 widget=1]
 ```
    
 **Beispiel in der Modul-Ausgabe**
 
-```
+```html
 <img src ="/media/REX_MEDIA[id=1]" alt="Bild" />
 ```
 
 #### REX_MEDIALIST als Eingabe-Variable
 Gibt im Backend ein Eingabe-Widget aus.
 
-```
+```html
 // Ausführliche Schreibweise
 REX_MEDIALIST[id=i widget=1] 
 REX_MEDIALIST[id=i widget=1 category=xyz types=xyz preview=1]
@@ -256,13 +259,13 @@ Parameter | Beschreibung
 
 **Beispiel in der Modul-Eingabe**
 
-```
+```html
 REX_MEDIALIST[id=1 widget=1]
 ``` 
    
 **Beispiel in der Modul-Ausgabe**
 
-```
+```php
 <?php foreach (explode(',', REX_MEDIALIST[id=1]) as $image): ?>
 <img src ="/media/<?=$image;?>" alt="Bild" />
 <?php endforeach;?>
@@ -278,7 +281,7 @@ Inhalte werden mit `REX_INPUT_VALUE` aus üblichen HTML-Formularen übernommen. 
 #### REX_VALUE als Eingabe-Variable
 Übernimmt den Inhalt eines Formularelements und weist ihn der Variable mit der ID `i` zu. Um mehrere Werte in einer Variable zu speichern, kann die Array-Schreibweise genutzt werden.
 
-```
+```html
 // Kurze Schreibweise
 REX_INPUT_VALUE[i]
 // Array-Schreibweise
@@ -292,7 +295,7 @@ Parameter | Beschreibung
 #### REX_VALUE als Ausgabe-Variable
 Gibt den Inhalt einer Variable zurück. Wird nur die ID angegeben, ist eine gekürzte Schreibweise erlaubt.
 
-```
+```html
 // Kurze Schreibweise
 REX_VALUE[i]
 // Ausführliche Schreibweise
@@ -312,7 +315,7 @@ Parameter | Beschreibung
 
 **Beispiel in der Modul-Eingabe**
 
-```
+```html
 <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]" />
 ``` 
 
@@ -327,14 +330,14 @@ Die Zahl der in einem Modul verwendbaren Values ist limitiert, im Falle von REX_
 
 **Modul-Eingabe**
 
-```
+```html
 <input type="text" name="REX_INPUT_VALUE[1][text1]" value="" />
 <input type="text" name="REX_INPUT_VALUE[1][text2]" value="" />
 ```
 
 **Modul-Ausgabe**
 
-```
+```php
 $value1 = rex_var::toArray("REX_VALUE[1]");
 
 echo $value1['text1'];  
@@ -622,7 +625,7 @@ Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter)
 
 ### Beispiel
 
-```
+```php
 <?php
 /**
 * Erstellt die Variable REX_WEBSITE_TITLE[]. Mit ihr kann der Website-Titel ausgegeben werden.
