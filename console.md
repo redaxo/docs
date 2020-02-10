@@ -14,26 +14,35 @@ Die Console ermöglicht REDAXO Funktionen direkt über das Commandline Interface
 
 Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 
-- Installation
+- REDAXO-Installation
+- AddOn-Installation / Deinstallation
 - Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
 - Automatisierung/Skripting von Abläufen mit Zugriff auf das System
 - Umgebung um sehr aufwändige prozesse wie migrationen o.ä. Ablaufen zu lassen, ohne timeouts etc.
 - Fernwartung des Systems
-- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (wird von `ydeploy` eingesetzt)
-- via AddOns erweiterbar (Kommandos registrierbar, siehe ydeploy und untenstehendes Beispiel)
+- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (Deploy-Workflows) 
+- via AddOns erweiterbar (Kommandos registrierbar, siehe untenstehendes Beispiel)
+
 
 <a name="aufruf"></a>
 ## Aufruf der Console
 
-`php redaxo/bin/console` 
+```
+php redaxo/bin/console` 
+```
 
 oder
 
-`redaxo/bin/console` (Die Datei console muss ausführbar sein)
+```
+redaxo/bin/console`
+```
+(Hierbei sollte die Datei `console` ausführbar)
 
 Je nach System ist es ggf. erforderlich, die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall lautet der Befehl: 
 
-`sudo -u username php redaxo/bin/console`
+```
+sudo -u username php redaxo/bin/console
+```
 
 Für Docker exec sollte man `-u username` an den Befehl anfügen.  
 
@@ -43,7 +52,7 @@ Für Docker exec sollte man `-u username` an den Befehl anfügen.
 Der einfache Aufruf der Console per `console` ohne Parameter liefert eine Liste aller 
 aktuell verfügbaren Consolen-Kommandos. 
 
-Um mehr Informationen und Optionen zu den einzelnen Kommandos zu erhalten fügt man dem Aufruf des Kommandos `--help` als Parameter an.
+Um mehr Informationen und Optionen zu den einzelnen Befehl zu erhalten fügt man dem Aufruf des Befehls `--help` als Parameter an.
 
 z.B: `console cache:clear --help`
 
