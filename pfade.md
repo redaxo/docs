@@ -248,7 +248,7 @@ Beispiel:
 
 
 <a name="log"></a>
-### pluginCache
+### Log
 
 Pfad zur angegebenen Log-Datei. 
 
