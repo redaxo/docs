@@ -71,7 +71,6 @@
     - [Package](/{{path}}/{{version}}/addon-package)
     - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>offen</b></sup> <sup><b></b></sup>
     - [Assets](/{{path}}/{{version}}/addon-assets)
-    - [Klassen, Funktionen, Vendoren](/{{path}}/{{version}}/addon-class-vendors) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Datenbank-Tabellen](/{{path}}/{{version}}/addon-datenbanktabellen) <sup><b>offen</b></sup>
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
     - [Konfigurations-Formulare(rex_config_form)](/{{path}}/{{version}}/konfiguration_form)
