@@ -20,6 +20,7 @@
     - [coreCache](#coreCache)
     - [addonCache](#addonCache)
     - [pluginCache](#pluginCache)
+    - [log](#log)
     - [src](#src)
     - [core](#core)
     - [addon](#addon)
@@ -245,6 +246,14 @@ Beispiel:
 `rex_path::pluginCache('meinaddon','meinplugin')` => '/htdocs/meinverzeichnis/redaxo/cache/addons/meinaddon/plugins/meinplugin/'
 `rex_path::pluginCache('meinaddon','meinplugin','file.txt')` => '/htdocs/meinverzeichnis/redaxo/cache/addons/meinaddon/plugins/meinplugin/file.txt'
 
+
+<a name="log"></a>
+### pluginCache
+
+Pfad zur angegebenen Log-Datei. 
+
+Beispiel: 
+`rex_path::log('mail.log')`  => `/httpdocs/redaxo/data/log/mail.log`
 
 
 <a name="src"></a>
