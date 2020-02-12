@@ -107,10 +107,12 @@ Besitzt der Datenbank-User das Recht auch neue Datenbanken zu erstellen, so kann
 Schritt 4: Systemcheck
 
 ### Schritt 5: Datenbank
-Es muss eine der drei Optionen gewählt werden.
+Es muss eine der vier Optionen gewählt werden.
+Unterstützt der Datenbankserver utf8mb4, wird eine entsprechende Option zur Auswahl angeboten. 
+
 > **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 ist aktuell nicht vorgesehen.
 
-![Datenbank](/assets/v5.2.0-installation-05-database.png)
+![Datenbank](/assets/v5.9.0-installation-05-database.png)
 Schritt 5: Datenbank
 
 ### Schritt 6: Administrator
