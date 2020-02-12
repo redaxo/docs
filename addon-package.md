@@ -43,6 +43,9 @@ page:
              perm: admin
 requires:
     redaxo: '^5.1'
+    php:
+        version: '^7.1'
+        extensions: [gd, intl]
     packages:
         media_manager: '^2.0.1'
         addonname/pluginname: '^2.4.6'
@@ -73,9 +76,13 @@ Die nachfolgenden Felder sind die einzigen Pflichtfelder in der package.yml. Die
 package: meinaddon 
 version: '1.0.0' 
 ```
+
 **package:** Hier wird der AddOnkey hinterlegt. Dieser sollte eindeutig und unverwechselbar sein, darf nur aus Buchstaben, _ (Unterstrich) und Zahlen bestehen. Damit es nicht zu Konflikten mit anderen AddOns gleicher Bezeichnung kommt, sollte man den AddOn-Key in [MyREDAXO](https://redaxo.org/myredaxo/login/) registrieren.
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, müssen die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden. 
+
+>Um Probleme mit neuen PHP Major-Releases zu vermeiden, empfehlen wir die Angabe zur gewünschten PHP-Version zu hinterlegen. ^7.1 steht hierbei für `>= 7.1 < 8` 
+
 
 <a name="empfohlen"></a>
 ## Empfohlene Angaben
