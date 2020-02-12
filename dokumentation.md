@@ -20,7 +20,7 @@
     - [Medienpool](/{{path}}/{{version}}/medienpool)
 
 - Basis
-    - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system)
+    - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system-aufbau)
     - [Einstieg](/{{path}}/{{version}}/einstieg)
     - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
     - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur)
