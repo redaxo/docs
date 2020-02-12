@@ -4,7 +4,7 @@
 - [Artikel und Kategorien](#artikel-kategorien)
 - [Templates](#templates)
 - [Module](#module)
-- [Hauptmenüpunkte in Redaxo](hauptmenupunkte)
+- [Hauptmenüpunkte in Redaxo](#hauptmenupunkte)
 - [Standard-AddOns in Redaxo](#standard-addons)
 
 <a name="terminologie"></a>
