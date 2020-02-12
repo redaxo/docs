@@ -10,8 +10,9 @@
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
     - [Login](/{{path}}/{{version}}/login)
+    - [System](/{{path}}/{{version}}/system)
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
-    - [Umzug einer Website](/{{path}}/{{version}}/umzug)
+    - [Umzug einer Website](/{{path}}/{{version}}/umzug) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
 
 - Anwender
     - [Profil](/{{path}}/{{version}}/profil)
@@ -38,7 +39,6 @@
 
 - Service
     - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
-    - [Benutzerrechte](/{{path}}/{{version}}/benutzerrechte) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Caching](/{{path}}/{{version}}/caching)
     - [Cronjobs](/{{path}}/{{version}}/cronjobs)
     - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
