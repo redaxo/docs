@@ -27,6 +27,14 @@ Fragmente können Variablen ausgeben, die zuvor dem Fragment per `setVar` zugewi
 ```php
 $fragment->setVar('meinevar','Ich bin der Inhalt',false);
 ```
+
+Folgende Variablenbezeichner sind reserviert und können nicht für eigene Definitionen verwendet werden:
+
+- filename
+- vars
+- decorator
+- fragmentDirs
+    
     
 Das Auslesen der Variablen rfolgt per
 
