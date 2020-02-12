@@ -2,7 +2,7 @@
 
 - [Hinweise](#hinweise)
 - [Aktualisierung durchführen](#aktualisierung)
-- [REDAXO auf utf8mb4 umstellen][#utfmb4]
+- [REDAXO auf utf8mb4 umstellen](#utfmb4)
 
 <a name="hinweise"></a>
 ## Hinweise
