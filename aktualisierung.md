@@ -22,7 +22,7 @@ Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am 
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
-<a name="utf8mb4">
+<a name="utf8mb4"></a>
 ## REDAXO auf utf8mb4 umstellen
 
 > Es sollte vorher ein Backup der Datenbank durchgeführt werden. 
