@@ -6,6 +6,12 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), so dass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden. 
 [Zur Dokumentation auf GitHub](https://github.com/redaxo/docs).
 
+## Neues in dieser Version 
+
+- [Umstellung auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4)
+- [Templages mit Key ansprechen](/{{path}}/{{version}}/redaxo-variablen#rex-template)
+- [Setup per Console ausführen](/{{path}}/{{version}}/installation#console)
+
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü. 
 
 ## Übersicht der Kategorien: 
