@@ -57,7 +57,7 @@ $values = [
 for ($i = 1; $i <= 5; $i++) {
      echo '<p>'.$values[$i].'</p>';
 }
- 
+```
  
 <a name="allgemeine-parameter"></a>
 ## Allgemeine Parameter
