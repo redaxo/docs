@@ -26,6 +26,7 @@
 - [getArrayValue](#getarrayvalue)
 - [getDateTimeValue](#getdatetimevalue)
 - [getRow](#getrow)
+- [getTables](#gettables)
 - [getTablesAndViews](#gettablesandviews)
 - [hasValue](#hasvalue)
 - [isNull](#isnull)
@@ -536,6 +537,13 @@ Erstellt das CREATE TABLE Statement um die Tabelle `$table` der Datenbankverbind
 Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Es wird ein Array mit den Namen aller in der Datenbank vorhandenen Tabellen zurückgegeben.
 
 Die Funktion ist seit Version 5.6.2 deprecated. Es wird die Verwendung der nicht statischen Funktion `getTablesAndViews` empfohlen.
+
+<a name="gettables"></a>
+## getTables
+
+`$sql->getTables($tablePrefix = null)`
+
+Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls $tablePrefix gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Als Rüclgabe erhält man ein Array der Tabellennamen.
 
 <a name="gettablesandviews"></a>
 ## getTablesAndViews
