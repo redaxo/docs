@@ -10,7 +10,7 @@
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
     - [Login](/{{path}}/{{version}}/login)
-    - [System](/{{path}}/{{version}}/system) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
+    - [System](/{{path}}/{{version}}/system)
     - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
     - [Umzug einer Website](/{{path}}/{{version}}/umzug) 
 
