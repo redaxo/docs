@@ -40,7 +40,7 @@ Im Safe mode werden vorübergehend alle AddOns deaktiviert. Falls bspw. ein AddO
 
 ### Setup
 
-Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z.B. [Mehrsprachigkeit](/{{path}}/{{version}}/aktualisierung#utf8mb4).  
+Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z.B. [Aktualisierung der Datenbank auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4))  
 
 <a name="lang"></a>
 ## Sprachen
