@@ -2,6 +2,10 @@
 
 - [Einstellungen (und Features)](#settings)
 - [Sprachen](#lang)
+- [Logdateien](#log)
+- [Systembericht](#bericht)
+- [Customizer](#custom)
+- [Historie](#historie)
 
 <a name="settings"></a>
 ## Einstellungen
@@ -46,4 +50,21 @@ REDAXO unterstützt mehrere Sprachen. Im Reiter Sprachen können diese angelegt 
 <a name="log"></a>
 ## Logdateien
 
-Hier werden zentral die Log-Dateien des Systems und einiger AddOns abgelegt. 
+Hier werden zentral die Log-Dateien des Systems und einiger AddOns zur Fehleranalyse abgelegt. 
+
+
+<a name="bericht"></a>
+## Systembericht
+
+Der Systembericht informiert über die aktuelle Serverumgebung und installierte AddOns mit Angabe der Versionsnummer. Er kann als Markdown-Code heruntergeladen werden und so für den Support in GitHub und Slack anderen Nutzern bereitgestellt werden. Die Daten selbst sind soweit bereinigt, dass sie keine Informationen über die Server IP und Datenbanknamen verraten. 
+
+
+<a name="custom"></a>
+## Customizer (sofern installiert) 
+
+Der Customizer stellt Optionen zur Individualisierung des Backends zur Verfügung. Darüber hinaus stellt er für Entwickler CodeMirror zur konfortablesn Darstellung von Code zur Verfügung. 
+
+<a name="historie"></a>
+## Historie (sofern installiert)
+
+Ist das History-Plugin der Struktur installier, kann die Historie hier gelöscht werden. 
