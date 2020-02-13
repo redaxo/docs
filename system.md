@@ -22,9 +22,9 @@ Im Tab Einstellungen werden die grundlegenden Daten zur Konfiguration des System
 - Standardtemplate
 - Editor-Integration
 
-Die Einstellungen werden ggf. von installieren AddOns erweitetert und bieten dann weitere Optionen. 
+Die Einstellungen werden ggf. von installierten AddOns erweitetert und bieten dann weitere Optionen. 
 
-Im Panel Features stehen folgende Funktionen zur Verfügung
+Im Panel **Features** stehen folgende Funktionen zur Verfügung:
 
 ### Cache Löschen
 
