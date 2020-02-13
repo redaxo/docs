@@ -10,7 +10,7 @@
 <a name="settings"></a>
 ## Einstellungen
 
-Im Tab Einstellungen werden die grundlegenden Daten zur Konfiguration des Systems erfasst. 
+Im Tab Einstellungen werden die grundlegenden Daten zur Konfiguration des Systems und für die Website erfasst. 
 
 - Url der Website
 - Name der Website 
@@ -28,11 +28,11 @@ Im Panel **Features** stehen folgende Funktionen zur Verfügung:
 
 ### Cache Löschen
 
-Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/der entsprechenden Artikels/Kategorie wieder erstellt.
+Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/der entsprechenden Artikels/Kategorie wieder erstellt. *Sollte nur gestartet werden, wenn ein Problem vorliegt*
 
 ### Debug-Modus aktivieren
 
-Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Ausserdem werden keine immutable cache-http-header verwendet. Im Live-Betrieb nicht aktivieren, da die Fehlermeldungen auch sensible Daten beinhalten können.
+Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Ausserdem werden keine immutable cache-http-header verwendet. Der Debug-Modus sollte im Live-Betrieb nicht aktiviert werden, da die Fehlermeldungen auch sensible Daten beinhalten können, darüber hinaus wird die Webpräsenz auf noindex gesetzt.  
 
 ### Safe mode aktivieren
 
@@ -40,7 +40,7 @@ Im Safe mode werden vorübergehend alle AddOns deaktiviert. Falls bspw. ein AddO
 
 ### Setup
 
-Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen.  
+Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z.B. [Mehrsprachigkeit](/{{path}}/{{version}}/aktualisierung#utf8mb4).  
 
 <a name="lang"></a>
 ## Sprachen
@@ -50,7 +50,7 @@ REDAXO unterstützt mehrere Sprachen. Im Reiter Sprachen können diese angelegt 
 <a name="log"></a>
 ## Logdateien
 
-Hier werden zentral die Log-Dateien des Systems und einiger AddOns zur Fehleranalyse abgelegt. 
+Hier werden zentral die Log-Dateien des Systems und einiger AddOns zur Protokollierung und Fehleranalyse abgelegt. 
 
 
 <a name="bericht"></a>
