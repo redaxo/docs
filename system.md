@@ -45,7 +45,7 @@ Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden ein
 <a name="lang"></a>
 ## Sprachen
 
-REDAXO unterstützt mehrere Sprachen. Im Reiter Sprachen können diese angelegt und verwaltet werden. Weitere Informationen zum Thema im Kapitel: [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit. 
+REDAXO unterstützt mehrere Sprachen. Im Reiter Sprachen können diese angelegt und verwaltet werden. Weitere Informationen zum Thema im Kapitel: [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit). 
 
 <a name="log"></a>
 ## Logdateien
