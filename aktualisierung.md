@@ -27,7 +27,13 @@ Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
 > Es sollte vorher ein Backup der Datenbank durchgeführt werden. 
 
-REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis. Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich. Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**. 
-Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Datenbank existiert schon` und `ùtf8mb4 [emphohlen]` aus. 
-Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert. Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden. 
+REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis. 
+
+Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich. 
+
+- Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**. 
+- Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Datenbank existiert schon` und `ùtf8mb4 [emphohlen]` aus. 
+- Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert. 
+
+Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden. 
 
