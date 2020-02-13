@@ -32,7 +32,7 @@ REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die 
 Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich. 
 
 - Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**. 
-- Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Datenbank aktualisieren` und `ùtf8mb4 [emphohlen]` aus. 
+- Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Aktualisierung der Datenbank` und `ùtf8mb4 [emphohlen]` aus. 
 - Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert. 
 
 Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden. 
