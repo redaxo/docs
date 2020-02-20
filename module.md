@@ -13,7 +13,7 @@
     - [Einfaches Textmodul](#textmodul)
     - [Bildmodul](#bildmodul)
     - [Inhaltsübersicht für Artikel](#teaser)
-    - [Interne Linkliste mit `REX_LINKLIST`](#teaser)
+    - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
 
 <a name="einfuehrung"></a>
 ## Einführung
