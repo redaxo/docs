@@ -47,9 +47,9 @@ Somit können Cronjobs ausgelöst werden durch:
 
 - einen Seitenaufruf im Frontend
 - einen Seitenaufruf im Backend
-- einen direkten Aufruf der Cronjob-Skriptumgebung durch einen externen Dienst
+- einen direkten Aufruf der Cronjob-Skriptumgebung durch den Server
 
-Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob in der Session des jeweiligen Users, sodass dort auch ein Zugriff auf die Session möglich ist. Nur die Umgebung `Skript` erlaubt die Ausführung des Cronjobs unabhängig von einem Aufruf von REDAXO im Frontend oder im Backend.
+Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob in der Session des jeweiligen Users, sodass dort auch ein Zugriff auf die Session möglich ist. Nur die Umgebung `Skript` erlaubt die Ausführung des Cronjobs unabhängig von einem Aufruf von REDAXO im Frontend oder im Backend. Der Aufruf des Skripts erfolgt durch `.../redaxo/bin/console cronjob:run`, also z.B. `/home/users/12345/www/redaxo/bin/console cronjob:run`
 
 Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einstellungen des AddOns zu starten.
 
