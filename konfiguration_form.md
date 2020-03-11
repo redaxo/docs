@@ -66,7 +66,7 @@ $addon = rex_addon::get('addonxyz');
 $form = rex_config_form::factory($addon->name);
 
 $field = $form->addInputField('text', 'vorname', null, ["class" => "form-control"]);
-$field->setLabel('Vroname'));
+$field->setLabel('Vorname'));
 
 $field = $form->addInputField('text', 'nachname', null, ["class" => "form-control"]);
 $field->setLabel('Nachname');
