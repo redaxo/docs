@@ -9,7 +9,7 @@ Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt 
 ## Neues in dieser Version 
 
 - [Umstellung auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4)
-- [Templages mit Key ansprechen](/{{path}}/{{version}}/redaxo-variablen#rex-template)
+- [Templates mit Key ansprechen](/{{path}}/{{version}}/redaxo-variablen#rex-template)
 - [Setup per Console ausführen](/{{path}}/{{version}}/installation#console)
 
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü. 
