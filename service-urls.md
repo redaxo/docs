@@ -84,11 +84,23 @@ $aktuelle_id = $this->getValue('article_id');
 
 ### Trennzeichen
 
+Das Trennzeichen ist standardmäßig auf `&amp;` eingestellt, um URLs zu erzeugen, die bspw. in ein `href=""`-Attribut eingesetzt werden können:
+
 ```php
-// Die Schreibweise des Trennzeichens(Separators) wird auf &amp; festgelegt
+// Die Schreibweise des Trennzeichens(Separators) wird immer auf &amp; festgelegt
 $aktuelle_id = $this->getValue('article_id');
-<?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array $params = [], '&amp'); ?>
+<?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array $params = [], '&amp;'); ?>
 ```
+
+Um Anker ohne HTML-Entities auszugeben, wie sie bspw. bei Weiterleitungen oder E-Mail-Templates im Plaintext benötigt werden, muss der 4. Parameter ersetzt werden:
+
+```php
+// Die Schreibweise des Trennzeichens(Separators) wird nun auf & festgelegt
+$aktuelle_id = $this->getValue('article_id');
+<?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array $params = [], '&'); ?>
+```
+
+
 <a name="tolink"></a>
 ## Link aus Artikel- oder Kategorieobjekt erstellen mit toLink()
 
