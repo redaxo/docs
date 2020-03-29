@@ -10,7 +10,7 @@ Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt 
 
 - [Blöcke online/offline](/{{path}}/{{version}}/redaktion#status)
 - [REX_TEMPLATE_KEY und REX_MODULE_KEY](/{{path}}/{{version}}/redaxo-variablen)
-- [paykage.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
+- [package.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
 
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü. 
 
