@@ -4,6 +4,7 @@
   * [Block bearbeiten](#block-bearbeiten)
   * [Block löschen ](#block-loeschen-)
   * [Block verschieben](#block-verschieben)
+  * [Block online/offline](#block-status)
 * [Bedienelemente in REDAXO ](#bedienelemente)
   * [Formularfelder](#formularfelder)
   * [Link](#linkmap)
@@ -65,6 +66,11 @@ Einen Block löscht man durch Klick auf das rote Symbol mit dem Mülleimer.
 <a name="block-verschieben"></a>
 ### Block verschieben
 Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder unten verschoben werden. 
+
+<a name="block-status"></a>
+### Block onnline/offline
+Mit der Schaltfläche `online`bzw. `offline` kann die Block-Darstellung beinflusst werden. Ist ein Block `offline` wird dieser im Frontend nicht ausgegeben. 
+
 
 <a name="bedienelemente"></a>
 ## Bedienelemente in REDAXO 
