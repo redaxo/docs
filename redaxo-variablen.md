@@ -16,10 +16,12 @@
     - [REX_CONFIG](#rex-config)
     - [REX_CTYPE_ID](#rex-ctype-id)
     - [REX_MODULE_ID](#rex-module-id)
+    - [REX_MODULE_KEY](#rex-module-key)
     - [REX_PROPERTY](#rex-property)
     - [REX_SLICE_ID](#rex-slice-id)
     - [REX_TEMPLATE](#rex-template)
     - [REX_TEMPLATE_ID](#rex-template-id)
+    - [REX_TEMPLATE_KEY](#rex-template-key)
     - [REX_USER_ID](#rex-user-id)
     - [REX_USER_LOGIN](#rex-user-login)
 - [Eigene Variablen](#eigene-variablen)
@@ -505,12 +507,20 @@ Liefert die ID der aktiven Artikel-Spalte. Es sind keine Parameter erforderlich.
 ```
 REX_CTYPE_ID
 ```    
-    
+
 <a name="rex-module-id"></a>
 ### REX_MODULE_ID
 Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
 **Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
+
+<a name="rex-module-key"></a>
+### REX_MODULE_KEY
+Liefert den key des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
+
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
+
+
 
 #### Syntax
 
@@ -550,20 +560,21 @@ REX_SLICE_ID
 ```    
 
 <a name="rex-template"></a>
-### REX_TEMPLATE
+### REX_TEMPLATE 
 Mit `REX_TEMPLATE` wird ein Template abgerufen.
 
 **Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
 #### Syntax
 
-Bei Verwendung eines Keys
+**Bei Verwendung eines Keys**
 
 ```php
 REX_TEMPLATE[key=string]
 ```
+der aktuell verwendete Key kann mittels 
 
-Bei Verwendung der ID
+**Bei Verwendung der ID**
 
 ```php
 // Kurze Schreibweise
@@ -578,12 +589,18 @@ Parameter | Beschreibung
 `key=string`, `string` | Key des Templates  
 `id=i`, `i` | Die ID des Templates.
 
-
 <a name="rex-template-id"></a>
 ### REX_TEMPLATE_ID
 Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
 
 **Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
+
+<a name="rex-template-key"></a>
+### REX_TEMPLATE_KEY
+Liefert den Key des aktiven Templates. Es sind keine Parameter erforderlich.
+
+**Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
+
 
 #### Syntax
 
