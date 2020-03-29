@@ -52,6 +52,7 @@
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls) 
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
+    - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/files)<sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
     - [Responses (rex_response)](/{{path}}/{{version}}/responses)
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
@@ -76,7 +77,6 @@
     - [Konfigurations-Formulare(rex_config_form)](/{{path}}/{{version}}/konfiguration_form)
     - [Installation / Update](/{{path}}/{{version}}/addon-intall-update) <sup><b>offen</b></sup>
     - [*Entwicklung*](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
-    - [Quickstart: Das erste eigene AddOn](/{{path}}/{{version}}/addon-quickstart) <sup><b>in Bearbeitung</b></sup> <sup><b>skerbis</b></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
 
 - Datenbank
@@ -85,5 +85,5 @@
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 	
 - Tipps und Links 
-    - [Übersicht wichtiger AddOns ()](/{{path}}/{{version}}/addons-list) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
+    - [Übersicht wichtiger AddOns ()](/{{path}}/{{version}}/addons-list)
     - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
