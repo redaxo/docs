@@ -85,5 +85,5 @@
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 	
 - Tipps und Links 
-    - [Übersicht wichtiger AddOns ()](/{{path}}/{{version}}/addons-list)
+    - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
     - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
