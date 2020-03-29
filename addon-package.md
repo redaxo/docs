@@ -5,6 +5,7 @@
 - [Pflichtangaben](#pflicht)
 - [Empfohlene Angaben](#empfohlen)
 - [Abhängigkeiten (requires:)](#requires)
+- [Default Settings setzen (default_config:)](#defaults)
 - [Konflikte (conflicts:)](#conflicts)
 - [Dateien/Ordner ignorieren](#ignore)
 - [Seiten (page: / subpages:)](#seiten)
@@ -37,10 +38,14 @@ page:
         help:  
              title: 'translate:help'
              icon: rex-icon fa-help
+             subPath: README.md
              eigener: default
         module: 
              title: 'translate:module' 
              perm: admin
+default_config:
+    key: 'value'
+    key2: false
 requires:
     redaxo: '^5.1'
     php:
@@ -123,6 +128,17 @@ Darunter eingerückt werden die Subkeys, hier: `redaxo`, `packages`, `php`; `pac
 
 Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf das aktuelle Major-Release bezieht. Das heißt, eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, sodass eine Installation unter PHP 7 möglich ist. "`addonname/pluginname: '^2.4'`" prüft ob ein bestimmtes PlugIn vorhanden ist. 
 
+<a name="defaults"></a>
+## Defaukt settings (default_config):  
+
+In der package.yml können Desfaut-Settings gesetzt werden, so dass diese direkt nach der Installation zur Verfügung stehen. Diese Lösung ist eine Alternative zur PHP-Variante `$addon->setConfig('key', 'value')`, die bislang in in der boot.php Verwendung fand. 
+
+```yml
+default_config:
+    key: 'value'
+    key2: false
+```
+
 <a name="conflicts"></a>
 ## Konflikte (conflicts:)
 
@@ -178,6 +194,7 @@ subpages:
         icon: rex-icon fa-television
     help:  
         title: 'translate:help'
+        subPath: README.md
         icon: rex-icon fa-help
     module: 
         title: 'translate:module' 
