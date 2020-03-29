@@ -169,7 +169,7 @@ Das Addon stellt ein E-Mail-Log sowie eine E-Mail-Archivierung bereit.
 
 ### E-Mail-Log
 
-Das E-Mail-Log findet man unter `System` > `Logdateien` > `PHPMailer`. Das Logging kann in den Einstellungen des PHPMailer-Addons in 3 Stufen eingestellt werden. 
+Das E-Mail-Log findet im man im Tab `E-Mail-Log` und unter `System` > `Logdateien` > `PHPMailer`. Das Logging kann in den Einstellungen des PHPMailer-Addons in 3 Stufen eingestellt werden. 
 
 - Nein: Es wird kein Log erstellt
 - Nur Fehler Loggen: Es werden nur Fehler geloggt 
