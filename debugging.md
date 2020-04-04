@@ -24,7 +24,8 @@ In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherwei
 
 **Hier Screenshot einfügen**
 
-Neu in REDAXO 5.11 ist das Debug-Addon, welches im Backend zusätzlich aktiviert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockword Debugging-Informationen.
+Neu in REDAXO 5.11 ist das Debug-Addon, welches im Backend zusätzlich aktiviert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
+
 
 ## Debugging: Einstellungen in der `config.yml`
 
