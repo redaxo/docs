@@ -40,7 +40,7 @@ Möglicherweise ist der Debug-Modus aktiviert. Der Debug-Modus sollte ausschlie�
 * Ist sichergestellt, dass alle Dateien erfolgreich kopiert wurden?
 * Stimmt die PHP-Version?
 * Wurden die Datenbank-Zugangsdaten angepasst?
-* Sind alle Einstellungen am Paket
+* Sind alle Einstellungen am Paket korrekt, z.B. Domain, A-Record, Verzeichnispfad, etc.?
 * Wurde die .htacess-Datei übernommen oder neu gesetzt oder sind Anpassungen dort nötig?
 
 ## Fehler: Ich kann mich nicht mehr einloggen
