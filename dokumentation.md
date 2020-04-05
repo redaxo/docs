@@ -1,9 +1,6 @@
 - Einleitung
-    - [Intro](/{{path}}/{{version}}/intro)
-    - [Versionshinweise](/{{path}}/{{version}}/versionshinweise)
+    - [Versionshinweise](/{{path}}/{{version}}/intro)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-    - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5)
-    - [Upgrade REDAXO 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
     - [Debugging](/{{path}}/{{version}}/debugging)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
@@ -85,6 +82,8 @@
     - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
     - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
 	
-- Tipps und Links 
+- Tipps und Links
     - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
     - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
+    - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5)
+    - [Upgrade REDAXO 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
