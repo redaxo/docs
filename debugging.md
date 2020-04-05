@@ -16,7 +16,7 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus a
 
 ## Fehleranalyse: Die system.log-Datei
 
-**Hier Screenshot einfügen**
+![Screenshot /System/Logdateien](/assets/v5.10.0-debug_syslog.png)
 
 In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei.
 
@@ -26,13 +26,13 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 
 ## Debugging: Das debug-Addon
 
-**Hier Screenshot einfügen**
+![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
 
 Neu in REDAXO 5.11 ist das Debug-Addon, welches im Backend zusätzlich aktiviert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
 ## Debugging: Entwicklertools des Browsers
 
-**Hier Screenshot einfügen**
+![Safari Netzwerk/Serververhalten](/assets/v5.10.0-browser_network.png)
 
 In modernen Browsern befindet sich in den Entwickler-Tools ein "Netzwerk"-Reiter, in welchem REDAXO bei aktiviertem Debug-Modus zusätzliche Performance-Informationen ausgibt, die über `rex_timer` gemessen werden.
 
