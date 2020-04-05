@@ -20,16 +20,21 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus a
 
 In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei.
 
+## Debugging: Einstellungen in der `config.yml`
+
+In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiviert werden. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
+
 ## Debugging: Das debug-Addon
 
 **Hier Screenshot einfügen**
 
 Neu in REDAXO 5.11 ist das Debug-Addon, welches im Backend zusätzlich aktiviert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
+## Debugging: Entwicklertools des Browsers
 
-## Debugging: Einstellungen in der `config.yml`
+**Hier Screenshot einfügen**
 
-In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiviert werden. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
+In modernen Browsern befindet sich in den Entwickler-Tools ein "Netzwerk"-Reiter, in welchem REDAXO bei aktiviertem Debug-Modus zusätzliche Performance-Informationen ausgibt, die über `rex_timer` gemessen werden.
 
 ## Fehler: Google indexiert die Seite nicht, alle Seiten werden als noindex markiert.
 
