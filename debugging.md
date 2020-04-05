@@ -8,7 +8,7 @@ Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden w
 
 ![Ooops](/assets/v5.10.0-debug_ooops.png)
 
-Tritt ein Fehler auf, meldet REDAXO sich standardmäßig im Frontend mit einem Oooops und im Backend mit einem Rrrrroar.
+Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Oooops und im Backend mit einem Rrrrroar.
 
 ![Ooops](/assets/v5.10.0-debug_whooops.png)
 
@@ -18,7 +18,7 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus a
 
 ![Screenshot /System/Logdateien](/assets/v5.10.0-debug_syslog.png)
 
-In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei.
+In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei. Diese wird auch unter `System > Logdateien` angezeigt.
 
 ## Debugging: Einstellungen in der `config.yml`
 
@@ -28,13 +28,13 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 
 ![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
 
-Neu in REDAXO 5.11 ist das Debug-Addon, welches im Backend zusätzlich aktiviert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
+Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
 ## Debugging: Entwicklertools des Browsers
 
 ![Safari Netzwerk/Serververhalten](/assets/v5.10.0-browser_network.png)
 
-In modernen Browsern befindet sich in den Entwickler-Tools ein "Netzwerk"-Reiter, in welchem REDAXO bei aktiviertem Debug-Modus zusätzliche Performance-Informationen ausgibt, die über `rex_timer` gemessen werden.
+In Desktop-Browsern befindet sich in den Entwickler-Tools ein "Netzwerk"-Reiter, in welchem REDAXO bei aktiviertem Debug-Modus zusätzliche Performance-Informationen ausgibt, die über `rex_timer` gemessen werden.
 
 ## Fehler: Google indexiert die Seite nicht, alle Seiten werden als noindex markiert.
 
@@ -46,14 +46,16 @@ Möglicherweise ist der Debug-Modus aktiviert. Der Debug-Modus sollte ausschlie�
 * Stimmt die PHP-Version?
 * Wurden die Datenbank-Zugangsdaten angepasst?
 * Sind alle Einstellungen am Paket korrekt, z.B. Domain, A-Record, Verzeichnispfad, etc.?
-* Wurde die .htacess-Datei übernommen oder neu gesetzt oder sind Anpassungen dort nötig?
+* Wurde die .htaccess-Datei übernommen oder neu gesetzt oder sind Anpassungen dort nötig?
+* Wurde das Setup erneut ausgeführt oder zumindest der Cache gelöscht?
 
 ## Fehler: Ich kann mich nicht mehr einloggen
 
 Möglicherweise wurde das Passwort geändert oder der Benutzer existiert nicht mehr. Oder: Möglicherweise wurde ein Backup eingespielt, das die Tabelle `rex_user` nicht beinhaltet hat oder überschrieben hat. 
 
 * Lösung 1: Ggf. das Setup starten, um den Administrator erneut anzulegen.
-* Lösung 2: Über die REDAXO-Console einen neuen Benutzer erstellen oder das Passwort eines bestehenden Benutzers zurücksetzen: `console user:set-password <username> <neues-passwort>`
+* Lösung 2: [Das Passwort des Administrators zurücksetzen.](https://redaxo.org/doku/master/passwort-vergessen)
+* Lösung 3: Über die REDAXO-Console einen neuen Benutzer erstellen oder das Passwort eines bestehenden Benutzers zurücksetzen: `console user:set-password <username> <neues-passwort>`
 
 Ein Login ist auch nicht mehr möglich, wenn der Speicherplatz des Hosting-Pakets voll ist und die PHP-Session daher nicht gestartet werden kann.
 
@@ -65,4 +67,6 @@ Stelle sicher, dass `https://www.redaxo.org/de/ws/` über eine Socket-Verbindung
 
 ### Fehler: Pjax-Formulare im Backend speichern nicht
 
-Wird beim Speichern in einem Modul oder Template im Backend ein 403-Fehler gemeldet, ist evtl. `mod_security` beim Webspace aktiviert.
+Wird beim Speichern in einem Modul oder Template im Backend ein 403-Fehler gemeldet, ist evtl. `mod_security` oder `fail2ban` beim Webspace aktiviert.
+
+Für `mod_security` testweise nur auf "Erkennung und protokollieren" einstellen.
