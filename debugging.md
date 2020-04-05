@@ -6,11 +6,11 @@ Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden w
 
 ## Fehleranalyse: Whooops und Oooops
 
-**Hier Screenshots Ooops, Rooaaar einfügen**
+![Ooops](/assets/v5.10.0-debug_ooops.png)
 
 Tritt ein Fehler auf, meldet REDAXO sich standardmäßig im Frontend mit einem Oooops und im Backend mit einem Rrrrroar.
 
-**Hier Screenshots Whooops einfügen**
+![Ooops](/assets/v5.10.0-debug_whooops.png)
 
 Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus aktiviert hat, wird anstelle des Oooops ein Whoooops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben.
 
