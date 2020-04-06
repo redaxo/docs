@@ -66,11 +66,14 @@ $project = rex_addon::get('project');
 $project->getProperty($key);
 ```
 
-Auslesen über REDAXO-Variablen in Templates und Modulen
+Auslesen über REDAXO-Variablen in Templates und Blöcken 
 
 ```html
 REX_PROPERTY[namespace=project key=foo]
 ```
+> Möchte man eine Property in einem Template auslesen, die in Blöcken gesetzt wurde,  sollte man vorab den Artikel holen. z.B. per `$article='REX_ARTICLE[]';`  und dann die Property auslesen. 
+
+
 
 
 <a name="beschreibung"></a>
