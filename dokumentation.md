@@ -1,9 +1,11 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/intro)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
+    - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/r4-r5)
     - [Debugging](/{{path}}/{{version}}/debugging)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
+
 
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
@@ -85,5 +87,3 @@
 - Tipps und Links
     - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
     - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
-    - [Änderungen REDAXO 4 zu 5](/{{path}}/{{version}}/aenderungen-v4-v5)
-    - [Upgrade REDAXO 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
