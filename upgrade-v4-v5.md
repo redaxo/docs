@@ -8,16 +8,15 @@
 * [Übertragung der Datenbank zu REDAXO 5](#transfer)
 * [Dateien kopieren](#copyfiles)
 * [Nachbearbeitung, Fehlerbereinigung](#service)
-
-- [$REX](#rex)
-- [REX_VAR](#rex-var)
-- [Funktionen und Klassen](#funktionen-klassen)
-- [Extension Points](#extension-points)
-- [rex_sql](#rex-sql)
-    - [Fehlermeldung in REDAXO 4](#fehler-rex4)
-    - [Fehlermeldung in REDAXO 5](#fehler-rex5)
-- [rex_form](#rex)
-- [Packages (AddOns/PlugIns)](#packages)
+* [$REX](#rex)
+* [REX_VAR](#rex-var)
+* [Funktionen und Klassen](#funktionen-klassen)
+* [Extension Points](#extension-points)
+*[rex_sql](#rex-sql)
+  * [Fehlermeldung in REDAXO 4](#fehler-rex4)
+  * [Fehlermeldung in REDAXO 5](#fehler-rex5)
+* [rex_form](#rex)
+* [Packages (AddOns/PlugIns)](#packages)
 
 
 <a name="einleitung"></a>
