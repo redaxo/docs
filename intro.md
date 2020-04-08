@@ -8,9 +8,16 @@ Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt 
 
 ## Neues in dieser Version 
 
+REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
+
+### Highlights
+
 - [Blöcke online/offline](/{{path}}/{{version}}/redaktion#status)
 - [REX_TEMPLATE_KEY und REX_MODULE_KEY](/{{path}}/{{version}}/redaxo-variablen)
 - [package.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
+
+Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
+[Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
 
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü.
 
