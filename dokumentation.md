@@ -1,7 +1,7 @@
 - Einleitung
     - [Versionshinweise](/{{path}}/{{version}}/intro)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-    - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/r4-r5)
+    - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
     - [Debugging](/{{path}}/{{version}}/debugging)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
