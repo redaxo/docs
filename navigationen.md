@@ -116,7 +116,7 @@ $ignoreArticles = array(6, 13, 16, 127);
 $nav->addFilter('id', '/^(?!(' . implode('|', $ignoreArticles) . ')$)\d+/', 'regex', '');
 
 // Beispiele für Callbacks
-$nav->addCallback(function (rex_category $category, $depth, &$li, &$a, &$a_content) {
+$nav->addCallback(function (rex_category $category, $depth, &$li, &$a) {
 
     // Ergänze eigene Klasse, wenn ein Listenelement über Kindelemente verfügt
     if ($category->getChildren(true)) {
