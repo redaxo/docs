@@ -204,3 +204,22 @@ getOutput führt die angegebene Datei aus und gibt das Ergebnis aus.
 ```php
 getOutput($file)
 ```
+
+
+
+<a name="rexdir"></a>
+## rex_dir
+
+Die Class rex_dir kümmert sich um das Handling von Verzeichnissen. Hier stehen Methoden zum Erstellen, kopieren und löschen von Verzeichnissen Verfügung. 
+
+[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/master/redaxo/src/core/lib/util/dir.php)  
+
+
+<a name="create"></a>
+### rex_dir::create
+
+`create` erstellt ein bzw. mehere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erfolgt. Bei false, müssen die angegbenen Unterverzeicnisse bereits bestehen.  Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
+
+```php
+rex_dir::create($dir, $recursive = true)
+```
