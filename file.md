@@ -117,7 +117,7 @@ Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind un
 rex_file::putCache('blindtext.txt',$content);
 ```
 
-Der geachte Inhalt kann dann mit `getCache` abgerufen werden: 
+Der gecachte Inhalt kann dann mit `getCache` abgerufen werden: 
 
 ```php
 echo (rex_file::getCache('blindtext.txt'));
