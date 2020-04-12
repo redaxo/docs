@@ -52,7 +52,7 @@
     - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
     - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls) 
     - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
-    - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/files)
+    - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/file)
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
     - [Responses (rex_response)](/{{path}}/{{version}}/responses)
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
