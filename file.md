@@ -77,8 +77,7 @@ put($file, $content)
 Beispiel: 
 
 ```php
-$css = '
-body { background: #eee;}
+$css = 'body { background: #eee;}
 p { line-height: 1.2em;}
 ';
 $success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css)
