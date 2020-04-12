@@ -2,10 +2,9 @@
     - [Versionshinweise](/{{path}}/{{version}}/intro)
     - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
     - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
-    - [Debugging](/{{path}}/{{version}}/debugging)
     - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
     - [API-Dokumentation](/api/{{version}}/)
-
+    - [Debugging](/{{path}}/{{version}}/debugging)
 
 - Setup
     - [Installation](/{{path}}/{{version}}/installation)
@@ -56,7 +55,6 @@
     - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
     - [Responses (rex_response)](/{{path}}/{{version}}/responses)
     - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
-    - [Sinnvolles <sup>(Eventuell eigene Menüpunkte, dir, file, finder etc.)</sup>](/{{path}}/{{version}}/sinnvolles) <sup><b>offen</b></sup>
     - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
     - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
     - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
@@ -76,7 +74,6 @@
     - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
     - [Konfigurations-Formulare(rex_config_form)](/{{path}}/{{version}}/konfiguration_form)
     - [Installation / Update](/{{path}}/{{version}}/addon-intall-update) <sup><b>offen</b></sup>
-    - [*Entwicklung*](/{{path}}/{{version}}/addon-entwicklung) <sup><b>in Bearbeitung</b></sup> <sup><i>Doku-Team</i></sup>
     - [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung)
 
 - Datenbank
