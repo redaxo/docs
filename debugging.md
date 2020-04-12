@@ -65,9 +65,9 @@ Möglicherweise ist der Debug-Modus aktiviert. Der Debug-Modus sollte ausschlie�
 ## Fehler: REDAXO funktioniert nach einem Website-Umzug nicht mehr
 
 * Ist sichergestellt, dass alle Dateien erfolgreich kopiert wurden?
-* Stimmt die PHP-Version?
+* Stimmt die PHP-Version? Siehe [Systemanforderungen](https://redaxo.org/download/core/). 
 * Wurden die Datenbank-Zugangsdaten angepasst?
-* Sind alle Einstellungen am Paket korrekt, z.B. Domain, A-Record, Verzeichnispfad, etc.?
+* Sind alle Einstellungen am Webspace-Paket und der Domain korrekt, z.B. Domain, A-Record, Verzeichnispfad, etc.?
 * Wurde die .htaccess-Datei übernommen oder neu gesetzt oder sind Anpassungen dort nötig?
 * Wurde das Setup erneut ausgeführt oder zumindest der Cache gelöscht?
 
