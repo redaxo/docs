@@ -84,3 +84,35 @@ $success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css)
 ```
 
 
+
+
+## rex_file::putConfig
+<a name="#rexfile_putConfig"></a>
+
+Die Methode `putConfig` schreibt Konfigurationsdaten in eine Config-Dateit. 
+
+> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
+
+```php
+putConfig($file, $content)
+```
+
+
+
+## rex_file::putCache
+<a name="#rexfile_putCache"></a>
+
+Die Methode `putCache` schreibt Daten in den Cache
+
+```php
+putCache($file, $content)
+```
+
+Beispiel: 
+
+```php 
+$content = '
+Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen.
+';
+rex_file::putCache('blindtext.txt',$content);
+```
