@@ -23,3 +23,19 @@
   - [deleteFiles](#deleteFiles)
   - [deleteIterator](#deleteIterator)
   
+<a name="rexfile_get"></a>
+## rex_file::get
+Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
+
+```php
+rex_file::get($file, $default = null)
+
+Beispiel: 
+
+```php
+$data = rex_file::get(rex_path::frontend('/assets/styles.css'),'not awailable');
+```
+
+
+
+
