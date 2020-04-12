@@ -114,11 +114,11 @@ Beispiel:
 $content = '
 Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. 
 ';
-rex_file::putCache('blindtext.txt',$content);
+rex_file::putCache(rex_path::addonCache('meinaddon').'blindtext.txt',$content);
 ```
 
 Der gecachte Inhalt kann dann mit `getCache` abgerufen werden: 
 
 ```php
-echo (rex_file::getCache('blindtext.txt'));
+echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 ```
