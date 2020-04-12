@@ -34,9 +34,32 @@ rex_file::get($file, $default = null)
 Beispiel: 
 
 ```php
-$data = rex_file::get(rex_path::frontend('/assets/styles.css'),'not awailable');
+$data = rex_file::get(rex_path::frontend('/assets/styles.css'),'not available');
 ```
 
 
+<a name="rexfile_getFonfig"></a>
+## rex_file::getConfig
 
+Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die Datei nicht gelesen werden, kann ein Default-Wert zurückgegeben werden.  
+
+> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeite der package.yml und rex_config zurückgreifen. 
+
+```php 
+getConfig($file, $default = [])
+```
+
+Beispiel: Einlesen der REDAXO Config
+
+```php
+$config = rex_path::coreData('config.yml');
+```
+
+<a name="#rexfile_getCache"></a>
+
+Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
+
+```php
+getCache($file, $default = [])
+```
 
