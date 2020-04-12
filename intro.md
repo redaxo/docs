@@ -15,6 +15,8 @@ REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist j
 - [Blöcke online/offline](/{{path}}/{{version}}/redaktion#status)
 - [REX_TEMPLATE_KEY und REX_MODULE_KEY](/{{path}}/{{version}}/redaxo-variablen)
 - [package.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
+- [Neue Consolen-Befehle für AddOns](/{{path}}/{{version}}/basis-addons#console)
+
 
 Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
 [Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
