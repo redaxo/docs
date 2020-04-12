@@ -12,7 +12,7 @@
 - [Reinstallieren / Reparatur](#reinstall)
 - [Deinstallation](#uninstall)
 - [Consolen Befehle](#console)
-   - [Upload per Console](#upconsole)
+   - [Download per Console](#downconsole)
    - [Liste aller verfügbaren AddOns](#conlist)
    - [AddOn-Update](#conupdate)
    - [AddOn löschen](#condelete)
@@ -130,8 +130,8 @@ Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine an
 <a name="console"></a>
 ## Consolen-Befehle
 
-<a name="upconsole"></a>
-### Upload per Console
+<a name="downconsole"></a>
+### Download per Console
 
 Addons können auch über die Console geladen werden. Das Kommando lautet: 
 
