@@ -14,6 +14,7 @@
 - [Consolen Befehle](#console)
    - [Upload per Console](#upconsole)
    - [Liste aller verfügbaren AddOns](#conlist)
+   - [AddOn-Update](#conupdate)
    - [AddOn löschen](#condelete)
 
 <a name="ueber"></a>
@@ -145,7 +146,7 @@ redaxo/bin/console install:download yform
 > Wird die Version nicht angegeben, wird eine Auswahl bereitgestellt. 
 
 
-<a name="listall"></a>
+<a name="conlist"></a>
 ### Liste aller verfügbaren Addons
 
 Command `install:list`.
@@ -160,6 +161,21 @@ Options:
 - `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
 - `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
 - `--json` - Gibt die Ausgabe als json string (für z.B. verarbeitung in skripten)
+
+
+<a name="conupdate"></a>
+### AddOn-Update
+
+Command `install:update` updated ein AddOn mit Updates von redaxo.org.
+
+```
+redaxo/bin/console install:update <addonkey> <version>:
+```
+
+- addonkey: z.B. "yform"
+- version: z.B. "1.2.3"
+
+Die Versionsangabe ist optional, wenn keine angegeben ist, werden mögliche Versionen zur Auswahl gestellt (gleich wie im Backend auch sind).
 
 
 <a name="condelete"></a>
