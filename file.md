@@ -29,7 +29,7 @@
 
 Die Class rex_file kümmert sich um das Handling einzelner Dateien. Hier stehen Methoden zum Einlesen, Schreiben und zur Ausgabe von Dateien im Dateisystem zur Verfügung. 
 
-[Quellcode: ](https://github.com/redaxo/redaxo/blob/master/redaxo/src/core/lib/util/file.php)  
+[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/master/redaxo/src/core/lib/util/file.php)  
 
 
 
