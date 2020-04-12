@@ -55,6 +55,7 @@ Beispiel: Einlesen der REDAXO Config
 $config = rex_path::coreData('config.yml');
 ```
 
+## rex_file::getCache
 <a name="#rexfile_getCache"></a>
 
 Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
