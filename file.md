@@ -37,7 +37,7 @@ Die Class rex_file kümmert sich um das Handling einzelner Dateien. Hier stehen 
 Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
 
 ```php
-rex_file::get($file, $default = null)
+rex_file::get($file, $default = null);
 ```
 
 Beispiel: 
@@ -55,7 +55,7 @@ Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die D
 > Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
 
 ```php 
-getConfig($file, $default = [])
+getConfig($file, $default = []);
 ```
 
 Beispiel: Einlesen der REDAXO Config
@@ -70,7 +70,7 @@ $config = rex_path::coreData('config.yml');
 Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
 
 ```php
-getCache($file, $default = [])
+getCache($file, $default = []);
 ```
 
 
@@ -80,7 +80,7 @@ getCache($file, $default = [])
 Mit der Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Rie Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschriben.  
 
 ```php
-put($file, $content)
+put($file, $content);
 ```
 
 Beispiel: 
@@ -89,7 +89,7 @@ Beispiel:
 $css = 'body { background: #eee;}
 p { line-height: 1.2em;}
 ';
-$success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css)
+$success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css);
 ```
 
 
@@ -103,7 +103,7 @@ Die Methode `putConfig` schreibt Konfigurationsdaten in eine Config-Datei. Die R
 > Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
 
 ```php
-putConfig($file, $content)
+putConfig($file, $content);
 ```
 
 
@@ -114,7 +114,7 @@ putConfig($file, $content)
 Die Methode `putCache` schreibt Daten in den Cache. Bei Erfolg TRUE, sonst FALSE.
 
 ```php
-putCache($file, $content)
+putCache($file, $content);
 ```
 
 Beispiel: 
@@ -138,7 +138,7 @@ echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 Die Methode copy ermöglicht das Kopieren einer einer Datei zu einem Verzeichnis oder Datei. Es müssen eine Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
 ```php
-rex_file::copy($srcfile, $dstfile)
+rex_file::copy($srcfile, $dstfile);
 ```
 
 
@@ -148,7 +148,7 @@ rex_file::copy($srcfile, $dstfile)
 Die Methode move ermöglicht das Verschieben einer einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
 ```php
-rex_file::move($srcfile, $dstfile)
+rex_file::move($srcfile, $dstfile);
 ```
 
 <a name="rexfile_delete"></a>
@@ -157,7 +157,7 @@ rex_file::move($srcfile, $dstfile)
 Die Methode `delete` ermöglicht das Löschen einer einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
 ```php
-rex_file::delete($file)
+rex_file::delete($file);
 ```
 
 <a name="rexfile_extension"></a>
@@ -166,7 +166,7 @@ rex_file::delete($file)
 Die Methode `extension` liefert als Rückgabe die Dateiendung einer Datei. 
 
 ```php
-rex_file::extension($file)
+rex_file::extension($file);
 ```
 
 
@@ -201,7 +201,7 @@ $filesize = rex_file::formattedSize($file);
 getOutput führt die angegebene Datei aus und gibt das Ergebnis aus. 
 
 ```php
-getOutput($file)
+getOutput($file);
 ```
 
 
@@ -220,7 +220,7 @@ Die Class rex_dir kümmert sich um das Handling von Verzeichnissen. Hier stehen 
 `create` erstellt ein bzw. mehere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegbenen Unterverzeicnisse bereits bestehen.  Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
 
 ```php
-rex_dir::create($dir, $recursive = true)
+rex_dir::create($dir, $recursive = true);
 ```
 
 
@@ -230,7 +230,7 @@ rex_dir::create($dir, $recursive = true)
 `isWritable` prüft ob Schreibrechte für das Verzeichnis bestehen. Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
 
 ```php
-rex_dir::isWritable($dir)
+rex_dir::isWritable($dir);
 ```
 
 <a name="copy"></a>
@@ -239,7 +239,7 @@ rex_dir::isWritable($dir)
 `copy` kopiert ein Verzeichnis zum angegebenen Ziel. Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
 ```php
-rex_dir::copy($srcdir, $dstdir)
+rex_dir::copy($srcdir, $dstdir);
 ```
 
 <a name="delete"></a>
@@ -248,5 +248,14 @@ rex_dir::copy($srcdir, $dstdir)
 `delete` löscht ein Verzeichnis rekursiv. Wird `$deleteSelf` auf `false` gesetzt werden nur die Unterverzeichnisse gelöscht.   Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
 ```php
-rex_dir::delete($dir, $deleteSelf = true)
+rex_dir::delete($dir, $deleteSelf = true);
+```
+
+<a name="delete"></a>
+### rex_dir::deleteFiles
+
+`deleteFiles` löscht alle Deteien im angegeben Verzeichnis und der Unterverzeichnisse. Wird `$recursive` auf `false` gesetzt werden die Dateien der Unterverzeichnisse nicht gelöscht. Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
+
+```php
+rex_dir::deleteFiles($dir, $recursive = true);
 ```
