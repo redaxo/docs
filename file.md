@@ -259,7 +259,7 @@ rex_dir::copy($srcdir, $dstdir);
 rex_dir::delete($dir, $deleteSelf = true);
 ```
 
-<a name="delete"></a>
+<a name="deleteFiles"></a>
 ### rex_dir::deleteFiles
 
 `deleteFiles` löscht alle Deteien im angegeben Verzeichnis und der Unterverzeichnisse. Wird `$recursive` auf `false` gesetzt werden die Dateien der Unterverzeichnisse nicht gelöscht. Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
