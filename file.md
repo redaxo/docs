@@ -64,3 +64,24 @@ Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weitere
 getCache($file, $default = [])
 ```
 
+
+## rex_file::put
+<a name="#rexfile_put"></a>
+
+Mit der Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Rückgabe bei Erfolg: `true`, sonst `false`. Vorhandene Inhalte der Datei werden überschriben.  
+
+```php
+put($file, $content)
+```
+
+Beispiel: 
+
+```php
+$css = '
+body { background: #eee;}
+p { line-height: 1.2em;}
+';
+$success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css)
+```
+
+
