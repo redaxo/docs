@@ -2,12 +2,15 @@
 
 - [Einführung](#einfuehrung)
 - [rex_file](#rexfile)
+ - Lesen
   - [get](#rexfile_get)
   - [getConfig](#rexfile_getConfig)
   - [getCache](#rexfile_getCache)
+ - Schreiben
   - [put](#rexfile_put)
   - [putConfig](#rexfile_putConfig) 
   - [putCache](#rexfile_putCache)
+ - Tools
   - [copy](#rexfile_copy) 
   - [rename](#rexfile_rename) 
   - [delete](#rexfile_delete) 
