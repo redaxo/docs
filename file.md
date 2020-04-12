@@ -29,6 +29,7 @@ Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiter
 
 ```php
 rex_file::get($file, $default = null)
+```
 
 Beispiel: 
 
