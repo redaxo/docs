@@ -1,23 +1,19 @@
 # File-Handling
-
-- [Einführung](#einfuehrung)
+- [Einleitung](#einleitung)
 - [rex_file](#rexfile)
- - Lesen
-   - [get](#rexfile_get)
-   - [getConfig](#rexfile_getConfig)
-   - [getCache](#rexfile_getCache)
- - Schreiben
-     - [put](#rexfile_put)
-     - [putConfig](#rexfile_putConfig) 
-     - [putCache](#rexfile_putCache)
- - Tools
-    - [copy](#rexfile_copy) 
-    - [rename](#rexfile_rename) 
-    - [delete](#rexfile_delete) 
-    - [extension](#rexfile_extension) 
-    - [mimeType](#rexfile_mimeType) 
-    - [formattedSize](#rexfile_formattedSize)
-    - [getOutput](#rexfile_getOutput) 
+  - [get](#rexfile_get)
+  - [getConfig](#rexfile_getConfig)
+  - [getCache](#rexfile_getCache)
+  - [put](#rexfile_put)
+  - [putConfig](#rexfile_putConfig) 
+  - [putCache](#rexfile_putCache)
+  - [copy](#rexfile_copy) 
+  - [rename](#rexfile_rename) 
+  - [delete](#rexfile_delete) 
+  - [extension](#rexfile_extension) 
+  - [mimeType](#rexfile_mimeType) 
+  - [formattedSize](#rexfile_formattedSize)
+  - [getOutput](#rexfile_getOutput) 
 - [rex_dir](#dir)
   - [create](#create)
   - [isWritable](#isWritable)
@@ -25,19 +21,25 @@
   - [delete](#delete)
   - [deleteFiles](#deleteFiles)
 
+<a name="Einleitung"></a>
+## Einleitung
+
+Für die Erstellung und Pflege von Dateien und Verzeichnissen stehen die PHP-Classes `rex_file` und `rex_dir` zur Verfügung. Nachfolgend werden die Aufgaben der darin enthaltenen Methoden gelistet. 
+
+In den Methoden müsen korrekte Pfade angegeben werden. Im Kapitel [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade) finden sich dazu alle erforderlichen Informationen. 
+
 
 <a name="rexfile"></a>
 ## rex_file
 
-Die Class rex_file kümmert sich um das Handling einzelner Dateien. Hier stehen Methoden zum Einlesen, Schreiben und zur Ausgabe von Dateien im Dateisystem zur Verfügung. 
+Die Class `rex_file` kümmert sich um das Handling einzelner Dateien. Hier stehen Methoden zum Einlesen, Schreiben und zur Ausgabe von Dateien aus und im Dateisystem zur Verfügung. 
 
 [Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/master/redaxo/src/core/lib/util/file.php)  
 
 
-
 <a name="rexfile_get"></a>
 ### rex_file::get
-Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
+Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung, wenn die Datei nicht gelesen werden kann (default: NULL).  
 
 ```php
 rex_file::get($file, $default = null);
@@ -53,9 +55,9 @@ $data = rex_file::get(rex_path::frontend('/assets/styles.css'),'not available');
 <a name="rexfile_getConfig"></a>
 ### rex_file::getConfig
 
-Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die Datei nicht gelesen werden, kann ein Default-Wert zurückgegeben werden.  
+Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die Datei nicht gelesen werden, kann ein Default-Wert zurückgegeben werden (default: NULL).  
 
-> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
+> Diese Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml, Properties und rex_config zurückgreifen. 
 
 ```php 
 getConfig($file, $default = []);
@@ -74,6 +76,11 @@ Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weitere
 
 ```php
 getCache($file, $default = []);
+```
+Beispiel: 
+
+```php
+echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 ```
 
 
@@ -97,18 +104,16 @@ $success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css);
 
 
 
-
 ### rex_file::putConfig
 <a name="rexfile_putConfig"></a>
 
 Die Methode `putConfig` schreibt Konfigurationsdaten in eine Config-Datei. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
 
-> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
+> Diese Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml, Properties und rex_config zurückgreifen. 
 
 ```php
 putConfig($file, $content);
 ```
-
 
 
 ### rex_file::putCache
