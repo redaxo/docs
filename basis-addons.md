@@ -11,6 +11,10 @@
 - [Update](#update)
 - [Reinstallieren / Reparatur](#reinstall)
 - [Deinstallation](#uninstall)
+- [Consolen Befehle](#console)
+   - [Upload per Console](#upconsole)
+   - [Liste aller verfügbaren AddOns](#conlist)
+   - [AddOn löschen](#condelete)
 
 <a name="ueber"></a>
 ## Über AddOns
@@ -89,7 +93,7 @@ Soweit möglich, sollte man nicht das aktuelle Github-Repository herunterladen. 
 <a name="install"></a> 
 ## AddOn-Installation
 
-Nach dem erfolgten Upload können die AddOns in der AddOn-Verwaltung (Menüpunkt: `AddOns`) installiert werden. 
+Nach dem erfolgten Download über den Installer, bzw. manuellem Upload, können die AddOns in der AddOn-Verwaltung (Menüpunkt: `AddOns`) installiert werden. 
 
 > Neben der Versionsnummer findet man ein Fragezeichen (`?`). Hier erhält man meist nützliche Informationen zur Installation und zur Benutzung. Es empfiehlt sich, diese vor der Installation zu lesen. 
 
@@ -122,4 +126,43 @@ Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` gelade
 > Hinweis:
 Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine angelegten Dateien und Tabellen vollständig entfernen. Einige AddOns weichen jedoch bewusst von dieser Regel ab. Zum Beispiel löscht yForm seine eigenen Tabellen, aber nicht die eigentlichen Datentabellen. Auch das Backup-AddOn löscht bewusst nicht die angelegten Backups im data-Ordner. Daher bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten.
 
+<a name="console"></a>
+## Consolen-Befehle
 
+<a name="upconsole"></a>
+### Upload per Console
+
+Addons können auch über die Console geladen werden. Das Kommando lautet: 
+
+`php redaxo/bin/console install:download <addonkey> <version>`
+
+Beispiel: 
+
+```
+redaxo/bin/console install:download yform
+```
+
+> Wird die Version nicht angegeben, wird eine Auswahl bereitgestellt. 
+
+
+<a name="listall"></a>
+### Liste aller verfügbaren Addons
+
+Command `install:list`.
+
+Listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
+
+```
+redaxo/bin/console install:list
+```
+
+Options:
+- `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
+- `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
+- `--json` - Gibt die Ausgabe als json string (für z.B. verarbeitung in skripten)
+
+
+<a name="condelete"></a>
+### Löschen eines Addons
+
+`redaxo/bin/console package:delete <package-id>`
