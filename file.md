@@ -21,7 +21,6 @@
   - [copy](#copy)
   - [delete](#delete)
   - [deleteFiles](#deleteFiles)
-  - [deleteIterator](#deleteIterator)
 
 
 <a name="rexfile"></a>
@@ -218,8 +217,36 @@ Die Class rex_dir kümmert sich um das Handling von Verzeichnissen. Hier stehen 
 <a name="create"></a>
 ### rex_dir::create
 
-`create` erstellt ein bzw. mehere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erfolgt. Bei false, müssen die angegbenen Unterverzeicnisse bereits bestehen.  Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
+`create` erstellt ein bzw. mehere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegbenen Unterverzeicnisse bereits bestehen.  Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
 
 ```php
 rex_dir::create($dir, $recursive = true)
+```
+
+
+<a name="isWritable"></a>
+### rex_dir::isWritable
+
+`isWritable` prüft ob Schreibrechte für das Verzeichnis bestehen. Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
+
+```php
+rex_dir::isWritable($dir)
+```
+
+<a name="copy"></a>
+### rex_dir::copy
+
+`copy` kopiert ein Verzeichnis zum angegebenen Ziel. Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
+
+```php
+rex_dir::copy($srcdir, $dstdir)
+```
+
+<a name="delete"></a>
+### rex_dir::delete
+
+`delete` löscht ein Verzeichnis rekursiv. Wird `$deleteSelf` auf `false` gesetzt werden nur die Unterverzeichnisse gelöscht.   Rückgabe bei Erfolg ist TRUE, sonst FALSE. 
+
+```php
+rex_dir::delete($dir, $deleteSelf = true)
 ```
