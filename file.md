@@ -3,9 +3,9 @@
 - [Einführung](#einfuehrung)
 - [rex_file](#rexfile)
   - Lesen
-     - [get](#rexfile_get)
-     - [getConfig](#rexfile_getConfig)
-     - [getCache](#rexfile_getCache)
+   - [get](#rexfile_get)
+   - [getConfig](#rexfile_getConfig)
+   - [getCache](#rexfile_getCache)
  - Schreiben
      - [put](#rexfile_put)
      - [putConfig](#rexfile_putConfig) 
