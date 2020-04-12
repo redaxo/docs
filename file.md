@@ -2,7 +2,7 @@
 
 - [Einführung](#einfuehrung)
 - [rex_file](#rexfile)
-  - Lesen
+ - Lesen
    - [get](#rexfile_get)
    - [getConfig](#rexfile_getConfig)
    - [getCache](#rexfile_getCache)
