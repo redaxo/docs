@@ -43,7 +43,7 @@ $data = rex_file::get(rex_path::frontend('/assets/styles.css'),'not available');
 
 Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die Datei nicht gelesen werden, kann ein Default-Wert zurückgegeben werden.  
 
-> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeite der package.yml und rex_config zurückgreifen. 
+> Die Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml und rex_config zurückgreifen. 
 
 ```php 
 getConfig($file, $default = [])
