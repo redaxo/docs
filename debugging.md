@@ -31,7 +31,7 @@ Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Oooops und im Bac
 Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus aktiviert hat, wird anstelle des Oooops ein Whoooops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben.
 
 <a name="systemlog"></a>
-## Fehleranalyse: Die `system.log`-Datei
+## Fehleranalyse: Die **system.log**-Datei
 
 ![Screenshot /System/Logdateien](/assets/v5.10.0-debug_syslog.png)
 
