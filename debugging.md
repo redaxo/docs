@@ -38,7 +38,7 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus a
 In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei. Diese wird auch unter `System > Logdateien` angezeigt.
 
 <a name="configyml"></a>
-## Debugging: Einstellungen in der `config.yml`
+## Debugging: Einstellungen in der **config.yml**
 
 In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiviert werden. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
 
