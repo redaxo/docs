@@ -250,7 +250,7 @@ Fügt dem Formular ein Textarea-Feld hinzu. Beispiel: `$field = $form->addTextAr
 
 `addSelectField($name, $value = null, array $attributes = [])`
 
-Fügt dem Formular ein Select/Auswahl-Feld hinzu. Das Beispiel zeigt die Optionen für das Select-Feld:
+Fügt dem Formular ein Select-/Auswahl-Feld hinzu. Das Beispiel zeigt die Optionen für das Select-Feld:
 
 ```
 $field = $form->addSelectField('bestellung',$value = null,['class'=>'form-control selectpicker']); // die Klasse selectpicker aktiviert den Selectpicker von Bootstrap
@@ -262,6 +262,19 @@ $select->addOption('Fisch', 'fisch');
 $select->addOption('Fleisch', 'fleisch');
 $select->addOption('Vegetarisch', 'vegetarisch');
 ```
+
+REDAXO kommt mit vorgefertigten Select-Feldern für die Auswahl von Struktur-Kategorien und Medienpool-Kategorien:
+
+```php
+$field = $form->addSelectField('media_category_id');
+$field->setSelect(new rex_category_select($ignore_offlines, $clang, $check_perms, $add_homepage));
+```
+
+```php
+$field->setSelect(new rex_media_category_select($check_perms));
+
+```
+
 
 <a name="addpriofield"></a>
 #### addPrioField
