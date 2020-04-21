@@ -263,22 +263,6 @@ $select->addOption('Fleisch', 'fleisch');
 $select->addOption('Vegetarisch', 'vegetarisch');
 ```
 
-Mit setSelect() kann kann ein Select-Objekt übergeben werden. 
-
-z.B.: 
-
-Übergabe eines Kategorie-Selects
-```php
-$field->setSelect(new rex_category_select(false, false, true, false));
-```
-
-Medienpool-Kategorie 
-
-```php
-$field->setSelect(new rex_media_category_select(false, false, true, false));
-```
-
-
 <a name="addpriofield"></a>
 #### addPrioField
 
@@ -559,7 +543,7 @@ Die Eingaben von rex_form-Eingabefeldern können vor dem Absenden des Formulars 
 
 Folgende Validatoren sind verfügbar:
 
-Name | Beschreibung | Parameter | Beispiel
+Name | Beschreibung | Parameter | Beispiel
 ------------- | ------------- | ------------- | -------------
 notEmpty	| prüft, ob ein Eingabefeld leer ist | - | `$field->getValidator()->add( 'notEmpty', 'Das Feld Nachname darf nicht leer sein.');`
 type	| prüft den Wert des Eingabefelds auf einen Variablentyp | Variablentyp: (int/integer, float, real) | `$field->getValidator()->add( 'type', 'Bitte einen ganzzahligen Wert eingeben', 'int');`
@@ -576,4 +560,3 @@ custom  | prüft über eine Custom-Function. Die Funktion erhält als Parameter 
 
 > **Hinweis:** 
 Alle Validator-Typen außer *notempty* führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z.B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum *match* auf */^[0-9]{5}$/'* auch ein *notempty*-Validator hinzugefügt werden.
-
