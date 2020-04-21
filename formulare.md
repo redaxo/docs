@@ -263,6 +263,22 @@ $select->addOption('Fleisch', 'fleisch');
 $select->addOption('Vegetarisch', 'vegetarisch');
 ```
 
+Mit setSelect() kann kann ein Select-Objekt übergeben werden. 
+
+z.B.: 
+
+Übergabe eines Kategorie-Selects
+```php
+$field->setSelect(new rex_category_select(false, false, true, false));
+```
+
+Medienpool-Kategorie 
+
+```php
+$field->setSelect(new rex_media_category_select(false, false, true, false));
+```
+
+
 <a name="addpriofield"></a>
 #### addPrioField
 
