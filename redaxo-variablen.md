@@ -561,7 +561,7 @@ REX_SLICE_ID
 
 <a name="rex-template"></a>
 ### REX_TEMPLATE 
-Mit `REX_TEMPLATE` wird ein Template abgerufen.
+Mit `REX_TEMPLATE` wird ein Template abgerufen. Shortcut für `$template = new rex_template($templateId); echo $template->getTemplate();` bzw. `$template = rex_template::forKey($templateKey); echo $template->getTemplate();`.
 
 **Hinweis:** Wird vom `structure`-Plugin `content` bereitgestellt.
 
