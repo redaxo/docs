@@ -48,6 +48,9 @@ Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet
 <a name="debugmode"></a>
 ## Debugging: Der Debug-Modus
 
+![Aktivierter Debug-Modus](/assets/v5.10.0_debug.png)
+Woran erkennt man, dass der Debug-Modus eingeschaltet ist?
+
 Im Debug-Modus werden zur Laufzeit weitere Informationen gesammelt und im Fehlerfall ausgegeben. Exceptions werden als Whooops ausgegeben und helfen so dem Entwickler, Fehler zu beseitigen und Probleme zu erkennen. 
 
 Der Debug-Modus kann über die config.yml verschärft werden: über die Eigenschaft `throw_always_exception: true` werden auch einfache `Notices` als Whooops ausgegeben. Die Vorteile liegen auf der Hand: So wird man bei der Entwicklung von Modulen, Templates oder Addon-Code u.a. frühzeitig darauf aufmerksam, wenn Methoden und Funktionen in PHP verwendet werden, die bereits als `deprecated` markiert und bei einem Update der PHP-Version zu Fehler führen werden.
