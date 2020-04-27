@@ -43,6 +43,9 @@ In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherwei
 <a name="dump"></a>
 ## Debugging: Die Funktion **dump()**
 
+![Aktivierter Debug-Modus](/assets/v5.10.0_debug_dump.png)
+Ergebnis einer dump()-Ausgabe
+
 Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet werden, um die Ausgabe einer Variablen, eines Objekts oder eines anderen Datentyps im Frontend auszugeben. Der Vorteil besteht darin, dass die Ausgabe HTML-formatiert ist und dadurch schneller erfasst und durchsucht werden kann.
 
 <a name="debugmode"></a>
