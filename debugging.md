@@ -3,6 +3,8 @@
     - [Whooops und Oooops](#ooops)
     - [Die `system.log`-Datei](#systemlog)
 - Debugging
+    - [Der Debug-Mode](#debugmode)    
+    - [Die Funktion `dump()`](#dump)    
     - [Einstellungen in der `config.yml`](#configyml)    
     - [Das debug-Addon](#debugaddon)
     - [Entwicklertools des Browsers](#browser)
@@ -11,6 +13,7 @@
     - [REDAXO funktioniert nach einem Website-Umzug nicht mehr](#moved)
 - Weitere Fehler und Lösungen aus der REDAXO-Community
     - [Installer kann keine Addons abrufen](#installer)
+    - [Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler](#cture-edit-error)
     - [Pjax-Formulare im Backend speichern nicht](#pjax)
     - [Ich kann mich nicht mehr einloggen](#login)
 
@@ -36,6 +39,23 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus a
 ![Screenshot /System/Logdateien](/assets/v5.10.0-debug_syslog.png)
 
 In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei. Diese wird auch unter `System > Logdateien` angezeigt.
+
+<a name="dump"></a>
+## Debugging: Die Funktion **dump()**
+
+Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet werden, um die Ausgabe einer Variablen, eines Objekts oder eines anderen Datentyps im Frontend auszugeben. Der Vorteil besteht darin, dass die Ausgabe HTML-formatiert ist und dadurch schneller erfasst und durchsucht werden kann.
+
+<a name="debugmode"></a>
+## Debugging: Der Debug-Modus
+
+Im Debug-Modus werden zur Laufzeit weitere Informationen gesammelt und im Fehlerfall ausgegeben. Exceptions werden als Whooops ausgegeben und helfen so dem Entwickler, Fehler zu beseitigen und Probleme zu erkennen. 
+
+Der Debug-Modus kann über die config.yml verschärft werden: über die Eigenschaft `throw_always_exception: true` werden auch einfache `Notices` als Whooops ausgegeben. Die Vorteile liegen auf der Hand: So wird man bei der Entwicklung von Modulen, Templates oder Addon-Code u.a. frühzeitig darauf aufmerksam, wenn Methoden und Funktionen in PHP verwendet werden, die bereits als `deprecated` markiert und bei einem Update der PHP-Version zu Fehler führen werden.
+
+Der Debug-Modus darf unter keinen Umständen aktiviert werden, wenn die Website öffentlich zugänglich ist. Denn der Debug-Modus ist öffentlich und nicht nur eingeloggte Administratoren erhalten eine Fehlermeldung und die darin exponierten Informationen.
+
+Wir empfehlen, die Seite vorher durch einen `.htpasswd`-Verzeichnisschutz o.ä. zu schützen oder zumindest in einen Wartungsmodus zu versetzen, bspw. durch das AddOn `maintenance`. Zum Schutz von Entwickler und Betreiber werden im Debug-Modus alle header auf `noindex` gesetzt, um auch Suchmaschinenen daran zu hindern, sensible Daten durch die Debug-Ausgabe in den Suchmaschinen-Index aufzunehmen.
+
 
 <a name="configyml"></a>
 ## Debugging: Einstellungen in der **config.yml**
@@ -89,6 +109,14 @@ Ein Login ist auch nicht mehr möglich, wenn der Speicherplatz des Hosting-Paket
 ### Fehler: Installer kann keine Addons abrufen
 
 Stelle sicher, dass `https://www.redaxo.org/de/ws/` über eine Socket-Verbindung erreichbar ist.
+
+<a name="structure-edit-error"></a>
+### Fehler: Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler
+
+Möglicherweise ist ein Modul oder der Inhalt eines Blocks defekt und löst einen Fehler aus. Mögliche Lösungsansätze:
+
+* Den betroffenen Modulcode im Menü `Module` auf Fehler überprüfen oder
+* Im Zweifel über die Datenbank den betroffenen Block in der Tabelle `rex_article_slice` entfernen und den REDAXO-Cache löschen.
 
 <a name="pjax"></a>
 ### Fehler: Pjax-Formulare im Backend speichern nicht
