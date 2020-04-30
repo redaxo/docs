@@ -69,7 +69,7 @@ Wir empfehlen, die Seite vorher durch einen `.htpasswd`-Verzeichnisschutz o.ä. 
 In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiviert werden. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
 
 <a name="debugaddon"></a>
-## Debugging: Das debug-Addon
+## Debugging: Das debug-Addon (seit REDAXO 5.11)
 
 ![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
 
