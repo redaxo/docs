@@ -18,9 +18,9 @@ Das AddOn erlaubt das Anpassen von Grafiken und Handling von Dateien anhand von 
 <a name="url"></a>
 ## Erzeugung der URL:
 
-### Mittels PHP-Methode
+### Mittels PHP-Methode (empfohlen)
 
-```php
+```php 
 $url = rex_media_manager::getUrl($type,$file); 
 ```
 > Der Pfad zum Medium muss nicht angegeben werden.
