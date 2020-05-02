@@ -25,7 +25,8 @@ Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden w
 <a name="ooops"></a>
 ## Fehleranalyse: Whooops und Oooops
 
-![Oooops](/assets/v5.10.0-debug_ooops.png) Allgemeine Oooops Fehlerseite - Dargestellt im Frontend oder Backend
+![Oooops](/assets/v5.10.0-debug_ooops.png) Allgemeine Ooops-Fehlerseite im Frontend (links) und im Backend (rechts)
+
 
 Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Oooops und im Backend mit einem Rrrrroar.
 
