@@ -25,13 +25,17 @@ Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden w
 <a name="ooops"></a>
 ## Fehleranalyse: Whooops und Oooops
 
-![Ooops](/assets/v5.10.0-debug_ooops.png)
+![Oooops](/assets/v5.10.0-debug_ooops.png) Allgemeine Ooops-Fehlerseite im Frontend (links) und im Backend (rechts)
+
 
 Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Oooops und im Backend mit einem Rrrrroar.
 
-![Whoops](/assets/v5.10.0-debug_whooops.png)
+![Whooops](/assets/v5.10.0-debug_whooops.png) Whooops-Fehlerseite mit Debug-Informationen
 
-Wenn ein Administrator eingeloggt ist, oder der Administrator den  Debug-Modus aktiviert hat, wird anstelle des Oooops ein Whoooops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben.
+
+
+Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus aktiviert hat, wird anstelle des Ooops ein Whooops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben, um die Fehlersuche zu vereinfachen.
+
 
 <a name="systemlog"></a>
 ## Fehleranalyse: Die **system.log**-Datei
@@ -72,7 +76,7 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 ## Debugging: Das debug-Addon (ab REDAXO 5.11)
 
 
-![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
+![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png) Serverseitige Abläufe visualisiert durch Clockwork
 
 Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
