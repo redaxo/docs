@@ -76,7 +76,7 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 ## Debugging: Das debug-Addon (ab REDAXO 5.11)
 
 
-![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png) Visualisierung der Interna in Clockwork
+![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png) Serverseitige Abläufe visualisiert durch Clockwork
 
 Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
