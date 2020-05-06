@@ -80,6 +80,9 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 
 Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
+> Das Debug-AddOn sollte nicht in Produktivumgebungen eingesetzt werden, weil hierfür der Debug-Modus im System aktiviert sein muss. Bei Multidomain-Umgebungen sollte man sich mit der gewünschten Domain im Backend einloggen, damit es unter der jeweiligen Domain eingesetzt werden kann. 
+
+
 <a name="browser"></a>
 ## Debugging: Entwicklertools des Browsers
 
