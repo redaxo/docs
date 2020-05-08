@@ -38,7 +38,7 @@ oder
 redaxo/bin/console`
 ```
 
-(Hierbei sollte die Datei `console` ausführbar)
+(Hierbei sollte die Datei `console` ausführbar sein)
 
 Je nach System ist es ggf. erforderlich, die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall lautet der Befehl:
 
