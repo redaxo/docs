@@ -21,7 +21,7 @@ REDAXO bietet als quelloffenes System viele Möglichkeiten der Mitarbeit. Eine M
 
 Erster Anlaufpunkt ist in jedem Fall der **Slack-Channel von Friends Of REDAXO**, in dem sich Entwickelnde und Nutzer\_innen austauschen. Slack ist kostenlos und kann im Browser genutzt werden, es gibt aber auch Apps für alle wichtigen Systeme.
 
-Für den Slack-Channel könnte ihr euch hier mit eurer E-Mailadresse anmelden: [Slack-Anmeldeformular](/slack/).
+Für den Slack-Channel könnte ihr euch hier mit eurer E-Mail-Adresse anmelden: [Slack-Anmeldeformular](/slack/).
 
 <a name="referenzen"></a>
 ## Website-Referenzen
