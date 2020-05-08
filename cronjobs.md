@@ -1,16 +1,18 @@
 # Cronjobs
+
 - [Zweck des Cronjob-AddOns](#zweck)
 - [Einstellungen eines Cronjobs](#einstellungen)
-    - [Name](#name)
-    - [Beschreibung](#beschreibung)
-    - [Umgebung](#umgebung)
-    - [Ausführung](#ausfuehrung)
-    - [Status](#status)
-    - [Typ](#typ)
-    - [Intervall](#intervall)
+  - [Name](#name)
+  - [Beschreibung](#beschreibung)
+  - [Umgebung](#umgebung)
+  - [Ausführung](#ausfuehrung)
+  - [Status](#status)
+  - [Typ](#typ)
+  - [Intervall](#intervall)
 - [Neue Typen durch AddOns definieren](#neue-typen)
 
 <a name="zweck"></a>
+
 ## Zweck des Cronjob-AddOns
 
 Cronjobs dienen der regelmäßigen automatisierten Ausführung von Programmcode. Das Cronjobs-AddOn ist Bestandteil der REDAXO-Basisinstallation, muss jedoch bei Bedarf separat installiert werden.
@@ -18,19 +20,23 @@ Cronjobs dienen der regelmäßigen automatisierten Ausführung von Programmcode.
 Im AddOn lassen sich dann beliebig viele Einträge erstellen, die gemäß den Einstellungen jedes Eintrages abgearbeitet werden.
 
 <a name="einstellungen"></a>
+
 ## Einstellungen eines Cronjobs
 
 <a name="name"></a>
+
 ### Name
 
 Zunächst gibt man den Namen eines Eintrags ein. Dies kann beispielsweise `RSS Feed lesen` oder `Monatliches Backup` sein.
 
 <a name="beschreibung"></a>
+
 ### Beschreibung
 
 Eine aussagekräftige Beschreibung vervollständigt den informativen Teil des Eintrages.
 
 <a name="umgebung"></a>
+
 ### Umgebung
 
 Im Feld `Umgebung` kann man ein oder mehrere Ereignisse wählen, bei denen der Cronjob ausgeführt wird.
@@ -54,16 +60,19 @@ Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob 
 Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einstellungen des AddOns zu starten.
 
 <a name="ausfuehrung"></a>
+
 ### Ausführung
 
 Wenn eines der Ereignisse `Frontend` oder `Backend` eintritt, so kann der Cronjob seinen Dienst zu Beginn des Aufrufes erledigen oder am Ende. Nur in Ausnahmefällen sollte die Einstellung `Beginn` gewählt werden, da sie den jeweiligen Aufruf verzögert. Das fällt natürlich weniger ins Gewicht, wenn die Ausführung am Ende geschieht.
 
 <a name="status"></a>
+
 ### Status
 
 Im Feld `Status` kann ein Cronjob deaktiviert werden. Standard ist `aktiviert`.
 
 <a name="typ"></a>
+
 ### Typ
 
 Im Feld `Typ` bestehen die Auswahlmöglichkeiten:
@@ -85,12 +94,13 @@ So kann bei der Einstellung `PHP-Code` kompletter PHP-Code eingegeben werden, be
 AddOns können eigene typspezifische Parameter zur Verfügung stellen.
 
 <a name="intervall"></a>
+
 ### Intervall
 
 Die Standardeinstellung für den Bereich `Intervall` ist die tägliche Ausführung, jeweils beim nächsten Aufruf der Umgebung nach 0:00 Uhr.
 
 <a name="neue-typen"></a>
+
 ## Neue Typen durch AddOns definieren
 
 AddOns können eigene Ausführungstypen definieren. Dies wird beispielsweise im System AddOn `Backup` verwendet, um automatisierte Backups auszuführen.
-

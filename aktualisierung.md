@@ -5,6 +5,7 @@
 - [REDAXO auf utf8mb4 umstellen](#utf8mb4)
 
 <a name="hinweise"></a>
+
 ## Hinweise
 
 REDAXO bietet eine komfortable Aktualisierungsmöglichkeit sowohl für das Core-System selbst als auch für AddOns.
@@ -14,6 +15,7 @@ REDAXO bietet eine komfortable Aktualisierungsmöglichkeit sowohl für das Core-
 Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen Addons notwendig.
 
 <a name="aktualisierung"></a>
+
 ## Aktualisierung durchführen
 
 Um die Aktualisierungen über den Installer durchzuführen, muss man als Administrator bzw. Person mit Administrationsrechten im System eingeloggt sein. Zum Installer gelangt man dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer). Dort werden alle AddOns aufgelistet, die über den Installer aktualisiert werden können.
@@ -23,17 +25,17 @@ Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
 <a name="utf8mb4"></a>
+
 ## REDAXO auf utf8mb4 umstellen
 
-> Es sollte vorher ein Backup der Datenbank durchgeführt werden. 
+> Es sollte vorher ein Backup der Datenbank durchgeführt werden.
 
-REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis. 
+REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis.
 
-Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich. 
+Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich.
 
-- Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**. 
-- Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Aktualisierung der Datenbank` und `ùtf8mb4 [emphohlen]` aus. 
-- Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert. 
+- Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**.
+- Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Aktualisierung der Datenbank` und `ùtf8mb4 [emphohlen]` aus.
+- Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert.
 
-Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden. 
-
+Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden.

@@ -1,8 +1,8 @@
 # Queries - rex_sql
 
 - [Queries - rex_sql](#queries_rex_sql)
-    - [Syntax](#syntax)
-    - [Rückgabewerte](#rueckgabewerte)
+  - [Syntax](#syntax)
+  - [Rückgabewerte](#rueckgabewerte)
 - [getQueryType](#getquerytype)
 - [datetime](#datetime)
 - [setDBQuery](#setdbquery)
@@ -69,6 +69,7 @@
 - [checkDbConnection](#checkdbconnection)
 
 <a name="queries_rex_sql"></a>
+
 ## Queries - rex_sql
 
 Die Klasse `rex_sql` ist der Datenbankwrapper, über den REDAXO alle Datenbankzugriffe erzeugt und verwaltet. Die Klasse steht dem Entwickler für eigene Datenbankzugriffe zur Verfügung. Es wird empfohlen alle Datenbankzugriffe über diese Klasse vorzunehmen. Sowohl im Frontend als auch im Backend besteht eine aktive Datenbankverbindung, die für die Zugriffe genutzt werden kann.
@@ -78,6 +79,7 @@ Die Klasse `rex_sql` ist der Datenbankwrapper, über den REDAXO alle Datenbankzu
 In der rex_sql Klasse werden häufig Parameter in der Form `function($query, $params)` verwendet. Es wird empfohlen die Werte an den Query über die params zu übergeben.
 
 Beispiel:
+
 ```
 $sql = rex_sql::factory();
 $sql->setQuery('SELECT name, id FROM rex_article WHERE parent_id = :pid', ['pid'=>5]);
@@ -88,6 +90,7 @@ $sql->setQuery('SELECT name, id FROM rex_article WHERE parent_id = :pid', ['pid'
 Die meisten Funktionen geben das aktuelle rex_sql Objekt zurück.
 
 <a name="getquerytype"></a>
+
 ## getQueryType
 
 `getQueryType($qry)`
@@ -97,6 +100,7 @@ Gibt den Typ der Abfrage $sql zurück oder `false` wenn die Abfrage keinen Typ e
 Mögliche Rückgabewerte sind SELECT, SHOW, UPDATE, INSERT, DELETE, REPLACE, CREATE, CALL, OPTIMIZE oder false. Die Syntax wird nicht geprüft.
 
 <a name="datetime"></a>
+
 ## datetime
 
 `datetime($timestamp = null)`
@@ -104,6 +108,7 @@ Mögliche Rückgabewerte sind SELECT, SHOW, UPDATE, INSERT, DELETE, REPLACE, CRE
 Gibt einen Datumsstring im SQL Datetime Format (Y-m-d H:i:s) aus dem übergebenen Timestamp zurück. Standard ist die aktuelle Zeit.
 
 <a name="setdbquery"></a>
+
 ## setDBQuery
 
 `setDBQuery($query, array $params = [], array $options = [])`
@@ -111,12 +116,14 @@ Gibt einen Datumsstring im SQL Datetime Format (Y-m-d H:i:s) aus dem übergebene
 Setzt eine Abfrage ($query) ab und wechselt die DBID falls vorhanden.
 
 Beispiel:
+
 ```
 $sql = rex_sql::factory();
 $sql->setDBQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>5]);
 ```
 
 <a name="setdebug"></a>
+
 ## setDebug
 
 `setDebug($debug = true)`
@@ -124,6 +131,7 @@ $sql->setDBQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>5]);
 Schaltet die Debug Funktion von rex_sql ein. Damit wird das rex_sql Objekt bei ausgeführter Query per dump() ausgegeben.
 
 <a name="preparequery"></a>
+
 ## prepareQuery
 
 `prepareQuery($qry)`
@@ -131,6 +139,7 @@ Schaltet die Debug Funktion von rex_sql ein. Damit wird das rex_sql Objekt bei a
 Erstellt aus einer übergebenen SQL Abfrage ein PDO Statement.
 
 <a name="execute"></a>
+
 ## execute
 
 `execute(array $params = [], array $options = [])`
@@ -146,6 +155,7 @@ $sql->execute(['id'=>10]);
 Das Beispiel setzt eine Abfrage mit Platzhaltern. Die Werte für die Platzhalter werden mit `execute` übergeben. Damit lässt sich dann beispielsweise eine Abfrage mehrfach verwenden, indem die Parameter verändert werden.
 
 <a name="setquery"></a>
+
 ## setQuery
 
 `setQuery($query, array $params = [], array $options = [])`
@@ -157,6 +167,7 @@ $res = $sql->setQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>1
 ```
 
 <a name="settable"></a>
+
 ## setTable
 
 `setTable($table)`
@@ -164,6 +175,7 @@ $res = $sql->setQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>1
 Setzt den Tabellennamen und gibt das rex_sql Objekt zurück.
 
 <a name="setrawvalue"></a>
+
 ## setRawValue
 
 `setRawValue($colName, $value)`
@@ -171,6 +183,7 @@ Setzt den Tabellennamen und gibt das rex_sql Objekt zurück.
 Setzt den Raw Wert einer Tabelle und gibt das rex_sql Objekt zurück.
 
 <a name="setvalue"></a>
+
 ## setValue
 
 `setValue($colName, $value)`
@@ -178,6 +191,7 @@ Setzt den Raw Wert einer Tabelle und gibt das rex_sql Objekt zurück.
 Setzt einen einzelnen Wert `value` für eine Spalte `colName` und gibt das rex_sql Objekt zurück.
 
 <a name="setarrayvalue"></a>
+
 ## setArrayValue
 
 `setArrayValue($colName, array $value)`
@@ -185,6 +199,7 @@ Setzt einen einzelnen Wert `value` für eine Spalte `colName` und gibt das rex_s
 Setzt den Inhalt eines Arrays `value` für eine Spalte `colName`. Der Wert wird per `json_encode` codiert.
 
 <a name="setdatetimevalue"></a>
+
 ## setDateTimeValue
 
 `setDateTimeValue($colName, $timestamp)`
@@ -192,6 +207,7 @@ Setzt den Inhalt eines Arrays `value` für eine Spalte `colName`. Der Wert wird 
 Formatiert einen `timestamp` in das SQL Datumsformat und setzt ihn für die Spalte `columnName`. Das rex_sql Objekt wird zurückgegeben.
 
 <a name="setvalues"></a>
+
 ## setValues
 
 `setValues(array $valueArray)`
@@ -199,6 +215,7 @@ Formatiert einen `timestamp` in das SQL Datumsformat und setzt ihn für die Spal
 Setzt ein Array als Inhalt. Der Schlüssel des Arrays muss dem passenden Feldnamen der Tabelle entsprechen.
 
 <a name="setarrayvalue"></a>
+
 ## setArrayValue
 
 `setArrayValue($colName, array $value)`
@@ -206,6 +223,7 @@ Setzt ein Array als Inhalt. Der Schlüssel des Arrays muss dem passenden Feldnam
 Ein Array in der Datenbank ablegen. Der Wert von array wird per `json_encode` codiert. Siehe auch `getArrayValue`
 
 <a name="setdatetimevalue"></a>
+
 ## setDateTimeValue
 
 `setDateTimeValue($colName, $timestamp)`
@@ -213,6 +231,7 @@ Ein Array in der Datenbank ablegen. Der Wert von array wird per `json_encode` co
 Legt in der Spalte `$colName` einen Timestamp im Format `Y-m-d H:i:s` ab. Wird in `$timestamp` kein Wert übergeben, wird der aktuelle Unix Timestamp verwendet.
 
 <a name="setvalues"></a>
+
 ## setValues
 
 `setValues(array $valueArray)`
@@ -222,6 +241,7 @@ Ein assoziatives Array ablegen, wobei die `keys` den Feldnamen entsprechen, die 
 `$sql->setValues(['vorname'=>'Rupert','nachname'=>'Neudeck']);`
 
 <a name="hasvalues"></a>
+
 ## hasValues
 
 `hasValues()`
@@ -229,6 +249,7 @@ Ein assoziatives Array ablegen, wobei die `keys` den Feldnamen entsprechen, die 
 Gibt `true` zurück, wenn das rex_sql Objekt Werte enthält, ansonsten `false`. Es sind keine Parameter erlaubt.
 
 <a name="isvalueof"></a>
+
 ## isValueOf
 
 `isValueOf($feld, $prop)`
@@ -236,6 +257,7 @@ Gibt `true` zurück, wenn das rex_sql Objekt Werte enthält, ansonsten `false`. 
 Prüft den Wert einer Spalte der aktuellen Zeile ob ein Wert enthalten ist. Wenn für `$prop = ""` übergeben wird, wird stets `true` zurückgegeben.
 
 <a name="setwhere"></a>
+
 ## setWhere
 
 `setWhere($where, $whereParams = null)`
@@ -252,6 +274,7 @@ Es wird **nicht empfohlen** den gesamten Where-String mit Parametern und Werten 
 `$sql->setWhere('myid="35" OR abc="zdf"');` (deprecated)
 
 <a name="getvalue"></a>
+
 ## getValue
 
 `getValue($colName)`
@@ -261,6 +284,7 @@ Gibt den Wert von `colName` des aktuellen Datensatzes zurück. Wird für `colNam
 Wenn der Name des Feldes in der Form `tablename.fieldname` übergeben wurde, wird direkt auf den Tabellennamen zugegriffen. Andernfalls versucht die Funktion den Feldnamen in der Abfrage zu finden. Ist dieser nicht eindeutig, wird ein Fehler generiert.
 
 <a name="getarrayvalue"></a>
+
 ## getArrayValue
 
 `getArrayValue($colName)`
@@ -268,6 +292,7 @@ Wenn der Name des Feldes in der Form `tablename.fieldname` übergeben wurde, wir
 Das in `colName` abgelegte Array wird per `json_decode` decodiert und zurückgegeben. Sie auch `setArrayValue`.
 
 <a name="getdatetimevalue"></a>
+
 ## getDateTimeValue
 
 `getDateTimeValue($colName)`
@@ -275,6 +300,7 @@ Das in `colName` abgelegte Array wird per `json_decode` decodiert und zurückgeg
 Gibt den in `colName` abgelegte als String abgelegten Datum-Zeit Wert als Unix Timestamp zurück. Siehe auch `setDateTimeValue`.
 
 <a name="getrow"></a>
+
 ## getRow
 
 `getRow($fetch_type = PDO::FETCH_ASSOC)`
@@ -282,6 +308,7 @@ Gibt den in `colName` abgelegte als String abgelegten Datum-Zeit Wert als Unix T
 Gibt den Wert der aktuellen Zeile zurück. Über `fetch_type` kann festgelegt werden von welchem Typ das Ergebnis ist. So gibt `PDO::FETCH_OBJ` das Ergebnis als Objekt zurück. Standard ist `PDO::FETCH_ASSOC`, womit ein assoziatives Array zurückgegeben wird.
 
 <a name="hasvalue"></a>
+
 ## hasValue
 
 `hasValue($feldname)`
@@ -289,6 +316,7 @@ Gibt den Wert der aktuellen Zeile zurück. Über `fetch_type` kann festgelegt we
 Prüft, ob eine Spalte vorhanden ist. Gibt `true` zurück, wenn die Spalte gefunden wurde, `flase`, wenn sie nicht gefunden wurde. Die Funktion kann auch mit einem vorangestellten Alias aufgerufen werden: `tablename.feldname`.
 
 <a name="isnull"></a>
+
 ## isNull
 
 `isNull($feldname)`
@@ -296,6 +324,7 @@ Prüft, ob eine Spalte vorhanden ist. Gibt `true` zurück, wenn die Spalte gefun
 Prüft, ob das Feld mit dem Namen `feldname` null ist. Es wird `true` oder `false` zurückgegeben.
 
 <a name="getrows"></a>
+
 ## getRows
 
 `getRows()`
@@ -303,6 +332,7 @@ Prüft, ob das Feld mit dem Namen `feldname` null ist. Es wird `true` oder `fals
 Gibt die Anzahl der Zeilen für eine gesetze Abfrage zurück.
 
 <a name="getfields"></a>
+
 ## getFields
 
 `getFields()`
@@ -310,6 +340,7 @@ Gibt die Anzahl der Zeilen für eine gesetze Abfrage zurück.
 Gibt die Anzahl der Spalten für eine gesetze Abfrage zurück.
 
 <a name="getwhere"></a>
+
 ## getWhere
 
 `getWhere()`
@@ -317,6 +348,7 @@ Gibt die Anzahl der Spalten für eine gesetze Abfrage zurück.
 Gibt das aktuelle `where` Statement zurück.
 
 <a name="select"></a>
+
 ## select
 
 `select($fields = '*')`
@@ -324,6 +356,7 @@ Gibt das aktuelle `where` Statement zurück.
 Setzt eine Select-Abfrage auf die aktuelle Tabelle mit dem aktuellen `where` Statement ab. Die Angabe von `fields` ist optional, Standard ist `*`.
 
 <a name="update"></a>
+
 ## update
 
 `update()`
@@ -331,6 +364,7 @@ Setzt eine Select-Abfrage auf die aktuelle Tabelle mit dem aktuellen `where` Sta
 Setzt eine Update-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`) und mit `setWhere` gesetzten WHERE Parametern ab.
 
 <a name="insert"></a>
+
 ## insert
 
 `insert()`
@@ -338,6 +372,7 @@ Setzt eine Update-Anweisung auf die angegebene Tabelle mit den gesetzten Werten 
 Setzt eine Insert-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`). Bei Verstoß gegen eine NOT NULL Regel wird eine rex_sql_exception ausgelöst.
 
 <a name="replace"></a>
+
 ## replace
 
 `replace()`
@@ -345,6 +380,7 @@ Setzt eine Insert-Anweisung auf die angegebene Tabelle mit den gesetzten Werten 
 Setzt eine Replace-Anweisung auf die angegebene Tabelle mit den gesetzten Werten (z.B. mit `setValue` oder `setValues`) und mit `setWhere` gesetzten WHERE Parametern ab.
 
 <a name="delete"></a>
+
 ## delete
 
 `delete()`
@@ -352,6 +388,7 @@ Setzt eine Replace-Anweisung auf die angegebene Tabelle mit den gesetzten Werten
 Setzt eine Delete-Anweisung auf die angegebene Tabelle mit den WHERE Parametern ab, die mit `setWhere` gesetzten wurden.
 
 <a name="flush"></a>
+
 ## flush
 
 `flush()`
@@ -359,6 +396,7 @@ Setzt eine Delete-Anweisung auf die angegebene Tabelle mit den WHERE Parametern 
 Setzt alle Werte auf den Ursprungszustand zurück. Gibt das rex_sql Objekt zurück.
 
 <a name="flushvalues"></a>
+
 ## flushValues
 
 `flushValues()`
@@ -366,6 +404,7 @@ Setzt alle Werte auf den Ursprungszustand zurück. Gibt das rex_sql Objekt zurü
 Stellt alle Values, die mit `setValue` oder `setValues` gesetzt wurden, zurück.
 
 <a name="hasnext"></a>
+
 ## hasNext
 
 `hasNext()`
@@ -373,6 +412,7 @@ Stellt alle Values, die mit `setValue` oder `setValues` gesetzt wurden, zurück.
 Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, ansonsten `false`.
 
 <a name="reset"></a>
+
 ## reset
 
 `reset()`
@@ -380,6 +420,7 @@ Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, anson
 Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `rewind`.
 
 <a name="getlastid"></a>
+
 ## getLastId
 
 `getLastId()`
@@ -387,6 +428,7 @@ Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `rewind`.
 Gibt die letzte InsertId zurück.
 
 <a name="getdbarray"></a>
+
 ## getDBArray
 
 `getDBArray($query = null, array $params = [], $fetchType = PDO::FETCH_ASSOC)`
@@ -394,6 +436,7 @@ Gibt die letzte InsertId zurück.
 Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die DBID, falls vorhanden. Identisch mit `getArray`.
 
 <a name="getarray"></a>
+
 ## getArray
 
 `getArray($query = null, array $params = [], $fetchType = PDO::FETCH_ASSOC)`
@@ -401,6 +444,7 @@ Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die
 Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die DBID, falls vorhanden. Identisch mit `getDBArray`.
 
 <a name="geterrno"></a>
+
 ## getErrno
 
 `getErrno()`
@@ -408,6 +452,7 @@ Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die
 Gibt die zuletzt aufgetretene Fehlernummer zurück.
 
 <a name="getmysqlerrno"></a>
+
 ## getMysqlErrno
 
 `getMysqlErrno()`
@@ -415,6 +460,7 @@ Gibt die zuletzt aufgetretene Fehlernummer zurück.
 Gibt die treiberspezifische MySql Fehlernummer zurück.
 
 <a name="geterror"></a>
+
 ## getError
 
 `getError()`
@@ -428,6 +474,7 @@ Gibt ein Array mit Informationen des zuletzt aufgetretenen Fehlers zurück. Der 
 ```
 
 <a name="haserror"></a>
+
 ## hasError
 
 `hasError()`
@@ -435,6 +482,7 @@ Gibt ein Array mit Informationen des zuletzt aufgetretenen Fehlers zurück. Der 
 Prüft, ob ein Fehler aufgetreten ist. Bei einem Rückgabewert von `true` ist ein Fehler aufgetreten, bei `false` nicht.
 
 <a name="setnewid"></a>
+
 ## setNewId
 
 `setNewId($field, $start_id = 0)`
@@ -442,6 +490,7 @@ Prüft, ob ein Fehler aufgetreten ist. Bei einem Rückgabewert von `true` ist ei
 Setzt eine Spalte auf den nächstmöglichen `auto_increment` Wert. Um zu verhindern, dass das rex_sql Objekt verändert wird, wird in dieser Funktion ein eigenes rex_sql Objekt verwendet.
 
 <a name="getfieldnames"></a>
+
 ## getFieldnames
 
 `getFieldnames()`
@@ -449,6 +498,7 @@ Setzt eine Spalte auf den nächstmöglichen `auto_increment` Wert. Um zu verhind
 Gibt die Spaltennamen des Resultsets zurück.
 
 <a name="gettablenames"></a>
+
 ## getTablenames
 
 `getTablenames()`
@@ -456,6 +506,7 @@ Gibt die Spaltennamen des Resultsets zurück.
 Gibt die Tabellennamen des Resultsets zurück.
 
 <a name="escape"></a>
+
 ## escape
 
 `escape($value)`
@@ -463,6 +514,7 @@ Gibt die Tabellennamen des Resultsets zurück.
 Escaped den übergeben Wert für den DB Query.
 
 <a name="escapeidentifier"></a>
+
 ## escapeIdentifier
 
 `escapeIdentifier($name)`
@@ -472,6 +524,7 @@ Escaped den übergebenen Wert und fügt Backticks am Anfang und am Ende dazu.
 Aus `"Das sind Backticks: ``"` wird `"``Das sind Backticks: `````"`
 
 <a name="addglobalupdatefields"></a>
+
 ## addGlobalUpdateFields
 
 `addGlobalUpdateFields($user = null)`
@@ -480,6 +533,7 @@ Standardfelder `updatedate` und `updateuser` setzen. `updatedate` ist der aktuel
 `user` ist standardmäßig der Login Name des aktuellen REDAXO Backend User oder ein übergebener String.
 
 <a name="addglobalcreatefields"></a>
+
 ## addGlobalCreateFields
 
 `addGlobalCreateFields($user = null)`
@@ -488,6 +542,7 @@ Standardfelder `createdate` und `createuser` setzen. `createdate` ist der aktuel
 `user` ist standardmäßig der Login Name des aktuellen REDAXO Backend User oder ein übergebener String.
 
 <a name="rewind"></a>
+
 ## rewind
 
 `rewind()`
@@ -495,6 +550,7 @@ Standardfelder `createdate` und `createuser` setzen. `createdate` ist der aktuel
 Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `reset`.
 
 <a name="current"></a>
+
 ## current
 
 `current()`
@@ -502,6 +558,7 @@ Setzt den Cursor des Resultsets zurück zum Anfang. Identisch mit `reset`.
 Gibt das aktuelle rex_sql Objekt zurück.
 
 <a name="key"></a>
+
 ## key
 
 `key()`
@@ -509,6 +566,7 @@ Gibt das aktuelle rex_sql Objekt zurück.
 Gibt den aktuellen Wert des Zeigers im Resultset zurück.
 
 <a name="next"></a>
+
 ## next
 
 `next()`
@@ -516,6 +574,7 @@ Gibt den aktuellen Wert des Zeigers im Resultset zurück.
 Setzt den Zeiger im Resultset um einen Datensatz vor.
 
 <a name="valid"></a>
+
 ## valid
 
 `valid()`
@@ -523,6 +582,7 @@ Setzt den Zeiger im Resultset um einen Datensatz vor.
 Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, ansonsten `false`. Identisch mit `hasNext`.
 
 <a name="showcreatetable"></a>
+
 ## showCreateTable
 
 `rex_sql::showCreateTable($table, $DBID = 1)` (public static)
@@ -530,6 +590,7 @@ Gibt `true` zurück, wenn das Resultset einen weiteren Datensatz enthält, anson
 Erstellt das CREATE TABLE Statement um die Tabelle `$table` der Datenbankverbindung `$DBID` zu erstellen. Die Tabelle `$table` muss vorhanden sein, sonst wird ein Fehler ausgegeben.
 
 <a name="showtables"></a>
+
 ## showTables (deprecated)
 
 `rex_sql::showTables($DBID = 1, $tablePrefix = null)` (public static)
@@ -539,6 +600,7 @@ Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetz
 Die Funktion ist seit Version 5.6.2 deprecated. Es wird die Verwendung der nicht statischen Funktion `getTablesAndViews` empfohlen.
 
 <a name="gettables"></a>
+
 ## getTables
 
 `$sql->getTables($tablePrefix = null)`
@@ -546,6 +608,7 @@ Die Funktion ist seit Version 5.6.2 deprecated. Es wird die Verwendung der nicht
 Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls $tablePrefix gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Als Rüclgabe erhält man ein Array der Tabellennamen.
 
 <a name="gettablesandviews"></a>
+
 ## getTablesAndViews
 
 `$sql->getTablesAndViews($tablePrefix = null)`
@@ -553,6 +616,7 @@ Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls $tablePrefix gesetzt 
 Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetzt ist, werden nur dem Prefix entsprechende Tabellen gesucht. Es wird ein Array mit den Namen aller in der Datenbank vorhandenen Tabellen und Views zurückgegeben. Ersetzt die statische Funktion `showTables`.
 
 <a name="showcolumns"></a>
+
 ## showColumns
 
 `rex_sql::showColumns($table, $DBID = 1)` (public static)
@@ -561,26 +625,27 @@ Gibt ein Array mit den Spalten der Tabelle `$table` zurück. Die Spalten werden 
 
 ```
  [
-	[0] => [
-		"name" => "pid",
-		"type" => "int(11)",
-		"null" => "NO",
-		"key" => "PRI",
-		"default" => null,
-		"extra" => "auto_increment"
-		],
-	[1] => [
-		"name" => "id",
-		"type" => "int(11)",
-		"null" => "NO",
-		"key" => "MUL",
-		"default" => null,
-		"extra" => ""
-		]
+ [0] => [
+  "name" => "pid",
+  "type" => "int(11)",
+  "null" => "NO",
+  "key" => "PRI",
+  "default" => null,
+  "extra" => "auto_increment"
+  ],
+ [1] => [
+  "name" => "id",
+  "type" => "int(11)",
+  "null" => "NO",
+  "key" => "MUL",
+  "default" => null,
+  "extra" => ""
+  ]
 ]
 ```
 
 <a name="getserverversion"></a>
+
 ## getServerVersion
 
 `getServerVersion($DBID = 1)` (public static)
@@ -588,6 +653,7 @@ Gibt ein Array mit den Spalten der Tabelle `$table` zurück. Die Spalten werden 
 Gibt die Serverversion zurück.
 
 <a name="factory"></a>
+
 ## factory
 
 `factory($DBID = 1)` (public static)
@@ -597,6 +663,7 @@ Factory Methode. Erstellt eine neue Instanz des rex_sql Objekte und gibt diese z
 Standardmäßig wird auf die im System definierte Datenbankresource zugegriffen, die auch von REDAXO selbst genutzt wird. Optional unterstützt REDAXO eine weitere Datenbankquelle. Die Konfiguration kann in der Datei `redaxo/data/core/config.yml` eingetragen werden. Diese Datenbank ist dann über `$sql2 = rex_sql::factory(2)` angesprochen werden.
 
 <a name="checkdbconnection"></a>
+
 ## checkDbConnection
 
 `checkDbConnection($host, $login, $pw, $dbname, $createDb = false)` (public static)

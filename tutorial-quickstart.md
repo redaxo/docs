@@ -6,15 +6,17 @@
 - [Navigation](#navigation)
 - [Ausgabe der Inhalte vorbereiten](#ausgabe)
 - [Module](#module)
-    - [Intro-Modul](#intro-modul)
-    - [Zwei-Spalten-Modul](#zwei-spalten-modul)
+  - [Intro-Modul](#intro-modul)
+  - [Zwei-Spalten-Modul](#zwei-spalten-modul)
 
 <a name="voraussetzung"></a>
+
 ## Voraussetzung
 
-REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein. 
+REDAXO muss bereits [installiert](/{{path}}/{{version}}/installation) sein.
 
 <a name="template"></a>
+
 ## Template
 
 Dieses Tutorial zeigt das Zusammenspiel von Templates und Modulen, und wie daraus in wenigen Minuten eine einfache Mini-Website entsteht. Eine detaillierte Erläuterung der verwendeten Funktionen findet sich in späteren Kapiteln der Dokumentation. Hier soll nur gezeigt werden, wie rasch man eine minimale Website erstellen kann.
@@ -25,27 +27,27 @@ Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Einfaches Basis-Template</title>
+ <title>Einfaches Basis-Template</title>
 
-	<!-- Load Bootstrap core CSS & Jumbotron Example -->
-	<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ <!-- Load Bootstrap core CSS & Jumbotron Example -->
+ <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<div class="container">
+ <div class="container">
     Hier kommt dann der Inhalt ...
 
     <footer class="footer">
         <p>&copy; 2016 Company, Inc.</p>
     </footer>
 
-	</div> <!-- /container -->
+ </div> <!-- /container -->
 
 </body>
 </html>
@@ -54,6 +56,7 @@ Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis
 Die CSS-Datei wird in diesem Beispiel direkt von der Bootstrap-Website geladen, wird jedoch im Normalfall auf dem eigenen Server liegen. Noch gibt es im Template keine dynamischen, von REDAXO gesteuerten Inhalte.
 
 <a name="basis"></a>
+
 ## Basis-Einstellungen
 
 Im ersten Schritt wird also der Artikelname dynamisch als Title-tag gesetzt. Hier kommen PHP und REDAXO-eigene Aufrufe ins Spiel; diese werden wie gesagt in der Dokumentation alle ausführlich erläutert.
@@ -67,11 +70,12 @@ Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü 
 
 ```
 <footer class="footer">
-	<p>&copy; <?php echo date("Y").' '.rex::getServerName(); ?></p>
+ <p>&copy; <?php echo date("Y").' '.rex::getServerName(); ?></p>
 </footer>
 ```
 
 <a name="navigation"></a>
+
 ## Navigation
 
 Die Standard-Navigation von Bootstrap sieht so aus:
@@ -97,7 +101,7 @@ Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisc
             <?php
             foreach (rex_category::getRootCategories(true) as $item) {
                 echo '<li><a href="'.$item->getUrl().'">'.htmlspecialchars($item->getValue('name')).'</a></li>';
-	    }
+     }
             ?>
         </ul>
     </nav>
@@ -106,6 +110,7 @@ Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisc
 ```
 
 <a name="ausgabe"></a>
+
 ## Ausgabe der Inhalte vorbereiten
 
 Bevor nun im nächsten Schritt zwei einfache Module erstellt werden, muss man im Template noch den Aufruf einfügen, damit der Inhalt der Module auch ausgegeben wird:
@@ -113,6 +118,7 @@ Bevor nun im nächsten Schritt zwei einfache Module erstellt werden, muss man im
 ```
 REX_ARTICLE[]
 ```
+
 Das ist alles :-)
 
 Das komplette Template sieht also nun so aus:
@@ -121,14 +127,14 @@ Das komplette Template sieht also nun so aus:
 <!DOCTYPE html>
 <html lang="de">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
+ <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 
-	<!-- Load Bootstrap core CSS -->
-	<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Load Bootstrap core CSS -->
+ <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -154,7 +160,7 @@ Das komplette Template sieht also nun so aus:
         <p>&copy; <?php echo date("Y").' '.rex::getServerName(); ?></p>
     </footer>
 
-	</div> <!-- /container -->
+ </div> <!-- /container -->
 
 </body>
 </html>
@@ -163,14 +169,16 @@ Das komplette Template sieht also nun so aus:
 Nun wird dieser Code in das bei der Installation standardmäßig angelegte Template eingefügt: Menüpunkt `Templates` anklicken, dann das Template `Default`, den Code hinein kopieren und das Template speichern.
 
 <a name="module"></a>
+
 ## Module
 
 Wenn man nun Kategorien in REDAXO neu hinzufügt, sehen diese durch das Basis-Template schon ganz ansehnlich aus. Es fehlen noch Inhalte. Die werden durch Module eingepflegt, die man in jedem Artikel in beliebiger Anzahl aneinanderreihen kann.
 
 <a name="intro-modul"></a>
+
 ### Intro-Modul
 
-Als Erstes wird ein Intro-Modul mit einer großen Überschrift und einem Absatz erstellt. Beim Menüpunkt `Module` kann dieses erste Modul neu angelegt werden. 
+Als Erstes wird ein Intro-Modul mit einer großen Überschrift und einem Absatz erstellt. Beim Menüpunkt `Module` kann dieses erste Modul neu angelegt werden.
 
 Im Eingabe-Code - das ist das, was der Redakteur in REDAXO sieht - benötigt man also zwei Felder, ein Textfeld und ein Textarea-Feld für mehrzeiligen Text. Jedes Feld muss eine eigene Value-ID besitzen.
 
@@ -196,7 +204,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
             <input class="form-control" type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
         </div>
     </div>
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label">Introtext</label>
         <div class="col-sm-10">
@@ -206,21 +214,21 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 </fieldset>
 ```
 
-
 Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen nutzt. Über den Prefix und Suffix kann man die umschließenden HTML-Tags für die beiden Felder definieren.
 
 **Ausgabe:**
 
 ```
 <div class="jumbotron">
-	REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
-	REX_VALUE[id='2' prefix='<p>' suffix='</p>']
+ REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
+ REX_VALUE[id='2' prefix='<p>' suffix='</p>']
 </div>
 ```
 
 Damit ist das erste Modul erstellt und einsatzbereit.
 
 <a name="zwei-spalten-modul"></a>
+
 ### Zwei-Spalten-Modul
 
 Ein zweites Modul dient zur Anzeige von Bildern und Texten in zwei Spalten.
@@ -336,9 +344,9 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
     </div>
 </div>
 ```
+
 Es kann mit der [Redaktion](/{{path}}/{{version}}/redaktion) begonnen werden.
 
 > **Nach Anlegen des ersten Artikels** nicht vergessen, unter **System** den Startartikel der Website festzulegen. Andernfalls wird die Website nicht angezeigt.
 
 Damit ist die kleine Mini-Website fertiggestellt. Wir haben eine mobiltaugliches Layout, die Navigation funktioniert, und Texte und Bilder können eingepflegt werden. Natürlich lässt sich die Website noch an vielen Stellen ergänzen und optimieren: Die Navigation könnte für mehrere Ebenen erweitert werden, man könnte weitere Inhalts-Module erstellen oder dank zahlreicher AddOns die Funktionen von REDAXO stark erweitern.
-

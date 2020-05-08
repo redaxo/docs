@@ -22,22 +22,22 @@ Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklic
 
 ![Systemcheck](/assets/v5.2.0-installer-03-versionen.png)
 
-> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher sein, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat. 
+> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher sein, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
 
 <a name="herunterladen"></a>
+
 ## Neue Addons herunterladen
 
 ![Systemcheck](/assets/v5.2.0-installer-02-neue.png)
 
+Neue AddoOns lädt man über den Reiter `Neue Herunterladen`. Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Um mehr über das AddOn zu erfahren, kann man den Addon-Namen anklicken oder Ansehen anklicken. Um das Addon herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen`.
 
-Neue AddoOns lädt man über den Reiter `Neue Herunterladen`. Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Um mehr über das AddOn zu erfahren, kann man den Addon-Namen anklicken oder Ansehen anklicken. Um das Addon herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen`. 
-
-Anschließend kann man das Addon unter "Addons" installieren. 
+Anschließend kann man das Addon unter "Addons" installieren.
 
 <a name="hochladen"></a>
+
 ## Eigene Addons hochladen
-Entwickler können eigene Addons direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die Addons stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myRedaxo-Account einsehen kann. 
+
+Entwickler können eigene Addons direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die Addons stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myRedaxo-Account einsehen kann.
 
 Weitere Informationen zur Erstellung und Bereitstellung eigener Addons im Kapitel [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung).
-
-

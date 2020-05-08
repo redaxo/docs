@@ -9,53 +9,57 @@
 - [Installation per Console](#console)
 
 <a name="system"></a>
+
 ## Systemanforderungen
 
 Für die Version 5.9 wird folgende Umgebung benötigt:
-- PHP ab 7.1.3 
+
+- PHP ab 7.1.3
 - MySQL ab Version 5.5 oder MariaDB ab Version 10.0<br>
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 - Apache2, Nginx oder vergleichbarer Webserver
 
 <a name="schnell"></a>
+
 ## Schnellanleitung
 
 Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf einem Server oder Webspace.
 
 - Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
-- Die neueste Version unter https://redaxo.org/download/core/ herunterladen.
+- Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
 - Die ZIP-Datei auf dem eigenen Rechner entpacken.
-- Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (http://deinedomain.tld/redaxo/) ausführen.
+- Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/)> ausführen.
 - Alle [Installationschritte](#install) durchgehen.
 
 <a name="datenbank"></a>
+
 ## Datenbank
 
 Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu sollten die Zugangsdaten vorhanden sein. Für die Installation werden die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank benötigt.
 
 <a name="download"></a>
+
 ## Download
 
-Als Erstes die aktuelle Version von REDAXO unter https://redaxo.org/download/core/ herunterladen. Informationen zum aktuellen Release gibt es unter https://github.com/redaxo/redaxo/releases.
+Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
 
 <a name="upload"></a>
+
 ## Upload
 
 Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`.
 Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
-
-
 > **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern. 
-
+Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern.
 
 <a name="install"></a>
+
 ## Installationsvorgang
 
-Nachdem REDAXO hochgeladen wurde, kann die Installation mit http://deinedomain.tld/redaxo/ aufgerufen werden.
+Nachdem REDAXO hochgeladen wurde, kann die Installation mit <http://deinedomain.tld/redaxo/> aufgerufen werden.
 Die folgenden sieben Schritte führen durch die Installation.
 
 ### Schritt 1: Sprachauswahl
@@ -67,12 +71,14 @@ Im ersten Schritt wird die Sprache für den Installationsvorgang und für das Ba
 > **Hinweis :** Die Sprache kann später im Setup oder für den User geändert werden.
 
 ### Schritt 2: Lizenz
+
 REDAXO ist ein Open Source Projekt und kostenfrei. Allerdings gibt es Lizenzbedingungen, die akzeptiert werden müssen.
 
 ![Lizenz](/assets/v5.2.0-installation-02-license.png)
 Schritt 2: Lizenz
 
 ### Schritt 3: Systemcheck
+
 An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gibt ggf. Warnungen aus. Wenn etwas nicht stimmt, müssen eventuell auch die Systemvoraussetzungen überprüft werden.  
 
 ![Systemcheck](/assets/v5.2.0-installation-03-systemcheck.png)
@@ -82,16 +88,18 @@ Schritt 3: Systemcheck
 > Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
 
 Direktiven für NGINX:
+
 ```
  location ^~ /redaxo/src { deny  all; }
  location ^~ /redaxo/data { deny  all; }
  location ^~ /redaxo/cache { deny  all; }
  location ^~ /redaxo/bin { deny  all; }
 ```
+
 > Bei der Verwendung eines Rewriter-AddOns bitte die Dokumentation des Addons beachten.
 
-
 ### Schritt 4: Konfiguration
+
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 
 - URL der Website mit abschließendem / (Slash)
@@ -107,8 +115,9 @@ Besitzt der Datenbank-User das Recht auch neue Datenbanken zu erstellen, so kann
 Schritt 4: Systemcheck
 
 ### Schritt 5: Datenbank
+
 Es muss eine der vier Optionen gewählt werden.
-Unterstützt der Datenbankserver utf8mb4, wird eine entsprechende Option zur Auswahl angeboten. 
+Unterstützt der Datenbankserver utf8mb4, wird eine entsprechende Option zur Auswahl angeboten.
 
 > **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 ist aktuell nicht vorgesehen.
 
@@ -116,12 +125,14 @@ Unterstützt der Datenbankserver utf8mb4, wird eine entsprechende Option zur Aus
 Schritt 5: Datenbank
 
 ### Schritt 6: Administrator
+
 Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAXO-Installation definiert werden. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- und Kleinbuchstaben sowie Sonderzeichen. Auch sollte nicht unbedingt `Admin` oder `Administrator` als Benutzername anlegt werden; diese sind zu leicht zu erraten.
 
 ![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
 Schritt 6: Administrator
 
 ### Schritt 7: Heureka
+
 Die Installation ist erfolgreich. Beachte die weiteren Hinweise auf der Seite. Die Erste Anmeldung kann nun direkt über den Button `Zum Login` erfolgen. Alternativ kann auch `/redaxo/` hinter die URL der Installation im Browser eingeben werden, um in das Backend zu gelangen. (Zum Beispiel *www.domain.xy/redaxo*)
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
@@ -130,18 +141,19 @@ Schritt 7: Ende
 > ***Nach der Installation:*** Es ist durchaus möglich, dass nach einem Release noch Updates nachgereicht werden. Daher sollte nach der Installation im Installer geprüft werden, ob Aktualisierungen vorliegen.
 
 <a name="console"></a>
+
 ## Installation per Console
 
-REDAXO kann alternativ auch über die Console `redaxo/bin/console` installiert werdern. 
+REDAXO kann alternativ auch über die Console `redaxo/bin/console` installiert werdern.
 
-Der Befehl lautet `php console setup:run` für den interaktiven Modus. 
-Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi. 
+Der Befehl lautet `php console setup:run` für den interaktiven Modus.
+Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi.
 
-u.a.: 
+u.a.:
 
 * `--quiet`für eine Unterdrückung aller Ausgaben
 * `--no-interaction` für keine Interaktion
 
 [Siehe: Console](/{{path}}/{{version}}/console)
 
-> Mit der REDAXO Console können viele gängige Operationen durchführt werden, wie z.B. Installation, setzen von Config-Settings, Installation / Deinstallation von Addons (packages) 
+> Mit der REDAXO Console können viele gängige Operationen durchführt werden, wie z.B. Installation, setzen von Config-Settings, Installation / Deinstallation von Addons (packages)

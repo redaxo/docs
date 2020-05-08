@@ -6,10 +6,10 @@
 - [AddOn Konfiguration](#addon_config)
 - [Systemkonfiguration - Startartikel - Fehlerseite](#sysconf)
 
-
 AddOn-Entwickler können die Konfiguration der AddOns in der Tabelle `rex_config` ablegen und auslesen. Dateien im AddOn-, bzw. PlugIn-Ordner sollten nicht verändert werden, um automatische Updates zu ermöglichen. Konfigurationswerte können über die Klasse `rex_config` in der Datenbank gespeichert werden. Die Werte werden gecached:
 
 <a name="rex_config"></a>
+
 ## rex_config
 
 Hierbei gilt folgende Konvention:
@@ -29,9 +29,10 @@ $value = rex_addon::get($addon)->getConfig($key);
 // oder falls das Package-Objekt über $this erreichbar ist (boot.php etc.):
 $this->setConfig($key, $value);
 $value = $this->getConfig($key);
-``` 
+```
 
 <a name="package_yml"></a>
+
 ## package.yml
 
 AddOn-Entwickler haben die Möglichkeit, Konfigurationsparameter in der Datei `package.yml` abzulegen. Eine typische package.yml sieht z.B. so aus:
@@ -58,7 +59,7 @@ configvars:
     message_text1: translate:wert wird übersetzt
     meinevar: meinwert
     nocheinevar: nocheinwert
-    nullwert:        
+    nullwert:
     einleererwert: ''
 ```
 
@@ -68,8 +69,8 @@ Die einzelnen Werte können über `rex_addon::get('addonname')->getProperty('var
 
 `rex_addon::get('project')->getProperty('author'))` ergibt `Name des Autors`.
 
-
 <a name="core"></a>
+
 ## Config core
 
 Die Basiskonfiguration des Core ist im Verzeichnis `src/data/core/config.yml` abgelegt. Die Datei enthält unter anderem die Einstellungen zur Datenbank und Einstellungen, die im Bereich `System` im REDAXO-Backend vorgenommen werden.
@@ -78,7 +79,7 @@ Ein Zugriff auf Einstellungen des Core ist über die Klasse `rex` möglich.
 
 Funktion | Beschreibung | Beispiel
 ------------- | ------------- | -------------
-rex::getServer() | Basis URL des Webservers für die Seite | https://www.example.com/
+rex::getServer() | Basis URL des Webservers für die Seite | <https://www.example.com/>
 rex::getServerName() | Name der Website bzw. des Servers | Meine REDAXO Website
 rex::getTablePrefix() | Tabellenprefix für Datentabellen | Standard: rex_
 rex::getTempPrefix() | Prefix für temporäre Tabellen | Standard: tmp_
@@ -108,14 +109,15 @@ rex::getProperty('accesskeys') | | Standard: Array
 > **Hinweis:** auch die Werte der ersten Tabelle können über `getProperty` ermittelt werden. Z.B. `rex::getProperty('server')` entspricht `rex::getServer()`
 
 <a name="addon_config"></a>
+
 ## AddOn Konfiguration
 
 Über `dump(rex::getConfig())` kann man sich eine Übersicht der aktuellen AddOn-Konfiguration ausgeben lassen.
 
 Siehe auch [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
 
-
 <a name="sysconf"></a>
+
 ## Systemkonfiguration
 
 ### Site Startartikel
@@ -135,5 +137,3 @@ Der Fehlerartikel kann über die Klasse `rex_article` abgefragt werden. Standard
 
 `rex_article::getNotfoundArticle($clang=null)`
 Mit `rex_article::getNotfoundArticleId()` bekommt man die Id des Fehlerartikels.
-
-

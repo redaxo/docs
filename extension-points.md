@@ -1,39 +1,40 @@
 # Extension Points
 
 - [Einsatz eines Extension Points](#einsatz)
-	- [Beispiel für den Einsatz eines Extension Points](#beispiel)
+  - [Beispiel für den Einsatz eines Extension Points](#beispiel)
 - [Eigene Extension Points definieren](#definieren)
 - [Liste der Extension Points](#liste)
-    - [Core](#core)
-    - [Structure](#structure)
-    - [Structure Content](#structure_content)
-    - [Medienpool](#medienpool)
-    - [Backup](#backup)
-    - [Metainfo](#metainfo)
-    - [BE Style](#bestyle)
-    - [Media Manager](#mediamanager)
+  - [Core](#core)
+  - [Structure](#structure)
+  - [Structure Content](#structure_content)
+  - [Medienpool](#medienpool)
+  - [Backup](#backup)
+  - [Metainfo](#metainfo)
+  - [BE Style](#bestyle)
+  - [Media Manager](#mediamanager)
 
 Extension Points sind Stellen im REDAXO-Programmcode, an denen eigener Code eingeklinkt und ausgeführt werden kann. Dadurch lässt sich auch das Core-System erweitern und anpassen, ohne den Core selbst zu verändern. Extension Points ermöglichen die Manipulation eines bestimmten Wertes, der von der Funktion zurückgegeben wird, die man am Extension Point ausführen lässt. Extension Points stehen im Frontend und im Backend zur Verfügung.
 
 Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als Übergabewerte, die sich von Extension Point zu Extension Point unterscheiden.
 
 <a name="einsatz"></a>
+
 ## Einsatz eines Extension Points
 
 Zunächst sucht man sich den Extension Point, der für den eigenen Einsatz geeignet erscheint. Dann ordnet man dem Extension Point den Aufruf für die eigene Erweiterung zu. Diese Zuordnung muss an einer Stelle im Code erfolgen, an dem der Extension Point noch nicht durchlaufen wurde. Am einfachsten geschieht dies beispielsweise in der `boot.php` eines eigenen AddOns.
 
 Beispiele:
 
-
 **Aufruf einer Methode einer Klasse**
+
 ```php
-rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE); 
+rex_extension::register('SLICE_SHOW', array('myclass', 'myfunction'), rex_extension::LATE);
 ```
 
 *Alternativ: Aufruf einer Funktion*
 
 ```php
-rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE); 
+rex_extension::register('SLICE_SHOW', 'myfunction', rex_extension::LATE);
 ```
 
 Dies löst am Extension Point `SLICE_SHOW` die Methode `myclass::myfunction` aus.
@@ -51,9 +52,9 @@ function meineUpdateFunction($ep) {
     $subject = $ep->getSubject();
     $params = $ep->getParams();
     $filename = $ep->getParam('filename');
-    
+
     return $subject;
-}    
+}
 ```
 
 Methode | Beschreibung | Beispiel
@@ -66,6 +67,7 @@ Methode | Beschreibung | Beispiel
 Die Registrierung eines Extension Points mit der Methode `rex_extension::register` kann mit dem Parameter `rex_extension::EARLY` (-1), `rex_extension::NORMAL` (0) oder `rex_extension::LATE` (1) aufgerufen werden. Standard ist NORMAL (0). Dadurch kann die Reihenfolge gesteuert werden, in der die Erweiterungen abgearbeitet werden.
 
 <a name="beispiel"></a>
+
 ### Beispiel für den Einsatz eines Extension Points
 
 Im aktuellen Beispiel soll die Sidebar im Backend bei der Artikelbearbeitung um ein Infofeld erweitert werden. Hierfür kann der Extensionpoint `STRUCTURE_CONTENT_SIDEBAR` genutzt werden.
@@ -75,8 +77,8 @@ In die Datei boot.php des AddOns kommt folgender Code:
 ```php
 // Die Funktion wird nur im Backend aufgerufen, wenn ein User eingeloggt ist
 if (rex::isBackend() && rex::getUser()) {
-	// Am Extensionpoint wird die Funktion be_helper::addfield aufgerufen.
-    rex_extension::register('STRUCTURE_CONTENT_SIDEBAR', ['be_helper','addfield'], rex_extension::LATE);	
+ // Am Extensionpoint wird die Funktion be_helper::addfield aufgerufen.
+    rex_extension::register('STRUCTURE_CONTENT_SIDEBAR', ['be_helper','addfield'], rex_extension::LATE); 
 }
 ```
 
@@ -87,10 +89,10 @@ Anschließend wird die aufzurufende Funktion  im Verzeichnis lib des AddOns z.B.
 ```php
 class be_helper {
     public static function addfield($ep) {
-        
+
         // den aktuellen Inhalt auslesen
         $subject = $ep->getSubject();
-        
+
         // Beispielinhalt
         $text = '<p>In diesem Beispiel wird in der Sidebar des Backends ein zusätzliches Feld eingeblendet.</p>';
 
@@ -102,7 +104,7 @@ class be_helper {
         $fragment->setVar('collapsed', true); // das Feld ist erstmal zusammengeklappt, bei false ist es ausgeklappt
         $content = $fragment->parse('core/page/section.php');
 
-		// Der Inhalt des Fragmentes wird an der geeigneten Stelle eingesetzt
+  // Der Inhalt des Fragmentes wird an der geeigneten Stelle eingesetzt
         return preg_replace('~</section>~','</section>'.$content,$subject,1);
     }
 }
@@ -111,6 +113,7 @@ class be_helper {
 > Tipp: Füge diesen Code in den /lib/-Ordner des project AddOns. Das ist der richtige Ort, um eigene Erweiterungen für REDAXO abzulegen, ohne ein eigenes AddOn programmieren zu müssen.
 
 <a name="definieren"></a>
+
 ## Eigene Extension Points definieren
 
 Im eigenen Programmcode von AddOns lassen sich eigene Extension Points setzen, die dann wiederum von anderen Entwicklern genutzt werden können.
@@ -126,11 +129,12 @@ $meine_var = rex_extension::registerPoint(new rex_extension_point(
 ```
 
 <a name="liste"></a>
+
 ## Liste der Extension Points
 
 <a name="core"></a>
-### Core
 
+### Core
 
 ```
 CACHE_DELETED
@@ -265,8 +269,8 @@ REX_LIST_GET
 ```
 
 <a name="structure"></a>
-### Structure
 
+### Structure
 
 ```
 ART_ADDED
@@ -363,8 +367,8 @@ URL_REWRITE
 
 <a name="structure_content"></a>
 ```
-### Structure Content
 
+### Structure Content
 
 ```
 ART_CONTENT
@@ -464,9 +468,10 @@ STRUCTURE_CONTENT_SLICE_UPDATED
 : Parameter: $epParams
 
 ```
-<a name="medienpool"></a>
-### Medienpool
 
+<a name="medienpool"></a>
+
+### Medienpool
 
 ```
 MEDIA_ADDED
@@ -526,9 +531,10 @@ PAGE_MEDIAPOOL_HEADER
 : Parameter: ['subpage' => $subpage, 'category_id' => $rex_file_category]
 
 ```
-<a name="backup"></a>
-### Backup
 
+<a name="backup"></a>
+
+### Backup
 
 ```
 BACKUP_AFTER_DB_EXPORT
@@ -564,9 +570,10 @@ BACKUP_BEFORE_FILE_IMPORT
 : Parameter: keine
 
 ```
-<a name="metainfo"></a>
-### Metainfo
 
+<a name="metainfo"></a>
+
+### Metainfo
 
 ```
 ART_META_UPDATED
@@ -582,9 +589,10 @@ METAINFO_TYPE_FIELDS
 : Parameter: keine
 
 ```
-<a name="bestyle"></a>
-### BE Style
 
+<a name="bestyle"></a>
+
+### BE Style
 
 ```
 BE_STYLE_PAGE_CONTENT
@@ -597,8 +605,8 @@ BE_STYLE_SCSS_FILES
 ```
 
 <a name="mediamanager"></a>
-### Media Manager
 
+### Media Manager
 
 ```
 MEDIA_MANAGER_FILTERSET
@@ -606,4 +614,3 @@ MEDIA_MANAGER_FILTERSET
 : Parameter: ['rex_media_type' => $type]
 
 ```
-

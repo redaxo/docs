@@ -8,14 +8,16 @@
 - [Standard-AddOns in Redaxo](#standard-addons)
 
 <a name="terminologie"></a>
+
 ## Terminologie
 
-Wir verwenden in dieser Dokumentation die Begriffe Frontend und Backend. Das Backend ist der Verwaltungsbereich von REDAXO, in den man nach dem Einloggen in REDAXO gelangt. Das Backend ist erreichbar über die Adresse http://www.domain.de/redaxo/.
+Wir verwenden in dieser Dokumentation die Begriffe Frontend und Backend. Das Backend ist der Verwaltungsbereich von REDAXO, in den man nach dem Einloggen in REDAXO gelangt. Das Backend ist erreichbar über die Adresse <http://www.domain.de/redaxo/.>
 Das Frontend dagegen ist das, was der Besucher der Website zu sehen bekommt, also die von REDAXO generierten Seiten.
 
 Jedes CMS hat seine eigene Terminologie, so dass Begriffe wie Template, Artikel oder Navigation in den einzelnen Systemen Unterschiedliches bedeuten können.
 
 <a name="artikel-kategorien"></a>
+
 ## Artikel und Kategorien
 
 In REDAXO legt man einzelne HTML-Seiten als Artikel oder als Kategorie an. Kategorien nutzt man üblicherweise dann, wenn man eine hierarchische Struktur schaffen will. Kategorien sind also wie Ablagefächer oder Ordner, so dass man mehrstufige Navigationen im Normalfall  mit Kategorien aufbauen wird.
@@ -23,11 +25,13 @@ In REDAXO legt man einzelne HTML-Seiten als Artikel oder als Kategorie an. Kateg
 Artikel dagegen sind der Container für Inhalt - quasi das Blatt Papier, das Texte oder Bilder enthält. Artikel bieten sich also eher an, wenn man hierarchisch gleichwertige Seiten anlegen will, zum Beispiel einen auf mehrere Seiten aufgeteilten Text zum Weiterblättern. Man muss sich Kategorien und Artikel einfach als zwei unterschiedliche Wege vorstellen, um in REDAXO Seiten anzulegen und Navigationen zu schaffen.
 
 <a name="templates"></a>
+
 ## Templates
 
 Dass überhaupt Inhalte wie Texte oder Bilder auf einer HTML-Seite erscheinen, steuert das Template. Das Template wirkt sich nur auf die Frontend-Ausgabe aus; dort wird üblicherweise die HTML-Struktur der Website, die eingebundenen CSS- und Javascript-Dateien hinterlegt, aber auch einige PHP-Befehle, die die Inhalte des jeweiligen Artikel auslesen. Sofern man mit mehreren Inhaltsbereichen (auch Spalten oder ctypes genannt) arbeitet, kann man in einem Template beliebig viele dieser "Bereiche" anlegen. Bei der Pflege eines Artikels erscheinen daraufhin im REDAXO-Backend Links, um in den jeweiligen Bereich zu wechseln und dort Inhalte hinzuzufügen.
 
 <a name="module"></a>
+
 ## Module
 
 Die Inhalte selbst werden in REDAXO mit Modulen gepflegt. Diese Module können - im Gegensatz zu den meisten anderen CMS - sehr leicht selbst erstellt und erweitert werden, um sie dem jeweiligen Anwendungszweck perfekt anpassen zu können. Man kann - in jedem Inhaltsbereich - beliebig viele dieser Module auf einer Seite untereinander setzen. Module lassen sich optional nur bestimmten Templates und/oder bestimmten Bereichen und/oder bestimmten Kategorien zuweisen.
@@ -46,13 +50,14 @@ Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären fol
 - Zuweisung der seitenspezifischen Inhalte zu den Artikeln mit selbst definierten Modulen
 - Festlegung eines Startartikels. Der als Erstes angelegte Artikel wird automatisch der Startartikel. Man kann diese jedoch ändern unter dem Menüpunkt "System".
 
-
 <a name="hauptmenupunkte"></a>
+
 ## Hauptmenüpunkte in Redaxo
 
 - **Struktur:** Dies ist die Einstiegsseite nach dem Login und der eigentliche Verwaltungsbereich für die Seitenstruktur und Inhalte
 - **Medienpool:** der Bereich dient zur Verwaltung von allen Dateien (Medien), die vom Redakteur auf den Server geladen werden: Bilder, PDF, Word-Dokumente, etc.
 - **Templates:** wichtig für den Entwickler. Templates speichern den HTML-Rahmen der Webseite.
+
 * **Module:** wichtig für  Entwickler: Hier entstehen die Module, mit denen die Redaktion die Inhalte pflegt.
 * **Benutzer:** In diesem Bereich erstellt der Administrator weitere Userzugänge und steuert deren jeweilige Rechte.
 * **AddOns:** sind besondere Erweiterungen für REDAXO, die man sich wie kleine Applikationen vorstellen muss. Beispiele wären etwa eine Suche, ein Gästebuch oder ein Mechanismus zum Erzeugen von schönen URLs. AddOns können auch weitere Hauptmenüpunkte oder Systemfunktionen hinzufügen.
@@ -60,6 +65,7 @@ Die üblichen Schritte zur Erstellung einer neuen Webseite mit REDAXO wären fol
 * **Installer:** AddOns lassen sich hier direkt online neu installieren oder bestehende updaten. Selbst der Redaxo-Code selbst kann upgedatet werden.
 
 <a name="standard-addons"></a>
+
 ## Standard-AddOns in Redaxo
 
 * **Backup:** Hier kann man Backup-Sicherungen der Website erstellen und auch wieder zurückspielen.

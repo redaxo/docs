@@ -1,12 +1,12 @@
 # Dokumentation REDAXO 5.10
 
-Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen. 
+Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen.
 
 > Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Derzeit arbeiten Peter Bickel, Thomas Skerbis, Wolfgang Bund und Alexander Walther an der Dokumentation.
-Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), so dass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden. 
+Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), so dass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden.
 [Zur Dokumentation auf GitHub](https://github.com/redaxo/docs).
 
-## Neues in dieser Version 
+## Neues in dieser Version
 
 REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
 
@@ -17,13 +17,12 @@ REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist j
 - [package.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
 - [Neue Consolen-Befehle für AddOns](/{{path}}/{{version}}/basis-addons#console)
 
-
 Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
 [Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
 
 Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü.
 
-## Übersicht der Kategorien:
+## Übersicht der Kategorien
 
 **Einleitung**
 

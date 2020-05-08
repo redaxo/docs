@@ -13,9 +13,10 @@
   * [MarkDown](#anker-faq-markdown)
   * [Yaml](#anker-faq-yaml)
 
-
 <a name="anker-minimal"></a>
+
 ## Minimale Erfordernisse
+
 Jedes AddOn hat einen eigenen Ordner mit einem einzigartigem und möglichst beschreibendem Namen.  
   
 [@TODO:][SCREENSSHOT ORDNER]  
@@ -31,30 +32,39 @@ der Folge weitere Dateien notwendig werden. Mehr zu erforderlichen und optionale
 unter [package.yml](#anker-package-yml).
 
 <a name="anker-package-yml"></a>
+
 ## package.yml
 
 Die Datei `package.yml` ist die einzige und erforderliche Kernkomponente eines AddOns.  
 Bei Bedarf können dort weitere Komponenten referenziert werden.
 
 <a name="anker-yaml-required"></a>
+
 ### Erforderliche Angaben
 
 Die einzigen erforderlichen Angaben innerhalb der Datei sind Folgende:
+
 ```yaml
 package: test
 version: '1.0'
 ```
+
 Die Werte müssen natürlich angepasst werden, die unbedingt erforderlichen Angaben sind somit "package" und "version".
 
 <a name="anker-yaml-optional"></a>
+
 ### Optionale Angaben
+
 @TODO
 
 <a name="anker-files"></a>
+
 ## Optionale Dateien
+
 REDAXO bearbeitet einige Ordner und Dateien in AddOns automatisch, darüber hinaus ist jeder Entwickler natürlich
 frei, beliebige Datein in einem AddOn bereit zu stellen.  
 Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines installierten AddOns von REDAXO automatisch gesucht wird:
+
 * **help.php**  
   Ist eine Datei `help.php` im AddOn-Ordner enthalten wird diese automatisch im AddOn-Manager eingebunden und die Ausgabe angezeigt.  
   Ist die Datei nicht enthalten wird im AddOn-Manager ein Hinweis angezeigt, daß die Datei fehlt.  
@@ -85,7 +95,8 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   Ausserdem empfiehlt sich diese Datei, wenn das AddOn als Repository auf GitHub gehostet wird.
 
 <a name="anker-useful-files"></a>
-##Weitere nützliche Dateien
+## Weitere nützliche Dateien
+
 * **LICENSE.md**  
   Eine automatische Nutzung durch REDAXO ist nicht gegeben, allerdings empfiehlt sich diese Datei, wenn das AddOn als Repository auf GitHub gehostet wird.  
   Ausserdem ist natürlich der Zweck der Datei, über die Lizenz des AddOns zu informieren auch innerhalb von REDAXO wichtig,
@@ -98,36 +109,48 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   Eine Datei "config.yml" kann einfach eingelesen werden und an gewünschter Stelle im AddOn eingebunden werden.  
   Hier können umfangreiche Definitionen notiert werden, das AddOn "markitup" ist ein gutes Beispiel.  
   Da das Einlesen der Datei nicht automatisch geschieht, ist die Namensgebung nicht festgelegt. Somit könnt man auch z.B. folgende Dateien anlegen:
+
   ```
   config_frontend.yml
   config_backend.yml
   ```
+
   Der PHP-Code um eine Datei einzulesen lautet beispielsweise:
+
   ```php
   $markItUpButtons = rex_file::getConfig(rex_path::addon('markitup', 'config.yml'));
   ```
   
 <a name="anker-folders"></a>
+
 ## Optionale Ordner
+
 @TODO  
 
 <a name="anker-useful-folders"></a>
+
 ## Weitere nützliche Ordner
+
 @TODO
 
 <a name="anker-software"></a>
+
 ## Software
+
 * Editoren  
   * **Frei verfügbare Markdown-Editoren:**  
     @TODO  
-  * **Kommerzielle Markdown-Editoren:**    
+  * **Kommerzielle Markdown-Editoren:**
     @TODO  
 @TODO  
 
 <a name="anker-faq"></a>
+
 ## Fragen und Antworten
+
 <a name="anker-faq-markdown"></a>
 **MarkDown**
+
 * **Welches Dateiformat haben Dateien mit der Endung `.md` ?**  
   Dateien mit der Endung `md` enhalten Inhalt in der MarkDown-Syntax.  
   Es handelt sich dabei um normalen Text, der mit einigen wenigen Mitteln für eine formatierte Ausgabe vorbereitet werden kann.  
@@ -143,7 +166,7 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   dem einfachen Text-Format gegenüber eine Menge Vorteile.
 * **Warum wird die Markdown-Syntax in so vielen Dateien verwendet, geht das nicht im HTML-Format?**  
   MarkDown hat sich zum defacto-Standard entwickelt, da es auf gihub.com verwendet wird, wo auch viele REDAXO-AddOns verwaltet werden.
-  Auch innerhalb von REDAXO findet das Format in einigen optional installierbaren Editoren Verwendung.    
+  Auch innerhalb von REDAXO findet das Format in einigen optional installierbaren Editoren Verwendung.
   Die Bereitstellung von Inhalten per HTML ist durchaus möglich und jedem freigestellt, allerdings tauchen dort Gestaltungsfragen auf,
   die bei Markdown nicht gegeben sind. HTML ist bei den Optionen umfangreicher aber auch schwieriger zu erlernen.
   Das Format Markdown stellt limitierte Bereicherungen für Dateien bereit, die gerne für Standard-Dateien wie README, LICENSE und CHANGELOG
@@ -154,8 +177,8 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 * **Wo findet man die Backticks zur Auszeichnung von Kode in Markdown-Dateien?**  
   * Es handelt sich bei dem Backtick um den französischen Akzent „Gravis“.
     Auf einer deutschen Tastatur findet man diesen rechts neben den Ziffern und dem `ß`.
-	Man drückt die Tasten `Umschalten` und die Akzent-Taste gleichzeitig und anschließend die Leerzeichen Taste.  
-	[@TODO: Screenshot Keyboard mit markierten Tasten]
+ Man drückt die Tasten `Umschalten` und die Akzent-Taste gleichzeitig und anschließend die Leerzeichen Taste.  
+ [@TODO: Screenshot Keyboard mit markierten Tasten]
   * In manchen Editoren braucht man die Backticks nicht selbst zu schreiben, sondern kann sie über Buttons einfügen.  
     Es gibt auch spezielle Editoren für MarkDown-Dateien.
   * Eine etwas umständliche, aber letztendlich einfache Methode ist, das Zeichen in einer Datei abzuspeichern und zu kopieren.  
@@ -165,5 +188,6 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
 
 <a name="anker-faq-yaml"></a>
 **Yaml**
+
 * **Welches Dateiformat haben Dateien mit der Endung `.yml` ?**  
 @TODO  

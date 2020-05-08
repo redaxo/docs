@@ -10,11 +10,11 @@ Berechtigungen können in der Datei `package.yml` definiert werden, oder später
 
 ```
 page:
-	title: translate:title
-	perm: addonname[]
-	subpages:
-		foo: {perm: addonname[foo], title: translate:foo}
-		bar: {perm: addonname[bar], title: translate:bar}
+ title: translate:title
+ perm: addonname[]
+ subpages:
+  foo: {perm: addonname[foo], title: translate:foo}
+  bar: {perm: addonname[bar], title: translate:bar}
 ```
 
 ### PHP
@@ -41,11 +41,11 @@ Prüfen ob der User ein Admin ist `rex::getUser()->isAdmin()`
 
 ### Einzelne Rechte prüfen
 
-Prüfen ob der User die nötigen Rechte aktiviert hat: 
+Prüfen ob der User die nötigen Rechte aktiviert hat:
 
 ```
 if( rex::getUser()->hasPerm('addonname[]') && rex::getUser()->hasPerm('addonname[foo]') ) {
-	// code goes here
+ // code goes here
 }
 ```
 
@@ -55,6 +55,6 @@ Weitere Berechtigungen wie Module können wie folgt abgefragt werden:
 
 ```
 if( rex::getUser()->getComplexPerm('modules')->hasPerm($ModuleID) ) {
-	// code goes here
+ // code goes here
 }
 ```

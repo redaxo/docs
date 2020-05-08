@@ -1,43 +1,41 @@
 # Fehlerbehebung und Debugging
-- Fehleranalyse
-    - [Whoops und Ooops](#ooops)
-    - [Die `system.log`-Datei](#systemlog)
-- Debugging
-    - [Der Debug-Mode](#debugmode)    
-    - [Die Funktion `dump()`](#dump)    
-    - [Einstellungen in der `config.yml`](#configyml)    
-    - [Das debug-Addon](#debugaddon)
-    - [Entwicklertools des Browsers](#browser)
-- Fehler
-    - [Google indexiert die Seite nicht, alle Seiten werden als noindex markiert.](#googleindex)
-    - [REDAXO funktioniert nach einem Website-Umzug nicht mehr](#moved)
-- Weitere Fehler und Lösungen aus der REDAXO-Community
-    - [Installer kann keine Addons abrufen](#installer)
-    - [Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler](#cture-edit-error)
-    - [Pjax-Formulare im Backend speichern nicht](#pjax)
-    - [Ich kann mich nicht mehr einloggen](#login)
 
+- Fehleranalyse
+  - [Whoops und Ooops](#ooops)
+  - [Die `system.log`-Datei](#systemlog)
+- Debugging
+  - [Der Debug-Mode](#debugmode)
+  - [Die Funktion `dump()`](#dump)
+  - [Einstellungen in der `config.yml`](#configyml)
+  - [Das debug-Addon](#debugaddon)
+  - [Entwicklertools des Browsers](#browser)
+- Fehler
+  - [Google indexiert die Seite nicht, alle Seiten werden als noindex markiert.](#googleindex)
+  - [REDAXO funktioniert nach einem Website-Umzug nicht mehr](#moved)
+- Weitere Fehler und Lösungen aus der REDAXO-Community
+  - [Installer kann keine Addons abrufen](#installer)
+  - [Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler](#cture-edit-error)
+  - [Pjax-Formulare im Backend speichern nicht](#pjax)
+  - [Ich kann mich nicht mehr einloggen](#login)
 
 Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden werden Möglichkeiten aufgezeigt, deine REDAXO-Installation zu reparieren.
 
 > **Hinweis:** Wir empfehlen auch vor einem Fehler, regelmäßige Backups zu erstellen. Datenbank-Backups können automatisiert über das Cronjob-Addon erstellt werden.
 
 <a name="ooops"></a>
+
 ## Fehleranalyse: Whoops und Ooops
 
 ![Ooops](/assets/v5.10.0-debug_ooops.png) Allgemeine Ooops-Fehlerseite im Frontend (links) und im Backend (rechts)
-
 
 Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Ooops und im Backend mit einem Rrrrroar.
 
 ![Whoops](/assets/v5.10.0-debug_whooops.png) Whoops-Fehlerseite mit Debug-Informationen
 
-
-
 Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus aktiviert hat, wird anstelle des Ooops ein Whoops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben, um die Fehlersuche zu vereinfachen.
 
-
 <a name="systemlog"></a>
+
 ## Fehleranalyse: Die **system.log**-Datei
 
 ![Screenshot /System/Logdateien](/assets/v5.10.0-debug_syslog.png)
@@ -45,6 +43,7 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus ak
 In der Datei `redaxo/data/core/system.log` werden Fehler geloggt - möglicherweise ist der Fehler bereits dabei. Diese wird auch unter `System > Logdateien` angezeigt.
 
 <a name="dump"></a>
+
 ## Debugging: Die Funktion **dump()**
 
 ![Aktivierter Debug-Modus](/assets/v5.10.0_debug_dump.png)
@@ -53,12 +52,13 @@ Ergebnis einer dump()-Ausgabe
 Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet werden, um die Ausgabe einer Variablen, eines Objekts oder eines anderen Datentyps im Frontend auszugeben. Der Vorteil besteht darin, dass die Ausgabe HTML-formatiert ist und dadurch schneller erfasst und durchsucht werden kann.
 
 <a name="debugmode"></a>
+
 ## Debugging: Der Debug-Modus
 
 ![Aktivierter Debug-Modus](/assets/v5.10.0_debug.png)
 Woran erkennt man, dass der Debug-Modus eingeschaltet ist?
 
-Im Debug-Modus werden zur Laufzeit weitere Informationen gesammelt und im Fehlerfall ausgegeben. Exceptions werden als Whoops ausgegeben und helfen so dem Entwickler, Fehler zu beseitigen und Probleme zu erkennen. 
+Im Debug-Modus werden zur Laufzeit weitere Informationen gesammelt und im Fehlerfall ausgegeben. Exceptions werden als Whoops ausgegeben und helfen so dem Entwickler, Fehler zu beseitigen und Probleme zu erkennen.
 
 Der Debug-Modus kann über die config.yml verschärft werden: über die Eigenschaft `throw_always_exception: true` werden auch einfache `Notices` als Whoops ausgegeben. Die Vorteile liegen auf der Hand: So wird man bei der Entwicklung von Modulen, Templates oder Addon-Code u.a. frühzeitig darauf aufmerksam, wenn Methoden und Funktionen in PHP verwendet werden, die bereits als `deprecated` markiert und bei einem Update der PHP-Version zu Fehler führen werden.
 
@@ -66,24 +66,24 @@ Der Debug-Modus darf unter keinen Umständen aktiviert werden, wenn die Website 
 
 Wir empfehlen, die Seite vorher durch einen `.htpasswd`-Verzeichnisschutz o.ä. zu schützen oder zumindest in einen Wartungsmodus zu versetzen, bspw. durch das AddOn `maintenance`. Zum Schutz von Entwickler und Betreiber werden im Debug-Modus alle header auf `noindex` gesetzt, um auch Suchmaschinenen daran zu hindern, sensible Daten durch die Debug-Ausgabe in den Suchmaschinen-Index aufzunehmen.
 
-
 <a name="configyml"></a>
+
 ## Debugging: Einstellungen in der **config.yml**
 
 In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiviert werden. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
 
 <a name="debugaddon"></a>
-## Debugging: Das debug-Addon (ab REDAXO 5.11)
 
+## Debugging: Das debug-Addon (ab REDAXO 5.11)
 
 ![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png) Serverseitige Abläufe visualisiert durch Clockwork
 
 Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
-> Das Debug-AddOn sollte nicht in Produktivumgebungen eingesetzt werden, weil hierfür der Debug-Modus im System aktiviert sein muss. Bei Multidomain-Umgebungen sollte man sich mit der gewünschten Domain im Backend einloggen, damit es unter der jeweiligen Domain eingesetzt werden kann. 
-
+> Das Debug-AddOn sollte nicht in Produktivumgebungen eingesetzt werden, weil hierfür der Debug-Modus im System aktiviert sein muss. Bei Multidomain-Umgebungen sollte man sich mit der gewünschten Domain im Backend einloggen, damit es unter der jeweiligen Domain eingesetzt werden kann.
 
 <a name="browser"></a>
+
 ## Debugging: Entwicklertools des Browsers
 
 ![Safari Netzwerk/Serververhalten](/assets/v5.10.0-browser_network.png)
@@ -91,24 +91,27 @@ Das Debug-Addon, welches zusätzlich installiert werden kann. Es erscheint ein n
 In Desktop-Browsern befindet sich in den Entwickler-Tools ein "Netzwerk"-Reiter, in welchem REDAXO bei aktiviertem Debug-Modus zusätzliche Performance-Informationen ausgibt, die über `rex_timer` gemessen werden.
 
 <a name="googleindex"></a>
-## Fehler: Google indexiert die Seite nicht, alle Seiten werden als noindex markiert.
+
+## Fehler: Google indexiert die Seite nicht, alle Seiten werden als noindex markiert
 
 Möglicherweise ist der Debug-Modus aktiviert. Der Debug-Modus sollte ausschließlich nur dann aktiviert werden, wenn die Website nicht öffentlich erreichbar ist.
 
 <a name="moved"></a>
+
 ## Fehler: REDAXO funktioniert nach einem Website-Umzug nicht mehr
 
 * Ist sichergestellt, dass alle Dateien erfolgreich kopiert wurden?
-* Stimmt die PHP-Version? Siehe [Systemanforderungen](https://redaxo.org/download/core/). 
+* Stimmt die PHP-Version? Siehe [Systemanforderungen](https://redaxo.org/download/core/).
 * Wurden die Datenbank-Zugangsdaten angepasst?
 * Sind alle Einstellungen am Webspace-Paket und der Domain korrekt, z.B. Domain, A-Record, Verzeichnispfad, etc.?
 * Wurde die .htaccess-Datei übernommen oder neu gesetzt oder sind Anpassungen dort nötig?
 * Wurde das Setup erneut ausgeführt oder zumindest der Cache gelöscht?
 
 <a name="login"></a>
+
 ## Fehler: Ich kann mich nicht mehr einloggen
 
-Möglicherweise wurde das Passwort geändert oder der Benutzer existiert nicht mehr. Oder: Möglicherweise wurde ein Backup eingespielt, das die Tabelle `rex_user` nicht beinhaltet hat oder überschrieben hat. 
+Möglicherweise wurde das Passwort geändert oder der Benutzer existiert nicht mehr. Oder: Möglicherweise wurde ein Backup eingespielt, das die Tabelle `rex_user` nicht beinhaltet hat oder überschrieben hat.
 
 * Lösung 1: Ggf. das Setup starten, um den Administrator erneut anzulegen.
 * Lösung 2: [Das Passwort des Administrators zurücksetzen.](https://redaxo.org/doku/master/passwort-vergessen)
@@ -117,14 +120,17 @@ Möglicherweise wurde das Passwort geändert oder der Benutzer existiert nicht m
 Ein Login ist auch nicht mehr möglich, wenn der Speicherplatz des Hosting-Pakets voll ist und die PHP-Session daher nicht gestartet werden kann.
 
 <a name="community"></a>
+
 ## Weitere Fehler und Lösungen aus der REDAXO-Community
 
 <a name="installer"></a>
+
 ### Fehler: Installer kann keine Addons abrufen
 
 Stelle sicher, dass `https://www.redaxo.org/de/ws/` über eine Socket-Verbindung erreichbar ist.
 
 <a name="structure-edit-error"></a>
+
 ### Fehler: Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler
 
 Möglicherweise ist ein Modul oder der Inhalt eines Blocks defekt und löst einen Fehler aus. Mögliche Lösungsansätze:
@@ -133,6 +139,7 @@ Möglicherweise ist ein Modul oder der Inhalt eines Blocks defekt und löst eine
 * Im Zweifel über die Datenbank den betroffenen Block in der Tabelle `rex_article_slice` entfernen und den REDAXO-Cache löschen.
 
 <a name="pjax"></a>
+
 ### Fehler: Pjax-Formulare im Backend speichern nicht
 
 Wird beim Speichern in einem Modul oder Template im Backend ein 403-Fehler gemeldet, ist evtl. `mod_security` oder `fail2ban` beim Webspace aktiviert.

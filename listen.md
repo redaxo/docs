@@ -1,36 +1,36 @@
 # Listen
-    
+
 - [Tabellen `rex_list`](#rex-list)
 - [Listenansicht von Datenbank-Tabellen](#listenansicht)
-	- [Aufruf von rex_list und Parameter](#aufruf_von_rex_list)
-	- [Ein einfaches Beispiel](#einfaches_beispiel)
-	- [Formatierung und Verhalten der Liste](#beschreibung_der_methoden)
-	   - [addColumn](#addcolumn)
-	   - [addLinkAttribute](#addlinkattribute)
-	   - [addParam](#addparam)
-	   - [addTableAttribute](#addtableattribute)
-	   - [addTableColumnGroup](#addtablecolumngroup)
-	   - [getColumnLabel](#getcolumnlabel)
-	   - [getHeader()](#getheader)
-	   - [getUrl](#geturl)
-	   - [getParsedUrl](#getparsedurl)
-	   - [removeColumn](#removecolumn)
-	   - [setCaption](#setcaption)
-	   - [setColumnFormat](#setcolumnformat)
-	   - [setColumnParams](#setcolumnparams)
-	   - [setColumnSortable](#setcolumnsortable)
-	   - [setNoRowsMessage](#setnorowsmessage)
-	- [Ausgabe der Liste](#ausgabe_der_liste)
-	- [Extension Point](#extension_point)
+  - [Aufruf von rex_list und Parameter](#aufruf_von_rex_list)
+  - [Ein einfaches Beispiel](#einfaches_beispiel)
+  - [Formatierung und Verhalten der Liste](#beschreibung_der_methoden)
+    - [addColumn](#addcolumn)
+    - [addLinkAttribute](#addlinkattribute)
+    - [addParam](#addparam)
+    - [addTableAttribute](#addtableattribute)
+    - [addTableColumnGroup](#addtablecolumngroup)
+    - [getColumnLabel](#getcolumnlabel)
+    - [getHeader()](#getheader)
+    - [getUrl](#geturl)
+    - [getParsedUrl](#getparsedurl)
+    - [removeColumn](#removecolumn)
+    - [setCaption](#setcaption)
+    - [setColumnFormat](#setcolumnformat)
+    - [setColumnParams](#setcolumnparams)
+    - [setColumnSortable](#setcolumnsortable)
+    - [setNoRowsMessage](#setnorowsmessage)
+  - [Ausgabe der Liste](#ausgabe_der_liste)
+  - [Extension Point](#extension_point)
 - [Ausgabe einer rex_list in einem Fragment](#ausgabe_im_fragment)
 - [Ausgabe mehrerer rex_list-Instanzen mit Paginierung](#ausgabe_multiple)
-	
-
+ 
 <a name="rex-list"></a>
+
 ## Tabellen rex_list
 
-
 <a name="listenansicht"></a>
+
 ## Listenansicht von Datenbank-Tabellen
 
 Die Klasse `rex_list` ist eines der "heimlichen Heinzelmännchen" von REDAXO. Mit `rex_list` können die Ergebnisse Datenbankabfragen als tabellarische Listen dargestellt werden. Die Verwendung von `rex_list` kann sowohl im Backend als auch im Frontend sinnvoll sein.
@@ -38,6 +38,7 @@ Die Klasse `rex_list` ist eines der "heimlichen Heinzelmännchen" von REDAXO. Mi
 Eine Listenansicht kann über die `rex_list`-Klassen mit verschiedenen Funktionen ausgestattet werden, z.B. mit einer Sortierfunktion für bestimmte Spalten oder mit Links, um Datensätze zu editieren, zu löschen oder mit eigenen Funktionen zu manipulieren. Die Klasse verfügt von Haus aus über eine Paging-Funktion über die Klasse `rex_pager`.
 
 <a name="aufruf_von_rex_list"></a>
+
 ### Aufruf von rex_list und Parameter
 
 Ein Listenobjekt erzeugen:
@@ -47,14 +48,14 @@ $list = rex_list::factory($query, $rowsPerPage, $listName, $debug);
 ```
 
 Parameter | Erklärung
-------------- | ------------- 
+------------- | -------------
 `$query`  | ein SQL-Query-String. Die in der Query angegebenen Felder werden in der Liste angezeigt, so kann man also die Spalten beeinflussen.
 `$rowsPerPage`  | Anzahl Zeilen pro Seite. Standard ist 30. Werden mehr Datensätze angezeigt, wird automatisch eine Blätterfunktion aktiviert.
 `$listName`  | Der Wert wird an alle Links als GET Variable `list` angehängt. Wird dieser Parameter nicht angegeben wird ein md5 Wert aus dem Query erzeugt
-`$debug`  | true oder false, Standard ist false. Bei true wird die Debug Ausgabe eingeschaltet, sodass Fehler in der SQL-Query angezeigt werden 
-
+`$debug`  | true oder false, Standard ist false. Bei true wird die Debug Ausgabe eingeschaltet, sodass Fehler in der SQL-Query angezeigt werden
 
 <a name="einfaches_beispiel"></a>
+
 ### Ein einfaches Beispiel
 
 ```php
@@ -68,6 +69,7 @@ Zeigt aus der Tabelle rex_adressen die Felder *name*, *vorname*, *plz*, *ort* un
 In diesem einfachen Beispiel funktioniert der Pager im Frontend nicht. Damit der Pager im Frontend funktioniert, muss noch folgende Zeile eingefügt werden: `$list->addParam('article_id',REX_ARTICLE_ID);`
 
 <a name="beschreibung_der_methoden"></a>
+
 ### Formatierung und Verhalten der Liste
 
 Die Formatierung und das Verhalten der Liste kann weitestgehend konfiguriert werden. Hier werden nur die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der API-Dokumentation von REDAXO [https://redaxo.org/api/master/class-rex_list.html](https://redaxo.org/api/master/class-rex_list.html)
@@ -103,6 +105,7 @@ Mit der Methode *addTableAttribute* können der Tabelle weitere Attribute hinzug
 
 Die Methode kann verwendet werden, um die Spaltenbreiten über das HTML Element *colgroup* zu definieren.
 Beispiele:
+
 ```php
 $list->addTableColumnGroup([40, '*', 240, 140, 200]);
 $list->addTableColumnGroup([ ['width' => 40], ['width' => 240, 'span' => 2], ['width' => 240] ]);
@@ -175,8 +178,8 @@ Verlinkt eine Spalte mit den übergebenen Parametern. `$list->setColumnParams('n
 
 Damit wird ein Text definiert, der angezeigt wird, falls keine Datensätze gefunden werden. Als Standard wird der über *rex_i18n* übersetzte String aus *list_no_rows* verwendet.
 
-
 <a name="ausgabe_der_liste"></a>
+
 ### Ausgabe der Liste
 
 Durch die *get*-Methode wird die Liste final ausgegeben.
@@ -187,24 +190,24 @@ echo $list->get();
 
 Alternativ kann auch `$list->show();` verwendet werden.
 
-
 <a name="extension_point"></a>
+
 ### Extension Point
 
 Die *rex_list*-Klasse bringt einen Extension-Point mit: `REX_LIST_GET`. Der Extension-Point wird vor der Listenausgabe aufgerufen.
 
-
 <a name="zusammenspiel_mit_rex_form"></a>
+
 ## Zusammenspiel mit rex_form
 
 Die *rex_list*-Klasse kann sehr gut mit der [*rex_form*-Klasse](/{{path}}/{{version}}/formulare) zusammen eingesetzt werden, um einen Datensatz zu editieren.
 
-* Mit dem Parameter-Key *func* kann kann man entsprechend eine `rex_form` Instanz ansteuern. 
+* Mit dem Parameter-Key *func* kann kann man entsprechend eine `rex_form` Instanz ansteuern.
 * Mit dem Parameter-Key *[Instanzname]_start* lässt sich die Position der Paginierungs-Seite übergeben, wodurch ein Zurückkehren auf diese Position in der *rex_form*-Instanz ermöglicht wird.
 * Durch *###id###* wird die entsprechende ID des jeweiligen Datensatzes als Value des Parameters-Keys *id* dem Link als Get-Parameter geliefert. Nach diesem Muster können auch andere Werte eines Datensatzes an die Link-Parameter übergeben werden.
 
-
 <a name="ausgabe_im_fragment"></a>
+
 ## Ausgabe einer rex_list in einem Fragment
 
 Im Addon-Kontext bietet es sich an, für die Anzeige der Liste im Redaxo-Backend das Content-Fragment zu nutzen.
@@ -217,6 +220,7 @@ echo $fragment->parse('core/page/section.php');
 ```
 
 <a name="ausgabe_im_fragment"></a>
+
 ## Ausgabe mehrerer rex_list-Instanzen mit Paginierung
 
 Bei der Ausgabe mehrerer rex_list-Instanzen auf einer Addon-Seite gilt zu beachten, dass das Offset beider Listen in der jeweils anderen als Parameter mitgegeben werden muss. Andernfalls wird, wenn man die Paginierung einer Liste verwendet, die Paginierung aller anderen Listen zurückgesetzt.

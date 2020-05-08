@@ -4,9 +4,10 @@
 - [Liste der wichtigsten Pfade samt ihrer Pfad-Variablen](#liste-der-pfade)
 
 <a name="ordnerstruktur"></a>
+
 ## Ordnerstruktur des CMS
 
-In vielen Fällen ist es hilfreich, die Verzeichnisstruktur von REDAXO selbst zu kennen: Wo liegen die Core-Dateien, wo die Klassen und Funktionen, die AddOns und PlugIns, wo die Cache-Dateien und die öffentlich erreichbaren Dateien wie die Assets (CSS, JS) von AddOns oder die durch den Redakteur hochgeladenen Dateien? 
+In vielen Fällen ist es hilfreich, die Verzeichnisstruktur von REDAXO selbst zu kennen: Wo liegen die Core-Dateien, wo die Klassen und Funktionen, die AddOns und PlugIns, wo die Cache-Dateien und die öffentlich erreichbaren Dateien wie die Assets (CSS, JS) von AddOns oder die durch den Redakteur hochgeladenen Dateien?
 
 Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugriff geschützt, andere müssen frei erreichbar sein.
 
@@ -30,6 +31,7 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | `/redaxo/src/core/vendor/` | Funktionen von externen Bibliotheken, z.B: Composer, Symfony, etc. |
 
 <a name="hinweise"></a>
+
 ## Liste der wichtigsten Pfade samt ihrer Pfad-Variablen
 
 Da man bei der eigenen Programmierung – sei es bei eigenen AddOns oder auch bei Modulen und Templates – des öfteren auf solche Pfade zugreifen muss, gibt es Variablen, die man dafür nutzen kann. Die folgende Tabelle listet die wesentlichen Variablen auf.
@@ -63,6 +65,5 @@ Da man bei der eigenen Programmierung – sei es bei eigenen AddOns oder auch be
 | `/redaxo/src/addons/addonname/package.yml` | AddOn-Definitionen wie Version, Author, einzelne Seiten | `rex_path::addon($addon, 'package.yml')` |
 | `/redaxo/src/addons/addonname/plugins/pluginname` | | `rex_path::plugin($addon, $plugin, $file)` |
 
-`$file` und `$params` sind optionale Parameter. 
+`$file` und `$params` sind optionale Parameter.
 Bei den Pfaden zu Ordnern im öffentlichen Bereich kann statt `rex_path` auch `rex_url` (mit den gleichen Methoden) verwendet werden, um die relative URL statt des absoluten Pfades zu erhalten.
-
