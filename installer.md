@@ -4,7 +4,7 @@ Der Installer ist die zentrale Anlaufstelle, um REDAXO zu aktualisieren und neue
 
 Neu heruntergeladene AddOns werden nicht automatisch installiert. Die abschließende Installation und Aktivierung erfolgt beim Menüpunkt "AddOns".
 Aktualisierungen finden dagegen automatisch statt.
-Im Addon unter Einstellungen kann festgelegt werden, dass Backups erstellt werden sollen. Bei Aktuallisierungen werden Backups der alten AddOn-Ordner bzw. bei einem Core-Update der entsprechenden Core-Verzeichnisse erstellt und unter `redaxo/data/addons/install/` abgelegt. Ein Datenbankbackup wird jedoch **nicht** ausgeführt! Dieses kann z.B. über das [Backup-AddOn](/{{path}}/{{version}}/backup) erfolgen.
+Im Addon unter Einstellungen kann festgelegt werden, dass Backups erstellt werden sollen. Bei Aktualisierungen werden Backups der alten AddOn-Ordner bzw. bei einem Core-Update der entsprechenden Core-Verzeichnisse erstellt und unter `redaxo/data/addons/install/` abgelegt. Ein Datenbankbackup wird jedoch **nicht** ausgeführt! Dieses kann z.B. über das [Backup-AddOn](/{{path}}/{{version}}/backup) erfolgen.
 
 - [Vorhandene Aktualisieren](#aktualisieren)
 - [Neue Addons herunterladen](#herunterladen)
@@ -22,7 +22,7 @@ Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklic
 
 ![Systemcheck](/assets/v5.2.0-installer-03-versionen.png)
 
-> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher sein, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
+> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Sollte man sich hierbei nicht sicher sein, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
 
 <a name="herunterladen"></a>
 
