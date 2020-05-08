@@ -1,5 +1,0 @@
-# Datenbank-Tabellen
-
-## Installation
-
-## Update
