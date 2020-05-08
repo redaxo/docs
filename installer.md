@@ -22,7 +22,7 @@ Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklic
 
 ![Systemcheck](/assets/v5.2.0-installer-03-versionen.png)
 
-> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Sollte man sich hierbei nicht sicher sein, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
+> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
 
 <a name="herunterladen"></a>
 
