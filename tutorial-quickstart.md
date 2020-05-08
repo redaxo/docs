@@ -44,7 +44,7 @@ Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis
     Hier kommt dann der Inhalt ...
 
     <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; 2020 Company, Inc.</p>
     </footer>
 
  </div> <!-- /container -->
