@@ -29,13 +29,13 @@ Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 ## Aufruf der Console
 
 ```
-php redaxo/bin/console`
+php redaxo/bin/console
 ```
 
 oder
 
 ```
-redaxo/bin/console`
+redaxo/bin/console
 ```
 
 (Hierbei sollte die Datei `console` ausführbar sein)
