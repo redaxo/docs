@@ -2,24 +2,24 @@
 
 * [Einleitung](#einleitung)
 * [Blöcke](#bloecke)
-  * [Block bearbeiten](#block-bearbeiten)
-  * [Block löschen](#block-loeschen-)
-  * [Block verschieben](#block-verschieben)
-  * [Block online/offline](#block-status)
+  + [Block bearbeiten](#block-bearbeiten)
+  + [Block löschen](#block-loeschen-)
+  + [Block verschieben](#block-verschieben)
+  + [Block online/offline](#block-status)
 * [Bedienelemente in REDAXO](#bedienelemente)
-  * [Formularfelder](#formularfelder)
-  * [Link](#linkmap)
-  * [Linkliste](#linklist)
-  * [Medien-Link](#media)
-  * [Medienliste](#medialist)
-  * [Texteditoren und weitere Eingabemöglichkeiten](#andere)
+  + [Formularfelder](#formularfelder)
+  + [Link](#linkmap)
+  + [Linkliste](#linklist)
+  + [Medien-Link](#media)
+  + [Medienliste](#medialist)
+  + [Texteditoren und weitere Eingabemöglichkeiten](#andere)
 * [Artikel-Funktionen](#funktionen)
-  * [Artikel in Startartikel umwandeln](#convert)
-  * [Artikel in Kategorie umwandeln](#convertcat)
-  * [Inhalte kopieren](#copycontent)
-  * [Artikel / Kategorien Kopieren und Verschieben](#move)
-  * [Sprachen](#sprachen)
-    * [Inhalte zwischen Sprachen kopieren](#copylang)
+  + [Artikel in Startartikel umwandeln](#convert)
+  + [Artikel in Kategorie umwandeln](#convertcat)
+  + [Inhalte kopieren](#copycontent)
+  + [Artikel / Kategorien Kopieren und Verschieben](#move)
+  + [Sprachen](#sprachen)
+    - [Inhalte zwischen Sprachen kopieren](#copylang)
 * [Metadaten](#metadaten)
 * [Bereiche](#bereiche)
 * [Arbeitsversion / Liveversion](#version)
@@ -40,26 +40,28 @@ Die Inhalte der Artikel werden über Blöcke eingepflegt. Zusätzliche Informati
 
 ## Blöcke
 
-Die Inhalte (der Content) eines Artikels werden mit Hilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind vielfältig, beispielhaft seien genannt: Headlines, Fließtext, Galerien und die Steuerung von Ausgaben installierter Addons.
+Die Inhalte (der Content) eines Artikels werden mithilfe von Blöcken zusammengebaut. Sie werden durch die installierten Module in REDAXO zur Verfügung gestellt. Die Funktionen der Blöcke reichen von einfachen Texteingaben/-ausgaben bis zu kleinen Applikationen zur Generierung der Inhalte auf der jeweiligen Seite. Mögliche Einsatzzwecke sind vielfältig, beispielhaft seien genannt: Headlines, Fließtext, Galerien und die Steuerung von Ausgaben installierter AddOns.
 
 ![Artikel mit Blöcken](/assets/v5.2.0-redaktion-02-block-auswahl.png)
+
 Editiermodus und Blockauswahl
 
 Die Blöcke werden im Editiermodus (1) des Artikels eingepflegt.
 
 ![Blockauswahl](/assets/v5.2.0-redaktion-01-bloecke.png)
+
 Blockauswahlmenü
 
-Um einen Block hinzuzufügen,
+Um einen Block hinzuzufügen, 
 
-- klickt man auf das Aufklappmenü `Block hinzufügen` (2)
-- und wählt den gewünschten Block (3)
-- füllt das Formular aus (sofern erforderlich)
-- speichert mit `Block speichern`
+* klickt man auf das Aufklappmenü `Block hinzufügen` (2)
+* und wählt den gewünschten Block (3)
+* füllt das Formular aus (sofern erforderlich)
+* speichert mit `Block speichern` 
 
-Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten, um weiter zu arbeiten, klickt man auf `Block übernehmen`. Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen`.
+Möchte man den aktuellen Stand der Bearbeitung zwischenspeichern und den Block geöffnet halten, um weiter zu arbeiten, klickt man auf `Block übernehmen` . Möchte man den aktuellen Stand nicht speichern, kann man die Bearbeitung `abbrechen` .
 
-> Da in jeder Redaxo-Installation unterschiedliche, häufig individuell erstellte Module zur Verfügung stehen, wird deren Funktion hier nicht erläutert.
+> Da in jeder REDAXO-Installation unterschiedliche, häufig individuell erstellte Module zur Verfügung stehen, wird deren Funktion hier nicht erläutert.
 
 <a name="block-bearbeiten"></a>
 
@@ -83,7 +85,7 @@ Blöcke können mit den Pfeilen rechts um jeweils eine Position nach oben oder u
 
 ### Block onnline/offline
 
-Mit der Schaltfläche `online`bzw. `offline` kann die Block-Darstellung beinflusst werden. Ist ein Block `offline` wird dieser im Frontend nicht ausgegeben.
+Mit der Schaltfläche `online` bzw. `offline` kann die Block-Darstellung beeinflusst werden. Ist ein Block `offline` wird dieser im Frontend nicht ausgegeben.
 
 <a name="bedienelemente"></a>
 
@@ -102,6 +104,7 @@ Die meisten Blöcke fragen in Formularen die Eingaben des Redakteurs ab. Hier k�
 ### Link
 
 ![Link-Widget](/assets/v5.2.0-redaktion-03-widget-link.png)
+
 Link-widget
 
 Über das Link-Widget kann ein einzelner Artikel der REDAXO-Webpräsenz verlinkt werden. Zur Auswahl eines Links klickt man auf das Sitemap-Symbol. Es öffnet sich dann ein Fenster (die Linkmap), in dem man innerhalb der Seitenstruktur den gewünschten Artikel auswählen kann. Um eine Kategorie zu verlinken, wählt man den dazugehörigen Startartikel. Mit dem anderen Symbol kann man die Linkauswahl wieder aufheben.
@@ -111,6 +114,7 @@ Link-widget
 ### Linklist
 
 ![Linklist-Widget](/assets/v5.2.0-redaktion-03-widget-linklist.png)
+
 Linklist-Widget
 
 Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge der Links kann über die Pfeile verändert werden. Sonst verhält sich diese Eingabe wie beim Link-Widget.
@@ -120,6 +124,7 @@ Mit dem Linklist-Widget können mehrere Artikel verlinkt werden. Die Reihenfolge
 ### Medien-Link
 
 ![Media-Link](/assets/v5.2.0-redaktion-03-widget-medium.png)
+
 Media-Widget
 
 Mit dem Media-Link-Widget werden einzelne Medien aus dem Medienpool ausgewählt. Das können beispielsweise Bilder oder Dokumente sein. Den Medienpool zur Auswahl des Mediums ruft man über das Listenmodul auf.
@@ -131,6 +136,7 @@ Um den Upload-Dialog des Medienpools aufzurufen, klickt man auf das (+)-Symbol. 
 ### Medienliste
 
 ![Medialist](/assets/v5.2.0-redaktion-03-widget-medialist.png)
+
 Medialist-Widget
 
 Zur Auswahl mehrerer Medien gibt es das Medialist-Widget. Hier können aus dem Medienpool mehrere Medien ausgewählt und deren Reihenfolge organisiert werden. Medialist-Widgets werden beispielsweise für die Erstellung von Downloadlisten oder Galerien benötigt. Sonst verhält sich diese Eingabe wie der Medien-Link.
@@ -201,7 +207,7 @@ Neben Artikeln können auch für Kategorien und Medien Metadaten verwendet werde
 
 ## Bereiche
 
-Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Bereiche zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet, um z.B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren.
+Ein Artikel kann in mehrere Bereiche unterteilt sein, die voneinander unabhängig gepflegt werden können. Je nach ausgewähltem Template können unterschiedlich viele Bereiche zur Verfügung gestellt werden. Häufig wird diese Funktion verwendet, um z. B. eine Seitenleiste oder eine Fußnote zu pflegen oder komplexere Layouts zu realisieren.
 
 Um in einen Bereich zu gelangen, klickt man im Editiermodus auf die Bezeichnung des gewünschten Bereichs. Diese findet man im Reiter `Editiermodus` als Untermenüpunkte. Die Pflege der Bereiche erfolgt, indem man mit Modulen Inhaltsblöcke anlegt.
 
@@ -210,12 +216,14 @@ Um in einen Bereich zu gelangen, klickt man im Editiermodus auf die Bezeichnung 
 ## Arbeitsversion / Liveversion
 
 ![Version](/assets/v5.2.0-redaktion-04-version.png)
+
 Arbeitsversion / Liveversion
 
-Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich, Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. Die Umschaltung zwischen Liveversion und Arbeitsversion erfolgt über das Drop-Down-Menü `Version`.
+Sollte das Versions-PlugIn der Struktur installiert sein, ist es möglich, Arbeits- und Liveversionen der Artikel zu pflegen. Die Liveversion ist die aktuell auf der Website veröffentlichte Version. Die Umschaltung zwischen Liveversion und Arbeitsversion erfolgt über das Drop-Down-Menü `Version` .
 
 In der Arbeitsversion erstellt man eine neue Ausgabe des Artikels.
 Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben füllen lässt. Es ist möglich, die Inhalte der Liveversion in die Arbeitsversion zu übertragen, sodass man an der aktuellen Version weiterarbeiten kann. Um eine Vorschau der Arbeitsversion zu erhalten, klickt man auf „Voransicht“. Nach Abschluss der Überarbeitung kann die Arbeitsversion als Liveversion freigegeben werden und somit online geschaltet werden.
+
 > **Achtung!** Wird die Arbeitsversion als Liveversion freigegeben, wird die aktuelle Liveversion überschrieben bzw. gelöscht. Nutzt man jedoch auch das History-PlugIn, so ist es möglich, vorherige Versionen wiederherzustellen.
 
 <a name="history"></a>
@@ -225,8 +233,9 @@ Jeder Artikel hat eine leere Arbeitsversion zugeordnet, die sich nach Belieben f
 In REDAXO ist eine Versionierung (History) integriert. Ist diese aktiviert, erfasst REDAXO jede Änderung in den Artikel-Blöcken.
 
 ![History](/assets/v5.2.0-redaktion-06-history.png)
+
 History-Gegenüberstellung
 
 Nach Klick auf das History-Symbol (runder Pfeil, mit Uhr, neben dem Reiter zum Editiermodus) öffnet sich eine Gegenüberstellung der Versionen. Über den Schieberegler oder das Drop-Down-Menü können die einzelnen Versionen ausgewählt und im rechten Fenster betrachtet werden.
 
-Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen`. Hierbei wird die aktuelle Version als neue Version gespeichert, sodass es jederzeit möglich ist, den Vorgang rückgängig zu machen.
+Möchte man eine ältere Version wiederherstellen, klickt man auf `Diese Version übernehmen` . Hierbei wird die aktuelle Version als neue Version gespeichert, sodass es jederzeit möglich ist, den Vorgang rückgängig zu machen.

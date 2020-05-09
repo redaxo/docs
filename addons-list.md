@@ -1,33 +1,33 @@
 # AddOns und Workflows
 
-- [Einführung](#einfuehrung)
-- [Systemerweiterungen](#systemerweiterungen)
-- [Backend](#backend)
-- [Applikationen](#applikationen)
-- [Development](#development)
-  - [Adminer](#adminer)
-  - [Cheatsheat für Extensionpoints](#cheatsheet)
-  - [Demo-AddOn](#demo)
-  - [Developer - Module, Templates und Aktionen syncen](#developer)
-  - [ICEcoder](#icecoder)
-  - [Project - Schnell mal eine PHP-Class einbinden](#project)
-  - [Theme - Verwalten aller Projektdateien für Frontend und Backend](#theme)
-  - [YConverter - Migration REDAXO 4.x zu 5.x](#yconverter)
-  - [YTraduko - Übersetzungshelfer](#ytraduko)
-  - [ZIP-Install](#zip)
-- [Workflows](#workflows)
-  - [REDAXO mit Bimmelbam](#bimmelbam)
-  - [REDAXO mit Docker](#docker)
+* [Einführung](#einfuehrung)
+* [Systemerweiterungen](#systemerweiterungen)
+* [Backend](#backend)
+* [Applikationen](#applikationen)
+* [Development](#development)
+  + [Adminer](#adminer)
+  + [Cheatsheat für Extensionpoints](#cheatsheet)
+  + [Demo-AddOn](#demo)
+  + [Developer - Module, Templates und Aktionen syncen](#developer)
+  + [ICEcoder](#icecoder)
+  + [Project - Schnell mal eine PHP-Class einbinden](#project)
+  + [Theme - Verwalten aller Projektdateien für Frontend und Backend](#theme)
+  + [YConverter - Migration REDAXO 4.x zu 5.x](#yconverter)
+  + [YTraduko - Übersetzungshelfer](#ytraduko)
+  + [ZIP-Install](#zip)
+* [Workflows](#workflows)
+  + [REDAXO mit Bimmelbam](#bimmelbam)
+  + [REDAXO mit Docker](#docker)
 
 <a name="einfuehrung"></a>
 
 ## Einführung
 
-AddOns erweiteren das REDAXO CMS um neue Funktionen. Sie können manuell über die REDAXO-Website installiert werden (<https://redaxo.org/download/addons/),> oder über das AddOn `Installer` direkt innerhalb des REDAXO CMS.
+AddOns erweiteren das REDAXO CMS um neue Funktionen. Sie können manuell über die REDAXO-Website installiert werden (<https://redaxo.org/download/addons/), > oder über das AddOn `Installer` direkt innerhalb des REDAXO CMS.
 
 Erst die zu einem Projekt passenden AddOns machen REDAXO zu dem mächtigen Werkzeug, das es wirklich ist. In der Vielzahl der AddOns ist es manchmal schwierig, den Überblick zu behalten. Nachfolgend stellen wir eine redaktionelle Auswahl beliebter AddOns vor.
 
-Du findest, hier fehlt ein exzellentes Addon? Reiche deinen Vorschlag direkt ein: <https://github.com/redaxo/docs/issues>
+Du findest, hier fehlt ein exzellentes AddOn? Reiche deinen Vorschlag direkt ein: <https://github.com/redaxo/docs/issues>
 
 <a name="systemerweiterungen"></a>
 
@@ -139,7 +139,7 @@ Das Theme-AddOn erleichtert die Verwaltung aller für das Projekt erforderlichen
 
 ### YConverter
 
-Eine REDAXO 4.x - Datenbank kann mit Hilfe dieses AddOns für REDAXO 5.x vorbereitet werden und migriert werden. Hierbei werden bekannte Class- und Methodenaufrufe, REX_VARS für REDAXO 5.x vorbereitet und sogar xform-Tabellen nach yform konvertiert.
+Eine REDAXO 4.x - Datenbank kann mithilfe dieses AddOns für REDAXO 5.x vorbereitet werden und migriert werden. Hierbei werden bekannte Class- und Methodenaufrufe, REX_VARS für REDAXO 5.x vorbereitet und sogar xform-Tabellen nach yform konvertiert.
 
 [**Github-Repo**](https://github.com/yakamara/yconverter)
 

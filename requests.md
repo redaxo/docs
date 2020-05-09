@@ -1,6 +1,6 @@
 # Requests
 
-Die Request Funktionen werden in REDAXO verwendet, um mit den superglobalen Variablen `$_GET`, `$_POST`, `$_REQUEST`, `$_SERVER`, `$_COOKIE`, `$_ENV`, `$_SESSION` und `$_FILES` zu arbeiten. Die REDAXO Funktionen sollten bevorzugt verwendet werden um die superglobalen Variablen abzufragen bzw. anzusprechen.
+Die Request Funktionen werden in REDAXO verwendet, um mit den superglobalen Variablen `$_GET`, `$_POST`, `$_REQUEST`, `$_SERVER`, `$_COOKIE`, `$_ENV`, `$_SESSION` und `$_FILES` zu arbeiten. Die REDAXO Funktionen sollten bevorzugt verwendet werden, um die superglobalen Variablen abzufragen bzw. anzusprechen.
 
 ### Parameter der Funktionen rex_get, rex_post, rex_request, rex_files, rex_env, rex_cookie
 
