@@ -26,7 +26,7 @@ Jedes Modul hat einen Eingabeteil, der mit verschiedensten Eingabeelementen vers
 
 Eingabeelemente können zum Beispiel sein:
 
-- Ein oder mehrere Textfelder
+- ein oder mehrere Textfelder
 - Elemente für die Auswahl von Dateien aus dem Medienpool
 - Elemente für die Auswahl von Links
 - Auswahlelemente (Selectfelder)
