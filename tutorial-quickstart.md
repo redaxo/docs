@@ -23,11 +23,7 @@ Dieses Tutorial zeigt das Zusammenspiel von Templates und Modulen, und wie darau
 
 Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis HTML-Gerüst sieht zunächst so aus:
 
-<<<<<<< HEAD
 ```html
-=======
-``` html
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <!DOCTYPE html>
 <html lang="de">
 
@@ -68,21 +64,13 @@ Die CSS-Datei wird in diesem Beispiel direkt von der Bootstrap-Website geladen, 
 Im ersten Schritt wird also der Artikelname dynamisch als Title-tag gesetzt. Hier kommen PHP und REDAXO-eigene Aufrufe ins Spiel; diese werden wie gesagt in der Dokumentation alle ausführlich erläutert.
 Am besten verwendet man den Artikelnamen als Title-Tag und wandelt Sonderzeichen in entsprechende HTML-Codes um:
 
-<<<<<<< HEAD
 ```php
-=======
-``` php
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 ```
 
 Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü `System` hinterlegten  mit der aktuellen Jahreszahl anzeigen:
 
-<<<<<<< HEAD
 ```php
-=======
-``` php
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <footer class="footer">
  <p>&copy; <?php echo date("Y").' '.rex::getServerName(); ?></p>
 </footer>
@@ -94,11 +82,7 @@ Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü 
 
 Die Standard-Navigation von Bootstrap sieht so aus:
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-right">
@@ -112,11 +96,7 @@ Die Standard-Navigation von Bootstrap sieht so aus:
 
 Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisch einzusetzen. Am Code müssen dafür nur wenige Zeilen ergänzt werden:
 
-<<<<<<< HEAD
 ```php
-=======
-``` php
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-right">
@@ -137,11 +117,7 @@ Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisc
 
 Bevor nun im nächsten Schritt zwei einfache Module erstellt werden, muss man im Template noch den Aufruf einfügen, damit der Inhalt der Module auch ausgegeben wird:
 
-<<<<<<< HEAD
 ```html
-=======
-``` php
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_ARTICLE[]
 ```
 
@@ -149,11 +125,7 @@ Das ist alles :-)
 
 Das komplette Template sieht also nun so aus:
 
-<<<<<<< HEAD
 ```html
-=======
-``` php
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -214,11 +186,7 @@ Im Eingabe-Code - das ist das, was der Redakteur in REDAXO sieht - benötigt man
 
 **Eingabe**:
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <label>Überschrift</label>
 <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
 
@@ -230,11 +198,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 
 **Optisch gestylte Eingabe**:
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Überschrift</label>
@@ -256,11 +220,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 
 **Ausgabe:**
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <div class="jumbotron">
  REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
  REX_VALUE[id='2' prefix='<p>' suffix='</p>']
@@ -277,11 +237,7 @@ Ein zweites Modul dient zur Anzeige von Bildern und Texten in zwei Spalten.
 
 **Eingabe**:
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <h2>Spalte 1</h2>
 
 <label>Überschrift</label>
@@ -309,11 +265,7 @@ Auch für dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
 
 **Optisch gestylte Eingabe**:
 
-<<<<<<< HEAD
 ```html
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <fieldset class="form-horizontal">
     <legend>Spalte 1</legend>
 
@@ -369,11 +321,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 
 **Ausgabe**
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <div class="row">
     <div class="col-lg-6">
         <?php

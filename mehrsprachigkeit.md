@@ -103,34 +103,34 @@ Bei nur zwei Sprachen wird nur ein Link zur anderen Sprache angezeigt. Als Linkt
 
 ```php
 <?php
-// auskommentieren, um das Sprach-Array anzuzeigen
-// dump(rex_clang::getAll());
+    // auskommentieren, um das Sprach-Array anzuzeigen
+    // dump(rex_clang::getAll());
 
 
-// zwei Sprachen online -> nur den Link zur anderen Sprache anzeigen
-if (count(rex_clang::getAll(true)) == 2) {
+    // zwei Sprachen online -> nur den Link zur anderen Sprache anzeigen
+    if (count(rex_clang::getAll(true)) == 2) {
 
- foreach (rex_clang::getAll(true) as $lang) {
-  // falls die Sprache nicht die aktuelle Sprache ist
-  if (rex_clang::getCurrentId() != $lang->getValue('id')) {
-   echo '<a href="'.rex_getUrl($this->getValue('article_id'), $lang->getValue('id')).'">'.$lang->getValue('code').'</a>';
-  }
- }
+    foreach (rex_clang::getAll(true) as $lang) {
+    // falls die Sprache nicht die aktuelle Sprache ist
+    if (rex_clang::getCurrentId() != $lang->getValue('id')) {
+    echo '<a href="'.rex_getUrl($this->getValue('article_id'), $lang->getValue('id')).'">'.$lang->getValue('code').'</a>';
+    }
+    }
 
-// mehr als zwei Sprachen online
-} elseif (count(rex_clang::getAll(true)) > 2) {
- 
- foreach (rex_clang::getAll(true) as $lang) {
-  // aktuelle Sprachenicht klickbar
-  if (rex_clang::getCurrentId() == $lang->getValue('id')) {
-   echo '<a href="#">'.$lang->getValue('name').'</a>';
-  // alle anderen klickbar
-  } else {
-   echo '<a href="'.rex_getUrl($this->getValue('article_id'), $lang->getValue('id')).'">'.$lang->getValue('name').'</a>';
-  }
- }
+    // mehr als zwei Sprachen online
+    } elseif (count(rex_clang::getAll(true)) > 2) {
+    
+    foreach (rex_clang::getAll(true) as $lang) {
+    // aktuelle Sprachenicht klickbar
+    if (rex_clang::getCurrentId() == $lang->getValue('id')) {
+    echo '<a href="#">'.$lang->getValue('name').'</a>';
+    // alle anderen klickbar
+    } else {
+    echo '<a href="'.rex_getUrl($this->getValue('article_id'), $lang->getValue('id')).'">'.$lang->getValue('name').'</a>';
+    }
+    }
 
-}
+    }
 ?>
 ```
 
@@ -140,31 +140,31 @@ if (count(rex_clang::getAll(true)) == 2) {
 
 ```php
 <?php
-// aktuelle Sprache ermitteln
-$current_lang = rex_clang::getCurrent();
-// Sprachcode ermitteln
-$langcode     = $current_lang->getCode();
-// gibt es mehr als eine Sprache?
+    // aktuelle Sprache ermitteln
+    $current_lang = rex_clang::getCurrent();
+    // Sprachcode ermitteln
+    $langcode     = $current_lang->getCode();
+    // gibt es mehr als eine Sprache?
 
-if (count(rex_clang::getAll(true)) > 1) {
-    if (count(rex_clang::getAll(true))) {
-        // Sprachen auslesen
-        foreach (rex_clang::getAll(true) as $lang) {
-            // aktuelle Sprache soll nicht klickbar sein
-            if (rex_clang::getCurrentId() == $lang->getValue('id')) {
-                echo '<strong>' . $lang->getCode() . '</strong>';
-                // alle anderen klickbar
-            } else {
-         // ermittle Artikel-Infos der ermittelten Sprache
-                $art = rex_article::get($this->getValue('article_id'), $lang->getValue('id'));
-                // prüfen ob Artikel online, wenn ja anzeigen.
-                if ($art->isOnline()) {
-                    echo '<a href="' . rex_getUrl($this->getValue('article_id'), $lang->getValue('id')) . '">' . $lang->getCode() . '</a>';
+    if (count(rex_clang::getAll(true)) > 1) {
+        if (count(rex_clang::getAll(true))) {
+            // Sprachen auslesen
+            foreach (rex_clang::getAll(true) as $lang) {
+                // aktuelle Sprache soll nicht klickbar sein
+                if (rex_clang::getCurrentId() == $lang->getValue('id')) {
+                    echo '<strong>' . $lang->getCode() . '</strong>';
+                    // alle anderen klickbar
+                } else {
+            // ermittle Artikel-Infos der ermittelten Sprache
+                    $art = rex_article::get($this->getValue('article_id'), $lang->getValue('id'));
+                    // prüfen ob Artikel online, wenn ja anzeigen.
+                    if ($art->isOnline()) {
+                        echo '<a href="' . rex_getUrl($this->getValue('article_id'), $lang->getValue('id')) . '">' . $lang->getCode() . '</a>';
+                    }
                 }
             }
         }
     }
-}
 ?>
 ```
 

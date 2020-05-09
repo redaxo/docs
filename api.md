@@ -47,7 +47,7 @@ class rex_api_demo extends rex_api_function
 
 #### Methoden zur Verwendung innerhalb von rex_api_function
 
-```
+```php
 // Funktioniert nur innerhalb von rex_api_function
 // Gibt Namen der Funktion und ein CSRF Token zurück  
 $url_params = rex_api_function::getUrlParams();
@@ -64,7 +64,7 @@ Das Ergebnis kann von der API-Funktion per `return` Statement zurückgegeben wer
 
 #### Ergebnis erzeugen
 
-```
+```php
 $result = new rex_api_result($status, $message);
 ```
 
@@ -74,14 +74,14 @@ $message | _optional:_ Ausführlicher Nachricht. Z.B. zur Ausgabe für den Nutze
 
 #### Status des Ergebnisses abfragen
 
-```
+```php
 // Der Status ist bei Erfolg 'true'
 $status = $result->isSuccessfull()
 ```
 
 #### Nachricht ausgeben
 
-```
+```php
 // Gibt die Nachricht ohne zusätzliche Formatierung aus
 echo $result->getMessage();
 

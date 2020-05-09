@@ -52,11 +52,7 @@ Mit der Klasse `rex_form` kann man Eingabeformulare in AddOn-Seiten erstellen. D
 
 Die Erstellung eines `rex_form` -Objektes geschieht über die Factory Methode:
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $form = rex_form::factory( string $tableName, string $fieldset, string $whereCondition, string $method = 'post', boolean $debug = false )
 ```
 
@@ -72,11 +68,7 @@ $form = rex_form::factory( string $tableName, string $fieldset, string $whereCon
 
 ### Ein einfaches Beispiel
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $form = rex_form::factory('rex_adressen', 'adressen', 'id=' . rex_request('id', 'int', 0));
 $form->addParam('id',rex_request('id', 'int', 0));
 $field = $form->addTextField('name');
@@ -134,11 +126,7 @@ Beispiel: `$form->addField('input','ort');` fügt ein Input *type=text*-Feld fü
 
 Fügt dem Formular ein Container-Feld hinzu. Ein Container-Feld kann weitere Felder enthalten. rex_form speichert die Werte eines Container-Feldes als json, sodass mehrere Werte in einem Feld abgelegt werden können. Das ist besonders nützlich, wenn man dynamische Felder benötigt und nicht jedesmal die Datenstruktur anpassen will. Die einzelnen Felder werden dem Container mit der Methode `addGroupedField` hinzugefügt.
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Fieldcontainer erstellen. Die Werte werden in das Datenfeld gaeste als json gespeichert
 $fieldContainer = $form->addContainerField('gaeste');
 
@@ -243,11 +231,7 @@ Da der Feldname von rex_form in ein Array umgewandelt wird, kann man Hidden-Feld
 
 Fügt dem Fomular eine Checkbox-Gruppe hinzu. *addOption* fügt jeweils eine weitere Checkbox zur Gruppe hinzu, wie das Beispiel zeigt. Die Werte werden im Datenbankfeld mit Pipe (senkrechter Strich `|` ) getrennt abgelegt. Daher sollte auf senkrechte Striche in den Werten verzichtet werden.
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $field = $form->addCheckboxField('bestellung');
 $field->setLabel("Checkbox");
 $field->addOption('Pizza Margherita', 'pizza_436');
@@ -262,11 +246,7 @@ $field->addOption('Pasta Gorgonzola', 'pasta_768');
 
 Fügt dem Fomular eine Radio-Button-Gruppe hinzu. *addOption* fügt jeweils einen weiteren Radio-Button zur Gruppe hinzu:
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $field = $form->addRadioField ('getraenk');
 $field->setLabel('Getränk');
 $field->addOption ('Bier (0,33l)', 'bier_033');
@@ -289,11 +269,7 @@ Fügt dem Formular ein Textarea-Feld hinzu. Beispiel: `$field = $form->addTextAr
 
 Fügt dem Formular ein Select-/Auswahl-Feld hinzu. Das Beispiel zeigt die Optionen für das Select-Feld:
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $field = $form->addSelectField('bestellung',$value = null,['class'=>'form-control selectpicker']); // die Klasse selectpicker aktiviert den Selectpicker von Bootstrap
 $field->setAttribute('multiple', 'multiple');
 $field->setLabel("Select");
@@ -546,11 +522,7 @@ Dies ist ein einfaches Beispiel für die Darstellung einer Liste und eines Bearb
 
 Zusätzlich wird für die Ausgabe ein Fragment verwendet.
 
-<<<<<<< HEAD
 ```php
-=======
-``` 
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $func = rex_request('func','string','');
 $table = 'adressen'; // rex_adressen - Prefix wird durch rex::getTable hinzugefügt
 
