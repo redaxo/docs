@@ -25,7 +25,12 @@ AddOns werden bei der Installation in REDAXO registriert, dazu sind einige Basis
 Diese Basisinformationen werden in der Datei `package.yml` abgelegt. Prinzipiell sind mit dieser Datei
 alle Erfordernisse erfüllt, dass REDAXO ein AddOn installieren kann.  
   
-[@TODO:][SCREENSSHOT ODER CODE VON PACKAGE. YML]  
+```yml
+package: addonname # Name des Addons
+version: '1.0.0' # Version des Addons
+author: Max Mustermann # Names des Autors
+supportpage: https://github.com/friendsofredaxo/addonname # Support Seite des addons
+```
   
 Da in der Datei `package.yml` direkt Referenzen zu Dateien innerhalb des AddOns notiert werden können, können in
 der Folge weitere Dateien notwendig werden. Mehr zu erforderlichen und optionalen Angaben in dieser Datei
