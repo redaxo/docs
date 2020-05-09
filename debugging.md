@@ -133,7 +133,7 @@ Ein Login ist auch nicht mehr möglich, wenn der Speicherplatz des Hosting-Paket
 
 ### Fehler: Installer kann keine AddOns abrufen
 
-Stelle sicher, dass `https://www.redaxo.org/de/ws/` über eine Socket-Verbindung erreichbar ist.
+Stelle sicher, dass `https://www.redaxo.org/de/ws/` über eine Socket-Verbindung erreichbar ist. Möglicherweise hat der Hoster ausgehende Socket-Verbindungen blockiert, oder verwendet keinen aktuellen Zertifikatsspeicher. Dies kann auch im Zuge einer PHP-Versionsumstellung passieren.
 
 <a name="structure-edit-error"></a>
 
