@@ -1,18 +1,18 @@
 # Benutzerverwaltung
 
-- [Einleitung](#einleitung)
-- [Benutzerliste](#liste)
-- [Rollen](#rollen)
-- [Anlegen einer Rolle](#rollenerstellen)
-  - [Beschreibung](#beschreibung)
-  - [Allgemein](#rolleallgemein)
-  - [Optionen](#rolleoptionen)
-  - [Extras](#rolleextras)
-  - [Sprachen](#rollesprachen)
-  - [Kategorien](#rollekategorien)
-  - [Medienordner](#rollemedienordner)
-  - [Module](#rollemodule)
-- [Anlegen eines Benutzers](#benutzer)
+* [Einleitung](#einleitung)
+* [Benutzerliste](#liste)
+* [Rollen](#rollen)
+* [Anlegen einer Rolle](#rollenerstellen)
+  + [Beschreibung](#beschreibung)
+  + [Allgemein](#rolleallgemein)
+  + [Optionen](#rolleoptionen)
+  + [Extras](#rolleextras)
+  + [Sprachen](#rollesprachen)
+  + [Kategorien](#rollekategorien)
+  + [Medienordner](#rollemedienordner)
+  + [Module](#rollemodule)
+* [Anlegen eines Benutzers](#benutzer)
 
 <a name="einleitung"></a>
 
@@ -20,25 +20,27 @@
 
 In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Man kann die einzelnen Nutzer mit verschiedenen Rollen versehen und diesen Rollen unterschiedliche Rechte zuweisen. So muss man neuen Usern nur noch die entsprechende Rolle zuwiesen und nicht mehr alle Rechte definieren.
 
-Administratoren oder User mit entsprechenden Rechten finden die Benutzverwaltung im Menüpunkt `Benutzer`.
+Administratoren oder User mit entsprechenden Rechten finden die Benutzverwaltung im Menüpunkt `Benutzer` .
 
 <a name="liste"></a>
 
 ## Benutzerliste
 
 ![Systemcheck](/assets/v5.2.0-Benutzerverwaltung--liste.png)
+
 Benutzerliste
 
 Bei Aufruf der Benutzerverwaltung erscheint die Liste aller System-Benutzer.
 Folgende Informationen zu den einzelnen Benutzern werden aufgelistet:
 
-- ID
-- Name
-- Login
-- Rolle
-- letzter Login
+* ID
+* Name
+* Login
+* Rolle
+* letzter Login
 
-Zum Bearbeiten eines Benutzers klickt man auf  `editieren`, zum Löschen eines Benutzers klickst du auf  `löschen`.
+Zum Bearbeiten eines Benutzers klickt man auf `editieren` , zum Löschen eines Benutzers klickst du auf `löschen` .
+
 > Das Löschen des aktuell angemeldeten Nutzers (also der eigene Account) ist nicht möglich.
 
 [Ein neuer Benutzer](#benutzer) wird erstellt durch Klick auf das Plus-Symbol.
@@ -47,7 +49,7 @@ Zum Bearbeiten eines Benutzers klickt man auf  `editieren`, zum Löschen eines B
 
 ## Rollen
 
-Redaxo verwendet Rollen-Definitionen, um die Rechte einzelner Nutzer oder Gruppen festzulegen. Bevor man neue Benutzer anlegt, sollte man sich über deren Rechte Gedanken machen und entsprechende Rollen definieren.
+REDAXO verwendet Rollen-Definitionen, um die Rechte einzelner Nutzer oder Gruppen festzulegen. Bevor man neue Benutzer anlegt, sollte man sich über deren Rechte Gedanken machen und entsprechende Rollen definieren.
 Redakteure benötigen meist nur einen Bruchteil der verfügbaren Berechtigungen. Die Rollen können unter `Benutzer, Rollen` erstellt und editiert werden.
 
 <a name="rollenerstellen"></a>
@@ -100,6 +102,7 @@ Hier legt man fest, auf welche Kategorien (Rubriken) der Redakteur Zugriff erhä
 ### Medienordner
 
 Es kann definiert werden, für welche Medienpool-Kategorien der Benutzer eine Schreibberechtigung erhält.
+
 > **Hinweis:** Er besitzt weiterhin das Lese- und Nutzrecht für alle Medien, kann diese aber nicht bearbeiten.
 
 <a name="rollemodule"></a>
@@ -115,30 +118,32 @@ Um das Backend für einige Benutzer noch einfacher, bzw. übersichtlicher zu ges
 Einen neuen Benutzer legt man an, idem man auf das Plus-Symbol in der Benutzerliste klickt.
 
 ![Systemcheck](/assets/v5.2.0-Benutzerverwaltung--benutzer.png)
+
 Benutzer anlegen
 
 Man kann folgende Einstellungen festlegen:
 
-- Benutzername
-- Passwort (*kann durch den Nutzer im Profil geändert werden*)
-- Name
-- Beschreibung (z.B. Chefredakteur)
-- E-Mail-Adresse (wird eventuell von einigen AddOns benötigt)
-- [Admin](#qdmin)
-- User ist aktiv
-- [Rolle](#rollen)
-- [Startseite](#startseite)
-- Backendsprache
+* Benutzername
+* Passwort (*kann durch den Nutzer im Profil geändert werden*)
+* Name
+* Beschreibung (z. B. Chefredakteur)
+* E-Mail-Adresse (wird eventuell von einigen AddOns benötigt)
+* [Admin](#qdmin)
+* User ist aktiv
+* [Rolle](#rollen)
+* [Startseite](#startseite)
+* Backendsprache
 
 <a name="admin"></a>
 
 ## Admin
 
 Der Admin erhält alle Rechte und Zugriff auf alle System- und AddOn-Funktionen.
+
 > Um Fehlbedienungen zu vermeiden sollten Redakteure geeignete Rechte über eine Rolle erhalten.
 
 <a name="startseite"></a>
 
 ## Startseite
 
-Hier legt man fest, welche Seite direkt nach dem Login im Backend aufgerufen werden soll, der Standard ist `Struktur`.
+Hier legt man fest, welche Seite direkt nach dem Login im Backend aufgerufen werden soll, der Standard ist `Struktur` .

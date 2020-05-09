@@ -6,26 +6,20 @@ Falls du dein Passwort vergessen hast, musst du dieses in der Datenbank zurücks
 
 Bevor du Änderungen an der Datenbank durchführst, denke daran ein Backup anzulegen.
 
-Suche die Datenbank die du bei der Installation angegeben hast und öffne dort die Tabelle *rex_user*. Dort findest du den Eintrag mit deinem Login.
+Suche die Datenbank die du bei der Installation angegeben hast und öffne dort die Tabelle `rex_user`. Dort findest du den Eintrag mit deinem Login.
 
 Ersetze das kryptische Passwort durch folgende Zeile:
 
-```
+```sha
 $2y$10$GQripq8LDWMGNsnw5b/u8uFG/fkzC2p2uVlrQFx49F0BzbjATDE1u 
 ```
 
-Diese Zeile entspricht dem Passwort `REDAXO-cms`. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
+Diese Zeile entspricht dem Passwort `redaxo-cms`. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
 
 > Dein Passwort muss unter allen Umständen geändert werden, um Fremdzugriffe zu verhindern! Dieses Passwort wird vermutlich als erstes von Dritten getestet, die sich unerlaubt Zugriff auf das System verschaffen wollen!
 
-## Änderung eines Passworts über die Console (ab REDAXO 5.6+)
+## Änderung eines Passworts über die Konsole (ab REDAXO 5.6+)
 
-Ein Passwort kann sehr einfach über die Console aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von
+Ein Passwort kann sehr einfach über die Konsole aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen.
 
-```php console user:set-password <user> [<password>]```
-
- ein neues Passwort setzen.
-
-Wurde das neue Passwort gespeichert, sollte folgende Meldung erscheinen:
-
-**[OK] Saved new password for user XYZ**
+Wurde das neue Passwort gespeichert, sollte folgende Meldung erscheinen: `[OK] Saved new password for user XYZ`

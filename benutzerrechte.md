@@ -4,11 +4,15 @@ In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Ber
 
 ## Definieren
 
-Berechtigungen können in der Datei `package.yml` definiert werden, oder später im PHP-Code des Addons.
+Berechtigungen können in der Datei `package.yml` definiert werden, oder später im PHP-Code des AddOns.
 
 ### Package.yml
 
+<<<<<<< HEAD
 ```yml
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 page:
  title: translate:title
  perm: addonname[]
@@ -19,9 +23,13 @@ page:
 
 ### PHP
 
-in PHP haben wir zusätzlich die Möglichkeit, die Berechtigungen in Gruppen einzuteilen. Ohne den dritten Parameter werden alle Berechtigungen in die Gruppe GENERAL gespeichert. Diese Berechtigungen erscheinen in den Rollen unter `Allgemein`. Dazu gibt es noch OPTIONS und EXTRAS. Diese Zusatzgruppen eigenen sich gut um die einzelnen Features eines Addons freizugeben, wogegen GENERAL eher genutzt wird, um den Zugriff auf das Addon/Plugin generell zu erlauben für diese Rolle.
+in PHP haben wir zusätzlich die Möglichkeit, die Berechtigungen in Gruppen einzuteilen. Ohne den dritten Parameter werden alle Berechtigungen in die Gruppe GENERAL gespeichert. Diese Berechtigungen erscheinen in den Rollen unter `Allgemein` . Dazu gibt es noch OPTIONS und EXTRAS. Diese Zusatzgruppen eigenen sich gut um die einzelnen Features eines AddOns freizugeben, wogegen GENERAL eher genutzt wird, um den Zugriff auf das AddOn/Plugin generell zu erlauben für diese Rolle.
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <?php
 
 if(rex::isBackend() && is_object(rex::getUser())) {
@@ -37,13 +45,17 @@ Es empfiehlt sich zu prüfen, ob der Benutzer eingeloggt ist.
 
 ### Ist Admin
 
-Prüfen ob der User ein Admin ist `rex::getUser()->isAdmin()`
+Prüfen ob der User ein Admin ist `rex::getUser()->isAdmin()` 
 
 ### Einzelne Rechte prüfen
 
 Prüfen ob der User die nötigen Rechte aktiviert hat:
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 if( rex::getUser()->hasPerm('addonname[]') && rex::getUser()->hasPerm('addonname[foo]') ) {
  // code goes here
 }
@@ -53,7 +65,11 @@ if( rex::getUser()->hasPerm('addonname[]') && rex::getUser()->hasPerm('addonname
 
 Weitere Berechtigungen wie Module können wie folgt abgefragt werden:
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 if( rex::getUser()->getComplexPerm('modules')->hasPerm($ModuleID) ) {
  // code goes here
 }

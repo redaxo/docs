@@ -58,7 +58,7 @@
   - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
   - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
   - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
-  - [Console](/{{path}}/{{version}}/console)
+  - [Konsole](/{{path}}/{{version}}/console)
 
 - Weitere System AddOns / PlugIns
   - [Backup](/{{path}}/{{version}}/backup)

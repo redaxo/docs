@@ -1,33 +1,33 @@
 # AddOns
 
-- [Über](#ueber)
-- [Im Lieferumfang enthaltene AddOns](#included)
-- [AddOn Verwaltung](#addons)
-- [Upload](#upload)
-  - [Upload per Installer](#upinstaller)
-  - [Manueller Upload per (S)FTP](#upftp)
-  - [Hinweis zu AddOns aus GitHub](#github)  
-- [AddOn-Installation](#install)
-- [Update](#update)
-- [Reinstallieren / Reparatur](#reinstall)
-- [Deinstallation](#uninstall)
-- [Consolen Befehle](#console)
-  - [Download per Console](#downconsole)
-  - [Liste aller verfügbaren AddOns](#conlist)
-  - [AddOn-Update](#conupdate)
-  - [AddOn löschen](#condelete)
+* [Über](#ueber)
+* [Im Lieferumfang enthaltene AddOns](#included)
+* [AddOn Verwaltung](#addons)
+* [Upload](#upload)
+  + [Upload per Installer](#upinstaller)
+  + [Manueller Upload per (S)FTP](#upftp)
+  + [Hinweis zu AddOns aus GitHub](#github)  
+* [AddOn-Installation](#install)
+* [Update](#update)
+* [Reinstallieren / Reparatur](#reinstall)
+* [Deinstallation](#uninstall)
+* [Konsolen Befehle](#console)
+  + [Download per Konsole](#downconsole)
+  + [Liste aller verfügbaren AddOns](#conlist)
+  + [AddOn-Update](#conupdate)
+  + [AddOn löschen](#condelete)
 
 <a name="ueber"></a>
 
 ## Über AddOns
 
-AddOns sind Erweiterungen für REDAXO. Sie können zum Beispiel zusätzliche Funktionen liefern, die Benutzeroberfläche erweitern, Bedienelemente hinzufügen oder benötigte Skripte für die Frontendausgabe installieren. AddOns können komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder, im einfachsten Fall, zusätzliche PHP-Klassen im System bereitstellen (z.B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemata, u.v.m.).
+AddOns sind Erweiterungen für REDAXO. Sie können zum Beispiel zusätzliche Funktionen liefern, die Benutzeroberfläche erweitern, Bedienelemente hinzufügen oder benötigte Skripte für die Frontendausgabe installieren. AddOns können komplexe Applikationen (Newssystem, Kalender, Bildbearbeitung) sein oder, im einfachsten Fall, zusätzliche PHP-Klassen im System bereitstellen (z. B.: PDF-Umwandlung, E-Mail-Verschlüsselung, URL-Schemata, u.v.m.).
 
 Selbst ein großer Teil der Grundfunktionen von REDAXO wird als AddOns bereitgestellt (Core-AddOns). Dadurch können diese Core-AddOns leicht aktualisiert und ggf. durch individuelle Lösungen ausgetauscht werden.
 
 > AddOns in REDAXO sind vergleichbar mit den in anderen CMSs verfügbaren Plugins oder Extensions.
 
-Einige AddOns liefern eigene PlugIns mit, das sind quasi "Unter-Addons eines AddOns". Diese können die AddOns modular um weitere Funktionen erweitern. Plugins werden im Normalfall nur mit dem AddOn ausgeliefert.
+Einige AddOns liefern eigene PlugIns mit, das sind quasi "Unter-AddOns eines AddOns". Diese können die AddOns modular um weitere Funktionen erweitern. Plugins werden im Normalfall nur mit dem AddOn ausgeliefert.
 
 <a name="included"></a>
 
@@ -35,26 +35,26 @@ Einige AddOns liefern eigene PlugIns mit, das sind quasi "Unter-Addons eines Add
 
 REDAXO bringt bereits bei der Installation einige AddOns und PlugIns mit:
 
-AddOn | PlugIn | Beschreibung
-------------- | ------------- | -------------
-backup | |Erstellung und Wiederherstellung von Backups
-be_style | | Addon für die Backenddarstellung
-| | redaxo | Liefert das Default-Design des Backend
-| | customizer | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung
-cronjob | | Ausführung regelmäßiger, geplanter Aufgaben
-| | article_status | Ändert den Online-Status entsprechend Meta-Angabe
-| | optimize_tables | Optimiert die Datenbanktabellen
-install | | Veröffentlichung und Download von AddOns
-media_manager | | Ausgabe und Manipulation von Medien
-mediapool | | Medienverwaltung
-metainfo | | Stellt Metafelder im System zur Vefügung
-phpmailer | | Bindet die PHPMailer-Klasse ein für den Versand von E-Mails
-project | | Ein leeres AddOn, um eigene Projekt-spezifische Funktionen zu integrieren (*updatesicher*)
-structure | | Liefert die Strukturverwaltung für Kategorien und Artikel
-| | content | Stellt die Funktionen zur Inhaltsbearbeitung bereit
-| | history | Versionierung von Artikeln
-| | version | Ergänzt eine Arbeitsversion der Website
-users | |Benutzer- und Rollenverwaltung
+| AddOn           | PlugIn                                                                  | Beschreibung                                                                               |
+|-----------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| backup          |                                                                         | Erstellung und Wiederherstellung von Backups                                               |
+| be_style        |                                                                         | AddOn für die Backenddarstellung                                                           |
+| redaxo          | Liefert das Default-Design des Backend                                  |                                                                                            |
+| customizer      | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung |                                                                                            |
+| cronjob         |                                                                         | Ausführung regelmäßiger, geplanter Aufgaben                                                |
+| article_status  | Ändert den Online-Status entsprechend Meta-Angabe                       |                                                                                            |
+| optimize_tables | Optimiert die Datenbanktabellen                                         |                                                                                            |
+| install         |                                                                         | Veröffentlichung und Download von AddOns                                                   |
+| media_manager   |                                                                         | Ausgabe und Manipulation von Medien                                                        |
+| mediapool       |                                                                         | Medienverwaltung                                                                           |
+| metainfo        |                                                                         | Stellt Metafelder im System zur Vefügung                                                   |
+| phpmailer       |                                                                         | Bindet die PHPMailer-Klasse ein für den Versand von E-Mails                                |
+| project         |                                                                         | Ein leeres AddOn, um eigene Projekt-spezifische Funktionen zu integrieren (*updatesicher*) |
+| structure       |                                                                         | Liefert die Strukturverwaltung für Kategorien und Artikel                                  |
+| content         | Stellt die Funktionen zur Inhaltsbearbeitung bereit                     |                                                                                            |
+| history         | Versionierung von Artikeln                                              |                                                                                            |
+| version         | Ergänzt eine Arbeitsversion der Website                                 |                                                                                            |
+| users           |                                                                         | Benutzer- und Rollenverwaltung                                                             |
 
 <a name="addons"></a>
 
@@ -72,9 +72,9 @@ Bevor ein AddOn installiert werden kann, muss dieses hochgeladen werden. Dies ka
 
 **Weitere AddOn-Quellen sind:**
 
-- AddOn-Bereich auf [www.redaxo.org](https://redaxo.org/download/addons/) (Identisch mit Installer)
-- GitHub-Repositories
-- Die Agentur, bzw. Dienstleister der Website
+* AddOn-Bereich auf [www.redaxo.org](https://redaxo.org/download/addons/) (Identisch mit Installer)
+* GitHub-Repositories
+* Die Agentur, bzw. Dienstleister der Website
 
 Nachfolgend werden gängige Upload-Methoden aufgelistet:
 
@@ -88,10 +88,10 @@ Siehe: [Installer](/{{path}}/{{version}}/installer)
 
 ### Manueller Upload per (S)FTP
 
-- Download des AddOns als ZIP
-- Entpacken des ZIP
-- ggf. README.md beachten, sofern vorhanden
-- Upload in den Ordner `/redaxo/src/addons/`
+* Download des AddOns als ZIP
+* Entpacken des ZIP
+* ggf. README.md beachten, sofern vorhanden
+* Upload in den Ordner `/redaxo/src/addons/` 
 
 > Der Ordner-Name des AddOs sollte identisch mit dem AddOn-Key sein, der in der darin befindlichen package.yml hinterlegt ist.
 
@@ -105,11 +105,11 @@ Soweit möglich, sollte man nicht das aktuelle Github-Repository herunterladen. 
 
 ## AddOn-Installation
 
-Nach dem erfolgten Download über den Installer, bzw. manuellem Upload, können die AddOns in der AddOn-Verwaltung (Menüpunkt: `AddOns`) installiert werden.
+Nach dem erfolgten Download über den Installer, bzw. manuellem Upload, können die AddOns in der AddOn-Verwaltung (Menüpunkt: `AddOns` ) installiert werden.
 
-> Neben der Versionsnummer findet man ein Fragezeichen (`?`). Hier erhält man meist nützliche Informationen zur Installation und zur Benutzung. Es empfiehlt sich, diese vor der Installation zu lesen.
+> Neben der Versionsnummer findet man ein Fragezeichen ( `?` ). Hier erhält man meist nützliche Informationen zur Installation und zur Benutzung. Es empfiehlt sich, diese vor der Installation zu lesen.
 
-Durch einen Klick auf `installieren` wird das AddOn installiert. Hierbei werden die nötigen Schritte (z.B. Kopieren von CSS- und JS-Dateien, Anlegen von Datenbanken) durchgeführt, damit das AddOn verwendet werden kann. Nach erfolgter Installation wird das AddOn aktiviert und kann anschließend verwendet werden.
+Durch einen Klick auf `installieren` wird das AddOn installiert. Hierbei werden die nötigen Schritte (z. B. Kopieren von CSS- und JS-Dateien, Anlegen von Datenbanken) durchgeführt, damit das AddOn verwendet werden kann. Nach erfolgter Installation wird das AddOn aktiviert und kann anschließend verwendet werden.
 
 <a name="update"></a>
 
@@ -134,28 +134,29 @@ Konkret werden vom Core die Bedingungen aus der package.yml neu geprüft, `insta
 
 ## Deinstallation / Löschen
 
-Möchte man ein AddOn deinstallieren, klickt man auf  `de-installieren`. Möchte man das AddOn komplett löschen, klickt man auf `löschen`.
+Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren` . Möchte man das AddOn komplett löschen, klickt man auf `löschen` .
 
 Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` geladen; die Assets sowie die Einträge aus `rex_config` werden gelöscht.
 
 > Hinweis:
+
 Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine angelegten Dateien und Tabellen vollständig entfernen. Einige AddOns weichen jedoch bewusst von dieser Regel ab. Zum Beispiel löscht yForm seine eigenen Tabellen, aber nicht die eigentlichen Datentabellen. Auch das Backup-AddOn löscht bewusst nicht die angelegten Backups im data-Ordner. Daher bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten.
 
 <a name="console"></a>
 
-## Consolen-Befehle
+## Konsolen-Befehle
 
 <a name="downconsole"></a>
 
-### Download per Console
+### Download per Konsole
 
-Addons können auch über die Console geladen werden. Das Kommando lautet:
+AddOns können auch über die Konsole geladen werden. Das Kommando lautet:
 
-`php redaxo/bin/console install:download <addonkey> <version>`
+`php redaxo/bin/console install:download <addonkey> <version>` 
 
 Beispiel:
 
-```
+``` 
 redaxo/bin/console install:download yform
 ```
 
@@ -163,21 +164,25 @@ redaxo/bin/console install:download yform
 
 <a name="conlist"></a>
 
-### Liste aller verfügbaren Addons
+### Liste aller verfügbaren AddOns
 
-Command `install:list`.
+Command `install:list` .
 
-Listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
+Listet alle verfügbaren AddOns von redaxo.org auf und zeigt die installierte Version dazu an.
 
+<<<<<<< HEAD
 ```console
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 redaxo/bin/console install:list
 ```
 
 Options:
 
-- `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
-- `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
-- `--json` - Gibt die Ausgabe als json string (für z.B. verarbeitung in skripten)
+* `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
+* `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
+* `--json` - Gibt die Ausgabe als json string (für z. B. verarbeitung in skripten)
 
 <a name="conupdate"></a>
 
@@ -185,17 +190,21 @@ Options:
 
 Command `install:update` updated ein AddOn mit Updates von redaxo.org.
 
+<<<<<<< HEAD
 ```console
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 redaxo/bin/console install:update <addonkey> <version>:
 ```
 
-- addonkey: z.B. "yform"
-- version: z.B. "1.2.3"
+* addonkey: z. B. "yform"
+* version: z. B. "1.2.3"
 
 Die Versionsangabe ist optional, wenn keine angegeben ist, werden mögliche Versionen zur Auswahl gestellt (gleich wie im Backend auch sind).
 
 <a name="condelete"></a>
 
-### Löschen eines Addons
+### Löschen eines AddOns
 
-`redaxo/bin/console package:delete <package-id>`
+`redaxo/bin/console package:delete <package-id>` 

@@ -1,21 +1,21 @@
 # Kategorien & Artikel
 
-- [Die Strukturverwaltung](#strukturverwaltung)
-- [Kategorien erstellen die Struktur](#kategorien)
-- [Artikel geben die Inhalte aus](#artikel)
-- [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
-- [Contentbereiche (C-Types)](#ctypes)
-- [Metainformationen](#metainfos)
-- [Code-Beispiele](#code-beispiele)
-  - [Zentrale Artikel in den Website-Einstellungen](#zentrale-artikel)
-  - [Daten des aktuellen Artikels](#aktueller-artikel)
-  - [Zugriff auf Kategorie-Daten](#kategorie-daten)
+* [Die Strukturverwaltung](#strukturverwaltung)
+* [Kategorien erstellen die Struktur](#kategorien)
+* [Artikel geben die Inhalte aus](#artikel)
+* [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
+* [Content-Bereiche (C-Types)](#ctypes)
+* [Metainformationen](#metainfos)
+* [Code-Beispiele](#code-beispiele)
+  + [Zentrale Artikel in den Website-Einstellungen](#zentrale-artikel)
+  + [Daten des aktuellen Artikels](#aktueller-artikel)
+  + [Zugriff auf Kategorie-Daten](#kategorie-daten)
 
 <a name="strukturverwaltung"></a>
 
 ## Die Strukturverwaltung
 
-In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Datenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien als auch Artikel werden in der Tabelle `rex_article` gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `startarticle`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
+In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Datenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien als auch Artikel werden in der Tabelle `rex_article` gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `startarticle` , die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
 
 Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategorien** bilden die **Struktur**, **Artikel** speichern die **Inhalte**.
 
@@ -33,10 +33,10 @@ Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer K
 
 ## Artikel geben die Inhalte aus
 
-Ein Artikel ist der Bereich, der Inhalte mit Hilfe der eingepflegten (Inhalts-)Blöcke auf einer Seite der Webpräsenz ausgibt. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z.B. so nutzen:
+Ein Artikel ist der Bereich, der Inhalte mithilfe der eingepflegten (Inhalts-)Blöcke auf einer Seite der Webpräsenz ausgibt. Eine Kategorie hat immer mindestens einen Artikel (den Startartikel), kann aber weitere Artikel (und Unterkategorien) haben. Diese Logik kann man z. B. so nutzen:
 
-- Der Startartikel liefert die Übersicht, z.B. von Neuigkeiten
-- Die weiteren Artikel sind die einzelnen Neuigkeiten, die Detailseiten
+* Der Startartikel liefert die Übersicht, z. B. von Neuigkeiten
+* Die weiteren Artikel sind die einzelnen Neuigkeiten, die Detailseiten
 
 Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-Grundgerüst und werden in einem eigenen Kapitel [Templates ausführlich erläutert](/{{path}}/{{version}}/templates).
 
@@ -45,7 +45,7 @@ Ein Artikel muss ein Template haben. Templates enthalten im Normalfall das HTML-
 ## Module/Blöcke liefern die einzelnen Inhaltsblöcke
 
 Ein Artikel enthält verschiedene Inhaltssegmente. Es gibt normalerweise immer mindestens Inhaltsblöcke für Überschriften, Texte, Bilder etc.
-Blöcke kann man beliebig oft in einem Artikel verwenden. So kann man z.B. verschiedene Absätze wie auch Bilder nach Belieben anlegen und einen einzelnen Artikel immer mehr erweitern.
+Blöcke kann man beliebig oft in einem Artikel verwenden. So kann man z. B. verschiedene Absätze wie auch Bilder nach Belieben anlegen und einen einzelnen Artikel immer mehr erweitern.
 
 Module werden im Normalfall vom Entwickler individuell für jede Website erstellt, sodass man die entsprechenden Besonderheiten einer Website gut abbilden kann.
 
@@ -55,9 +55,9 @@ Auch Module werden in in einem eigenen Kapitel [Module ausführlich behandelt](/
 
 <a name="ctypes"></a>
 
-## Contentbereiche (C-Types)
+## Content-Bereiche (C-Types)
 
-Modulinhalte müssen nicht auf einen Contentbereich (auch Spalte oder C-Type gennant) limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z.B. Hauptspalte, Seitenspalte, Headerbereich etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Contentbereichs erfolgt.
+Modulinhalte müssen nicht auf einen Content-Bereich (auch Spalte oder C-Type gennant) limitiert sein. Der Entwickler kann bei den Templates beliebig  viele Inhaltsbereiche festlegen und diese benennen, z. B. Hauptspalte, Seitenspalte, Headerbereich etc. In den Templates wird dann definiert, wo an welcher Stelle die Ausgabe dieses Content-Bereichs erfolgt.
 
 In der Rechteverwaltung kann festgelegt werden, welche Module in welcher Spalte verwendet werden dürfen und von welchem Redakteur.
 
@@ -67,7 +67,7 @@ Die C-Types werden ebenfalls im Kapitel [Templates dokumentiert](/{{path}}/{{ver
 
 ## Metainformationen
 
-Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft für Inhalte oder Einstellungen genutzt, die außerhalb des Contentbereichs liegen und so nicht über Module gepflegt werden können. Beispiele wären etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
+Metadaten sind zum Speichern von "Rahmeninformationen" eines Artikel gedacht – also bestimmte Informationen, die den Artikel näher beschreiben. Die Metainformationen werden auch oft für Inhalte oder Einstellungen genutzt, die außerhalb des Content-Bereichs liegen und so nicht über Module gepflegt werden können. Beispiele wären etwa verschiedene Seitenhintergründe oder ob der betreffende Artikel von der Navigation ausgeschlossen werden soll.
 
 Metafelder, mit denen man Metainformationen pflegen kann, kann der Admin für Artikel, Kategorien, Medien und Sprachen anlegen.
 
@@ -83,7 +83,11 @@ Nachfolgend als Einstieg einige erste Beispiele für den Umgang mit Artikel- und
 
 ### Zentrale Artikel in den Website-Einstellungen
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Start-Artikel der Website
 echo rex_article::getSiteStartArticle();
 
@@ -95,7 +99,11 @@ echo rex_article::getNotfoundArticle();
 
 ### Daten des aktuellen Artikels
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Aktuelle Seiten-ID
 echo rex_article::getCurrentId();
 // Ebenfalls möglich:
@@ -122,7 +130,11 @@ echo $this->getValue("cat_navigation_type");
 
 ### Zugriff auf Kategorie-Daten
 
+<<<<<<< HEAD
 ```php
+=======
+``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Alle Artikel in der aktuellen Kategorie zurückgeben
 $cat = rex_category::get(REX_CATEGORY_ID);
 $articles = $cat ? $cat->getArticles(true) : [];
