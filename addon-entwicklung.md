@@ -19,7 +19,7 @@
 
 Jedes AddOn hat einen eigenen Ordner mit einem einzigartigem und möglichst beschreibendem Namen.  
   
-[@TODO:][SCREENSSHOT ORDNER]  
+![AddOn-Ordner](/assets/v5.2.0-Addon-Entwicklung-Ordner.png)
   
 AddOns werden bei der Installation in REDAXO registriert, dazu sind einige Basisinformationen notwendig.
 Diese Basisinformationen werden in der Datei `package.yml` abgelegt. Prinzipiell sind mit dieser Datei
