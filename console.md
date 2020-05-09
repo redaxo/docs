@@ -28,13 +28,13 @@ Console Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 
 ## Aufruf der Console
 
-```
+```console
 php redaxo/bin/console
 ```
 
 oder
 
-```
+```console
 redaxo/bin/console
 ```
 
@@ -42,7 +42,7 @@ redaxo/bin/console
 
 Je nach System ist es ggf. erforderlich, die Console unter dem PHP-User bzw. Eigentümer des Webordners auszuführen. In diesem Fall lautet der Befehl:
 
-```
+```console
 sudo -u username php redaxo/bin/console
 ```
 

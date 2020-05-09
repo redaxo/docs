@@ -18,7 +18,7 @@ namespace | key | value
 ------------- | ------------- | -------------
 AddOn Key | Schlüssel | Wert
 
-```
+```php
 rex_config::set($addon, $key, $value);
 $value = rex_config::get($addon, $key);
 
@@ -37,7 +37,7 @@ $value = $this->getConfig($key);
 
 AddOn-Entwickler haben die Möglichkeit, Konfigurationsparameter in der Datei `package.yml` abzulegen. Eine typische package.yml sieht z.B. so aus:
 
-```
+```yml
 package: project
 version: dev
 author: Name des Autors

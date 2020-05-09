@@ -4,7 +4,7 @@ Paginierungen werden für unterschiedlichste Zwecke eingesetzt. Genannt seien hi
 
 Wir beginnen direkt mit einem Beispiel.
 
-```
+```php
 <?php $pager = new rex_pager(50,'offset') ?>
 ```
 
@@ -16,14 +16,14 @@ Der Wert `offset` wird als get- oder post-Parameter erwartet und gibt die Anzahl
 
 Mit
 
-```
+```php
 <?php $pager->setRowCount(123) ?>
 ```
 
 wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt.
 Der Wert kann mit
 
-```
+```php
 <?php $numRowsTotal = $pager->getRowCount() ?>
 ```
 
@@ -32,7 +32,7 @@ ausgelesen werden.
 Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden.
 Die Seitenzahl kann mit
 
-```
+```php
 <?php $totalPages = $pager->getPageCount() ?>
 ```
 
@@ -40,7 +40,7 @@ ermittelt werden.
 
 Eine einfache Ausgabe, z.B. in einem Modul, könnte dann so aussehen:
 
-```
+```php
 <?php
 echo '<ul>';
   for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
@@ -54,7 +54,7 @@ Eine etwas komplexere Ausgabe steht im Fragment `fragments/core/navigations/pagi
 
 Weitere Methoden der `rex_pager`-Klasse sind
 
-```
+```php
 <?php
 // Anzahl Elemente pro Seite (Standard 30)
 $rows_per_page = $pager->getRowsPerPage();
@@ -99,7 +99,7 @@ Ein weiteres Beispiel einer Ausgabe zeigt, wie man die Klasse `rex_pager` verwen
 
 Aktuelle Seite wäre in diesem Beispiel die Seite 72
 
-```
+```php
 $distance = 3; // Wert, der bestimmt wieviele Seiten vor bzw. nach der aktuellen Seite angezeigt werden sollen.
 
 $last_page_shown = 0;

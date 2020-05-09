@@ -346,7 +346,7 @@ requires:
 
 Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']`, sondern über die neue Package-api. Das aktuelle Objekt (`rex_addon` oder `rex_plugin`) ist in den Dateien (`boot.php`, `install.php`, `pages/index.php` etc.) über `$this` erreichbar.
 
-```
+```php
 // Beispiel boot.php
 $this->setProperty('author', 'Vorname Nachname');
 
@@ -362,7 +362,7 @@ else
 
 Innerhalb von Klassen und Funktionen, wo das Package nicht über `$this` zur Verfügung steht, kann so auf die Daten zugegriffen werden:
 
-```
+```php
 $author = rex_addon::get('myaddon')->getProperty('author');
 ```
 

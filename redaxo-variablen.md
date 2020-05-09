@@ -286,7 +286,7 @@ REX_MEDIALIST[id=1 widget=1]
 
 ```php
 <?php foreach (explode(',', REX_MEDIALIST[id=1]) as $image): ?>
-<img src ="/media/<?=$image;?>" alt="Bild" />
+    <img src ="/media/<?=$image;?>" alt="Bild" />
 <?php endforeach;?>
 ```
 
@@ -344,7 +344,7 @@ Parameter | Beschreibung
 
 **Beispiel in der Modul-Ausgabe**
 
-```
+```html
 <p>REX_VALUE[1]</p>
 ```
 
@@ -387,7 +387,7 @@ Die Inhaltsabfragen sind Shortcuts für den Zugriff auf `rex_article_content`.
 
 #### Syntax
 
-```
+```html
 // Kurze Schreibweise
 REX_ARTICLE[]
 REX_ARTICLE[i]
@@ -406,7 +406,7 @@ Parameter | Beschreibung
 
 **Beispiel**
 
-```
+```html
 // Artikel 5 in Sprache 2 abrufen
 REX_ARTICLE[id=5 ctype=2]
 ```
@@ -427,7 +427,7 @@ Wird innerhalb eines Artikels ein anderer Artikel über `rex_article_content` ei
 
 #### Syntax
 
-```
+```html
 REX_ARTICLE_ID
 ```
 
@@ -442,7 +442,7 @@ Shortcut für `rex_category::getCurrent()->getValue($field)` und `rex_category::
 
 #### Syntax
 
-```
+```html
 // Kurze Schreibweise
 REX_CATEGORY[xyz]
 // Ausführliche Schreibweise
@@ -458,7 +458,7 @@ Parameter | Beschreibung
 
 **Beispiel**
 
-```
+```html
 // Feld 'title' der Kategorie 5 abrufen
 REX_CATEGORY[id=5 field=title]
 ```
@@ -489,7 +489,7 @@ Shortcut für `rex_clang::getCurrent()->getValue($field)` und `rex_clang::getId(
 
 #### Syntax
 
-```
+```html
 REX_CLANG[id=i field=xzy]
 ```
 
@@ -524,7 +524,7 @@ Shortcut für `rex_config::get($namespace, $key)`. Die Ausgabe wird dabei stets 
 
 #### Syntax
 
-```
+```html
 REX_CONFIG[namespace=xyz key=xyz]
 ```
 
@@ -580,7 +580,7 @@ Shortcut für `rex_package::get($namespace)->getProperty($key)` und `rex::getPro
 
 #### Syntax
 
-```
+```html
 REX_PROPERTY[namespace=xyz key=xyz]
 ```
 

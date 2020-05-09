@@ -83,7 +83,7 @@ Nachfolgend als Einstieg einige erste Beispiele für den Umgang mit Artikel- und
 
 ### Zentrale Artikel in den Website-Einstellungen
 
-```
+```php
 // Start-Artikel der Website
 echo rex_article::getSiteStartArticle();
 
@@ -95,7 +95,7 @@ echo rex_article::getNotfoundArticle();
 
 ### Daten des aktuellen Artikels
 
-```
+```php
 // Aktuelle Seiten-ID
 echo rex_article::getCurrentId();
 // Ebenfalls möglich:
@@ -122,7 +122,7 @@ echo $this->getValue("cat_navigation_type");
 
 ### Zugriff auf Kategorie-Daten
 
-```
+```php
 // Alle Artikel in der aktuellen Kategorie zurückgeben
 $cat = rex_category::get(REX_CATEGORY_ID);
 $articles = $cat ? $cat->getArticles(true) : [];

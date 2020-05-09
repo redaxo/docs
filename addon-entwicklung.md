@@ -110,7 +110,7 @@ Nachfolgend werden die Dateien und Ordner gelistet, nach denen innerhalb eines i
   Hier können umfangreiche Definitionen notiert werden, das AddOn "markitup" ist ein gutes Beispiel.  
   Da das Einlesen der Datei nicht automatisch geschieht, ist die Namensgebung nicht festgelegt. Somit könnt man auch z.B. folgende Dateien anlegen:
 
-  ```
+  ```text
   config_frontend.yml
   config_backend.yml
   ```

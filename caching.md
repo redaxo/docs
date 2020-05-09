@@ -56,7 +56,7 @@ Nicht gecached wird:
 
 Eigene Cache Dateien können im REDAXO Cache so angelegt werden:
 
-```
+```php
     if (!rex_file::put(rex_path::addonCache('meinaddon', $filename), $filecontent)) {
         echo 'Cachefile für mein Addon konnte nicht geschrieben werden!';
     }

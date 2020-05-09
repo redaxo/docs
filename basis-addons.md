@@ -169,7 +169,7 @@ Command `install:list`.
 
 Listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
 
-```
+```console
 redaxo/bin/console install:list
 ```
 
@@ -185,7 +185,7 @@ Options:
 
 Command `install:update` updated ein AddOn mit Updates von redaxo.org.
 
-```
+```console
 redaxo/bin/console install:update <addonkey> <version>:
 ```
 

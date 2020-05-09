@@ -14,7 +14,7 @@ Der Aufruf einer API-Funktion kann auf jeder beliebigen Seite erfolgen. Um den A
 - Für die Fehlerausgabe gibt es die Exception-Klasse `rex_api_exception`.
 - Für Rückmeldungen dient die Klasse `rex_api_result`.
 
-```
+```php
 /**
  * Beispiel einer einfachen rex_api_function Implementierung
  *
@@ -93,7 +93,7 @@ echo $result->getFormattedMessage();
 
 #### Vor der Rückmeldung einen erneuten Request ausführen
 
-```
+```php
 // Falls die Rückmeldung einen zusätzlichen Request erfordert, um z.B. Low-Level-Änderungen zu übernehmen, kann ein
 // Flag gesetzt werden:
 $result->setRequiresReboot($requires_reboot);
@@ -107,7 +107,7 @@ $requires_reboot | `false` = keinen neuen Request vor Rückgabe ausführen (Stan
 
 #### Ergebnis JSON kodieren
 
-```
+```php
 // Ergebnis kodieren
 // Wandelt die Daten eines rex_api_result Objektes in einen JSON-String
 $json = $result->toJSON();

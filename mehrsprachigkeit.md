@@ -38,7 +38,7 @@ Sobald es mehrere Sprachen gibt, ändert sich auch die Form der Links. REX-Varia
 
 Man kann Links aber natürlich auch manuell über PHP erstellen mit `rex_getUrl`, wie hier im Beispiel ein Link auf den Artikel mit der ID 5 und der Sprache mit der ID 2:
 
-```
+```php
 <a href="<?php echo rex_getUrl(5, 2); ?>">Link</a>
 ```
 
@@ -48,13 +48,13 @@ Man kann Links aber natürlich auch manuell über PHP erstellen mit `rex_getUrl`
 
 Um im gleichen Artikel zu bleiben und nur auf eine andere Sprache umzuschalten, könnte die Syntax wie folgt aussehen:
 
-```
+```php
 <a href="<?php echo rex_getUrl($this->getValue('article_id'), 2); ?>">Link</a>
 ```
 
 Alternativ kann man die Artikel-ID auch leer lassen:
 
-```
+```php
 <a href="<?php echo rex_getUrl("", 2); ?>">Link</a>
 ```
 
@@ -65,13 +65,13 @@ Alternativ kann man die Artikel-ID auch leer lassen:
 Wenn man in der gleichen Sprache, jedoch auf einen anderen Artikel
 verlinken möchte, kann man dies so realisieren:
 
-```
+```php
 <a href="<?php echo rex_getUrl(5, rex_clang::getCurrentId()); ?>">Link</a>
 ```
 
 Es reicht aber auch aus, nur die Artikel-ID zu übergeben. Die aktuelle Sprache wird von REDAXO automatisch erkannt.
 
-```
+```php
 <a href="<?php echo rex_getUrl(5); ?>">Link</a>
 ```
 
@@ -83,13 +83,13 @@ Außer für Kategorien und Medien bietet REDAXO auch für Sprachen Metafelder. D
 
 Das standardmäßig vorhandene Sprach-Metafeld `Code` kann sinnvoll genutzt werden z.B. zum Verwalten des Sprachattributs im html-Tag:
 
-```
+```php
 <html lang="<?php echo rex_clang::getCurrent()->getCode(); ?>">
 ```
 
 Oder man könnte ein neues Sprach-Metafeld `setlocale` anlegen und damit in PHP die Lokalisierung definieren, um regional individuelle Datumsangaben und Dezimatrennzeichen zu erhalten:
 
-```
+```php
 setlocale (LC_ALL, rex_clang::getCurrent()->getValue('clang_setlocale'));
 ```
 
@@ -101,7 +101,7 @@ Das folgende Beispiel zeigt einen automatisch generierten Sprachumschalter.
 
 Bei nur zwei Sprachen wird nur ein Link zur anderen Sprache angezeigt. Als Linktext wird das Meta-Sprachfeld `Name` verwendet. Bei mehr als zwei Sprachen werden Links zu allen Sprachen angezeigt, wobei die aktuelle Sprache nicht verlinkt wird.
 
-```
+```php
 <?php
 // auskommentieren, um das Sprach-Array anzuzeigen
 // dump(rex_clang::getAll());
