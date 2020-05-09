@@ -80,7 +80,7 @@ In der rex_sql Klasse werden häufig Parameter in der Form `function($query, $pa
 
 Beispiel:
 
-```
+```php
 $sql = rex_sql::factory();
 $sql->setQuery('SELECT name, id FROM rex_article WHERE parent_id = :pid', ['pid'=>5]);
 ```
@@ -117,7 +117,7 @@ Setzt eine Abfrage ($query) ab und wechselt die DBID falls vorhanden.
 
 Beispiel:
 
-```
+```php
 $sql = rex_sql::factory();
 $sql->setDBQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>5]);
 ```
@@ -146,7 +146,7 @@ Erstellt aus einer übergebenen SQL Abfrage ein PDO Statement.
 
 Führt das vorbereitete Statement aus. Im Fehlerfall wird eine Exception vom Typ rex_sql_exception erzeugt. Mit dem Parameter `$options` kann das Pufferverhalten beeinflusst werden.
 
-```
+```php
 $sql = rex_sql::factory();
 $sql->prepareQuery('SELECT id, name FROM rex_article WHERE id > :id');
 $sql->execute(['id'=>10]);
@@ -162,7 +162,7 @@ Das Beispiel setzt eine Abfrage mit Platzhaltern. Die Werte für die Platzhalter
 
 Setzt die SQL Query, übernimmt die Parameter, setzt das Objekt mit `flush` zurück und führt das Statement aus.
 
-```
+```php
 $res = $sql->setQuery('SELECT id, name FROM rex_article WHERE id > :id',['id'=>10]);
 ```
 
@@ -467,7 +467,7 @@ Gibt die treiberspezifische MySql Fehlernummer zurück.
 
 Gibt ein Array mit Informationen des zuletzt aufgetretenen Fehlers zurück. Der Aufbau des Arrays entspricht folgendem Muster:
 
-```
+```text
 [0] => 5-stelliger Fehlercode
 [1] => Fehlernummer des MySQL Treibers
 [2] => Fehlerbeschreibung
@@ -623,7 +623,7 @@ Sucht alle Tabellen der Datenbankverbindung `$DBID`. Falls `$tablePrefix` gesetz
 
 Gibt ein Array mit den Spalten der Tabelle `$table` zurück. Die Spalten werden ebenfalls als Array zurückgegeben.
 
-```
+```php
  [
  [0] => [
   "name" => "pid",

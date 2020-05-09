@@ -65,7 +65,11 @@ Die nachfolgenden Felder stehen zur Auswahl:
 
  Die Felder können über Attribute gestaltet und auch in den Rechten eingeschränkt werden.
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 style="color:red;" multiple="multiple" class="my_css_class" perm="admin[]"
 ```
 
@@ -95,7 +99,11 @@ Das Feld `Callback` ermöglicht es Programmcode auszuführen, wenn ein Wert des 
 
 Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Datenbank Tabelle zugewiesen. In die Produkttabelle soll die REDAXO Artikel Id geschrieben werden, in der das Produkt zugeordnet wurde.
 
+<<<<<<< HEAD
+```php
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
    <?php
       $sql = rex_sql::factory();
       $qry = 'UPDATE rex_meine_produkte SET redaxo_article_id = '.rex_article::getCurrentId().' '
@@ -114,7 +122,11 @@ Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Da
 
 Artikel-Metadaten werden vom Redakteur im Reiter Metadaten eines Artikels eingepflegt.   Die Daten können per PHP wie folgt ausgelesen werden:
 
+<<<<<<< HEAD
+```php
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Beispiel Titelbild
 $titleimage  =  $this->getValue ('art_titleimage');
 // oder:
@@ -123,7 +135,11 @@ $titleimage  =  rex_article::getCurrent()->getValue('art_titleimage');
 
 Die Daten können auch mittels REDAXO-Variable ausgelesen werden.
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_ARTICLE[field="art_titleimage"]
 ```
 
@@ -142,13 +158,21 @@ rex_category::get($id)->getValue($field)
 
 **Beispiele:**
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $hintergrund = rex_category::getCurrent()->getValue('cat_background');
 ```
 
 #### Abruf als REDAXO-Variable
 
+<<<<<<< HEAD
+```php
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Kurze Schreibweise, Aktuelle Kategorie
 REX_CATEGORY[cat_background]
 // Ausführliche Schreibweise, beliebige Kategorie
@@ -158,7 +182,11 @@ REX_CATEGORY[id=i field=cat_background clang=i]
 
 > **Hinweis:** In REDAXO 5 ist es nicht mehr nötig, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen.
 
+<<<<<<< HEAD
+```php
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 $category = rex_category::getCurrent()->getValue('metafeld');
 $article = rex_article::getCurrent()->getValue('metafeld');
 ```
@@ -173,7 +201,11 @@ Metadaten für Medien werden in den Eigenschaften eines Mediums im Medienpool ge
 
 Die Medien-Metadaten können per PHP wie folgt ausgelesen werden.
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Datensatz des Mediums anhand des Dateinamens auslesen
 $media = rex_media::get('dateiname.xyz');
 // Meta-Info auslesen
@@ -184,7 +216,11 @@ $file_name = $media->getValue('med_copyright');
 
 Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben.
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_MEDIA[id=i field=copyright]
 ```
 
@@ -195,7 +231,11 @@ REX_MEDIA[id=i field=copyright]
 Die Metadaten zur jeweiligen Sprache werden im System zu jeder Sprache eingepflegt.
 Die Metadaten für Sprachen erhält man per PHP wie folgt:
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Auslesen einer Meta Info der aktuellen Sprache
 rex_clang::getCurrent()->getValue($field)
 // Auslesen der Meta Info einer bestimmten Sprache anhand der Sprach ID
@@ -204,13 +244,21 @@ rex_clang::get($id)->getValue($field)
 
 **Beispiel:**
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 rex_clang::getCurrent()->getValue('clang_setlocale'));
 ```
 
 #### Abruf als REDAXO-Variable
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_CLANG[field=clang_setlocale]
 REX_CLANG[id=2 field=clang_setlocale]
 ```
@@ -223,12 +271,20 @@ Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mi
 
 ### Funktion
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
 ```
 
 ### Beispiel
 
+<<<<<<< HEAD
+```php
+=======
 ``` PHP
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```

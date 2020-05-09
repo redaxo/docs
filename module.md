@@ -26,7 +26,7 @@ Jedes Modul hat einen Eingabeteil, der mit verschiedensten Eingabeelementen vers
 
 Eingabeelemente können zum Beispiel sein:
 
-- Ein oder mehrere Textfelder
+- ein oder mehrere Textfelder
 - Elemente für die Auswahl von Dateien aus dem Medienpool
 - Elemente für die Auswahl von Links
 - Auswahlelemente (Selectfelder)
@@ -57,7 +57,7 @@ PHP-Variablen, die in einem Modul definiert wurden, stehen in den nachfolgenden 
 
 **TIPP** Die Abarbeitung eines Moduls kann in der Ausgabe mittels `return` beendet werden. Die Verarbeitung wird dann mit dem nächsten Modul fortgesetzt.
 
-```
+```php
 <p>Dieser Text wird ausgegeben</p>
 <?php return; ?>
 <p>Dieser Text wird nicht ausgegeben</p>
@@ -109,7 +109,7 @@ Die eingesetzten Modulblöcke kann man bei Bedarf über die Pfeile nach oben ode
 
 **Eingabe**:
 
-```
+```html
 <label>Überschrift</label>
 <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
 
@@ -121,7 +121,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Überschrift</label>
@@ -143,7 +143,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 
 **Ausgabe:**
 
-```
+```html
 <div class="jumbotron">
     REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
     REX_VALUE[id='2' prefix='<p>' suffix='</p>']
@@ -156,7 +156,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 
 **Eingabe**:
 
-```
+```html
 <label>Bild 1</label>
 REX_MEDIA[id="1" widget="1"]
 
@@ -172,7 +172,7 @@ Auch dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Bild 1</label>
@@ -201,7 +201,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 
 **Ausgabe**
 
-```
+```php
 <div class="row">
     <div class="col-lg-6">
         <?php
@@ -249,7 +249,7 @@ nicht erforderlich
 
 **Ausgabe**
 
-```
+```php
 <?php
 $articles = rex_category::getCurrent()->getArticles(true);
 

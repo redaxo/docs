@@ -92,13 +92,21 @@ REX_PROPERTY[namespace=project key=foo]
 
 Beispiel:
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <button type="submit" <?= rex::getAccesskey("speichern","s") ?>>Speichern</button>
 ```
 
 schreibt
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <button type="submit" accesskey="s" title="speichern[s]">Speichern</button>
 ```
 
@@ -112,13 +120,21 @@ add: a
 
 Beispiel:
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <button type="submit" <?= rex::getAccesskey("speichern","save") ?>>Speichern</button>
 ```
 
 schreibt
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <button type="submit" accesskey="s" title="speichern[s]">Speichern</button>
 ```
 
@@ -242,7 +258,11 @@ Beispiel:
 
 > **Hinweis:** Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
 
+<<<<<<< HEAD
+```php
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 if (rex_backend_login::createUser()) {
     $user = rex::getUser()->getName();
 }

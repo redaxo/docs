@@ -288,7 +288,7 @@ REX_MEDIALIST[id=1 widget=1]
 
 ``` php
 <?php foreach (explode(',', REX_MEDIALIST[id=1]) as $image): ?>
-<img src ="/media/<?=$image;?>" alt="Bild" />
+    <img src ="/media/<?=$image;?>" alt="Bild" />
 <?php endforeach;?>
 ```
 
@@ -346,7 +346,11 @@ Neben den oben angegeben Parametern sind folgende erlaubt:
 
 **Beispiel in der Modul-Ausgabe**
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 <p>REX_VALUE[1]</p>
 ```
 
@@ -389,7 +393,11 @@ Die Inhaltsabfragen sind Shortcuts für den Zugriff auf `rex_article_content` .
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Kurze Schreibweise
 REX_ARTICLE[]
 REX_ARTICLE[i]
@@ -408,7 +416,11 @@ REX_ARTICLE[id=i field=xyz clang=i]
 
 **Beispiel**
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Artikel 5 in Sprache 2 abrufen
 REX_ARTICLE[id=5 ctype=2]
 ```
@@ -429,7 +441,11 @@ Wird innerhalb eines Artikels ein anderer Artikel über `rex_article_content` ei
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_ARTICLE_ID
 ```
 
@@ -444,7 +460,11 @@ Shortcut für `rex_category::getCurrent()->getValue($field)` und `rex_category::
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Kurze Schreibweise
 REX_CATEGORY[xyz]
 // Ausführliche Schreibweise
@@ -460,7 +480,11 @@ REX_CATEGORY[id=i field=xyz clang=i]
 
 **Beispiel**
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 // Feld 'title' der Kategorie 5 abrufen
 REX_CATEGORY[id=5 field=title]
 ```
@@ -491,7 +515,11 @@ Shortcut für `rex_clang::getCurrent()->getValue($field)` und `rex_clang::getId(
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_CLANG[id=i field=xzy]
 ```
 
@@ -526,7 +554,11 @@ Shortcut für `rex_config::get($namespace, $key)` . Die Ausgabe wird dabei stets
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_CONFIG[namespace=xyz key=xyz]
 ```
 
@@ -582,7 +614,11 @@ Shortcut für `rex_package::get($namespace)->getProperty($key)` und `rex::getPro
 
 #### Syntax
 
+<<<<<<< HEAD
+```html
+=======
 ``` 
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_PROPERTY[namespace=xyz key=xyz]
 ```
 

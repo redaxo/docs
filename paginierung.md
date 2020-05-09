@@ -40,7 +40,7 @@ ermittelt werden.
 
 Eine einfache Ausgabe, z.B. in einem Modul, könnte dann so aussehen:
 
-```
+```php
 <?php
 echo '<ul>';
   for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
