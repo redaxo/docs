@@ -1,51 +1,51 @@
 # Pfade
 
-- [Zugriff auf Dateisystem](#zugriff)
-- [Dateisystem - rex_path](#rex_path)
-  - [base](#base)
-  - [frontend](#frontend)
-  - [frontendController](#frontendController)
-  - [backend](#backend)
-  - [backendController](#backendController)
-  - [media](#media)
-  - [assets](#assets)
-  - [coreAssets](#coreAssets)
-  - [addonAssets](#addonAssets)
-  - [pluginAssets](#pluginAssets)
-  - [data](#data)
-  - [coreData](#coreData)
-  - [addonData](#addonData)
-  - [pluginData](#pluginData)
-  - [cache](#cache)
-  - [coreCache](#coreCache)
-  - [addonCache](#addonCache)
-  - [pluginCache](#pluginCache)
-  - [log](#log)
-  - [src](#src)
-  - [core](#core)
-  - [addon](#addon)
-  - [plugin](#plugin)
-  - [absolute](#absolute)
-- [URLs - rex_url](#rex_url)
-  - [init](#urlinit)
-  - [base](#urlbase)
-  - [frontend](#urlfrontend)
-  - [frontendController](#urlfrontendController)
-  - [backend](#urlbackend)
-  - [backendController](#urlbackendController)
-  - [backendPage](#urlbackendPage)
-  - [currentBackendPage](#urlcurrentBackendPage)
-  - [media](#urlmedia)
-  - [assets](#urlassets)
-  - [coreAssets](#urlcoreAssets)
-  - [addonAssets](#urladdonAssets)
-  - [pluginAssets](#urlpluginAssets)
+* [Zugriff auf Dateisystem](#zugriff)
+* [Dateisystem - rex_path](#rex_path)
+  + [base](#base)
+  + [frontend](#frontend)
+  + [frontendController](#frontendController)
+  + [backend](#backend)
+  + [backendController](#backendController)
+  + [media](#media)
+  + [assets](#assets)
+  + [coreAssets](#coreAssets)
+  + [addonAssets](#addonAssets)
+  + [pluginAssets](#pluginAssets)
+  + [data](#data)
+  + [coreData](#coreData)
+  + [addonData](#addonData)
+  + [pluginData](#pluginData)
+  + [cache](#cache)
+  + [coreCache](#coreCache)
+  + [addonCache](#addonCache)
+  + [pluginCache](#pluginCache)
+  + [log](#log)
+  + [src](#src)
+  + [core](#core)
+  + [addon](#addon)
+  + [plugin](#plugin)
+  + [absolute](#absolute)
+* [URLs - rex_url](#rex_url)
+  + [init](#urlinit)
+  + [base](#urlbase)
+  + [frontend](#urlfrontend)
+  + [frontendController](#urlfrontendController)
+  + [backend](#urlbackend)
+  + [backendController](#urlbackendController)
+  + [backendPage](#urlbackendPage)
+  + [currentBackendPage](#urlcurrentBackendPage)
+  + [media](#urlmedia)
+  + [assets](#urlassets)
+  + [coreAssets](#urlcoreAssets)
+  + [addonAssets](#urladdonAssets)
+  + [pluginAssets](#urlpluginAssets)
 
 <a name="zugriff"></a>
 
 ## Zugriff auf das Dateisystem
 
-Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entsprechenden Ressourcen im Dateisystem (`rex_path`) bzw. per URL (`rex_url`).
+Die Klassen `rex_path` und `rex_url` ermöglichen den Zugriff auf die entsprechenden Ressourcen im Dateisystem ( `rex_path` ) bzw. per URL ( `rex_url` ).
 
 <a name="rex_path"></a>
 
@@ -240,7 +240,7 @@ Beispiel:
 Pfad zur angegebenen Log-Datei.
 
 Beispiel:
-`rex_path::log('mail.log')`  => `/httpdocs/redaxo/data/log/mail.log`
+`rex_path::log('mail.log')` => `/httpdocs/redaxo/data/log/mail.log` 
 
 <a name="src"></a>
 
@@ -295,7 +295,7 @@ Beispiel:
 
 ## URLs - rex_url
 
-> **Hinweis:** Bei allen URL-Funktionen der Klasse `rex_url` wird eine Installation von Redaxo in einem Unterverzeichnis berücksichtigt.
+> **Hinweis:** Bei allen URL-Funktionen der Klasse `rex_url` wird eine Installation von REDAXO in einem Unterverzeichnis berücksichtigt.
 
 Funktionen, die Parameter zu URLs umschreiben, können die URL auch "escaped" zurückgeben.
 
@@ -329,7 +329,7 @@ Generiert eine URL aus übergebenen Parametern
 
 Beispiel:
 `rex_url::frontendController(['key'=>'value'])` => '/index.php?key=value'
-`rex_url::frontendController(['k1'=>'v1','k2'=>'v2'], true)` => '/index.php?k1=v1&amp;k2=v2'
+`rex_url::frontendController(['k1'=>'v1','k2'=>'v2'], true)` => '/index.php?k1=v1&amp; k2=v2'
 
 <a name="urlbackend"></a>
 
@@ -349,7 +349,7 @@ Generiert eine Backend-URL aus übergebenen Parametern
 
 Beispiel:
 `rex_url::backendController(['key'=>'value'])` => '/redaxo/index.php?key=value'
-`rex_url::backendController(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?k1=v1&amp;k2=v2'
+`rex_url::backendController(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?k1=v1&amp; k2=v2'
 
 <a name="urlbackendPage"></a>
 
@@ -359,7 +359,7 @@ Generiert eine URL zu einer Backend Seite
 
 Beispiel:
 `rex_url::backendPage('mypage',['key'=>'value'])` => '/redaxo/index.php?page=mypage&key=value'
-`rex_url::backendPage('mypage',['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=mypage&amp;k1=v1&amp;k2=v2'
+`rex_url::backendPage('mypage',['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=mypage&amp; k1=v1&amp; k2=v2'
 
 <a name="urlcurrentBackendPage"></a>
 
@@ -369,7 +369,7 @@ Generiert eine URL zur aktuellen Backend-Seite. Sollte sinnvollerweise nur von e
 
 Beispiel:
 `rex_url::currentBackendPage(['key'=>'value'])` => '/redaxo/index.php?page=currpage&key=value'
-`rex_url::currentBackendPage(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=currpage&amp;k1=v1&amp;k2=v2'
+`rex_url::currentBackendPage(['k1'=>'v1','k2'=>'v2'], true)` => '/redaxo/index.php?page=currpage&amp; k1=v1&amp; k2=v2'
 
 <a name="urlmedia"></a>
 

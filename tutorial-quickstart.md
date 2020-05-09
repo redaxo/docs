@@ -1,13 +1,13 @@
 # Quickstart: Website in 15 Minuten
 
-- [Voraussetzung](#voraussetzung)
-- [Template](#template)
-- [Basis](#basis)
-- [Navigation](#navigation)
-- [Ausgabe der Inhalte vorbereiten](#ausgabe)
-- [Module](#module)
-  - [Intro-Modul](#intro-modul)
-  - [Zwei-Spalten-Modul](#zwei-spalten-modul)
+* [Voraussetzung](#voraussetzung)
+* [Template](#template)
+* [Basis](#basis)
+* [Navigation](#navigation)
+* [Ausgabe der Inhalte vorbereiten](#ausgabe)
+* [Module](#module)
+  + [Intro-Modul](#intro-modul)
+  + [Zwei-Spalten-Modul](#zwei-spalten-modul)
 
 <a name="voraussetzung"></a>
 
@@ -23,33 +23,35 @@ Dieses Tutorial zeigt das Zusammenspiel von Templates und Modulen, und wie darau
 
 Zum Einsatz kommt ein einfaches Grundgerüst des Bootstrap-Frameworks. Das Basis HTML-Gerüst sieht zunächst so aus:
 
-```
+```html
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <title>Einfaches Basis-Template</title>
+    <title>Einfaches Basis-Template</title>
 
- <!-- Load Bootstrap core CSS & Jumbotron Example -->
- <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
- <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <!-- Load Bootstrap core CSS & Jumbotron Example -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
 
 <body>
 
- <div class="container">
-    Hier kommt dann der Inhalt ...
+    <div class="container">
+        Hier kommt dann der Inhalt ...
 
-    <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-    </footer>
+        <footer class="footer">
+            <p>&copy; 2020 Company, Inc.</p>
+        </footer>
 
- </div> <!-- /container -->
+    </div> <!-- /container -->
 
 </body>
+
 </html>
 ```
 
@@ -62,13 +64,13 @@ Die CSS-Datei wird in diesem Beispiel direkt von der Bootstrap-Website geladen, 
 Im ersten Schritt wird also der Artikelname dynamisch als Title-tag gesetzt. Hier kommen PHP und REDAXO-eigene Aufrufe ins Spiel; diese werden wie gesagt in der Dokumentation alle ausführlich erläutert.
 Am besten verwendet man den Artikelnamen als Title-Tag und wandelt Sonderzeichen in entsprechende HTML-Codes um:
 
-```
+```php
 <title><?php echo htmlspecialchars($this->getValue('name')); ?></title>
 ```
 
 Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü `System` hinterlegten  mit der aktuellen Jahreszahl anzeigen:
 
-```
+```php
 <footer class="footer">
  <p>&copy; <?php echo date("Y").' '.rex::getServerName(); ?></p>
 </footer>
@@ -80,7 +82,7 @@ Nun soll noch im Footer der Website-Name integriert werden, den im REDAXO-Menü 
 
 Die Standard-Navigation von Bootstrap sieht so aus:
 
-```
+```html
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-right">
@@ -94,7 +96,7 @@ Die Standard-Navigation von Bootstrap sieht so aus:
 
 Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisch einzusetzen. Am Code müssen dafür nur wenige Zeilen ergänzt werden:
 
-```
+```php
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-right">
@@ -115,7 +117,7 @@ Es gilt also, die Navigation dynamisch auszulesen und den Website-Namen dynamisc
 
 Bevor nun im nächsten Schritt zwei einfache Module erstellt werden, muss man im Template noch den Aufruf einfügen, damit der Inhalt der Module auch ausgegeben wird:
 
-```
+```html
 REX_ARTICLE[]
 ```
 
@@ -123,7 +125,7 @@ Das ist alles :-)
 
 Das komplette Template sieht also nun so aus:
 
-```
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -166,7 +168,7 @@ Das komplette Template sieht also nun so aus:
 </html>
 ```
 
-Nun wird dieser Code in das bei der Installation standardmäßig angelegte Template eingefügt: Menüpunkt `Templates` anklicken, dann das Template `Default`, den Code hinein kopieren und das Template speichern.
+Nun wird dieser Code in das bei der Installation standardmäßig angelegte Template eingefügt: Menüpunkt `Templates` anklicken, dann das Template `Default` , den Code hinein kopieren und das Template speichern.
 
 <a name="module"></a>
 
@@ -184,7 +186,7 @@ Im Eingabe-Code - das ist das, was der Redakteur in REDAXO sieht - benötigt man
 
 **Eingabe**:
 
-```
+```html
 <label>Überschrift</label>
 <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
 
@@ -196,7 +198,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Überschrift</label>
@@ -218,7 +220,7 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 
 **Ausgabe:**
 
-```
+```html
 <div class="jumbotron">
  REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
  REX_VALUE[id='2' prefix='<p>' suffix='</p>']
@@ -235,7 +237,7 @@ Ein zweites Modul dient zur Anzeige von Bildern und Texten in zwei Spalten.
 
 **Eingabe**:
 
-```
+```html
 <h2>Spalte 1</h2>
 
 <label>Überschrift</label>
@@ -263,7 +265,7 @@ Auch für dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <legend>Spalte 1</legend>
 
@@ -319,7 +321,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 
 **Ausgabe**
 
-```
+```php
 <div class="row">
     <div class="col-lg-6">
         <?php

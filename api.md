@@ -14,7 +14,7 @@ Der Aufruf einer API-Funktion kann auf jeder beliebigen Seite erfolgen. Um den A
 - Für die Fehlerausgabe gibt es die Exception-Klasse `rex_api_exception`.
 - Für Rückmeldungen dient die Klasse `rex_api_result`.
 
-```
+```php
 /**
  * Beispiel einer einfachen rex_api_function Implementierung
  *
@@ -47,7 +47,7 @@ class rex_api_demo extends rex_api_function
 
 #### Methoden zur Verwendung innerhalb von rex_api_function
 
-```
+```php
 // Funktioniert nur innerhalb von rex_api_function
 // Gibt Namen der Funktion und ein CSRF Token zurück  
 $url_params = rex_api_function::getUrlParams();
@@ -64,7 +64,7 @@ Das Ergebnis kann von der API-Funktion per `return` Statement zurückgegeben wer
 
 #### Ergebnis erzeugen
 
-```
+```php
 $result = new rex_api_result($status, $message);
 ```
 
@@ -74,14 +74,14 @@ $message | _optional:_ Ausführlicher Nachricht. Z.B. zur Ausgabe für den Nutze
 
 #### Status des Ergebnisses abfragen
 
-```
+```php
 // Der Status ist bei Erfolg 'true'
 $status = $result->isSuccessfull()
 ```
 
 #### Nachricht ausgeben
 
-```
+```php
 // Gibt die Nachricht ohne zusätzliche Formatierung aus
 echo $result->getMessage();
 
@@ -93,7 +93,7 @@ echo $result->getFormattedMessage();
 
 #### Vor der Rückmeldung einen erneuten Request ausführen
 
-```
+```php
 // Falls die Rückmeldung einen zusätzlichen Request erfordert, um z.B. Low-Level-Änderungen zu übernehmen, kann ein
 // Flag gesetzt werden:
 $result->setRequiresReboot($requires_reboot);
@@ -107,7 +107,7 @@ $requires_reboot | `false` = keinen neuen Request vor Rückgabe ausführen (Stan
 
 #### Ergebnis JSON kodieren
 
-```
+```php
 // Ergebnis kodieren
 // Wandelt die Daten eines rex_api_result Objektes in einen JSON-String
 $json = $result->toJSON();

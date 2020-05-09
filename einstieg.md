@@ -28,7 +28,7 @@ Siehe: [Strukturverwaltung](/{{path}}/{{version}}/strukturverwaltung)
 
 Die Seiteninhalte werden in einzelnen **Blöcken** eingegeben. Die Anzahl der Blöcke auf einer Seite ist beliebig. Sie werden durch die installierten [Module](/{{path}}/{{version}}/module) in REDAXO zur Verfügung gestellt. Die Eingabe von Inhalten mittels Blöcken erleichtert die Einhaltung eines durchgängigen Layouts.
 
-> Nach der Installation von REDAXO sind noch keine [Module](/{{path}}/{{version}}/module) vorhanden. Erste Module findet man in den Addons im [Installer](/{{path}}/{{version}}/installer).
+> Nach der Installation von REDAXO sind noch keine [Module](/{{path}}/{{version}}/module) vorhanden. Erste Module findet man in den AddOns im [Installer](/{{path}}/{{version}}/installer).
 
 Mehr Informationen im Kapitel: [Redaktion](/{{path}}/{{version}}/redaktion)
 

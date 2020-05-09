@@ -1,15 +1,15 @@
 # Zusammenarbeit
 
-- [Mitarbeit](#mitarbeit)
-- [Slack-Channel](#slack-channel)
-- [Referenzen](#referenzen)
-- [Friends Of REDAXO](#friends-of-redaxo)
-- [Dokumentation](#dokumentation)
-- [Fehler gefunden?](#fehler-gefunden)
-- [Git-Issues](#github-issues)
-- [Pull requests](#pull-requests)
-- [Eigene AddOns](#eigene-addons)
-- [REDAXO-Entwickelnde und Agenturen](#redaxo-entwickelnde)
+* [Mitarbeit](#mitarbeit)
+* [Slack-Channel](#slack-channel)
+* [Referenzen](#referenzen)
+* [Friends Of REDAXO](#friends-of-redaxo)
+* [Dokumentation](#dokumentation)
+* [Fehler gefunden?](#fehler-gefunden)
+* [Git-Issues](#github-issues)
+* [Pull requests](#pull-requests)
+* [Eigene AddOns](#eigene-addons)
+* [REDAXO-Entwickelnde und Agenturen](#redaxo-entwickelnde)
 
 <a name="mitarbeit"></a>
 
@@ -51,11 +51,11 @@ Mitarbeit im Bereich Dokumentation ist ausdrücklich erwünscht. Auch hier gibt 
 
 Bei Fehlern ist zunächst zu prüfen, ob es sich um Implementierungsfehler oder Fehler im Code handelt. In jedem Falle ist eine möglichst aussagekräftige Beschreibung des Fehlers für die Entwickelnden hilfreich, um das Phänomen nachzustellen und darauf zu reagieren. In eine Fehlerbeschreibung gehören immer folgende Angaben:
 
-- Welche Bedienungsschritte führen zu dem Fehler?
-- Unter welcher Umgebung (PHP-Version, Webserver, Provider, lokales System) tritt der Fehler auf?
-- In welchem Browser und in welcher Version des Browsers tritt der Fehler auf?
-- Was wurde zuletzt am System verändert (z.B. Installation von AddOns)?
-- Wie macht sich der Fehler bemerkbar?
+* Welche Bedienungsschritte führen zu dem Fehler?
+* Unter welcher Umgebung (PHP-Version, Webserver, Provider, lokales System) tritt der Fehler auf?
+* In welchem Browser und in welcher Version des Browsers tritt der Fehler auf?
+* Was wurde zuletzt am System verändert (z. B. Installation von AddOns)?
+* Wie macht sich der Fehler bemerkbar?
 
 Die Fehlerbeschreibung kann um Errorlog-Meldungen ergänzt werden.
 

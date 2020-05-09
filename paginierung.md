@@ -1,14 +1,14 @@
 # Paginierung
 
-Paginierungen werden für unterschiedlichste Zwecke eingesetzt. Genannt seien hier Datensätze einer Liste oder Newseinträge in einem Archiv. Paginierungen können im Backend und im Frontend eingesetzt werden. Genau zu diesen Zwecken kann man die in REDAXO vorgefertigte Paginierungsklasse `rex_pager` einsetzen. Das `rex_pager`-Objekt ist für die Paginierung zuständig. Die Anzeige der jeweiligen Inhalte (Datensätze, Artikel etc.) wird unabhängig davon programmiert.
+Paginierungen werden für unterschiedlichste Zwecke eingesetzt. Genannt seien hier Datensätze einer Liste oder News-Einträge in einem Archiv. Paginierungen können im Backend und im Frontend eingesetzt werden. Genau zu diesen Zwecken kann man die in REDAXO vorgefertigte Paginierungsklasse `rex_pager` einsetzen. Das `rex_pager`-Objekt ist für die Paginierung zuständig. Die Anzeige der jeweiligen Inhalte (Datensätze, Artikel etc.) wird unabhängig davon programmiert.
 
 Wir beginnen direkt mit einem Beispiel.
 
-```
+```php
 <?php $pager = new rex_pager(50,'offset') ?>
 ```
 
-erstellt ein neues Paginierungsobjekt, es werden maximal 50 Einträge pro Seite angezeigt. Standard ist 30. Der Parameter, der die Paginierung steuert, heißt in unserem Beispiel `offset`. Standard ist `start`.
+Dieser Code erstellt ein neues Paginierungsobjekt, es werden maximal 50 Einträge pro Seite angezeigt. Standard ist 30. Der Parameter, der die Paginierung steuert, heißt in unserem Beispiel `offset`. Standard ist `start`.
 
 Der Wert `offset` wird als get- oder post-Parameter erwartet und gibt die Anzahl der Datensätze an, ab der die Anzeige beginnt. Man kann also diesen Parameter nutzen und in eine SQL-Abfrage zur Anzeige einbauen.
 
@@ -16,14 +16,14 @@ Der Wert `offset` wird als get- oder post-Parameter erwartet und gibt die Anzahl
 
 Mit
 
-```
+```php
 <?php $pager->setRowCount(123) ?>
 ```
 
 wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt.
 Der Wert kann mit
 
-```
+```php
 <?php $numRowsTotal = $pager->getRowCount() ?>
 ```
 
@@ -32,7 +32,7 @@ ausgelesen werden.
 Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden.
 Die Seitenzahl kann mit
 
-```
+```php
 <?php $totalPages = $pager->getPageCount() ?>
 ```
 
@@ -40,7 +40,7 @@ ermittelt werden.
 
 Eine einfache Ausgabe, z.B. in einem Modul, könnte dann so aussehen:
 
-```
+```php
 <?php
 echo '<ul>';
   for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
@@ -54,7 +54,7 @@ Eine etwas komplexere Ausgabe steht im Fragment `fragments/core/navigations/pagi
 
 Weitere Methoden der `rex_pager`-Klasse sind
 
-```
+```php
 <?php
 // Anzahl Elemente pro Seite (Standard 30)
 $rows_per_page = $pager->getRowsPerPage();
@@ -99,7 +99,7 @@ Ein weiteres Beispiel einer Ausgabe zeigt, wie man die Klasse `rex_pager` verwen
 
 Aktuelle Seite wäre in diesem Beispiel die Seite 72
 
-```
+```php
 $distance = 3; // Wert, der bestimmt wieviele Seiten vor bzw. nach der aktuellen Seite angezeigt werden sollen.
 
 $last_page_shown = 0;

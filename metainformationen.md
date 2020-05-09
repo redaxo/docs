@@ -1,18 +1,19 @@
 # Metainformationen
 
-- [Über](#ueber)
-- [Anwendungsbeispiel](#anwendungsbeispiel)
-- [Meta Infos-AddOn](#addon)
-- [Metafelder](#metafelder)
-- [Feldattribute](#attribute)
-- [Dynamische Metafelder](#dynamik)
-- [Callback](#callback)
-- [Auslesen der Meta Infos](#auslesen)
-  - [Artikel](#artikel)
-  - [Kategorien](#kategorien)
-  - [Medien](#medien)
-  - [Sprachen](#sprachen)
-- [Für AddOn-Developer](#developer)
+* [Über](#ueber)
+* [Anwendungsbeispiel](#anwendungsbeispiel)
+* [Meta Infos-AddOn](#addon)
+* [Metafelder](#metafelder)
+* [Feldattribute](#attribute)
+* [Dynamische Metafelder](#dynamik)
+* [Callback](#callback)
+* [Auslesen der Meta Infos](#auslesen)
+  + [Artikel](#artikel)
+  + [Kategorien](#kategorien)
+  + [Medien](#medien)
+  + [Sprachen](#sprachen)
+* [Für AddOn-Developer](#developer)
+
  
 <a name="ueber"></a>
 
@@ -35,7 +36,7 @@ Man leget unter MetaInfo (Artikel) ein Select mit den Optionen 1-spaltig, 2-spal
 
 ## Meta Infos-AddOn
 
-Im Meta Infos-Addon können die Metafelder für Artikel, Kategorien, Medien und Sprachen definiert und gestaltet werden.  
+Im Meta Infos-AddOn können die Metafelder für Artikel, Kategorien, Medien und Sprachen definiert und gestaltet werden.  
  Meta Infos  sind dafür vorgesehen, seiten- oder medienspezifische Informationen zu verwalten, wie beispielsweise Suchmaschinen-Keywords, ein individuelles Headerbild, ob als Newsteaser berücksichtigt, ob sie in bestimmten Navigationen auftauchen soll, Copyright-Infos zu bestimmten Fotos, usw. Sie können Metainfo-Felder für Artikel, Kategorien und/oder Medien definieren. Als Felder stehen alle üblichen Typen wie text, textarea, select, radio, checkbox und mehr zur Verfügung.
 
  <a name="metafelder"></a>
@@ -64,11 +65,11 @@ Die nachfolgenden Felder stehen zur Auswahl:
 
  Die Felder können über Attribute gestaltet und auch in den Rechten eingeschränkt werden.
 
-```
+```html
 style="color:red;" multiple="multiple" class="my_css_class" perm="admin[]"
 ```
 
-Über `perm="admin[]`ist es so z.B. möglich ein Feld nur dem Admin zur Verfügung zu stellen.
+Über `perm="admin[]` ist es so z. B. möglich ein Feld nur dem Admin zur Verfügung zu stellen.
 
 <a name="dynamik"></a>
 
@@ -77,8 +78,8 @@ style="color:red;" multiple="multiple" class="my_css_class" perm="admin[]"
 Select–, Checkbox– und Radio–Felder können mit Daten von Datenbanktabellen befüllt werden und diese zur Auswahl bereitgestellt werden. Der Abruf ist aus beiden in REDAXO möglichen Datenbanken möglich.
 
 **Mögliche Query-Abfragen**
-a) SELECT label,id FROM my_table WHERE a=4
-b) (DB2) SELECT label,id FROM my_table WHERE a=4
+a) SELECT label, id FROM my_table WHERE a=4
+b) (DB2) SELECT label, id FROM my_table WHERE a=4
 
 <a name="callback"></a>
 
@@ -86,7 +87,7 @@ b) (DB2) SELECT label,id FROM my_table WHERE a=4
 
 Das Feld `Callback` ermöglicht es Programmcode auszuführen, wenn ein Wert des Metafeldes in einem Artikel geändert wird. PHP Tags müssen angegeben werden. Im Callback Code kann man lesend auf folgende Werte zugreifen:
 
-* `$fieldName` - der Name des Metafeldes (z.B. art_mymetafield)
+* `$fieldName` - der Name des Metafeldes (z. B. art_mymetafield)
 * `$fieldValue` - der Wert
 * `$field` - rex_sql Objekt
 
@@ -94,7 +95,7 @@ Das Feld `Callback` ermöglicht es Programmcode auszuführen, wenn ein Wert des 
 
 Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Datenbank Tabelle zugewiesen. In die Produkttabelle soll die REDAXO Artikel Id geschrieben werden, in der das Produkt zugeordnet wurde.
 
-```
+```php
    <?php
       $sql = rex_sql::factory();
       $qry = 'UPDATE rex_meine_produkte SET redaxo_article_id = '.rex_article::getCurrentId().' '
@@ -113,7 +114,7 @@ Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Da
 
 Artikel-Metadaten werden vom Redakteur im Reiter Metadaten eines Artikels eingepflegt.   Die Daten können per PHP wie folgt ausgelesen werden:
 
-```
+```php
 // Beispiel Titelbild
 $titleimage  =  $this->getValue ('art_titleimage');
 // oder:
@@ -122,7 +123,8 @@ $titleimage  =  rex_article::getCurrent()->getValue('art_titleimage');
 
 Die Daten können auch mittels REDAXO-Variable ausgelesen werden.
 
-```
+```html
+>>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_ARTICLE[field="art_titleimage"]
 ```
 
@@ -132,7 +134,7 @@ REX_ARTICLE[field="art_titleimage"]
 
 Kategorie-Metadaten werden von den Redakteuren in der Strukturverwaltung gepflegt.  Sie können per PHP mit folgenden Befehlen wie folgt ausgelesen werden:
 
-```PHP
+``` PHP
 // Metadaten der aktuellen Kategorie
 rex_category::getCurrent()->getValue($field)
 // Metadaten eine bestimten Kategorie anhand der Kategorie-ID
@@ -141,13 +143,13 @@ rex_category::get($id)->getValue($field)
 
 **Beispiele:**
 
-```PHP
+```php
 $hintergrund = rex_category::getCurrent()->getValue('cat_background');
 ```
 
 #### Abruf als REDAXO-Variable
 
-```
+```php
 // Kurze Schreibweise, Aktuelle Kategorie
 REX_CATEGORY[cat_background]
 // Ausführliche Schreibweise, beliebige Kategorie
@@ -155,9 +157,9 @@ REX_CATEGORY[id=i field=cat_background]
 REX_CATEGORY[id=i field=cat_background clang=i]
 ```
 
-> **Hinweis:** In Redaxo 5 ist es nicht mehr nötig, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen.
+> **Hinweis:** In REDAXO 5 ist es nicht mehr nötig, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen.
 
-```
+```php
 $category = rex_category::getCurrent()->getValue('metafeld');
 $article = rex_article::getCurrent()->getValue('metafeld');
 ```
@@ -172,7 +174,7 @@ Metadaten für Medien werden in den Eigenschaften eines Mediums im Medienpool ge
 
 Die Medien-Metadaten können per PHP wie folgt ausgelesen werden.
 
-```PHP
+```php
 // Datensatz des Mediums anhand des Dateinamens auslesen
 $media = rex_media::get('dateiname.xyz');
 // Meta-Info auslesen
@@ -183,7 +185,7 @@ $file_name = $media->getValue('med_copyright');
 
 Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben.
 
-```
+```html
 REX_MEDIA[id=i field=copyright]
 ```
 
@@ -194,7 +196,7 @@ REX_MEDIA[id=i field=copyright]
 Die Metadaten zur jeweiligen Sprache werden im System zu jeder Sprache eingepflegt.
 Die Metadaten für Sprachen erhält man per PHP wie folgt:
 
-```PHP
+```php
 // Auslesen einer Meta Info der aktuellen Sprache
 rex_clang::getCurrent()->getValue($field)
 // Auslesen der Meta Info einer bestimmten Sprache anhand der Sprach ID
@@ -203,13 +205,13 @@ rex_clang::get($id)->getValue($field)
 
 **Beispiel:**
 
-```PHP
+```php
 rex_clang::getCurrent()->getValue('clang_setlocale'));
 ```
 
 #### Abruf als REDAXO-Variable
 
-```
+```html
 REX_CLANG[field=clang_setlocale]
 REX_CLANG[id=2 field=clang_setlocale]
 ```
@@ -218,16 +220,16 @@ REX_CLANG[id=2 field=clang_setlocale]
 
 ## Für AddOn-Developer
 
-Wenn ein Addon neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
+Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
 
 ### Funktion
 
-```PHP
+```php
 rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
 ```
 
 ### Beispiel
 
-```PHP
+```php
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```

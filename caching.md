@@ -1,10 +1,10 @@
 # Caching
 
-- [Prinzip und Bestandteile](#prinzip)
-- [System-Cache löschen](#system-cache)
-- [Media Manager-Cache löschen](#media-manager-cache)
-- [Hinweise für Entwickler](#hinweise)
-- [Anmerkung für Anwender](#anmerkung)
+* [Prinzip und Bestandteile](#prinzip)
+* [System-Cache löschen](#system-cache)
+* [Media Manager-Cache löschen](#media-manager-cache)
+* [Hinweise für Entwickler](#hinweise)
+* [Anmerkung für Anwender](#anmerkung)
 
 <a name="prinzip"></a>
 
@@ -14,11 +14,11 @@ Der Cache von REDAXO dient einer besseren Performance des Gesamtsystems, da so d
 
 Folgende Bestandteile werden im Cache gespeichert:
 
-- Autoload (Einbindung von Klassen aus AddOns)
-- Templates
-- Kategorien
-- Artikel
-- Medien
+* Autoload (Einbindung von Klassen aus AddOns)
+* Templates
+* Kategorien
+* Artikel
+* Medien
 
 <a name="system-cache"></a>
 
@@ -43,26 +43,26 @@ Wenn ein Medientyp geändert wird, muss man den Cache des Media Managers nicht l
 
 ## Hinweise für Entwickler
 
-Folgende Redaxo-Klassen werden automatisch gecached:
+Folgende REDAXO-Klassen werden automatisch gecached:
 
-- rex_category
-- rex_article
-- rex_media_category
-- rex_media
+* rex_category
+* rex_article
+* rex_media_category
+* rex_media
 
 Nicht gecached wird:
 
-- rex_article_slice
+* rex_article_slice
 
 Eigene Cache Dateien können im REDAXO Cache so angelegt werden:
 
-```
+```php
     if (!rex_file::put(rex_path::addonCache('meinaddon', $filename), $filecontent)) {
-        echo 'Cachefile für mein Addon konnte nicht geschrieben werden!';
+        echo 'Cachefile für mein AddOn konnte nicht geschrieben werden!';
     }
 ```
 
-In diesem Beispiel wird geprüft, ob das Verzeichnis `redaxo/cache/addons/meinaddon` vorhanden ist und legt es gegebenenfalls an (`rex_file::put(..)` übernimmt das). `rex_path::addonCache('meinaddon', $filename)` erzeugt den passenden Pfad. Für die Verwaltung und die Entscheidung, wann und ob eine Cache Datei neu geschrieben werden muss, ist der Entwickler verantwortlich.
+In diesem Beispiel wird geprüft, ob das Verzeichnis `redaxo/cache/addons/meinaddon` vorhanden ist und legt es gegebenenfalls an ( `rex_file::put(..)` übernimmt das). `rex_path::addonCache('meinaddon', $filename)` erzeugt den passenden Pfad. Für die Verwaltung und die Entscheidung, wann und ob eine Cache Datei neu geschrieben werden muss, ist der Entwickler verantwortlich.
 
 In AddOns kann es manchmal notwendig sein, den Cache zu löschen. Dies kann durch Aufruf der global zur Verfügung stehenden Funktion `rex_delete_cache()` ausgeführt werden. Das sollte jedoch nur in Ausnahmefällen notwendig sein.
 

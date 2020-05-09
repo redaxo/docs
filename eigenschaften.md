@@ -1,35 +1,35 @@
 # Eigenschaften
 
-- [rex-Klasse](#rex-klasse)
-- [Config-Methoden](#config-methoden)
-- [Property-Methoden](#property-methoden)
-  - [Verwendung eigener Properties in Projekten](#eigene_properties)
-- [Beschreibung der Methoden](#beschreibung)
-  - [getAccesskey](#get-accesskey)
-  - [getConfig](#get-config)
-  - [getDirPerm](#get-dir-perm)
-  - [getErrorEmail](#get-error-email)
-  - [getFilePerm](#get-file-perm)
-  - [getProperty](#get-property)
-  - [getServer](#get-server)
-  - [getServerName](#get-server-name)
-  - [getTable](#get-table)
-  - [getTablePrefix](#get-table-prefix)
-  - [getTempPrefix](#get-temp-prefix)
-  - [getUser](#get-user)
-  - [getVersion](#get-version)
-  - [hasConfig](#has-config)
-  - [hasProperty](#has-property)
-  - [isBackend](#is-backend)
-  - [isFrontend](#is-frontend)
-  - [isDebugMode](#is-debug-mode)
-  - [isSafeMode](#is-safe-mode)
-  - [isSetup](#is-setup)
-  - [removeConfig](#remove-config)
-  - [removeProperty](#remove-property)
-  - [setConfig](#set-config)
-  - [setProperty](#set-property)
-- [Beispiele](#beispiele)
+* [rex-Klasse](#rex-klasse)
+* [Config-Methoden](#config-methoden)
+* [Property-Methoden](#property-methoden)
+  + [Verwendung eigener Properties in Projekten](#eigene_properties)
+* [Beschreibung der Methoden](#beschreibung)
+  + [getAccesskey](#get-accesskey)
+  + [getConfig](#get-config)
+  + [getDirPerm](#get-dir-perm)
+  + [getErrorEmail](#get-error-email)
+  + [getFilePerm](#get-file-perm)
+  + [getProperty](#get-property)
+  + [getServer](#get-server)
+  + [getServerName](#get-server-name)
+  + [getTable](#get-table)
+  + [getTablePrefix](#get-table-prefix)
+  + [getTempPrefix](#get-temp-prefix)
+  + [getUser](#get-user)
+  + [getVersion](#get-version)
+  + [hasConfig](#has-config)
+  + [hasProperty](#has-property)
+  + [isBackend](#is-backend)
+  + [isFrontend](#is-frontend)
+  + [isDebugMode](#is-debug-mode)
+  + [isSafeMode](#is-safe-mode)
+  + [isSetup](#is-setup)
+  + [removeConfig](#remove-config)
+  + [removeProperty](#remove-property)
+  + [setConfig](#set-config)
+  + [setProperty](#set-property)
+* [Beispiele](#beispiele)
 
 <a name="rex-klasse"></a>
 
@@ -44,13 +44,13 @@ Methoden wie `setProperty` und `getProperty` können auch verwendet werden, um s
 
 Die Werte werden in der Tabelle `rex_config` gespeichert.
 
-> **Hinweis:** AddOns können ihre Konfiguration über das Package-Objekt in die Konfiguration schreiben: `rex_addon::get($addon)->setConfig($key, $value);` und lesen `$value = rex_addon::get($addon)->getConfig($key);`
+> **Hinweis:** AddOns können ihre Konfiguration über das Package-Objekt in die Konfiguration schreiben: `rex_addon::get($addon)->setConfig($key, $value);` und lesen `$value = rex_addon::get($addon)->getConfig($key);` 
 
 <a name="property-methoden"></a>
 
 ## Property-Methoden
 
-Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z.B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegt sind.
+Property-Methoden des Cores werden über "rex"-Klasse und über den Namespace des jeweiligen AddOns (z. B. vom Project-AddOn)  bereitgestellt. Die in den Properties gespeicherten Werte werden dynamisch während der Laufzeit verwaltet und werden zur Laufzeit gesetzt und abgerufen. Hierzu zählen auch die Properties, die in den package.yml der AddOns und in der config.yml des Cores hinterlegt sind.
 
 Zur Verwendung der Properties in eigenen Prokjekten, sollten diese im Namespace eines AddOns verwaltet werden. Kollisionen mit den Core-Definitionen und weiteren AddOns werden so vermieden.
 
@@ -58,29 +58,29 @@ Zur Verwendung der Properties in eigenen Prokjekten, sollten diese im Namespace 
 
 ## Verwendung eigener Properties in Projekten
 
-Properties sollten in einem eigenen Namespace unabhängig vom Core (rex:) verwendet werden. Es bietet sich an hierzu z.B. das project-AddOn oder ein anderes AddOn zu verwenden. So werden Kollisionen mit anderen AddOns und dem Core vermieden.
+Properties sollten in einem eigenen Namespace unabhängig vom Core (rex:) verwendet werden. Es bietet sich an hierzu z. B. das project-AddOn oder ein anderes AddOn zu verwenden. So werden Kollisionen mit anderen AddOns und dem Core vermieden.
 
 Setzen einer AddOn spezifischen Property
 
-```php
+``` php
 $project = rex_addon::get('project');
 $project->setProperty($key, $value);
 ```
 
 Auslesen einer AddOn spezifischen Property
 
-```php
+``` php
 $project = rex_addon::get('project');
 $project->getProperty($key);
 ```
 
 Auslesen über REDAXO-Variablen in Templates und Blöcken
 
-```html
+``` html
 REX_PROPERTY[namespace=project key=foo]
 ```
 
-> Möchte man eine Property in einem Template auslesen, die in Blöcken gesetzt wurde,  sollte man vorab den Artikel holen. z.B. per `$article='REX_ARTICLE[]';`  und dann die Property auslesen.
+> Möchte man eine Property in einem Template auslesen, die in Blöcken gesetzt wurde, sollte man vorab den Artikel holen. z. B. per `$article='REX_ARTICLE[]';` und dann die Property auslesen.
 
 <a name="beschreibung"></a>
 
@@ -92,13 +92,13 @@ REX_PROPERTY[namespace=project key=foo]
 
 Beispiel:
 
-```
+```html
 <button type="submit" <?= rex::getAccesskey("speichern","s") ?>>Speichern</button>
 ```
 
 schreibt
 
-```
+```html
 <button type="submit" accesskey="s" title="speichern[s]">Speichern</button>
 ```
 
@@ -112,13 +112,13 @@ add: a
 
 Beispiel:
 
-```
+```html
 <button type="submit" <?= rex::getAccesskey("speichern","save") ?>>Speichern</button>
 ```
 
 schreibt
 
-```
+```html
 <button type="submit" accesskey="s" title="speichern[s]">Speichern</button>
 ```
 
@@ -201,21 +201,21 @@ Die Methode kann verwendet werden, um den Title-Tag zu füllen.
 ### getTable
 
 Fügt an einen übergebenen Tabellennamen das in der `config` stehende Prefix für die Datenbanktabellen hinzu.
-Standard: `rex_`
+Standard: `rex_` 
 
 Parameter: Tabellenname
 
 Beispiel:
 `rex::getTable('adressen')` => rex_adressen
 
-Die Funktion ist bevorzugt einzusetzen anstelle von `rex::getTablePrefix.'adressen'`
+Die Funktion ist bevorzugt einzusetzen anstelle von `rex::getTablePrefix.'adressen'` 
 
 <a name="get-table-prefix"></a>
 
 ### getTablePrefix
 
 Liefert den Wert für den in der `config` eingestellten Table Prefix für Datenbanktabellen.
-Standard: `rex_`
+Standard: `rex_` 
 
 Beispiel: `rex::getTablePrefix()` => rex_
 
@@ -225,8 +225,8 @@ Die Methode `rex::getTable()` ist bevorzugt einzusetzen.
 
 ### getTempPrefix
 
-Liefert den Wert für den in der `config` eingestellten `temp_prefix`.
-Standard: `tmp_`
+Liefert den Wert für den in der `config` eingestellten `temp_prefix` .
+Standard: `tmp_` 
 
 Beispiel:
 `rex::getTempPrefix()` => tmp_
@@ -235,14 +235,14 @@ Beispiel:
 
 ### getUser
 
-Wenn ein Redaxo Benutzer im Backend angemeldet ist, liefert diese Methode den Benutzer als User-Objekt.
+Wenn ein REDAXO Benutzer im Backend angemeldet ist, liefert diese Methode den Benutzer als User-Objekt.
 
 Beispiel:
 `rex::getUser()->getName()` => Administrator
 
 > **Hinweis:** Selbst wenn ein Nutzer angemeldet ist, wird `rex::getUser()` im Frontend nicht automatisch befüllt, sondern erst, wenn es zum ersten Mal explizit angefordert wurde. Im Frontend sollte die Abfrage daher so durchgeführt werden:
 
-```
+```php
 if (rex_backend_login::createUser()) {
     $user = rex::getUser()->getName();
 }
@@ -331,7 +331,7 @@ Beispiel:
 Eine Config-Einstellung löschen.
 
 Beispiel:
-`rex::removeConfig('ein_konf_wert')`
+`rex::removeConfig('ein_konf_wert')` 
 
 Siehe auch: [getConfig](#get-config), [setConfig](#set-config) und [hasConfig](#has-config)
 
@@ -342,7 +342,7 @@ Siehe auch: [getConfig](#get-config), [setConfig](#set-config) und [hasConfig](#
 Eine Eigenschaft löschen.
 
 Beispiel:
-`rex::removeProperty('myvar')`
+`rex::removeProperty('myvar')` 
 
 Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [setProperty](#set-property)
 
@@ -352,7 +352,7 @@ Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [setP
 
 Eine Config-Einstellung setzen.
 
-Beispiel: `rex::setConfig('ein_konf_name','der_konf_value')`
+Beispiel: `rex::setConfig('ein_konf_name','der_konf_value')` 
 
 Siehe auch: [getConfig](#get-config), [removeConfig](#remove-config) und [hasConfig](#has-config)
 
@@ -363,7 +363,7 @@ Siehe auch: [getConfig](#get-config), [removeConfig](#remove-config) und [hasCon
 Eine Eigenschaft setzen.
 
 Beispiel:
-`rex::setProperty('myvar','myval')`
+`rex::setProperty('myvar','myval')` 
 
 Siehe auch: [getProperty](#get-property), [hasProperty](#has-property) und [removeProperty](#remove-property)
 
@@ -375,11 +375,11 @@ Siehe auch [Konfiguration](/{{path}}/{{version}}/konfiguration)
 
 ### Informationen aus Artikel im Template auslesen
 
-Über Properties die im Namespace eines AddOns hinterlegt sind, lassen sich kann man Properties die in  Modulen gesetzt wurden in Templates auslesen. Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen, z.B. mittles `$this->getArticle();` oder `REX_ARTICLE[]`.
+Über Properties die im Namespace eines AddOns hinterlegt sind, lassen sich kann man Properties die in  Modulen gesetzt wurden in Templates auslesen. Hierzu ist es erforderlich vor Abfrage der Variable den Artikel einzulesen, z. B. mittles `$this->getArticle();` oder `REX_ARTICLE[]` .
 
 Im gewünschten Modul wird mit
 
-```php
+``` php
 $project = rex_addon::get('project');
 $project->setProperty('key',"wert")`
 ```
@@ -390,7 +390,7 @@ Danach kann der Inhalt der Variable im Template ausgelesen werden
 
 ***Ausgabe im Template***
 
-```php
+``` php
 $article = $this->getArticle();
 $project = rex_addon::get('project');
 

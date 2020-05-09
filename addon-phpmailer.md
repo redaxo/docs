@@ -1,14 +1,14 @@
 # PHPMailer
 
-- [Allgemeines](#allgemeines)
-- [Beispiele](#beispiele)
-- [E-Mail-Benachrichtigung bei Fehlern](#errormail)
-- [Senden über unterschiedliche Domains](#domains)
-- [SMTP-Debug](#debug)
-- [E-Mail-Log und E-Mail-Archivierung](#log)
-- [Tipps](#tipps)
-  - [Spam-Blocker](#spam-blocker)
-  - [Verwendung bei selbstsignierten Zertifikaten](#zertifikate)
+* [Allgemeines](#allgemeines)
+* [Beispiele](#beispiele)
+* [E-Mail-Benachrichtigung bei Fehlern](#errormail)
+* [Senden über unterschiedliche Domains](#domains)
+* [SMTP-Debug](#debug)
+* [E-Mail-Log und E-Mail-Archivierung](#log)
+* [Tipps](#tipps)
+  + [Spam-Blocker](#spam-blocker)
+  + [Verwendung bei selbstsignierten Zertifikaten](#zertifikate)
 
 <a name="allgemeines"></a>
 
@@ -18,12 +18,12 @@ Das PHPMailer-AddOn ermöglicht den Versand von E-Mails. Zusätzlich kann PHPMai
 
 **Unterstützt werden folgende Sendeverfahren**
 
-- php mail()
-- sendmail
-- SMTP/SMTPS
-- SMTP/SMTPS-Auth
+* php mail()
+* sendmail
+* SMTP/SMTPS
+* SMTP/SMTPS-Auth
 
-Der Aufruf erfolgt über die Klasse `rex_mailer`. Dabei werden die nachfolgend beschriebenen und in der Konfiguration hinterlegten Einstellungen berücksichtigt.
+Der Aufruf erfolgt über die Klasse `rex_mailer` . Dabei werden die nachfolgend beschriebenen und in der Konfiguration hinterlegten Einstellungen berücksichtigt.
 
 Die Werte der Konfiguration können in AddOns oder Modulen leicht überschrieben werden, siehe [Beispiele](#beispiele).
 
@@ -41,7 +41,7 @@ Weitere Informationen zur Verwendung von PHPMailer unter: [https://github.com/PH
 
 E-Mail an einen bestimmten Empfänger senden.
 
-```php
+``` php
 <?php
   // PHPMailer-Instanz
   $mail = new rex_mailer();
@@ -86,7 +86,7 @@ E-Mail an einen bestimmten Empfänger senden.
 
 E-Mail an einen Empfängerkreis senden, der aus der Datenbank ausgelesen wird.
 
-```php
+``` php
 
 <?php
 
@@ -135,7 +135,7 @@ Der Check und ggf. die Zusendung erfolgen in festen Intervallen, die in den Syst
 
 Eigene Events können den Versand ebenso auslösen dazu kann man im Log den Event als Typ: logevent ablegen.
 
-`rex_logger::factory()->log('logevent', 'Mein Text zum Event');`
+`rex_logger::factory()->log('logevent', 'Mein Text zum Event');` 
 
 <a name="debug"></a>
 
@@ -165,15 +165,15 @@ Meist benötigt man keinen Level über **Server-und Client-Protokoll**, es sei d
 
 ## E-Mail-Log und E-Mail-Archivierung
 
-Das Addon stellt ein E-Mail-Log sowie eine E-Mail-Archivierung bereit.
+Das AddOn stellt ein E-Mail-Log sowie eine E-Mail-Archivierung bereit.
 
 ### E-Mail-Log
 
-Das E-Mail-Log findet im man im Tab `E-Mail-Log` und unter `System` > `Logdateien` > `PHPMailer`. Das Logging kann in den Einstellungen des PHPMailer-Addons in 3 Stufen eingestellt werden.
+Das E-Mail-Log findet im man im Tab `E-Mail-Log` und unter `System` > `Logdateien` > `PHPMailer` . Das Logging kann in den Einstellungen des PHPMailer-AddOns in 3 Stufen eingestellt werden.
 
-- Nein: Es wird kein Log erstellt
-- Nur Fehler Loggen: Es werden nur Fehler geloggt
-- Alle Vorgänge loggen: Alle Sendungen werden geloggt
+* Nein: Es wird kein Log erstellt
+* Nur Fehler Loggen: Es werden nur Fehler geloggt
+* Alle Vorgänge loggen: Alle Sendungen werden geloggt
 
 Das Log liefert Informationen zu Zeit, Absender, Empfänger, Betreff und Meldung. Es kann über den Button `Logdatei löschen` geleert werden.
 
@@ -197,11 +197,11 @@ PHPMailer prüft ob der angegebene Server TLS unterstützt und baut eine verschl
 
 ### Spam-Blocker
 
-- Der Server, der die E-Mails versendet, sollte möglichst per SPF-Eintrag für die verwendete E-Mail-Domain als autorisierter Server im DNS hinterlegt sein.
+* Der Server, der die E-Mails versendet, sollte möglichst per SPF-Eintrag für die verwendete E-Mail-Domain als autorisierter Server im DNS hinterlegt sein.
 
-- Prioritäts-Einstellungen können zu einem Spam-Blocking führen.
+* Prioritäts-Einstellungen können zu einem Spam-Blocking führen.
 
-- Große E-Mail-Verteiler sollten möglichst in kleiner Zahl und als BCC verschickt werden.
+* Große E-Mail-Verteiler sollten möglichst in kleiner Zahl und als BCC verschickt werden.
 
 <a name="zertifikate"></a>
 
@@ -209,7 +209,7 @@ PHPMailer prüft ob der angegebene Server TLS unterstützt und baut eine verschl
 
 Per Default wird der Peer verifiziert. Dies kann ggf. zu Problemen führen. Die nachfolgenden Einstellungen helfen, dieses Problem zu umgehen.
 
-```php
+``` php
 <?php
 
 $mail = new rex_mailer();
@@ -233,12 +233,12 @@ $mail->SMTPOptions = array(
 
 Werden E-Mails über unterschiedliche Absender-Domains verschickt, sollte der SPF-Eintrag der Absender-Domain(s) in den DNS-Einstellungen
 
-- den Webserver (bei sendmail und mail)
-- oder den angegebenen SMTP(S)-Server
+* den Webserver (bei sendmail und mail)
+* oder den angegebenen SMTP(S)-Server
 
 als erlaubte Server-Adressen beinhalten.
 
-z.B. `a:meine-domain.tld ip4:XXX.XXX.XXX.XXX`
+z. B. `a:meine-domain.tld ip4:XXX.XXX.XXX.XXX` 
 
 Somit wird sichergestellt, dass PHPMailer E-Mails unter der angegebenen Domain versenden kann und die Mail nicht als SPAM deklariert wird.  
 
