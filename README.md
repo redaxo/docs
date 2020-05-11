@@ -8,10 +8,46 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 
 ## Bitte beachten
 
-- Hinweise zur Formatierung und Markdown-Syntax findet Ihr in der Datei [_vorlage.md](_vorlage.md)
-- Bitte in jedes Kapitel eine Sprunganker-Navigation integrieren (siehe [_vorlage.md](_vorlage.md)). Diese Sprunganker-Navigation muss direkt am Anfang hinter der ersten Überschrift kommen. Direkt danach muss die zweite Überschrift folgen.
-- Wenn man sich einen Inhalt vornimmt, bitte mit Namen und Status markieren in der [dokumentation.md](dokumentation.md)
-- **Hinweis:** Die Links in der Inhaltsverzeichnis-Datei [dokumentation.md](dokumentation.md) funktionieren nicht innerhalb von Github, da sie vorbereitet sind für den automatischen Import in die REDAXO-Website. Ihr müsst daher die gewünschte Datei selbst auswählen und öffnen.
+Bei der Formatierung und dem Markdown-Syntax an vorhandenen Dokumenten orientieren, möglich sind:
+
+* Überschriften
+* Sprunganker
+* Listen
+* Tabellen
+* Hinweise (eingerückt mit `> **Hinweis:** ...`)
+* Inline-Code und Code-Blöcke (ausgezeichnet mit 3 Backticks)
+* Bilder
+
+> **Tipp:** Der Markdown-Editor eurer Wahl unterstützt möglicherweise Linting und weitere Formatierungshilfen. 
+
+### Inhaltsverzeichnis
+
+Diese Sprunganker-Navigation (Inhaltsverzeichnis des Kapitels) muss direkt am Anfang hinter der ersten Überschrift kommen. Direkt danach muss die zweite Überschrift folgen. Bitte in jedes Kapitel eine Sprunganker-Navigation integrieren:
+
+```
+# Seitenüberschrift
+
+- [Überschrift](#anker-zur-ueberschrift)
+- [Anker 2](#anker-2)
+    - [Anker 2a](#anker2a)
+- [Anker 3](#anker-3)
+    - [Anker 3a](#anker-3a)
+    - [Anker 3b](#anker-3b)
+    - [Anker 3c](#anker-3c)
+- [Anker 4](#anker-4)
+
+<a name="anker-zur-ueberschrift"></a>
+
+## Überschrift 
+
+[...]
+```
+
+### Bearbeitungsstatus
+
+Wenn man sich einen Inhalt vornimmt, bitte mit Namen und Status markieren in der [dokumentation.md](dokumentation.md)
+
+> **Hinweis:** Die Links in der Inhaltsverzeichnis-Datei [dokumentation.md](dokumentation.md) funktionieren nicht innerhalb von GitHub, da sie vorbereitet sind für den automatischen Import in die REDAXO-Website. Ihr müsst daher die gewünschte Datei selbst auswählen und öffnen.
 
 ### Schreibstil
 
@@ -23,12 +59,12 @@ Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Ihr könnt ger
 - AddOn
 - PlugIn
 
-## Coding-Standard
+### Coding-Standard
 
 Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Coding-Standard beachten:
 [http://symfony.com/doc/current/contributing/code/standards.html](http://symfony.com/doc/current/contributing/code/standards.html)
 
-### Screenshots
+### Bilder und Screenshots
 
 - Breite 1600 Pixel Breite. Höhe, wie man es braucht.
 - Kein Browserfenster soll zu sehen sein.
