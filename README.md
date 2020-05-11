@@ -18,7 +18,7 @@ Bei der Formatierung und dem Markdown-Syntax an vorhandenen Dokumenten orientier
 * Inline-Code und Code-Blöcke (ausgezeichnet mit 3 Backticks)
 * Bilder
 
-Tipp: Der Markdown-Editor eurer Wahl unterstützt möglicherweise Linting und weitere Formatierungshilfen. 
+> **Tipp:** Der Markdown-Editor eurer Wahl unterstützt möglicherweise Linting und weitere Formatierungshilfen. 
 
 ### Inhaltsverzeichnis
 
