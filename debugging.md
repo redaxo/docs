@@ -90,10 +90,12 @@ Das Debug-AddOn kann zusätzlich installiert werden kann und anschließend im Fr
 
 Serverseitige Abläufe visualisiert durch Clockwork
 
-Um eigene Messungen vornehmen zu können, kann die rex_timer-Klasse verwendet werden.
+Um eigene Messungen vornehmen zu können, kann die rex_timer-Klasse verwendet werden und den eigenen Code dazwischen einfügen:
 
 ```php
-rex_timer::measured("label");
+rex_timer::measure('Bezeichnung für Clockwork', function() {
+    // lange und aufwändige Arbeit eines eigenen Code-Abschnittes einfügen und messen lassen.
+});
 ```
 
 [Weiterführende Infos zu rex_timer in den API Docs](https://friendsofredaxo.github.io/phpdoc/classes/rex-timer.html)
