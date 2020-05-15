@@ -82,13 +82,21 @@ In der Datei `redaxo/data/core/config.yml` können Parameter zum Debugging aktiv
 
 ## Debugging: Das debug-AddOn (ab REDAXO 5.11)
 
-![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
-
- Serverseitige Abläufe visualisiert durch Clockwork
-
-Das Debug-AddOn, welches zusätzlich installiert werden kann. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
+Das Debug-AddOn kann zusätzlich installiert werden kann und anschließend im Frontend und Backend verwendet werden. Es erscheint ein neuer Menüpunkt, in dem Clockwork gestartet wird. Jeder weitere Aufruf im Frontend oder Backend übergibt an Clockwork Debugging-Informationen.
 
 > Das Debug-AddOn sollte nicht in Produktivumgebungen eingesetzt werden, weil hierfür der Debug-Modus im System aktiviert sein muss. Bei Multidomain-Umgebungen sollte man sich mit der gewünschten Domain im Backend einloggen, damit es unter der jeweiligen Domain eingesetzt werden kann.
+
+![Debug-AddOn ab REDAXO 5.11](/assets/v5.11.0-debug_addon.png)
+
+Serverseitige Abläufe visualisiert durch Clockwork
+
+Um eigene Messungen vornehmen zu können, kann die rex_timer-Klasse verwendet werden.
+
+```php
+rex_timer::measured("label");
+```
+
+[Weiterführende Infos zu rex_timer in den API Docs](https://friendsofredaxo.github.io/phpdoc/classes/rex-timer.html)
 
 <a name="browser"></a>
 
