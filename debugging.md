@@ -26,15 +26,17 @@ Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden w
 
 ## Fehleranalyse: Whoops und Ooops
 
+Ein Ooops oder Whoops wird ausgegeben, wenn es zu einem kritischen Fehler gekommen ist, z.B. einem `E_ERROR`. Mit aktiviertem Debug-Modus auch bei `E_WARNING`, `E_NOTICE`.
+
+Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus aktiviert hat, wird anstelle des Ooops ein Whoops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben, um die Fehlersuche zu vereinfachen.
+
 ![Ooops](/assets/v5.10.0-debug_ooops.png) Allgemeine Ooops-Fehlerseite im Frontend (links) und im Backend (rechts)
 
-Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Ooops und im Backend mit einem Rrrrroar.
+> Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Ooops und im Backend mit einem Rrrrroar.
 
 ![Whoops](/assets/v5.10.0-debug_whooops.png)
 
- Whoops-Fehlerseite mit Debug-Informationen
-
-Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus aktiviert hat, wird anstelle des Ooops ein Whoops mit genauerer Fehlerbeschreibung und Stacktrace ausgegeben, um die Fehlersuche zu vereinfachen.
+> Whoops-Fehlerseite mit Debug-Informationen
 
 <a name="systemlog"></a>
 
@@ -64,7 +66,7 @@ Woran erkennt man, dass der Debug-Modus eingeschaltet ist?
 
 Im Debug-Modus werden zur Laufzeit weitere Informationen gesammelt und im Fehlerfall ausgegeben. Exceptions werden als Whoops ausgegeben und helfen so dem Entwickler, Fehler zu beseitigen und Probleme zu erkennen.
 
-Der Debug-Modus kann über die config.yml verschärft werden: über die Eigenschaft `throw_always_exception: true` werden auch einfache `Notices` als Whoops ausgegeben. Die Vorteile liegen auf der Hand: So wird man bei der Entwicklung von Modulen, Templates oder AddOn-Code u.a. frühzeitig darauf aufmerksam, wenn Methoden und Funktionen in PHP verwendet werden, die bereits als `deprecated` markiert und bei einem Update der PHP-Version zu Fehler führen werden.
+Der Debug-Modus kann über die config.yml verschärft werden: über die Eigenschaft `throw_always_exception: true` werden auch einfache `Notices` (`E_WARNING`, `E_NOTICE`) als Whoops ausgegeben. Die Vorteile liegen auf der Hand: So wird man bei der Entwicklung von Modulen, Templates oder AddOn-Code u.a. frühzeitig darauf aufmerksam, wenn Methoden und Funktionen in PHP verwendet werden, die bereits als `deprecated` markiert und bei einem Update der PHP-Version zu Fehler führen werden.
 
 Der Debug-Modus darf unter keinen Umständen aktiviert werden, wenn die Website öffentlich zugänglich ist. Denn der Debug-Modus ist öffentlich und nicht nur eingeloggte Administratoren erhalten eine Fehlermeldung und die darin exponierten Informationen.
 
