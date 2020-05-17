@@ -71,10 +71,8 @@ Die verwendete Sprache ist das auf Markup verzichtende YAML.
 
 Die Definition erfolgt in Schlüssel-Wert-Paaren (key value pairs). Das Trennzeichen zwischen Schlüssel und Wert ist der Doppelpunkt. Die Zugehörigkeit zu Oberpunkten wird durch Einrückungen (per Leerzeichen) definiert.
 
-Diese Definitionen heißen in REDAXO *Properties* und können innerhalb des AddOns mit `$this->getProperty($key)` abgefragt werden.
-
-Die Properties eines anderen AddOns erhält man durch: `rex_addon::get('addonkey')->getProperty('author')` .  
-
+Diese Definitionen heißen in REDAXO *Properties* und können mit `rex_addon::get('addonkey')->getProperty($key)` abgefragt werden.
+ 
 <a name="pflicht"></a>
 
 ## Pflichtangaben
@@ -280,7 +278,7 @@ Mit `translate:` beginnende Werte werden anhand der Sprachdatei übersetzt. Der 
 ## Eigene Properties
 
 Die package.yml ist sehr offen gestaltet. Daher kann man auch eigene Properties in ihr ablegen.
-Der Abruf erfolgt wie oben gezeigt per `$this->getProperty($eigenerkey)` .
+Der Abruf erfolgt wie oben gezeigt per `rex_addon::get('addonkey')->getProperty($eigenerkey)` .
 
 <a name="pjax"></a>
 
