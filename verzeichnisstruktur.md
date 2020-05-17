@@ -30,6 +30,8 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | `/redaxo/src/core/tests/` | Automatisierte Tests für Core-Klassen und -Funktionen |
 | `/redaxo/src/core/vendor/` | Funktionen von externen Bibliotheken, z. B: Composer, Symfony, etc. |
 
+![Verzeichnis](assets/v5.2.0-Verzeichnisstruktur.png)
+
 <a name="hinweise"></a>
 
 ## Liste der wichtigsten Pfade samt ihrer Pfad-Variablen
