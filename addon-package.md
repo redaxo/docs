@@ -137,7 +137,7 @@ Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich a
 
 ## Defaukt settings (default_config)  
 
-In der package.yml können Desfaut-Settings gesetzt werden, sodass diese direkt nach der Installation zur Verfügung stehen. Diese Lösung ist eine Alternative zur PHP-Variante `$addon->setConfig('key', 'value')` , die bislang in in der boot.php Verwendung fand.
+In der package.yml können Default-Settings gesetzt werden, sodass diese direkt nach der Installation zur Verfügung stehen. Diese Lösung ist eine Alternative zur PHP-Variante `$addon->setConfig('key', 'value')` , die bislang in in der boot.php Verwendung fand.
 
 ``` yml
 default_config:
