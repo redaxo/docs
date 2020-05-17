@@ -49,8 +49,8 @@ Beispiel:
 
 ``` php
 $addon = rex_addon::get('mein_addonkey');
-rex_view::addCssFile( $addon->getAssetsUrl('styles.css') );
-rex_view::addJsFile( $addon->getAssetsUrl('script.js') );
+rex_view::addCssFile($addon->getAssetsUrl('styles.css') );
+rex_view::addJsFile($addon->getAssetsUrl('script.js') );
 ```
 
 Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden. Hierzu kann das folgende Snippet behilflich sein:
