@@ -348,31 +348,25 @@ requires:
     structure/content: '>5.0, <5.2'
 ```
 
-Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']` , sondern über die neue Package-api. Das aktuelle Objekt ( `rex_addon` oder `rex_plugin` ) ist in den Dateien ( `boot.php` , `install.php` , `pages/index.php` etc.) über `$this` erreichbar.
+Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']` , sondern über die neue Package-api. Das aktuelle Objekt ( `rex_addon` oder `rex_plugin` ) ist in den Dateien ( `boot.php` , `install.php` , `pages/index.php` etc.) über `rex_addon::get('addonkey')` erreichbar.
 
 ```php
 // Beispiel boot.php
-$this->setProperty('author', 'Vorname Nachname');
+rex_addon::get('addonkey')->setProperty('author', 'Vorname Nachname');
 
 // Beispiel install.php
 $error = '';
 
 // Überprüfungen
 if($error)
-  $this->setProperty('installmsg', $error);
+  rex_addon::get('addonkey')->setProperty('installmsg', $error);
 else
-  $this->setProperty('install', true);
-```
-
-Innerhalb von Klassen und Funktionen, wo das Package nicht über `$this` zur Verfügung steht, kann so auf die Daten zugegriffen werden:
-
-```php
-$author = rex_addon::get('myaddon')->getProperty('author');
+  rex_addon::get('addonkey')->setProperty('install', true);
 ```
 
 Außer der `package.yml` sind alle Dateien ( `boot.php` , `install.php` , `uninstall.php` etc.) optional. Die `package.yml` benötigt auf jeden Fall die "package"- und "version"-Angabe.
 
-Dadurch, dass die Dateien aus den Objekten heraus eingebunden werden (damit `$this` zur Verfügung steht), sind globale Variablen nicht mehr automatisch verfügbar.
+Dadurch, dass die Dateien aus den Objekten heraus eingebunden werden, sind globale Variablen nicht mehr automatisch verfügbar.
 
 Der Klassenordner `classes` heißt jetzt `lib` . Die Klassen in diesem Ordner (und in den Unterordnern) müssen nicht mehr manuell über `include/require` eingebunden werden, dies übernimmt das "Autoloading" bei Bedarf automatisch.
 
@@ -392,9 +386,9 @@ $value = rex_config::get($addon, $key);
 rex_addon::get($addon)->setConfig($key, $value);
 $value = rex_addon::get($addon)->getConfig($key);
 
-// oder falls das Package-Objekt über $this erreichbar ist (config.inc.php etc.):
-$this->setConfig($key, $value);
-$value = $this->getConfig($key);
+// oder
+rex_addon::get('addonkey')->setConfig($key, $value);
+$value = rex_addon::get('addonkey')->getConfig($key);
 ```
 
-Des Weiteren können Daten im Ordner `redaxo/data/addons/$addonName` abgelegt werden, der Pfad ist über `rex_path::addonData($addon)` und `rex_addon::get($addon)->getDataPath()` , bzw. `$this->getDataPath()` erreichbar.
+Des Weiteren können Daten im Ordner `redaxo/data/addons/$addonName` abgelegt werden, der Pfad ist über `rex_path::addonData($addon)` und `rex_addon::get($addon)->getDataPath()` , bzw. `rex_addon::get('addonkey')->getDataPath()` erreichbar.
