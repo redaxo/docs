@@ -26,7 +26,7 @@ Assets werden innerhalb von REDAXO im `assets` -Ordner des AddOns abgelegt. Eine
 
 ## Dateien einbinden
 
-Auf die Dateien eines AddOns zeigt die Variable `$this` mittels der Klasse [rex_addon](http://www.redaxo.org/docs/master/class-rex_addon.html).
+Auf die Dateien eines AddOns oder PlugIns zeigt das jeweilige Package-Objekt der Klassen [rex_addon](https://friendsofredaxo.github.io/phpdoc/classes/rex-addon.html) oder [rex_plugin](https://friendsofredaxo.github.io/phpdoc/classes/rex-plugin.html).
 
 Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [ `rex_view` ](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile` .
 
@@ -41,14 +41,16 @@ rex_view::addJSFile( /*Pfad zur Datei*/ );
 Den Pfad zu den Dateien erhält man per `getAssetsUrl` .
 
 ``` php
-$this->getAssetsUrl('styles.css') // wird zu /assets/addons/addonname/styles.css
+rex_addon::get('mein_addonkey')->setConfig($key, $value);
+rex_addon::get('mein_addonkey')->getAssetsUrl('styles.css') // wird zu /assets/addons/addonname/styles.css
 ```
 
 Beispiel:
 
 ``` php
-rex_view::addCssFile( $this->getAssetsUrl('styles.css') );
-rex_view::addJsFile( $this->getAssetsUrl('script.js') );
+$addon = rex_addon::get('mein_addonkey');
+rex_view::addCssFile( $addon->getAssetsUrl('styles.css') );
+rex_view::addJsFile( $addon->getAssetsUrl('script.js') );
 ```
 
 Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden. Hierzu kann das folgende Snippet behilflich sein:
