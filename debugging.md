@@ -100,7 +100,7 @@ rex_timer::measure('Bezeichnung für Clockwork', function() {
 
 [Weiterführende Infos zu rex_timer in den API Docs](https://friendsofredaxo.github.io/phpdoc/classes/rex-timer.html)
 
-[REDAXOHours Vortrag zum Thema in REDAXO Whoops, und dem Neuen Debug Addon](https://www.youtube.com/watch?v=yYhXgTMuEf0)
+[REDAXOHours Vortrag zum Thema Whoops in REDAXO, und dem Neuen Debug Addon](https://www.youtube.com/watch?v=yYhXgTMuEf0)
 
 
 <a name="browser"></a>
