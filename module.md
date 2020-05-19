@@ -15,6 +15,7 @@
   - [Bildmodul](#bildmodul)
   - [Inhaltsübersicht für Artikel](#teaser)
   - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
+  - [Checkboxen in Modulen](#checkbox)
 
 <a name="einfuehrung"></a>
 
@@ -315,4 +316,29 @@ if ("REX_LINKIST[1]" != "") {
   }
 }
 
+```
+
+<a name="checkbox"></a>
+
+### Beispiel für die Verwendung einer Checkbox in der Moduleingabe
+
+Dieses Modul Beinhaltet eine Checkbox als Modul.
+
+#### Moduleingabe
+
+```html
+<input type="hidden" name="REX_INPUT_VALUE[1]" value="0">
+<input type="checkbox" name="REX_INPUT_VALUE[1]" value="1" REX_VALUE[id=1 instead=checked]>
+```
+
+<a name="modulausgabe"></a>
+
+#### Modulausgabe
+
+```php
+<?php 
+
+if(REX_VALUE[1])
+    {
+      echo "checked...";
 ```
