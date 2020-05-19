@@ -320,7 +320,7 @@ if ("REX_LINKIST[1]" != "") {
 
 <a name="checkbox"></a>
 
-### Einfaches Checkbox Modul
+### Beispiel für die Verwendung einer Checkbox in der Moduleingabe
 
 Dieses Modul Beinhaltet eine Checkbox als Modul.
 
