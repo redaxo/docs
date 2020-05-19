@@ -15,7 +15,7 @@
   - [Bildmodul](#bildmodul)
   - [Inhaltsübersicht für Artikel](#teaser)
   - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
-  - [Einfaches Checkbox Modul](#checkbox)
+  - [Checkboxen in Modulen](#checkbox)
 
 <a name="einfuehrung"></a>
 
