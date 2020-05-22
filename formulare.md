@@ -105,9 +105,7 @@ Beispiel: `echo '<a href="'.$form->getUrl(['id'=>0,'func'=>'add']).'">neuer Date
 
 Es wird ein neues Fieldset angelegt. Ein bereits geöffnetes Fieldset wird automatisch geschlossen. Beispiel: `$form->addFieldset('Details')` 
 
-> ***Hinweis:***
-
-Alle Methoden, die Felder zum Formular hinzufügen, geben ein Objekt der Klasse `rex_form_element` zurück, welches weiter formatiert werden kann.
+> **Hinweis:** Alle Methoden, die Felder zum Formular hinzufügen, geben ein Objekt der Klasse `rex_form_element` zurück, welches weiter formatiert werden kann.
 
 <a name="addfield"></a>
 
@@ -220,8 +218,7 @@ Fügt dem Formular den Wert eines Feldes in einem *<p>*-Tag hinzu. Beispiel: `$f
 
 Fügt dem Fomular ein Hidden-Feld hinzu. Beispiel: `$form->addHiddenField('createdate', date())` . Ins Feld *createdate* wird das aktuelle Datum geschrieben.
 
-***Hinweis:***
-Da der Feldname von rex_form in ein Array umgewandelt wird, kann man Hidden-Felder nicht zur Steuerung des Programms verwenden. Hierzu sollte man die Methode *addRawField* verwenden.
+**Hinweis:** Da der Feldname von rex_form in ein Array umgewandelt wird, kann man Hidden-Felder nicht zur Steuerung des Programms verwenden. Hierzu sollte man die Methode *addRawField* verwenden.
 
 <a name="addcheckboxfield"></a>
 
@@ -307,8 +304,7 @@ $field->setAttribute('class', 'selectpicker form-control');
 $field->setLabelField('name');
 ```
 
-**Hinweis:**
-Das Prio-Feld muss vom Typ *int* sein. Die Angabe von *setLabelField* ist zwingend. Das LabelField wird bei der Anzeige des Prio-Feldes benötigt, um einen Datensatz bei der Auswahl zu identifizieren.
+> **Hinweis:** Das Prio-Feld muss vom Typ *int* sein. Die Angabe von *setLabelField* ist zwingend. Das LabelField wird bei der Anzeige des Prio-Feldes benötigt, um einen Datensatz bei der Auswahl zu identifizieren.
 
 <a name="addmediafield"></a>
 
