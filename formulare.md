@@ -603,6 +603,4 @@ Folgende Validatoren sind verfügbar:
 | values    | prüft, ob der eingegebene Wert einem der Werte entspricht                                                                                                         | -                                        | `$field->getValidator()->add( 'values', 'eins, zwei oder drei eingeben', ['eins','zwei','drei']);` |
 | custom    | prüft über eine Custom-Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion *false* zurück gibt, wird die Fehlermeldung ausgegeben. | -                                        | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');` |
 
-> **Hinweis:**
-
-Alle Validator-Typen außer *notempty* führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z. B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum *match* auf */^[0-9]{5}$/'* auch ein *notempty*-Validator hinzugefügt werden.
+> **Hinweis:** Alle Validator-Typen außer *notempty* führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z. B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum *match* auf */^[0-9]{5}$/'* auch ein *notempty*-Validator hinzugefügt werden.
