@@ -13,12 +13,9 @@
 * [REX_VAR](#rex-var)
 * [Funktionen und Klassen](#funktionen-klassen)
 * [Extension Points](#extension-points)
-
-*[rex_sql](#rex-sql)
-
+* [rex_sql](#rex-sql)
 * [Fehlermeldung in REDAXO 4](#fehler-rex4)
 * [Fehlermeldung in REDAXO 5](#fehler-rex5)
-
 * [rex_form](#rex)
 * [Packages (AddOns/PlugIns)](#packages)
 
@@ -153,9 +150,8 @@ Sofern es Warnmeldungen bei der Konvertierung gab, sollten diese Stellen als ers
 REDAXO hilft bei der Suche der Fehler. Die REDAXO-Whoops-Meldung liefert die nötigen Informationen und Codestellen in denen eine Überarbeitung erforderlich ist. Damit dies geschehen kann, muss man im Backend eingeloggt sein.
 Soweit wie möglich einfach die Website und das Backend absurfen und schauen ob ein Fehler erscheint. Des weiteren sollte man regelmäßig das ***Systemlog*** von REDAXO aufsuchen und nach gefundenen Fehlern Ausschau halten.
 
-Häufig sind die gefundenen Fehler Codefragmente, die bereits in REDAXO 4.x als veraltet angesehen wurden und ausgetauscht werden sollten. Bei der Korrektur des Codes könnten folgende Seiten hilfreich sein:
+Häufig sind die gefundenen Fehler Codefragmente, die bereits in REDAXO 4.x als veraltet angesehen wurden und ausgetauscht werden sollten. Bei der Korrektur des Codes könnte folgende Seiten hilfreich sein:
 
-* [Änderungen REDAXO 4 zu 5](https://redaxo.org/doku/master/aenderungen-v4-v5)
 * [Weiterführende Tipps nach Konvertierung von REDAXO 4.x zu 5 in den FOR Tricks](https://friendsofredaxo.github.io/tricks/howto/redaxo_4_5_upgrade)
 
 <a name="less46"></a>
