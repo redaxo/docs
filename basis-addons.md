@@ -138,8 +138,7 @@ Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren` . Möchte
 
 Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` geladen; die Assets sowie die Einträge aus `rex_config` werden gelöscht.
 
-> Hinweis:
-Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine angelegten Dateien und Tabellen vollständig entfernen. Einige AddOns weichen jedoch bewusst von dieser Regel ab. Zum Beispiel löscht yForm seine eigenen Tabellen, aber nicht die eigentlichen Datentabellen. Auch das Backup-AddOn löscht bewusst nicht die angelegten Backups im data-Ordner. Daher bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten.
+> Hinweis: Bei einer Deinstallation sollte das AddOn oder das PlugIn normalerweise seine angelegten Dateien und Tabellen vollständig entfernen. Einige AddOns weichen jedoch bewusst von dieser Regel ab. Zum Beispiel löscht yForm seine eigenen Tabellen, aber nicht die eigentlichen Datentabellen. Auch das Backup-AddOn löscht bewusst nicht die angelegten Backups im data-Ordner. Daher bitte die Hinweise in der jeweiligen AddOn-Dokumentation beachten.
 
 <a name="console"></a>
 
