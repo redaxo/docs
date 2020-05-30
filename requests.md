@@ -6,10 +6,22 @@ Die Request Funktionen werden in REDAXO verwendet, um mit den superglobalen Vari
 
 Die Funktionen rex_get, rex_post, rex_request, rex_files, rex_env und rex_cookie können mit folgenden Parametern aufgerufen werden (Beispiel für rex_get):
 
-`rex_get('var_name','var_type','default')`
+```php
+rex_get('var_name','var_type','default')
+```
 
-Für `var_type` sind folgende Werte gültig:
-`string`, `int`, `integer`, `bool`, `boolean`, `double`, `float`, `real`, `object`, `array`.
+#### Für **var_type** sind folgende Werte gültig:
+
+- string
+- int
+- integer
+- bool
+- boolean
+- double
+- float
+- real-
+- object
+- array
 
 Das Ergebnis wird dann in den entsprechenden Typ umgewandelt.
 
