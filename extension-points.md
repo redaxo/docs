@@ -19,7 +19,7 @@ Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als �
 
 Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.
 
-<a class="button-secondary" href=https://www.youtube.com/watch?v=jJP8aJ391eo">Zum Video bei YouTube</a>
+<a class="button-secondary" href="https://www.youtube.com/watch?v=jJP8aJ391eo">Zum Video bei YouTube</a>
 
 <a name="einsatz"></a>
 
