@@ -13,8 +13,9 @@
   - [package.yml](#package)
 - [Integration der Konsole in Phpstorm](#phpstorm)
 - [Tipps](#tipps)
+  - [Autovervollständiung](#tipp-autocomplete)
+  - [REDAXOHour Video Einführung](#tipp-video-einfuehrung)
 
-<a name="einfuehrung"></a>
 
 ## Einführung
 
@@ -173,12 +174,17 @@ Dies ist möglich, sobald das REDAXO Setup abgeschlossen wurde.
 
 ## Tipps
 
+
+<a name="tipp-autocomplete"></a>
+
 ### Autovervollständiung
 
 Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigungs-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes drücken der TAB Taste ausgelöst wird.
 
 
-### REDAXOHour Video
+<a name="tipp-video-einfuehrung"></a>
+
+### REDAXOHour Video Einführung
 
 Das Thema REDAXO Konsole wurde in einer REDAXOHour in einem LIVE-Stream erläutert. [Dieser wurde aufgezeichnet und steht zum abspielen zur Verfügung](https://www.youtube.com/watch?v=5tU5s7m9-tM).
 
