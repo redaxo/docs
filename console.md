@@ -32,7 +32,9 @@ Mögliche Einsatzzwecke:
 - Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websites (Deploy-Workflows)
 - via AddOns erweiterbar (Befehle registrierbar, siehe untenstehendes Beispiel)
 
-> [Im Rahmen einer REDAXOHour ist eine Videoeinführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=5tU5s7m9-tM) <a class="button-secondary" href="https://www.youtube.com/watch?v=5tU5s7m9-tM">Zum Video</a>
+Im Rahmen einer REDAXOHour ist eine Videoeinführung entstanden, die viele Punkte dieses Kapitels erklärt.
+
+<a class="button-secondary" href="https://www.youtube.com/watch?v=5tU5s7m9-tM">Zum Video bei YouTube</a>
 
 <a name="aufruf"></a>
 
