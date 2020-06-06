@@ -14,7 +14,7 @@
 - [Integration der Konsole in Phpstorm](#phpstorm)
 - [Tipps](#tipps)
   - [Autovervollständiung](#tipp-autocomplete)
-  - [REDAXOHour Video Einführung](#tipp-video-einfuehrung)
+
 
 
 ## Einführung
@@ -33,6 +33,8 @@ Konsole Befehle können unter anderem für folgende Aufgaben eingesetzt werden:
 - Fernwartung des Systems
 - Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websiten (Deploy-Workflows)
 - via AddOns erweiterbar (Kommandos registrierbar, siehe untenstehendes Beispiel)
+
+[Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=5tU5s7m9-tM)
 
 <a name="aufruf"></a>
 
@@ -180,12 +182,3 @@ Dies ist möglich, sobald das REDAXO Setup abgeschlossen wurde.
 ### Autovervollständiung
 
 Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigungs-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes drücken der TAB Taste ausgelöst wird.
-
-
-<a name="tipp-video-einfuehrung"></a>
-
-### REDAXOHour Video Einführung
-
-Das Thema REDAXO Konsole wurde in einer REDAXOHour in einem LIVE-Stream erläutert. [Dieser wurde aufgezeichnet und steht zum abspielen zur Verfügung](https://www.youtube.com/watch?v=5tU5s7m9-tM).
-
-Der Beispiel Befehl der im Video gezeigt wird, ist ebenfalls verfügbar und kann als [Grundlage für eigene Befehle](https://gist.github.com/staabm/76ca687d18d6d668b938bbe4da07cbcf) dienen.
