@@ -20,6 +20,8 @@
 
 Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden werden Möglichkeiten aufgezeigt, deine REDAXO-Installation zu reparieren.
 
+[Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=mpiI9ucTUSo)
+
 > **Hinweis:** Wir empfehlen auch vor einem Fehler, regelmäßige Backups zu erstellen. Datenbank-Backups können automatisiert über das Cronjob-AddOn erstellt werden.
 
 <a name="ooops"></a>
