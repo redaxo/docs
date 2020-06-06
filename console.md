@@ -24,7 +24,7 @@ REDAXO liefert mehrere CLI ("Command-line interface")-Befehle und Dienstprogramm
 Mögliche Einsatzzwecke:
 
 - [REDAXO Installation](/{{path}}/{{version}}/installation#console)
-- [AddOn-Installation / Deinstallation](/{{path}}/{{version}}/addon#console)
+- [AddOn-Installation / Deinstallation](/{{path}}/{{version}}/basis-addons#console)
 - Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
 - Automatisierung/Skripting von Abläufen mit Zugriff auf das System
 - Umgebung um sehr aufwändige Prozesse wie Migrationen, Report-Generierung o.ä. ablaufen zu lassen, ohne Timeouts etc.
