@@ -19,20 +19,18 @@
 
 ## Einführung
 
-Die Konsole ermöglicht REDAXO Funktionen direkt über das Commandline Interface (CLI) des Systems auszuführen. Dies kann genutzt werden, um Code unabhängig von einem HTTP Request direkt auf dem Server über die Systemconsole auszuführen.
+REDAXO liefert mehrere CLI ("Command-line interface")-Befehle und Dienstprogramme, die über die Konsole (console) ausgeführt werden können. Sie ermöglichen es u.a. REDAXO zu installieren, AddOns zu aktualisieren und den Entwicklungsprozess sowie Warungsarbeiten zu beschleunigen. AddOns oder PlugIns können den Funktionsumfang der Konsole um weiteren Befehle erweitern.
 
-AddOns oder PlugIns können den Funktionsumfang von REDAXO mit weiteren Konsolen Befehle erweitern.
+Mögliche Einsatzzwecke:
 
-Konsolen-Kommandos können unter anderem für folgende Aufgaben eingesetzt werden:
-
-- REDAXO-Installation
-- AddOn-Installation / Deinstallation
+- [REDAXO Installation](/{{path}}/{{version}}/installation#console)
+- [AddOn-Installation / Deinstallation](/{{path}}/{{version}}/addon#console)
 - Schnittstelle für erweitere/spezielle Funktionen/Vorgänge
 - Automatisierung/Skripting von Abläufen mit Zugriff auf das System
 - Umgebung um sehr aufwändige Prozesse wie Migrationen, Report-Generierung o.ä. ablaufen zu lassen, ohne Timeouts etc.
 - Fernwartung des Systems
 - Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websites (Deploy-Workflows)
-- via AddOns erweiterbar (Kommandos registrierbar, siehe untenstehendes Beispiel)
+- via AddOns erweiterbar (Befehle registrierbar, siehe untenstehendes Beispiel)
 
 > [Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=5tU5s7m9-tM)
 
@@ -65,9 +63,9 @@ Für Docker exec sollte man `-u username` an den Befehl anfügen.
 ## Hilfe
 
 Der einfache Aufruf der Konsole per `console` ohne Parameter liefert eine Liste aller
-aktuell verfügbaren Konsolen-Kommandos.
+aktuell verfügbaren Konsolen-Befehle.
 
-Um mehr Informationen und Optionen zu den einzelnen Kommando zu erhalten, fügt man dem Aufruf des Befehls `--help` als Parameter an.
+Um mehr Informationen und Optionen zum jeweiligen Befehl zu erhalten, fügt man dem Aufruf des Komanndos `--help` als Parameter an.
 
 z.B: `console cache:clear --help`
 
@@ -121,7 +119,7 @@ php redaxo/bin/console assets:sync
 
 Bei der Entwicklung von AddOns und PlugIns ist es beim Verwenden von Datenbank Tabellen notwendig, diese bei der Installation des AddOns/PlugIns anzulegen. Dafür bietet REDAXO eine Schema API, die es erlaubt Tabellen zu erzeugen und zu migrieren.
 
-Der dafür notwendige PHP Code lässt sich mittels Konsolen-Kommando erzeugen, um Ihn anschließend in die `install.php` zu kopieren.
+Der dafür notwendige PHP Code lässt sich mittels Konsolen-Befehl erzeugen, um Ihn anschließend in die `install.php` zu kopieren.
 
 ```console
 php redaxo/bin/console db:dump-schema <tabellenname>
