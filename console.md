@@ -32,7 +32,7 @@ Mögliche Einsatzzwecke:
 - Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websites (Deploy-Workflows)
 - via AddOns erweiterbar (Befehle registrierbar, siehe untenstehendes Beispiel)
 
-> [Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=5tU5s7m9-tM)
+> [Im Rahmen einer REDAXOHour ist eine Videoeinführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=5tU5s7m9-tM)
 
 <a name="aufruf"></a>
 
@@ -165,7 +165,7 @@ console_commands:
 
 Da die REDAXO Konsole auf der `symfony/console` Bibliothek aufsetzt, kann die [REDAXO Konsole wie eine herkömmliche Symfony-Console](https://www.jetbrains.com/help/phpstorm/symfony-support.html#use_symfony_cli) mit Phpstorm integriert werden.
 
-Dies ist möglich, sobald das REDAXO Setup abgeschlossen wurde.
+Dies ist möglich, sobald das REDAXO-Setup abgeschlossen wurde.
 
 
 
