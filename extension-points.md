@@ -364,9 +364,9 @@ PAGE_STRUCTURE_HEADER_PRE
 URL_REWRITE
 : Daten: keine
 : Parameter: ['id' => $id, 'clang' => $clang, 'params' => $params, 'separator' => $separator]
+```
 
 <a name="structure_content"></a>
-```
 
 ### Structure Content
 
