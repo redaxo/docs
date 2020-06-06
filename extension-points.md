@@ -17,6 +17,8 @@ Extension Points sind Stellen im REDAXO-Programmcode, an denen eigener Code eing
 
 Die Funktion bekommt an der Stelle der Codeausführung relevante Parameter als Übergabewerte, die sich von Extension Point zu Extension Point unterscheiden.
 
+[Im Rahmen einer REDAXOHour ist eine Video Einführung entstanden, die viele Punkte dieses Kapitels erklärt.](https://www.youtube.com/watch?v=jJP8aJ391eo)
+
 <a name="einsatz"></a>
 
 ## Einsatz eines Extension Points
