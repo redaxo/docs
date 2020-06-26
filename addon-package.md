@@ -35,12 +35,10 @@ page:
         main:  
              title: 'translate:main'
              icon: rex-icon fa-television
-             eigener: extra
         help:  
              title: 'translate:help'
              icon: rex-icon fa-help
              subPath: README.md
-             eigener: default
         module:
              title: 'translate:module'
              perm: admin
