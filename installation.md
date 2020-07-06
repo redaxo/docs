@@ -19,7 +19,7 @@ Für die Version 5.9 wird folgende Umgebung benötigt:
 
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 
-* Apache2, Nginx oder vergleichbarer Webserver
+* Apache2, Nginx oder ein vergleichbarer Webserver
 
 <a name="schnell"></a>
 
@@ -52,8 +52,8 @@ Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/co
 Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html` .
 Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
-> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie PLESK oder CPANEL an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
-> **Hinweis für MAC und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
+> **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie Plesk oder cPanel an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
+> **Hinweis für Mac und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
 Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern.
 
