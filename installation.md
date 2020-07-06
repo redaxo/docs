@@ -19,7 +19,7 @@ Für die Version 5.9 wird folgende Umgebung benötigt:
 
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 
-* Apache2, Nginx oder vergleichbarer Webserver
+* Apache2, Nginx oder ein vergleichbarer Webserver
 
 <a name="schnell"></a>
 
