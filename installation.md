@@ -88,11 +88,11 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 
 Schritt 3: Systemcheck
 
-**Hinweis für NGINX-Nutzer**
+**Hinweis für Nginx-Nutzer**
 
-> Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
+> Nutzer des Nginx-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für Nginx müssen die Direktiven selbst angelegt werden.
 
-Direktiven für NGINX:
+Direktiven für Nginx:
 
 ``` 
  location ^~ /redaxo/src { deny  all; }
