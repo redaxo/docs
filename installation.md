@@ -43,7 +43,8 @@ Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bere
 
 ## Download
 
-Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
+Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. 
+Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
 
 <a name="upload"></a>
 
