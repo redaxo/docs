@@ -19,7 +19,7 @@ Für die Version 5.9 wird folgende Umgebung benötigt:
 
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 
-* Apache2, Nginx oder ein vergleichbarer Webserver
+* Apache2, nginx oder ein vergleichbarer Webserver
 
 <a name="schnell"></a>
 
@@ -91,7 +91,7 @@ Schritt 3: Systemcheck
 
 **Hinweis für Nginx-Nutzer**
 
-> Nutzer des Nginx-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für Nginx müssen die Direktiven selbst angelegt werden.
+> Nutzer des Nginx-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für nginx müssen die Direktiven selbst angelegt werden.
 
 Direktiven für Nginx:
 
