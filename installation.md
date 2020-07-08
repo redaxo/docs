@@ -19,7 +19,7 @@ Für die Version 5.9 wird folgende Umgebung benötigt:
 
 **Empfohlen:** MySQL >=5.7.7 oder MariaDB >=10.2 für utf8mb4-Unterstützung
 
-* Apache2, Nginx oder ein vergleichbarer Webserver
+* Apache2, nginx oder ein vergleichbarer Webserver
 
 <a name="schnell"></a>
 
@@ -43,7 +43,8 @@ Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bere
 
 ## Download
 
-Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
+Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. 
+Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
 
 <a name="upload"></a>
 
@@ -88,11 +89,11 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 
 Schritt 3: Systemcheck
 
-**Hinweis für NGINX-Nutzer**
+**Hinweis für Nginx-Nutzer**
 
-> Nutzer des NGINX-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für NGINX müssen die Direktiven selbst angelegt werden.
+> Nutzer des Nginx-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für nginx müssen die Direktiven selbst angelegt werden.
 
-Direktiven für NGINX:
+Direktiven für Nginx:
 
 ``` 
  location ^~ /redaxo/src { deny  all; }
