@@ -21,7 +21,7 @@ Die nachfolgenden Lösungen zeigen den klassischen Weg via "FTP, SFTP, WebDAV"-D
 ## Umzug per Backup-AddOn
 
 * Die Datenbank der Quell-Präsenz wird mithilfe des [Backup](/{{path}}/{{version}}/backup)-AddOns ***auf dem Server*** gesichert.
-* Download aller Ordner und Dateien der REDAXO-Installation, z. B. per SFTP (FTP tool auf binary/binär Transfer einstellen)
+* Download aller Ordner und Dateien der REDAXO-Installation, z. B. per SFTP (Transfer-Einstellungen des FTP-Programms auf `binary/binär` einstellen)
 * Im Download unter `/redaxo/data/core/config.yml` die Zeile `setup` von `false` auf `true` stellen
 * Die Dateien auf den Ziel-Server übertragen
 * Website auf dem Zielserver aufrufen, das Setup wird aufgerufen
