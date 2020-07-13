@@ -30,7 +30,7 @@ Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
 * Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
 * Die ZIP-Datei auf dem eigenen Rechner entpacken.
-* Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/)> ausführen.
+* Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/)> ausführen. 
 * Alle [Installationschritte](#install) durchgehen.
 
 <a name="datenbank"></a>
@@ -50,7 +50,10 @@ Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/red
 
 ## Upload
 
-Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html` .
+Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`.
+
+> Bei Upload per FTP/SFTP: Die Transfer-Einstellungen des FTP-Programms sollten auf binary/binär eingestellt sein.
+
 Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hostingpartner.
 
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie Plesk oder cPanel an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
