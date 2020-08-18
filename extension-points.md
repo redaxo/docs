@@ -482,10 +482,6 @@ MEDIA_ADDED
 : Daten: keine
 : Parameter: $RETURN
 
-MEDIA_ADDED
-: Daten: keine
-: Parameter: $return
-
 MEDIA_DELETED
 : Daten: keine
 : Parameter: ['filename' => $filename]
