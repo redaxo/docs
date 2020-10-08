@@ -27,7 +27,6 @@
   + [plugin](#plugin)
   + [absolute](#absolute)
 * [URLs - rex_url](#rex_url)
-  + [init](#urlinit)
   + [base](#urlbase)
   + [frontend](#urlfrontend)
   + [frontendController](#urlfrontendController)
