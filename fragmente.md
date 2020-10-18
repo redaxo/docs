@@ -7,6 +7,7 @@
     - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
 - [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
   - [Beispiel: Eigene Fehlerseiten erstellen](#fehlerseiten)
+  - [Beispiel: Anmeldeseite (Login) individualisieren](#login)
 
 <a name="prinzip"></a>
 
@@ -160,3 +161,20 @@ Es gibt insgesamt 3 Fehlerseiten in REDAXO, davon sind aktuell zwei änderbar:
 ![Ooops Frontend ](/assets/v5.7.0-fragmente_ooops_fe.png)
 
 > Eine Fehlerseite sollte eine vollständige HTML-Seite sein (inkl. html, head, body,..), die keine externen Abhängigkeiten enthält (keine externen css-, js- Dateien, Bilder oder Fonts etc).
+
+<a name="login"></a>
+
+### Beispiel: Anmeldeseite (Login) individualisieren
+
+Seit REDAXO 5.12 ist es möglich, die Anmeldeseite mittels Fragmenten zu individualisieren, um beispielsweise ein Hintergrundbild einzubringen oder ein eigenes Logo zu verwenden.
+
+Die Anmeldeseite enthält zwei Core-Fragmente, die innerhalb eines `fragments`-Ordners im Project-AddOn (oder in einem beliebigen anderen AddOn) überschrieben werden können, also etwa so:
+
+* `redaxo/src/addons/project/fragments/login_background.php`
+* `redaxo/src/addons/project/fragments/login_branding.php`
+
+Um hier Anpassungen vorzunehmen, bietet sich an, nicht mit leeren Fragmenten zu beginnen, sondern zunächst die originalen Core-Fragmente aus `/redaxo/src/core/fragments/core` an die richtige Stelle zu kopieren, um auf dessen HTML-Struktur aufzubauen.
+
+Das Background-Fragment enthält das Hintergrundbild und den Footer für die Anmeldeseite. Der Footer ist vor allem deshalb enthalten, um auf die Bildquelle hinweisen zu können (Credits).
+
+Das Branding-Fragment enhält das REDAXO-Logo. Dies kann bei Bedarf ausgetauscht oder um ein weiteres Logo ergänzt werden.
