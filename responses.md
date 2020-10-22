@@ -93,7 +93,8 @@ Wenn keine automatische Kompression verfügbar ist, wird der Header für `Conten
 
 #### sendResource
 
-`sendResource($content, $contentType = null, $lastModified = null, $etag = null)` 
+`sendResource($content, $contentType = null, $lastModified = null, $etag = null, $contentDisposition = null, $filename = null)`, z.B.
+`rex_response::sendResource($content, 'Content-Type: application/pdf', time(), null, 'attachment', "Meine PDF-Datei als Download.pdf");`
 
 Verschickt eine Ressource über die Methoden `sendCacheControl` und `sendContent` .
 
