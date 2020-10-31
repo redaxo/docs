@@ -478,13 +478,13 @@ STRUCTURE_CONTENT_SLICE_UPDATED
 ### Medienpool
 
 ```
-MEDIA_ADDED
-: Daten: keine
-: Parameter: $RETURN
+MEDIA_ADD
+: Daten: $ERROR_MSG
+: Parameter: ['file' => $FILE, 'title' => $FILEINFOS['title'], 'filename' => $NFILENAME, 'old_filename' => $FILENAME, 'is_upload' => $isFileUpload 'category_id' => $rex_file_category, 'type' => $FILETYPE]
 
 MEDIA_ADDED
 : Daten: keine
-: Parameter: $return
+: Parameter: $RETURN
 
 MEDIA_DELETED
 : Daten: keine
