@@ -79,9 +79,9 @@ rex_sql_table::get(rex::getTable('foo'))->drop();
 
 #### get
 
-`get($name)`
+`get($name,$table)`
 
-Mit `rex_sql_table::get($name)` holt man sich das Objekt zu der Tabelle mit dem Namen `$name`. Diese Methode wird verwendet unabhängig davon, ob man eine existieren Tabelle abrufen, bzw. editieren möchte, oder ob man eine neue Tabelle erstellen möchte.
+Mit `rex_sql_table::get($name)` holt man sich das Objekt zu der Tabelle mit dem Namen `$name` und *optional* der Datebank $table (numerisch muss in der config.yml von REDAXO hinterlegt sein). Diese Methode wird verwendet unabhängig davon, ob man eine existieren Tabelle abrufen, bzw. editieren möchte, oder ob man eine neue Tabelle erstellen möchte.
 
 <a name="exists"></a>
 
