@@ -79,7 +79,8 @@
 - Datenbank
   - [Queries (rex_sql)](/{{path}}/{{version}}/datenbank-queries)
   - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
-  - [Prioritäten](/{{path}}/{{version}}/datenbank-prioritaeten) <sup><b>offen</b></sup>
+  - [Utilities](/{{path}}/{{version}}/datenbank-utilities) <sup><b>in Bearbeitung</b></sup> <sup><b>Skerbis</b></sup>
+  - 
  
 - Tipps und Links
   - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
