@@ -1,4 +1,4 @@
-# Dokumentation REDAXO 5.10
+# Dokumentation REDAXO 5.12
 
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen.
 
@@ -11,12 +11,7 @@ Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt 
 
 REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
 
-### Highlights
-
-* [Blöcke online/offline](/{{path}}/{{version}}/redaktion#status)
-* [REX_TEMPLATE_KEY und REX_MODULE_KEY](/{{path}}/{{version}}/redaxo-variablen)
-* [package.yml, default_config:](/{{path}}/{{version}}/addon-package#defaults)
-* [Neue Konsolen-Befehle für AddOns](/{{path}}/{{version}}/basis-addons#console)
+### Changelogs und Releasenotes
 
 Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
 [Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
