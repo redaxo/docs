@@ -19,6 +19,7 @@
   + [Onepage-Navigation](#custom-onepage)
     - [Onepage-Navigation mit Artikeln](#custom-onepage-artikel)
     - [Onepage-Navigation mit Modulen](#custom-onepage-module)
+    - [OnePage-Navi / Anker mit Slices](#custom-onepage-slices)
 
 <a name="factory-custom"></a>
 
@@ -619,4 +620,30 @@ if (count($items) > 0) {
 }
 
 echo $content;
+```
+<a name="custom-onepage-slices"></a>
+
+#### OnePage-Navi / Anker mit Slices
+
+Das eignet sich vor allem für lange Seiten, die hauptsächlich mit einem Modul gespeist werden. Das Modul kann auf der Seite ganz oben eingebaut werden und die Anker werden automatisch erzeugt. 
+
+Die Anpassungen können individuell gemacht werden. In diesem Fall hat das Modul die ID 36. Der dump kann zum Test verwendet werden welche Felder mit $slice->getValue(1); ausgegeben werden sollen. Hier könnte man auch mehrere Felder mit $out sammeln und am Ende ausgeben. In dem Beispiel wird auch berücksichtigt, dass der Slice-Block online steht mit true am Ende.
+
+``` php
+<!-- *******************************************************
+NAVIGATIONS-ANKER MIT SLICES OUTPUT
+******************************************************** -->
+
+<?php
+//dump(rex_article_slice::getSlicesForArticleOfType('REX_ARTICLE_ID','36'));
+$slices = rex_article_slice::getSlicesForArticleOfType('REX_ARTICLE_ID','36',false,0,true);
+echo '<ul>';
+  foreach ($slices as $slice)
+  {
+    $out        = $slice->getValue(1);
+    $ankertext  = rex_string::normalize($out);
+    echo '<li><a href="'.rtrim(rex::getServer(), "/").rex_geturl(REX_ARTICLE_ID).'#'.$ankertext.'">'.$out.'</a></li>';
+  }
+echo '</ul>';
+?>
 ```
