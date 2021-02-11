@@ -535,7 +535,7 @@ echo $content;
 
 Hier erzeugt ein Modul "Navigations-Anker" sowohl die Sprunganker als auch die Navigation. Die Website kann also aus einem einzigen Artikel bestehen.
 
-Im Eingabe-Code kann man den Navigationstitel und den Anker manuell setzen. Für den Anker könnte man auch den Titel nehmen und wie im Beispiel oben die Sonderzeichen mit `normalize()` entfernen.
+Im Eingabe-Code kann man den Navigationstitel und den Anker manuell setzen. Für den Anker könnte man auch den Titel nehmen und wie im vorherigen Beispiel die Sonderzeichen mit `normalize()` entfernen.
 
 ``` php
 <!-- *******************************************************
@@ -559,7 +559,7 @@ NAVIGATIONS-ANKER INPUT
 </fieldset>
 ```
 
-Der Ausgabe-Code setzt immer den Sprunganker an die Stelle, wo sich das Modul befindet. Um die Navigation aufzubauen, müssen die Werte gesammelt werden, um sie an der passenden Stelle im Template auszugeben. Dafür werden die Methoden `rex::getProperty()` und `rex::setProperty` verwendet, die im Kapitel [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften) näher erläutert werden.
+Der Ausgabe-Code setzt den Sprunganker an die Stelle, wo sich das Modul befindet. Um die Navigation aufzubauen, müssen die Werte gesammelt werden, um sie an der passenden Stelle im Template auszugeben. Dafür werden die Methoden `rex::getProperty()` und `rex::setProperty` verwendet, die im Kapitel [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften) näher erläutert werden.
 
 ``` php
 <!-- *******************************************************
@@ -567,6 +567,7 @@ NAVIGATIONS-ANKER OUTPUT
 ******************************************************** -->
 
 <?php
+$project = rex_addon::get('project');
 if ("REX_VALUE[1]" != '' && "REX_VALUE[2]" != '') {
  echo '
  <div id="REX_VALUE[2]"></div>';
@@ -580,7 +581,7 @@ if ("REX_VALUE[1]" != '' && "REX_VALUE[2]" != '') {
  if (rex::isFrontend()) {
   $items = array();
   $items = ['anchor' => 'REX_VALUE[2]', 'title' => 'REX_VALUE[1]'];
-  rex::getProperty('anchors')->append($items);
+  $project->getProperty('anchors')->append($items);
  } else {
   // Im Backend wird der Inhalt nur als Info für den Redakteur angezeigt
   if ('REX_VALUE[id=1 isset=1]') {
@@ -595,7 +596,8 @@ Im Template wird ganz zu Beginn das Array `anchors` definiert. dann wird der Inh
 Anschließend stehen die Daten zur Verfügung, um daraus die Navigation, bestehend aus Anker und Navigationstitel zu bauen. Anschließend an die Navigation wird der bereits geparste Content ausgegeben.
 
 ``` php
-rex::setProperty('anchors', new ArrayIterator());
+$project = rex_addon::get('project');
+$project->setProperty('anchors', new ArrayIterator());
 
 // Parse Content
 $content = $this->getArticle('1');
@@ -603,7 +605,7 @@ $content = $this->getArticle('1');
 
 <?php
 // Anker-Links der Module einlesen
-$items = rex::getProperty('anchors')->getArrayCopy();
+$items = $project->getProperty('anchors')->getArrayCopy();
     
 if (count($items) > 0) {
      
