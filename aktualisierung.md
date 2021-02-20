@@ -24,6 +24,13 @@ Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am 
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
+Es gibt Fälle, wo ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu kann man das aktuelle Redaxo-ZIP herunter laden und so vorgehen:
+
+* /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurück kopieren)
+* in /data/core/config.yml "setup: true" setzen
+* Setup durchlaufen lassen und dort "Update der Datenbank" auswählen; hier kann alternativ auch per CLI "Update database" ausgeführt werden:
+php redaxo/bin/console setup:run
+
 <a name="utf8mb4"></a>
 
 ## REDAXO auf utf8mb4 umstellen
