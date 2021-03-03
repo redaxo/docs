@@ -16,6 +16,8 @@
     - [getParsedUrl](#getparsedurl)
     - [removeColumn](#removecolumn)
     - [setCaption](#setcaption)
+    - [setRowAttributes](#setrowattributes)
+    - [getRowAttributes](#getrowattributes)
     - [setColumnFormat](#setcolumnformat)
     - [setColumnParams](#setcolumnparams)
     - [setColumnSortable](#setcolumnsortable)
@@ -174,6 +176,33 @@ Eine Spalte wird aus der Tabelle entfernt. Dies kann sinnvoll sein, wenn in der 
 
 Setzt einen Titel über die Tabelle. Beispiel: `setCaption( 'Teilnehmerliste' )` .
 Es wird innerhalb der Tabelle das *<caption>* Tag gesetzt.
+
+<a name="setrowattributes"></a>
+
+#### setRowAttributes
+
+`setRowAttributes(array $attributes)`
+
+`setRowAttributes(callable $customfunction)`
+
+Die Funktion ergänzt die Tabellenzeile im TR-Tag mit Attributen. Die Attribute werden als Array
+`['attribut' => wert,...]` übergeben und als `attribut="wert" ...` in den Tag eingebaut. Da der Wert auch
+Platzhalter enthalten darf, können Datensatzinhalte eingefügt werden: `['data-id' => '###id###,'class="marker-###privacy###"']`.
+Als Alternative zum Array kann eine Callback-Funktion übergeben werden, die ihrerseits die
+Attribute als String zurück gibt. Die Callback-Funktion kann komplexere Analysen im Datensatz
+durchführen. Beispiel: wenn die Datensatz-ID gleich der ID des zuletzt geänderten Datensatzes ist, wird die
+Zeile farblich hervorgehoben. 
+
+<a name="getrowattributes"></a>
+
+#### getRowAttributes
+
+`getRowAttributes()` 
+
+Die Funktion fragt die aktuell eingestellten Zeilen-Attribute ab. Rückgabe ist entweder
+- `null`, wenn keine Attribute gesetzt sind
+- ein Callable
+- ein Attribute-Array
 
 <a name="setcolumnformat"></a>
 
