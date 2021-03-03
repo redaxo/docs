@@ -39,6 +39,7 @@
 - [rex_sql_column](#column)
 - [rex_sql_index](#index)
 - [rex_sql_foreign_key](#foreign-key)
+- [rex_sql_util](#util)
 
 <a name="table"></a>
 
@@ -410,3 +411,18 @@ Parameter | Erklärung
 `$onDelete` | `ON DELETE`-Aktion: `rex_sql_foreign_key::RESTRICT` (default), `rex_sql_foreign_key::CASCADE` oder `rex_sql_foreign_key::SET_NULL`
 
 Über die Methoden `getName()`, `getTable()`, `getColumns()`, `getOnUpdate()` und `getOnDelete()` können die Werte abgefragt werden.
+
+<a name="util"></a>
+
+## rex_sql_table
+
+### Kopieren von Tabellenstrukturen und/oder Daten
+
+```php
+// Nur Tabellenstruktur kopieren von rex_table1 zu neuer Tabelle rex_table2
+rex_sql_util::copyTable('rex_table1', 'rex_table2');
+```
+```php
+// Tabellenstruktur und Daten kopieren
+rex_sql_util::copyTableWithData('rex_table1', 'rex_table2');
+```
