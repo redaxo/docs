@@ -170,12 +170,12 @@ Seit REDAXO 5.12 ist es möglich, die Anmeldeseite mittels Fragmenten zu individ
 
 Die Anmeldeseite enthält zwei Core-Fragmente, die innerhalb eines `fragments`-Ordners im Project-AddOn (oder in einem beliebigen anderen AddOn) überschrieben werden können, also etwa so:
 
-** Beispiel project-AddOn **
+**Beispiel project-AddOn**
 
 * `redaxo/src/addons/project/fragments/core/login_background.php`
 * `redaxo/src/addons/project/fragments/core/login_branding.php`
 
-** Beispiel theme-AddOn **
+**Beispiel theme-AddOn**
 
 * `theme/private/fragments/core/login_background.php`
 * `theme/src/addons/private/fragments/core/login_branding.php`
