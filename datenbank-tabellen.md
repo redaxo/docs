@@ -416,7 +416,7 @@ Parameter | Erklärung
 
 ## rex_sql_table
 
-### Kopieren von Tabellenstrukturen und/oder Daten
+### Kopieren von Tabellenstrukturen mit/oder ohne Daten
 
 ```php
 // Nur Tabellenstruktur kopieren von rex_table1 zu neuer Tabelle rex_table2
