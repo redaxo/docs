@@ -128,7 +128,7 @@ Bei der Ausgabe von Datensätzen oder längeren Listen wird häufig eine Paginie
 
 ```
 
-Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes AddOn in das Verzeichnis `fragments` kopiert und geändert werden. Wenn es dort unter dem Namen `mypagination.php` abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
+Hierbei wird das Fragment `/core/fragments/core/navigations/pagination.php` für die Ausgabe verwendet. Dieses Fragment kann auch in ein eigenes AddOn in das Verzeichnis `fragments/core` kopiert und geändert werden. Wenn es dort unter dem Namen `mypagination.php` abgelegt wird, so kann es ohne Pfadangabe aufgerufen werden:
 
 ```php
 echo $fragment->parse('mypagination.php');
@@ -170,8 +170,15 @@ Seit REDAXO 5.12 ist es möglich, die Anmeldeseite mittels Fragmenten zu individ
 
 Die Anmeldeseite enthält zwei Core-Fragmente, die innerhalb eines `fragments`-Ordners im Project-AddOn (oder in einem beliebigen anderen AddOn) überschrieben werden können, also etwa so:
 
+** Beispiel project-AddOn **
+
 * `redaxo/src/addons/project/fragments/core/login_background.php`
 * `redaxo/src/addons/project/fragments/core/login_branding.php`
+
+** Beispiel theme-AddOn **
+
+* `theme/private/fragments/core/login_background.php`
+* `theme/src/addons/private/fragments/core/login_branding.php`
 
 Um hier Anpassungen vorzunehmen, bietet sich an, nicht mit leeren Fragmenten zu beginnen, sondern zunächst die originalen Core-Fragmente aus `/redaxo/src/core/fragments/core` an die richtige Stelle zu kopieren, um auf dessen HTML-Struktur aufzubauen.
 
