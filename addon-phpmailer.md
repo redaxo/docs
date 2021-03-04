@@ -2,7 +2,7 @@
 
 * [Allgemeines](#allgemeines)
 * [Beispiele](#beispiele)
-* [E-Mail-Versand auf Testadresse umleiten]#testadress)
+* [E-Mail-Versand auf Testadresse umleiten](#testadress)
 * [E-Mail-Benachrichtigung bei Fehlern](#errormail)
 * [Senden über unterschiedliche Domains](#domains)
 * [SMTP-Debug](#debug)
