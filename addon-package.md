@@ -14,6 +14,7 @@
 * [Rechte (perm:)](#rechte)
 * [Übersetzung](#uebersetzung)
 * [Eigene Properties](#eigene)
+* [Properties der package.yml live überschreiben](#prop_overwrite)
 * [PJAX deaktivieren](#pjax)
 * [PlugIn](#plugin)
 
@@ -277,6 +278,20 @@ Mit `translate:` beginnende Werte werden anhand der Sprachdatei übersetzt. Der 
 
 Die package.yml ist sehr offen gestaltet. Daher kann man auch eigene Properties in ihr ablegen.
 Der Abruf erfolgt wie oben gezeigt per `rex_addon::get('addonkey')->getProperty($eigenerkey)` .
+
+<a name="prop_overwrite"></a>
+
+## Properties der package.yml live überschreiben
+
+Die in der package.yml eines AddOns hinterlegten Properties können zur Laufzeit überschrieben werden. 
+
+**Beispiel: Änderung der Paginierung der Struktur**
+
+Folgernder Code in z.B. der boot.php des project-AddOns bewirkt eine Änderung der Paginierung von default 50 auf 100: 
+
+```php
+rex_addon::get('structure')->setProperty('rows_per_page', 100);
+```
 
 <a name="pjax"></a>
 
