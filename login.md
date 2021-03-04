@@ -1,6 +1,6 @@
 # Login
 
-![Login](/assets/v5.2.0-login.png)
+![Login](/assets/v5.12.0-login.png)
 
 Das Backend ist die Verwaltungs- und Redaktionsoberfläche von REDAXO. Das Login (die Anmeldung) erfolgt durch ein Anhängen der Adresse /redaxo/ an die Domain, z. B.: http://www.domain.tld/redaxo/.
 
