@@ -33,7 +33,7 @@ Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald
 
 ### Debug-Modus aktivieren
 
-Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Außerdem werden keine immutable cache-http-header verwendet. Der Debug-Modus sollte im Live-Betrieb nicht aktiviert werden, da die Fehlermeldungen auch sensible Daten beinhalten können, darüber hinaus wird die Webpräsenz auf noindex gesetzt.  
+Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Außerdem werden keine immutable cache-http-header verwendet. **Der Debug-Modus sollte im Live-Betrieb nicht aktiviert werden**, da die Fehlermeldungen auch sensible Daten beinhalten können, darüber hinaus wird die Webpräsenz auf noindex gesetzt und ggf. aus dem Index diverser Suchmaschinen entfernt.   
 
 ### Safe mode aktivieren
 
@@ -41,7 +41,12 @@ Im Safe mode werden vorübergehend alle AddOns deaktiviert. Falls bspw. ein AddO
 
 ### Setup
 
-Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z. B. [Aktualisierung der Datenbank auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4))  
+Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z. B. [Aktualisierung der Datenbank auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4))
+
+- Der Aufruf des Setups behindert nicht den Betrieb der Seite im Frontend und ist durch einen Token gesichert. 
+- Die Gültigkeit des Tokens beträgt eine Stunde. 
+
+> Wenn der Betrieb der Website im Parallel-Beterieb mit dem Setup nicht erwünscht ist, sollte das Frontend serverseitig durch ein Passwort geschützt oder ein entsprechendes AddOn zur Sperrung genutzt werden. 
 
 <a name="lang"></a>
 
