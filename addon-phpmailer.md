@@ -2,6 +2,7 @@
 
 * [Allgemeines](#allgemeines)
 * [Beispiele](#beispiele)
+* [E-Mail-Versand auf Testadresse umleiten]#testadress)
 * [E-Mail-Benachrichtigung bei Fehlern](#errormail)
 * [Senden über unterschiedliche Domains](#domains)
 * [SMTP-Debug](#debug)
@@ -126,6 +127,12 @@ foreach($sql as $row)
 
 ```
 
+<a name="testadress"></a>
+## E-Mail-Versand auf Testadresse umleiten
+
+Wird diese Option aktiviert, werden alle über PHPMailer verschickten E-Mails an die Adresse für Testzwecke verschickt.
+
+
 <a name="errormail"></a>
 
 ## E-Mail-Benachrichtigung bei Fehlern
@@ -182,6 +189,8 @@ Das Log wird in der Datei `/redaxo/data/log/mail.log` gespeichert.
 ### E-Mail-Archivierung
 
 Bei eingeschalteter E-Mail-Archivierung werden alle E-Mails im Ordner `/redaxo/data/addons/phpmailer/mail_log` chronologisch nach Jahr und Monat in Unterordnern archiviert. Anhänge werden nicht gespeichert.
+
+Das E-Mail-Archiv kann über die Schaltfläche `E-Mail-Archiv löschen`vollständig gelöscht werden. 
 
 <a name="tipps"></a>
 
