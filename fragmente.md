@@ -178,7 +178,7 @@ Die Anmeldeseite enthält zwei Core-Fragmente, die innerhalb eines `fragments`-O
 **Beispiel theme-AddOn**
 
 * `theme/private/fragments/core/login_background.php`
-* `theme/src/addons/private/fragments/core/login_branding.php`
+* `theme/private/fragments/core/login_branding.php`
 
 Um hier Anpassungen vorzunehmen, bietet sich an, nicht mit leeren Fragmenten zu beginnen, sondern zunächst die originalen Core-Fragmente aus `/redaxo/src/core/fragments/core` an die richtige Stelle zu kopieren, um auf dessen HTML-Struktur aufzubauen.
 
