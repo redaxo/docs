@@ -195,7 +195,28 @@ anpassen.
 
 Die Blockauswahl nutzt ein das Fragment `module_select.php`, welches Default zum Core-Fragment für Dropdowns durchgeschleift wird.
 
-Möchte man die Blockauswahl im Dropdown verändern oder z.B. eine Info einschleusen, kann man das Fragment anpassen. Hierbei wird auch die Zusätzlich als Param die Modul-Id übergeben werden, sodass man Bilder, Übersetzungen etc. referenzieren kann. 
+Möchte man die Blockauswahl im Dropdown verändern oder z.B. eine Info einschleusen, kann man das Fragment anpassen. 
 
+Im `$items` Array werden alle nötigen Informationen zum Aufbau der Blockauswahl geliefert und die Bläcke können so beliebig manipuliert werden. 
+Möchte man auf das Standard-Select vom Core Verzichten und stattdessen eine eigene Variante erstellen z.B. zur Darstellung von Icons. Entfernt man das Subfragment und erzeugt eine eigene Logik. 
 
+#### Inhalt der module_select.php
+
+```php
+/**
+ * Discussion Issue #1174
+ * Manipulate this fragment to influence the selection of modules on the slice.
+ * By default the core fragment is used.
+ *
+ * @var bool $block
+ * @var string $button_label
+ * @var array $items           array contains all modules
+ *                  [0]          the index of array
+ *                      [id]     the module id
+ *                      [title]  the module name
+ *                      [href]   the module url
+ */
+
+$this->subfragment('/core/dropdowns/dropdown.php');
+```
 
