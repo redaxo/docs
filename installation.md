@@ -224,13 +224,13 @@ Die Options können kombiniert werden und so automatische Installationen realisi
 
 ![Docker Demos](/assets/v5.12.0-installation_docker.png)
 
-REDAXO lässt sich auch über Docker installieren und testen. Hierzu gibt es Images die durch die [FriendsOfRedaxo(FOR) Community](https://friendsofredaxo.github.io) gepflegt werden. 
+REDAXO lässt sich auch über Docker installieren und testen. Im Docker Hub werden von Friends Of REDAXO (FOR) verschiedene Images angeboten:
 
-**CMS-Installation**  
-REDAXO kann in Docker über das [FriendsOfRedaxo Community Image](https://hub.docker.com/r/friendsofredaxo/redaxo) installiert werden. 
+Das REDAXO-Image liefert ein fertig installiertes CMS, ganz frisch und ohne Inhalte. Es steht in drei Varianten (Apache, FPM, Alpine) und für mehrere PHP-Versionen bereit. Eine Anleitung zur Installation ist enthalten.  
+**REDAXO im Docker Hub:** [https://hub.docker.com/r/friendsofredaxo/redaxo](https://hub.docker.com/r/friendsofredaxo/redaxo)
 
-**Demo Images** mit fertigen Beispielen   
-Die Demos können über die [Docker website demo images](https://hub.docker.com/r/friendsofredaxo/demo) installiert werden. 
+Wer REDAXO nicht leer, sondern mit Beispiel-Inhalten installieren möchte, greift zu den drei beliebten Website-Demos, die innerhalb der Community entwickelt worden sind, um typische Anwendungsfälle für REDAXO aufzuzeigen: Die Basis-Demo für Einsteiger, die Community-Demo zur Einrichtung geschützter Nutzerbereiche und die Onepage-Demo mit drei Ansätzen zur Erstellung einer Website.  
+**Website-Demos im Docker Hub:** [https://hub.docker.com/r/friendsofredaxo/demo](https://hub.docker.com/r/friendsofredaxo/demo)
 
-
-
+Zur Einrichtung einer kompletten Entwicklungsumgebung für REDAXO bieten wir bei GitHub das Projekt »REDAXO mit Docker« an. Es führt Schritt für Schritt durch die Installation und liefert dabei nützliche Informationen. Deshalb eignet es sich hervorragend auch für den Einstieg ins Thema Docker.  
+**Anleitung bei GitHub:** [REDAXO mit Docker](https://github.com/FriendsOfREDAXO/redaxo-mit-docker)
