@@ -8,6 +8,7 @@
 - [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
   - [Beispiel: Eigene Fehlerseiten erstellen](#fehlerseiten)
   - [Beispiel: Anmeldeseite (Login) individualisieren](#login)
+  - [Artikel-Blockauswahl anpassen](#block)
 
 <a name="prinzip"></a>
 
@@ -185,3 +186,16 @@ Um hier Anpassungen vorzunehmen, bietet sich an, nicht mit leeren Fragmenten zu 
 Das Background-Fragment enthält das Hintergrundbild und den Footer für die Anmeldeseite. Der Footer ist vor allem deshalb enthalten, um auf die Bildquelle hinweisen zu können (Credits).
 
 Das Branding-Fragment enhält das REDAXO-Logo. Dies kann bei Bedarf ausgetauscht oder um ein weiteres Logo ergänzt werden.
+
+
+###Artikel-Blockauswahl anpassen ###
+
+Die Blockauswahl in der Artikelpflege kann den eigenen Wünschen entsprechend angepasst werden. Hierzu kann man das Fragment `slice_select.php
+` anpassen. 
+
+Die Blockauswahl nutzt ein das Fragment `slice_select.php`, welches Default zum Core-Fragment für Dropdowns durchgeschleift wird.
+
+Möchte man die Blockauswahl im Dropdown verändern oder z.B. eine Info einschleusen, kann man das Fragment anpassen. Hierbei wird auch die Zusätzlich als Param die Modul-Id übergeben werden, sodass man Bilder, Übersetzungen etc. referenzieren kann. 
+
+
+
