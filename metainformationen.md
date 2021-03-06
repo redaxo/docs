@@ -1,7 +1,7 @@
 # Metainformationen
 
 * [Über](#ueber)
-* [Anwendungsbeispiel](#anwendungsbeispiel)
+* [Anwendungsbeispiel](#beispiel)
 * [Meta Infos-AddOn](#addon)
 * [Metafelder](#metafelder)
 * [Feldattribute](#attribute)
@@ -12,6 +12,7 @@
   + [Kategorien](#kategorien)
   + [Medien](#medien)
   + [Sprachen](#sprachen)
+* [Metdafelder-Verwendung einschränken](#filter)
 * [Für AddOn-Developer](#developer)
 
  
@@ -215,6 +216,15 @@ rex_clang::getCurrent()->getValue('clang_setlocale'));
 REX_CLANG[field=clang_setlocale]
 REX_CLANG[id=2 field=clang_setlocale]
 ```
+
+
+<a name="filter"></a>
+
+## Metdafelder-Verwendung einschränken
+
+Die Verwendung der Metafelder auf Kategorien der Struktur und des Medienpools sowie für Templates (bei Artikel-Metainfos) im Setupdialog der Metainfo eingeschränkt werden. 
+
+
 
 <a name="developer"></a>
 
