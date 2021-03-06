@@ -18,7 +18,7 @@ Mehr dazu im erweiterten Kapitel: [Fragmente](/{{path}}/{{version}}/fragmente)
 
 für Zip, Loader und Docker
 
-[Zum Kapitel Installation](/{{path}}/{{version}}/fragmente)
+[Zum Kapitel Installation](/{{path}}/{{version}}/installation)
 
 
 ### Neue Konsolen-Befehle 
