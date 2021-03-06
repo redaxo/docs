@@ -153,7 +153,7 @@ $closest = $category->getClosest(function (rex_category $category) {
 Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Selector.
 
 ***Beispiel Prüfen ob der aktuelle Kategoriebaum offline ist.***
-`
+
 ``php
 if ($cat->getClosest(fn (rex_category $cat) => 0 == $cat->getValue('status'))) {
     // Alle Elterncats sind offline (also Status 0)
