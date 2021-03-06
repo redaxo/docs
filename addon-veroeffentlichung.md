@@ -11,6 +11,8 @@
   + [AddOn-Version erstellen](#anker-addon-version-erstellen)
 * [Updates](#updates)
   + [Updates testen, geheime AddOns](#testing)
+* [Meldungen nach erfolgreicher Installation ausgeben](#statusmsg)
+* [Meldung bei fehlerhafter Installation ausgeben](#error_install)
 
 Um eigene AddOns zu veröffentlichen sollten man folgenden Weg nehmen.
 
@@ -114,3 +116,28 @@ $addon->includeFile(__DIR__ . '/install.php');
 Mit hinterlegtem API-Key kann man über den Installer eigene, offline gestellte, AddOns/Versionen laden. Diese AddOn-Versionen sind nicht öffentlich. Auf diese Weise können Updates in Ruhe über den Installer getestet werden oder der Installer ggf. für private AddOn-Installationen genutzt werden.
 
 > Zu bedenken dabei ist, dass der API-Key auch Schreibrechte hat. Also **alle Administratoren** der REDAXO-Installation hätten damit Zugriff auf die eigenen AddOns. Sie könnten diese verändern, **zerstören** und auch **löschen**. Daher sollte der Key unbedingt wieder entfernt werden.
+> 
+
+<a name="statusmsg"></a>
+
+## Meldung nach erfolgreicher Installation ausgeben
+
+Es ist möglich im Installer eine Infordirekt nach erfolgter Installation auszugeben um z.B. auf die nächsten Schritte hinzuweisen. 
+
+```php
+$addon = rex_addon::get('mein_addon');
+$addon->setProperty('statusmsg', rex_i18n::msg('mein_addon_install_msg');
+```
+
+<a name="error_install"></a>
+
+## Meldung bei fehlerhafter Installation ausgeben
+
+Sollte was während der Installation schief laufen, kann man die Installation als nicht erfolgreich markieren und eine Fehlermeldung ausgeben. 
+
+```php 
+if ($something_bad_happened) {
+    $addon->setProperty('installmsg', 'Installation fehlgeschlagen');
+    $addon->setProperty('install', false);
+}
+```
