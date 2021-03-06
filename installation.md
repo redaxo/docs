@@ -220,6 +220,8 @@ Die Options können kombiniert werden und so automatische Installationen realisi
 
 ## Docker
 
+![Docker Demos](/assets/v5.12.0-installation_docker.png)
+
 REDAXO lässt sich auch über Docker installieren und testen. Hierzu gibt es Images die durch die [FriendsOfRedaxo(FOR) Community](https://friendsofredaxo.github.io) gepflegt werden. 
 
 **CMS-Installation**  
