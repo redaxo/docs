@@ -200,7 +200,7 @@ Möchte man die Blockauswahl im Dropdown verändern oder z.B. eine Info einschle
 Im `$items` Array werden alle nötigen Informationen zum Aufbau der Blockauswahl geliefert und die Bläcke können so beliebig manipuliert werden. 
 Möchte man auf das Standard-Select vom Core Verzichten und stattdessen eine eigene Variante erstellen z.B. zur Darstellung von Icons. Entfernt man das Subfragment und erzeugt eine eigene Logik. 
 
-#### Inhalt der module_select.php
+####Inhalt der module_select.php
 
 ```php
 /**
