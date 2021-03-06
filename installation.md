@@ -68,7 +68,7 @@ Der REDAXO-Loader bitetet einen vereinfachten Weg REDAXO auf einen Webspace zu k
 
 ### Abruf über der Kommandozeile
 
-```cli
+```console
 curl -JLO https://redaxo.org/loader
 ```
 
@@ -189,12 +189,12 @@ REDAXO kann über die Konsole `redaxo/bin/console` installiert werdern.
 Beispiel für REDAXO 5.12. Download per Curl. 
 
 **Download**
-```cli
+```console
 curl -JLO  https://redaxo.org/download/redaxo/5.12.0.zip
 ```
 
 **Entpacken**
-```cli
+```console
 unzip redaxo_5.12.0.zip
 ```
 
