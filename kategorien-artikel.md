@@ -6,10 +6,11 @@
 * [Module/Blöcke liefern die einzelnen Inhaltsblöcke](#module)
 * [Content-Bereiche (C-Types)](#ctypes)
 * [Metainformationen](#metainfos)
+* [Daten des aktuellen Artikels `rex_article`](#aktueller-artikel)
+* [Zugriff auf Kategorie-Daten `rex_category:`](#kategorie-daten)
 * [Code-Beispiele](#code-beispiele)
-  + [Zentrale Artikel in den Website-Einstellungen](#zentrale-artikel)
-  + [Daten des aktuellen Artikels](#aktueller-artikel)
-  + [Zugriff auf Kategorie-Daten](#kategorie-daten)
+  + [Auslesen der System-Artikeln](#system-artikel)
+
 
 <a name="strukturverwaltung"></a>
 
@@ -75,22 +76,6 @@ Den Umgang mit Metainformationen behandelt ein eigenes Kapitel [Metainformatione
 
 <a name="code-beispiele"></a>
 
-## Code-Beispiele
-
-Nachfolgend als Einstieg einige erste Beispiele für den Umgang mit Artikel- und Kategorie-Daten. Detaillierter findet man dies ersten Ansätze "zum Reinschnuppern" in den Kapiteln [Konfiguration](/{{path}}/{{version}}/konfiguration) sowie [Navigationen](/{{path}}/{{version}}/navigationen) erklärt.
-
-<a name="zentrale-artikel"></a>
-
-### Zentrale Artikel in den Website-Einstellungen
-
-```php
-// Start-Artikel der Website
-echo rex_article::getSiteStartArticle();
-
-// 404-Artikel
-echo rex_article::getNotfoundArticle();
-```
-
 <a name="aktueller-artikel"></a>
 
 ### Daten des aktuellen Artikels
@@ -146,4 +131,42 @@ dump($root_categories);
 // Unterkategorien der aktuellen Kategorie
 $subcategories = rex_category::getCurrent()->getChildren();
 dump($subcategories);
+
+// Prüfen ob eine Eltern-Kategorie ein bestimmtes Value hat
+// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// und bei der ersten stoppen, wo `cat_foo` gesetzt ist 
+// und den Wert liefern
+$foo = $category->getClosestValue('cat_foo');
+
+// Prüfen, ob die Kategorie und all ihre Parents online sind
+if ($category->isOnlineIncludingParents()) {}
+
+// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// und bei der ersten stoppen, wo die Callback `true` liefert 
+// und dann die Katgeorie zurückliefern
+$closest = $category->getClosest(function (rex_category $category) {
+    return $category->getValue('foo') > 3;
+});
 ```
+
+`$category->getClosest()` schaut von $category beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
+Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Selector.
+
+<a name="system-artikel"></a>
+
+## Auslesen der System-Artikel
+
+```php
+// Start-Artikel der Website
+echo rex_article::getSiteStartArticle();
+
+// 404-Artikel
+echo rex_article::getNotfoundArticle();
+```
+
+> In den Kapiteln [Konfiguration](/{{path}}/{{version}}/konfiguration) sowie [Navigationen](/{{path}}/{{version}}/navigationen) werden weitergehende Funktionen und Eigenschaften mit Beispielen erklärt. 
+
+
+
+
+
