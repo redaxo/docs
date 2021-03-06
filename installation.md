@@ -58,8 +58,7 @@ Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-
 <a name="loader"></a>
 ## Installation per REDAXO Loader
 
-![Sprachwahl](/assets/v5.12.0-loader.png)
-(Screenshot)
+![Screenshot](/assets/v5.12.0-loader.png)
 
 Der REDAXO-Loader bitetet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
 
@@ -200,6 +199,9 @@ unzip redaxo_5.12.0.zip
 
 Der Befehl lautet `php console setup:run` für den interaktiven Modus.
 Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi.
+
+![Console Screenshot](/assets/v5.12.0-installation_console.png)
+
 
 u.a.:
 
