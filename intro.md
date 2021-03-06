@@ -4,10 +4,30 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 > Wir freuen uns sehr über Mitarbeit bei der REDAXO-Dokumentation. Derzeit arbeiten Peter Bickel, Thomas Skerbis, Wolfgang Bund und Alexander Walther an der Dokumentation.
 
-Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), sodass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden.
+>Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), sodass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden.
 [Zur Dokumentation auf GitHub](https://github.com/redaxo/docs).
 
-## Neues in dieser Version
+## Neues in dieser Doku
+
+### Der neue Login-Screen lässt sich customizen
+![Login-Screen](/assets/v5.12.0-login.png)
+
+Mehr dazu im erweiterten Kapitel: [Fragmente](/{{path}}/{{version}}/fragmente)
+
+### Neue Installationsanleitung 
+
+für Zip, Loader und Docker
+
+[Zum Kapitel Installation](/{{path}}/{{version}}/fragmente)
+
+
+### Neue Konsolen-Befehle 
+
+z.B. `package:list` und `install:list`
+
+Mehr dazu im erweiterten Kapitel: [Konsole](/{{path}}/{{version}}/console)
+
+
 
 REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
 
