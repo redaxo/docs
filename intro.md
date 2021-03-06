@@ -27,6 +27,9 @@ z.B. `package:list` und `install:list`
 
 Mehr dazu im erweiterten Kapitel: [Konsole](/{{path}}/{{version}}/console)
 
+### Viele kleine Ergänzungen
+
+An vielen Stellen wurden Infos und Code ergänzt. Es lohnt sich also auch für die erfahrenen Nutzer*innen die Doku durchzustöbern. 
 
 
 REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
