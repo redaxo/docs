@@ -55,6 +55,8 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 
 Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern.
 
+Jetzt kann man den [Installationsvorgang/Setup](#install) starten. 
+
 <a name="loader"></a>
 ## Installation per REDAXO Loader
 
