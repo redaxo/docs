@@ -181,7 +181,22 @@ Schritt 7: Ende
 
 ## Installation per Konsole
 
-REDAXO kann alternativ auch über die Konsole `redaxo/bin/console` installiert werdern.
+REDAXO kann auch über die Konsole `redaxo/bin/console` installiert werdern.
+
+### Download und Entpacken
+
+Beispiel für REDAXO 5.12. Download per Curl. 
+
+**Download**
+```cli
+curl -JLO  https://redaxo.org/download/redaxo/5.12.0.zip
+```
+
+**Entpacken**
+```cli
+unzip redaxo_5.12.0.zip
+```
+
 
 Der Befehl lautet `php console setup:run` für den interaktiven Modus.
 Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi.
