@@ -133,7 +133,7 @@ php redaxo/bin/console db:dump-schema <tabellenname>
 
 ### package:list ###
 
-`package:list`Liefert informattionrn übrt installierte AddOns 
+`package:list`Liefert Informationen üebr installierte AddOns 
 
 Optionen: 
 
