@@ -29,6 +29,7 @@
 - [getTables](#gettables)
 - [getTablesAndViews](#gettablesandviews)
 - [hasValue](#hasvalue)
+- [in](#in)
 - [isNull](#isnull)
 - [getRows](#getrows)
 - [getFields](#getfields)
@@ -314,6 +315,19 @@ Gibt den Wert der aktuellen Zeile zurück. Über `fetch_type` kann festgelegt we
 `hasValue($feldname)`
 
 Prüft, ob eine Spalte vorhanden ist. Gibt `true` zurück, wenn die Spalte gefunden wurde, `flase`, wenn sie nicht gefunden wurde. Die Funktion kann auch mit einem vorangestellten Alias aufgerufen werden: `tablename.feldname`.
+
+<a name="in"></a>
+
+## in
+
+`in(array $values)`
+
+Bereitet ein Array von ints und/oder strings vor für den Einsatz in einem mysql IN (...) statement:
+
+```php 
+$sql = rex_sql::factory();
+$sql->setQuery('SELECT * FROM my_table WHERE my_col IN ('.$sql->in(['foo', 'bar']).')');
+```
 
 <a name="isnull"></a>
 
