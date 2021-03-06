@@ -113,7 +113,7 @@ Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Da
 
 ### Artikel
 
-Artikel-Metadaten werden vom Redakteur im Reiter Metadaten eines Artikels eingepflegt.   Die Daten können per PHP wie folgt ausgelesen werden:
+Artikel-Metadaten werden vom Redakteur in der Sidebar des Artikels gepflegt.  Die Daten können per PHP wie folgt ausgelesen werden:
 
 ```php
 // Beispiel Titelbild
@@ -125,7 +125,6 @@ $titleimage  =  rex_article::getCurrent()->getValue('art_titleimage');
 Die Daten können auch mittels REDAXO-Variable ausgelesen werden.
 
 ```html
->>>>>>> 7072b650176e504870baf1d0e0293b3f012a06d8
 REX_ARTICLE[field="art_titleimage"]
 ```
 
@@ -158,14 +157,12 @@ REX_CATEGORY[id=i field=cat_background]
 REX_CATEGORY[id=i field=cat_background clang=i]
 ```
 
-> **Hinweis:** In REDAXO 5 ist es nicht mehr nötig, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen.
+> **Hinweis:** Es ist nicht erforderlich, das Prefix `cat_` oder `art_` zu verwenden; REDAXO weiß, woher die Informationen kommen. Der Prefix wird nur dann benötigt, wenn Artikel und Kategorie ein gleichnamiges Metafeld besitzen.
 
 ```php
-$category = rex_category::getCurrent()->getValue('metafeld');
-$article = rex_article::getCurrent()->getValue('metafeld');
+$category = rex_category::getCurrent()->getValue('cat_metafeld');
+$article = rex_article::getCurrent()->getValue('art_metafeld');
 ```
-
-Der Parameter wird nur dann benötigt, wenn Artikel und Kategorie ein gleichnamiges Metafeld besitzen.
 
 <a name="medien"></a>
 
@@ -223,7 +220,6 @@ REX_CLANG[id=2 field=clang_setlocale]
 ## Metdafelder-Verwendung einschränken
 
 Die Verwendung der Metafelder auf Kategorien der Struktur und des Medienpools sowie für Templates (bei Artikel-Metainfos) im Setupdialog der Metainfo eingeschränkt werden. 
-
 
 
 <a name="developer"></a>
