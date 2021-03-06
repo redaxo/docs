@@ -68,6 +68,7 @@
 - [getServerVersion](#getserverversion)
 - [factory](#factory)
 - [checkDbConnection](#checkdbconnection)
+- [Informationen über Datenbank-Version/-Typ einholen](#version)
 
 <a name="queries_rex_sql"></a>
 
@@ -683,3 +684,23 @@ Standardmäßig wird auf die im System definierte Datenbankresource zugegriffen,
 `checkDbConnection($host, $login, $pw, $dbname, $createDb = false)` (public static)
 
 Prüft die übergebenen Zugangsdaten auf Gültigkeit und legt ggf. die Datenbank an.
+
+<a name="version"></a>
+
+## Informationen über Datenbank-Version/-Typ einholen
+
+Zusätzlich zu `rex_sql::getServerVersion()`gibt es zusätzlich zwei nicht-statische Methoden:
+
+`$sql->getDbType()`: liefert entweder "MySQL" (=== rex_sql::MYSQL) oder "MariaDB" (=== rex_sql::MARIADB)
+`$sql->getDbVersion()`: liefert die vereinfachte Version im Format X.Y.Z
+
+Letztere ist vor allem für MariaDB praktisch, da MariaDB vor ihre eigene Version immer "5.5.5-" setzt.
+
+**Beispiel**
+```php
+$sql = rex_sql::factory();
+$dbVersion = $sql->getDbVersion();
+$dbType = $sql->getDbType();
+```
+
+Ich würde die Methoden bei der utf8mb4-Umsetzung nutzen.
