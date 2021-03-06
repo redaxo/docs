@@ -25,7 +25,7 @@ Alle Medien, die im Medienpool verwaltet werden, befinden sich im Ordner `/media
 
 ## Liste der Medien
 
-![Liste der Medien / hier eine ausgewählte Kategorie](/assets/v5.2.0-medianpool-01-overview.png)
+![Liste der Medien / hier eine ausgewählte Kategorie](/assets/v5.12.0-medianpool-01-overview.png)
 
 Nach Aufruf des Medienpools über den Menüpunkt `Medienpool`, gelangt man direkt in die Liste der Medien. Hier werden alle Medien der aktuell gewählten Kategorie gelistet. Medien, die keiner Kategorie zugeordnet sind, werden in der Hauptebene unter `Keine Kategorie` gelistet. Zur Auswahl einer Kategorie steht ein Auswahlmenü neben der Suche zur Verfügung.
 
