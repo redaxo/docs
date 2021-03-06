@@ -58,6 +58,9 @@ Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-
 <a name="loader"></a>
 ## Installation per REDAXO Loader
 
+![Sprachwahl](/assets/v5.12.0-loader.png)
+(Screenshot)
+
 Der REDAXO-Loader bitetet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
 
 > Der Loader wird bei Erfolg automatisch vom Server gelöscht.  
