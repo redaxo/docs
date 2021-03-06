@@ -59,7 +59,7 @@ Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation �
 
 - Mit der Schaltfläche `Löschen` in der Detailansicht des Mediums entfernt man das Medium aus dem Medienpool un vom Server.
 
-### Löschen über Detailansicht
+### Löschen über Listenansicht
 
 - Zu löschende Dateien werden über die Checkboxen ausgewählt
 - Anschließend scrollen zum Ende der Liste
