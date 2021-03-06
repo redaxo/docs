@@ -188,7 +188,7 @@ Das Background-Fragment enthält das Hintergrundbild und den Footer für die Anm
 Das Branding-Fragment enhält das REDAXO-Logo. Dies kann bei Bedarf ausgetauscht oder um ein weiteres Logo ergänzt werden.
 
 <a name="block"></a>
-###Artikel-Blockauswahl anpassen
+### Artikel-Blockauswahl anpassen
 
 Die Blockauswahl in der Artikelpflege kann den eigenen Wünschen entsprechend angepasst werden. Hierzu kann man das Fragment `/redaxo/src/addons/structure/plugins/content/fragments/module_select.php`
 anpassen. 
