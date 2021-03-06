@@ -3,6 +3,7 @@
 - [Prinzip der Fragmente](#prinzip)
 - [Variablen in Fragmenten](#variablen)
 - [REDAXO-Fragmente nutzen](#fragmente-nutzen)
+- [Subfragmente](#subfragmente)
   - [Beispiel Paginierung](#paginierung)
     - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
 - [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
@@ -71,6 +72,21 @@ Ausgabe im Fragment:
 ## REDAXO-Fragmente nutzen
 
 Die in REDAXO vorliegenden Fragmente können für die eigene Ausgabe im Frontend oder im Backend genutzt werden.
+
+<a name="subfragmente"></a>
+
+## Subfragmente 
+
+`getSubfragment('path/to/file.php')`
+
+Ein Fragment kann ebenfalss Fragmente aufrufen und die sich darin befindlichen Parameter an die Subfragmente übergeben. 
+Dies hat den Vorteil dass man im Fragment auf Logik zur Übergabe verzichten kann. Ein Beispiel dafür ist das Fragment für die [Artikel-Blockauswahl]. 
+Hier gibt es ein Zwischenfragment welches alle Infos an ein Subfragment übergibt. So kann dieses Zwischenfragment durch z.B. AddOns überschrieben werden um die Daten darin zu verändern und ggf. wieder an die eigentliche Ausgabe des Subfragments übergeben. 
+
+**Beispiel***
+```php 
+$this->subfragment('/core/dropdowns/dropdown.php');
+```
 
 <a name="paginierung"></a>
 
