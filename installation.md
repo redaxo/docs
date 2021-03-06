@@ -55,6 +55,33 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 
 Die Ordnerrechte müssen auf `rwxrwxr-x (775)` und die Dateirechte auf `rw-r--r-- (644)` gestellt werden. Es ist jedoch sinnvoller den Besitzer des Installationsordners mithilfe von `chown` zu ändern.
 
+<a name="loader"></a>
+## Installation per REDAXO Loader
+
+Der REDAXO-Loader bitetet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
+
+> Der Loader wird bei Erfolg automatisch vom Server gelöscht.  
+
+### Abruf über der Kommandozeile
+
+```cli
+curl -JLO https://redaxo.org/loader
+```
+
+### Download des Loader per Browser
+
+[redaxo-loader.php](https://redaxo.org/loader)
+
+
+### Anwendung
+- redaxo_loader.php in den Webspace laden
+- redaxo_loader.php im Browser aufrufen
+- REDAXO Version auswählen
+
+Die erforderlichen Dateien werden auf den Server gespielt und der Installationsvorgang gestartet. 
+
+
+
 <a name="install"></a>
 
 ## Installationsvorgang
