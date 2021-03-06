@@ -4,7 +4,7 @@
 - [Variablen in Fragmenten](#variablen)
 - [REDAXO-Fragmente nutzen](#fragmente-nutzen)
 - [Subfragmente](#subfragmente)
-  - [Beispiel Paginierung](#paginierung)
+- [Beispiel Paginierung](#paginierung)
     - [Modulausgabe für die Paginierung](#ausgabe-paginierung)
 - [REDAXO-Fragmente überschreiben](#fragmente-ueberschreiben)
   - [Beispiel: Eigene Fehlerseiten erstellen](#fehlerseiten)
