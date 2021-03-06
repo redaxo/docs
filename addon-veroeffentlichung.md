@@ -9,7 +9,8 @@
   + [Eigenes AddOn](#anker-addon-version-eigenesaddon)
   + [AddOn-Version aktualisieren / löschen](#anker-addon-version-aktualisieren)
   + [AddOn-Version erstellen](#anker-addon-version-erstellen)
-* [Updates testen, geheime AddOns](#testing)
+* [Updates](#updates)
+  + [Updates testen, geheime AddOns](#testing)
 
 Um eigene AddOns zu veröffentlichen sollten man folgenden Weg nehmen.
 
@@ -89,9 +90,26 @@ Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml).
 
 AddOn erstellen
 
- <a name="testing"></a>
+<a name="updates"></a>
 
-## Updates testen, geheime AddOns
+## Updates
+Sind Aktualisierungen an Datenbanken und Konfigurationen erforderlich sollte dem AddOn eine `update.php` beigelegt sein. Diese wird automatisch beim Update eines AddOns ausgeführt. 
+
+Häufig reicht es, hier die `install.php`einzubinden, da dort bereits die allgemeinen Config-Properties und die Konfiguration der Datenbank mittels `rex_sql_table` sichergestellt werden.
+
+Weitergehende Anpassungen führt man dann nach dem include der install.php aus. 
+
+***Beispiel***
+
+```php 
+$addon = rex_addon::get('mein_addon');
+$addon->includeFile(__DIR__ . '/install.php');
+```
+
+
+<a name="testing"></a>
+
+### Updates testen, geheime AddOns
 
 Mit hinterlegtem API-Key kann man über den Installer eigene, offline gestellte, AddOns/Versionen laden. Diese AddOn-Versionen sind nicht öffentlich. Auf diese Weise können Updates in Ruhe über den Installer getestet werden oder der Installer ggf. für private AddOn-Installationen genutzt werden.
 
