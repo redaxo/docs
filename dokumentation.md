@@ -1,11 +1,11 @@
 - Einleitung
   - [Versionshinweise](/{{path}}/{{version}}/intro)
   - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
-  - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
   - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
   - [API-Dokumentation](/api/{{version}}/)
   - [Debugging](/{{path}}/{{version}}/debugging)
-
+  - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
+  - 
 - Setup
   - [Installation](/{{path}}/{{version}}/installation)
   - [Login](/{{path}}/{{version}}/login)
@@ -79,7 +79,6 @@
 - Datenbank
   - [Queries (rex_sql)](/{{path}}/{{version}}/datenbank-queries)
   - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
-  - [Utilities](/{{path}}/{{version}}/datenbank-utilities) <sup><b>in Bearbeitung</b></sup> <sup><b>Skerbis</b></sup>
  
 - Tipps und Links
   - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
