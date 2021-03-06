@@ -9,6 +9,7 @@
 * [Installation per REDAXO Loader](#loader)
 * [Installationsvorgang](#install)
 * [Installation per Kommandozeile](#console)
+* [Docker](#docker)
 
 <a name="system"></a>
 
@@ -214,3 +215,18 @@ Die Options können kombiniert werden und so automatische Installationen realisi
 [Siehe: Konsole](/{{path}}/{{version}}/console)
 
 > Mit der REDAXO Konsole können viele gängige Operationen durchführt werden, wie z. B. Installation, setzen von Config-Settings, Installation / Deinstallation von AddOns (packages)
+
+<a name="docker"></a>
+
+## Docker
+
+REDAXO lässt sich auch über Docker installieren und testen. Hierzu gibt es Images die durch die [FriendsOfRedaxo(FOR) Community](https://friendsofredaxo.github.io) gepflegt werden. 
+
+**CMS-Installation**  
+REDAXO kann in Docker über das [FriendsOfRedaxo Community Image](https://hub.docker.com/r/friendsofredaxo/redaxo) installiert werden. 
+
+**Demo Images** mit fertigen Beispielen   
+Die Demos können über die [Docker website demo images](https://hub.docker.com/r/friendsofredaxo/demo) installiert werden. 
+
+
+
