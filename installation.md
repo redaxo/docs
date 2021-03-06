@@ -1,14 +1,13 @@
 # Installation
 
 * [Systemanforderungen](#system)
-* [Installationswege]
-
-
-
-* [Schnellanleitung](#schnell)
-* [Datenbank](#datenbank)
-* [Download](#download)
-* [Upload](#upload)
+* [Installation per Zip-File](#zip)
+ * [Schnellanleitung](#schnell)
+ * [Datenbank](#datenbank)
+ * [Download](#download)
+ * [Upload](#upload)
+* [Installation per REDAXO Loader](#loader)
+* [Installation über die Kommandozeile](#cli)
 * [Installationsvorgang](#install)
 * [Installation per Konsole](#console)
 
@@ -18,11 +17,9 @@
 
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
 
-<a name="schnell"></a>
+<a name="zip"></a>
 
-## Schnellanleitung
-
-Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf einem Server oder Webspace.
+## Installation per Zip-File
 
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
 * Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
@@ -32,20 +29,20 @@ Die folgenden Abschnitte erläutern das Vorgehen zur Installation von REDAXO auf
 
 <a name="datenbank"></a>
 
-## Datenbank
+### Datenbank
 
 Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu sollten die Zugangsdaten vorhanden sein. Für die Installation werden die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank benötigt.
 
 <a name="download"></a>
 
-## Download
+### Download
 
 Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. 
 Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases.>
 
 <a name="upload"></a>
 
-## Upload
+### Upload
 
 Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`.
 
