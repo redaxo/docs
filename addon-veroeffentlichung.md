@@ -9,6 +9,7 @@
   + [Eigenes AddOn](#anker-addon-version-eigenesaddon)
   + [AddOn-Version aktualisieren / löschen](#anker-addon-version-aktualisieren)
   + [AddOn-Version erstellen](#anker-addon-version-erstellen)
+  + [Ausschließen von Development-Dateien im Package](#exclude)
 * [Updates](#updates)
   + [Updates testen, geheime AddOns](#testing)
 * [Meldungen nach erfolgreicher Installation ausgeben](#statusmsg)
@@ -91,6 +92,20 @@ Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml).
 ![AddOn erstellen](/assets/v5.3.0-installer-addon-version-erstellen.png)
 
 AddOn erstellen
+
+
+<a name="exclude"><a>
+
+## Ausschließen von Development-Dateien im Package
+
+Während der Entwicklung werden häufig Dateien benötigt, die im eigentlchen AddOn nicht erforderlich sind. Diese Dateien und Ordner kann man in der `package.yml` auf ignorieren setzen. Sie werden somit bei der AddOn-Veröffentlichung nicht mehr beachtet.   
+
+```php 
+installer_ignore:
+    - node_modules
+    - .env
+    - src
+```
 
 <a name="updates"></a>
 
