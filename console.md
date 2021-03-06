@@ -7,6 +7,8 @@
   - [Passwort setzen](#passwort-setzen)
   - [Datenbank Backup erzeugen/zurückspielen](#datenbank)
   - [Datenbank Schema als PHP exportieren](#dbschema-export)
+  - [package:list](#package-list)
+  - [install:list](#install-list)
   - [Core/AddOn/PlugIn assets synchronisieren](#asset-sync)
 - [Entwicklung eigener Konsolen-Skripte](#dev)
   - [run.php](#run)
@@ -126,6 +128,36 @@ Der dafür notwendige PHP Code lässt sich mittels Konsolen-Befehl erzeugen, um 
 ```console
 php redaxo/bin/console db:dump-schema <tabellenname>
 ```
+
+<a name="package-list"></a>
+
+### package:list ###
+
+`package:list`Liefert informattionrn übrt installierte AddOns 
+
+Optionen: 
+
+search : filtert die Liste nach dem Suchbegriff
+installed-only (-i) : zeigt nur installierte packages an
+activated-only (-a): zeigt nur installierte & aktivierte packages an
+using-exit-code: gibt je nach dem ob es zu den ausgewählten filtern ein Ergebnis gibt 0 oder 1 als exit-code zurück. Hilfreich bei Skripten
+json: liefert anstelle eine formatierten Tabelle ein json-string mit packages.
+
+<a name="install-list"></a>
+
+### install:list ###
+
+![Screenshot](/assets/v5.12.0-package_list.png)
+
+`install:list` listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
+
+Optionen:
+
+- `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
+- `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
+- `--json` - Gibt die Ausgabe als json string (für z.B. verarbeitung in skripten)
+
+
 
 <a name="dev"></a>
 
