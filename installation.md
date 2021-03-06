@@ -18,7 +18,7 @@
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
 
 <a name="zip"></a>
-
+<a name="schnell"></a>
 ## Installation per Zip-File
 
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
