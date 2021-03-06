@@ -7,9 +7,8 @@
   * [Download](#download)
   * [Upload](#upload)
 * [Installation per REDAXO Loader](#loader)
-* [Installation über die Kommandozeile](#cli)
 * [Installationsvorgang](#install)
-* [Installation per Konsole](#console)
+* [Installation per Kommandozeile](#console)
 
 <a name="system"></a>
 
@@ -178,9 +177,9 @@ Schritt 7: Ende
 
 <a name="console"></a>
 
-## Installation per Konsole
+## Installation über die Kommandozeile
 
-REDAXO kann auch über die Konsole `redaxo/bin/console` installiert werdern.
+REDAXO kann über die Konsole `redaxo/bin/console` installiert werdern. 
 
 ### Download und Entpacken
 
@@ -196,17 +195,21 @@ curl -JLO  https://redaxo.org/download/redaxo/5.12.0.zip
 unzip redaxo_5.12.0.zip
 ```
 
+### Setup starten
+
+Die Konsole befindet sich im Ordner `redaxo/bin`
 
 Der Befehl lautet `php console setup:run` für den interaktiven Modus.
 Die Hilfe per `php console setup:run --help` liefert mögliche Optionen und Modi.
 
 ![Console Screenshot](/assets/v5.12.0-installation_console.png)
 
-
 u.a.:
 
 * `--quiet` für eine Unterdrückung aller Ausgaben
 * `--no-interaction` für keine Interaktion
+
+Die Options können kombiniert werden und so automatische Installationen realisiert werden. 
 
 [Siehe: Konsole](/{{path}}/{{version}}/console)
 
