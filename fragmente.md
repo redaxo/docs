@@ -190,10 +190,10 @@ Das Branding-Fragment enhält das REDAXO-Logo. Dies kann bei Bedarf ausgetauscht
 <a name="block"></a>
 ###Artikel-Blockauswahl anpassen ###
 
-Die Blockauswahl in der Artikelpflege kann den eigenen Wünschen entsprechend angepasst werden. Hierzu kann man das Fragment `slice_select.php
-` anpassen. 
+Die Blockauswahl in der Artikelpflege kann den eigenen Wünschen entsprechend angepasst werden. Hierzu kann man das Fragment `/redaxo/src/addons/structure/plugins/content/fragments/module_select.php`
+anpassen. 
 
-Die Blockauswahl nutzt ein das Fragment `slice_select.php`, welches Default zum Core-Fragment für Dropdowns durchgeschleift wird.
+Die Blockauswahl nutzt ein das Fragment `module_select.php`, welches Default zum Core-Fragment für Dropdowns durchgeschleift wird.
 
 Möchte man die Blockauswahl im Dropdown verändern oder z.B. eine Info einschleusen, kann man das Fragment anpassen. Hierbei wird auch die Zusätzlich als Param die Modul-Id übergeben werden, sodass man Bilder, Übersetzungen etc. referenzieren kann. 
 
