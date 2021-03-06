@@ -42,6 +42,11 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus ak
 
 > Whoops-Fehlerseite mit Debug-Informationen
 
+Die Whoops-Meldung liefert die Codestellen und Fehlermeldungen zum aufgetretnenen Fehler. Die Infos können zudem kopiert werden. 
+
+Mit dem 'Report a bug Button' auf der Whoops Fehlerseite kann, falls erforderlich direkt ein Issue im REDAXO GitHub-Repo angelegt werden. **Bitte nur verwenden, wenn man sich sicher ist, dass es sich um einen Bug im Core handelt**.  
+
+
 <a name="systemlog"></a>
 
 ## Fehleranalyse: Die **system.log**-Datei
