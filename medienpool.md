@@ -98,6 +98,8 @@ Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die 
 
 ## Dateien synchronisieren
 
+> **Hinweis:** Diese Funktion steht nur zur Verfügung wenn die Benutzer das Recht admin oder das Recht `media[sync] :: Mediendateien synchronisieren` über ihre Rolle erhalten haben. 
+
 Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion `Dateien synchronisieren`. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner `/media` geladenen Dateien werden dann unter `betroffene Dateien` gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und danach die gewünschte Medienkategorie, wo die Dateien einsortiert werden sollen. Durch Klick auf `Synchronisieren` werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
-> **Achtung**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte möglichst vorher erfolgen.  
+> **Achtung**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte vorher erfolgen.  
