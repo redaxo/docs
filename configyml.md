@@ -108,3 +108,26 @@ editor: null
 editor_basepath: null
 
 ```
+
+| Knoten | Subknoten | Werte | Beschreibung |
+| ------ | --------- | ----- | ------------ |
+| setup |  | true/false/hash+DayTime | Legt fest, ob das Setup ausgeführt werden soll. Bei true wird das Setup ausgeführt. Wird das Setup über das Backend gestartet findet sich hier ein Hash und eine DateTime-Angabe die festlegt bis wann der Setupaufruf gültig ist.  |
+| debug | enabled | true/false | Startetet oder beenden den Debug-Modus |
+|  | throw\_always\_exception | true/false | Legt fest ob Exceptions immer ausgegeben werden sollen |
+| instname |  | rexXXXXXXXXXXXXXX | Eindeutiger Installationsname, Beispiel: rex20201222171044 |
+| server |  | url | Url zum Frontend der Website |
+| servername |  | string | Name der Website (wird meist im Titel ausgegeben)  |
+| error\_email |  | E-Mail-Adresse | E-Mail-Adresse an die Fehlerberichte geschickt werden sollen.  |
+| fileperm |  | numerischer Wert | Legt die allgemeinen Rechte für Dateien fest, z.B.: 0664 |
+| dirperm |  | numerischer Wert | Legt die allgemeinen Rechte für Ordner fest, z.B.: 0775 |
+| session\_duration |  | Sekunden | Legt die Session-Dauer fest |
+| session\_keep\_alive |  | Sekunden | Legt den Keep live-Zeitraum für die Session fest |
+| session | backend<br> cookie |  | Hier werden Einstellungen für das Cookie-Handling im Backend festgelegt.<br>Dazu gehören u.a Pfadangabe zur Cookie-Speicherung, Domain und Laufzeit |
+|  | frontend<br> cookie |  | Hier werden Einstellungen für das Cookie-Handling im Frontend festgelegt. |
+| <span class="pl-ent" style="box-sizing: border-box; color: var(--color-prettylights-syntax-entity-tag);">password\_policy</span> | length | numerischer Wert | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
+|  | lowercase | numerischer Wert | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
+|  | uppercase | numerischer Wert | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
+|  | <span class="pl-ent" style="box-sizing: border-box; color: var(--color-prettylights-syntax-entity-tag);">digit</span> | numerischer Wert | Wieviele Zahlen soll das Passwort enthalten |
+| lang |  | Sprachcode | Hier wird die default-Sprache festgelegt (Konfigurierbar im System)  |
+| <span class="pl-ent" style="box-sizing: border-box; color: var(--color-prettylights-syntax-entity-tag);">lang\_fallback</span> |  | Sparchcodes | Legt das Verhalten fest auf welche Sprachen REDAXO zurückspringen soll, wenn eine Übersetzung nicht gefunden wird.  |
+|  |  |  |  |
