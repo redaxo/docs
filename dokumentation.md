@@ -6,12 +6,14 @@
   - [Debugging](/{{path}}/{{version}}/debugging)
   - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
   - 
-- Setup
+- Setup und Administration
   - [Installation](/{{path}}/{{version}}/installation)
   - [Login](/{{path}}/{{version}}/login)
   - [System](/{{path}}/{{version}}/system)
+  - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
   - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
   - [Umzug einer Website](/{{path}}/{{version}}/umzug)
+  - [Konsole](/{{path}}/{{version}}/console)
 
 - Anwender
   - [Profil](/{{path}}/{{version}}/profil)
@@ -30,7 +32,6 @@
   - [AddOns](/{{path}}/{{version}}/basis-addons)
   - [Module](/{{path}}/{{version}}/module)
   - [Modul-Aktionen](/{{path}}/{{version}}/modul-aktionen)
-  - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
   - [Installer](/{{path}}/{{version}}/installer)
   - [Media Manager](/{{path}}/{{version}}/media-manager)
   - [Metainformationen](/{{path}}/{{version}}/metainformationen)
@@ -47,7 +48,6 @@
   - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
   - [Fragmente](/{{path}}/{{version}}/fragmente)
   - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
-  - [Konsole](/{{path}}/{{version}}/console)
   - [Listen (rex_list)](/{{path}}/{{version}}/listen)
   - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
   - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls)
