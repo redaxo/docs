@@ -47,6 +47,7 @@
   - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
   - [Fragmente](/{{path}}/{{version}}/fragmente)
   - [Konfiguration (rex_config)](/{{path}}/{{version}}/konfiguration)
+  - [Konsole](/{{path}}/{{version}}/console)
   - [Listen (rex_list)](/{{path}}/{{version}}/listen)
   - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
   - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls)
@@ -58,7 +59,6 @@
   - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
   - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
   - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
-  - [Konsole](/{{path}}/{{version}}/console)
 
 - Weitere System AddOns / PlugIns
   - [Backup](/{{path}}/{{version}}/backup)
