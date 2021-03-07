@@ -4,7 +4,7 @@
 * [Speicherort](#speicherort)
 * [Aufbau](#aufbau)
 * Beispiele
-  * [Passwort-Policies anpassen](policies)
+  * [Passwort-Policies anpassen](#policies)
 
 <a name="einleitung"></a>
 
