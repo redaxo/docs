@@ -166,7 +166,7 @@ editor_basepath: null
 | editor\_basepath |  |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
 
 
-## Beiepiele
+## Beispiele
 
 <a name="policies"></a>
 
