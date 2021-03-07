@@ -1,19 +1,19 @@
 - Einleitung
   - [Versionshinweise](/{{path}}/{{version}}/intro)
-  - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
   - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
   - [API-Dokumentation](/api/{{version}}/)
-  - [Debugging](/{{path}}/{{version}}/debugging)
   - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
-  - 
+  
 - Setup und Administration
   - [Installation](/{{path}}/{{version}}/installation)
+  - [Aktualisierung](/{{path}}/{{version}}/aktualisierung)
   - [Login](/{{path}}/{{version}}/login)
   - [System](/{{path}}/{{version}}/system)
   - [Benutzerverwaltung](/{{path}}/{{version}}/benutzerverwaltung)
   - [Passwort vergessen](/{{path}}/{{version}}/passwort-vergessen)
   - [Umzug einer Website](/{{path}}/{{version}}/umzug)
   - [Konsole](/{{path}}/{{version}}/console)
+  - [Debugging](/{{path}}/{{version}}/debugging)
 
 - Anwender
   - [Profil](/{{path}}/{{version}}/profil)
