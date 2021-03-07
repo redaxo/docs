@@ -18,8 +18,12 @@ Diese Zeile entspricht dem Passwort `redaxo-cms`. Melde dich nun mit deinem Benu
 
 > Dein Passwort muss unter allen Umständen geändert werden, um Fremdzugriffe zu verhindern! Dieses Passwort wird vermutlich als erstes von Dritten getestet, die sich unerlaubt Zugriff auf das System verschaffen wollen!
 
-## Änderung eines Passworts über die Konsole (ab REDAXO 5.6+)
+## Änderung eines Passworts über die Konsole
 
-Ein Passwort kann sehr einfach über die Konsole aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von `php console user:set-password <user> [<password>]` ein neues Passwort setzen.
+Ein Passwort kann sehr einfach über die Konsole aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von 
+```console
+php console user:set-password <user> [<password>]
+```
+ein neues Passwort setzen.
 
 Wurde das neue Passwort gespeichert, sollte folgende Meldung erscheinen: `[OK] Saved new password for user XYZ`
