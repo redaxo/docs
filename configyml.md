@@ -3,6 +3,8 @@
 * [Einleitung](#plugin)
 * [Speicherort](#speicherort)
 * [Aufbau](#aufbau)
+* Beispiele
+  * [Passwort-Policies anpassen](policies)
 
 <a name="einleitung"></a>
 
@@ -162,3 +164,42 @@ editor_basepath: null
 |  | add\_2 |  | char | Accesskey Hinzufügen, alternativ |
 | editor |  |  | Config-Wert | Legt den externen Code-Editor fest |
 | editor\_basepath |  |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
+
+
+## Beiepiele
+
+<a name="plocies"></a>
+
+### Passwort-Policies anpassen 
+
+Festlegen der Passwortregeln zur Verpflichtung der Redakteure neue Passwörter nach einem bestimmten Zeitraum festzulegen
+
+```yaml
+password_policy:
+    length:
+        min: 8
+        max: 4096
+    lowercase:
+        min: 1
+    uppercase:
+        min: 1
+    reuse_previous:
+        not_last: 6
+        not_months: 12
+    validity:
+        renew_months: 12
+        block_months: 24
+```
+
+Über die Keys `reuse_previous` und `validity` lassen sich folgende Einstellungen steuern:
+* `reuse_previous`:
+    - `not_last`: Wie viele der zuletzt benutzten Passwörter dürfen nicht erneut verwendet werden. Im Beispiel dürfen also die letzten 6 Passwörter nicht erneut verwendet werden
+    - `not_months`: Nach wie viel Monaten darf ein Passwort erneut verwendet werden
+    
+Wird beides gesetzt, gilt auch beides. Im Beispiel dürfen also sowohl die letzten 6 Passwörter, als auch alle Passwörter aus den letzten 12 Monaten nicht verwendet werden
+* `validity`:
+    - `renew_months`: Nach wie viel Monaten wird eine Passwortänderung nach dem Login erzwungen.
+    - `block_months`: Nach wie viel Monaten ohne Passwortänderung wird der Account gesperrt
+
+Im Beispiel muss man also nach 12 Monaten das Passwort ändern. Dazu wird man nach dem LogIn zwangsweise auf das Profil geleitet mit der Warnung, dass man das Passwort ändern muss. Versucht man aber erst nach 24 Monaten sich wieder einzuloggen, ist man gesperrt, man gelangt also auch nicht mehr zum Profil um das Passwort zu ändern. Diese Aufgabe muss dann ein Admin erledigen. 
+
