@@ -15,7 +15,7 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 | --- | --- | --- |
 |  | [**package.yml**](/{{path}}/{{version}}/addon-package)| Definiert das AddOn, grundlegende Einstellungen - Diese Detei ist **unbedingt erforderlich**  |
 |  | boot.php | Die boot.php wird bei jeder Aktion in REDAXO ausgeführt. Hier können beliebige Befehle ausgeführt werden |
-|  | help.php | Wird als Hilfeseite zum AddOn eingebunden |
+|  | help.php | Alternative zur Readme. Wird automatisch als Hilfeseite zum AddOn eingebunden, kann Programmcode enthalten.|
 |  | install.php | Wird automatisch bei der Installation ausgeführt. (z. B. Anlegen von Datenbanken, Installation von Modulen, bestimmte Prüfungen, Festlegen erster Konfigurationswerte |
 |  | uninstall.php | Gegenstück zu install.php. Hier können zusätzliche Deinstallationsschritte eingefügt werden.  |
 |  | install.sql | SQL-Datei, die bei der Installation ausgeführt wird |
