@@ -114,52 +114,51 @@ editor: null
 editor_basepath: null
 
 ```
-
-| Knoten | Subknoten | Werte | Beschreibung |
-| ------ | --------- | ----- | ------------ |
-| setup |  | true/false/hash+DayTime | Legt fest, ob das Setup ausgeführt werden soll. Bei true wird das Setup ausgeführt. Wird das Setup über das Backend gestartet findet sich hier ein Hash und eine DateTime-Angabe die festlegt bis wann der Setupaufruf gültig ist. |
-| debug | enabled | true/false | Startetet oder beenden den Debug-Modus |
-|  | throw\_always\_exception | true/false | Legt fest ob Exceptions immer ausgegeben werden sollen |
-| instname |  | rexXXXXXXXXXXXXXX | Eindeutiger Installationsname, Beispiel: rex20201222171044 |
-| server |  | url | Url zum Frontend der Website |
-| servername |  | string | Name der Website (wird meist im Titel ausgegeben) |
-| error\_email |  | E-Mail-Adresse | E-Mail-Adresse an die Fehlerberichte geschickt werden sollen. |
-| fileperm |  | numerischer Wert | Legt die allgemeinen Rechte für Dateien fest, z.B.: 0664 |
-| dirperm |  | numerischer Wert | Legt die allgemeinen Rechte für Ordner fest, z.B.: 0775 |
-| session\_duration |  | Sekunden | Legt die Session-Dauer fest |
-| session\_keep\_alive |  | Sekunden | Legt den Keep live-Zeitraum für die Session fest |
-| session | backend<br> cookie |  | Hier werden Einstellungen für das Cookie-Handling im Backend festgelegt.<br>Dazu gehören u.a Pfadangabe zur Cookie-Speicherung, Domain und Laufzeit |
-|  | frontend<br> cookie |  | Hier werden Einstellungen für das Cookie-Handling im Frontend festgelegt. |
-| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">password\_policy</span> | length | numerischer Wert | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
-|  | lowercase | numerischer Wert | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
-|  | uppercase | numerischer Wert | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
-|  | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">digit</span> | numerischer Wert | Wieviele Zahlen soll das Passwort enthalten |
-|  | reuse\_previous | not\_last | Wie viele der zuletzt benutzten Passwörter dürfen nicht erneut verwendet werden. Im Beispiel dürfen also die letzten 6 Passwörter nicht erneut verwendet werden |
-|  |  | not\_months | Nach wie viel Monaten darf ein Passwort erneut verwendet werden |
-|  | validity | renew\_months | Nach wie viel Monaten wird eine Passwortänderung nach dem Login erzwungen. |
-|  |  | block\_months | <span style="font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; caret-color: rgb(36, 41, 46); color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 14px; text-align: left; background-color: rgb(255, 255, 255); float: none; display: inline !important;">Nach wie viel Monaten ohne Passwortänderung wird der Account gesperrt</span> |
-| lang |  | Sprachcode | Hier wird die default-Sprache festgelegt (Konfigurierbar im System) |
-| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">lang\_fallback</span> |  | Sparchcodes | Legt das Verhalten fest auf welche Sprachen REDAXO zurückspringen soll, wenn eine Übersetzung nicht gefunden wird. |
-| use\_https |  | true, false, frontend, backend | Legt fest ob https für Frontend und / oder Backend genutzt werden soll. |
-| use\_hsts |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security) |
-| hsts\_max\_age |  | Sekunden | Legt die Laufzeit der HSTS-Einstellung fest |
-| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">use\_gzip</span> |  | true / false | Aktiviert oder deaktiviert die GZIP-Kompression |
-| use\_etag |  | true / false | Legt fest ob etag-Header ausgeliefert werden sollen |
-| use\_last\_modified |  | true / false | Legt fest ob ein last modified header ausgeliefert werden soll |
-| start\_page |  | addonkey | Legt die Standard-Startseite im Backend fest. ( Kann je Nutzer im Backend überschrieben werden) |
-| timezone |  | Zeitzone | Beispiel: <span class="colour" style="color:var(--color-prettylights-syntax-string)">Europe/Berlin</span> |
-| socket\_proxy |  | Adresse | Legt die Einstellungen  für einen Socket proxy fest |
-| setup\_addons |  | AddOn-Keys | Legt die AddOns fest, die während der Installation aktiv sein sollen |
-| system\_addons |  | AddOn-Keys | Legt die System-Addons fest. Sie werden automatisch installiert und sind auch im Debug-Modus verfügbar. |
-| table\_prefix |  | string | Legt das Prefix für die Tabellen fest, default rex\_ |
-| temp\_prefix |  | string | Legt das Prefix für temporäre Tabellen fast, default temp\_. Diese Tabellen werden bei einem Backup nicht beachtet. |
-| db | 1 |  | Legt die Verbindungseinstellungen für die Hauptdatenbank(1) und Pfade für eine TLS-Verbindung fest. |
-|  | 2 |  | Legt die Verbindungseinstellungen für die optionale 2. Datenbank und Pfade für eine TLS-Verbindung fest. |
-| use\_accesskeys |  | true / false | Sollen Accesskeys zur vereinfachten Bedienung im Backend angeboten werden? |
-| accesskeys | save | char | Accesskey Speichern |
-|  | apply | char | Accesskey Übernehmen |
-|  | delete | char | Accesskey Löschen |
-|  | add | char | Accesskey Hinzufügen |
-|  | add\_2 | char | Accesskey Hinzufügen, alternativ |
-| editor |  | Config-Wert | Legt den externen Code-Editor fest |
-| editor\_basepath |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
+| Knoten | Subknoten |  | Werte | Beschreibung |
+| ------ | --------- | --- | ----- | ------------ |
+| setup |  |  | true/false/hash+DayTime | Legt fest, ob das Setup ausgeführt werden soll. Bei true wird das Setup ausgeführt. Wird das Setup über das Backend gestartet findet sich hier ein Hash und eine DateTime-Angabe die festlegt bis wann der Setupaufruf gültig ist. |
+| debug | enabled |  | true/false | Startetet oder beenden den Debug-Modus |
+|  | throw\_always\_exception |  | true/false | Legt fest ob Exceptions immer ausgegeben werden sollen |
+| instname |  |  | rexXXXXXXXXXXXXXX | Eindeutiger Installationsname, Beispiel: rex20201222171044 |
+| server |  |  | url | Url zum Frontend der Website |
+| servername |  |  | string | Name der Website (wird meist im Titel ausgegeben) |
+| error\_email |  |  | E-Mail-Adresse | E-Mail-Adresse an die Fehlerberichte geschickt werden sollen. |
+| fileperm |  |  | numerischer Wert | Legt die allgemeinen Rechte für Dateien fest, z.B.: 0664 |
+| dirperm |  |  | numerischer Wert | Legt die allgemeinen Rechte für Ordner fest, z.B.: 0775 |
+| session\_duration |  |  | Sekunden | Legt die Session-Dauer fest |
+| session\_keep\_alive |  |  | Sekunden | Legt den Keep live-Zeitraum für die Session fest |
+| session | backend | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Backend festgelegt.<br>Dazu gehören u.a Pfadangabe zur Cookie-Speicherung, Domain und Laufzeit |
+|  | frontend<br>  | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Frontend festgelegt. |
+| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">password\_policy</span> | length |  | numerischer Wert | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
+|  | lowercase |  | numerischer Wert | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
+|  | uppercase |  | numerischer Wert | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
+|  | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">digit</span> |  | numerischer Wert | Wieviele Zahlen soll das Passwort enthalten |
+|  | reuse\_previous | not\_last |  | Wie viele der zuletzt benutzten Passwörter dürfen nicht erneut verwendet werden. Im Beispiel dürfen also die letzten 6 Passwörter nicht erneut verwendet werden |
+|  |  | not\_last |  | Nach wie viel Monaten darf ein Passwort erneut verwendet werden |
+|  | validity | renew\_months |  | Nach wie viel Monaten wird eine Passwortänderung nach dem Login erzwungen. |
+|  |  | block\_months |  | <span class="highlight" style="background-color:rgb(255, 255, 255)"><span class="colour" style="color:rgb(36, 41, 46)"><span class="font" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;"><span class="size" style="font-size:14px">Nach wie viel Monaten ohne Passwortänderung wird der Account gesperrt</span></span></span></span> |
+| lang |  |  | Sprachcode | Hier wird die default-Sprache festgelegt (Konfigurierbar im System) |
+| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">lang\_fallback</span> |  |  | Sparchcodes | Legt das Verhalten fest auf welche Sprachen REDAXO zurückspringen soll, wenn eine Übersetzung nicht gefunden wird. |
+| use\_https |  |  | true, false, frontend, backend | Legt fest ob https für Frontend und / oder Backend genutzt werden soll. |
+| use\_hsts |  |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security) |
+| hsts\_max\_age |  |  | Sekunden | Legt die Laufzeit der HSTS-Einstellung fest |
+| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">use\_gzip</span> |  |  | true / false | Aktiviert oder deaktiviert die GZIP-Kompression |
+| use\_etag |  |  | true / false | Legt fest ob etag-Header ausgeliefert werden sollen |
+| use\_last\_modified |  |  | true / false | Legt fest ob ein last modified header ausgeliefert werden soll |
+| start\_page |  |  | addonkey | Legt die Standard-Startseite im Backend fest. ( Kann je Nutzer im Backend überschrieben werden) |
+| timezone |  |  | Zeitzone | Beispiel: <span class="colour" style="color:var(--color-prettylights-syntax-string)">Europe/Berlin</span> |
+| socket\_proxy |  |  | Adresse | Legt die Einstellungen  für einen Socket proxy fest |
+| setup\_addons |  |  | AddOn-Keys | Legt die AddOns fest, die während der Installation aktiv sein sollen |
+| system\_addons |  |  | AddOn-Keys | Legt die System-Addons fest. Sie werden automatisch installiert und sind auch im Debug-Modus verfügbar. |
+| table\_prefix |  |  | string | Legt das Prefix für die Tabellen fest, default rex\_ |
+| temp\_prefix |  |  | string | Legt das Prefix für temporäre Tabellen fast, default temp\_. Diese Tabellen werden bei einem Backup nicht beachtet. |
+| db | 1 |  |  | Legt die Verbindungseinstellungen für die Hauptdatenbank(1) und Pfade für eine TLS-Verbindung fest. |
+|  | 2 |  |  | Legt die Verbindungseinstellungen für die optionale 2. Datenbank und Pfade für eine TLS-Verbindung fest. |
+| use\_accesskeys |  |  | true / false | Sollen Accesskeys zur vereinfachten Bedienung im Backend angeboten werden? |
+| accesskeys | save |  | char | Accesskey Speichern |
+|  | apply |  | char | Accesskey Übernehmen |
+|  | delete |  | char | Accesskey Löschen |
+|  | add |  | char | Accesskey Hinzufügen |
+|  | add\_2 |  | char | Accesskey Hinzufügen, alternativ |
+| editor |  |  | Config-Wert | Legt den externen Code-Editor fest |
+| editor\_basepath |  |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
