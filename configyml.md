@@ -3,7 +3,7 @@
 * [Einleitung](#plugin)
 * [Speicherort](#speicherort)
 * [Aufbau](#aufbau)
-* [Auslesen der Einstellungen](#rex_config)
+* [Auslesen der Einstellungen](#config)
 * Beispiele
   * [Passwort-Policies anpassen](#policies)
 
@@ -165,6 +165,8 @@ editor_basepath: null
 |  | add\_2 |  | char | Accesskey Hinzufügen, alternativ |
 | editor |  |  | Config-Wert | Legt den externen Code-Editor fest |
 | editor\_basepath |  |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
+
+<a name="config"></a>
 
 ## Auslesen der Einstellungen
 
