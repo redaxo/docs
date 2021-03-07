@@ -168,7 +168,7 @@ editor_basepath: null
 
 ## Beiepiele
 
-<a name="plocies"></a>
+<a name="policies"></a>
 
 ### Passwort-Policies anpassen 
 
