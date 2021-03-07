@@ -30,7 +30,7 @@ debug:
 instname: rex20201222171044
 server: 'https://domain.tld/'
 servername: 'REDAXO Website'
-error_email: skerbis@klxm.de
+error_email: user@domain.tld
 fileperm: '0664'
 dirperm: '0775'
 session_duration: 7200
