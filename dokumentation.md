@@ -14,6 +14,7 @@
   - [Umzug einer Website](/{{path}}/{{version}}/umzug)
   - [Konsole](/{{path}}/{{version}}/console)
   - [Debugging](/{{path}}/{{version}}/debugging)
+  - [config.yml](/{{path}}/{{version}}/config)
 
 - Anwender
   - [Profil](/{{path}}/{{version}}/profil)
