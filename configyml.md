@@ -2,6 +2,7 @@
 
 * [Einleitung](#plugin)
 * [Speicherort](#speicherort)
+* [Aufbau](#aufbau)
 
 <a name="einleitung"></a>
 
@@ -17,8 +18,9 @@ Der Speicherort ist `redaxo/data/core/config.yml`
 
 > Die config.yml wird bei einem Update nicht überschrieben und ist daher updatesicher.
 
+<a name="aufbau"></a>
 
-##  Beispiel config.yml
+##  Aufbau
 
 ```yml
 setup: false
