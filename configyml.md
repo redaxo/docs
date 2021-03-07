@@ -123,16 +123,16 @@ editor_basepath: null
 | server |  |  | url | Url zum Frontend der Website |
 | servername |  |  | string | Name der Website (wird meist im Titel ausgegeben) |
 | error\_email |  |  | E-Mail-Adresse | E-Mail-Adresse an die Fehlerberichte geschickt werden sollen. |
-| fileperm |  |  | numerischer Wert | Legt die allgemeinen Rechte für Dateien fest, z.B.: 0664 |
-| dirperm |  |  | numerischer Wert | Legt die allgemeinen Rechte für Ordner fest, z.B.: 0775 |
+| fileperm |  |  | digit | Legt die allgemeinen Rechte für Dateien fest, z.B.: 0664 |
+| dirperm |  |  | digit | Legt die allgemeinen Rechte für Ordner fest, z.B.: 0775 |
 | session\_duration |  |  | Sekunden | Legt die Session-Dauer fest |
 | session\_keep\_alive |  |  | Sekunden | Legt den Keep live-Zeitraum für die Session fest |
 | session | backend | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Backend festgelegt.<br>Dazu gehören u.a Pfadangabe zur Cookie-Speicherung, Domain und Laufzeit |
 |  | frontend<br>  | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Frontend festgelegt. |
-| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">password\_policy</span> | length |  | numerischer Wert | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
-|  | lowercase |  | numerischer Wert | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
-|  | uppercase |  | numerischer Wert | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
-|  | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">digit</span> |  | numerischer Wert | Wieviele Zahlen soll das Passwort enthalten |
+| <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">password\_policy</span> | length |  | digit | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
+|  | lowercase |  | digit | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
+|  | uppercase |  | digit | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
+|  | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">digit</span> |  | digit | Wieviele Zahlen soll das Passwort enthalten |
 |  | reuse\_previous | not\_last |  | Wie viele der zuletzt benutzten Passwörter dürfen nicht erneut verwendet werden. Im Beispiel dürfen also die letzten 6 Passwörter nicht erneut verwendet werden |
 |  |  | not\_last |  | Nach wie viel Monaten darf ein Passwort erneut verwendet werden |
 |  | validity | renew\_months |  | Nach wie viel Monaten wird eine Passwortänderung nach dem Login erzwungen. |
