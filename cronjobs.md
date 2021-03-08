@@ -59,6 +59,8 @@ Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob 
 
 Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einstellungen des AddOns zu starten.
 
+`Skript` ist die Umgebung die man nutzen sollte. `Frontend` und `Backend` sind Notlösungen, falls man `Skript` - z.B. aufgrund mangelnder Rechte auf dem Server - nicht einrichten kann. Dabei findet die Ausführung über den Cronjob das Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in Redaxo. In der Konfiguration des Cronjobs muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Crobjobs muss kleiner oder gleich sein, als das kleinste Intervall im Redaxo-Cronjob.
+
 <a name="ausfuehrung"></a>
 
 ### Ausführung
