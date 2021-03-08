@@ -150,7 +150,7 @@ editor_basepath: null
 | use\_last\_modified |  |  | true / false | Legt fest ob ein last modified header ausgeliefert werden soll |
 | start\_page |  |  | addonkey | Legt die Standard-Startseite im Backend fest. ( Kann je Nutzer im Backend überschrieben werden) |
 | timezone |  |  | Zeitzone | Beispiel: <span class="colour" style="color:var(--color-prettylights-syntax-string)">Europe/Berlin</span> |
-| socket\_proxy |  |  | Adresse | Legt die Einstellungen  für einen Socket proxy fest |
+| socket\_proxy |  |  | IP:Port | Legt die Einstellungen  für einen Socket proxy fest |
 | setup\_addons |  |  | AddOn-Keys | Legt die AddOns fest, die während der Installation aktiv sein sollen |
 | system\_addons |  |  | AddOn-Keys | Legt die System-Addons fest. Sie werden automatisch installiert und sind auch im Debug-Modus verfügbar. |
 | table\_prefix |  |  | string | Legt das Prefix für die Tabellen fest, default rex\_ |
