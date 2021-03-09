@@ -73,11 +73,10 @@ AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
 
 Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den Todo Workflow abbilden kann sondern auch für andere Zwecke verwendbar ist.
 
-### Sked-Kalender
+### FOR calendar
 
-Sked ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
+… ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
 
-[mehr lesen ...](https://redaxo.org/cms/addons/sked-der-kalender/)
 
 <a name="development"></a>
 
