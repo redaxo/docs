@@ -418,6 +418,8 @@ Parameter | Erklärung
 
 ### Kopieren von Tabellenstrukturen mit/oder ohne Daten
 
+> Beim Kopieren von REDAXO-Tabellen wird nicht automatisch der Prefix gesetzt. 
+
 ```php
 // Nur Tabellenstruktur kopieren von rex_table1 zu neuer Tabelle rex_table2
 rex_sql_util::copyTable('rex_table1', 'rex_table2');
