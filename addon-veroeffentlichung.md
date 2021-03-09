@@ -141,7 +141,7 @@ Es ist möglich im Installer eine Infordirekt nach erfolgter Installation auszug
 
 ```php
 $addon = rex_addon::get('mein_addon');
-$addon->setProperty('statusmsg', rex_i18n::msg('mein_addon_install_msg');
+$addon->setProperty('successmsg', rex_i18n::msg('mein_addon_install_msg');
 ```
 
 <a name="error_install"></a>
