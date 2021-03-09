@@ -414,7 +414,7 @@ Parameter | Erklärung
 
 <a name="util"></a>
 
-## rex_sql_table
+## rex_sql_util
 
 ### Kopieren von Tabellenstrukturen mit/oder ohne Daten
 
@@ -425,4 +425,9 @@ rex_sql_util::copyTable('rex_table1', 'rex_table2');
 ```php
 // Tabellenstruktur und Daten kopieren
 rex_sql_util::copyTableWithData('rex_table1', 'rex_table2');
+```
+
+### Beispiel
+```php
+ rex_sql_util::copyTableWithData(rex::getTablePrefix() . 'old_data',rex::getTablePrefix() . 'new_data');
 ```
