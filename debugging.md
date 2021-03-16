@@ -81,6 +81,17 @@ Der Debug-Modus darf unter keinen Umständen aktiviert werden, wenn die Website 
 
 Wir empfehlen, die Seite vorher durch einen `.htpasswd` -Verzeichnisschutz o.ä. zu schützen oder zumindest in einen Wartungsmodus zu versetzen, bspw. durch das AddOn `maintenance` . Zum Schutz von Entwickler und Betreiber werden im Debug-Modus alle header auf `noindex` gesetzt, um auch Suchmaschinenen daran zu hindern, sensible Daten durch die Debug-Ausgabe in den Suchmaschinen-Index aufzunehmen.
 
+### Konsole
+
+**Aktivieren**
+
+`php redaxo/bin/console config:set debug.enabled true --type bool`
+
+**Deaktivieren**
+
+`php redaxo/bin/console config:set debug.enabled false --type bool`
+
+
 <a name="configyml"></a>
 
 ## Debugging: Einstellungen in der **config.yml**
