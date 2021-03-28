@@ -26,9 +26,9 @@ Assets werden innerhalb von REDAXO im `assets` -Ordner des AddOns abgelegt. Eine
 
 ## Dateien einbinden
 
-Auf die Dateien eines AddOns zeigt die Variable `$this` mittels der Klasse [rex_addon](http://www.redaxo.org/docs/master/class-rex_addon.html).
+Auf die Dateien eines AddOns zeigt die Variable `$this` mittels der Klasse [rex_addon](https://friendsofredaxo.github.io/phpdoc/classes/rex-addon.html).
 
-Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [ `rex_view` ](http://www.redaxo.org/docs/master/class-rex_view.html) die Methoden `addCssFile` und `addJsFile` .
+Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [ `rex_view` ](https://friendsofredaxo.github.io/phpdoc/classes/rex-view.html) die Methoden `addCssFile` und `addJsFile` .
 
 ``` php
 //CSS-Datei einbinden

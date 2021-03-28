@@ -42,7 +42,7 @@ Beim Einsatz von URL-Rewrite-AddOns wie beispielsweise yRewrite werden "schöner
 
 <a name="rex-get-url"></a>
 
-## URLs formulieren mit [rex_getUrl](https://redaxo.org/api/master/source-function-rex_getUrl.html#9-55)
+## URLs formulieren mit [rex_getUrl](https://friendsofredaxo.github.io/phpdoc/namespaces/default.html#method_rex_getUrl)
 
 Wenn man Frontend-URLs zu internen REDAXO-Artikeln setzt, möchte man dies natürlich in einer Weise tun, die unabhängig von jeglichen Rewrite-Mechanismen immer funktioniert. Hierbei hilft die Funktion `rex_getUrl` .
 
@@ -161,4 +161,4 @@ rex_response::sendRedirect(rex_getUrl($article_id, $clang, $params, '&'));
 
 mit `rex_response::sendRedirect` kann man auch Umleitungen zu externen Seiten erstellen.
 
-Weitere Infos zu rex_response in der [REDAXO API Dokumentation](https://redaxo.org/api/master/class-rex_response.html)
+Weitere Infos zu rex_response in der [REDAXO API Dokumentation](https://friendsofredaxo.github.io/phpdoc/classes/rex-response.html)

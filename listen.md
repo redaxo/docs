@@ -76,7 +76,7 @@ In diesem einfachen Beispiel funktioniert der Pager im Frontend nicht. Damit der
 
 ### Formatierung und Verhalten der Liste
 
-Die Formatierung und das Verhalten der Liste kann weitestgehend konfiguriert werden. Hier werden nur die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der API-Dokumentation von REDAXO [https://redaxo.org/api/master/class-rex_list.html](https://redaxo.org/api/master/class-rex_list.html)
+Die Formatierung und das Verhalten der Liste kann weitestgehend konfiguriert werden. Hier werden nur die wichtigsten Methoden aufgeführt, die für eine Darstellung benötigt werden. Eine komplette Liste findet sich in der API-Dokumentation von REDAXO [https://friendsofredaxo.github.io/phpdoc/classes/rex-list.html](https://friendsofredaxo.github.io/phpdoc/classes/rex-list.html)
 
 <a name="addcolumn"></a>
 

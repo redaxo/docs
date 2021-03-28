@@ -1,6 +1,6 @@
 # Benutzerrechte
 
-In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen die den Benutzern zugeteilt werden können.  Die zuständige Klasse findet man hier: [rex_perm](http://www.redaxo.org/docs/master/class-rex_perm.html)
+In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen die den Benutzern zugeteilt werden können.  Die zuständige Klasse findet man hier: [rex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-perm.html)
 
 ## Definieren
 

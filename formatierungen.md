@@ -21,7 +21,7 @@
 
 ## Formatierungen rex_formatter
 
-Der `rex_formatter` formatiert Strings zu einem bestimmten Formattyp. Eine komplette Liste findet sich in der <https://redaxo.org/api/master/source-class-rex_formatter.html>
+Der `rex_formatter` formatiert Strings zu einem bestimmten Formattyp. Eine komplette Liste findet sich in der <https://friendsofredaxo.github.io/phpdoc/classes/rex-formatter.html>
 
 <a name="aufruf-von-rex-formatter"></a>
 

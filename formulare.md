@@ -86,7 +86,7 @@ Erstellt ein Bearbeitungsformular für die Tabelle *rex_adressen* und fügt drei
 
 ### Formatierung und Verhalten des Formulars
 
-Die Formatierung und das Verhalten des Formulars kann weitestgehend konfiguriert werden. Im Folgenden werden die wichtigsten Methoden aufgeführt. Eine komplette Liste findet sich in der [https://redaxo.org/api/master/class-rex_list.html](https://redaxo.org/api/master/class-rex_list.html)
+Die Formatierung und das Verhalten des Formulars kann weitestgehend konfiguriert werden. Im Folgenden werden die wichtigsten Methoden aufgeführt. Eine komplette Liste findet sich in der [https://friendsofredaxo.github.io/phpdoc/classes/rex-list.html](https://friendsofredaxo.github.io/phpdoc/classes/rex-list.html)
 
 <a name="geturl"></a>
 
