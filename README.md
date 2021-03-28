@@ -1,6 +1,6 @@
 # REDAXO Dokumentation
 
-Die aktuelle Live-Version ist hier ersichtlich: <https://redaxo.org/doku/master>
+Die aktuelle Live-Version ist hier ersichtlich: <https://redaxo.org/doku/main>
 
 ## Hinweise zur Mitarbeit
 
