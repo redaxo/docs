@@ -697,23 +697,22 @@ Es ist sehr leicht möglich, eigene REDAXO-Variablen zu erstellen. Hierfür muss
 Damit die Klasse erkannt wird, muss sie mit `rex_var_` beginnen und die Basisklasse `rex_var` erweitern. Die Methode `getOutput` muss zwingend vorhanden sein.
 Der erzeugten Variable stehen die [allgemeinen Parameter](#allgemeine-parameter) automatisch zur Verfügung. Weitere Parameter lassen sich sehr einfach hinzufügen.
 
+Zur Erleichterung der Implementierung sollte der Debug-Modus aktiviert sein.
+
 ### Beispiel
 
 ``` php
 <?php
 /**
-
-* Erstellt die Variable REX_WEBSITE_TITLE[]. Mit ihr kann der Website-Titel ausgegeben werden.
-* Optional ist es möglich die Ausgabe in Großbuchstaben oder Kleinbuchstaben umzuwandeln.
-
-*
-
-* Syntax:
-*     REX_WEBSITE_TITLE[] // Gibt den Titel aus
-*     REX_WEBSITE_TITLE[case=lower] // Gibt den Titel in Kleinbuchstaben aus
-*     REX_WEBSITE_TITLE[case=upper] // Gibt den Titel in Großbuchstaben aus
-
-*/
+ *
+ * Erstellt die Variable REX_WEBSITE_TITLE[]. Mit ihr kann der Website-Titel ausgegeben werden.
+ * Optional ist es möglich die Ausgabe in Großbuchstaben oder Kleinbuchstaben umzuwandeln.
+ *
+ * Syntax:
+ *     REX_WEBSITE_TITLE[] // Gibt den Titel aus
+ *     REX_WEBSITE_TITLE[case=lower] // Gibt den Titel in Kleinbuchstaben aus
+ *     REX_WEBSITE_TITLE[case=upper] // Gibt den Titel in Großbuchstaben aus
+ */
 class rex_var_website_title extends rex_var
 {
    protected function getOutput()
