@@ -55,6 +55,7 @@
   - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
   - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/file)
   - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
+  - [Benutzerrechte (rex_user, rex_perm)](/{{path}}/{{version}}/benutzerrechte)
   - [Responses (rex_response)](/{{path}}/{{version}}/responses)
   - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
   - [Socket <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket) <sup><b>offen</b></sup>
