@@ -263,7 +263,7 @@ Möchte man die Seite im eigenen Design ausgeben (z. B. in einem Popup) oder man
 
 ## Ein eigener Abschnitt in der Navigationsleiste (block:)
 
-Soll die eigene AddOn Seite nicht wie üblich unter `AddOns` sondern in einem eigenen Bereich aufgeführt werden, löst man das über den Key `block`. Das funktioniert auch Addon-übergreifend und man kann mehrere Seiten aus mehrern AddOns in einem eigenen Block organisieren.
+Soll die eigene AddOn-Seite nicht wie üblich unter `AddOns`, sondern in einem eigenen Abschnitt aufgeführt werden, löst man das über den Key `block`. Das funktioniert auch Addon-übergreifend und man kann mehrere Seiten aus mehreren AddOns in einem eigenen Abschintt organisieren.
 ``` yml
 page:
     title: 'translate:title'
