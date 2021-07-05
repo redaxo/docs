@@ -9,8 +9,10 @@
 * [Konflikte (conflicts:)](#conflicts)
 * [Dateien/Ordner ignorieren](#ignore)
 * [Seiten (page: / subpages:)](#seiten)
+  + [Mehrere Seiten in der Hauptnavigation](#pages-main)
   + [Seiten verstecken](#hidden)
   + [Seiten ohne Layout ausgeben](#haslayout)
+* [Eigener Bereich in der Redaxo Navigation (block:)](#block)
 * [Rechte (perm:)](#rechte)
 * [Übersetzung](#uebersetzung)
 * [Eigene Properties](#eigene)
@@ -218,6 +220,25 @@ Die einzelnen Tabs der Seiten können auch mit Icons versehen werden.
 **Die Seiten müssen im Ordner `/pages` als php-Dateien vorliegen.** (hier: `main.php` , `help.php` , `module.php` ).
 Die Hauptseite ist die `index.php` im /pages-Ordner.
 
+<a name="pages-main"></a>
+
+### Mehrere Seiten in der Hauptnavigation
+
+Benötigt man mehrere Seiten direkt in der Redaxo Navigation lässt sich das auch über die packages.yml steuern.
+Aus dem Key  `page` wird  `pages` und jede Seite muss um das Property  `main: 'true'` ergänzt werden. Außerdem bekommt jede Seite einen eigenen Key (z.B. myfirstpage).  Zu beachten ist auch, dass nun nicht mehr die index.php aufgerufen wird, sondern die Datei mit dem Namen des Keys (z.B. myfirstpage.php).
+``` yml
+pages:
+  myfirstpage:
+    title: 'translate:title-firstpage'
+    main: true
+    icon: rex-icon fa-user
+  mysecondpage:
+    title: 'translate:title-secondpage'
+    main: true
+    icon: rex-icon fa-group
+```
+
+
 <a name="hidden"></a>
 
 ### Seiten verstecken
@@ -237,6 +258,19 @@ Auch der eigentliche Menüpunkt des AddOns kann so versteckt werden.
 Möchte man die Seite im eigenen Design ausgeben (z. B. in einem Popup) oder man benötigt eine Ausgabe nicht im HTML-Format (z. B. für JSON, TXT, YML) hilft folgender Code in der Seiten-Definiton.
 
 `hasLayout: false` 
+
+<a name="block"></a>
+
+## Ein eigener Bereich in der Redaxo Navigation (block:)
+
+Soll die eigene AddOn Seite nicht wie üblich unter `AddOns` sondern in einem eigenen Bereich aufgeführt werden, löst man das über den Key `block`. Das funktioniert auch Addon-übergreifend und man kann mehrere Seiten aus mehrern AddOns in einem eigenen Block organisieren.
+``` yml
+page:
+    title: 'translate:title'
+    icon: rex-icon fa-television
+    block: 'translate:myOwnBlock'
+```
+
 
 <a name="rechte"></a>
 
