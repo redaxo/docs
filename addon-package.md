@@ -222,9 +222,9 @@ Die Hauptseite ist die `index.php` im /pages-Ordner.
 
 <a name="pages-main"></a>
 
-### Mehrere Seiten in der Hauptnavigation
+### Mehrere Seiten in der Navigationsleiste
 
-Benötigt man mehrere Seiten direkt in der Redaxo Navigation lässt sich das auch über die packages.yml steuern.
+Benötigt man mehrere Seiten direkt in der Navigationsleiste, lässt sich das auch über die `packages.yml` steuern.
 Aus dem Key  `page` wird  `pages` und jede Seite muss um das Property  `main: 'true'` ergänzt werden. Außerdem bekommt jede Seite einen eigenen Key (z.B. myfirstpage).  Zu beachten ist auch, dass nun nicht mehr die index.php aufgerufen wird, sondern die Datei mit dem Namen des Keys (z.B. myfirstpage.php).
 ``` yml
 pages:
