@@ -261,7 +261,7 @@ Möchte man die Seite im eigenen Design ausgeben (z. B. in einem Popup) oder man
 
 <a name="block"></a>
 
-## Ein eigener Bereich in der Redaxo Navigation (block:)
+## Ein eigener Abschnitt in der Navigationsleiste (block:)
 
 Soll die eigene AddOn Seite nicht wie üblich unter `AddOns` sondern in einem eigenen Bereich aufgeführt werden, löst man das über den Key `block`. Das funktioniert auch Addon-übergreifend und man kann mehrere Seiten aus mehrern AddOns in einem eigenen Block organisieren.
 ``` yml
