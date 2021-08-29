@@ -255,7 +255,7 @@ Somit wird sichergestellt, dass PHPMailer E-Mails unter der angegebenen Domain v
 Hierzu ggf. den Registrar oder DNS-Administrator kontaktieren.
 
 
-<a name="#domain_changed"></a>
+<a name="domain_changed"></a>
 
 ### Warum wird die Domain beim Absender geändert?
 
