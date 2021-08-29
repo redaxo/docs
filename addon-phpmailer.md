@@ -10,7 +10,7 @@
 * [Tipps](#tipps)
   + [Spam-Blocker](#spam-blocker)
   + [Verwendung bei selbstsignierten Zertifikaten](#zertifikate)
-  + [Warum wird die Domain beim Absender verändert?] (#domain_changed)
+  + [Warum wird die Domain beim Absender verändert?](#domain_changed)
 
 <a name="allgemeines"></a>
 
