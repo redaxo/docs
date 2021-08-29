@@ -10,6 +10,7 @@
 * [Tipps](#tipps)
   + [Spam-Blocker](#spam-blocker)
   + [Verwendung bei selbstsignierten Zertifikaten](#zertifikate)
+  + [Warum wird die Domain beim Absender verändert?] (#domain_changed)
 
 <a name="allgemeines"></a>
 
@@ -252,3 +253,11 @@ z. B. `a:meine-domain.tld ip4:XXX.XXX.XXX.XXX`
 Somit wird sichergestellt, dass PHPMailer E-Mails unter der angegebenen Domain versenden kann und die Mail nicht als SPAM deklariert wird.  
 
 Hierzu ggf. den Registrar oder DNS-Administrator kontaktieren.
+
+
+<a name="#domain_changed"></a>
+
+### Warum wird die Domain beim Absender geändert?
+
+In vielen Server-Konfigurationen sendet sendmail nur Mails wenn die Absender-Domain auch auf dem Server eingrichtet ist. Das gilt für den Versand per php mail() und sendmail. Abhilfe hierfür verschaffen das Einrichten der Domain auf dem Server oder der Versand über einen SMTP-Server.
+
