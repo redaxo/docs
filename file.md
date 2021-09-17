@@ -9,7 +9,7 @@
   - [putConfig](#rexfile_putConfig)
   - [putCache](#rexfile_putCache)
   - [copy](#rexfile_copy)
-  - [rename](#rexfile_rename)
+  - [move](#rexfile_move)
   - [delete](#rexfile_delete)
   - [extension](#rexfile_extension)
   - [mimeType](#rexfile_mimeType)
@@ -158,7 +158,7 @@ rex_file::copy($srcfile, $dstfile);
 
 ### rex_file::move
 
-Die Methode move ermöglicht das Verschieben einer einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
+Die Methode move ermöglicht das Verschieben oder Umbenennen einer einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
 
 ```php
 rex_file::move($srcfile, $dstfile);
