@@ -9,6 +9,12 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ## Neues in dieser Doku
 
+### Themes: Der neue Dark Mode
+
+- Benutzer: Auswahl des Themes auf der [Profilseite](/{{path}}/{{version}}/profil)
+- Administratoren: Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
+- AddOn-Entwicklung: Styling für Themes mittels [CSS oder Sass](/{{path}}/{{version}}/addon-assets) 
+
 ### Der neue Login-Screen lässt sich customizen
 ![Login-Screen](/assets/v5.12.0-login.png)
 

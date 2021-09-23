@@ -15,3 +15,16 @@ Zur eigenen Sicherheit und zum Schutze der Webpräsenz sollte das neue Passwort.
 - Sonder- oder Satzzeichen enthalten
 - keine Begriffe enthalten, die sich in einem Wörterbuch finden lassen
 - nicht weiteren Personen zugänglich sein
+
+## Backend-Theme auswählen
+
+Ab REDAXO 5.13 ist es Nutzern möglich, ein Backend-Theme auszuwählen, um die Farben der Benutzeroberfläche anzupassen. Aktuell stehen folgende Optionen zur Auswahl:
+
+- `Hell`  
+  Entspricht der bisher bekannten REDAXO-Oberfläche
+- `Dunkel`  
+  Besonders geeignet für Umgebungen mit wenig Licht (»Dark Mode«).
+- `Automatisch`  
+  Dies ist die Voreinstellung für alle neuen Nutzer. In diesem Modus entscheidet der Browser anhand der Systemeinstellungen eigenständig, welches Theme verwendet wird. Damit ist beispielsweise auch möglich, dass REDAXO tagsüber hell ausgegeben wird, nach Sonnenuntergang jedoch dunkel.
+
+Die Auswahl des Themes kann von Administratoren deaktiviert werden. Das Auswahlfeld ist dann nicht klickbar, und alle Nutzer erhalten das vorgegebene Theme.
