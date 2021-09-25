@@ -171,12 +171,12 @@ Beim Styling muss also beachtet werden, dass jeder Selektor zweimal angesprochen
 Alle Selektoren liegen doppelt vor und hängen sowohl an der <body>-Klasse und an der Media Query:
 
 ```css
-// Styles für den Dark Mode bei manueller Auswahl durch die Nutzer
+/* Styles für den Dark Mode bei manueller Auswahl durch die Nutzer */
 body.rex-theme-dark .addon-element-1 { … }
 body.rex-theme-dark .addon-element-2 { … }
 
 @media (prefers-color-scheme: dark) {
-	// Styles für den Dark Mode im Modus »Automatisch«
+	/* Styles für den Dark Mode im Modus »Automatisch« */
 	body:not(.rex-theme-light) .addon-element-1 { … }
 	body:not(.rex-theme-light) .addon-element-2 { … }
 }
@@ -197,12 +197,12 @@ Innerhalb des Mixins werden alle Styles für das Dark-Theme notiert. Anschließe
 }
 
 body.rex-theme-dark {
-    @include _addon-dark;
+	@include _addon-dark;
 }
 
 @media (prefers-color-scheme: dark) {
-    body:not(.rex-theme-light) {
-        @include _addon-dark;
-    }
+	body:not(.rex-theme-light) {
+		@include _addon-dark;
+	}
 }
 ```
