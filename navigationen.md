@@ -15,6 +15,7 @@
   + [Artikellisten](#custom-artikellisten)
     - [Artikel-Teaser für Unterkategorien](#custom-teaser)
     - [Alle Artikel in einer Kategorie auflisten](#custom-artikel-kategorie)
+  + [Kategorie-Liste](#katliste)
   + [Blätter-Navigation für Artikel](#custom-blaetter)
   + [Onepage-Navigation](#custom-onepage)
     - [Onepage-Navigation mit Artikeln](#custom-onepage-artikel)
@@ -385,6 +386,57 @@ if (is_array($articles) && count($articles) > 0) {
  </ul>';
 }
 ?>
+```
+
+<a name="katliste"></a>
+### Kategorieliste einer festgelegten Kategorie
+
+Zunächst benötigt mann eine Lösung eine Kategorie auswählen zu können. Das wird in der Eingabe des Moduls mit `rex_category_select` realisiert. 
+
+#### Moduleingabe 
+
+```php 
+<div class="form-group">
+    <label class="col-sm-5 control-label">Kategorieauswahl</label>
+    <div class="col-sm-7">
+        <?php
+        // Bereitstellen einer Kategorieauswahl
+        $select = new rex_category_select($ignore_offlines = false, $clang = false,  $check_perms = true, $add_homepage = false);
+        $select->setName("REX_INPUT_VALUE[1]");
+        // Legt fest welcher Wert ausgewählt werden soll, hier der Wert von REX_VALUE[1]
+        $select->setSelected("REX_VALUE[1]");
+        // style für das Select festlegen
+        $select->setAttribute('class', 'form-control');
+        // Live-Suche hinzufügen
+        $select->setAttribute('data-live-search', 'true');
+        $select->setSize(20);
+        echo $select->get();
+        ?>
+    </div>
+</div>
+```
+#### Modulausgabe 
+
+```php
+<?php
+$catoutput = $cat = $cats = $catName = $catId = $catUrl = "";
+// Ermittelm n der Kategorie aus Moduleingabe
+$cat = rex_category::get('REX_VALUE[1]');
+// Kinder ermitteln
+$cats = $cat->getChildren();
+if ($cats) {
+    foreach ($cats as $cat) {
+        if ($cat->isOnline()) {
+            $catId = $cat->getId(); // ID ermitteln
+            $catName = $cat->getName(); // Name der Kategorie
+            $catUrl =  rex_getUrl($catId); // Url anhand ID ermitteln
+            // Zwischenspeichern des Ergebnisses
+            $catoutput .= '<li><a href="' . $catUrl . '">' . $catName . '<a></li>' . "\n";
+        }
+    }
+    echo '<ul class="catlist">' . $catoutput . '</ul>';
+    unset($cats);
+}
 ```
 
 <a name="custom-blaetter"></a>
