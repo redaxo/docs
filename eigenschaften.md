@@ -170,7 +170,16 @@ Liest die Eigenschaft des Wertes, der zuvor über `setProperty` gespeichert wurd
 Beispiel:
 `rex::getProperty('myvar')` => Inhalt des zuvor über `rex::setProperty('myvar',$var)` gespeicherten Wertes.
 
-Die Werte können von einem beliebigen Typ sein.
+Die Werte können von einem beliebigen Typ sein. ,z.B.: 
+
+Wenn man weiß, dass ein Array in einem `rex_addon`- oder `rex_config`-Wert existiert, kann man dieses direkt abfragen:
+
+```php
+rex_addon::get('addonname')->getProperty('arrayroot')['key']['subkey']
+
+rex_config::get('key')->getProperty('arrayroot')['key']['subkey']
+```
+
 
 Siehe auch: [setProperty](#set-property), [hasProperty](#has-property) und [removeProperty](#remove-property)
 
