@@ -154,13 +154,13 @@ Das Styling erfolgt deshalb sowohl über eine Klasse am `<body>` als auch mittel
 
 ```css
 body.rex-theme-dark {
-    …
+	…
 }
 
 @media (prefers-color-scheme: dark) {
-    body:not(.rex-theme-light) {
-        …
-    }
+	body:not(.rex-theme-light) {
+		…
+	}
 }
 ```
 
