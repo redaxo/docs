@@ -184,7 +184,7 @@ body.rex-theme-dark .addon-element-2 { … }
 
 ### Sass:
 
-Zunächst wird ein beispielhaftes Mixin `_addon-dark` definiert. Zu beachten ist dabei, dass Sass-Mixins üblicherweise global vorliegen. Um Konflikte zu vermeiden, bietet sich deshalb an, immer eindeutige Bezeichnungen zu verwenden. Der Unterstrich am Anfang ist nicht notwendig und soll lediglich vermitteln, dass es sich um ein privates Mixin handelt, das nicht global verwendet werden soll.
+Zunächst wird ein beispielhaftes Mixin `_addon-dark` definiert. Zu beachten ist dabei, dass Mixins üblicherweise global vorliegen. Um Konflikte zu vermeiden, bietet sich deshalb an, immer eindeutige Bezeichnungen zu verwenden. Der Unterstrich am Anfang ist nicht notwendig und soll lediglich vermitteln, dass es sich um ein privates Mixin handelt, das nicht global verwendet werden soll.
 
 Innerhalb des Mixins werden alle Styles für das Dark-Theme notiert. Anschließend wird das Mixin in beiden Kontexten inkludiert.
 
@@ -203,6 +203,27 @@ body.rex-theme-dark {
 @media (prefers-color-scheme: dark) {
 	body:not(.rex-theme-light) {
 		@include _addon-dark;
+	}
+}
+```
+
+### Less:
+
+
+```less
+._addon-dark() {
+	// Alle Styles für den Dark Mode werden hier notiert
+	.addon-element-1 { … }
+	.addon-element-2 { … }
+}
+
+body.rex-theme-dark {
+	._addon-dark();
+}
+
+@media (prefers-color-scheme: dark) {
+	body:not(.rex-theme-light) {
+		._addon-dark();
 	}
 }
 ```
