@@ -189,7 +189,7 @@ Zunächst wird ein beispielhaftes Mixin `_addon-dark` definiert. Zu beachten ist
 Innerhalb des Mixins werden alle Styles für das Dark-Theme notiert. Anschließend wird das Mixin in beiden Kontexten inkludiert.
 
 
-```sass
+```scss
 @mixin _addon-dark {
 	// Alle Styles für den Dark Mode werden hier notiert
 	.addon-element-1 { … }
