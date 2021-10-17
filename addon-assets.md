@@ -158,7 +158,7 @@ body.rex-theme-dark {
 }
 
 @media (prefers-color-scheme: dark) {
-	body:not(.rex-theme-light) {
+	body.rex-has-theme:not(.rex-theme-light) {
 		…
 	}
 }
@@ -168,7 +168,7 @@ Beim Styling muss also beachtet werden, dass jeder Selektor zweimal angesprochen
 
 ### CSS:
 
-Alle Selektoren liegen doppelt vor und hängen sowohl an der <body>-Klasse und an der Media Query:
+Alle Selektoren liegen doppelt vor und hängen sowohl an der `<body>`-Klasse und an der Media Query:
 
 ```css
 /* Styles für den Dark Mode bei manueller Auswahl durch die Nutzer */
@@ -177,8 +177,8 @@ body.rex-theme-dark .addon-element-2 { … }
 
 @media (prefers-color-scheme: dark) {
 	/* Styles für den Dark Mode im Modus »Automatisch« */
-	body:not(.rex-theme-light) .addon-element-1 { … }
-	body:not(.rex-theme-light) .addon-element-2 { … }
+	body.rex-has-theme:not(.rex-theme-light) .addon-element-1 { … }
+	body.rex-has-theme:not(.rex-theme-light) .addon-element-2 { … }
 }
 ```
 
@@ -201,7 +201,7 @@ body.rex-theme-dark {
 }
 
 @media (prefers-color-scheme: dark) {
-	body:not(.rex-theme-light) {
+	body.rex-has-theme:not(.rex-theme-light) {
 		@include _addon-dark;
 	}
 }
@@ -222,7 +222,7 @@ body.rex-theme-dark {
 }
 
 @media (prefers-color-scheme: dark) {
-	body:not(.rex-theme-light) {
+	body.rex-has-theme:not(.rex-theme-light) {
 		._addon-dark();
 	}
 }
