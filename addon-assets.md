@@ -3,6 +3,7 @@
 * [Über](#plugin)
 * [Speicherort](#speicherort)
 * [Dateien einbinden](#einbinden)
+  + [Assets nur dort einbinden wo gebraucht](#sparsam)
   + [Cachebuster](#buster)
   + [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte)
 * [Sass](#sass)
@@ -52,8 +53,10 @@ $addon = rex_addon::get('mein_addonkey');
 rex_view::addCssFile($addon->getAssetsUrl('styles.css') );
 rex_view::addJsFile($addon->getAssetsUrl('script.js') );
 ```
+<a name="sparsam"></a>
+### Assets nur dort einbinden wo gebraucht 
 
-Es ist auch möglich die Assets nur auf bestimmten Seiten im Backend enzubinden. Hierzu kann das folgende Snippet behilflich sein:
+Die Assets sollten möglichst "sparsam" eingebunden werden. Werden diese nur auf einer bestimmten Seite gebraucht, kann dies auf der gewünschen Seite wie hier beschrieben erfolgen: 
 
 ``` php
 // Ermitteln welche Backendseite aufgerufen ist:
