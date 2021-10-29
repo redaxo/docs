@@ -21,6 +21,7 @@
     - [setColumnFormat](#setcolumnformat)
     - [setColumnParams](#setcolumnparams)
     - [setColumnSortable](#setcolumnsortable)
+    - [setColumnPosition](#setcolumnposition)
     - [setNoRowsMessage](#setnorowsmessage)
   + [Ausgabe der Liste](#ausgabe_der_liste)
   + [Extension Point](#extension_point)
@@ -229,6 +230,18 @@ Verlinkt eine Spalte mit den übergebenen Parametern. `$list->setColumnParams('n
 `setColumnSortable(string $columnName, string $direction = 'asc')` 
 
 `$list->setColumnSortable('name');` definiert die Spalte als sortierbar. Durch Anklicken im Tabellenkopf wird die Tabelle dann automatisch sortiert nach dieser Spalte ausgegeben.
+
+<a name="setcolumnposition"></a>
+
+#### setColumnPosition
+  
+`$newPosition = setColumnPosition(string $columnName, string|int $columnIndex)`
+
+Verschiebt die über `$columnName` angegebene Spalte an eine neue Position `$columnIndex` in der Tabelle. Die Zielposition wird entweder als numerischer Index oder
+ebenfalls über den Spaltennamen festgelegt. Die interne Liste der Spaltennamen beinhaltet auch ausgeblendete Spalten (siehe [removeColumn](#removecolumn)); daher sollte der Spaltenname statt des numerischen Index benutzt werden. `$newPosition = setColumnPosition('spalte', 'zielspalte');`
+Die Zielposition ist <em>vor</em> der angegebenen Zielspalte, die ihrerseits nach rechts verschoben wird. So können Spalten vor die erste Spalte verschoben werden.
+Mit dem Zielindex `-1` wird die Spalte an das Ende der Tabelle verschoben. `$newPosition = setColumnPosition('spalte', -1);`
+Der zu einem Spaltennamen gehörende Index kann mit `$position = getColumnPosition($columnName);` abgefragt werden. Ungültige Namen lösen eine Exception aus.
 
 <a name="setnorowsmessage"></a>
 
