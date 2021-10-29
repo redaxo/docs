@@ -28,6 +28,8 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 Das Backup-AddOn ist über den Menüpunkt `Backup` erreichbar.
 Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
+Zur Speicherung der Backups können "Auf dem Server speichern" (Speicherort: `redaxo/data/addons/backup`) oder ein direkter Download gewählt werden. 
+
 <a name="dbexport"></a>
 
 ### Datenbank-Export
