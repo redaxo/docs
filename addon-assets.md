@@ -151,7 +151,7 @@ if (rex::isBackend() && rex::getUser())
 
 Seit Version 5.13 bietet REDAXO zwei Themes an, »Hell« (`light`) und »Dunkel« (`dark`). Verwenden AddOns lediglich Standardelemente von REDAXO und Bootstrap, sind sie üblicherweise bereits kompatibel mit beiden Themes. Nutzen sie jedoch individuelle Styles mit Farbangaben, liegt es an den Entwickelnden, diese für beide Themes zu liefern.
 
-Die Themeauswahl erfolgt auf der Profilseite der Benutzer oder wird innerhalb der `config.yml` für alle Nutzer fest vorgegeben. Es gibt einen zusätzlichen Modus »Automatisch«, der die Voreinstellung für alle neuen Nutzer ist, und der es dem Browser überlasst, anhand der Systemeinstellungen der Nutzer das passende Theme auszuwählen.
+Die Themeauswahl erfolgt auf der Profilseite der Benutzer oder wird innerhalb der `config.yml` für alle Nutzer fest vorgegeben. Es gibt einen zusätzlichen Modus »Automatisch«, der die Voreinstellung für alle neuen Nutzer ist, und der es dem Browser überlässt, anhand der Systemeinstellungen der Nutzer das passende Theme auszuwählen.
 
 Das Styling erfolgt deshalb sowohl über eine Klasse am `<body>` als auch mittels der Media Query `prefers-color-scheme` (für den automatischen Modus):
 
