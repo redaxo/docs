@@ -1,4 +1,4 @@
-# Dokumentation REDAXO 5.12
+# Dokumentation REDAXO 5.13
 
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen.
 
@@ -7,45 +7,19 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 >Unterstützung wird immer benötigt; die Dokumentation wird in [GitHub gepflegt und erweitert](https://github.com/redaxo/docs), sodass sich alle beteiligen können. Neue Artikel oder Verbesserungen können gerne per Pull-Request oder Issues eingereicht werden.
 [Zur Dokumentation auf GitHub](https://github.com/redaxo/docs).
 
+
+
 ## Neues in dieser Doku
+
+![Login-Seite](/assets/v5.13.0-login.jpg)
 
 ### Themes: Der neue Dark Mode
 
-- Benutzer: Auswahl des Themes auf der [Profilseite](/{{path}}/{{version}}/profil)
-- Administratoren: Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
-- AddOn-Entwicklung: Styling für Themes mittels [CSS oder Sass](/{{path}}/{{version}}/addon-assets) 
-
-### Der neue Login-Screen lässt sich customizen
-![Login-Screen](/assets/v5.12.0-login.png)
-
-Mehr dazu im erweiterten Kapitel: [Fragmente](/{{path}}/{{version}}/fragmente)
-
-### Neue Installationsanleitung 
-
-für Zip, Loader und Docker
-
-[Zum Kapitel Installation](/{{path}}/{{version}}/installation)
+- **Benutzer:** Auswahl des Themes auf der [Profilseite](/{{path}}/{{version}}/profil)
+- **Administratoren:** Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
+- **AddOn-Entwicklung:** Styling für Themes mittels [CSS, Sass oder Less](/{{path}}/{{version}}/addon-assets) 
 
 
-### Neue Konsolen-Befehle 
-
-z.B. `package:list` und `install:list`
-
-Mehr dazu im erweiterten Kapitel: [Konsole](/{{path}}/{{version}}/console)
-
-### Viele kleine Ergänzungen
-
-An vielen Stellen wurden Infos und Code ergänzt. Es lohnt sich also auch für die erfahrenen Nutzer*innen die Doku durchzustöbern. 
-
-
-REDAXO wird fortwährend aktualisiert. Das Changelog zur aktuellen Version ist jederzeit im [Download-Bereich](/download/core/) verlinkt, direkt neben dem Download-Button.
-
-### Changelogs und Releasenotes
-
-Changelogs aller Versionen, auch der jeweils aktuellen, findest du grundsätzlich auch bei GitHub:  
-[Alle Changelogs bei GitHub](https://github.com/redaxo/redaxo/releases)
-
-Dokumentationen zu weiteren Versionen erreicht man über das Versionsauswahlmenü.
 
 ## Übersicht der Kategorien
 
