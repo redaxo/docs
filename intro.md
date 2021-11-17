@@ -17,7 +17,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 - **Benutzer:** Auswahl des Themes auf der [Profilseite](/{{path}}/{{version}}/profil)
 - **Administratoren:** Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
-- **AddOn-Entwicklung:** Styling für Themes mittels [CSS, Sass oder Less](/{{path}}/{{version}}/addon-assets) 
+- **AddOn-Entwicklung:** Styling für Themes mittels [CSS, Sass oder Less](/{{path}}/{{version}}/addon-assets#themes) 
 
 
 
