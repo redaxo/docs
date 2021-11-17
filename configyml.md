@@ -166,7 +166,6 @@ theme: null
 |  | add\_2 |  | char | Accesskey Hinzufügen, alternativ |
 | editor |  |  | Config-Wert | Legt den externen Code-Editor fest |
 | editor\_basepath |  |  | Pfad | Ersetzt den tatsächlichen Basis-Pfad der Installation mit dem hier angegebenen lokalen Pfad (nützlich für Produktivumgebungen, Docker etc.). |
-| theme |  |  | null / light / dark | Legt das Backend-Theme fest und deaktiviert damit die Theme-Auswahl für Nutzer |
 
 <a name="config"></a>
 
