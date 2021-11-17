@@ -8,7 +8,6 @@
   + [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte)
 * [Javascript im Backend / rex:ready](#rexready)
 * [Sass](#sass)
-* [Backend-Themes](#themes)
 
 <a name="ueber"></a>
 
@@ -143,90 +142,4 @@ if (rex::isBackend() && rex::getUser())
             rex_file::copy($this->getPath('assets/meinestile.css'), $this->getAssetsPath('meinestile.css'));
         }
     }
-```
-
-<a name="themes"></a>
-
-## Backend-Themes
-
-Seit Version 5.13 bietet REDAXO zwei Themes an, »Hell« (`light`) und »Dunkel« (`dark`). Verwenden AddOns lediglich Standardelemente von REDAXO und Bootstrap, sind sie üblicherweise bereits kompatibel mit beiden Themes. Nutzen sie jedoch individuelle Styles mit Farbangaben, liegt es an den Entwickelnden, diese für beide Themes zu liefern.
-
-Die Themeauswahl erfolgt auf der Profilseite der Benutzer oder wird innerhalb der `config.yml` für alle Nutzer fest vorgegeben. Es gibt einen zusätzlichen Modus »Automatisch«, der die Voreinstellung für alle neuen Nutzer ist, und der es dem Browser überlässt, anhand der Systemeinstellungen der Nutzer das passende Theme auszuwählen.
-
-Das Styling erfolgt deshalb sowohl über eine Klasse am `<body>` als auch mittels der Media Query `prefers-color-scheme` (für den automatischen Modus):
-
-```css
-body.rex-theme-dark {
-	…
-}
-
-@media (prefers-color-scheme: dark) {
-	body.rex-has-theme:not(.rex-theme-light) {
-		…
-	}
-}
-```
-
-Beim Styling muss also beachtet werden, dass jeder Selektor zweimal angesprochen wird. Mit nativem CSS ist das leider etwas aufwendiger als beispielsweise mit Sass, bei dem _mixins_ verwendet werden können.
-
-### CSS:
-
-Alle Selektoren liegen doppelt vor und hängen sowohl an der `<body>`-Klasse und an der Media Query:
-
-```css
-/* Styles für den Dark Mode bei manueller Auswahl durch die Nutzer */
-body.rex-theme-dark .addon-element-1 { … }
-body.rex-theme-dark .addon-element-2 { … }
-
-@media (prefers-color-scheme: dark) {
-	/* Styles für den Dark Mode im Modus »Automatisch« */
-	body.rex-has-theme:not(.rex-theme-light) .addon-element-1 { … }
-	body.rex-has-theme:not(.rex-theme-light) .addon-element-2 { … }
-}
-```
-
-### Sass:
-
-Zunächst wird ein beispielhaftes Mixin `_addon-dark` definiert. Zu beachten ist dabei, dass Mixins üblicherweise global vorliegen. Um Konflikte zu vermeiden, bietet sich deshalb an, immer eindeutige Bezeichnungen zu verwenden. Der Unterstrich am Anfang ist nicht notwendig und soll lediglich vermitteln, dass es sich um ein privates Mixin handelt, das nicht global verwendet werden soll.
-
-Innerhalb des Mixins werden alle Styles für das Dark-Theme notiert. Anschließend wird das Mixin in beiden Kontexten inkludiert.
-
-
-```scss
-@mixin _addon-dark {
-	// Alle Styles für den Dark Mode werden hier notiert
-	.addon-element-1 { … }
-	.addon-element-2 { … }
-}
-
-body.rex-theme-dark {
-	@include _addon-dark;
-}
-
-@media (prefers-color-scheme: dark) {
-	body.rex-has-theme:not(.rex-theme-light) {
-		@include _addon-dark;
-	}
-}
-```
-
-### Less:
-
-
-```less
-._addon-dark() {
-	// Alle Styles für den Dark Mode werden hier notiert
-	.addon-element-1 { … }
-	.addon-element-2 { … }
-}
-
-body.rex-theme-dark {
-	._addon-dark();
-}
-
-@media (prefers-color-scheme: dark) {
-	body.rex-has-theme:not(.rex-theme-light) {
-		._addon-dark();
-	}
-}
 ```
