@@ -11,7 +11,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ## Neues in dieser Doku
 
-![Login-Seite](/assets/v5.13.0-login.jpg)
+![Login-Seite](/assets/v5.13.0-login.png)
 
 ### Themes: Der neue Dark Mode
 
