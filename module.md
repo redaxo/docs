@@ -106,7 +106,7 @@ Die eingesetzten Modulblöcke kann man bei Bedarf über die Pfeile nach oben ode
 
 <a name="textmodul"></a>
 
-### Einaches Textmodul
+### Einfaches Textmodul
 
 **Eingabe**:
 
