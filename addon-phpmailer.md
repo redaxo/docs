@@ -7,6 +7,7 @@
 * [Senden über unterschiedliche Domains](#domains)
 * [SMTP-Debug](#debug)
 * [E-Mail-Log und E-Mail-Archivierung](#log)
+* [Config zur Laufzeit überschreiben](#extension)
 * [Tipps](#tipps)
   + [Spam-Blocker](#spam-blocker)
   + [Verwendung bei selbstsignierten Zertifikaten](#zertifikate)
@@ -189,9 +190,39 @@ Das Log wird in der Datei `/redaxo/data/log/mail.log` gespeichert.
 
 ### E-Mail-Archivierung
 
-Bei eingeschalteter E-Mail-Archivierung werden alle E-Mails im Ordner `/redaxo/data/addons/phpmailer/mail_log` chronologisch nach Jahr und Monat in Unterordnern archiviert. Anhänge werden nicht gespeichert.
+Bei eingeschalteter E-Mail-Archivierung werden alle E-Mails im Ordner `/redaxo/data/addons/phpmailer/mail_log` im `.eml`-Format chronologisch nach Jahr und Monat in Unterordnern vollständig archiviert. .eml-Dateien können in gängigen E-Mail-Programmen zur Betrachtung geöffnet und importiert werden. 
 
-Das E-Mail-Archiv kann über die Schaltfläche `E-Mail-Archiv löschen`vollständig gelöscht werden. 
+Das Archiv kann über den CronJob "Mailer-Archiv bereinigen" regelmäßig bereinigt werden. 
+
+<a name="extension"></a>
+## Extension-Point `PHPMAILER_CONFIG`
+
+Die Konfiguration kann mittels Extension-Point überschrieben und/oder ergänzt werden. 
+Weitere Informationen zur [PHPMailer-Konfiguration beim Vendor](https://github.com/PHPMailer/PHPMailer).
+
+Das folgende Beispiel zeigt die Verwendung von selbst signierten Zertifikaten. 
+
+> Per Default wird der Peer verifiziert. Dies kann ggf. zu Problemen führen. Die nachfolgenden Einstellungen helfen, dieses Problem zu umgehen.
+
+```php 
+rex_extension::register('PHPMAILER_CONFIG', function (rex_extension_point $ep) {
+    $subject = $ep->getSubject();
+    // set SMTPOptions
+    $subject->SMTPOptions = [
+        'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        ],
+        'tls' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        ],
+    ];
+});
+```
+
 
 <a name="tipps"></a>
 
