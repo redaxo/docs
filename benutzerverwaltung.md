@@ -79,7 +79,7 @@ Im Abschnitt `Allgemein` wird der generelle Zugriff auf ein AddOn oder PlugIn de
 
 Einige AddOns oder PlugIns haben zusätzliche Optionen. Diese können in dem Feld Optionen aktiviert werden.
 
-Hier finden sich u.a. auch die Rechte zur Einschränkung der Strukturbearbeitung
+Hier finden sich u.a. auch Rechte zur Einschränkung der Strukturbearbeitung
 
 - `addArticle[]` Artikel erstellen
 - `editArticle[]` Artikel bearbeiten
