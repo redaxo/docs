@@ -7,6 +7,7 @@
   + [Cachebuster](#buster)
   + [Javascripte / JS_IMMUTABLE, Async, JS_DEFERED](#javascripte)
 * [Javascript im Backend / rex:ready](#rexready)
+* [PHP-Werte an Javascript übergeben](#phpJs)
 * [Sass](#sass)
 * [Backend-Themes](#themes)
 
@@ -114,7 +115,23 @@ $(document).on('rex:ready', function(event, container) {
 });
 ```
 
-<a name="sass"></a>
+
+<a name="phpJs"></a>
+
+## PHP-Werte an Javascript übergeben
+
+Per `rex_view::setJsProperty('key',$value)` können Variablen im Backend-Javascript gesetzt werden, die global als `rex.key` zur Verfügung stehen und somit auch in eigenen Javascripten zur Verfügung stegen. 
+
+### Beispiel
+
+// Übergabe einer URL an das eigene AddOn Javascript
+
+```php
+rex_view::setJsProperty('myicons', rex_url::addonAssets('myaddon') . 'icons.svg');
+```
+
+Die Variable steht dann im Javascript als `rex.myicons` zur Verfügung. 
+
 
 ## Sass
 
