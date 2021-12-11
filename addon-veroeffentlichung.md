@@ -95,7 +95,7 @@ Versionen werden direkt aus dem lokalen AddOn selbst herangezogen (package.yml).
 AddOn erstellen
 
 
-<a name="exclude"><a>
+<a name="exclude"></a>
 
 ## Ausschließen von Development-Dateien im Package
 
@@ -108,7 +108,7 @@ installer_ignore:
     - src
 ```
   
-<a name="installeraction"><a>
+<a name="installeraction"></a>
 
 ## AddOn direkt aus GitHub heraus veröffentlichen
 
