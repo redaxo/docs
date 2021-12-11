@@ -77,7 +77,17 @@ Im Abschnitt `Allgemein` wird der generelle Zugriff auf ein AddOn oder PlugIn de
 
 ### Optionen
 
-Einige AddOns oder PlugIns haben mehrere zusätzliche Optionen. Diese können in dem Feld Optionen aktiviert werden.
+Einige AddOns oder PlugIns haben zusätzliche Optionen. Diese können in dem Feld Optionen aktiviert werden.
+
+Hier finden sich u.a. auch die Rechte zur Einschränkung der Strukturbearbeitung
+
+`addArticle[]` Artikel erstellen
+`editArticle[]` Artikel bearbeiten
+`deleteArticle[]` Artikel löschen
+`addCategory[]` Kategorien erstellem
+`editCategory[]` Kategorie bearbeiten
+`deleteCategory[]` Kategorie löschen 
+
 
 <a name="rolleextras"></a>
 
