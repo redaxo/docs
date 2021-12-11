@@ -109,7 +109,7 @@ Beispiel:
 
 Das findet sich so zum Beispiel im be_style-Plugin. `container` ist immer der Container, der ausgetauscht wurde. Initial bei `document:ready` ist es der `<body>` .
 
-``` js
+```js
 $(document).on('rex:ready', function(event, container) {
     container.find('.selectpicker').selectpicker();
 });
@@ -120,7 +120,7 @@ $(document).on('rex:ready', function(event, container) {
 
 ## PHP-Werte an Javascript übergeben
 
-Per `rex_view::setJsProperty('key',$value)` können Variablen im Backend-Javascript gesetzt werden, die global als `rex.key` zur Verfügung stehen und somit auch in eigenen Javascripten zur Verfügung stegen. 
+Per `rex_view::setJsProperty('key',$value)` können Variablen im Backend-Javascript gesetzt werden, die global als `rex.key` zur Verfügung stehen und somit auch in eigenen Javascripten zur Verfügung stehen. 
 
 ### Beispiel
 
@@ -139,7 +139,7 @@ Es ist möglich `.scss` Dateien mit der Klasse `rex_scss_compiler()` zu kompilie
 
 Der nachfolgend kommentierte Code für die `boot.php` zeigt, wie man die Kompilierung bei aktiviertem Debug-Modus ausführt.
 
-``` php
+```php
 // Befinden wir uns im Backend und ist ein User angemeldet?
 if (rex::isBackend() && rex::getUser())
     {
