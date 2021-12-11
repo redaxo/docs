@@ -17,7 +17,7 @@ Hierzu bietet REDAXO eine komfortable Lösung mit dem Installer-AddOn an.
 
 **Wichtiger Hinweis:** Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine komplette Sicherung des Systems gemacht werden. Hierzu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z. B. phpmyAdmin oder adminer) erledigt werden. Bei AddOns kann es auch sinnvoll sein, die Dateien des AddOns selbst zu sichern.
 
-Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
+>Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
 
 <a name="aktualisierung"></a>
 
