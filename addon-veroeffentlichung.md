@@ -10,6 +10,7 @@
   + [AddOn-Version aktualisieren / löschen](#anker-addon-version-aktualisieren)
   + [AddOn-Version erstellen](#anker-addon-version-erstellen)
   + [Ausschließen von Development-Dateien im Package](#exclude)
+  + [AddOn direkt aus GitHub heraus veröffentlichen](#installeraction)
 * [Updates](#updates)
   + [Updates testen, geheime AddOns](#testing)
 * [Meldungen nach erfolgreicher Installation ausgeben](#statusmsg)
@@ -106,7 +107,19 @@ installer_ignore:
     - .env
     - src
 ```
+  
+<a name="installeraction"><a>
 
+## AddOn direkt aus GitHub heraus veröffentlichen
+
+Mit der [FriendsOfREDAXO/installer-action](https://github.com/FriendsOfREDAXO/installer-action) können AddOns direkt aus GitHub heraus released werden. 
+Nach Einrichtung der `installer-action` werden GitHub-Releases automatisch in den Installer übertragen. 
+  
+**Voraussetung:** Das AddOn muss vorab in MyREDAXO angelegt und beschrieben sein. 
+
+[Informationen zur Einrichtung auf GitHub](https://github.com/FriendsOfREDAXO/installer-action). 
+   
+  
 <a name="updates"></a>
 
 ## Updates
