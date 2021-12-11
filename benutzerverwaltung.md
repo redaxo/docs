@@ -81,12 +81,12 @@ Einige AddOns oder PlugIns haben zusätzliche Optionen. Diese können in dem Fel
 
 Hier finden sich u.a. auch die Rechte zur Einschränkung der Strukturbearbeitung
 
-`addArticle[]` Artikel erstellen
-`editArticle[]` Artikel bearbeiten
-`deleteArticle[]` Artikel löschen
-`addCategory[]` Kategorien erstellem
-`editCategory[]` Kategorie bearbeiten
-`deleteCategory[]` Kategorie löschen 
+- `addArticle[]` Artikel erstellen
+- `editArticle[]` Artikel bearbeiten
+- `deleteArticle[]` Artikel löschen
+- `addCategory[]` Kategorien erstellem
+- `editCategory[]` Kategorie bearbeiten
+- `deleteCategory[]` Kategorie löschen 
 
 
 <a name="rolleextras"></a>
