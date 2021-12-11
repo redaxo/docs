@@ -9,6 +9,7 @@
 - [Datei austauschen](#tausch)
 - [Medien verschieben](#schieben)
 - [Dateien Synchronisieren](#sync)
+- [Medien suchen](#search)
 
 <a name="zweck"></a>
 
@@ -103,3 +104,28 @@ Das Verschieben eines Mediums in eine andere Kategorie kann wahlweise über die 
 Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion `Dateien synchronisieren`. Alle zusätzlich (z.B. per SFTP, WebDAV) in den Ordner `/media` geladenen Dateien werden dann unter `betroffene Dateien` gelistet. Man wählt die Dateien mit einem Häkchen vor dem Dateinamen aus und danach die gewünschte Medienkategorie, wo die Dateien einsortiert werden sollen. Durch Klick auf `Synchronisieren` werden dann alle gewählten Dateien in die ausgewählte Medienkategorie eingespielt. Beim Synchronisieren einzelner Dateien kann man hier auch gleich den Titel vergeben, bei mehreren Dateien muss man das im Nachhinein in der jeweiligen Detailansicht machen.
 
 > **Achtung**: Es sollte darauf geachtet werden, dass die neuen Dateien, die in den Medienordner kopiert werden sollen, keine vorhandenen Dateien überschreiben (gleicher Dateiname). Ein Backup des Verzeichnisses und der Datenbank sollte vorher erfolgen.  
+
+
+
+<a name="search"></a>
+
+## Medien suchen
+
+Im Medienpool gibt es oben rechts eine Suchleiste. Hier kann nach Medien gesucht werden. Ist `Keine Kategorie` ausgewählt wird über den gesamten Medienpool hinweg gesucht. Wurde zuvor eine Kategorie ausgewählt wird nur in dieser Kategorie gesucht. 
+
+In der Suche kann getrennt nach Begriffen gesucht werden. 
+
+Wenn man `Blume rot` eingibt, werden alle Treffer mit "Blume" und "rot" gelistet. Die Begriffe müssen jedoch nicht nacheinander stehen wie in der Suche. Möchte man erzwingen dass genau der gesuchte Text gefunden wird, werden diese in Anführungsstrichen gesetzt. `"Blume rot". 
+
+Man kann auch nach bestimmten Dateitypen suchem, dies erfolgt durch die Eingabe von `type:`. 
+
+Beispiele: 
+
+`"Blume rot" type:jpg`
+
+Sucht alle Jpegs mit der Bezeichnung "Blume rot". 
+
+`Auto type:jpg,png`
+
+Sucht alle Jpegs und png mit dem Begriff "Auto"
+
