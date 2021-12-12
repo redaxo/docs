@@ -79,7 +79,7 @@ Folgende Formattypen stehen zur Verfügung:
 
 ### Intl-Zeitformate
 
-Datums- und Zeiangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
+Datums- und Zeitangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
 
 Das sorgt vor allem bei mehrsprachigen Seiten für eine einheitliche Formatierung, z.B: 
 
@@ -90,12 +90,12 @@ Das sorgt vor allem bei mehrsprachigen Seiten für eine einheitliche Formatierun
 |en_US:| Dec 12, 2021|
 |fr_FR:| 12 dec. 2021|
 
-Alternativ können eigene Pattern übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
+Alternativ können eigene Patterns übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
 
 
 #### intlDate
 
-Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+Formatiert den übergebenen String in ein Datum mit dem gewählten Pattern. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
 ``` php
 echo rex_formatter::intlDate(time())
@@ -119,7 +119,7 @@ echo rex_formatter::intlDate(time(), IntlDateFormatter::FULL);
 
 #### intlTime
 
-Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+Formatiert den übergebenen String in eine Uhrzeit mit dem gewählten Pattern. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
 ``` php
 echo rex_formatter::intlTime(time());
@@ -142,7 +142,7 @@ echo rex_formatter::intlTime(time(), IntlDateFormatter::FULL);
 
 #### intlDateTime
 
-Formatiert den übergebenen String als Datum und Uhrzeit mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+Formatiert den übergebenen String als Datum mit Uhrzeit mit dem gewählten Pattern. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
 ``` php
 echo rex_formatter::intlDateTime(time());
