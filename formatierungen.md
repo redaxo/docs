@@ -4,10 +4,10 @@
   + [Aufruf von rex_formatter](#aufruf-von-rex-formatter)
   + [Ein einfaches Beispiel](#einfaches-beispiel)
   + [Formattypen](#formattypen)
-    - [Intl-Zeitformate](intlformat)
-      - [intldate](#intldate)
-      - [intltime](#intltime)
-      - [intldatetime](#intldatetime)
+    - [Intl-Zeitformate](#intlformat)
+      - [intlDate](#intldate)
+      - [intlTime](#intltime)
+      - [intlDateTime](#intldatetime)
     - [date](#date)
     - [strftime](#strftime) 
     - [number](#number)
@@ -59,9 +59,9 @@ echo rex_formatter::format($date,'date','Y.m.d H:i');
 
 Folgende Formattypen stehen zur Verfügung:
 * [Intl-Zeitformate](intlformat)
-  * [intldate](#intldate)
-  * [intltime](#intltime)
-  * [intldatetime](#intldatetime)
+  * [intlDate](#intldate)
+  * [intlTime](#intltime)
+  * [intlDateTime](#intldatetime)
 * [date](#date)
 * [strftime](#strftime)
 * [number](#number)
@@ -75,9 +75,23 @@ Folgende Formattypen stehen zur Verfügung:
 * [email](#email)
 * [custom](#custom)
 
-<a name="intldate"></a>
+<a name="intlformat"></a>
 
-### intlDate
+### Intl-Zeitformate
+
+Datums- und Zeiangaben können sollten seit REDAXO 5.13 mit den intl-Methoden erfolgen. Die vorgegebenen Pattern erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
+
+|Lang-Code| Datum |
+-------- | -------- | 
+|de_DE:| 12. Dez. 2021|
+|en_GB:| 12 Dec 2021|
+|en_US:| Dec 12, 2021|
+|fr_FR:| 12 dec. 2021|
+
+Alternativ können eigene Pattern übergeben werden: z.B.: `rex_formatter::intlDate(time(), 'dd. MMM Y')`.
+
+
+#### intlDate
 
 Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
