@@ -9,7 +9,7 @@
       - [intlTime](#intltime)
       - [intlDateTime](#intldatetime)
     - [date](#date)
-    - [strftime](#strftime) 
+    - [strftime](#strftime) *deprecated* 
     - [number](#number)
     - [bytes](#bytes)
     - [sprintf](#sprintf)
@@ -63,7 +63,7 @@ Folgende Formattypen stehen zur Verfügung:
   * [intlTime](#intltime)
   * [intlDateTime](#intldatetime)
 * [date](#date)
-* [strftime](#strftime)
+* [strftime](#strftime) *deprecated*
 * [number](#number)
 * [bytes](#bytes)
 * [sprintf](#sprintf)
@@ -178,6 +178,8 @@ echo rex_formatter::format($value,'date','Y.m.d H:i');
 <a name="strftime"></a>
 
 ### strftime
+
+> Diese Methode ist veraltet, bitte in neuen Projekten die [Intl-Zeitformate](intlformat) verweden, 
 
 Formatiert den übergebenen String in das gewählte Format. Dabei ist es möglich, einen Timestamp oder einen Datetime-String zu übergeben.
 Die zu verwendenden Format-Zeichen finden sich im [strftime-Manual](http://php.net/manual/de/function.strftime.php) von PHP.
