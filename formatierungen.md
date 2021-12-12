@@ -115,7 +115,7 @@ echo rex_formatter::intlDate(time(), IntlDateFormatter::FULL);
 
 <a name="intltime"></a>
 
-### intlTime
+#### intlTime
 
 Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
@@ -138,7 +138,7 @@ echo rex_formatter::intlTime(time(), IntlDateFormatter::FULL);
 ```
 <a name="intldatetime"></a>
 
-### intlDateTime
+#### intlDateTime
 
 Formatiert den übergebenen String als Datum und Uhrzeit mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
