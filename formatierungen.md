@@ -142,10 +142,6 @@ echo rex_formatter::intlTime(time(), IntlDateFormatter::FULL);
 
 Formatiert den übergebenen String als Datum und Uhrzeit mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
 
-12. Dez. 2021, 21:50
-12. Dez. 2021, 21:50
-12. Dez. 2021, 21:50:04
-
 ``` php
 echo rex_formatter::intlDateTime(time());
 // 12. Dez. 2021, 21:50
