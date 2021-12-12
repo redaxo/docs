@@ -4,7 +4,7 @@
   + [Aufruf von rex_formatter](#aufruf-von-rex-formatter)
   + [Ein einfaches Beispiel](#einfaches-beispiel)
   + [Formattypen](#formattypen)
-    - Intl-Datumsformate
+    - [Intl-Zeitformate](intlformat)
       - [intldate](#intldate)
       - [intltime](#intltime)
       - [intldatetime](#intldatetime)
@@ -58,9 +58,10 @@ echo rex_formatter::format($date,'date','Y.m.d H:i');
 ## Formattypen
 
 Folgende Formattypen stehen zur Verfügung:
-* [intldate](#intldate)
-* [intltime](#intltime)
-* [intldatetime](#intldatetime)
+* [Intl-Zeitformate](intlformat)
+  * [intldate](#intldate)
+  * [intltime](#intltime)
+  * [intldatetime](#intldatetime)
 * [date](#date)
 * [strftime](#strftime)
 * [number](#number)
