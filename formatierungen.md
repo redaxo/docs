@@ -81,7 +81,7 @@ Folgende Formattypen stehen zur Verfügung:
 
 Datums- und Zeiangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
 
-Das sorgt vor allem bei mehrsprechigen Seiten für eine einheitliche Formatierung bei allen Sprachen. 
+Das sorgt vor allem bei mehrsprechigen Seiten für eine einheitliche Formatierung in allen Sprachen. 
 
 |Lang-Code| Datum |
 -------- | -------- | 
