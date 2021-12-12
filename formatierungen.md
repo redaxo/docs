@@ -164,8 +164,6 @@ eecho rex_formatter::intlDateTime(time(), [IntlDateFormatter::FULL, IntlDateForm
 
 ### date
 
-> Diese Methode ist veraltet, bitte in neuen Projekten die [Intl-Zeitformate](intlformat) verweden, 
-
 Formatiert den übergebenen String in ein Datum mit dem gewählten Format.
 Die zu verwendenden Format-Zeichen finden sich im [date-Manual](http://php.net/manual/de/function.date.php) von PHP.
 
