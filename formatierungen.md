@@ -79,7 +79,9 @@ Folgende Formattypen stehen zur Verfügung:
 
 ### Intl-Zeitformate
 
-Datums- und Zeiangaben können sollten seit REDAXO 5.13 mit den intl-Methoden erfolgen. Die vorgegebenen Pattern erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
+Datums- und Zeiangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
+
+Das sorgt vor allem bei mehrsprechigen Seiten für eine einheitliche Formatierung bei allen Sprachen. 
 
 |Lang-Code| Datum |
 -------- | -------- | 
@@ -88,7 +90,7 @@ Datums- und Zeiangaben können sollten seit REDAXO 5.13 mit den intl-Methoden er
 |en_US:| Dec 12, 2021|
 |fr_FR:| 12 dec. 2021|
 
-Alternativ können eigene Pattern übergeben werden: z.B.: `rex_formatter::intlDate(time(), 'dd. MMM Y')`.
+Alternativ können eigene Pattern übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
 
 
 #### intlDate
@@ -162,6 +164,8 @@ eecho rex_formatter::intlDateTime(time(), [IntlDateFormatter::FULL, IntlDateForm
 
 ### date
 
+> Diese Methode ist veraltet, bitte in neuen Projekten die [Intl-Zeitformate](intlformat) verweden, 
+
 Formatiert den übergebenen String in ein Datum mit dem gewählten Format.
 Die zu verwendenden Format-Zeichen finden sich im [date-Manual](http://php.net/manual/de/function.date.php) von PHP.
 
@@ -175,7 +179,7 @@ echo rex_formatter::format($value,'date','Y.m.d H:i');
 
 ### strftime
 
-> Diese Methode ist veraltet, bitte in neuen Projekten die [Intl-Zeitformate](intlformat) verweden, 
+> Dieses Format ist veraltet, bitte in neuen Projekten die [Intl-Zeitformat](intlformat)-Methoden verweden, 
 
 Formatiert den übergebenen String in das gewählte Format. Dabei ist es möglich, einen Timestamp oder einen Datetime-String zu übergeben.
 Die zu verwendenden Format-Zeichen finden sich im [strftime-Manual](http://php.net/manual/de/function.strftime.php) von PHP.
