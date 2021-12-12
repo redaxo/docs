@@ -4,6 +4,9 @@
   + [Aufruf von rex_formatter](#aufruf-von-rex-formatter)
   + [Ein einfaches Beispiel](#einfaches-beispiel)
   + [Formattypen](#formattypen)
+    - [intldate](#intldate)
+    - [intltime](#intltime)
+    - [intldatetime](#intldatetime)
     - [date](#date)
     - [strftime](#strftime)
     - [number](#number)
@@ -54,7 +57,9 @@ echo rex_formatter::format($date,'date','Y.m.d H:i');
 ## Formattypen
 
 Folgende Formattypen stehen zur Verfügung:
-
+* [intldate](#intldate)
+* [intltime](#intltime)
+* [intldatetime](#intldatetime)
 * [date](#date)
 * [strftime](#strftime)
 * [number](#number)
@@ -68,7 +73,80 @@ Folgende Formattypen stehen zur Verfügung:
 * [email](#email)
 * [custom](#custom)
 
-<a name="date"></a>
+<a name="intldate"></a>
+
+### intlDate
+
+Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+
+``` php
+echo rex_formatter::intlDate(time())
+// ergibt 12. Dez. 2021
+
+//entspricht
+echo rex_formatter::intlDate(time(), IntlDateFormatter::MEDIUM)
+// ergibt 12. Dez. 2021
+
+echo rex_formatter::intlDate(time(), IntlDateFormatter::SHORT)
+// 12.12.2021
+
+echo rex_formatter::intlDate(time(), IntlDateFormatter::LONG);
+// ergibt 12. Dezember 2021
+
+echo rex_formatter::intlDate(time(), IntlDateFormatter::FULL);
+// ergibt Sonntag, 12. Dezember 2021
+```
+
+<a name="intltime"></a>
+
+### intlTime
+
+Formatiert den übergebenen String in ein Datum mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+
+``` php
+echo rex_formatter::intlTime(time());
+// ergibt ergibt 21:50
+
+//entspricht
+echo rex_formatter::intlTime(time(), IntlDateFormatter::SHORT);
+// ergibt 21:50
+
+echo rex_formatter::intlTime(time(), IntlDateFormatter::MEDIUM);
+// ergibt 21:50:04
+
+echo rex_formatter::intlTime(time(), IntlDateFormatter::LONG);
+// ergibt 21:50:04 MEZ
+
+echo rex_formatter::intlTime(time(), IntlDateFormatter::FULL);
+// ergibt 21:50:04 Mitteleuropäische Normalzeit
+```
+<a name="intldatetime"></a>
+
+### intlDateTime
+
+Formatiert den übergebenen String als Datum und Uhrzeit mit dem gewählten Format. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
+
+12. Dez. 2021, 21:50
+12. Dez. 2021, 21:50
+12. Dez. 2021, 21:50:04
+
+``` php
+echo rex_formatter::intlDateTime(time());
+// 12. Dez. 2021, 21:50
+
+//entspricht
+echo rex_formatter::intlDateTime(time(), [IntlDateFormatter::MEDIUM, IntlDateFormatter::SHORT]);
+// ergibt 12. Dez. 2021, 21:50
+
+echo rex_formatter::intlDateTime(time(), IntlDateFormatter::MEDIUM);
+// ergibt 12. Dez. 2021, 21:50:04
+
+echo rex_formatter::intlDateTime(time(), [IntlDateFormatter::LONG, IntlDateFormatter::SHORT]);
+// 12. Dezember 2021 um 22:17
+
+eecho rex_formatter::intlDateTime(time(), [IntlDateFormatter::FULL, IntlDateFormatter::SHORT]);
+// Sonntag, 12. Dezember 2021 um 22:19
+```
 
 ### date
 
