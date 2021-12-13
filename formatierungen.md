@@ -91,7 +91,9 @@ Das sorgt vor allem bei mehrsprachigen Seiten für eine einheitliche Formatierun
 |fr_FR:| 12 dec. 2021|
 
 Alternativ können eigene Patterns übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
+Hier gibt es eine Liste der Patterns: https://unicode-org.github.io/icu/userguide/format_parse/datetime/#date-field-symbol-table
 
+Da die Einstellungen für setlocale abhängig sind vom Betriebssystem, lohnt sich ggf. auch ein Blick in die Dokumentation https://www.php.net/manual/de/function.setlocale.php
 
 #### intlDate
 
