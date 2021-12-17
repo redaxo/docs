@@ -20,7 +20,7 @@
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
 
 Einige Ordner müssen vor dem Zugriff von außen geschützt sein. 
-Diese lauten: '/redaxo/src', '/redaxo/data', '/redaxo/cache', '/redaxo/bin'.
+Diese lauten: `/redaxo/src`, `/redaxo/data`, `/redaxo/cache` und `/redaxo/bin`.
 Das Vorgehen unterscheidet sich je Webserver-Typ und wird nachfolgend erklärt.
 
 
