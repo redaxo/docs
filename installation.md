@@ -32,7 +32,7 @@ Einige Ordner müssen für den Zugriff von außen geschützt werden.
 
 ### Betrieb unter Apache
 
-Für Apache liefert REDAXO in den zuvor genannten Ordnern `.htaccess`-Dateien aus. Damit diese greifen sollte Apache die Verwendung der .htaccess-Dateien durch die Direktive erlauben `AllowOverride All`. 
+Für Apache liefert REDAXO in die zuvor genannten Ordner `.htaccess`-Dateien aus. Damit diese greifen sollte Apache die Verwendung der .htaccess-Dateien durch die Direktive erlauben (`AllowOverride All`). 
 
 
 <a name="nginx"></a>
