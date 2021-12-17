@@ -86,11 +86,6 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie Plesk oder cPanel an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
 > **Hinweis für Mac und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-**Ordner- und Dateirechte**
-
-- Laufen PHP und Webserverunter demselben Benutzer sind keine Anpassungen an den Datei- und Ordnerrechten erforderlich. Dies ist der favorisierte Weg bei shared Hostern.  
-- Unterscheiden sich die Benutzer von PHP und Webserver, verwenden aber die gleiche Gruppe, so sollten die Rechte auf `775 für Ordner` und `664 für Dateien` gesetzt sein. 
-
 Jetzt kann man den [Installationsvorgang/Setup](#install) starten. 
 
 <a name="loader"></a>
