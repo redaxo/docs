@@ -19,20 +19,15 @@
 
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
 
-Einige Ordner müssen für den Zugriff von außen geschützt werden.
+Einige Ordner müssen vor dem Zugriff von außen geschützt sein:
+Das Vorgehen unterscheidet sich je Webserver-Typ und wird nachfolgend erklärt.
 
-```
-/redaxo/src
-/redaxo/data
-/redaxo/cache
-/redaxo/bin
-```
 
 <a name="apache"></a>
 
 ### Betrieb unter Apache
 
-Für Apache liefert REDAXO in die zuvor genannten Ordner `.htaccess`-Dateien aus. Damit diese greifen sollte Apache die Verwendung der .htaccess-Dateien durch die Direktive erlauben (`AllowOverride All`). 
+Für Apache liefert REDAXO in die zuvor genannten Ordner `.htaccess`-Dateien aus. Damit diese greifen, sollte Apache die Verwendung der .htaccess-Dateien in den Einstellungen des Webspaces erlauben (`AllowOverride All`). 
 
 
 <a name="nginx"></a>
@@ -41,7 +36,7 @@ Für Apache liefert REDAXO in die zuvor genannten Ordner `.htaccess`-Dateien aus
 
 Wird REDAXO unter Nginx betrieben ist es erforderlich die Ornderrechte korrekt zu setzen, da hier die mitglieferten .htaccess-files nicht greifen. 
 
-Folgende Direktiven sorgen für eine Sperrung der Ordner: 
+Folgende Direktiven sorgen für eine Sperrung der Ordner (Stand REDAXO 5.13): 
 
 ```
 location ^~ /redaxo/src { deny  all; }
