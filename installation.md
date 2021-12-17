@@ -35,7 +35,7 @@ Für Apache liefert REDAXO in den zuvor genannten Ordnern `.htaccess`-Dateien au
 
 ### Betrieb unter Nginx
 
-Wird REDAXO unter Nginx betrieben ist es erforderlich die Ornderrechte korrekt zu setzen, da hier die mitglieferten .htaccess-files nicht greifen. 
+Wird REDAXO unter Nginx betrieben ist es erforderlich die Ordnerrechte korrekt zu setzen, da hier die mitgelieferten .htaccess-files nicht greifen. 
 
 Folgende Direktiven sorgen für eine Sperrung der Ordner (Stand REDAXO 5.13): 
 
@@ -54,7 +54,7 @@ location ^~ /redaxo/bin { deny  all; }
 * Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
 * Die ZIP-Datei auf dem eigenen Rechner entpacken.
 * Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/)> ausführen. 
-* Alle [Installationschritte](#install) durchgehen.
+* Alle [Installationsschritte](#install) durchgehen.
 
 <a name="datenbank"></a>
 
