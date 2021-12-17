@@ -28,7 +28,7 @@ Das Vorgehen unterscheidet sich je Webserver-Typ und wird nachfolgend erklärt.
 
 ### Betrieb unter Apache
 
-Für Apache liefert REDAXO in die zuvor genannten Ordner `.htaccess`-Dateien aus. Damit diese greifen, sollte Apache die Verwendung der .htaccess-Dateien in den Einstellungen des Webspaces erlauben (`AllowOverride All`). 
+Für Apache liefert REDAXO in den zuvor genannten Ordnern `.htaccess`-Dateien aus. Damit diese greifen, sollte Apache die Verwendung der .htaccess-Dateien in den Einstellungen des Webspaces erlauben (`AllowOverride All`). 
 
 
 <a name="nginx"></a>
