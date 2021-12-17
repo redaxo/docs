@@ -79,21 +79,19 @@ Folgende Formattypen stehen zur Verfügung:
 
 ### Intl-Zeitformate
 
-Datums- und Zeitangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per `setlocale` gesetzt sein z.B.: `setlocale (LC_ALL, 'de_DE');`
+Datums- und Zeitangaben werden ab REDAXO 5.13 mit den intl-Methoden erstellt. Die vorgegebenen Patterns erleichtern die Formatierung für die aktuelle Sprache. (Im Frontend sollte die Sprache per [`Locale::setDefault`](https://www.php.net/manual/de/locale.setdefault.php) gesetzt sein z.B.: `Locale::setDefault('de-DE');`
 
 Das sorgt vor allem bei mehrsprachigen Seiten für eine einheitliche Formatierung, z.B: 
 
 |Lang-Code| Datum |
 -------- | -------- | 
-|de_DE:| 12. Dez. 2021|
-|en_GB:| 12 Dec 2021|
-|en_US:| Dec 12, 2021|
-|fr_FR:| 12 dec. 2021|
+|de-DE:| 12. Dez. 2021|
+|en-GB:| 12 Dec 2021|
+|en-US:| Dec 12, 2021|
+|fr-FR:| 12 dec. 2021|
 
 Alternativ können eigene Patterns übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
 Hier gibt es eine Liste der Patterns: https://unicode-org.github.io/icu/userguide/format_parse/datetime/#date-field-symbol-table
-
-Da die Einstellungen für setlocale abhängig sind vom Betriebssystem, lohnt sich ggf. auch ein Blick in die Dokumentation https://www.php.net/manual/de/function.setlocale.php
 
 #### intlDate
 
