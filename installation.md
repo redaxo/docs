@@ -148,20 +148,10 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 
 Schritt 3: Systemcheck
 
-**Hinweis für Nginx-Nutzer**
+**Hinweis bei Fehlermeldung zu nicht geschützte Ordnern**
 
-> Nutzer des Nginx-Webservers erhalten eine Fehlermeldung über nicht geschützte Ordner. REDAXO liefert für Apache die nötigen htaccess-Dateien selber mit. Für nginx müssen die Direktiven selbst angelegt werden.
+Bitte den Abschnitt Vorbereitung beachten und die Rechte entsprechend setzen. 
 
-Direktiven für Nginx:
-
-``` 
- location ^~ /redaxo/src { deny  all; }
- location ^~ /redaxo/data { deny  all; }
- location ^~ /redaxo/cache { deny  all; }
- location ^~ /redaxo/bin { deny  all; }
-```
-
-> Bei der Verwendung eines Rewriter-AddOns bitte die Dokumentation des AddOns beachten.
 
 ### Schritt 4: Konfiguration
 
