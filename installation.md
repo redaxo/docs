@@ -1,6 +1,7 @@
 # Installation
 
 * [Systemanforderungen](#system)
+  * Betrieb unter Nginx(#nginx)
 * [Installation per Zip-File](#zip)
   * [Schnellanleitung](#schnell)
   * [Datenbank](#datenbank)
@@ -13,9 +14,40 @@
 
 <a name="system"></a>
 
-## Systemanforderungen
+## Systemanforderungen / Vorbereitung
 
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
+
+Einige Ordner müssen für den Zugriff von außen geschützt werden.
+
+```
+/redaxo/src
+/redaxo/data
+/redaxo/cache
+/redaxo/bin
+
+
+### Betrieb unter Apache
+
+Für Apache liefert REDAXO in den zuvor genannten Ordnern `.htaccess`-Dateien aus. Damit diese greifen sollte Apache die Verwendung der .htaccess-Dateien durch die Direktive erlauben `AllowOverride All`. 
+
+
+<a name="nginx"></a>
+
+### Betrieb unter Nginx
+
+Wird REDAXO unter Nginx betrieben ist es erforderlich die Ornderrechte korrekt zu setzen, da hier die mitglieferten .htaccess-files nicht greifen. 
+
+Folgende Direktiven sorgen für eine Sperrung der Ordner: 
+
+```
+location ^~ /redaxo/src { deny  all; }
+location ^~ /redaxo/data { deny  all; }
+location ^~ /redaxo/cache { deny  all; }
+location ^~ /redaxo/bin { deny  all; }
+```
+
+
 
 <a name="zip"></a>
 <a name="schnell"></a>
