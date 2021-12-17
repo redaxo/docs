@@ -1,7 +1,8 @@
 # Installation
 
 * [Systemanforderungen](#system)
-  * Betrieb unter Nginx(#nginx)
+  * [Betrieb unter Apache](#apache)
+  * [Betrieb unter Nginx](#nginx)
 * [Installation per Zip-File](#zip)
   * [Schnellanleitung](#schnell)
   * [Datenbank](#datenbank)
@@ -25,7 +26,9 @@ Einige Ordner müssen für den Zugriff von außen geschützt werden.
 /redaxo/data
 /redaxo/cache
 /redaxo/bin
+```
 
+<a name="apache"></a>
 
 ### Betrieb unter Apache
 
