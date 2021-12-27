@@ -25,6 +25,8 @@ Hierzu bietet REDAXO eine komfortable Lösung mit dem Installer-AddOn an.
 
 Um die Aktualisierungen über den Installer durchführen zu können, muss man im System als Person mit dem Recht `Admin` eingeloggt sein. Zum Installer gelangt man dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer). Dort werden alle Core-Versionen und AddOns aufgelistet, die über den Installer aktualisiert werden können.
 
+![Aktualisierung](/assets/v.5.13.0-aktualisierung)
+
 Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am Anfang der Liste angezeigt. Klickt man dort auf einen Eintrag, werden zunächst die Versionshinweise angezeigt. Ein Klick auf "Aktualisieren" aktualisiert das AddOn, bzw. das Core-System, und der Eintrag verschwindet aus der Liste.
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
