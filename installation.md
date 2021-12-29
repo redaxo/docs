@@ -55,6 +55,8 @@ REDAXO benötigt eine leere MySQL- oder MariaDB-Datenbank für den Betrieb. Für
 <a name="zip"></a>
 ## Installation per Zip-File
 
+**Kurzanleitung**
+
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
 * Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
 * Die ZIP-Datei auf dem eigenen Rechner entpacken.
