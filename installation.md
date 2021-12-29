@@ -3,9 +3,8 @@
 * [Vorbereitung](#vorbereitung)
   * [Betrieb unter Apache](#apache)
   * [Betrieb unter Nginx](#nginx)
-* [Installation per Zip-File](#zip)
-  * [Schnellanleitung](#schnell)
   * [Datenbank](#datenbank)
+* [Installation per Zip-File](#zip)
   * [Download](#download)
   * [Upload](#upload)
 * [Installation per REDAXO Loader](#loader)
@@ -46,8 +45,14 @@ location ^~ /redaxo/cache { deny  all; }
 location ^~ /redaxo/bin { deny  all; }
 ```
 
+<a name="datenbank"></a>
+
+### Datenbank erstellen
+
+REDAXO benötigt eine leere MySQL- oder MariaDB-Datenbank für den Betrieb. Für die Installation werden die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank benötigt.
+
+
 <a name="zip"></a>
-<a name="schnell"></a>
 ## Installation per Zip-File
 
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
@@ -56,11 +61,6 @@ location ^~ /redaxo/bin { deny  all; }
 * Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/)> ausführen. 
 * Alle [Installationsschritte](#install) durchgehen.
 
-<a name="datenbank"></a>
-
-### Datenbank
-
-Zunächst wird eine leere MySQL-Datenbank erstellt. Bei einigen Hostern ist bereits eine Datenbank angelegt, hierzu sollten die Zugangsdaten vorhanden sein. Für die Installation werden die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank benötigt.
 
 <a name="download"></a>
 
