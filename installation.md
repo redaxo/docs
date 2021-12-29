@@ -47,7 +47,7 @@ location ^~ /redaxo/bin { deny  all; }
 
 <a name="datenbank"></a>
 
-### Datenbank erstellen
+### Datenbank
 
 REDAXO benötigt eine leere MySQL- oder MariaDB-Datenbank für den Betrieb. Für die Installation werden die Zugangsdaten (Datenbank-Name, Adresse des Servers, Datenbank-Benutzer und Passwort) für diese Datenbank benötigt.
 
