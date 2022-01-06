@@ -18,6 +18,22 @@ Diese Zeile entspricht dem Passwort `redaxo-cms`. Melde dich nun mit deinem Benu
 
 > Dein Passwort muss unter allen Umständen geändert werden, um Fremdzugriffe zu verhindern! Dieses Passwort wird vermutlich als erstes von Dritten getestet, die sich unerlaubt Zugriff auf das System verschaffen wollen!
 
+## Neuanlage eines Nutzers über das Setup
+
+Wenn man Zugriff auf den Webspace mittels FTP(S) hat, kann man auch das Setup verwenden um einen neuen User mit Administrator-Rechten anzulegen. 
+
+> Sofern möglich, ein Backup beim Hoster durchführen.
+
+Folgende Schritte führen zum neuen LogIn.
+
+1. In der Datei `/redaxo/data/core/config.yml` muss `setup: false` auf `setup: true`gesetzt werden. 
+2. Danach ruft man die Website unbedingt sofort auf (Der Setup-Vorgang ist für alle Besucher sichtbar, daher ist Eile geboten) 
+3. Durchgehen des Setups, Schritt 4 so belassen wie es ist
+4. In Schritt 5 (Datenank) `Datenbank existiert schon` auswählen
+5. Im nächsten Schritt einen neuen Nutzer anlegen 
+6. Abschließen und dann in REDAXO einloggen. 
+
+
 ## Änderung eines Passworts über die Konsole
 
 Ein Passwort kann sehr einfach über die Konsole aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von 
