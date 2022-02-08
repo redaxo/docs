@@ -11,7 +11,7 @@ Suche die Datenbank die du bei der Installation angegeben hast und öffne dort d
 Ersetze das kryptische Passwort durch folgende Zeile:
 
 ```sha
-$2y$10$iOj6psQI1TReBvPi75WzceMZzh9pR36d.l8mi4iRyMIBLoFclfjHG
+$2y$10$tsQCVLC.SnYnEJXwXHLfJ.MNRRG7uGcppoJPvJK6N8BpZ8hKJ3Af2
 ```
 
 Diese Zeile entspricht dem Passwort `redaxo-cms`. Melde dich nun mit deinem Benutzernamen an und ändere *unbedingt* das Passwort in der Benutzerverwaltung.
