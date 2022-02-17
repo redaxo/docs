@@ -2,10 +2,11 @@
 
 * [Einführung](#einführung)
 * [Allgemeine Parameter](#allgemeine-parameter)
-* [Ein- und Ausgabe-Variablen](#ein-ausgabe-variablen)
+* [Modul Ein- und Ausgabe-Variablen](#ein-ausgabe-variablen)
   + [REX_LINK und REX_LINKLIST](#rex-link)
   + [REX_MEDIA und REX_MEDIALIST](#rex-media)
   + [REX_VALUE](#rex-value)
+  + [Auslesen der Werte via PHP](#viaphp)
 * [Ausgabe-Variablen](#ausgabe-variablen)
   + [REX_ARTICLE](#rex-article)
   + [REX_ARTICLE_ID](#rex-article-id)
@@ -369,6 +370,31 @@ $value1 = rex_var::toArray("REX_VALUE[1]");
 echo $value1['text1'];  
 echo $value1['text2'];
 ```
+
+<a name="viaphp"></a>
+### Auslesen der Werte via PHP
+
+Die Slice-Values können auch per PHP ausgelsen und verarbeitet werden. 
+
+```php
+// Holt das aktuelle Slice-Objekt
+$slice = $this->getCurrentSlice();
+
+// Mit folgenden Methoden können die Werte ausgelesen werden
+
+$slice->getValue(1);
+$slice->getMedia(1);
+$slice->getMediaUrl(1);
+$slice->getLinklist(1);
+$slice->getLinklist(1);
+$slice->getLinkUrl(1);
+$slice->getMedialist(1); 
+$slice->getValueArray(1); // Alternative für rex_var::toArray('REX_VALUE[1]')
+$slice->getMediaListArray(1); // Medialist als Array
+$slice->getLinkListArray(1); // Linklist als Array
+```
+// etc.
+
 
 <a name="ausgabe-variablen"></a>
 
