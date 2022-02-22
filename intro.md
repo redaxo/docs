@@ -19,6 +19,11 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 - **Administratoren:** Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
 - **AddOn-Entwicklung:** Styling für Themes mittels [CSS, Sass oder Less](/{{path}}/{{version}}/addon-assets#themes) 
 
+### REX_-Slice-Variablen per PHP verarbeiten. 
+
+Es ist jetzt möglich SLICE-Variablen per PHP auszulesen. 
+
+[Auslesen der Werte via PHP](/{{path}}/{{version}}/redaxo-variablen#viaphp) 
 
 
 ## Übersicht der Kategorien
