@@ -107,7 +107,7 @@ $last_page_shown = 0;
 echo '<ul>';
 for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
   $show = false;
-  $class = ($this->pager->isActivePage($page)) ? ' active' : '';
+  $class = ($pager->isActivePage($page)) ? ' active' : '';
   if ($page < $distance) $show = true;
   if (abs($page - $pager->getCurrentPage()) < $distance) $show = true;
   if ($page + $distance > $pager->getLastPage()) $show = true;
