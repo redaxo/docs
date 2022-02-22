@@ -89,7 +89,7 @@ $next_page_no = $pager->getNextPage();
 $last_page_no = $pager->getLastPage();
 
 // gibt true zurück, wenn der Cursor auf der übergebenen Seitennummer steht
-$is_active_page = $pager->isActivePage(integer $pageNo);
+$is_active_page = $pager->isActivePage($pageNo);
 ?>
 ```
 
