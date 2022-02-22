@@ -93,6 +93,7 @@ Das sorgt vor allem bei mehrsprachigen Seiten für eine einheitliche Formatierun
 Alternativ können eigene Patterns übergeben werden: z.B.: `rex_formatter::intlDate($string, 'dd. MMM Y')`.
 Hier gibt es eine Liste der Patterns: https://unicode-org.github.io/icu/userguide/format_parse/datetime/#date-field-symbol-table
 
+<a name="intldate"></a>
 #### intlDate
 
 Formatiert den übergebenen String in ein Datum mit dem gewählten Pattern. Das Ausgabeformat kann über den IntlDateFormatter gesteuert werdeb. 
