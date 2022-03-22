@@ -239,3 +239,22 @@ rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $
 ```php
 rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
 ```
+
+### Liste an Standard-Typen
+
+
+`$type` | Feldtyp
+---|---
+1 | text
+2 | textarea
+3 | select
+4 | radio
+5 | checkbox
+6 | REX_MEDIA_WIDGET
+7 | REX_MEDIALIST_WIDGET
+8 | REX_LINK_WIDGET
+9 | REX_LINKLIST_WIDGET
+10 | date
+11 | datetime
+12 | legend
+13 | time
