@@ -73,7 +73,7 @@ if (rex::isBackend() && rex_be_controller::getCurrentPage() == 'addonkey/unterse
 
 ### Cachebuster
 
-REDAXO liefert selbst einen Cachebuster. Eigene Lösungen hierfür sind nicht erforderlich. Der Buster wird automatisch gesetzt. Beispiel: `index.php?asset=../assets/addon/skript.min.js&amp;buster=1566304624` 
+REDAXO liefert selbst einen Cachebuster. Eigene Lösungen hierfür sind nicht erforderlich. Der Buster wird automatisch gesetzt. Beispiel: `index.php?asset=../assets/addon/skript.min.js&buster=1566304624` 
 
 <a name="javascripte"></a>
 
