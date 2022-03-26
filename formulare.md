@@ -381,7 +381,7 @@ Beispiel: `$field = $form->addLinklistField('links');` fÃ¼gt ein Linklistfeld fÃ
 **Beispiel mit Attributen**
 
 ``` php
-$field = $form->addLinkmapField('links');
+$field = $form->addLinklistField('links');
 // legt die Strukturkategorie fest
 $field->setCategoryId('10');
 $field->setLabel('Links');
