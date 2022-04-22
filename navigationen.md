@@ -701,3 +701,25 @@ echo '<ul>';
 echo '</ul>';
 ?>
 ```
+
+### Eigene Klasse auf Basis von rex_navigation
+
+Auf Basis einer eigenen Klasse können weitergehende Änderungen vorgenommen werden, bspw. die Änderung der `<ul>`-Klassen zur Anpassung an fertige Navigations-Skripte
+
+```php
+<?php
+
+class meine_navigation extends rex_navigation {
+    protected function getListTag(array $items, array $ul, int $depth): string
+    {
+        $ul['class'] = ['my', 'classes'];
+
+        return parent::getListTag($items, $ul, $depth);
+    }
+};
+```
+
+```php
+$nav = meine_navigation::factory();
+$nav->show();
+```
