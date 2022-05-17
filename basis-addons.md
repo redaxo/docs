@@ -39,11 +39,11 @@ REDAXO bringt bereits bei der Installation einige AddOns und PlugIns mit:
 |-----------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | backup          |                                                                         | Erstellung und Wiederherstellung von Backups                                               |
 | be_style        |                                                                         | AddOn für die Backenddarstellung                                                           |
-| redaxo          | Liefert das Default-Design des Backend                                  |                                                                                            |
-| customizer      | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung |                                                                                            |
+|                 | redaxo                                                                  | Liefert das Default-Design des Backend                                                     |
+|                 | customizer                                                              | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung                    |
 | cronjob         |                                                                         | Ausführung regelmäßiger, geplanter Aufgaben                                                |
-| article_status  | Ändert den Online-Status entsprechend Meta-Angabe                       |                                                                                            |
-| optimize_tables | Optimiert die Datenbanktabellen                                         |                                                                                            |
+|                 | article_status                                                          | Ändert den Online-Status entsprechend Meta-Angabe                                          |
+|                 | optimize_tables                                                         | Optimiert die Datenbanktabellen                                                            |
 | install         |                                                                         | Veröffentlichung und Download von AddOns                                                   |
 | media_manager   |                                                                         | Ausgabe und Manipulation von Medien                                                        |
 | mediapool       |                                                                         | Medienverwaltung                                                                           |
@@ -51,9 +51,9 @@ REDAXO bringt bereits bei der Installation einige AddOns und PlugIns mit:
 | phpmailer       |                                                                         | Bindet die PHPMailer-Klasse ein für den Versand von E-Mails                                |
 | project         |                                                                         | Ein leeres AddOn, um eigene Projekt-spezifische Funktionen zu integrieren (*updatesicher*) |
 | structure       |                                                                         | Liefert die Strukturverwaltung für Kategorien und Artikel                                  |
-| content         | Stellt die Funktionen zur Inhaltsbearbeitung bereit                     |                                                                                            |
-| history         | Versionierung von Artikeln                                              |                                                                                            |
-| version         | Ergänzt eine Arbeitsversion der Website                                 |                                                                                            |
+|                 | content                                                                 | Stellt die Funktionen zur Inhaltsbearbeitung bereit                                        |
+|                 | history                                                                 | Versionierung von Artikeln                                                                 |
+|                 | version                                                                 | Ergänzt eine Arbeitsversion der Website                                                    |
 | users           |                                                                         | Benutzer- und Rollenverwaltung                                                             |
 
 <a name="addons"></a>
