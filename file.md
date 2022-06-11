@@ -63,13 +63,13 @@ Mit der Methode `getConfig` kann eine Config-Datei eingelesen werden. Kann die D
 > Diese Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml, Properties und rex_config zurückgreifen.
 
 ```php
-getConfig($file, $default = []);
+rex_file::getConfig($file, $default = []);
 ```
 
 Beispiel: Einlesen der REDAXO Config
 
 ```php
-$config = rex_path::coreData('config.yml');
+$config = rex_file::getConfig('config.yml');
 ```
 
 ### rex_file::getCache
@@ -79,7 +79,7 @@ $config = rex_path::coreData('config.yml');
 Mit der Methode `getCache` wird eine Datei aus dem Cache eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung (wenn nicht festgelegt NULL), wenn die Datei nicht gelesen werden kann.  
 
 ```php
-getCache($file, $default = []);
+rex_file::getCache($file, $default = []);
 ```
 
 Beispiel:
@@ -92,10 +92,10 @@ echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 
 <a name="rexfile_put"></a>
 
-Mit der Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Rie Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschriben.  
+Die Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Rie Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschriben.  
 
 ```php
-put($file, $content);
+rex_file::put($file, $content);
 ```
 
 Beispiel:
@@ -116,7 +116,7 @@ Die Methode `putConfig` schreibt Konfigurationsdaten in eine Config-Datei. Die R
 > Diese Methode wird hauptsächlich vom Core verwendet. AddOns sollten auf die Möglichkeiten der package.yml, Properties und rex_config zurückgreifen.
 
 ```php
-putConfig($file, $content);
+rex_file::putConfig($file, $content);
 ```
 
 ### rex_file::putCache
@@ -126,7 +126,7 @@ putConfig($file, $content);
 Die Methode `putCache` schreibt Daten in den Cache. Bei Erfolg TRUE, sonst FALSE.
 
 ```php
-putCache($file, $content);
+rex_file::putCache($file, $content);
 ```
 
 Beispiel:
@@ -217,7 +217,7 @@ $filesize = rex_file::formattedSize($file);
 getOutput führt die angegebene Datei aus und gibt das Ergebnis aus.
 
 ```php
-getOutput($file);
+rex_file::getOutput($file);
 ```
 
 <a name="rexdir"></a>
