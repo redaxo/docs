@@ -431,7 +431,7 @@ if ($cats) {
             $catName = $cat->getName(); // Name der Kategorie
             $catUrl =  rex_getUrl($catId); // Url anhand ID ermitteln
             // Zwischenspeichern des Ergebnisses
-            $catoutput .= '<li><a href="' . $catUrl . '">' . $catName . '<a></li>' . "\n";
+            $catoutput .= '<li><a href="' . $catUrl . '">' . $catName . '</a></li>' . "\n";
         }
     }
     echo '<ul class="catlist">' . $catoutput . '</ul>';
