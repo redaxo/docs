@@ -19,7 +19,7 @@
 
 <a name="einleitung"></a>
 ## Einleitung
-rex_socket baut eine http- bzw. https-Verbindung zu einer Url oder Datei auf. Die Verbindung wird über die PHP-Klasse`rex_socket` hergestellt. Des Weiteren sind die Klassen `rex_socket_proxy` und `rex_socket_response` verfügbar.
+rex_socket baut eine http- bzw. https-Verbindung zu einer Url oder Datei auf. Die Verbindung wird über die PHP-Klasse`rex_socket` hergestellt. Des Weiteren sind die Klassen [rex_socket_proxy](https://friendsofredaxo.github.io/phpdoc/classes/rex-socket-proxy.html) und [rex_socket_response](https://friendsofredaxo.github.io/phpdoc/classes/rex-socket-response.html) verfügbar.
 
 
 <a name="beispiel"></a>
