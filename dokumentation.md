@@ -58,7 +58,7 @@
   - [Benutzerrechte (rex::getUser, rex_perm)](/{{path}}/{{version}}/benutzerrechte)
   - [Responses (rex_response)](/{{path}}/{{version}}/responses)
   - [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen)
-  - [Socket Verbindungen <sup>(rex_socket)</sup>](/{{path}}/{{version}}/socket)
+  - [Socket Verbindungen (rex_socket)](/{{path}}/{{version}}/socket)
   - [Streams <sup>(rex_stream)</sup>](/{{path}}/{{version}}/streams) <sup><b>offen</b></sup>
   - [Validierungen <sup>(rex_validator)</sup>](/{{path}}/{{version}}/validierungen) <sup><b>offen</b></sup>
 
