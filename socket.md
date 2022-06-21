@@ -2,24 +2,30 @@
 
 * [Einleitung](#einleitung)
 * [Beipsiel](#beispiel)
-* [Beschreibung der Methoden](#methoden)
-    * [factory](#factory)
-    * [factoryUrl](#factoryurl)
-    * [setPath](#setpath)
-    * [setOptions](#setoptions)
-    * [setTimeout](#settimeout)
-    * [addBasicAuthorization](#addbasicauthorization)
-    * [addHeader](#addheader)
-    * [doRequest](#dorequest)
-    * [doGet](#doget)
-    * [followRedirects](#followredirects)
-    * [doPost](#dopost)
-    * [doDelete](#dodelete)
-
+* [Klassen](#klassen)
+  * [rex_socket](#socket)
+  * [rex_socket_proxy](#socketproxy)
+* [Methoden](#methoden)
+  * [factory](#factory)
+  * [factoryUrl](#factoryurl)
+  * [setPath](#setpath)
+  * [setOptions](#setoptions)
+  * [setTimeout](#settimeout)
+  * [addBasicAuthorization](#addbasicauthorization)
+  * [addHeader](#addheader)
+  * [doRequest](#dorequest)
+  * [doGet](#doget)
+  * [followRedirects](#followredirects)
+  * [doPost](#dopost)
+  * [doDelete](#dodelete)
+  * [setDestination (nur mit rex_socket_proxy)](#setdestination)
+  * [setDestinationUrl (nur mit rex_socket_proxy)](#setdestinationurl)
 
 <a name="einleitung"></a>
 ## Einleitung
-rex_socket baut eine http- bzw. https-Verbindung zu einer Url oder Datei auf. Die Verbindung wird über die PHP-Klasse`rex_socket` hergestellt. Des Weiteren sind die Klassen [rex_socket_proxy](https://friendsofredaxo.github.io/phpdoc/classes/rex-socket-proxy.html) und [rex_socket_response](https://friendsofredaxo.github.io/phpdoc/classes/rex-socket-response.html) verfügbar.
+rex_socket baut eine http- bzw. https-Verbindung zu einer Url oder Datei auf. Für Verbindungen über einen Proxy Server steht die Klasse `rex_socket_proxy` zur Verfügung
+> ### Tip: Proxy-Server für alle Verbindungen
+> Sollen alle Verbindungen der gesamten Installation über einen Proxy-Server übertragen werden sollte man in derconfig.yml `redaxo/data/core/config.yml` unter 'socket_proxy' den Value `null`mit dem Proxy-Server ersetzen. Danach werden alle Verbindungen (auch Verbindungen über `rex_request` über diesen Proxy transferiert und der Einsatz von `rex_socket_proxy` ist nicht mehr nötig
 
 
 <a name="beispiel"></a>
@@ -42,8 +48,20 @@ try {
     //error message: $e->getMessage()
 }
 ```
+
+<a name="klassen"></a>
+## Klassen
+
+<a name="socket"></a>
+### rex_socket
+Mit `rex_socket` wird eine klassische Verbindung zu einer Url hergestellt. Die zur Verfügung stehenden Methoden sind weiter unten aufgeführt.
+
+<a name="socketproxy"></a>
+### rex_socket_proxy
+`rex_socket_proxy` eignet sich für die Verbindung über einen ProxyServer. Diese Klasse erweitert  `rex_socket` um die Methoden [setDestination](#setdestination) und [setDestinationUrl](#setdestinationurl).
+
 <a name="methoden"></a>
-## Beschreibung der Methoden
+## Methoden
 
 <a name="factory"></a>
 ### factory
@@ -105,3 +123,15 @@ Setzt einen Post-Request ab. Der Inhalt des Bodys kann als string, array oder ca
 ### doDelete
 `doDelete()`
 Setzt ein Delete-Request ab.
+
+<a name="setdestination"></a>
+### setDestination
+Wird die Verbindung über `rex_socket_proxy` aufgebaut, übergibt man mit `factory()` bzw. `factoryURL()` den Proxyserver. Die eigentliche Ziel-Url wird mit `setDestination()` übergeben.
+`rex_socket_proxy::factoryUrl($proxyServer)->setDestination($host, $port, $ssl)`
+
+
+<a name="setdestinationurl"></a>
+### setDestinationUrl (Pendant zu factoryUrl() )
+Wird die Verbindung über `rex_socket_proxy` aufgebaut, übergibt man mit `factory()` bzw. `factoryURL()` den Proxyserver. Die eigentliche Ziel-Url wird mit `setDestinationUrl()` übergeben.
+`rex_socket_proxy::factoryUrl($proxyServer)->setDestinationUrl($url)`
+
