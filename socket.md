@@ -19,7 +19,7 @@
 
 <a name="einleitung"></a>
 ## Einleitung
-rex_socket baut eine http bzw. https Verbindung zu einer Url bzw. Datei auf. Die Verbindung wird über `rex_socket` hergestellt. Des Weiteren sind die Klassen `rex_socket_proxy`und rex_socket_response` verfügbar.
+rex_socket baut eine http- bzw. https-Verbindung zu einer Url oder Datei auf. Die Verbindung wird über die PHP-Klasse`rex_socket` hergestellt. Des Weiteren sind die Klassen `rex_socket_proxy` und `rex_socket_response` verfügbar.
 
 
 <a name="beispiel"></a>
@@ -48,12 +48,12 @@ try {
 <a name="factory"></a>
 ### factory
 `factory($host, $port, $ssl)`
-Baut eine Socket Instanz auf, die URL wird anschließend über 'setUrl()' übergeben
+Baut eine Socket-Instanz auf, die URL wird anschließend über 'setUrl()' übergeben
 
 <a name="factoryurl"></a>
 ### factoryUrl
 `factoryUrl($url)`
-Baut eine Socket Instanz direkt mit einer kompletten URL auf.
+Baut eine Socket-Instanz direkt mit einer URL auf.
 
 
 <a name="setpath"></a>
@@ -69,7 +69,7 @@ Es können alle Kontextoptionen aus PHP (z.B. bindto, backlog, ipv6_v6only, so_r
 <a name="settimeout"></a>
 ### setTimeout
 `setTimeout($timeout)`
-Übergibt die gewünschte Timeout Zeit in s oder ms
+Übergibt die gewünschte Timeout-Zeit in s oder ms
 
 <a name="addbasicauthorization"></a>
 ### addBasicAuthorization
