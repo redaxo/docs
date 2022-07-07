@@ -84,7 +84,7 @@ Mehr Information über Links in mehrsprachigen Websites findet sich im Kapitel [
 ### Parameter
 
 ``` php
-// Die URL des aktuellen Artikels in der Sprache mit der ID 2 ausgegeben
+// Die URL des aktuellen Artikels in der Sprache mit der aktuellen Sprach-ID und weiteren Parametern ausgegeben
 $aktuelle_id = $this->getValue('article_id');
 <?php echo rex_getUrl($aktuelle_id, rex_clang::getCurrentId(), array ('chapters' => 2, 'page' => 3) ); ?>
 ```
