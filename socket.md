@@ -6,7 +6,7 @@
   * [rex_socket](#socket)
   * [rex_socket_proxy](#socketproxy)
   * [rex_socket_response](#socketresponse)
-* [Methoden](#methoden)
+* [Methoden (rex_socket)](#methoden)
   * [factory](#factory)
   * [factoryUrl](#factoryurl)
   * [setPath](#setpath)
@@ -19,8 +19,10 @@
   * [followRedirects](#followredirects)
   * [doPost](#dopost)
   * [doDelete](#dodelete)
+* [Methoden (rex_socket_proxy)](#methoden_socket_proxy)
   * [setDestination (nur mit rex_socket_proxy)](#setdestination)
   * [setDestinationUrl (nur mit rex_socket_proxy)](#setdestinationurl)
+* [Methoden (rex_socket_response)](#methoden_socket_response)
   * [getBody (nur mit rex_socket_response)](#getbody)
   * [getBufferedBody (nur mit rex_socket_response)](#getbufferedbody)
   * [getHeader (nur mit rex_socket_response)](#getHeader)
@@ -155,7 +157,8 @@ Setzt einen Post-Request ab. Der Inhalt des Bodys kann als string, array oder ca
 `doDelete()`
 Setzt ein Delete-Request ab.
 
-## Weitere Methoden von rex_socket_proxy
+<a name="methoden_socket_proxy"></a>
+## Methoden von rex_socket_proxy
 Bei der Nutzung von `rex_socket_proxy` stehen zusätzlich zu den oben genannten Methoden zusätzlich folgende Methoden zur Verfügung.
 
 <a name="setdestination"></a>
@@ -168,14 +171,16 @@ Wird die Verbindung über `rex_socket_proxy` aufgebaut, übergibt man mit `facto
 Wird die Verbindung über `rex_socket_proxy` aufgebaut, übergibt man mit `factory()` bzw. `factoryURL()` den Proxyserver. Die eigentliche Ziel-Url wird mit `setDestinationUrl()` übergeben.
 `rex_socket_proxy::factoryUrl($proxyServer)->setDestinationUrl($url)`
 
+<a name="methoden_socket_response"></a>
 ## Methoden von rex_socket_response
-Immer wenn ein Request abgesetzt wird ([doRequest](#dorequest), [doGet](#doget), [doPost](#dopost), [doDelete](#dodelete)) bekommt man ein rex_socket_response-Objekt zurück. Hier stehen weitere Methoden zur Verfügung).
+Immer wenn ein Request abgesetzt wird ([doRequest](#dorequest), [doGet](#doget), [doPost](#dopost), [doDelete](#dodelete)) bekommt man ein rex_socket_response-Objekt zurück. Hier stehen weitere Methoden zur Verfügung mit denen die Serverantwort und der Inhalt der Datei verarbeitet werden kann.
 <a name="getbody"></a>
 ### getBody
-Gibt den Inhalt der Datei zurück.
+Die bevorzugte Methode um den Inhalt der Datei aufzurufen und zu verarbeiten. Im Hintergrund wird `getBufferedBody()` (siehe nächste Methode und die einzelnen Chunks in eine Variable geschrieben. Somit erhält man den kompletten Inhalt einer Datei ohen sich Gedanken über Speicher Probleme machen zu müssen. 
 
 <a name="getbufferedbody"></a>
 ### getBufferedBody
+Diese Methode wird von `getBody()` genutzt und ruft den Inhalt einer Datei in kleinen Teilen (Chunks) zu 1024 Zeichen ab um einen Speicherüberlauf zu vermeiden. Möchte man die Methode manuell nutzen muss man sie so oft aufrufen bis das Ergebnis `false` ist. Die Größe der Chunks lässt sich als Parameter mit übergeben `getBufferedBody(256)`
 
 <a name="getHeader"></a>
 ### getHeader
@@ -224,3 +229,4 @@ Antwortet der Server mit einem StatusCode zwischen 200 und 300 wird `true` zurü
 
 <a name="writebodyto"></a>
 ### writeBodyTo
+Schreibt den aberufenen Body in eine Datei `writeBodyTo($filname)` auf dem Server
