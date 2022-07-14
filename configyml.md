@@ -190,12 +190,10 @@ password_policy:
         min: 1
     uppercase:
         min: 1
-    reuse_previous:
-        not_last: 6
-        not_months: 12
-    validity:
-        renew_months: 12
-        block_months: 24
+    no_reuse_of_last: 6
+    no_reuse_within: P6W
+    force_renew_after: P6W
+    block_account_after: P3M
 ```
 
 Über die Keys `reuse_previous` und `validity` lassen sich folgende Einstellungen steuern:
