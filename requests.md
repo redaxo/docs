@@ -59,3 +59,18 @@ if (!rex::isBackend()) {
     rex_login::startSession();
 }
 ```
+
+Beispiel: Code nur ein einziges mal ausführen wenn die Website aufgerufen wird.
+
+```php
+<?php
+//Beim ersten Aufruf der Website wird die Session gestartet. Sie bleibt so lange aktiv, bis der Browser beendet wird.
+rex_login::startSession();
+if (rex_session('MeineVariable')) {
+    //Code der ausgeführt ist, wenn die Variable gesetzt ist (direkt NACH dem ersten Aufruf der Website bis zum beenden des Browsers
+} else {
+    //Code der beim ersten Aufruf der Website ausgeführt wird bis die Variable 'MeineVariable' gesetzt ist
+}
+//Variable wird gesetzt
+rex_set_session('MeineVariable', 'MeinWert');
+```
