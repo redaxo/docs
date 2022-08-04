@@ -18,6 +18,7 @@ Hierzu bietet REDAXO eine komfortable Lösung mit dem Installer-AddOn an.
 ### Core-Upades
 
 Allgemein ist es nicht erforderlich die Core-Updates schrittweise durchzuführen. 
+
 **Ausnahme:** 
 Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
 
