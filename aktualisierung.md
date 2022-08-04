@@ -22,7 +22,7 @@ Allgemein ist es nicht erforderlich die Core-Updates schrittweise durchzuführen
 **Ausnahme:** 
 Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
 
-Möchte man das System dennoch schrittweise aktualisieren, sollte man das aktuellste Bugfix-Release des Feature-Release für die Update-Schritte nutzen. 
+Möchte man das System dennoch schrittweise aktualisieren, sollte man das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte nutzen. 
 Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1` 
 
 
