@@ -47,7 +47,7 @@
 ```php
 try {
     //Baut die Verbindung auf. (Host, Port, SSL)
-    $socket = rex_socket::factory('www.example.com','443', true);
+    $socket = rex_socket::factory('www.example.com',443, true);
     //Übergibt den Pfad an rex_socket
     $socket->setPath('/url/to/my/resource?param=1');
     //Übergib PHP Kontext-Optionen
@@ -97,7 +97,7 @@ Immer wenn über `rex_socket` oder `rex_socket_proxy` ein Request abgesetzt wird
 Baut eine Socket-Instanz auf, die URL wird anschließend über 'setPath()' übergeben.
 > ### Hinweis: Kein Protokoll angeben (http/https)
 > Die Nutzung von SSL (HTTPS) wird über den 2. (Port) und 3. (SSL) Parameter gesteuert.
-`rex_socket::factory('www.example.com','443', true)`
+`rex_socket::factory('www.example.com',443, true)`
 
 
 
