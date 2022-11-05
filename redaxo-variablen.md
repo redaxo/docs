@@ -579,15 +579,7 @@ REX_CTYPE_ID
 
 ### REX_MODULE_ID
 
-Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
-
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
-
-<a name="rex-module-key"></a>
-
-### REX_MODULE_KEY
-
-Liefert den key des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
+Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich und es ist nur innerhalb von Modulen verfügbar.
 
 **Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
 
@@ -595,6 +587,20 @@ Liefert den key des aktiven Moduls. Es sind keine Parameter erforderlich. Ist nu
 
 ``` 
 REX_MODULE_ID
+```
+
+<a name="rex-module-key"></a>
+
+### REX_MODULE_KEY
+
+Liefert den Key des aktiven Moduls. Es sind keine Parameter erforderlich und es ist nur innerhalb von Modulen verfügbar.
+
+**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+
+#### Syntax
+
+``` 
+REX_MODULE_KEY
 ```
 
 <a name="rex-property"></a>
