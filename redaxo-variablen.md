@@ -26,6 +26,7 @@
   + [REX_USER_ID](#rex-user-id)
   + [REX_USER_LOGIN](#rex-user-login)
 * [Verschachtelte Variablen](#verschachtelung)
+* [Callback](#callback)
 * [Eigene Variablen](#eigene-variablen)
 
 <a name="einführung"></a>
@@ -79,7 +80,8 @@ Allen REDAXO-Variablen, die Parameter akzeptieren (erkennbar den den eckigen Kla
 | `instead=xyz` | Der Inhalt `xyz` wird statt der Variable ausgegeben, wenn diese nicht leer ist.                                                       |
 | `ifempty=xyz` | Der Inhalt `xyz` wird ausgegeben, wenn die Variable leer ist.                                                                         |
 
-An die Parameter können auch weitere Varuablen übergeben werden. Somit ist eine Verschachtelung möglich. 
+An die Parameter können auch weitere Variablen übergeben werden. Somit ist eine [Verschachtelung](#verschachtelung) möglich. 
+Darüber hinaus können auch eigene Parameter übergeben werden, die über einen [Callback](#callback) verarbeitet werden können. 
 
 
 <a name="ein-ausgabe-variablen"></a>
@@ -738,6 +740,35 @@ Beispiel:
 REX_VALUE[prefix=<REX_VALUE[2]> id=1 suffix=</REX_VALUE[2]> ifempty=REX_ARTICLE[field=name]] 
 ```
 Hier wird eine Überschrift generiert. Falls kein Inhalt für den Value 1 übergeben wurde, wird stattdessen der Artikelname genommen. 
+
+
+<a name="callback"></a>
+
+## Augabe der Variablen per Callback verarbeiten 
+
+Der Variableninhalt wird an eine PHP-Funktion oder Class-Methode `xyz` übergeben, durch die der Variableninhalt vor der Ausgabe manipuliert werden kann.
+
+### Beispiel:
+
+PHP Class
+
+```php
+class var_info
+{
+ public static function getInfo($data)
+    {
+        return dump($data);
+    }
+}
+```
+
+Aufruf im Modul
+
+```
+REX_VALUE[id=1 callback="var_info::getInfo"  customparameter="foo"] 
+```
+
+Die Callback-Methode `getInfo` nimmt alle Inhalte und Parameter als Array der Variable auf. Hier auch den selbst kreierten customparameter. Es wird hier ein Dump ausgegen. 
 
 
 
