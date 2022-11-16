@@ -25,6 +25,7 @@
   + [REX_TEMPLATE_KEY](#rex-template-key)
   + [REX_USER_ID](#rex-user-id)
   + [REX_USER_LOGIN](#rex-user-login)
+* [Verschachtelte Variablen](#verschachtelung)
 * [Eigene Variablen](#eigene-variablen)
 
 <a name="einführung"></a>
@@ -77,6 +78,9 @@ Allen REDAXO-Variablen, die Parameter akzeptieren (erkennbar den den eckigen Kla
 | `suffix=xyz` | Erlaubt zusätzliche Ausgaben nach der Variable.                                                                                       |
 | `instead=xyz` | Der Inhalt `xyz` wird statt der Variable ausgegeben, wenn diese nicht leer ist.                                                       |
 | `ifempty=xyz` | Der Inhalt `xyz` wird ausgegeben, wenn die Variable leer ist.                                                                         |
+
+An die Parameter können auch weitere Varuablen übergeben werden. Somit ist eine Verschachtelung möglich. 
+
 
 <a name="ein-ausgabe-variablen"></a>
 
@@ -720,6 +724,22 @@ Shortcut für `rex::getUser()->getLogin()` .
 ``` 
 REX_USER_LOGIN
 ```
+
+
+<a name="#verschachtelung"></a>
+
+## Verschachtelte Variablen
+
+Variablen können ineinander verschachtelt werden. Dabei übergibt man den Parametern einer Variable weitere Variablen. 
+
+Beispiele: 
+
+```
+REX_VALUE[prefix=<REX_VALUE[2]> id=1 suffix=</REX_VALUE[2]> ifempty=REX_ARTICLE[field=name]] 
+```
+Hier wird eine Überschrift generiert. Falls kein Inhalt für den Value 1 übergeben wurde, wird stattdessen der Artikelname genommen. 
+
+
 
 <a name="eigene-variablen"></a>
 
