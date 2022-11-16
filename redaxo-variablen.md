@@ -732,7 +732,7 @@ REX_USER_LOGIN
 
 Variablen können ineinander verschachtelt werden. Dabei übergibt man den Parametern einer Variable weitere Variablen. 
 
-Beispiele: 
+Beispiel: 
 
 ```
 REX_VALUE[prefix=<REX_VALUE[2]> id=1 suffix=</REX_VALUE[2]> ifempty=REX_ARTICLE[field=name]] 
