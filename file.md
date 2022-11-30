@@ -232,7 +232,7 @@ Die Class `rex_dir` kümmert sich um das Handling von Verzeichnissen. Hier stehe
 
 ### rex_dir::create
 
-`create` erstellt ein bzw. mehrere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegbenen Unterverzeichnisse bereits bestehen. Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
+`create` erstellt ein bzw. mehrere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegebenen Unterverzeichnisse bereits bestehen. Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
 
 ```php
 rex_dir::create($dir, $recursive = true);
