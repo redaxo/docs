@@ -380,7 +380,7 @@ echo $value1['text2'];
 <a name="viaphp"></a>
 ### Auslesen der Werte via PHP
 
-Die Slice-Values können auch per PHP ausgelsen und verarbeitet werden. 
+Die Slice-Values können auch per PHP ausgelesen und verarbeitet werden. 
 
 ```php
 // Holt das aktuelle Slice-Objekt
