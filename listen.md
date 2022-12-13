@@ -11,6 +11,7 @@
     - [addTableAttribute](#addtableattribute)
     - [addTableColumnGroup](#addtablecolumngroup)
     - [getColumnLabel](#getcolumnlabel)
+    - [setColumnLabel](#setcolumnlabel)
     - [getHeader()](#getheader)
     - [getUrl](#geturl)
     - [getParsedUrl](#getparsedurl)
@@ -131,6 +132,10 @@ $list->addTableColumnGroup([ ['class' => 'classname-a'], ['class' => 'classname-
 #### getColumnLabel
 
 `getColumnLabel( string $columnName, mixed $default = null )` 
+
+<a name="setcolumnlabel"></a>
+
+#### setColumnLabel
 
 Mit der Methode *setColumnLabel* bekommen die Tabellenspalten eine aussagekräftige Bezeichnung.
 Beispiel: `$list->setColumnLabel('name', 'Name des Teilnehmers');` überschreibt die Tabellenspalte *name* mit *Name des Teilnehmers*
