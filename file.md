@@ -92,7 +92,7 @@ echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 
 <a name="rexfile_put"></a>
 
-Die Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Rie Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschriben.  
+Die Methode `put` schreibt Content in eine Datei. Existiert die Datei noch nicht, wird sie erstellt. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschrieben.  
 
 ```php
 rex_file::put($file, $content);
@@ -148,7 +148,7 @@ echo (rex_file::getCache(rex_path::addonCache('meinaddon').'blindtext.txt'));
 
 ### rex_file::copy
 
-Die Methode copy ermöglicht das Kopieren einer einer Datei zu einem Verzeichnis oder Datei. Es müssen eine Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
+Die Methode `copy` ermöglicht das Kopieren einer einer Datei zu einem Verzeichnis oder Datei. Es müssen eine Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
 
 ```php
 rex_file::copy($srcfile, $dstfile);
@@ -158,7 +158,7 @@ rex_file::copy($srcfile, $dstfile);
 
 ### rex_file::move
 
-Die Methode move ermöglicht das Verschieben oder Umbenennen einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
+Die Methode `move` ermöglicht das Verschieben oder Umbenennen einer Datei. Es müssen ein Quell- und ein Zielpfad angegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
 
 ```php
 rex_file::move($srcfile, $dstfile);
@@ -168,7 +168,7 @@ rex_file::move($srcfile, $dstfile);
 
 ### rex_file::delete
 
-Die Methode `delete` ermöglicht das Löschen einer einer Datei. Es müssen ein Quell- und ein Zielpfad eingegeben werden. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
+Die Methode `delete` ermöglicht das Löschen einer einer Datei. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE.
 
 ```php
 rex_file::delete($file);
@@ -188,7 +188,7 @@ rex_file::extension($file);
 
 ### rex_file::mimeType
 
-Die Methode `mimeType` liefert den MimeTyp einer Datei.
+Die Methode `mimeType` liefert den MimeType einer Datei.
 
 ```php
 $extension = rex_file::mimeType($file);
@@ -204,7 +204,7 @@ z.B.:
 
 ### rex_file::formattedSize
 
-Die Methode formattedSize liefert eine benutzerfreundliche Ausgabe der Dateigröße einer Datei
+Die Methode `formattedSize` liefert eine benutzerfreundliche Ausgabe der Dateigröße einer Datei
 
 ```php
 $filesize = rex_file::formattedSize($file);
@@ -214,7 +214,7 @@ $filesize = rex_file::formattedSize($file);
 
 ### rex_file::getOutput
 
-getOutput führt die angegebene Datei aus und gibt das Ergebnis aus.
+`getOutput` führt die angegebene Datei aus und gibt das Ergebnis aus.
 
 ```php
 rex_file::getOutput($file);
@@ -224,7 +224,7 @@ rex_file::getOutput($file);
 
 ## rex_dir
 
-Die Class rex_dir kümmert sich um das Handling von Verzeichnissen. Hier stehen Methoden zum Erstellen, kopieren und löschen von Verzeichnissen Verfügung.
+Die Class `rex_dir` kümmert sich um das Handling von Verzeichnissen. Hier stehen Methoden zum Erstellen, Kopieren und Löschen von Verzeichnissen zur Verfügung.
 
 [Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/lib/util/dir.php)  
 
@@ -232,7 +232,7 @@ Die Class rex_dir kümmert sich um das Handling von Verzeichnissen. Hier stehen 
 
 ### rex_dir::create
 
-`create` erstellt ein bzw. mehere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegbenen Unterverzeicnisse bereits bestehen.  Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
+`create` erstellt ein bzw. mehrere Verzeichnisse. Ist der Parameter $recursive auf true gestellt (Standard), wird der komplette Pfad inkl. angegebener Unterverzeichnisse erstellt. Bei false, müssen die angegebenen Unterverzeichnisse bereits bestehen. Rückgabe bei Erfolg ist TRUE, sonst FALSE.  
 
 ```php
 rex_dir::create($dir, $recursive = true);
