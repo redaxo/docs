@@ -11,6 +11,7 @@
   + [Developer - Module, Templates und Aktionen syncen](#developer)
   + [ICEcoder](#icecoder)
   + [Project - Schnell mal eine PHP-Class einbinden](#project)
+  + [rexstan](#rexstan)
   + [Theme - Verwalten aller Projektdateien für Frontend und Backend](#theme)
   + [YConverter - Migration REDAXO 4.x zu 5.x](#yconverter)
   + [YTraduko - Übersetzungshelfer](#ytraduko)
@@ -127,6 +128,13 @@ ICEcoder ist ein Web-IDE / browserbasierter Code-Editor, der durch Plugins erwei
 ### Project
 
 In REDAXO bereits vorhanden, ist das Project-AddOn. Hier können einfach eigene PHP-Classes und Assets eingebunden werden, die nach einem Update nicht gelöscht werden. Man erspart sich so also die Entwicklung eines eigenen AddOns, wenn man das System einfach nur mit einer PHP-Class bereichern möchte.
+
+<a name="project"></a>
+
+### rexstan
+
+PHPStan CLI-Version und GUI für REDAXO. PHPStan ist ein statisches Analyse-Werkzeug für PHP-Code. Es versucht, mögliche Fehler und Probleme in PHP-Code zu finden, indem es den Code analysiert, ohne ihn tatsächlich auszuführen. PHPStan verwendet Typinformationen und andere Informationen, um mögliche Probleme im Code zu identifizieren und dem Entwickler mitzuteilen. Es kann bei der Entwicklung hilfreich sein, da es mögliche Fehler frühzeitig aufspüren kann, bevor sie zu größeren Problemen werden. 
+
 
 <a name="theme"></a>
 
