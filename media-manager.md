@@ -100,22 +100,22 @@ Die Bilddatei `bilddatei_aus_dem_medienpool.jpg` muss schon im Medienpool angele
 ## Vordefinierte Medientypen
 
 Bei der Installation von REDAXO werden bereits einige Medientypen definiert, die intern beispielsweise für den Medienpool verwendet werden.
+Die Effekte der nachstehenden Medientypen können nicht verändert werden. 
 
 | Medientyp                   | Beschreibung                 |
 |-----------------------------|------------------------------|
-| rex_mediabutton_preview     | resize auf max. 246 x 246 px |
-| rex_medialistbutton_preview | resize auf max. 246 x 246 px |
-| rex_mediapool_detail        | resize auf max. 200 x 200 px |
-| rex_mediapool_maximized     | resize auf max. 600 x 600 px |
-| rex_mediapool_preview       | resize auf max. 80 x 80 px   |
+| rex_media_large             | resize auf max. 1200 x 1200 px |
+| rex_media_medium            | resize auf max. 600 x 600 px |
+| rex_media_small             | resize auf max. 200 x 200 px |
+
 
 Diese Medientypen können auch für eigene Zwecke verwendet werden, beispielsweise um in Modulen im Backend eine Vorschau der Bilder anzuzeigen.
 
-Beispiel einer Modulausgabe:
+**Beispiel einer Modulausgabe:***
 
 ``` php
 $imagelist = explode(',', "REX_MEDIALIST[1]");
-$mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medientyp';
+$mediatype = rex::isBackend() ? 'rex_media_small' : 'mein_eigener_medientyp';
 ?>
 
 <ul class="meinebildgalerie">
@@ -127,7 +127,7 @@ $mediatype = rex::isBackend() ? 'rex_mediabutton_preview' : 'mein_eigener_medien
 </ul>
 ```
 
-Dieses Beispielmodul gibt im Backend die Bilder aus der `REX_MEDIALIST[1]` in einer Größe von maximal 246 x 246 Pixel aus; im Frontend werden die Bilder mit dem selbst definierten Medientyp `mein_eigener_medientyp` ausgegeben.
+Dieses Beispielmodul gibt im Backend die Bilder aus der `REX_MEDIALIST[1]` in einer Größe von maximal 200 x 200 Pixel aus; im Frontend werden die Bilder mit dem selbst definierten Medientyp `mein_eigener_medientyp` ausgegeben.
 
 <a name="mediainfo"></a>
 
