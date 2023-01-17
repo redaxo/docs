@@ -2,8 +2,8 @@
 
 Der Installer ist die zentrale Anlaufstelle, um REDAXO zu aktualisieren und neue AddOns herunterzuladen. Updates des Systems und des AddOns werden im Abschnitt `Vorhandene aktualisieren` angezeigt. Neue AddOns (Erweiterungen des Systems) kann man im Abschnitt `Neue herunterladen` anzeigen und in das System laden.
 
-Neu heruntergeladene AddOns werden nicht automatisch installiert. Die abschließende Installation und Aktivierung erfolgt beim Menüpunkt "AddOns".
-Aktualisierungen finden dagegen automatisch statt.
+Neu heruntergeladene AddOns werden nicht automatisch installiert. Die endgültige Installation und Aktivierung erfolgt über den Menüpunkt "AddOns".
+Updates werden automatisch durchgeführt.
 Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werden sollen. Bei Aktualisierungen werden Backups der alten AddOn-Ordner bzw. bei einem Core-Update der entsprechenden Core-Verzeichnisse erstellt und unter `redaxo/data/addons/install/` abgelegt. Ein Datenbankbackup wird jedoch **nicht** ausgeführt! Dieses kann z. B. über das [Backup-AddOn](/{{path}}/{{version}}/backup) erfolgen.
 
 * [Vorhandene Aktualisieren](#aktualisieren)
