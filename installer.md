@@ -1,6 +1,7 @@
 # Installer
 
-Der Installer ist die zentrale Anlaufstelle, um REDAXO zu aktualisieren und neue AddOns herunterzuladen. Updates des Systems und des AddOns werden im Abschnitt `Vorhandene aktualisieren` angezeigt. Neue AddOns (Erweiterungen des Systems) kann man im Abschnitt `Neue herunterladen` anzeigen und in das System laden.
+Der Installer ist die zentrale Anlaufstelle, um REDAXO zu aktualisieren und neue AddOns herunterzuladen. Updates des Systems und des AddOns werden im Abschnitt `Vorhandene aktualisieren` angezeigt. 
+Eine Übersicht über die verfügbaren AddOns (Systemerweiterungen) befindet sich im Reiter `Neues herunterladen`. Dort werden die AddOns beschrieben und können heruntergeladen werden. 
 
 Neu heruntergeladene AddOns werden nicht automatisch installiert. Die endgültige Installation und Aktivierung erfolgt über den Menüpunkt "AddOns".
 Updates werden automatisch durchgeführt.
