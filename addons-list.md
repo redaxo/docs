@@ -89,12 +89,6 @@ Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den T
 
 Adminer für REDAXO. Seit Version 1.3.0 kann der `rex_sql_table` code für die ausgewählte Tabelle in der Tabellenstruktur generiert werden. Sehr hilfreich bei der AddOn-Erstellung für die install.php.
 
-<a name="developer"></a>
-
-### Developer
-
-Developer synchronisiert Module und Templates in das Dateisystem. So können Module und Templates direkt über einen Dateieditor bearbeitet werden, statt über das REDAXO-Backend.
-
 <a name="cheatsheet"></a>
 
 ### Cheatsheet
