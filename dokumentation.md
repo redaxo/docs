@@ -1,7 +1,7 @@
 - Einleitung
   - [Versionshinweise](/{{path}}/{{version}}/intro)
   - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
-  - [API-Dokumentation](/api/{{version}}/)
+  - [API-Dokumentation (extern)](/api/{{version}}/)
   - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
   
 - Setup und Administration
