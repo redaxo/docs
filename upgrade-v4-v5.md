@@ -158,7 +158,7 @@ Häufig sind die gefundenen Fehler Codefragmente, die bereits in REDAXO 4.x als 
 
 ## Konvertierung einer Version < 4.6
 
-Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 4er-Installation durchzuführen. Nur die Datenbank muss auf den aktuellen Stand gebracht werden. Ein Upgrade auf auf eine aktuelle Version (z. B: 4.7.3) kann daher wie folgt durchgeführt werden:
+Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 4er-Installation durchzuführen. Nur die Datenbank muss auf den aktuellen Stand gebracht werden. Ein Upgrade auf eine aktuelle Version (z. B: 4.7.3) kann daher wie folgt durchgeführt werden:
 
 * Export der Datenbank mittels Import-/Export-AddOn
 * Separate, leere Installation einer geeigneten REDAXO 4.x Version (z. B. 4.7.3)
