@@ -32,13 +32,13 @@ Es ist jetzt möglich SLICE-Variablen per PHP auszulesen.
 
 Grundlegende Informationenen zur aktuellen Version, Aktualisierung, API
 
-**Setup**
+**Setup und Administration**
 
 Installationsanleitung, erster Login, Passwort-Wiederherstellung
 
-**Anwendung**
+**Anwender**
 
-Der Bereich zur Anwendung ist primär an Redakteurinnen und Redakteure gerichtet. Hier wird die Bedienung des Systems erläutert.  
+Der Bereich für Anwender ist primär an Redakteurinnen und Redakteure gerichtet. Hier wird die Bedienung des Systems erläutert.
 
 **Basis**
 
@@ -48,7 +48,11 @@ Grundlegende technische Informationen zum Aufbau einer REDAXO-Webpräsenz
 
 Informationen für Developer
 
-**AddOns**
+**Weitere System AddOns / PlugIns**
+
+Informationen zu System Addons
+
+**AddOn-Entwicklung**
 
 Entwicklung und Bereitstellung eigener AddOns
 
