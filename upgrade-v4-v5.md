@@ -26,7 +26,7 @@
 Voraussetzungen:
 
 * Website REDAXO ab 4.6 / ***[Hinweis für ältere Versionen](#less46)***
-* Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace, unter einer Subdomain oder in einer lokaleln Installation.
+* Eine frische REDAXO 5.x Installation, ggf. in einem separaten Webspace, unter einer Subdomain oder in einer lokalen Installation.
 * Installiertes Adminer-AddOn in der REDAXO 5.x Instanz (falls noch nicht installiert -> ***Installer->Neue herunterladen*** und installieren)
 * Die Templates sollten nicht per require oder include eingebunden sein, sondern direkt eingepflegt sein, andernfalls kann yconverter keine Konvertierung hier durchführen.
 
@@ -99,7 +99,7 @@ Meldungen bei der Konvertierung
 
 YConverter bietet auch die Konvertierung von XForm-Tabellen an. Auch hier werden die Tabellen wie oben beschrieben konvertiert und können mittels Formular in die neue Instanz migriert werden.
 
-Nach der Übertragung der Daten installiert man in REDAXO 5.x YForm und die Tabellen sollten dann wird wie gewohnt erscheinen.
+Nach der Übertragung der Daten installiert man in REDAXO 5.x YForm und die Tabellen sollten dann wie gewohnt erscheinen.
 
 <a name="transfer"></a>
 
@@ -133,7 +133,7 @@ Ist eine direkte Übertragung nicht möglich, da man z. B. keinen Zugriff auf di
 
 Da sich die Dateistruktur in REDAXO 5 geändert hat, müssen die Dateien aus dem `/files` -Ordner in den neuen media-Ordner `/media/` in REDAXO 5 kopiert werden. Unterordner, die durch AddOns erstellt wurden, werden nicht benötigt.
 
-Eigene Ordner, die Assets für die Darstellung beinhalten (z. B. für CSS und JS) können ihre ursprüngliche Position kopiert werden.
+Eigene Ordner, die Assets für die Darstellung beinhalten (z. B. für CSS und JS) können in ihre ursprüngliche Position kopiert werden.
 
 > Sollten Assets in Unterordnern von /files angelegt sein, z. B. /files/styles/ könnte es zu Problemen bei der Verwendung in Verbindung von Rewrite-AddOns und dem Media-Manager kommen. Eine Verschiebung in einen anderen Ordner z. B: `/assets/styles/` und Anpassung der Templates und Module sorgt für Abhilfe.  
 
@@ -164,7 +164,7 @@ Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 
 * Separate, leere Installation einer geeigneten REDAXO 4.x Version (z. B. 4.7.3)
 * Installation von YConverter wie [oben](#install) beschrieben in dieser aktuellen Installation
 * Import der exportierten Datenbank in der neuen Installation, dadurch wird diese konvertiert und ist geeignet für die Bearbeitung durch YConverter.
-* Überprüfen ob die Umlaute der Module im Backend korrekt sind. War es zuvor eine Installation mit ISO-Format (bei Versionen vor 4.5), sollte folgender Tipp berücksichtigt werden und die die Daten müssen konvertiert werden: [Inhalte von Iso auf Utf-8 konvertieren](https://redaxo.org/doku/4.6/convert-iso-utf8)
+* Überprüfen ob die Umlaute der Module im Backend korrekt sind. War es zuvor eine Installation mit ISO-Format (bei Versionen vor 4.5), sollte folgender Tipp berücksichtigt werden und die Daten müssen konvertiert werden: [Inhalte von Iso auf Utf-8 konvertieren](https://redaxo.org/doku/4.6/convert-iso-utf8)
 * Anschließend die Datenbank mit YConverter konvertieren: [Konvertierung der Daten](#convert) und nach REDAXO 5.x entsprechend der Anleitung übertragen
 
 > **Tipp**: Beim späteren Kopieren der Dateien des /files-Ordners darauf achten, dass dort befindliche Cache-Files nicht kopiert werden müssen. (Ältere Versionen von REDAXO erstellen im Files-Ordner Cache-Dateien, die nicht benötigt werden). Ggf. den Cache vor dem Kopieren der Dateien unter **System** löschen.
@@ -175,7 +175,7 @@ Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 
 
 > *Hinweis:* Die Listen sind nicht vollständig.
 
-Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex` , viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` und `rex::getProperty()` verwenden.
+Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex` , viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#set-property) und `rex::getProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#get-property)  verwenden.
 
 | REDAXO 4 | REDAXO 5 |
 | ------------- | ------------- |
@@ -225,7 +225,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `OOArticle::isValid()` <br> `OOCategory::isValid()` <br> `OOMedia::isValid()` <br> `OOMediaCategory::isValid()` | Entfernt, stattdessen:<br> `$art instanceof rex_article` etc. |
 | `$article->getDescription` ()<br> `$article->isStartPage()` | `$article->getValue('art_description')` <br> `$article->isStartArticle()` |
 | `rex_register_extension()` <br> `rex_register_extension_point()` <br> `REX_EXTENSION_EARLY` <br> `REX_EXTENSION_LATE` | `rex_extension::register()` <br> `rex_extension::registerPoint()` <br> `rex_extension::EARLY` <br> `rex_extension::LATE` |
-| `rex_title()` <br> `rex_info()` <br> `rex_warning()` , etc. | `rex_view::title()` <br> `rex_view::info()` <br> `rex_view::warning()` <br>, etc. |
+| `rex_title()` <br> `rex_info()` <br> `rex_warning()` <br>, etc. | `rex_view::title()` <br> `rex_view::info()` <br> `rex_view::warning()` <br>, etc. |
 | `rex_put_file_contents()` | `rex_file::put()` <br> `rex_file::putCache()` (JSON-formatiert)<br> `rex_file::putConfig()` (YAML-formatiert) |
 | `rex_get_file_contents()` | `rex_file::get()` <br> `rex_file::getCache()` <br> `rex_file::getConfig()` |
 | `rex_replace_dynamic_contents()` | Entfernt, da dynamische Inhalte in eigenen Dateien gespeichert werden sollen |
