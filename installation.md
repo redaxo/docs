@@ -181,7 +181,9 @@ Schritt 5: Datenbank
 
 ### Schritt 6: Administrator
 
-Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAXO-Installation definiert werden. Sichere Passwörter haben mehr als sechs Zeichen und beinhalten Groß- und Kleinbuchstaben sowie Sonderzeichen. Auch sollte nicht unbedingt `Admin` oder `Administrator` als Benutzername anlegt werden; diese sind zu leicht zu erraten.
+Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAXO-Installation definiert werden. Sichere Passwörter bestehen aus mindestens 8 Zeichen und beinhalten Groß- und Kleinbuchstaben sowie Sonderzeichen. Die Mindestlänge, Anzahl an Groß- und Kleinschreibung sowie die Mindestanzahl an Ziffern können in der `config.yml` Datei im Bereich `password_policy` festgelegt werden. Die maximale Länge von 4096 Zeichen sollte nur mit Bedacht geändert werden. Für tiefergehende Erläuterungen zur Passwortlänge siehe [CVE-2013-5750](https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form).
+
+Auch sollte nicht unbedingt `Admin` oder `Administrator` als Benutzername anlegt werden; diese sind zu leicht zu erraten.
 
 ![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
 
