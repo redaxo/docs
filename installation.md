@@ -91,7 +91,7 @@ Jetzt kann man den [Installationsvorgang/Setup](#install) starten.
 
 ![Screenshot](/assets/v5.12.0-loader.png)
 
-Der REDAXO-Loader bitetet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
+Der REDAXO-Loader bietet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
 
 > Der Loader wird bei Erfolg automatisch vom Server gelöscht.  
 
@@ -146,9 +146,9 @@ An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gib
 
 Schritt 3: Systemcheck
 
-**Hinweis bei Fehlermeldung zu nicht geschützte Ordnern**
+**Hinweis bei Fehlermeldungen zu nicht geschützten Ordnern**
 
-Bitte den Abschnitt Vorbereitung beachten und die Rechte entsprechend setzen. 
+Bitte den Abschnitt [Vorbereitung](#vorbereitung) beachten und die Rechte entsprechend setzen. 
 
 
 ### Schritt 4: Konfiguration
@@ -189,7 +189,7 @@ Schritt 6: Administrator
 
 ### Schritt 7: Heureka
 
-Die Installation ist erfolgreich. Beachte die weiteren Hinweise auf der Seite. Die Erste Anmeldung kann nun direkt über den Button `Zum Login` erfolgen. Alternativ kann auch `/redaxo/` hinter die URL der Installation im Browser eingeben werden, um in das Backend zu gelangen. (Zum Beispiel *www.domain.xy/redaxo*)
+Die Installation ist erfolgreich. Beachte die weiteren Hinweise auf der Seite. Die erste Anmeldung kann nun direkt über den Button `Zum Login` erfolgen. Alternativ kann auch `/redaxo/` hinter die URL der Installation im Browser eingeben werden, um in das Backend zu gelangen. (Zum Beispiel *www.domain.xy/redaxo*)
 
 ![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
 
@@ -201,7 +201,7 @@ Schritt 7: Ende
 
 ## Installation über die Kommandozeile
 
-REDAXO kann über die Konsole `redaxo/bin/console` installiert werdern. 
+REDAXO kann über die Konsole `redaxo/bin/console` installiert werden. 
 
 ### Download und Entpacken
 
@@ -231,7 +231,7 @@ u.a.:
 * `--quiet` für eine Unterdrückung aller Ausgaben
 * `--no-interaction` für keine Interaktion
 
-Die Options können kombiniert werden und so automatische Installationen realisiert werden. 
+Die Optionen können kombiniert und so automatische Installationen realisiert werden.
 
 [Siehe: Konsole](/{{path}}/{{version}}/console)
 
