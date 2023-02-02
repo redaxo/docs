@@ -226,7 +226,7 @@ Die Verwendung der Metafelder auf Kategorien der Struktur und des Medienpools so
 
 ## Für AddOn-Developer
 
-Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden:
+Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden. Die Function erstellt einen neuen Eintrag in `rex_metainfo_field`.
 
 ### Funktion
 
@@ -234,8 +234,45 @@ Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mi
 rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $params = null, $validate = null, $restrictions = '')
 ```
 
+### Parameter
+
+#### Titel `$title`
+Der Anzeigename des Feldes
+
+#### Name `$name`
+Der Name des Feldes in der Datenbank. Hierüber wird auch definiert, wo das Metafeld zur Verfügung stehen soll (z.B. `art_meinfeldname` für ein Artikel Metafeld oder `clang_meinfeldname` für ein Metafeld dass in den Sprachen zur Verfügung stehen soll).
+
+#### Priorität `$priority` (Integer)
+Bestimmt die Reihenfolge des Feldes. 1 wird z.B. an erster Stelle angezeigt
+
+#### Feldtyp `$type` (Integer)
+Über den Feldtyp wird definiert, welches Metainfofeld angelegt werden soll (Textfeld, Select, etc.).
+
+ID | Feldtyp
+-------- | --------
+1 | text
+2 |  textarea
+3 | select
+4 | radio
+5 | checkbox
+6 | REX_MEDIA_WIDGET
+7 | REX_MEDIALIST_WIDGET
+8 | REX_LINK_WIDGET
+9 | REX_LINKLIST_WIDGET
+10 | dat
+11 | datetime
+12 | legend
+13 | time
+
+Ggf. gibt es weitere Typen die durch andere AddOns angelegt wurden.
+
+#### Parameter `$params`
+Hier werden Parameter für das Feld übergeben. Zum Beispiel Auswahlmöglichkeiten eines Selects, Kategorie eines REX_MEDIA_WIDGET Feldes.
+
+
 ### Beispiel
+Es wird ein Checkbox ($type=5) als Medien-Metafeld ($name=med_) angelegt.
 
 ```php
-rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', '3','','5','','','','');
+rex_metainfo_add_field('Nicht in der Copyrightliste ausgeben', 'med_no_copyright_out', 3,'',5,'','','','');
 ```
