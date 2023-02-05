@@ -258,3 +258,5 @@ Wer REDAXO nicht leer, sondern mit Beispiel-Inhalten installieren möchte, greif
 
 Zur Einrichtung einer kompletten Entwicklungsumgebung für REDAXO bieten wir bei GitHub das Projekt »REDAXO mit Docker« an. Es führt Schritt für Schritt durch die Installation und liefert dabei nützliche Informationen. Deshalb eignet es sich hervorragend auch für den Einstieg ins Thema Docker.  
 **Anleitung bei GitHub:** [REDAXO mit Docker](https://github.com/FriendsOfREDAXO/redaxo-mit-docker)
+
+*[BSI]: Bundesamt für Sicherheit in der Informationstechnik
