@@ -17,6 +17,7 @@ Bei der Formatierung und dem Markdown-Syntax an vorhandenen Dokumenten orientier
 * Hinweise (eingerückt mit `> **Hinweis:** ...`)
 * Inline-Code und Code-Blöcke (ausgezeichnet mit 3 Backticks)
 * Bilder
+* ABBR (Erläuterung weiter unten)
 
 > **Tipp:** Der Markdown-Editor eurer Wahl unterstützt möglicherweise Linting und weitere Formatierungshilfen. 
 
@@ -72,3 +73,18 @@ Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Coding-Standard
 - Benennung: v5.2.0-[Kennung-was-das-Bild-zeigt].png
 - in den Assets-Ordner.
 - Immer Standard-Theme mit aktivierten AddOns aus der Installation verwenden, damit die Navigation gleich aussieht.
+
+
+### ABBR
+
+Mit ABBR kann beim überfahren mit der Maus zum Beispiel die Langform einer Abkürzung anzeigt werden.
+
+Steht irgendwo im Text z.B. folgendes: **BSI**, kann mit diesem Code der zusätzliche Hinweis angezeigt werden:
+
+```
+*[BSI]: Bundesamt für Sicherheit in der Informationstechnik
+```
+*Beispiel aus der installation.md*
+
+Mehr dazu kann hier nachgelesen werden: [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/#abbr)
+
