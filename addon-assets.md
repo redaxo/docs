@@ -79,7 +79,7 @@ REDAXO liefert selbst einen Cachebuster. Eigene Lösungen hierfür sind nicht er
 
 ### Javascripte (JS_IMMUTABLE, Async, JS_DEFERED)
 
-rex_view::addJsFile bietet weitere Funktionen um das Caching sowie das Ladeverhalten der Javascripte zu beeinflussen.
+`rex_view::addJsFile bietet weitere Funktionen um das Caching sowie das Ladeverhalten der Javascripte zu beeinflussen.
 
 Hier ein Beispiel mit allen möglichen Optionen:
 
