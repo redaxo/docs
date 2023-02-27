@@ -14,7 +14,7 @@
 Wir verwenden in dieser Dokumentation die Begriffe Frontend und Backend. Das Backend ist der Verwaltungsbereich von REDAXO, in den man nach dem Einloggen in REDAXO gelangt. Das Backend ist erreichbar über die Adresse <http://www.domain.de/redaxo/.>
 Das Frontend dagegen ist das, was der Besucher der Website zu sehen bekommt, also die von REDAXO generierten Seiten.
 
-Jedes CMS hat seine eigene Terminologie, sodass Begriffe wie Template, Artikel oder Navigation in den einzelnen Systemen interschiedliches bedeuten können.
+Jedes CMS hat seine eigene Terminologie, sodass Begriffe wie Template, Artikel oder Navigation in den einzelnen Systemen unterschiedliches bedeuten können.
 
 <a name="artikel-kategorien"></a>
 
