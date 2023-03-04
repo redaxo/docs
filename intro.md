@@ -1,4 +1,4 @@
-# Dokumentation REDAXO 5.13
+# Dokumentation REDAXO 5.15
 
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen.
 
@@ -11,19 +11,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ## Neues in dieser Doku
 
-![Login-Seite](/assets/v5.13.0-login.png)
-
-### Themes: Der neue Dark Mode
-
-- **Benutzer:** Auswahl des Themes auf der [Profilseite](/{{path}}/{{version}}/profil)
-- **Administratoren:** Theme für alle Nutzer vorgeben in der [config.yml](/{{path}}/{{version}}/configyml)
-- **AddOn-Entwicklung:** Styling für Themes mittels [CSS, Sass oder Less](/{{path}}/{{version}}/addon-assets#themes) 
-
-### REX_-Slice-Variablen per PHP verarbeiten. 
-
-Es ist jetzt möglich SLICE-Variablen per PHP auszulesen. 
-
-[Auslesen der Werte via PHP](/{{path}}/{{version}}/redaxo-variablen#viaphp) 
+![Login-Seite](/assets/v5.15.0-login.png)
 
 
 ## Übersicht der Kategorien
