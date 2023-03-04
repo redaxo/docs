@@ -38,7 +38,7 @@ Die Klasse `rex_response` bietet Methoden für das Handling von
 
 `setStatus($httpStatus)` 
 
-Setzt den Statuscode. Beispiel: `rex_response::setStatus(HTTP_OK)` .
+Setzt den Statuscode. Beispiel: `rex_response::setStatus(rex_response::HTTP_OK)` .
 
 <a name="getstatus"></a>
 
