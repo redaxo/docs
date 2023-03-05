@@ -39,8 +39,7 @@ Wenn ein Administrator eingeloggt ist, oder der Administrator den Debug-Modus ak
 > Tritt ein Fehler auf, meldet REDAXO sich im Frontend mit einem Ooops und im Backend mit einem Rrrrroar.
 
 ![Whoops](/assets/v5.10.0-debug_whooops.png)
-
-> Whoops-Fehlerseite mit Debug-Informationen
+Whoops-Fehlerseite mit Debug-Informationen
 
 Die Whoops-Meldung liefert die Codestellen und Fehlermeldungen zum aufgetretnenen Fehler. Die Infos können zudem kopiert werden. 
 
