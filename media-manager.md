@@ -49,7 +49,7 @@ Folgende Effekte stehen zur Verfügung:
 | Effekt           | Beschreibung                                                                                                                                                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | convert2img      | Konvertiert eine Quelldatei in ein Web-Format. Mögliche Formate für die Bildquelle: .pdf, .ps, .psd, .tif, .tiff, .bmp, .eps, .ico. Mögliche Formate für das Ziel: .jpg, .png **ImageMagick** sollte über *exec* verfügbar sein. |
-| img2img          |  In JPEG/PNG/GIF/WEBP konvertieren 
+| img2img          |  In JPEG/PNG/GIF/WEBP/AVIF konvertieren 
 | crop             | Beschneidet ein Bild auf die angegebene Größe (Angabe in Pixel)                                                                                                                                                                  |
 | filter_blur      | Weichzeichnungsfilter                                                                                                                                                                                                            |
 | filter_colorize  | Einfärben eines Bildes                                                                                                                                                                                                           |
