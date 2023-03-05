@@ -1,6 +1,6 @@
 # Profil
 
-![Profil](/assets/v5.2.0-profil-01-overview.png)
+![Profil](/assets/v5.15.0-profil-01-overview.png)
 
 Das Benutzerprofil kann durch Klick auf den Namen neben `Angemeldet als:` aufgerufen werden. Hier können der Name, die Beschreibung, die hinterlegte E-Mail-Adresse und das Passwort geändert werden. Die E-Mail-Adresse ist als interne Kontakt-Information für den Administrator vorgesehen, kann jedoch auch für Benachrichtigungen einiger AddOns wichtig sein. Der Benutzername kann nicht geändert werden.
 
@@ -15,6 +15,12 @@ Zur eigenen Sicherheit und zum Schutze der Webpräsenz sollte das neue Passwort.
 - Sonder- oder Satzzeichen enthalten
 - keine Begriffe enthalten, die sich in einem Wörterbuch finden lassen
 - nicht weiteren Personen zugänglich sein
+
+## Passkev hinzufügen
+
+Seit REDAXO 5.15 kann man anstelle der Benutzername-Passwort-Kombination auch das Login-Verfahren per Passkey nutzen. 
+Hierzu muss man einmal das alte Paswort eingeben und dann bestätigen, dass der Passkey angelegt werden soll. 
+Ab da an kann man sich ohne Eingabe eines Passwortes in REDAXO einloggen. 
 
 ## Backend-Theme auswählen
 
