@@ -15,6 +15,7 @@
     - [addHiddenField](#addhiddenfield)
     - [addCheckboxField](#addcheckboxfield)
     - [addRadioField](#addradiofield)
+    - [addTextField](#addtextfield)
     - [addTextAreaField](#addtextareafield)
     - [addSelectField](#addselectfield)
     - [addPrioField](#addpriofield)
@@ -249,6 +250,20 @@ $field->setLabel('Getränk');
 $field->addOption ('Bier (0,33l)', 'bier_033');
 $field->addOption ('Limo (0,5l)', 'limo_05');
 ```
+
+<a name="addtextfield"></a>
+#### addTextField
+
+Fügt dem Formular ein Textfeld hinzu.
+
+`addTextField($name, $value = null, array $attributes = [])`
+
+```php
+$field = $form->addTextField('startdate');
+$field->setAttribute('type', 'datetime-local');
+$field->setLabel(rex_i18n::msg('sh_wahl_config_startdate_label'));
+```
+
 
 <a name="addtextareafield"></a>
 
