@@ -39,12 +39,13 @@
   - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit)
 
 - Service
-  - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api)
+  - [Api (rex_api_function)](/{{path}}/{{version}}/api)
   - [Caching](/{{path}}/{{version}}/caching)
   - [Cronjobs](/{{path}}/{{version}}/cronjobs)
   - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
   - [Errors & Logs <sup>(syslog, exceptions, logger)</sup>](/{{path}}/{{version}}/errors) <sup><b>offen</b></sup>
   - [Extension Points](/{{path}}/{{version}}/extension-points)
+  - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/file)
   - [Formatierungen (rex_formatter)](/{{path}}/{{version}}/formatierungen)
   - [Formulare (rex_form)](/{{path}}/{{version}}/formulare)
   - [Fragmente](/{{path}}/{{version}}/fragmente)
@@ -53,7 +54,6 @@
   - [Paginierung (rex_pager)](/{{path}}/{{version}}/paginierung)
   - [Urls (rex_getUrl, toLink)](/{{path}}/{{version}}/service-urls)
   - [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade)
-  - [File-Handling (rex_file, rex_dir)](/{{path}}/{{version}}/file)
   - [Requests (rex_get, rex_post etc.)](/{{path}}/{{version}}/requests)
   - [Benutzerrechte (rex::getUser, rex_perm)](/{{path}}/{{version}}/benutzerrechte)
   - [Responses (rex_response)](/{{path}}/{{version}}/responses)
