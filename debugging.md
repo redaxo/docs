@@ -65,7 +65,8 @@ Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet
 
 ### Suchen in einem Dump: 
 
-as lokale Suchfeld erscheint. Alle gängigen Tastenkombinationen zur Navigation in den Suchergebnissen werden unterstützt (Strg + G oder Cmd + G, F3 usw.) Nach Abschluss der Suche lässt sich das Feld mit Esc wieder ausblenden.
+Wenn der ausgewertete Inhalt komplex ist, sollte man das lokale Suchfeld verwenden, um nach bestimmten Variablen oder Werten zu suchen. Hierzu klickt man auf eine beliebige Stelle im Dump-Inhalt und drückt dann `Strg. + F` oder `Cmd. + F`, damit das lokale Suchfeld erscheint. Alle gängigen Tastenkombinationen zur Navigation in den Suchergebnissen werden unterstützt (Strg + G oder Cmd + G, F3 usw.) Nach Abschluss der Suche lässt sich das Feld mit Esc wieder ausblenden.
+
 
 <a name="debugmode"></a>
 
