@@ -16,7 +16,7 @@ Zur eigenen Sicherheit und zum Schutze der Webpräsenz sollte das neue Passwort.
 - keine Begriffe enthalten, die sich in einem Wörterbuch finden lassen
 - nicht weiteren Personen zugänglich sein
 
-## Passkev hinzufügen
+## Passkey hinzufügen
 
 Seit REDAXO 5.15 kann man anstelle der Benutzername-Passwort-Kombination auch das Login-Verfahren per Passkey nutzen. 
 Hierzu muss man einmal das alte Paswort eingeben und dann bestätigen, dass der Passkey angelegt werden soll. 
@@ -24,7 +24,7 @@ Ab da an kann man sich ohne Eingabe eines Passwortes in REDAXO einloggen.
 
 ## Backend-Theme auswählen
 
-Ab REDAXO 5.13 ist es Nutzern möglich, ein Backend-Theme auszuwählen, um die Farben der Benutzeroberfläche anzupassen. Aktuell stehen folgende Optionen zur Auswahl:
+entsprechend der Systemeinstellung passt sich das REDAXO-Theme  den Vorlieben des Nutzers an. Möchte man ein Theme erzwingen, stehen folgende Optionen zur Vefügung:
 
 - `Hell`  
   Entspricht der bisher bekannten REDAXO-Oberfläche
