@@ -126,32 +126,25 @@ Die folgenden sieben Schritte führen durch die Installation.
 
 Im ersten Schritt wird die Sprache für den Installationsvorgang und für das Backend festgelegt.
 
-![Sprachwahl](/assets/v5.2.0-installation-01-language.png)
+![Sprachwahl](/assets/v5.15.0-installation-01.png)
 
 > **Hinweis :** Die Sprache kann später im Setup oder für den User geändert werden.
 
-### Schritt 2: Lizenz
 
-REDAXO ist ein Open Source Projekt und kostenfrei. Allerdings gibt es Lizenzbedingungen, die akzeptiert werden müssen.
-
-![Lizenz](/assets/v5.2.0-installation-02-license.png)
-
-Schritt 2: Lizenz
-
-### Schritt 3: Systemcheck
+### Schritt 2: Systemcheck
 
 An dieser Stelle führt die Installationsroutine einen Systemcheck durch und gibt ggf. Warnungen aus. Wenn etwas nicht stimmt, müssen eventuell auch die Systemvoraussetzungen überprüft werden.  
 
-![Systemcheck](/assets/v5.2.0-installation-03-systemcheck.png)
+![Systemcheck](/assets/v5.15.0-installation-02.png)
 
-Schritt 3: Systemcheck
+Systemcheck
 
 **Hinweis bei Fehlermeldungen zu nicht geschützten Ordnern**
 
 Bitte den Abschnitt [Vorbereitung](#vorbereitung) beachten und die Rechte entsprechend setzen. 
 
 
-### Schritt 4: Konfiguration
+### Schritt 3: Konfiguration
 
 An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 
@@ -164,22 +157,22 @@ An dieser Stelle wird die grundlegende Konfiguration durchgeführt.
 Befindet sich die Datenbank auf dem lokalen Server, kann hier `localhost` stehen gelassen werden. Bei einigen Hostern sind der Webspace und die Datenbank voneinander getrennt. In diesem Fall muss hier die Adresse des Datenbankservers eingeben werden.
 Besitzt der Datenbank-User das Recht auch neue Datenbanken zu erstellen, so kann hier direkt eine neue Datenbank mit der oben angegebenen Bezeichnung anlegt werden.
 
-![Config](/assets/v5.2.0-installation-04-config.png)
+![Config](/assets/v5.15.0-installation-03.png)
 
-Schritt 4: Systemcheck
+Schritt 3: Systemcheck
 
-### Schritt 5: Datenbank
+### Schritt 4: Datenbank
 
 Es muss eine der vier Optionen gewählt werden.
 Unterstützt der Datenbankserver utf8mb4, wird eine entsprechende Option zur Auswahl angeboten.
 
 > **Hinweis :** Eine Aktualisierung von REDAXO-Versionen kleiner als 5 ist aktuell nicht vorgesehen.
 
-![Datenbank](/assets/v5.9.0-installation-05-database.png)
+![Datenbank](/assets/v5.15.0-installation-04.png)
 
-Schritt 5: Datenbank
+Schritt 4: Datenbank
 
-### Schritt 6: Administrator
+### Schritt 5: Administrator
 
 Nun muss ein Username und ein sicheres Passwort für den Administrator der REDAXO-Installation definiert werden. Sichere Passwörter bestehen aus mindestens 8 Zeichen und beinhalten Groß- und Kleinbuchstaben sowie Sonderzeichen. 
 
@@ -188,17 +181,17 @@ Die maximale Länge von 4096 Zeichen sollte nur mit Bedacht geändert werden. F�
 
 > Es sollte möglichst vermieden werden gänige Benutzernamen wie `Admin` oder `Administrator` zu verwenden; diese sind zu leicht zu erraten.
 
-![Datenbank](/assets/v5.2.0-installation-06-1stuser.png)
+![Datenbank](/assets/v5.15.0-installation-05.png)
 
-Schritt 6: Administrator
+Schritt 5: Administrator
 
-### Schritt 7: Heureka
+### Schritt 6: Heureka
 
 Die Installation ist erfolgreich. Beachte die weiteren Hinweise auf der Seite. Die erste Anmeldung kann nun direkt über den Button `Zum Login` erfolgen. Alternativ kann auch `/redaxo/` hinter die URL der Installation im Browser eingeben werden, um in das Backend zu gelangen. (Zum Beispiel *www.domain.xy/redaxo*)
 
-![Datenbank](/assets/v5.2.0-installation-07-1stlogin.png)
+![Datenbank](/assets/v5.15.0-installation-06.png)
 
-Schritt 7: Ende
+Schritt 6: Ende
 
 > ***Nach der Installation:*** Es ist durchaus möglich, dass nach einem Release noch Updates nachgereicht werden. Daher sollte nach der Installation im Installer geprüft werden, ob Aktualisierungen vorliegen.
 
