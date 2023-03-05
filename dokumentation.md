@@ -39,7 +39,7 @@
   - [Mehrsprachigkeit](/{{path}}/{{version}}/mehrsprachigkeit)
 
 - Service
-  - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api) <sup><b>offen</b></sup>
+  - [Api <sup>(rex_api_function)</sup>](/{{path}}/{{version}}/api)
   - [Caching](/{{path}}/{{version}}/caching)
   - [Cronjobs](/{{path}}/{{version}}/cronjobs)
   - [Eigenschaften (rex::)](/{{path}}/{{version}}/eigenschaften)
