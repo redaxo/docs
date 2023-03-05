@@ -63,6 +63,10 @@ Ergebnis einer dump()-Ausgabe
 
 Anstelle von `var_dump()` kann im REDAXO-Kontext die Funktion `dump()` verwendet werden, um die Ausgabe einer Variablen, eines Objekts oder eines anderen Datentyps im Frontend auszugeben. Der Vorteil besteht darin, dass die Ausgabe HTML-formatiert ist und dadurch schneller erfasst und durchsucht werden kann.
 
+### Suchen in einem Dump: 
+
+as lokale Suchfeld erscheint. Alle gängigen Tastenkombinationen zur Navigation in den Suchergebnissen werden unterstützt (Strg + G oder Cmd + G, F3 usw.) Nach Abschluss der Suche lässt sich das Feld mit Esc wieder ausblenden.
+
 <a name="debugmode"></a>
 
 ## Debugging: Der Debug-Modus
