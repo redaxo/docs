@@ -24,6 +24,12 @@ Ab da an kann man sich ohne Eingabe eines Passwortes in REDAXO einloggen.
 
 > Die Passkey-Box rechts erscheint nur, wenn der Browser die nötigen Bedingungen erfüllt.
 
+![Profil](/assets/v5.15.0-passkey_bestaetigen.png)
+Passkey bestätigen
+
+Wenn man sich mit Passkey eingeloggt hat, kann man im Profil das Passwort optional ganz entfernen.
+Bei Passwort-Änderung und Passkey-Hinzufügung muss man immer mit der aktuellen Auth-Methode bestätigen. Also bei Login mit Passkey dann nicht mit dem "Alten Passwort", sondern per Button, der den vorhandenen Passkey prüft.
+
 ## Backend-Theme auswählen (light- und dark mode) 
 
 Entsprechend der Systemeinstellung passt sich das REDAXO-Theme  den Vorlieben des Nutzers an. Möchte man ein Theme erzwingen, stehen folgende Optionen zur Vefügung:
