@@ -72,7 +72,7 @@
   - [Package](/{{path}}/{{version}}/addon-package)
   - [Variablen](/{{path}}/{{version}}/addon-variablen) <sup><b>offen</b></sup> <sup><b></b></sup>
   - [Assets](/{{path}}/{{version}}/addon-assets)
-  - [Datenbank-Tabellen](/{{path}}/{{version}}/datenbanktabellen)
+  - [Datenbank-Tabellen](/{{path}}/{{version}}/datenbank-tabellen)
   - [Seiten und Unterseiten](/{{path}}/{{version}}/addon-seiten) <sup><b>offen</b></sup>
   - [Konfigurations-Formulare(rex_config_form)](/{{path}}/{{version}}/konfiguration_form)
   - [Installation / Update](/{{path}}/{{version}}/addon-intall-update) <sup><b>offen</b></sup>
