@@ -22,9 +22,9 @@ Seit REDAXO 5.15 kann man anstelle der Benutzername-Passwort-Kombination auch da
 Hierzu muss man einmal das alte Paswort eingeben und dann bestätigen, dass der Passkey angelegt werden soll. 
 Ab da an kann man sich ohne Eingabe eines Passwortes in REDAXO einloggen. 
 
-## Backend-Theme auswählen
+## Backend-Theme auswählen (light- und dark mode) 
 
-entsprechend der Systemeinstellung passt sich das REDAXO-Theme  den Vorlieben des Nutzers an. Möchte man ein Theme erzwingen, stehen folgende Optionen zur Vefügung:
+Entsprechend der Systemeinstellung passt sich das REDAXO-Theme  den Vorlieben des Nutzers an. Möchte man ein Theme erzwingen, stehen folgende Optionen zur Vefügung:
 
 - `Hell`  
   Entspricht der bisher bekannten REDAXO-Oberfläche
