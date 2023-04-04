@@ -1,6 +1,7 @@
 # Installation
 
 * [Vorbereitung](#vorbereitung)
+  * [Systemanforderungen](#systemanforderungen) 
   * [Betrieb unter Apache](#apache)
   * [Betrieb unter Nginx](#nginx)
   * [Datenbank](#datenbank)
@@ -16,12 +17,19 @@
 
 ## Vorbereitung
 
+<a name="systemanforderungen"></a>
+
+### Systemanforderungen
+
+* PHP 8.1 und höher
+* MySQL ab 5.7.7 oder MariaDB ab 10.2 für vollständigen Unicode-Zeichensatz inkl. Emojis (utf8mb4)
+* PHP-Extensions: `fileinfo`, `gd`, `iconv`, `intl`, `mbstring`, `pdo`, `pdo_mysql`, `pcre`, `session`, `tokenizer`, `xml`
+
 Die Systemanforderungen zum aktuellen Release und vorheriger Releases sind unter <https://redaxo.org/download/core/> einsehbar. 
 
 Einige Ordner müssen vor dem Zugriff von außen geschützt sein. 
 Diese lauten: `/redaxo/src`, `/redaxo/data`, `/redaxo/cache` und `/redaxo/bin`.
 Das Vorgehen unterscheidet sich je Webserver-Typ und wird nachfolgend erklärt.
-
 
 <a name="apache"></a>
 
