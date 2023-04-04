@@ -161,10 +161,6 @@ CLANG_FORM_BUTTONS
 : Daten: keine
 : Parameter: ['id' => $clang_id, 'sql' => $sql]
 
-CLANG_FORM_BUTTONS
-: Daten: keine
-: Parameter: keine
-
 CLANG_FORM_EDIT
 : Daten: keine
 : Parameter: ['id' => $clang_id, 'sql' => $sql]
@@ -328,10 +324,6 @@ CAT_FORM_ADD
 CAT_FORM_BUTTONS
 : Daten: keine
 : Parameter: ['id' => $category_id, 'clang' => $clang]
-
-CAT_FORM_BUTTONS
-: Daten: keine
-: Parameter: ['id' => $edit_id, 'clang' => $clang]
 
 CAT_FORM_EDIT
 : Daten: keine
