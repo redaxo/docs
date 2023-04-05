@@ -1,6 +1,7 @@
 # Package (package.yml)
 
 * [Beispiel einer package.yml](#beispiel)
+* [Schema](#schema)   
 * [Die package.yml definiert das AddOn oder PlugIn](#ueber)
 * [Pflichtangaben](#pflicht)
 * [Empfohlene Angaben](#empfohlen)
@@ -60,6 +61,11 @@ conflicts:
     packages:
         irgendein_addon: '>=1.0.0'
 ```
+
+<a name="schema"></a>
+
+## Schema
+Die ausführliche Schema-Definition auf [GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/schemas/package.json)
 
 <a name="ueber"></a>
 
