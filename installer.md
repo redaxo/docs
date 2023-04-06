@@ -1,15 +1,15 @@
 # Installer
 
-Der Installer ist die zentrale Anlaufstelle, um REDAXO zu aktualisieren und neue AddOns herunterzuladen. Updates des Systems und des AddOns werden im Abschnitt `Vorhandene aktualisieren` angezeigt. 
-Eine Übersicht über die verfügbaren AddOns (Systemerweiterungen) befindet sich im Reiter `Neues herunterladen`. Dort werden die AddOns beschrieben und können heruntergeladen werden. 
+Für die Aktualisierung von REDAXO, den Download und die Installation neuer AddOns ist der Installer die zentrale Anlaufstelle. Updates des Systems und der AddOns werden im Bereich `Vorhandene aktualisieren` angezeigt. Unter dem Reiter `Neues herunterladen` befindet sich eine Übersicht der verfügbaren AddOns. Dort werden die AddOns beschrieben und stehen zum Download zur Verfügung. 
 
-Neu heruntergeladene AddOns werden nicht automatisch installiert. Die endgültige Installation und Aktivierung erfolgt über den Menüpunkt "AddOns".
-Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werden sollen. Bei Aktualisierungen werden Backups der alten AddOn-Ordner bzw. bei einem Core-Update der entsprechenden Core-Verzeichnisse erstellt und unter `redaxo/data/addons/install/` abgelegt. Ein Datenbankbackup wird jedoch **nicht** ausgeführt! Dieses kann z. B. über das [Backup-AddOn](/{{path}}/{{version}}/backup) erfolgen.
+Die Installation eines neu heruntergeladenen AddOns ist direkt nach dem Download möglich.  
+Unter Einstellungen kann festgelegt werden, dass Backups erstellt werden. Bei einer Aktualisierung werden Backups der alten AddOn-Verzeichnisse bzw. bei einem Core-Update der entsprechenden Core-Verzeichnisse erstellt. Diese werden unter `redaxo/data/addons/install/` abgelegt. Eine Sicherung der Datenbank wird aber **nicht** durchgeführt! Dies kann z.B. über das [Backup-AddOn](/{{path}}/{{version}}/backup) erfolgen.
 
 * [Vorhandene Aktualisieren](#aktualisieren)
 * [Neue AddOns herunterladen](#herunterladen)
-* [Eigende AddOns hochladen](#hochladen)
 * [AddOn installieren ](#installieren)
+* [Eigende AddOns hochladen](#hochladen)
+
 
 <a name="aktualisieren"></a>
 
@@ -17,13 +17,13 @@ Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werde
 
 ![Aktualisieren](/assets/v5.15.0-installer-00-aktualisieren.png)
 
-Im Bereich "Vorhandene Aktualisieren" sieht man, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Vor der Durchführung einer Aktualisierung sollten unbedingt die Versionshinweise beachtet werden. **Vor Aktualierungen von AddOns und Core sollte ein Backup durchgeführt werden.**
+Im Bereich "Vorhandene Aktualisieren" sieht man, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Bevor ein Update durchgeführt wird, wird dringend empfohlen, die Release Notes (Versionshinweise) zu lesen.
 
-Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklickt. Dort werden auch ggf.  weitere zur Verfügung stehende Versionen angezeigt.
+Durch Anklicken des Namens (key) erhält man Informationen über die neuen Versionen.
 
 ![Versionen](/assets/v5.2.0-installer-03-versionen.png)
 
-> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
+> Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Community, die Agentur oder den Entwickler die für Dich die Website erstellt haben.
 
 <a name="herunterladen"></a>
 
@@ -31,7 +31,8 @@ Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklic
 
 ![Download](/assets/v5.2.0-installer-02-neue.png)
 
-Neue AddoOns lädt man über den Reiter `Neue Herunterladen` . Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Um mehr über das AddOn zu erfahren, kann man den AddOn-Namen anklicken oder Ansehen anklicken. Um das AddOn herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen` .
+Neue AddoOns lädt man über den Reiter `Neue Herunterladen`. Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Weiterführende Informationen zum AddOn und zu den Versionen, erhält man nach Klick auf `Ansehen` oder dem AddOn-Namen. Um das AddOn herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen`. 
+
 
 Anschließend kann man das AddOn unter "AddOns" installieren.
 
