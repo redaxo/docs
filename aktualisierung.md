@@ -8,10 +8,9 @@
 
 ## REDAXO up to date
 
-REDAXO wird ständig weiterentwickelt um den Betrieb unter aktuellen Serverumgebungen zu gewährleisten. Je nach Version erhält man neue Funktionen, Fehlerkorrekturen oder Sicherheitsaktualisierungen. Bei Sicherheitsaktualisierungen sollte dies unbedingt durchgeführt werden.   
+Um den Betrieb in aktuellen Serverumgebungen und einen sicheren Betrie zu gewährleisten, wird REDAXO ständig weiterentwickelt. Je nach Version werden neue Funktionen, Fehlerkorrekturen oder Sicherheitsupdates bereitgestellt. Im Falle von Sicherheitsupdates sollten diese auf jeden Fall durchgeführt werden.
 
-Hierzu bietet REDAXO eine komfortable Lösung mit dem Installer-AddOn an. 
-
+Mit dem Installer-AddOn bietet REDAXO hierfür eine komfortable Lösung.
 
 ## Hinweise
 
@@ -23,12 +22,12 @@ Allgemein ist es nicht erforderlich die Core-Updates schrittweise durchzuführen
 Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
 
 Möchte man das System dennoch schrittweise aktualisieren, sollte man das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte nutzen. 
-Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1` 
+Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1 -> 5.15.1` 
 
 
 ### Datensicherung
 
-Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine komplette Sicherung des Systems gemacht werden. Hierzu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z. B. phpmyAdmin oder adminer) erledigt werden. Bei AddOns kann es auch sinnvoll sein, die Dateien des AddOns selbst zu sichern.
+Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine vollständige Sicherung des Systems durchgeführt werden. Dazu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z.B. phpmyAdmin oder adminer) erfolgen. Bei einigen AddOns kann es auch sinnvoll sein, die Daten des AddOns selbst zu sichern, hierzu bitte die Dokumentation des AddOns beachten.
 
 >Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
 
