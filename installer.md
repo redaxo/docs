@@ -14,13 +14,13 @@ Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werde
 
 ## Vorhandene Aktualisieren
 
-![Systemcheck](/assets/v5.15.0-installer-01-aktualisieren.png)
+![Aktualisieren](/assets/v5.15.0-installer-01-aktualisieren.png)
 
 Im Bereich "Vorhandene Aktualisieren" sieht man, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Vor der Durchführung einer Aktualisierung sollten unbedingt die Versionshinweise beachtet werden. **Vor Aktualierungen von AddOns und Core sollte ein Backup durchgeführt werden.**
 
 Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklickt. Dort werden auch ggf.  weitere zur Verfügung stehende Versionen angezeigt.
 
-![Systemcheck](/assets/v5.2.0-installer-03-versionen.png)
+![Versionen](/assets/v5.2.0-installer-03-versionen.png)
 
 > Manchmal ist es erforderlich, Anpassungen nach einem Update durchzuführen. Ist man sich hierbei nicht sicher, was zu tun ist, sollte man besser alles vorerst belassen wie es ist und das jeweilige Update besser nicht ausführen. Kontaktiere gegebenenfalls die Agentur oder den Entwickler, der für Dich die Website erstellt hat.
 
@@ -28,7 +28,7 @@ Die Informationen zur neuen Version erhält man, wenn man den Namen (key) anklic
 
 ## Neue AddOns herunterladen
 
-![Systemcheck](/assets/v5.2.0-installer-02-neue.png)
+![Download](/assets/v5.2.0-installer-02-neue.png)
 
 Neue AddoOns lädt man über den Reiter `Neue Herunterladen` . Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Um mehr über das AddOn zu erfahren, kann man den AddOn-Namen anklicken oder Ansehen anklicken. Um das AddOn herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen` .
 
@@ -39,5 +39,12 @@ Anschließend kann man das AddOn unter "AddOns" installieren.
 ## Eigene AddOns hochladen
 
 Entwickler können eigene AddOns direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die AddOns stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myREDAXO-Account einsehen kann.
+
+
+## AddOn installieren 
+
+Bis Version 5.15 konnte man ein AddOn nur in der AddOnverwaltung installieren. Seit 5.15 ist es möglich die Installation direkt nach dem Herunterladen zu installieren und zu aktivieren. 
+
+![Installation](/assets/v5.15.0-installer-01-installieren.png)
 
 Weitere Informationen zur Erstellung und Bereitstellung eigener AddOns im Kapitel [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung).
