@@ -9,6 +9,7 @@ Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werde
 * [Vorhandene Aktualisieren](#aktualisieren)
 * [Neue AddOns herunterladen](#herunterladen)
 * [Eigende AddOns hochladen](#hochladen)
+* [AddOn installieren ](#installieren)
 
 <a name="aktualisieren"></a>
 
@@ -40,7 +41,7 @@ Anschließend kann man das AddOn unter "AddOns" installieren.
 
 Entwickler können eigene AddOns direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die AddOns stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myREDAXO-Account einsehen kann.
 
-
+<a name="installieren"></a>
 ## AddOn installieren 
 
 Bis Version 5.15 konnte man ein AddOn nur in der AddOnverwaltung installieren. Seit 5.15 ist es möglich die Installation direkt nach dem Herunterladen zu installieren und zu aktivieren. 
