@@ -8,7 +8,7 @@
 
 ## REDAXO up to date
 
-Um den Betrieb in aktuellen Serverumgebungen und einen möglichst sicheren Code zu gewährleisten, wird REDAXO ständig weiterentwickelt. Je nach Version werden neue Funktionen, Fehlerkorrekturen oder Sicherheitsupdates bereitgestellt. Im Falle von Sicherheitsupdates sollten diese auf jeden Fall durchgeführt werden.
+Um den Betrieb in aktuellen Serverumgebungen und eine möglichst sichere Ausführung zu gewährleisten, wird REDAXO ständig weiterentwickelt. Je nach Version werden neue Funktionen, Fehlerkorrekturen oder Sicherheitsupdates bereitgestellt. Im Falle von Sicherheitsupdates sollten diese auf jeden Fall durchgeführt werden.
 
 Mit dem Installer-AddOn bietet REDAXO hierfür eine komfortable Lösung.
 
