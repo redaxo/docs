@@ -15,7 +15,7 @@ Im AddOn unter Einstellungen kann festgelegt werden, dass Backups erstellt werde
 
 ## Vorhandene Aktualisieren
 
-![Aktualisieren](/assets/v5.15.0-installer-01-aktualisieren.png)
+![Aktualisieren](/assets/v5.15.0-installer-00-aktualisieren.png)
 
 Im Bereich "Vorhandene Aktualisieren" sieht man, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Vor der Durchführung einer Aktualisierung sollten unbedingt die Versionshinweise beachtet werden. **Vor Aktualierungen von AddOns und Core sollte ein Backup durchgeführt werden.**
 
