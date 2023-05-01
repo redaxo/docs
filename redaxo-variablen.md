@@ -441,8 +441,8 @@ REX_ARTICLE[id=i field=xyz clang=i]
 **Beispiel**
 
 ```html
-// Artikel 5 in Sprache 2 abrufen
-REX_ARTICLE[id=5 ctype=2]
+// Spalte 1 von Artikel 5 in Sprache 2 abrufen
+REX_ARTICLE[id=5 clang=2 ctype=1]
 ```
 
 <a name="rex-article-id"></a>
