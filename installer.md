@@ -39,7 +39,7 @@ Anschließend kann das AddOn unter "AddOns" installiert werden.
 <a name="installieren"></a>
 ## AddOn installieren 
 
-Bis Version 5.15 konnte ein AddOn nur in der AddOnverwaltung installiert werden. Seit 5.15 ist es möglich das AddOn direkt nach dem Herunterladen zu installieren und zu aktivieren. 
+Bis Version 5.15 konnte ein AddOn nur in der AddOn-Verwaltung installiert werden. Seit 5.15 ist es möglich, das AddOn direkt nach dem Herunterladen zu installieren und zu aktivieren. 
 
 ![Installation](/assets/v5.15.0-installer-01-installieren.png)
 
