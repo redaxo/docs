@@ -13,11 +13,11 @@ Unter Einstellungen kann festgelegt werden, dass Backups erstellt werden. Bei ei
 
 <a name="aktualisieren"></a>
 
-## Vorhandene Aktualisieren
+## Vorhandene aktualisieren
 
 ![Aktualisieren](/assets/v5.15.0-installer-00-aktualisieren.png)
 
-Im Bereich "Vorhandene Aktualisieren" sieht man, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Bevor ein Update durchgeführt wird, wird dringend empfohlen, die Release Notes (Versionshinweise) zu lesen.
+Im Bereich "Vorhandene aktualisieren" wird aufgelistet, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Bevor ein Update durchgeführt wird, wird dringend empfohlen, die Release Notes (Versionshinweise) zu lesen.
 
 Durch Anklicken des Namens (key) erhält man Informationen über die neuen Versionen.
 
@@ -31,15 +31,15 @@ Durch Anklicken des Namens (key) erhält man Informationen über die neuen Versi
 
 ![Download](/assets/v5.2.0-installer-02-neue.png)
 
-Neue AddoOns lädt man über den Reiter `Neue Herunterladen`. Hier findet man eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Weiterführende Informationen zum AddOn und zu den Versionen, erhält man nach Klick auf `Ansehen` oder dem AddOn-Namen. Um das AddOn herunterzuladen, klickt man bei der gewünschten Version auf `herunterladen`. 
+Neue AddoOns lädt können über den Reiter `Neue herunterladen` heruntergeladen werden. Hier befindet sich eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Weiterführende Informationen zum AddOn und zu den Versionen, sind nach dem Klick auf `Ansehen` oder dem AddOn-Namen verfügbar. Um das AddOn herunterzuladen, muss bei der gewünschten Version `herunterladen` ausgewählt werden. 
 
 
-Anschließend kann man das AddOn unter "AddOns" installieren.
+Anschließend kann das AddOn unter "AddOns" installiert werden.
 
 <a name="installieren"></a>
 ## AddOn installieren 
 
-Bis Version 5.15 konnte man ein AddOn nur in der AddOnverwaltung installieren. Seit 5.15 ist es möglich die Installation direkt nach dem Herunterladen zu installieren und zu aktivieren. 
+Bis Version 5.15 konnte ein AddOn nur in der AddOn-Verwaltung installiert werden. Seit 5.15 ist es möglich, das AddOn direkt nach dem Herunterladen zu installieren und zu aktivieren. 
 
 ![Installation](/assets/v5.15.0-installer-01-installieren.png)
 
@@ -47,6 +47,6 @@ Bis Version 5.15 konnte man ein AddOn nur in der AddOnverwaltung installieren. S
 
 ## Eigene AddOns hochladen
 
-Entwickler können eigene AddOns direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die AddOns stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu benötigt man einen API-Key, den man im eigenen myREDAXO-Account einsehen kann.
+Entwickler können eigene AddOns direkt aus der REDAXO-Installation heraus in den Downloadbereich von redaxo.org hochladen und zum Download bereitstellen. Die AddOns stehen danach im Installer und auf der Website redaxo.org zum Download bereit. Hierzu wird einen API-Key benötigt, der im eigenen myREDAXO-Account eingesehen werden kann.
 
 Weitere Informationen zur Erstellung und Bereitstellung eigener AddOns im Kapitel [Veröffentlichung](/{{path}}/{{version}}/addon-veroeffentlichung).
