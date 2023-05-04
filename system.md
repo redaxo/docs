@@ -27,13 +27,14 @@ Die Einstellungen werden ggf. von installierten AddOns erweitert und bieten dann
 
 Im Panel **Features** stehen folgende Funktionen zur Verfügung:
 
-### Cache Löschen
+### Cache löschen
 
-Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/der entsprechenden Artikels/Kategorie wieder erstellt. *Sollte nur gestartet werden, wenn ein Problem vorliegt*
+Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/der entsprechenden Artikels/Kategorie wieder erstellt.
+*Sollte nur gestartet werden, wenn ein Problem vorliegt.*
 
 ### Debug-Modus aktivieren
 
-Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Außerdem werden keine immutable cache-http-header verwendet. **Der Debug-Modus sollte im Live-Betrieb nicht aktiviert werden**, da die Fehlermeldungen auch sensible Daten beinhalten können, darüber hinaus wird die Webpräsenz auf noindex gesetzt und ggf. aus dem Index diverser Suchmaschinen entfernt.   
+Mit dem Debug-Modus werden bei PHP-Skriptfehlern im Frontend und Backend zusätzliche Angaben zum Fehler ausgegeben. Außerdem werden keine immutable cache-http-header verwendet. **Der Debug-Modus sollte im Live-Betrieb nicht aktiviert werden**, da die Fehlermeldungen auch sensible Daten beinhalten können. Darüber hinaus wird die Webpräsenz auf *noindex* gesetzt und ggf. aus dem Index diverser Suchmaschinen entfernt.   
 
 ### Safe mode aktivieren
 
@@ -41,7 +42,7 @@ Im Safe mode werden vorübergehend alle AddOns deaktiviert. Falls bspw. ein AddO
 
 ### Setup
 
-Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z. B. [Aktualisierung der Datenbank auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4))
+Hier kann das Setup erneut gestartet werden. Es kann dafür verwendet werden, eine defekte Installation im **Notfall** zu reparieren, das Passwort des Admins zurückzusetzen oder nötige Konvertierungsaufgaben nach einem größeren Update durchzuführen (z. B. [Aktualisierung der Datenbank auf utf8mb4](/{{path}}/{{version}}/aktualisierung#utf8mb4))
 
 - Der Aufruf des Setups behindert nicht den Betrieb der Seite im Frontend und ist durch einen Token gesichert. 
 - Die Gültigkeit des Tokens beträgt eine Stunde. 
@@ -58,7 +59,7 @@ REDAXO unterstützt mehrere Sprachen. Im Reiter Sprachen können diese angelegt 
 
 ## Logdateien
 
-Hier werden zentral die Log-Dateien des Systems und einiger AddOns zur Protokollierung und Fehleranalyse abgelegt.
+Hier werden zentral die Logdateien des Systems und einiger AddOns zur Protokollierung und Fehleranalyse abgelegt.
 
 <a name="bericht"></a>
 
@@ -76,4 +77,4 @@ Der Customizer stellt Optionen zur Individualisierung des Backends zur Verfügun
 
 ## Historie (sofern installiert)
 
-Ist das History-Plugin der Struktur installier, kann die Historie hier gelöscht werden.
+Ist das History-Plugin der Struktur installiert, kann die Historie hier gelöscht werden.
