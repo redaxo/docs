@@ -45,7 +45,7 @@ Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am 
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
-Es gibt Fälle, bei denen ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu das aktuelle Redaxo-ZIP herunterladen und so vorgehen:
+Es gibt Fälle, bei denen ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu eine aktuelle Version von REDAXO herunterladen und so vorgehen:
 
 * /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurück kopieren)
 * in /data/core/config.yml "setup: true" setzen
