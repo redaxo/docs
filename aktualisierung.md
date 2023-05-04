@@ -10,7 +10,7 @@
 
 Um den Betrieb in aktuellen Serverumgebungen und eine möglichst sichere Ausführung zu gewährleisten, wird REDAXO ständig weiterentwickelt. Je nach Version werden neue Funktionen, Fehlerkorrekturen oder Sicherheitsupdates bereitgestellt. Im Falle von Sicherheitsupdates sollten diese auf jeden Fall durchgeführt werden.
 
-Mit dem Installer-AddOn bietet REDAXO hierfür eine komfortable Lösung.
+Mit dem [Installer-AddOn](/{{path}}/{{version}}/installer) bietet REDAXO hierfür eine komfortable Lösung.
 
 ## Hinweise
 
@@ -21,7 +21,7 @@ Allgemein ist es nicht erforderlich die Core-Updates schrittweise durchzuführen
 **Ausnahme:** 
 Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
 
-Möchte man das System dennoch schrittweise aktualisieren, sollte man das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte nutzen. 
+Möchte man das System dennoch schrittweise aktualisieren, sollte das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte genutzt werden. 
 Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1 -> 5.15.1` 
 
 
@@ -37,15 +37,15 @@ Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jed
 
 ## Aktualisierung durchführen
 
-Um die Aktualisierungen über den Installer durchführen zu können, muss man im System als Person mit dem Recht `Admin` eingeloggt sein. Zum Installer gelangt man dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer). Dort werden alle Core-Versionen und AddOns aufgelistet, die über den Installer aktualisiert werden können.
+Um die Aktualisierungen über den Installer durchführen zu können, ist die Anmeldung im System als Benutzer mit dem Recht `Admin` notwendig. Der Installer ist dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer) erreichbar. Dort werden Updates aller Core-Versionen und AddOns aufgelistet, die über den Installer verfügbar sind.
 
 ![Aktualisierung](/assets/v.5.13.0-aktualisierung.png)
 
-Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am Anfang der Liste angezeigt. Klickt man dort auf einen Eintrag, werden zunächst die Versionshinweise angezeigt. Ein Klick auf "Aktualisieren" aktualisiert das AddOn, bzw. das Core-System, und der Eintrag verschwindet aus der Liste.
+Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am Anfang der Liste angezeigt. Wird ein Eintrag angeklickt, werden zunächst die Versionshinweise angezeigt. Ein Klick auf "Aktualisieren" aktualisiert das AddOn, bzw. das Core-System, und der Eintrag verschwindet aus der Liste.
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
-Es gibt Fälle, wo ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu kann man das aktuelle Redaxo-ZIP herunter laden und so vorgehen:
+Es gibt Fälle, bei denen ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu eine aktuelle Version von REDAXO herunterladen und so vorgehen:
 
 * /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurück kopieren)
 * in /data/core/config.yml "setup: true" setzen
@@ -62,8 +62,8 @@ REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die 
 
 Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich.
 
-* Hierzu startet man im System das Setup und geht dieses durch ohne Änderungen bis zum Schritt **5 Datenbank**.
-* Das Setup prüft ob utf8mb4 vom Server unterstützt wird. Anschließend wählt man `Aktualisierung der Datenbank` und `ùtf8mb4 [emphohlen]` aus.
+* Hierzu im System das Setup starten und dieses ohne Änderungen bis zum Schritt **5 Datenbank** durchlaufen.
+* Das Setup prüft, ob utf8mb4 vom Server unterstützt wird. Anschließend `Aktualisierung der Datenbank` und `utf8mb4 [emphohlen]` auswählen.
 * Durch Bestätigung zum nächsten Schritt wird die Datenbank konvertiert.
 
 Die Einrichtung eines Benutzers ist nicht erforderlich und kann übersprungen werden.
