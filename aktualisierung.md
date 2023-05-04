@@ -37,7 +37,7 @@ Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jed
 
 ## Aktualisierung durchführen
 
-Um die Aktualisierungen über den Installer durchführen zu können, ist die Anmeldung im System als Benutzer mit dem Recht `Admin` notwendig. Der Installer ist dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer) erreicgbar. Dort werden alle Core-Versionen und AddOns aufgelistet, die über den Installer aktualisiert werden können.
+Um die Aktualisierungen über den Installer durchführen zu können, ist die Anmeldung im System als Benutzer mit dem Recht `Admin` notwendig. Der Installer ist dann über den Menüpunkt [Installer](/{{path}}/{{version}}/installer) erreichbar. Dort werden Updates aller Core-Versionen und AddOns aufgelistet, die über den Installer verfügbar sind.
 
 ![Aktualisierung](/assets/v.5.13.0-aktualisierung.png)
 
