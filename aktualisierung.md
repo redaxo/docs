@@ -41,7 +41,7 @@ Um die Aktualisierungen über den Installer durchführen zu können, ist die Anm
 
 ![Aktualisierung](/assets/v.5.13.0-aktualisierung.png)
 
-Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am Anfang der Liste angezeigt. Wird ein dortiger Eintrag angeklickt, werden zunächst die Versionshinweise angezeigt. Ein Klick auf "Aktualisieren" aktualisiert das AddOn, bzw. das Core-System, und der Eintrag verschwindet aus der Liste.
+Falls ein Update für den REDAXO-Core (Kernsystem) verfügbar ist, wird dies am Anfang der Liste angezeigt. Wird ein Eintrag angeklickt, werden zunächst die Versionshinweise angezeigt. Ein Klick auf "Aktualisieren" aktualisiert das AddOn, bzw. das Core-System, und der Eintrag verschwindet aus der Liste.
 
 Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
