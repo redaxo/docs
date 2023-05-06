@@ -1,6 +1,6 @@
 # Benutzerrechte
 
-In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen die den Benutzern zugeteilt werden können.  Die zuständige Klasse für einfache Berechtigungen ist [rex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-perm.html), die für erweiterte Berechtigungen (als `multiselect`-Feld) ist [rex_complex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-complex-perm.html)
+In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen, die den Benutzern zugeteilt werden können.  Die zuständige Klasse für einfache Berechtigungen ist [rex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-perm.html), die für erweiterte Berechtigungen (als `multiselect`-Feld) ist [rex_complex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-complex-perm.html)
 
 ## Definieren
 
@@ -47,7 +47,7 @@ if(rex::isBackend() && is_object(rex::getUser())) {
 }
 ```
 
-## Komplexe Berechtiungen
+## Komplexe Berechtigungen
 
 Komplexe Berechtigungen werden mit der Klasse `rex_complex_perm` realisiert. Hier am Beispiel des YForm 4 Table-Managers:
 
@@ -84,15 +84,15 @@ class rex_yform_manager_table_perm_edit extends rex_complex_perm
 
 ## Berechtigungen prüfen
 
-Es empfiehlt sich zu prüfen, ob der Benutzer eingeloggt ist.
+Es empfiehlt sich, zu prüfen, ob der Benutzer eingeloggt ist.
 
 ### Ist Admin
 
-Prüfen ob der User ein Admin ist `rex::getUser()->isAdmin()`.
+Prüfen, ob der User ein Admin ist `rex::getUser()->isAdmin()`.
 
 ### Einzelne Rechte prüfen
 
-Prüfen ob der User die nötigen Rechte aktiviert hat:
+Prüfen, ob der User die nötigen Rechte aktiviert hat:
 
 ```php
 if( rex::getUser()->hasPerm('addonname[]') && rex::getUser()->hasPerm('addonname[foo]') ) {
