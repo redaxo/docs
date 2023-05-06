@@ -11,13 +11,14 @@
 - [Dateien Synchronisieren](#sync)
 - [Medien suchen](#search)
 
+
 <a name="zweck"></a>
 
 ## Zweck des Medienpools
 
 Der Medienpool stellt die Funktionen zur Verwaltung von Mediendateien wie Bilder, Dokumente und Videos bereit. Die Medien können über Kategorien organisiert werden. Der Medienpool wird nach einem Klick auf den Link `Medienpool` in einem eigenen Fenster geöffnet.
 
-Im Medienpool werden die Medien gelistet und bearbeitet, die über Upload- oder Synchronisationsfunktion auf den Server geladen wurden.
+Im Medienpool werden die Medien gelistet und bearbeitet, die über Upload oder Synchronisationsfunktion auf den Server geladen wurden.
 Um die Sortierung übersichtlicher zu gestalten, kann man Kategorien definieren und die hochgeladenen Medien diesen Kategorien zuweisen.
 
 Alle Medien, die im Medienpool verwaltet werden, befinden sich im Ordner `/media` der REDAXO-Installation.
@@ -58,7 +59,7 @@ Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation �
 
 ### Löschen über Detailansicht
 
-- Mit der Schaltfläche `Löschen` in der Detailansicht des Mediums entfernt man das Medium aus dem Medienpool un vom Server.
+- Mit der Schaltfläche `Löschen` in der Detailansicht des Mediums entfernt man das Medium aus dem Medienpool und vom Server.
 
 ### Löschen über Listenansicht
 
@@ -73,7 +74,7 @@ Hier kann man zum Medium einen Titel hinterlegen und – je nach Installation �
 
 ## Datei austauschen (ersetzen)
 
-Anstelle eines neuen Uploads und einem neuen Verlinken aller Vorkommen eines Mediums, kann man ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen** in der Detailansicht, findet man eine Uploadmöglichkeit für den Austausch der Datei.
+Anstelle eines neuen Uploads und einem neuen Verlinken aller Vorkommen eines Mediums, kann man ganz einfach ein vorhandenes Medium durch ein neues ersetzen. Hierbei wird das alte Medium überschrieben, der Dateiname bleibt jedoch bestehen. Unter **Datei tauschen,** in der Detailansicht, findet man eine Upload-Möglichkeit für den Austausch der Datei.
 
 <a name="schieben"></a>
 
@@ -111,13 +112,13 @@ Um mehrere Dateien in den Medienpool zu importieren, gibt es die Funktion `Datei
 
 ## Medien suchen
 
-Im Medienpool gibt es oben rechts eine Suchleiste. Hier kann nach Medien gesucht werden. Ist `Keine Kategorie` ausgewählt wird über den gesamten Medienpool hinweg gesucht. Wurde zuvor eine Kategorie ausgewählt wird nur in dieser Kategorie gesucht. 
+Im Medienpool gibt es oben rechts eine Suchleiste. Hier kann nach Medien gesucht werden. Ist `Keine Kategorie` ausgewählt wird über den gesamten Medienpool hinweg gesucht. Wurde zuvor eine Kategorie ausgewählt, wird nur in dieser Kategorie gesucht. 
 
 In der Suche kann getrennt nach Begriffen gesucht werden. 
 
-Wenn man `Blume rot` eingibt, werden alle Treffer mit "Blume" und "rot" gelistet. Die Begriffe müssen jedoch nicht nacheinander stehen wie in der Suche. Möchte man erzwingen dass genau der gesuchte Text gefunden wird, werden diese in Anführungsstrichen gesetzt. `"Blume rot". 
+Wenn man `Blume rot` eingibt, werden alle Treffer mit "Blume" und "rot" gelistet. Die Begriffe müssen jedoch nicht nacheinander stehen, wie in der Suche. Möchte man erzwingen, dass genau der gesuchte Text gefunden wird, werden diese in Anführungsstrichen gesetzt. `"Blume rot". 
 
-Man kann auch nach bestimmten Dateitypen suchem, dies erfolgt durch die Eingabe von `type:`. 
+Man kann auch nach bestimmten Dateitypen suchen, dies erfolgt durch die Eingabe von `type:`. 
 
 Beispiele: 
 
@@ -128,4 +129,3 @@ Sucht alle Jpegs mit der Bezeichnung "Blume rot".
 `Auto type:jpg,png`
 
 Sucht alle Jpegs und png mit dem Begriff "Auto"
-
