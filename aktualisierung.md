@@ -58,7 +58,7 @@ php redaxo/bin/console setup:run
 
 > Es sollte vorher ein Backup der Datenbank durchgeführt werden.
 
-REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis.
+REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensatzes inkl. Emojis.
 
 Nach einem Update im Installer ist noch eine Konvertierung der Datenbank erforderlich.
 
