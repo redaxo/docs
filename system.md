@@ -29,7 +29,7 @@ Im Panel **Features** stehen folgende Funktionen zur Verfügung:
 
 ### Cache löschen
 
-Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/der entsprechenden Artikels/Kategorie wieder erstellt.
+Templates und Sprachdateien werden erstellt, Artikelcache wird gelöscht. Sobald ein Artikel im Frontend aufgerufen wird, wird der Cache des/des entsprechenden Artikels/Kategorie wieder erstellt.
 *Sollte nur gestartet werden, wenn ein Problem vorliegt.*
 
 ### Debug-Modus aktivieren
