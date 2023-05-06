@@ -16,7 +16,7 @@
 
 ## Die Strukturverwaltung
 
-In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Datenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien als auch Artikel werden in der Tabelle `rex_article` gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `startarticle` , die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
+In der Strukturverwaltung von REDAXO gibt es Kategorien und Artikel. Aus Datenbanksicht gibt es nahezu keinen Unterschied; sowohl Kategorien als auch Artikel werden in der Tabelle `rex_article` gespeichert. Im Prinzip ist es nur ein "Flag" in der Datenbank-Spalte `startarticle`, die den Datensatz kennzeichnet: `true` als Kategorie, `false` als Artikel.
 
 Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategorien** bilden die **Struktur**, **Artikel** speichern die **Inhalte**.
 
@@ -26,7 +26,7 @@ Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategori
 
 Kategorien dienen vor allem zum Aufbau einer Navigation. Es gibt zwar in REDAXO durch die Flexibilität des Systems meist mehrere Wege, das gewünschte Ziel zu erreichen, aber man erstellt üblicherweise die Navigations-Struktur mit Kategorien. Weil Kategorien in beliebiger Tiefe Unterkategorien enthalten können, sind der Komplexität von Navigationen keine Grenzen gesetzt. Um eine neue Kategorie anzulegen, klickt man auf den Ordner mit dem Pluszeichen; um eine bestehende Kategorie zu bearbeiten auf "Ändern".
 
-Dort kann man auch die Priorität, also die Reihenfolge festlegen. "Online/Offline" schließlich vergibt einen Kategoriestatus – das heißt aber nicht, dass diese Kategorie nicht zu sehen ist. (Das entscheidet der Entwickler, wie mit Offline-Artikel verfahren wird.)
+Dort kann man auch die Priorität, also die Reihenfolge, festlegen. "Online/Offline" schließlich vergibt einen Kategoriestatus – das heißt aber nicht, dass diese Kategorie nicht zu sehen ist. (Das entscheidet der Entwickler, wie mit Offline-Artikel verfahren wird.)
 
 Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel als Kategorie markiert.
 
@@ -152,7 +152,7 @@ $closest = $category->getClosest(function (rex_category $category) {
 `$category->getClosest()` schaut von $category beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
 Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Selector.
 
-***Beispiel Prüfen ob der aktuelle Kategoriebaum offline ist.***
+***Beispiel Prüfen, ob der aktuelle Kategoriebaum offline ist.***
 
 ```php
 if ($cat->getClosest(fn (rex_category $cat) => 0 == $cat->getValue('status'))) {
@@ -173,8 +173,3 @@ echo rex_article::getNotfoundArticle();
 ```
 
 > In den Kapiteln [Konfiguration](/{{path}}/{{version}}/konfiguration) sowie [Navigationen](/{{path}}/{{version}}/navigationen) werden weitergehende Funktionen und Eigenschaften mit Beispielen erklärt. 
-
-
-
-
-
