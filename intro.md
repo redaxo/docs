@@ -14,14 +14,14 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 ![Login-Seite](/assets/v5.15.0-login.png)
 
 - REDAXO unterstützt den Login per passkey. Die Einrichtung erfolgt auf der [Profilseite.](/{{path}}/{{version}}/profil)
-- Dumps können jetzt auch durchucht werden, siehe [Debuggung.](/{{path}}/{{version}}/debugging)
+- Dumps können jetzt auch durchsucht werden, siehe [Debugging.](/{{path}}/{{version}}/debugging)
 
 
 ## Übersicht der Kategorien
 
 **Einleitung**
 
-Grundlegende Informationenen zur aktuellen Version, Aktualisierung, API
+Grundlegende Informationen zur aktuellen Version, Aktualisierung, API
 
 **Setup und Administration**
 
