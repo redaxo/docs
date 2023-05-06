@@ -75,7 +75,7 @@ Bei konkreten Codevorschlägen empfehlen sich "Pull Requests". Die Entwickelnden
 
 ## Eigene AddOns
 
-Ein eigenes AddOn zu entwickeln ist immer eine Möglichkeit, sich aktiv an der Entwicklung zu beteiligen. Ist das AddOn für eine größere Anzahl von Anwenderinnen und Anwendern von Interesse, kann dieses in den Downloadbereich eingestellt werden.
+Ein eigenes AddOn zu entwickeln, ist immer eine Möglichkeit, sich aktiv an der Entwicklung zu beteiligen. Ist das AddOn für eine größere Anzahl von Anwenderinnen und Anwendern von Interesse, kann dieses in den Downloadbereich eingestellt werden.
 
 <a name="redaxo-entwickelnde"></a>
 
