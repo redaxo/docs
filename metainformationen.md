@@ -24,21 +24,21 @@ REDAXO bietet die Möglichkeit, für jeden Artikel, jede Kategorie, jede Sprache
 
 Metadaten sind beschreibende Daten von Artikeln, Kategorien, Sprachen oder Medien. Über das System AddOn „MetaInfos“ (SystemAddOns sind immer in einer Standard REDAXO Installation vorhanden und können nicht gelöscht werden) lassen sich diese Daten erweitern.
 
-Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können können mittels PHP oder [REDAXO-Variablen](/{{path}}/{{version}}/redaxo-variablen) abgerufen werden.  
+Man kann darüber Felder in der Verwaltung hinzufügen. Neben einfachen Textfeldern, lassen sich auch die Linkmap und auch Datenbankabfragen verwenden, um eigene spezielle Werte einbauen zu können. Ein typischen Fall ist das Erweitern der Media-Metadaten mit einem Feld „Copyright“, oder bei den Kategorien ein Feld mit „Kategoriegrafik“. Diese Werte können mittels PHP oder [REDAXO-Variablen](/{{path}}/{{version}}/redaxo-variablen) abgerufen werden.  
 
 <a name="besipiel"></a>
 
 ## Anwendungsbeispiel
 
 Möchte man eine Seite so aufbauen, dass Sie in manchen Artikeln nur eine Spalte und in anderen zwei Spalten verwenden will, kann eine Auswahl per Metainfos bereitgestellt werden. Das erspart die Verwendung oder Programmierung zusätzlicher Templates.
-Man leget unter MetaInfo (Artikel) ein Select mit den Optionen 1-spaltig, 2-spaltig an. Dieses Merkmal muß dann bei den Artikeln entsprechend selektiert werden. Im Template selbst wird dann das Merkmal “ein- oder zweispaltig” abgefragt und danach ggf. eine weitere Spalte ergänzt.
+Man legt unter MetaInfo (Artikel) ein Select mit den Optionen 1-spaltig, 2-spaltig an. Dieses Merkmal muss dann bei den Artikeln entsprechend selektiert werden. Im Template selbst wird dann das Merkmal “ein- oder zweispaltig“ abgefragt und danach ggf. eine weitere Spalte ergänzt.
 
 <a name="addon"></a>
 
 ## Meta Infos-AddOn
 
 Im Meta Infos-AddOn können die Metafelder für Artikel, Kategorien, Medien und Sprachen definiert und gestaltet werden.  
- Meta Infos  sind dafür vorgesehen, seiten- oder medienspezifische Informationen zu verwalten, wie beispielsweise Suchmaschinen-Keywords, ein individuelles Headerbild, ob als Newsteaser berücksichtigt, ob sie in bestimmten Navigationen auftauchen soll, Copyright-Infos zu bestimmten Fotos, usw. Sie können Metainfo-Felder für Artikel, Kategorien und/oder Medien definieren. Als Felder stehen alle üblichen Typen wie text, textarea, select, radio, checkbox und mehr zur Verfügung.
+ Meta-Infos  sind dafür vorgesehen, seiten- oder medienspezifische Informationen zu verwalten, wie beispielsweise Suchmaschinen-Keywords, ein individuelles Headerbild, ob als Newsteaser berücksichtigt, ob sie in bestimmten Navigationen auftauchen soll, Copyright-Infos zu bestimmten Fotos, usw. Sie können Metainfo-Felder für Artikel, Kategorien und/oder Medien definieren. Als Felder stehen alle üblichen Typen wie text, textarea, select, radio, checkbox und mehr zur Verfügung.
 
  <a name="metafelder"></a>
 
@@ -94,7 +94,7 @@ Das Feld `Callback` ermöglicht es Programmcode auszuführen, wenn ein Wert des 
 
 ### Beispiel
 
-Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Datenbank Tabelle zugewiesen. In die Produkttabelle soll die REDAXO Artikel Id geschrieben werden, in der das Produkt zugeordnet wurde.
+Im Beispiel wird einem REDAXO Artikel in einem Metafeld ein Produkt aus einer Datenbanktabelle zugewiesen. In die Produkttabelle soll die REDAXO Artikel Id geschrieben werden, in der das Produkt zugeordnet wurde.
 
 ```php
    <?php
@@ -181,7 +181,7 @@ $file_name = $media->getValue('med_copyright');
 
 #### Abruf als REDAXO-Variable
 
-Variante als REDAXO-Variable, hier wird die Meta Info eines Mediums des Media-Widgets ausgegeben.
+Variante als REDAXO-Variable, hier wird die Metainfo eines Mediums des Media-Widgets ausgegeben.
 
 ```html
 REX_MEDIA[id=i field=copyright]
@@ -217,7 +217,7 @@ REX_CLANG[id=2 field=clang_setlocale]
 
 <a name="filter"></a>
 
-## Metdafelder-Verwendung einschränken
+## Mattfelder-Verwendung einschränken
 
 Die Verwendung der Metafelder auf Kategorien der Struktur und des Medienpools sowie für Templates (bei Artikel-Metainfos) im Setupdialog der Metainfo eingeschränkt werden. 
 
@@ -226,7 +226,7 @@ Die Verwendung der Metafelder auf Kategorien der Struktur und des Medienpools so
 
 ## Für AddOn-Developer
 
-Wenn ein AddOn neue Meta-Felder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden. Die Function erstellt einen neuen Eintrag in `rex_metainfo_field`.
+Wenn ein AddOn neue Metafelder benötigt, können diese bei der Installation mit der Funktion rex_metainfo_add_field hinzugefügt werden. Die Function erstellt einen neuen Eintrag in `rex_metainfo_field`.
 
 ### Funktion
 
@@ -240,13 +240,13 @@ rex_metainfo_add_field($title, $name, $priority, $attributes, $type, $default, $
 Der Anzeigename des Feldes
 
 #### Name `$name`
-Der Name des Feldes in der Datenbank. Hierüber wird auch definiert, wo das Metafeld zur Verfügung stehen soll (z.B. `art_meinfeldname` für ein Artikel Metafeld oder `clang_meinfeldname` für ein Metafeld dass in den Sprachen zur Verfügung stehen soll).
+Der Name des Feldes in der Datenbank. Hierüber wird auch definiert, wo das Metafeld zur Verfügung stehen soll (z.B. `art_meinfeldname` für ein Artikel-Metafeld oder `clang_meinfeldname` für ein Metafeld, dass in den Sprachen zur Verfügung stehen soll).
 
 #### Priorität `$priority` (Integer)
 Bestimmt die Reihenfolge des Feldes. 1 wird z.B. an erster Stelle angezeigt
 
 #### Feldtyp `$type` (Integer)
-Über den Feldtyp wird definiert, welches Metainfofeld angelegt werden soll (Textfeld, Select, etc.).
+Über den Feldtyp wird definiert, welches Metainfo-Feld angelegt werden soll (Textfeld, Select, etc.).
 
 ID | Feldtyp
 -------- | --------
