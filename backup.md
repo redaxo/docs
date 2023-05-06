@@ -82,8 +82,8 @@ Im Abschnitt `Upload` können Sicherungsdateien hochgeladen und eingespielt werd
 
 Screenshot: Daten-Import Upload
 
-* Die Datenbank-Sicherung kann unter Datenbankexport eingespielt werden
-* Die Datei-Sicherung kann unter Dateiexport einspielt werden
+* Die Datenbank-Sicherung kann unter "Datenbank-Backup wiederherstellen" eingespielt werden
+* Die Datei-Sicherung kann unter "Datei-Backup wiederherstellen" eingespielt werden
 
 Mit einem Klick auf das jeweilige Dateiauswahlfeld kann die lokal gespeicherte Sicherung ausgewählt und mit einem Klick auf `Import` hochgeladen werden.
 
@@ -100,9 +100,9 @@ Im Abschnitt `Vom Server laden` kann man Sicherungen, die auf dem Server gespeic
 Screenshot: Daten-Import vom Server
 
 * `Datenbank-Exporte` listet die Sicherungen der Datenbank auf.
-* `Datei-Exporte` zeigt die Liste der Dateisicherungen.
+* `Datei-Exporte` zeigt die Liste der Datei-Sicherungen.
 
-Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klickt man in der jeweiligen Zeile auf `importieren` .
+Um eine Datenbank- oder Datei-Sicherung wieder einzuspielen, klickt man in der jeweiligen Zeile auf `importieren`.
 
 > **Wichtig:** Bis zum Abschluss des Imports dürfen keine weiteren Aktionen in REDAXO ausgeführt werden!
 
