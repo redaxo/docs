@@ -3,11 +3,11 @@
 
 Möchte man individuelle Einstellungen durch den Redakteur festlegen lassen, benötigt man Formulare zur Pflege der AddOn-Konfiguration. Diese werden in der Tabelle `rex_config` abgespeichert und können per `rex_config`-Klasse abgerufen oder gespeichert werden.
 
-Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die übermittelten Werte in einem Formular manuell abgerufen und abgespeichert werden. Mit der Klasse `rex_config_form` hat sich das grundlegend geeändert. `rex_config_form` erlaubt es, Formulare mittels `rex_form` zu erstellen und diese direkt zu speichern. Die Klasse `rex_config_form` basiert auf `rex_form_base`.
+Hierzu mussten bis REDAXO 5.4.0 die Formulare manuell erstellt werden und die übermittelten Werte in einem Formular manuell abgerufen und abgespeichert werden. Mit der Klasse `rex_config_form` hat sich das grundlegend geändert. `rex_config_form` erlaubt es, Formulare mittels `rex_form` zu erstellen und diese direkt zu speichern. Die Klasse `rex_config_form` basiert auf `rex_form_base`.
 
-Somit stehen `rex_config_form` alle Eingabe- und Validierungsmöglichkeiten zur Verfügung, die in der Doku zu `rex_form` aufgezählt werden.
+Somit stehen `rex_config_form` alle Eingabe- und Validierung-Möglichkeiten zur Verfügung, die in der Doku zu `rex_form` aufgezählt werden.
 
-* [Instanzieren des Formulars](#Instanz)
+* [Instanziieren des Formulars](#Instanz)
 * [Formularfelder](#felder)
 * [Ausgabe](#ausgabe)
 * [Überprüfen, ob Formular gesendet wurde](#versendet)
@@ -55,7 +55,7 @@ echo $fragment->parse('core/page/section.php');
 
 ## Überprüfen, ob das Formular gesendet wurde
 
-Um weiteren Code auszuführen, nachdem das Formular abgesendet wurde, kann zusätzlich folgende Code eingesetzt werden:
+Um weiteren Code auszuführen, nachdem das Formular abgesendet wurde, kann zusätzlich folgender Code eingesetzt werden:
 
 ```php
 $form_name = $form->getName();
