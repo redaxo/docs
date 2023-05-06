@@ -36,7 +36,7 @@ Da also jeder Artikel jeder Sprache in der Datenbank als eigener Datensatz vorli
 
 Sobald es mehrere Sprachen gibt, ändert sich auch die Form der Links. REX-Variablen wie REX_LINK erzeugen ab sofort andere Links, die die Sprachkennung enthalten, z.B. `index.php?article_id=2&clang=2`. Der Parameter `clang` sorgt dabei für den Aufruf der Sprache mit ID 2.
 
-Man kann Links aber natürlich auch manuell über PHP erstellen mit `rex_getUrl`, wie hier im Beispiel ein Link auf den Artikel mit der ID 5 und der Sprache mit der ID 2:
+Man kann Links aber natürlich auch manuell über PHP erstellen, mit `rex_getUrl`, wie hier im Beispiel ein Link auf den Artikel mit der ID 5 und der Sprache mit der ID 2:
 
 ```php
 <a href="<?php echo rex_getUrl(5, 2); ?>">Link</a>
@@ -81,13 +81,13 @@ Es reicht aber auch aus, nur die Artikel-ID zu übergeben. Die aktuelle Sprache 
 
 Außer für Kategorien und Medien bietet REDAXO auch für Sprachen Metafelder. Denkbar wäre, Sprach-Metafelder anzulegen für einen alternativen Navigations-Sprachnamen, z.B. DE oder EN.
 
-Das standardmäßig vorhandene Sprach-Metafeld `Code` kann sinnvoll genutzt werden z.B. zum Verwalten des Sprachattributs im html-Tag:
+Das standardmäßig vorhandene Sprach-Metafeld `Code` kann sinnvoll genutzt werden, z.B. zum Verwalten des Sprachattributs im html-Tag:
 
 ```php
 <html lang="<?php echo rex_clang::getCurrent()->getCode(); ?>">
 ```
 
-Oder man könnte ein neues Sprach-Metafeld `setlocale` anlegen und damit in PHP die Lokalisierung definieren, um regional individuelle Datumsangaben und Dezimatrennzeichen zu erhalten:
+Oder man könnte ein neues Sprach-Metafeld `setlocale` anlegen und damit in PHP die Lokalisierung definieren, um regional individuelle Datumsangaben und Dezimaltrennzeichen zu erhalten:
 
 ```php
 setlocale (LC_ALL, rex_clang::getCurrent()->getValue('clang_setlocale'));
