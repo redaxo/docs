@@ -16,7 +16,7 @@
 * [Meldungen nach erfolgreicher Installation ausgeben](#statusmsg)
 * [Meldung bei fehlerhafter Installation ausgeben](#error_install)
 
-Um eigene AddOns zu veröffentlichen sollten man folgenden Weg nehmen.
+Um eigene AddOns zu veröffentlichen, sollten man folgenden Weg nehmen.
 
 <a name="anker-addon-key"></a>
 
@@ -54,12 +54,12 @@ Einstellungsdialog
 
 ### Meine Packages
 
-Nun kann man über **Core & Packages/Eigene hochladen** einsehen, welche AddOns bereits registriert sind und auch in der lokalen Installation vorhanden sind.
+Jetzt kann man über **Core & Packages/Eigene hochladen** einsehen, welche AddOns bereits registriert sind und auch in der lokalen Installation vorhanden sind.
 Das heißt, wenn man Änderungen durchführen und eine neue Version eines AddOns veröffentlichen möchte, muss genau dieses AddOn in der lokalen Installation zur Verfügung stehen.
 
 ![Meine Packages](/assets/v5.3.0-installer-meinepackages.png)
 
-Eigene hochladen - Meine Packeges
+Eigene hochladen - Meine Packages
 
 <a name="anker-addon-version-eigenesaddon"></a>
 
@@ -76,7 +76,7 @@ Eigenes AddOn
 
 ### AddOn-Version aktualisieren / löschen
 
-Eine Aktualisierung wird mit den vorhandenen Versionsinfos abgeglichen. D.h. wenn lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt oder man auf "ZIP-Datei erstellen und hochlanden" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
+Eine Aktualisierung wird mit den vorhandenen Versionsinformationen abgeglichen. D.h. wenn lokal eine spezielle Version läuft, dann kann man in den anderen Versionen nur die Beschreibung und den Status ändern. Sofern die ausgewählte Version mit der lokalen übereinstimmt oder man auf "ZIP-Datei erstellen und hochladen" klickt, kann man die eigene lokale Version komplett hochladen und ersetzen.
 
 Eine einzelne Version kann man über den Löschen-Button aus dem Online-Archiv entfernen.
 
@@ -112,10 +112,10 @@ installer_ignore:
 
 ## AddOn direkt aus GitHub heraus veröffentlichen
 
-Mit der [FriendsOfREDAXO/installer-action](https://github.com/FriendsOfREDAXO/installer-action) können AddOns direkt aus GitHub heraus released werden. 
+Mit der [FriendsOfREDAXO/installer-action](https://github.com/FriendsOfREDAXO/installer-action) können AddOns direkt aus GitHub heraus releast werden. 
 Nach Einrichtung der `installer-action` werden GitHub-Releases automatisch in den Installer übertragen. 
   
-**Voraussetung:** Das AddOn muss vorab in MyREDAXO angelegt und beschrieben sein. 
+**Voraussetzung:** Das AddOn muss vorab in MyREDAXO angelegt und beschrieben sein. 
 
 [Informationen zur Einrichtung auf GitHub](https://github.com/FriendsOfREDAXO/installer-action). 
    
@@ -150,7 +150,7 @@ Mit hinterlegtem API-Key kann man über den Installer eigene, offline gestellte,
 
 ## Meldung nach erfolgreicher Installation ausgeben
 
-Es ist möglich im Installer eine Infordirekt nach erfolgter Installation auszugeben um z.B. auf die nächsten Schritte hinzuweisen. 
+Es ist möglich, im Installer eine Information direkt nach erfolgter Installation auszugeben, um z.B. auf die nächsten Schritte hinzuweisen. 
 
 ```php
 $addon = rex_addon::get('mein_addon');
@@ -161,7 +161,7 @@ $addon->setProperty('successmsg', rex_i18n::msg('mein_addon_install_msg');
 
 ## Meldung bei fehlerhafter Installation ausgeben
 
-Sollte was während der Installation schief laufen, kann man die Installation als nicht erfolgreich markieren und eine Fehlermeldung ausgeben. 
+Sollte was während der Installation schieflaufen, kann man die Installation als nicht erfolgreich markieren und eine Fehlermeldung ausgeben. 
 
 ```php 
 if ($something_bad_happened) {
