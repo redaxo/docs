@@ -16,7 +16,7 @@ Mit dem [Installer-AddOn](/{{path}}/{{version}}/installer) bietet REDAXO hierfü
 
 ### Core-Upades
 
-Allgemein ist es nicht erforderlich die Core-Updates schrittweise durchzuführen. 
+Allgemein ist es nicht erforderlich, die Core-Updates schrittweise durchzuführen. 
 
 **Ausnahme:** 
 Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
@@ -27,7 +27,7 @@ Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1 -> 5.15.1`
 
 ### Datensicherung
 
-Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine vollständige Sicherung des Systems durchgeführt werden. Dazu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z.B. phpmyAdmin oder adminer) erfolgen. Bei einigen AddOns kann es auch sinnvoll sein, die Daten des AddOns selbst zu sichern, hierzu bitte die Dokumentation des AddOns beachten.
+Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine vollständige Sicherung des Systems durchgeführt werden. Dazu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z.B. PhpMyAdmin oder adminer) erfolgen. Bei einigen AddOns kann es auch sinnvoll sein, die Daten des AddOns selbst zu sichern, hierzu bitte die Dokumentation des AddOns beachten.
 
 >Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
 
@@ -47,7 +47,7 @@ Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
 Es gibt Fälle, bei denen ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu eine aktuelle Version von REDAXO herunterladen und so vorgehen:
 
-* /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurück kopieren)
+* /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurückkopieren)
 * in /data/core/config.yml "setup: true" setzen
 * Setup durchlaufen lassen und dort "Update der Datenbank" auswählen; hier kann alternativ auch per CLI "Update database" ausgeführt werden:
 php redaxo/bin/console setup:run
@@ -60,7 +60,7 @@ php redaxo/bin/console setup:run
 
 REDAXO unterstützt seit Version 5.9 vollständig utf8mb4, dies ermöglicht die vollständige Darstellung des UTF-8 Zeichensazes inkl. Emojis.
 
-Nach einem Update im Installer ist noch eine Konnvertierung der Datenbank erforderlich.
+Nach einem Update im Installer ist noch eine Konvertierung der Datenbank erforderlich.
 
 * Hierzu im System das Setup starten und dieses ohne Änderungen bis zum Schritt **5 Datenbank** durchlaufen.
 * Das Setup prüft, ob utf8mb4 vom Server unterstützt wird. Anschließend `Aktualisierung der Datenbank` und `utf8mb4 [emphohlen]` auswählen.
