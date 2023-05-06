@@ -6,7 +6,7 @@
 * [AddOn Konfiguration](#addon_config)
 * [Systemkonfiguration - Startartikel - Fehlerseite](#sysconf)
 
-AddOn-Entwickler können die Konfiguration der AddOns in der Tabelle `rex_config` ablegen und auslesen. Dateien im AddOn-, bzw. PlugIn-Ordner sollten nicht verändert werden, um automatische Updates zu ermöglichen. Konfigurationswerte können über die Klasse `rex_config` in der Datenbank gespeichert werden. Die Werte werden gecached:
+AddOn-Entwickler können die Konfiguration der AddOns in der Tabelle `rex_config` ablegen und auslesen. Dateien im AddOn-, bzw. PlugIn-Ordner sollten nicht verändert werden, um automatische Updates zu ermöglichen. Konfigurationswerte können über die Klasse `rex_config` in der Datenbank gespeichert werden. Die Werte werden gecacht:
 
 <a name="rex_config"></a>
 
@@ -126,7 +126,7 @@ In den Einstellungen auf der Seite `System` muss ein Startartikel ausgewählt we
 
 Der Startartikel kann über die Klasse `rex_article` abgefragt werden.
 
-`rex_article::getSiteStartArticle($clang=null)` - Standardmäßig wird der Startartikel in der aktuellen Sprache zurück gegeben, optional kann man die gewünschte clang_id übergeben und bekommt den Artikel in der jeweiligen Sprache.
+`rex_article::getSiteStartArticle($clang=null)` - Standardmäßig wird der Startartikel in der aktuellen Sprache zurückgegeben, optional kann man die gewünschte clang_id übergeben und bekommt den Artikel in der jeweiligen Sprache.
 `rex_article::getSiteStartArticleId()` - gibt die Artikel Id des Startartikels der Seite.
 
 ### Fehlerartikel (404)
