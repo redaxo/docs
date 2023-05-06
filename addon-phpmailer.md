@@ -142,7 +142,7 @@ Wird diese Option aktiviert, werden alle über PHPMailer verschickten E-Mails an
 PHPMAiler versendet einen Auszug des system.log, wenn es Exceptions, Errors und eigene Logevents findet.
 Der Check und ggf. die Zusendung erfolgen in festen Intervallen, die in den Systemeinstellungen definiert werden können. Empfänger ist die im System hinterlegte Fehleradresse.
 
-Eigene Events können den Versand ebenso auslösen dazu kann man im Log den Event als Typ: logevent ablegen.
+Eigene Events können den Versand ebenso auslösen, dazu kann man im Log den Event als Typ: logevent ablegen.
 
 `rex_logger::factory()->log('logevent', 'Mein Text zum Event');` 
 
@@ -162,13 +162,13 @@ Liefert zusätzlich die Informationen vom Server. Das ist die empfohlene Option.
 
 ### Verbindungsprotokoll
 
-Liefert noch ausführlichere Informationen und ist ideal um Probleme mit STARTTLS zu analysieren.
+Liefert noch ausführlichere Informationen und ist ideal, um Probleme mit STARTTLS zu analysieren.
 
 ### Low Level Protokoll
 
 Liefert zusätzlich untergeordnete Informationen, sehr ausführlich. Nicht zum Debuggen von SMTP gedacht, nur bei Low-Level-Problemen.
 
-Meist benötigt man keinen Level über **Server-und Client-Protokoll**, es sei denn, es liegen Schwierigkeiten bei der Verbindung vor. Die Ausgabe wird meist nur umfangreicher und schwieriger zu lesen sein.
+Meist benötigt man keinen Level über **Server-und Client-Protokoll**, es sei denn, es liegen Schwierigkeiten bei der Verbindung vor. In der Regel wird die Ausgabe nur umfangreicher und schwieriger zu lesen sein.
 
 <a name="log"></a>
 
@@ -181,7 +181,7 @@ Das AddOn stellt ein E-Mail-Log sowie eine E-Mail-Archivierung bereit.
 Das E-Mail-Log findet im man im Tab `E-Mail-Log` und unter `System` > `Logdateien` > `PHPMailer` . Das Logging kann in den Einstellungen des PHPMailer-AddOns in 3 Stufen eingestellt werden.
 
 * Nein: Es wird kein Log erstellt
-* Nur Fehler Loggen: Es werden nur Fehler geloggt
+* Nur Fehler loggen: Es werden nur Fehler geloggt
 * Alle Vorgänge loggen: Alle Sendungen werden geloggt
 
 Das Log liefert Informationen zu Zeit, Absender, Empfänger, Betreff und Meldung. Es kann über den Button `Logdatei löschen` geleert werden.
@@ -243,13 +243,13 @@ PHPMailer prüft ob der angegebene Server TLS unterstützt und baut eine verschl
 
 * Der Server, der die E-Mails versendet, sollte möglichst per SPF-Eintrag für die verwendete E-Mail-Domain als autorisierter Server im DNS hinterlegt sein.
 
-* Prioritäts-Einstellungen können zu einem Spam-Blocking führen.
+* Priorität-Einstellungen können zu einem Spam-Blocking führen.
 
 * Große E-Mail-Verteiler sollten möglichst in kleiner Zahl und als BCC verschickt werden.
 
 <a name="zertifikate"></a>
 
-### Verwendung bei selbstsignierten Zertifikaten
+### Verwendung bei selbst signierten Zertifikaten
 
 Per Default wird der Peer verifiziert. Dies kann ggf. zu Problemen führen. Die nachfolgenden Einstellungen helfen, dieses Problem zu umgehen.
 
@@ -293,5 +293,4 @@ Hierzu ggf. den Registrar oder DNS-Administrator kontaktieren.
 
 ### Warum wird die Domain beim Absender geändert?
 
-In vielen Server-Konfigurationen sendet sendmail nur Mails wenn die Absender-Domain auch auf dem Server eingrichtet ist. Das gilt für den Versand per php mail() und sendmail. Abhilfe hierfür verschaffen das Einrichten der Domain auf dem Server oder der Versand über einen SMTP-Server.
-
+In vielen Server-Konfigurationen sendet sendmail nur Mails wenn die Absender-Domain auch auf dem Server eingerichtet ist. Das gilt für den Versand per php mail() und sendmail. Abhilfe hierfür verschaffen das Einrichten der Domain auf dem Server oder der Versand über einen SMTP-Server.
