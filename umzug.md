@@ -24,9 +24,9 @@ Die nachfolgenden Lösungen zeigen den klassischen Weg via "FTP, SFTP, WebDAV"-D
 * Download aller Ordner und Dateien der REDAXO-Installation, z. B. per SFTP (Transfer-Einstellungen des FTP-Programms auf `binary/binär` einstellen)
 * Im Download unter `/redaxo/data/core/config.yml` die Zeile `setup` von `false` auf `true` stellen
 * Die Dateien auf den Ziel-Server übertragen
-* Website auf dem Zielserver aufrufen, das Setup wird aufgerufen
+* Website auf dem Ziel-Server aufrufen, das Setup wird aufgerufen
 * Bei Schritt 4 die Zugangsdaten der neuen Datenbank angeben oder ggf. eine Datenbank anlegen
-* Bei Schritt 5 unter ***Vorhandenen Export einspielen:*** die Datensicherung auswählen
+* Bei Schritt 5 unter ***vorhandenen Export einspielen:*** die Datensicherung auswählen
 * Setup bis zum Ende durchführen - ***fertig*** (ggf. anschließend im Bereich `System` den Cache löschen)
 
 <a name="db"></a>
