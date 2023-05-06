@@ -71,7 +71,7 @@ Bei den Code-Beispielen bitte bei den allgemein gültigen REDAXO-Coding-Standard
 - Kein Browserfenster soll zu sehen sein.
 - Immer den kompletten REDAXO-Inhalt, inklusive Navigation.
 - Benennung: v5.2.0-[Kennung-was-das-Bild-zeigt].png
-- in den Assets-Ordner.
+- In den Assets-Ordner.
 - Immer Standard-Theme mit aktivierten AddOns aus der Installation verwenden, damit die Navigation gleich aussieht.
 
 
@@ -87,4 +87,3 @@ Steht irgendwo im Text z.B. folgendes: **BSI**, kann mit diesem Code der zusätz
 *Beispiel aus der installation.md*
 
 Mehr dazu kann hier nachgelesen werden: [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/#abbr)
-
