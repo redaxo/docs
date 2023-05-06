@@ -28,7 +28,7 @@ Einige der Verzeichnisse sind durch htaccess-Dateien vor dem öffentlichen Zugri
 | `/redaxo/src/core/lib/` | Der Kernbereich von REDAXO (Klassen) |
 | `/redaxo/src/core/pages/` | Einige zentrale Seiten des Backends, wie z. B. Login, Profil, Setup, etc. |
 | `/redaxo/src/core/tests/` | Automatisierte Tests für Core-Klassen und -Funktionen |
-| `/redaxo/src/core/vendor/` | Funktionen von externen Bibliotheken, z. B: Composer, Symfony, etc. |
+| `/redaxo/src/core/vendor/` | Funktionen von externen Bibliotheken, z. B.: Composer, Symfony, etc. |
 
 ![Verzeichnis](assets/v5.2.0-Verzeichnisstruktur.png)
 
