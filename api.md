@@ -1,12 +1,12 @@
 # Api
 
-Über `rex_api_function` können AddOns eine zentrale API zur Verfügung stellen. Die Funktionen dieser API lassen sich jeweils über  eine URL aufrufen. Sie dienen dazu, bestimmte Vorgaben, wie z.B. Nutzerrechte oder System-Einstellungen zu prüfen und den Aufruf bei Bedarf an einen dahinterliegenden Service (PHP-Klasse zur Verarbeitung) weiterzureichen. Rückmeldungen der Services können geprüft und als ausführliche Fehler- oder Erfolgsmedlung zurückgegeben werden, die dann von der aufrufenden Stelle ausgegeben werden können.  
+Über `rex_api_function` können AddOns eine zentrale API zur Verfügung stellen. Die Funktionen dieser API lassen sich jeweils über  eine URL aufrufen. Sie dienen dazu, bestimmte Vorgaben, wie z.B. Nutzerrechte oder System-Einstellungen zu prüfen und den Aufruf bei Bedarf an einen dahinterliegenden Service (PHP-Klasse zur Verarbeitung) weiterzureichen. Rückmeldungen der Services können geprüft und als ausführliche Fehler- oder Erfolgsmeldung zurückgegeben werden, die dann von der aufrufenden Stelle ausgegeben werden können.  
 
 Da API-Funktionen über einen URL-Request aufgerufen werden, ist es möglich, sie über AJAX-Requests anzusprechen. Mit jedem Request kann nur eine API-Funktion aufgerufen werden.
 
 ## Aufruf
 
-Der Aufruf einer API-Funktion kann auf jeder beliebigen Seite erfolgen. Um den Aufruf zu kennzeichnen ist der Parameter `rex-api-function` nötig, über den der Name der auzurufenden API-Funktion übergeben wird: `index.php?...&rex-api-call=function_name`. Der übergebene Name enstpricht dabei dem Klassennamen ohne das vorangestellte `rex_api_`. Mit dem Aufruf können beliebige weitere Parameter zur Verabrietung übergeben werden.
+Der Aufruf einer API-Funktion kann auf jeder beliebigen Seite erfolgen. Um den Aufruf zu kennzeichnen, ist der Parameter `rex-api-function` nötig, über den der Name der auzurufenden API-Funktion übergeben wird: `index.php?...&rex-api-call=function_name`. Der übergebene Name entspricht dabei dem Klassennamen ohne das vorangestellte `rex_api_`. Mit dem Aufruf können beliebige weitere Parameter zur Verarbeitung übergeben werden.
 
 ## Implementierung
 
