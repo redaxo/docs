@@ -62,20 +62,20 @@ Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einste
 
 #### Empfehlungen 
 
-Die empfohlene Umgebung ist `Skript`, hierbei wird der cronjob über einen serverseitigen Cronjob aufgerufen. 
+Die empfohlene Umgebung ist `Skript`, hierbei wird der Cronjob über einen serverseitigen Cronjob aufgerufen. 
 
-Sollte die Ausführung als Cronjob nicht möglich sien (z.B.: aufgrund mangelnder Rechte auf dem Server), stehen die alternativen Umgebeungen `Frontend` und `Backend` zur Vefügung. 
+Sollte die Ausführung als Cronjob nicht möglich sein (z.B.: aufgrund mangelnder Rechte auf dem Server), stehen die alternativen Umgebungen `Frontend` und `Backend` zur Verfügung. 
 
-Bei `Script` findet die Ausführung über den Cronjob das Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in REDAXO. Zum Aufruf muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Crobjobs muss kleiner oder gleich sein, als das kleinste Intervall im Redaxo-Cronjob.
+Bei `Script` findet die Ausführung über den Cronjob des Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in REDAXO. Zum Aufruf muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Cronjobs muss kleiner oder gleich sein, als das kleinste Intervall im REDAXO-Cronjob.
 
-`Frontend` und `Backend` werden ausgeführt wenn im Frontend und / oder Backend Seitenaufrufe erfolgen. Dies hat u.Ul. zur Folge, dass die Cronjobs ggf. später ausgeführt werden, als erwünscht. (z.B. bei regelmäßigen Backups, E-Mail-Benachtichtigungen)  
+`Frontend` und `Backend` werden ausgeführt, wenn im Frontend und / oder Backend Seitenaufrufe erfolgen. Dies hat u.U. zur Folge, dass die Cronjobs ggf. später ausgeführt werden, als erwünscht. (z.B. bei regelmäßigen Backups, E-Mail-Benachrichtigungen)  
 
 
 <a name="ausfuehrung"></a>
 
 ### Ausführung
 
-Wenn eines der Ereignisse `Frontend` oder `Backend` eintritt, so kann der Cronjob seinen Dienst zu Beginn des Aufrufes erledigen oder am Ende. Nur in Ausnahmefällen sollte die Einstellung `Beginn` gewählt werden, da sie den jeweiligen Aufruf verzögert. Das fällt natürlich weniger ins Gewicht, wenn die Ausführung am Ende geschieht.
+Wenn eines der Ereignisse `Frontend` oder `Backend` eintritt, so kann der Cronjob seinen Dienst zu Beginn des Aufrufs erledigen oder am Ende. Nur in Ausnahmefällen sollte die Einstellung `Beginn` gewählt werden, da sie den jeweiligen Aufruf verzögert. Das fällt natürlich weniger ins Gewicht, wenn die Ausführung am Ende geschieht.
 
 <a name="status"></a>
 
@@ -103,7 +103,7 @@ Beispielsweise:
 Je nach Einstellung im Feld `Typ` stehen unterschiedliche Eingabemöglichkeiten im Bereich `Typspezifische Parameter` zur Verfügung.
 So kann bei der Einstellung `PHP-Code` kompletter PHP-Code eingegeben werden, bei der Einstellung `PHP-Callback` lediglich ein Aufruf.
 
-AddOns können eigene typspezifische Parameter zur Verfügung stellen.
+AddOns können eigene, typspezifische Parameter zur Verfügung stellen.
 
 <a name="intervall"></a>
 
