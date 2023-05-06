@@ -8,7 +8,7 @@
 - [Beispiele](#beispiele)
   - [Preview-Aktion](#beispiel-preview-aktion)
   - [Presave-Aktionen](#beispiel-presave-aktionen)
-    - [Beispiel 1: HTML Text aus Wysiwyg-Editoren modifizieren](#beispiel-html-text)
+    - [Beispiel 1: HTML Text aus WYSIWYG-Editoren modifizieren](#beispiel-html-text)
     - [Beispiel 2: Multiselect aus Datenbank speichern](#beispiel-multiselect)
     - [Beispiel 3: Validierung](#beispiel-validierung)
   - [Postsave-Aktion](#beispiel-postsave-aktion)
