@@ -60,7 +60,7 @@ if (!rex::isBackend()) {
 }
 ```
 
-Beispiel: Code nur ein einziges mal ausführen wenn die Website aufgerufen wird.
+Beispiel: Code nur ein einziges Mal ausführen, wenn die Website aufgerufen wird.
 
 ```php
 <?php
