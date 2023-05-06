@@ -35,7 +35,7 @@ Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen und 
 
 ## Content-Bereiche  (C-Types)
 
-Ein Content-Bereich oder auch Content-Spalte, bzw. `C-Type` ) unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies "Spalten", also z. B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Content-Bereiche verwenden, wie Header, Slider, etc.
+Ein Content-Bereich (oder auch Content-Spalte, bzw. `C-Type`) unterteilt in REDAXO ein Template in unterschiedlich voneinander getrennte Pflegebereiche. In den meisten Fällen sind dies "Spalten", also z. B. Hauptspalte und Seitenspalte. C-Types kann man aber auch ganz allgemein für Content-Bereiche verwenden, wie Header, Slider, etc.
 
 Content-Bereiche werden im Reiter `Bereiche (ctypes)` angelegt und darin mit einem Namen versehen. Es ist dort auch möglich, für jeden Bereich festzulegen, welche Module in dem Bereich verwendet werden dürfen. Denn es kann durchaus sein, dass ein Redakteur in Hauptspalte bestimmte Module benutzen darf, in der Seitenspalte dagegen nicht.
 
@@ -49,7 +49,7 @@ Die Verwendung eines Templates kann auf festgelegte Kategorien der Struktur eing
 
 ## Ausgabe der Inhalte
 
-Die Artikelinhalte werden Wahlweise über die REDAXO-Variablen oder durch deren PHP-Alternativen ausgegeben. Die nachfolgenden Beispiele zeigen die Ausgabe der Inhalte über REDAXO-Variablen. Der Titel der Seite wird hier dagegen über PHP ausgelesen. In Templates können jedoch alle in REDAXO zur Verfügung stehenden REDAXO-Variablen und öffentliche Klassen und Funktionen verwendet werden. Ausführliche Informationen zu den Variablen findet man  im Kapitel [REDAXO-Variablen](/{{path}}/{{version}}/redaxo-variablen).
+Die Artikelinhalte werden wahlweise über die REDAXO-Variablen oder durch deren PHP-Alternativen ausgegeben. Die nachfolgenden Beispiele zeigen die Ausgabe der Inhalte über REDAXO-Variablen. Der Titel der Seite wird hier dagegen über PHP ausgelesen. In Templates können jedoch alle in REDAXO zur Verfügung stehenden REDAXO-Variablen und öffentliche Klassen und Funktionen verwendet werden. Ausführliche Informationen zu den Variablen findet man  im Kapitel [REDAXO-Variablen](/{{path}}/{{version}}/redaxo-variablen).
 
 <a name="einbindung"></a>
 
@@ -59,7 +59,7 @@ Einige Bestandteile möchte man gegebenenfalls in mehreren Templates nutzen. Hie
 
 Templates, die inkludiert werden sollen, sollen im Normalfall nicht den Redakteuren zur Verfügung stehen, daher sollte man sie in der Template-Verwaltung inaktiv schalten. Durch diese Einschränkung kann das deaktivierte Template nicht als Seiten-Template für einen Artikel durch den Redakteur ausgewählt werden.
 
-Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und dem Schlüssel(key) oder ID des gewünschten Templates.
+Die Einbindung dieser inkludierten Templates erfolgt über die REDAXO-Variable REX_TEMPLATE und dem Schlüssel(Key) oder ID des gewünschten Templates.
 
 Beispiel (Ausgabe im HTML-Bereich): `REX_TEMPLATE[key=haupt]` oder `REX_TEMPLATE[2]` 
 
@@ -78,7 +78,7 @@ Beispiel: `REX_ARTICLE[3]`
 
 ## Aktuelles Template in Modulen abfragen
 
-Manchmal ist es erforderlich, in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. Ein Beispiel könnte sein, dass ein Modul dem Redakteur in einem Einspalte-Template mehr Subspalten anbieten soll, als wenn es in einem Zweispalten-Template verwendet wird. Diese Information erhält man über die REDAXO-Variable `REX_TEMPLATE_ID` .
+Manchmal ist es erforderlich, in Modulen das aktuell verwendete Template zu ermitteln und so die Ausgabe oder die Eingabe zu beeinflussen. Ein Beispiel könnte sein, dass ein Modul dem Redakteur in einem Einspalte-Template mehr Subspalten anbieten soll, als wenn es in einem Zweispalten-Template verwendet wird. Diese Information erhält man über die REDAXO-Variable `REX_TEMPLATE_ID`.
 
 <a name="beispiele"></a>
 
@@ -119,12 +119,12 @@ In diesem Beispiel wird der gesamte Artikelinhalt ungeachtet einer Spaltendefini
 
 In diesem Beispiel werden Inhalte getrennt nach ihren Bereichen ausgegeben. So könnte etwa eine Content-Spalte und eine Sidebar (Seitenspalte) gepflegt werden.
 
-Über das eingebundene Template werden außerdem die Inhalte eines anderen Templates eingebunden, beispielsweise ein Brotkrumenpfad im Header-Bereich mit dem Schlüssel `bradcrumb` .
+Über das eingebundene Template werden außerdem die Inhalte eines anderen Templates eingebunden, beispielsweise ein Brotkrumenpfad im Header-Bereich mit dem Schlüssel `bradcrumb`.
 
 Zuletzt werden im Footer die Inhalte eines anderen Artikels ausgegeben.
 
-Die Ausgabe der einzelnen Bereiche erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1]` und `REX_ARTICLE[ctype=2]` .  Der Parameter `ctype` legt hierbei die ID des gewünschten Bereichs fest.
-Die ID des jeweiligen Bereichs findet man im Reiter `Bereiche` .
+Die Ausgabe der einzelnen Bereiche erfolgt über die REDAXO-Variablen `REX_ARTICLE[ctype=1]` und `REX_ARTICLE[ctype=2]`.  Der Parameter `ctype` legt hierbei die ID des gewünschten Bereichs fest.
+Die ID des jeweiligen Bereichs findet man im Reiter `Bereiche`.
 
 ``` php
 <!DOCTYPE html>
