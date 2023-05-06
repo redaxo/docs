@@ -21,7 +21,7 @@ Das PlugIn stellt den JavaScript-Quelltext-Editor `CodeMirror` (<http://codemirr
 
 ## Headerbalken
 
-Des weiteren kann ein farblich konfigurierbarer Balken im Header des Backends angezeigt werden, um so unterschiedliche REDAXO-Installationen leichter unterscheiden zu können.
+Des Weiteren kann ein farblich konfigurierbarer Balken im Header des Backends angezeigt werden, um so unterschiedliche REDAXO-Installationen leichter unterscheiden zu können.
 
 <a name="frontend-link"></a>
 
