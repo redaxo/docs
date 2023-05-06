@@ -58,7 +58,7 @@ Mit MBlock lassen sich Module erstellen, die mehrere gleichartige Inhaltselement
 
 ### Quick Navigation
 
-Das AddOn ermöglicht den schnellen Zugriff auf die ganze Struktur im Backend. Es sollte in keinem Projekt fehlen mit einem Umfang von mehr als zwei Seiten.
+Das AddOn ermöglicht den schnellen Zugriff auf die ganze Struktur im Backend. Es sollte in keinem Projekt fehlen, mit einem Umfang von mehr als zwei Seiten.
 
 ### Watson
 
@@ -72,7 +72,7 @@ AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
 
 ### Aufgaben
 
-Ein Aufgaben Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den Todo Workflow abbilden kann sondern auch für andere Zwecke verwendbar ist.
+Ein Aufgaben-Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den To-do-Workflow abbilden kann, sondern auch für andere Zwecke verwendbar ist.
 
 ### FOR calendar
 
@@ -101,7 +101,7 @@ Das Cheatsheet-AddOn scant die REDAXO-Installation nach Extension-Points im Core
 
 ### Demo-AddOn
 
-Das Demo-AddOn zeigt wie AddOns entwickelt und dokumentiert werden. Gut kommentierter Quellcode, Hilfe und Hints im AddOn selbst helfen beim Verständnis der AddOn-Programmierung und der Dokumentation. Es liefert auch ein Doku-Plugin, das den Aufbau einer Hilfe für das eigne AddOn ermöglicht.
+Das Demo-AddOn zeigt, wie AddOns entwickelt und dokumentiert werden. Gut kommentierter Quellcode, Hilfe und Tipps im AddOn selbst helfen beim Verständnis der AddOn-Programmierung und der Dokumentation. Es liefert auch ein Doku-Plugin, das den Aufbau einer Hilfe für das eigne AddOn ermöglicht.
 
 [**Github-Repo**](https://github.com/FriendsOfREDAXO/demo_addon)
 
@@ -109,7 +109,7 @@ Das Demo-AddOn zeigt wie AddOns entwickelt und dokumentiert werden. Gut kommenti
 
 ### Developer
 
-Developer kopiert und synct Module, Templates und Aktionen zwischen Dateisystem und Datenbank, So können diese direkt über einen Dateieditor oder per FTP bearbeitet werden, statt über das REDAXO-Backend.
+Developer kopiert und synct Module, Templates und Aktionen zwischen Dateisystem und Datenbank, so können diese direkt über einen Dateieditor oder per FTP bearbeitet werden, statt über das REDAXO-Backend.
 
 <a name="icecoder"></a>
 
@@ -156,7 +156,7 @@ Ytraduko hilft bei der Übersetzung der eigenen AddOns. Anstelle selbst für die
 
 ### ZIP-Install
 
-Das ZIP-Install ermöglicht es gezippte AddOns ohne Umweg per FTP auf den Server zu laden und zu entpacken. Ganz praktisch vor allem, wenn es sich um AddOns handelt, die es nur als GitHub-Repo gibt und nicht im Installer zur Vefügung stehen.  
+Das ZIP-Install ermöglicht es gezippte AddOns, ohne Umweg per FTP auf den Server zu laden und zu entpacken. Ganz praktisch vor allem, wenn es sich um AddOns handelt, die es nur als GitHub-Repo gibt und nicht im Installer zur Vefügung stehen.  
 
 <a name="workflows"></a>
 
@@ -176,6 +176,6 @@ Frontendentwicklung wird immer aufwändiger, SCSS wollen kompiliert werden, Bild
 
 ### REDAXO mit Docker
 
-REDAXO kann leicht, systemunabhängig mit Docker verwendet werden. Die Vorteile: Möglichkeit der zentralen Installation und Bearbeitung, Versionierbarkeit, Ausbaufähigkeit. REDAXO-mit-Docker liefert alle Ressourcen und eine einsteigergeignete Anleitung. Und damit man nicht bei Null anfangen muss, kann eine Demo gleich automatisiert installiert werden. ***REDAXO mit Docker und Bimmelbam*** sind übrigens leicht miteinander kombinierbar. Weitere Infos in den jeweiligen REPOS.
+REDAXO kann leicht, systemunabhängig, mit Docker verwendet werden. Die Vorteile: Möglichkeit der zentralen Installation und Bearbeitung, Versionierbarkeit, Ausbaufähigkeit. REDAXO-mit-Docker liefert alle Ressourcen und eine einsteigergeignete Anleitung. Und damit man nicht bei null anfangen muss, kann eine Demo gleich automatisiert installiert werden. ***REDAXO mit Docker und Bimmelbam*** sind übrigens leicht miteinander kombinierbar. Weitere Informationen in den jeweiligen REPOS.
 
 [**GitHub-Repo**](https://github.com/FriendsOfREDAXO/redaxo-mit-docker)
