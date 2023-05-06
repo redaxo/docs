@@ -209,5 +209,5 @@ Wird beides gesetzt, gilt auch beides. Im Beispiel dürfen also sowohl die letzt
     - `renew_months`: Nach wie viel Monaten wird eine Passwortänderung nach dem Login erzwungen.
     - `block_months`: Nach wie viel Monaten ohne Passwortänderung wird der Account gesperrt
 
-Im Beispiel muss man also nach 12 Monaten das Passwort ändern. Dazu wird man nach dem LogIn zwangsweise auf das Profil geleitet mit der Warnung, dass man das Passwort ändern muss. Versucht man aber erst nach 24 Monaten sich wieder einzuloggen, ist man gesperrt, man gelangt also auch nicht mehr zum Profil um das Passwort zu ändern. Diese Aufgabe muss dann ein Admin erledigen. 
+Im Beispiel muss man also nach 12 Monaten das Passwort ändern. Dazu wird man nach dem LogIn zwangsweise auf das Profil geleitet, mit der Warnung, dass man das Passwort ändern muss. Versucht man aber erst nach 24 Monaten sich wieder einzuloggen, ist man gesperrt, man gelangt also auch nicht mehr zum Profil, um das Passwort zu ändern. Diese Aufgabe muss dann ein Admin erledigen.
 
