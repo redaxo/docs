@@ -8,7 +8,7 @@ Unter Einstellungen kann festgelegt werden, dass Backups erstellt werden. Bei ei
 * [Vorhandene Aktualisieren](#aktualisieren)
 * [Neue AddOns herunterladen](#herunterladen)
 * [AddOn installieren ](#installieren)
-* [Eigende AddOns hochladen](#hochladen)
+* [Eigene AddOns hochladen](#hochladen)
 
 
 <a name="aktualisieren"></a>
@@ -19,7 +19,7 @@ Unter Einstellungen kann festgelegt werden, dass Backups erstellt werden. Bei ei
 
 Im Bereich "Vorhandene aktualisieren" wird aufgelistet, welche AddOns und Bestandteile des Kernsystems (Core) aktualisiert werden können. Bevor ein Update durchgeführt wird, wird dringend empfohlen, die Release Notes (Versionshinweise) zu lesen.
 
-Durch Anklicken des Namens (key) erhält man Informationen über die neuen Versionen.
+Durch Anklicken des Namens (Key) erhält man Informationen über die neuen Versionen.
 
 ![Versionen](/assets/v5.2.0-installer-03-versionen.png)
 
@@ -31,7 +31,7 @@ Durch Anklicken des Namens (key) erhält man Informationen über die neuen Versi
 
 ![Download](/assets/v5.2.0-installer-02-neue.png)
 
-Neue AddoOns lädt können über den Reiter `Neue herunterladen` heruntergeladen werden. Hier befindet sich eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Weiterführende Informationen zum AddOn und zu den Versionen, sind nach dem Klick auf `Ansehen` oder dem AddOn-Namen verfügbar. Um das AddOn herunterzuladen, muss bei der gewünschten Version `herunterladen` ausgewählt werden. 
+Neue AddOns lädt können über den Reiter `Neue herunterladen` heruntergeladen werden. Hier befindet sich eine Liste der AddOns und ein paar Informationen wie Autor, Kurzbeschreibung. Weiterführende Informationen zum AddOn und zu den Versionen, sind nach dem Klick auf `Ansehen` oder dem AddOn-Namen verfügbar. Um das AddOn herunterzuladen, muss bei der gewünschten Version `herunterladen` ausgewählt werden. 
 
 
 Anschließend kann das AddOn unter "AddOns" installiert werden.
