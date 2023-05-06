@@ -18,9 +18,9 @@
 
 ## Einleitung
 
-In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Nutzer können mit verschiedenen Rollen versehen werden und diesen Rollen können wiederrum unterschiedliche Rechte zugewiesen werden. So muss neuen Nutzern nur noch die entsprechende Rolle zugewiesen und nicht alle Rechte einzeln definiert werden.
+In der Benutzerverwaltung (Benutzer) werden die Redakteure und Administratoren des CMS gepflegt. Nutzer können mit verschiedenen Rollen versehen werden und diesen Rollen können wiederum unterschiedliche Rechte zugewiesen werden. So muss neuen Nutzern nur noch die entsprechende Rolle zugewiesen und nicht alle Rechte einzeln definiert werden.
 
-Administratoren oder Nutzer mit entsprechenden Rechten finden die Benutzverwaltung im Menüpunkt `Benutzer` .
+Administratoren oder Nutzer mit entsprechenden Rechten finden die Benutzerverwaltung im Menüpunkt `Benutzer`.
 
 <a name="liste"></a>
 
@@ -40,12 +40,12 @@ Folgende Informationen zu den einzelnen Benutzern werden aufgelistet:
 * letzter Login
 
 Unter Funktionen besteht die Möglichkeit die Benutzerdaten zu `editieren` und Benutzer zu `löschen`. 
-Administratoren haben hier zudem die Möglichkeit die aktuelle Ansicht eines Benutzers zu testen, ohne sich ab- und wieder anmelden zu müsssen, in dem sie die Funktion `Identität wechseln` verwenden. 
+Administratoren haben hier zudem die Möglichkeit, die aktuelle Ansicht eines Benutzers zu testen, ohne sich ab- und wieder anmelden zu müssen, in dem sie die Funktion `Identität wechseln` verwenden. 
 Nach dem Wechsel erscheint rechts oben ein Link zum `zurückwechseln` in den Administratormodus.
 
 > Das Löschen des aktuell angemeldeten Nutzers (also der eigene Account) ist nicht möglich.
 
-[Ein neuer Benutzer](#benutzer) läßt sich durch Klick auf das Plus-Symbol erstellen.
+[Ein neuer Benutzer](#benutzer) lässt sich durch Klick auf das Plus-Symbol erstellen.
 
 <a name="rollen"></a>
 
@@ -59,7 +59,7 @@ Redakteure benötigen meist nur einen Bruchteil der verfügbaren Berechtigungen.
 ## Anlegen einer Rolle
 
 Im Reiter `Rollen` lassen sich neue Rollen durch Klick auf das Plus-Symbol erstellen.
-Eine Rollendefinition ist in mehrere Abschnitte unterteilt. Je nach installiertem AddOn können weitere Abschnitte hinzukommen. Nachfolgend werden die Standardabschnitte erklärt, die nach der Installation zur Verfügung stehen.
+Eine Rollen-Definition ist in mehrere Abschnitte unterteilt. Je nach installiertem AddOn können weitere Abschnitte hinzukommen. Nachfolgend werden die Standardabschnitte erklärt, die nach der Installation zur Verfügung stehen.
 
 <a name="beschreibung"></a>
 
@@ -86,7 +86,7 @@ Hier finden sich u.a. auch Rechte zur Einschränkung der Strukturbearbeitung
 - `addArticle[]` Artikel erstellen
 - `editArticle[]` Artikel bearbeiten
 - `deleteArticle[]` Artikel löschen
-- `addCategory[]` Kategorien erstellem
+- `addCategory[]` Kategorien erstellen
 - `editCategory[]` Kategorie bearbeiten
 - `deleteCategory[]` Kategorie löschen 
 
@@ -121,13 +121,13 @@ Es kann definiert werden, für welche Medienpool-Kategorien der Benutzer eine Sc
 
 ### Module
 
-Um das Backend für einige Benutzer noch einfacher bzw. übersichtlicher zu gestalten, kann der Zugriff auf wenige Module beschränkt werden. Damit könnte beispielsweise Benutzern, die lediglich eine Kategorie *Neuigkeiten* Pflegen können sollen, nur die dafür benötigten Module freigeben werden.
+Um das Backend für einige Benutzer noch einfacher bzw. übersichtlicher zu gestalten, kann der Zugriff auf wenige Module beschränkt werden. Damit könnte beispielsweise Benutzern, die lediglich eine Kategorie *Neuigkeiten* pflegen können sollen, nur die dafür benötigten Module freigeben werden.
 
 <a name="benutzer"></a>
 
 ## Anlegen eines Benutzers
 
-Ein neuer Benutzer läßt sich durch Klick auf das Plus-Symbol erstellen.
+Ein neuer Benutzer lässt sich durch Klick auf das Plus-Symbol erstellen.
 
 ![Systemcheck](/assets/v5.2.0-Benutzerverwaltung--benutzer.png)
 
@@ -158,4 +158,4 @@ Der Admin erhält alle Rechte und Zugriff auf alle System- und AddOn-Funktionen.
 
 ## Startseite
 
-Hier wird festgelegt, welche Seite direkt nach dem Login im Backend aufgerufen werden soll. Der Standard (default) ist `Struktur` .
+Hier wird festgelegt, welche Seite direkt nach dem Login im Backend aufgerufen werden soll. Der Standard (Default) ist `Struktur`.
