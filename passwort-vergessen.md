@@ -20,14 +20,14 @@ Diese Zeile entspricht dem Passwort `redaxo-cms`. Melde dich nun mit deinem Benu
 
 ## Neuanlage eines Nutzers über das Setup
 
-Wenn Zugriff auf den Webspace mittels FTP(S) möglich ist, kann auch das Setup verwenden, um einen neuen Benutzer mit Administrator-Rechten anzulegen.
+Wenn Zugriff auf den Webspace mittels FTP(S) möglich ist, kann auch das Setup verwendet werden, um einen neuen Benutzer mit Administrator-Rechten anzulegen.
 
 > Sofern möglich, ein Backup beim Hoster durchführen.
 
 Folgende Schritte führen zum neuen Login.
 
 1. In der Datei `/redaxo/data/core/config.yml` muss `setup: false` auf `setup: true`gesetzt werden. 
-2. Danach die Website unbedingt sofort aufrufen (der Setup-Vorgang ist für alle Besucher sichtbar, daher ist Eile geboten!).
+2. Danach die Website unbedingt sofort aufrufen! (Der Setup-Vorgang ist für alle Besucher sichtbar, daher ist Eile geboten!)
 3. Durchgehen des Setups, Schritt 4 so belassen wie es ist.
 4. In Schritt 5 (Datenbank) `Datenbank existiert schon` auswählen.
 5. Im nächsten Schritt einen neuen Nutzer anlegen.
