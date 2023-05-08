@@ -36,7 +36,7 @@ Folgende Schritte führen zum neuen Login.
 
 ## Änderung eines Passworts über die Konsole
 
-Ein Passwort kann sehr einfach über die Konsole aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von:
+Ein Passwort kann sehr einfach über die [Konsole](/{{path}}/{{version}}/console) aktualisiert werden. Hierzu muss man sich im `/redaxo/bin` Ordner der REDAXO-Installation befinden und kann durch Eingabe von:
 ```console
 php console user:set-password <user> [<password>]
 ```
