@@ -212,4 +212,4 @@ Dies ist möglich, sobald das REDAXO-Setup abgeschlossen wurde.
 
 ### Autovervollständigung
 
-Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes Drücken der TAB Taste ausgelöst wird.
+Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes Drücken der Tab-Taste ausgelöst wird.
