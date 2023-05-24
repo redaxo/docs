@@ -15,7 +15,7 @@
   - [package.yml](#package)
 - [Integration der Konsole in Phpstorm](#phpstorm)
 - [Tipps](#tipps)
-  - [Autovervollständiung](#tipp-autocomplete)
+  - [Autovervollständigung](#tipp-autocomplete)
 
 <a name="einfuehrung"></a>
 
@@ -31,7 +31,7 @@ Mögliche Einsatzzwecke:
 - Automatisierung/Scripting von Abläufen mit Zugriff auf das System
 - Umgebung um sehr aufwändige Prozesse wie Migrationen, Report-Generierung o.ä. ablaufen zu lassen, ohne Timeouts etc.
 - Fernwartung des Systems
-- Automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websites (Deploy-Workflows)
+- automatisierte Veröffentlichungsprozesse der Entwicklungsstände von Websites (Deploy-Workflows)
 - via AddOns erweiterbar (Befehle registrierbar, siehe untenstehendes Beispiel)
 
 Im Rahmen einer REDAXOHour ist eine Videoeinführung entstanden, die viele Punkte dieses Kapitels erklärt.
@@ -71,7 +71,7 @@ aktuell verfügbaren Konsolen-Befehle.
 
 Um mehr Informationen und Optionen zum jeweiligen Befehl zu erhalten, fügt man dem Aufruf des Kommandos `--help` als Parameter an.
 
-z.B: `console cache:clear --help`
+z. B.: `console cache:clear --help`
 
 <a name="beispiele"></a>
 
@@ -133,15 +133,15 @@ php redaxo/bin/console db:dump-schema <tabellenname>
 
 ### package:list ###
 
-`package:list`Liefert Informationen üebr installierte AddOns 
+`package:list`Liefert Informationen über installierte AddOns 
 
 Optionen: 
 
-search : filtert die Liste nach dem Suchbegriff
-installed-only (-i) : zeigt nur installierte packages an
-activated-only (-a): zeigt nur installierte & aktivierte packages an
-using-exit-code: gibt je nach dem ob es zu den ausgewählten filtern ein Ergebnis gibt 0 oder 1 als exit-code zurück. Hilfreich bei Skripten
-json: liefert anstelle eine formatierten Tabelle ein json-string mit packages.
+- search: filtert die Liste nach dem Suchbegriff
+- installed-only (-i): zeigt nur installierte Packages an
+- activated-only (-a): zeigt nur installierte & aktivierte Packages an
+- using-exit-code: gibt je nachdem, ob es zu den ausgewählten Filtern ein Ergebnis gibt, `0` oder `1` als exit-code zurück (hilfreich bei Skripten)
+- json: liefert anstelle einer formatierten Tabelle ein JSON mit Packages.
 
 <a name="install-list"></a>
 
@@ -149,13 +149,13 @@ json: liefert anstelle eine formatierten Tabelle ein json-string mit packages.
 
 ![Screenshot](/assets/v5.12.0-package_list.png)
 
-`install:list` listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
+`install:list` Listet alle verfügbaren Addons von redaxo.org auf und zeigt die installierte Version dazu an.
 
 Optionen:
 
 - `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
-- `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist.
-- `--json` - Gibt die Ausgabe als json string (für z.B. verarbeitung in skripten)
+- `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist
+- `--json` - gibt die Ausgabe als JSON (für z.B. Verarbeitung in Skripten)
 
 
 
@@ -210,6 +210,6 @@ Dies ist möglich, sobald das REDAXO-Setup abgeschlossen wurde.
 
 <a name="tipp-autocomplete"></a>
 
-### Autovervollständiung
+### Autovervollständigung
 
-Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes drücken der TAB Taste ausgelöst wird.
+Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes Drücken der Tab-Taste ausgelöst wird.
