@@ -140,8 +140,8 @@ Optionen:
 - search: filtert die Liste nach dem Suchbegriff
 - installed-only (-i): zeigt nur installierte Packages an
 - activated-only (-a): zeigt nur installierte & aktivierte Packages an
-- using-exit-code: gibt je nachdem ob es zu den ausgewählten Filtern ein Ergebnis gibt 0 oder 1 als exit-code zurück (hilfreich bei Skripten)
-- json: liefert anstelle einer formatierten Tabelle ein json-string mit Packages.
+- using-exit-code: gibt je nachdem, ob es zu den ausgewählten Filtern ein Ergebnis gibt, `0` oder `1` als exit-code zurück (hilfreich bei Skripten)
+- json: liefert anstelle einer formatierten Tabelle ein JSON mit Packages.
 
 <a name="install-list"></a>
 
@@ -155,7 +155,7 @@ Optionen:
 
 - `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
 - `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist
-- `--json` - gibt die Ausgabe als json-string (für z.B. Verarbeitung in Skripten)
+- `--json` - gibt die Ausgabe als JSON (für z.B. Verarbeitung in Skripten)
 
 
 
