@@ -47,10 +47,10 @@ Sofern die Liste leer ist, ist das System auf dem aktuellen Stand.
 
 Es gibt Fälle, bei denen ein Update per Konsole notwendig ist, wenn z. B. Timeouts auftreten sollten. Hierzu eine aktuelle Version von REDAXO herunterladen und so vorgehen:
 
-* /redaxo/src/core und /redaxo/src/addons mit denen aus der ZIP austauschen (eigene Addons sichern und zurückkopieren)
-* in /data/core/config.yml "setup: true" setzen
+* `/redaxo/src/core` und `/redaxo/src/addons` mit denen aus der ZIP austauschen (eigene Addons sichern und zurückkopieren)
+* in `/data/core/config.yml` "setup: true" setzen
 * Setup durchlaufen lassen und dort "Update der Datenbank" auswählen; hier kann alternativ auch per CLI "Update database" ausgeführt werden:
-php redaxo/bin/console setup:run
+`php redaxo/bin/console setup:run`
 
 <a name="utf8mb4"></a>
 
