@@ -39,5 +39,5 @@ Die nachfolgenden Lösungen zeigen den klassischen Weg via "FTP, SFTP, WebDAV"-D
 * Import der Datenbank-Sicherung in der neuen Datenbank, z. B. mit PHPMyAdmin oder Adminer
 * Unter `/redaxo/data/core/config.yml` die Zeile `setup` von `false` auf `true` stellen
 * Ebenfalls unter `/redaxo/data/core/config.yml` unterhalb der Zeile `db` die neuen Datenbank-Zugangsdaten einstellen.
-* Das Setup durchlaufen und in Schritt 4 des Setups ***Datenbank existiert schon*** auswählen. Die Anlage eines Administratorzugangs ist nicht erforderlich
+* Das Setup durchlaufen und in Schritt 4 des Setups ***Datenbank existiert schon*** auswählen. Die Anlage eines Administratorzugangs ist nicht erforderlich.
 * Anschließend einloggen und ggf. im Bereich `System` den Cache löschen.
