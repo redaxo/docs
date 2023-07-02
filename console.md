@@ -170,9 +170,14 @@ Optionen:
 Die Ausführung eines Konsolen-Befehls erfordert eine eigene Klasse, die auf `rex_console_command` aufbaut und den ausführbaren Code selbst enthält bzw. aufruft. In dieser Klasse muss es eine Methode `execute` geben. Die einfachste Form sieht etwa so aus:
 
 ```php
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
+
 class mein_console_befehl extends rex_console_command {
-    protected function execute() {
+    protected function execute(InputInterface $input, OutputInterface $output): int
         echo "hallo redaxo"; // beliebiges php hier
+        return 0;
     }
 }
 ```
