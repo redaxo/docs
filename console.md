@@ -111,7 +111,17 @@ php redaxo/bin/console db:connection-options | xargs sh -c 'mysql "$0" "$@" < du
 
 ### Core/AddOn/PlugIn Assets synchronisieren
 
-Um die Entwicklung von AddOns und PlugIns zu erleichtern, ist es möglich Dateien zwischen dem öffentlich zugänglichen `assets/` Ordner und den AddOn/PlugIn Quellen unter `redaxo/src/addons` zu synchronisieren.
+Um die Entwicklung von AddOns und PlugIns zu erleichtern, ist es möglich Dateien zwischen dem öffentlich zugänglichen `assets/` Ordner und den AddOn/PlugIn Quellen unter `redaxo/src/addons` zu synchronisieren. Derzeit ist keine Enschränkung auf einzelne Ordner vorgesehen.
+
+Die Synchronisierung erfolgt in der Reihenfolge:
+1. Synchronisierung
+
+Existiert die Datei/Verzeichnis nur in `assets/` oder ist neuer als in `redaxo/src/core/` bzw. `redaxo/src/addons/` wird alles von `assets/` nach `redaxo/src/core/` bzw. `redaxo/src/addons/` kopiert.
+
+2. Synchronisierung
+
+Existiert die Datei/Verzeichnis nur in `redaxo/src/core/` bzw. `redaxo/src/addons/` oder ist neuer als in `assets/` wird alles von `redaxo/src/core/` bzw. `redaxo/src/addons/` nach `assets/` kopiert.
+
 
 ```console
 php redaxo/bin/console assets:sync
