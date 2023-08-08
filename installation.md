@@ -234,22 +234,24 @@ Schritt 6: Ende
 
 <a name="console"></a>
 
-## Installation über die Kommandozeile
+## Installation über die Kommandozeile (console) 
 
 REDAXO kann über die Konsole `redaxo/bin/console` installiert werden. 
 
+> Hinweis: Es könnte erforderlich sein, dass der Aufruf der console unter dem gleichen User oder Gruppe erfolgt die auch später die Website ausführt. Meist ist dies der Ordnereigentümer des Webs oder die Gruppe des Webservers. Bei Aufruf der `console`wird dies überprüft und ggf. darauf hingwiesen. 
+
 ### Download und Entpacken
 
-Beispiel für REDAXO 5.12. Download per Curl. 
+Beispiel für REDAXO 5.15.1. Download per Curl. 
 
 **Download**
 ```console
-curl -JLO  https://redaxo.org/download/redaxo/5.12.0.zip
+curl -JLO  https://redaxo.org/download/redaxo/5.15.1.zip
 ```
 
 **Entpacken**
 ```console
-unzip redaxo_5.12.0.zip
+unzip redaxo_5.15.1.zip
 ```
 
 ### Setup starten
