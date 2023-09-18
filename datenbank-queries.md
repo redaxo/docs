@@ -458,6 +458,12 @@ Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die
 
 Lädt das komplette Resultset in ein Array und gibt dieses zurück. Wechselt die DBID, falls vorhanden. Identisch mit `getDBArray`.
 
+Beispiel:
+
+```php
+$array = rex_sql::factory()->getArray('SELECT * FROM rex_media');
+```
+
 <a name="geterrno"></a>
 
 ## getErrno
