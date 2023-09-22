@@ -25,7 +25,7 @@
 - Basis
   - [Allgemeiner Aufbau / System](/{{path}}/{{version}}/system-aufbau)
   - [Einstieg](/{{path}}/{{version}}/einstieg)
-  - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)
+  - [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart)<sup><b>offen</b></sup> <sup><b>skerbis</b></sup>
   - [Verzeichnisstruktur](/{{path}}/{{version}}/verzeichnisstruktur)
   - [Kategorien / Artikel](/{{path}}/{{version}}/kategorien-artikel)
   - [Templates](/{{path}}/{{version}}/templates)
