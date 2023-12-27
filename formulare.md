@@ -612,3 +612,27 @@ Folgende Validatoren sind verfügbar:
 | custom    | prüft über eine Custom-Function. Die Funktion erhält als Parameter den Wert des Feldes. Wenn die Funktion *false* zurück gibt, wird die Fehlermeldung ausgegeben. | -                                        | `$field->getValidator()->add( 'custom', 'Eingabe ungültig', 'myclass::myfunc');` |
 
 > **Hinweis:** Alle Validator-Typen außer *notempty* führen die Prüfung erst dann durch, wenn der Feldinhalt nicht leer ist. Soll also z. B. ein Eingabefeld obligatorisch eine deutsche Postleitzahl enthalten, muss zusätzlich zum *match* auf */^[0-9]{5}$/'* auch ein *notempty*-Validator hinzugefügt werden.
+
+Um auf `unique` zu validieren, muss dies direkt an der Datenbank-Tabellendefinition hinterlegt werden, z.B.:
+
+```php
+rex_sql_table::get(rex::table('my_table'))
+    ->addIndex(new rex_sql_index('unique_key_name', ['field1', 'field2', 'field3'], rex_sql_index::UNIQUE))
+    ->alter();
+```
+
+Beziehungsweise, wenn ein Ensure ausgeführt wird:
+```php
+rex_sql_table::get(rex::table('my_table'))
+    ->ensureColumn(...)
+    ->ensureColumn(...)
+    ...
+    ->ensureIndex(new rex_sql_index('unique_key_name', ['field1', 'field2', 'field3'], rex_sql_index::UNIQUE))
+    ->ensure();
+```
+
+Die Fehlermeldung lässt sich wie folgt anpassen:
+
+```php
+ $form->addErrorMessage(REX_FORM_ERROR_VIOLATE_UNIQUE_KEY, rex_i18n::msg('media_manager_error_type_name_not_unique'));
+```
