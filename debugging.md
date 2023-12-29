@@ -17,6 +17,7 @@
   + [Die Bearbeiten-Ansicht eines Artikels führt zu einem Fehler](#cture-edit-error)
   + [Pjax-Formulare im Backend speichern nicht](#pjax)
   + [Ich kann mich nicht mehr einloggen](#login)
+* [Troubleshooting CSRF-Token](#csrf)
 
 Auch eine REDAXO-Installation kann einmal „Schluckauf“ haben. Im Folgenden werden Möglichkeiten aufgezeigt, deine REDAXO-Installation zu reparieren.
 
@@ -187,3 +188,42 @@ Möglicherweise ist ein Modul oder der Inhalt eines Blocks defekt und löst eine
 Wird beim Speichern in einem Modul oder Template im Backend ein 403-Fehler gemeldet, ist evtl. `mod_security` oder `fail2ban` beim Webspace aktiviert.
 
 Für `mod_security` testweise nur auf "Erkennung und protokollieren" einstellen.
+
+<a name="csrf"></a>
+## Troubleshooting CSRF-Token
+
+### Hintergrund
+
+CSRF steht für Cross-Site Request Forgery. Es handelt sich dabei um eine Art von Angriff, bei dem ein Angreifer eine Anfrage an eine Website sendet, die der Benutzer bereits authentifiziert hat. Dadurch kann der Angreifer Aktionen im Namen des Benutzers ausführen, ohne dass dieser davon Kenntnis hat. 
+
+Um sich vor CSRF-Angriffen zu schützen, verwenden viele Websites Anti-CSRF-Token, die in Formularen eingebettet sind und bei jeder Anfrage überprüft werden.
+
+**Grundsätzlich ist das Deaktivieren des CSRF-Schutzes nicht empfehlenswert, da es die Sicherheit des Systems gefährdet.**
+
+### Ursachen für CSRF-Fehler in REDAXO (Allgemein)
+
+#### Ursache 1: Quota überschritten
+
+Einzelne Webhosting-Anbeiter haben auch heute noch Quotas für die **Anzahl der Dateien** und den **Gesamtspeicherplatz**, die ein Benutzer in seinem Webspace speichern darf. Wenn diese Quota überschritten wird, kann es zu Problemen kommen, da auch das Schreiben temporärer Dateien (z.B. für die Session und damit das CSRF-Token) nicht mehr möglich ist.
+
+#### Lösung für überschrittene Quotas
+
+- Prüfe, ob Quotas existieren und weshalb diese überschritten wurden.
+- Lösche ggf. nicht mehr benötigte Dateien.
+
+#### Ursache 2: Fehlende Schreibrechte
+
+Wenn REDAXO nicht die nötigen Schreibrechte hat, um temporäre Dateien zu erstellen, kann es zu Problemen kommen, da auch das Schreiben temporärer Dateien (z.B. für die Session und damit das CSRF-Token) nicht mehr möglich ist.
+
+#### Ursache 3: Session Autostart
+
+Ist in den PHP-Einstellungen "session.auto_start" aktiviert, wird empfohlen, dies zu deaktivieren, um Probleme zu vermeiden. <https://github.com/redaxo/redaxo/issues/5733>
+
+### Lösung für Session Autostart
+
+- Prüfe, ob "session.auto_start" aktiviert ist.
+- Deaktiviere ggf. "session.auto_start"
+
+### Lösung für fehlende Schreibrechte
+
+- Schreibrechte für REDAXO prüfen und ggf. neu setzen.
