@@ -23,7 +23,7 @@ Abhängig vom Projekt werden in AddOns folgende Ordner und Dateien verwendet:
 |  | update.php | Die update.php wird ausgeführt, wenn eine Aktualisierung über den Installer erfolgt. Die update.php wird nicht bei einem manuellen Update ausgeführt. |
 |  | README.md | Sofern gefunden und eine help.php nicht vorliegt, wird diese Datei automatisch als Hilfeseite eingebunden. Die README kann mehrsprachig hinterlegt werden. README.en.md würde dann in einem englischsprachigen Backend aufgerufen werden. Ist die README semantisch korrekt aufgebaut, wird automatisch ein Inhaltsverzeichnis generiert.|
 | assets | *.css, *.js, *.png etc. | Hier werden die Assets des AddOns abgelegt. Bei Installation werden diese in den Ordner **/assets/addon/addon_name/** kopiert. Sie stehen somit öffentlich zur Verfügung. Es sind Unterordner möglich |
-| data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden im Ordner   `/redaxo/data/addons/addon_name` abgelegt |
+| data |  | Hier kann das AddOn zusätzliche Daten ablegen. Diese werden z.B. per `rex_dir::copy($addon->getPath('data'), $addon->getDataPath())` im Ordner   `/redaxo/data/addons/addon_name` abgelegt |
 | fragments |  | Ordner für [Fragmente](/{{path}}/{{version}}/fragmente)  |
 | lang | *.lang | Hier werden die Sprachdateien abgelegt |
 | lib |  | Ordner für eigene Classes und Funktionen, selbst entwickelte Dateien |
