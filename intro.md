@@ -1,4 +1,4 @@
-# Dokumentation REDAXO 5.15
+# Dokumentation REDAXO 5.16
 
 Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion einer REDAXO-Webpräsenz. Zudem finden Developer hier auch die erforderlichen Informationen zur Entwicklung eigener Lösungen.
 
@@ -13,8 +13,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ![Login-Seite](/assets/v5.15.0-login.png)
 
-- REDAXO unterstützt den Login per passkey. Die Einrichtung erfolgt auf der [Profilseite.](/{{path}}/{{version}}/profil)
-- Dumps können jetzt auch durchsucht werden, siehe [Debugging.](/{{path}}/{{version}}/debugging)
+- `rex_file::append`: Die Methode append schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. 
 
 
 ## Übersicht der Kategorien
