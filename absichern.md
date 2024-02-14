@@ -51,7 +51,7 @@ Wer REDAXO-Websites im Live-Mode betreibt, sollte alternative Methoden für die 
 
 ## Security AddOn für REDAXO CMS
 
-[Security-AddOn]([#securityaddon](https://github.com/FriendsOfREDAXO/Security)) auf GitHub
+[Security-AddOn](https://github.com/FriendsOfREDAXO/Security) auf GitHub
 
 Das AddOn ist nicht Teil der Grundinstallation. Es kann über den Installer installiert werden. 
 Es bietet Wege das REDAXO-Backend mit verschiedenen Methoden zu sichern.
