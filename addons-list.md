@@ -17,7 +17,7 @@
   + [ZIP-Install](#zip)
 * [Workflows](#workflows)
   + [REDAXO mit Bimmelbam](#bimmelbam)
-  + [REDAXO mit Docker](#docker)
+  + [Docker](https://redaxo.org/doku/main/installation#docker)
 
 <a name="einfuehrung"></a>
 
@@ -155,11 +155,3 @@ Ein Frontend-Workflow auch für REDAXO
 Frontendentwicklung wird immer aufwändiger, SCSS wollen kompiliert werden, Bilder komprimiert werden, JS schöner werden, HTML-Prototypen wollen erzeugt werden. ***REDAXO mit Bimmelbam*** zeigt hierfür einen ausbaufähigen Weg.
 
 [**GitHub-Repo**](https://github.com/FriendsOfREDAXO/redaxo-mit-bimmelbam)
-
-<a name="docker"></a>
-
-### REDAXO mit Docker
-
-REDAXO kann leicht, systemunabhängig, mit Docker verwendet werden. Die Vorteile: Möglichkeit der zentralen Installation und Bearbeitung, Versionierbarkeit, Ausbaufähigkeit. REDAXO-mit-Docker liefert alle Ressourcen und eine einsteigergeignete Anleitung. Und damit man nicht bei null anfangen muss, kann eine Demo gleich automatisiert installiert werden. ***REDAXO mit Docker und Bimmelbam*** sind übrigens leicht miteinander kombinierbar. Weitere Informationen in den jeweiligen REPOS.
-
-[**GitHub-Repo**](https://github.com/FriendsOfREDAXO/redaxo-mit-docker)
