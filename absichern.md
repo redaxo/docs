@@ -12,7 +12,7 @@ Dieser Modus ist dafür konzipiert, die Sicherheit von Live-Systemen zu erhöhen
 
 ### Aktivierung des Live-Modes
 
-Den Live-Mode kann in der  `config.yml` aktiviert werden.  Der Default-Wert ist:  `false` 
+Der Live-Mode kann in der  `config.yml` aktiviert werden.  Der Default-Wert ist:  `false` 
 
 ```yaml
 live_mode: true
