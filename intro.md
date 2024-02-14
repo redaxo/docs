@@ -14,7 +14,7 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 ![Login-Seite](/assets/v5.15.0-login.png)
 
 - `rex_file::append`: Die Methode append schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. 
-
+- [REDAXO absichern](/{{path}}/{{version}}/absichern): Informationen zur Absicherung des Backends, z.B. via Live-Mode und Security AddOn
 
 ## Übersicht der Kategorien
 
