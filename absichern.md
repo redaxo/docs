@@ -1,11 +1,14 @@
 # REDAXO absichern
 
 * [Live-Mode](#livemode)
+* [FOR Security-AddOn](#securityaddon)
 
 <a name="livemode"></a>
 
 ## Live-Mode
 Dieser Modus ist dafür konzipiert, die Sicherheit von Live-Systemen zu erhöhen, indem er die Möglichkeiten zur Ausführung von PHP-Code und bestimmten Systemänderungen durch Backend-Admins einschränkt. Der Live-Mode kann durch eine Einstellung in der `config.yml` manuell aktiviert werden.
+
+> Bei Nutzung einer Deployment-Lösung oder alterniver lokaler Entwicklung sollte dies als obligatorisch angesehen werden. 
 
 ### Aktivierung des Live-Modes
 
@@ -43,3 +46,22 @@ Im Live-Mode werden folgende Änderungen wirksam:
 ### Empfehlungen für Entwickler
 
 Wer REDAXO-Websites im Live-Mode betreibt, sollte alternative Methoden für die Implementierung von Funktionalitäten, die PHP-Code erfordern, in Erwägung ziehen. Eigene Addons oder Plugins können für spezifische Anforderungen entwickelt werden, anstelle von direkter Eingabe von PHP-Code über das Backend.
+
+<a name="securityaddon"></a>
+
+## Security AddOn für REDAXO CMS
+
+[Security-AddOn]([#securityaddon](https://github.com/FriendsOfREDAXO/Security)) auf GitHub
+
+Das AddOn ist nicht Teil der Grundinstallation. Es kann über den Installer installiert werden. 
+Es bietet Wege das REDAXO-Backend mit verschiedenen Methoden zu sichern.
+
+* Frontend-Passwort für Staging- oder Entwicklersysteme
+* Fehlerberichterstattung per E-Mail. Direkt oder als gesammelte Pakete
+* IP-Zugangskontrolle: IPs und IP-Bereiche zum Blockieren und Zulassen von Frontend und Backend
+* BackendSession-Konfiguration: Sitzungsdauer, KeepAlivePing, maximale Sitzungsdauer
+* Backend-Benutzerprotokoll: Protokollierung aller Aktionen der Backend-Benutzer
+* Header-Sicherheit: Strict-Transport-security, X-Frame-Options, X-XSS-Protection ... (in Bearbeitung)
+* Checkliste: Überprüfung der REDAXO-Installation auf Sicherheitsprobleme mit externen Tools.
+* Linkliste mit nützlichen Seiten zum Prüfem der Website und des Backends.
+
