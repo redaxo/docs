@@ -3,7 +3,6 @@
 * [Einführung](#einfuehrung)
 * [Systemerweiterungen](#systemerweiterungen)
 * [Backend](#backend)
-* [Applikationen](#applikationen)
 * [Development](#development)
   + [Adminer](#adminer)
   + [Cheatsheat für Extensionpoints](#cheatsheet)
@@ -63,21 +62,6 @@ Das AddOn ermöglicht den schnellen Zugriff auf die ganze Struktur im Backend. E
 ### Watson
 
 Das AddOn ermöglicht den schnellen Zugriff auf Artikel und YForm-Datensätze, ähnlich wie MacOS Spotlight oder die Windows-Suche.
-
-<a name="applikationen"></a>
-
-## Applikationen, thematische AddOns
-
-AddOns, die Erweiterungen für Branchen und spezielle Aufgaben bereitstellen.
-
-### Aufgaben
-
-Ein Aufgaben-Manager, der nicht nur beim Aufbau einer REDAXO Präsentation den To-do-Workflow abbilden kann, sondern auch für andere Zwecke verwendbar ist.
-
-### FOR calendar
-
-… ist ein mächtiges AddOn, mit dem sich die meisten Aufgaben zur Terminverwaltung und -anzeige umsetzen lassen.
-
 
 <a name="development"></a>
 
