@@ -6,6 +6,7 @@
   - [getConfig](#rexfile_getConfig)
   - [getCache](#rexfile_getCache)
   - [put](#rexfile_put)
+  - [append](#rexfile_append)
   - [putConfig](#rexfile_putConfig)
   - [putCache](#rexfile_putCache)
   - [copy](#rexfile_copy)
@@ -106,6 +107,27 @@ p { line-height: 1.2em;}
 ';
 $success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css);
 ```
+
+### rex_file::append
+
+Die Methode `append` schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschrieben. Es kann ein individueller Trenner definiert werden, der Standard ist leer.  
+
+```php
+rex_file::append($file, $content, $delimiter = '');
+```
+
+Beispiel: 
+
+$file = "meine_datei.txt";
+$content = "Neuer Inhalt";
+$delimiter = "\n"; // Optional: Trennzeichen, z.B. Zeilenumbruch
+
+if (rex_file::append($file, $content, $delimiter)) {
+    echo "Inhalt erfolgreich hinzugefügt.";
+} else {
+    echo "Fehler beim Hinzufügen des Inhalts.";
+}
+
 
 ### rex_file::putConfig
 
