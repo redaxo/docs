@@ -2,7 +2,6 @@
   - [Versionshinweise](/{{path}}/{{version}}/intro)
   - [Zusammenarbeit](/{{path}}/{{version}}/zusammenarbeit)
   - [API-Dokumentation (extern)](/api/{{version}}/)
-  - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
   
 - Setup und Administration
   - [Installation](/{{path}}/{{version}}/installation)
@@ -15,6 +14,7 @@
   - [Konsole](/{{path}}/{{version}}/console)
   - [Debugging](/{{path}}/{{version}}/debugging)
   - [config.yml](/{{path}}/{{version}}/configyml)
+  - [REDAXO absichern](/{{path}}/{{version}}/absichern)
 
 - Anwender
   - [Profil](/{{path}}/{{version}}/profil)
@@ -85,3 +85,6 @@
 - Tipps und Links
   - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
   - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
+ 
+- Ältere Verionen
+   - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
