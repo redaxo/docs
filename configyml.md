@@ -146,6 +146,8 @@ theme: null
 | ------ | --------- | --- | ----- | ------------ |
 | setup |  |  | true/ false/ hash+DayTime | Legt fest, ob das Setup ausgeführt werden soll. Bei true wird das Setup ausgeführt. Wird das Setup über das Backend gestartet findet sich hier ein Hash und eine DateTime-Angabe die festlegt bis wann der Setupaufruf gültig ist. |
 | debug | enabled |  | true/false | Startetet oder beenden den Debug-Modus |
+| live_mode |  |  | true/false | Aktiviert oder deaktiviert den Live-Modus |
+| safe_mode |  |  | true/false | Aktiviert oder deaktiviert den Safe-Modus Mehr dazu unter [REDAXO absichern](/{{path}}/{{version}}/absichern) |
 |  | throw\_always\_exception |  | true/false | Legt fest ob Exceptions immer ausgegeben werden sollen |
 | instname |  |  | rex… | Eindeutiger Installationsname, Beispiel: rex20201222171044 |
 | server |  |  | url | Url zum Frontend der Website |
