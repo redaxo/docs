@@ -3,6 +3,7 @@
 * [Hinweise / bitte beachten](#hinweise)
 * [Aktualisierung durchführen](#aktualisierung)
 * [REDAXO auf utf8mb4 umstellen](#utf8mb4)
+* [Upgrade von Version 4.x zu 5.x](/{{path}}/{{version}}/upgrade-v4-v5)
 
 <a name="hinweise"></a>
 
