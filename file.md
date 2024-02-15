@@ -120,6 +120,7 @@ rex_file::append($file, $content, $delimiter = '');
 
 Beispiel: 
 
+```php
 $file = "meine_datei.txt";
 $content = "Neuer Inhalt";
 $delimiter = "\n"; // Optional: Trennzeichen, z.B. Zeilenumbruch
@@ -129,7 +130,7 @@ if (rex_file::append($file, $content, $delimiter)) {
 } else {
     echo "Fehler beim Hinzufügen des Inhalts.";
 }
-
+```
 
 ### rex_file::putConfig
 
