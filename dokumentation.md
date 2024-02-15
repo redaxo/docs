@@ -81,10 +81,11 @@
 - Datenbank
   - [Queries (rex_sql)](/{{path}}/{{version}}/datenbank-queries)
   - [Tabellen anlegen/verändern (rex_sql_table, rex_sql_column)](/{{path}}/{{version}}/datenbank-tabellen)
+  - 
+- Ältere Versionen
+   - [Upgrade von Version 4.x zu 5.x](/{{path}}/{{version}}/upgrade-v4-v5)
  
 - Tipps und Links
   - [Übersicht wichtiger AddOns](/{{path}}/{{version}}/addons-list)
   - [REDAXO-Tricks (extern)](https://friendsofredaxo.github.io/tricks/)
- 
-- Ältere Verionen
-   - [Upgrade von Version 4 zu 5](/{{path}}/{{version}}/upgrade-v4-v5)
+
