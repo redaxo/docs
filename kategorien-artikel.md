@@ -133,23 +133,23 @@ $subcategories = rex_category::getCurrent()->getChildren();
 dump($subcategories);
 
 // Prüfen ob eine Eltern-Kategorie ein bestimmtes Value hat
-// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// Von $cat ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
 // und bei der ersten stoppen, wo `cat_foo` gesetzt ist 
 // und den Wert liefern
-$foo = $category->getClosestValue('cat_foo');
+$foo = $cat->getClosestValue('cat_foo');
 
 // Prüfen, ob die Kategorie und all ihre Parents online sind
-if ($category->isOnlineIncludingParents()) {}
+if ($cat->isOnlineIncludingParents()) {}
 
-// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// Von $cat ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
 // und bei der ersten stoppen, wo die Callback `true` liefert 
 // und dann die Katgeorie zurückliefern
-$closest = $category->getClosest(function (rex_category $category) {
-    return $category->getValue('foo') > 3;
+$closest = $cat->getClosest(function (rex_category $cat) {
+    return $cat->getValue('foo') > 3;
 });
 ```
 
-`$category->getClosest()` schaut von $category beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
+`$cat->getClosest()` schaut von $cat beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
 Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Selector.
 
 ***Beispiel Prüfen, ob der aktuelle Kategoriebaum offline ist.***
