@@ -109,20 +109,20 @@ echo $this->getValue("cat_navigation_type");
 
 ```php
 // Alle Artikel in der aktuellen Kategorie zurückgeben
-$cat = rex_category::get(REX_CATEGORY_ID);
-$articles = $cat ? $cat->getArticles(true) : [];
+$category = rex_category::get(REX_CATEGORY_ID);
+$articles = $category ? $category->getArticles(true) : [];
 dump($articles);
 
 // Hinweis: Die Methoden zum Laden weiterer Kategorien besitzen meist
 // auch einen Parameter zum Ignorieren von Offline-Inhalten: (true).
 
 // Werte der aktuellen Kategorie
-$cat = rex_category::getCurrent();
+$category = rex_category::getCurrent();
 // Ebenfalls möglich:
-$cat = rex_category::get(REX_CATEGORY_ID);
+$category = rex_category::get(REX_CATEGORY_ID);
 // Kategorie mit der ID 3
-$cat = rex_category::get(3);
-dump($cat);
+$category = rex_category::get(3);
+dump($category);
 
 // Rootkategorien in der obersten Ebene
 $root_categories = rex_category::getRootCategories();
@@ -133,29 +133,29 @@ $subcategories = rex_category::getCurrent()->getChildren();
 dump($subcategories);
 
 // Prüfen ob eine Eltern-Kategorie ein bestimmtes Value hat
-// Von $cat ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
 // und bei der ersten stoppen, wo `cat_foo` gesetzt ist 
 // und den Wert liefern
-$foo = $cat->getClosestValue('cat_foo');
+$foo = $category->getClosestValue('cat_foo');
 
 // Prüfen, ob die Kategorie und all ihre Parents online sind
-if ($cat->isOnlineIncludingParents()) {}
+if ($category->isOnlineIncludingParents()) {}
 
-// Von $cat ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
+// Von $category ausgehend (einschließlich) den ParentTree nach oben durchlaufen 
 // und bei der ersten stoppen, wo die Callback `true` liefert 
 // und dann die Katgeorie zurückliefern
-$closest = $cat->getClosest(function (rex_category $cat) {
-    return $cat->getValue('foo') > 3;
+$closest = $category->getClosest(function (rex_category $category) {
+    return $category->getValue('foo') > 3;
 });
 ```
 
-`$cat->getClosest()` schaut von $cat beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
+`$category->getClosest()` schaut von $category beginnend aufwärts und liefert das naheliegendste Element, auf das die Bedinung zutrifft.
 Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Selector.
 
 ***Beispiel Prüfen, ob der aktuelle Kategoriebaum offline ist.***
 
 ```php
-if ($cat->getClosest(fn (rex_category $cat) => 0 == $cat->getValue('status'))) {
+if ($category->getClosest(fn (rex_category $category) => 0 == $category->getValue('status'))) {
     // Alle Elterncats sind offline (also Status 0)
 } 
 ```
