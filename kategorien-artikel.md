@@ -109,20 +109,20 @@ echo $this->getValue("cat_navigation_type");
 
 ```php
 // Alle Artikel in der aktuellen Kategorie zurückgeben
-$cat = rex_category::get(REX_CATEGORY_ID);
-$articles = $cat ? $cat->getArticles(true) : [];
+$category = rex_category::get(REX_CATEGORY_ID);
+$articles = $category ? $category->getArticles(true) : [];
 dump($articles);
 
 // Hinweis: Die Methoden zum Laden weiterer Kategorien besitzen meist
 // auch einen Parameter zum Ignorieren von Offline-Inhalten: (true).
 
 // Werte der aktuellen Kategorie
-$cat = rex_category::getCurrent();
+$category = rex_category::getCurrent();
 // Ebenfalls möglich:
-$cat = rex_category::get(REX_CATEGORY_ID);
+$category = rex_category::get(REX_CATEGORY_ID);
 // Kategorie mit der ID 3
-$cat = rex_category::get(3);
-dump($cat);
+$category = rex_category::get(3);
+dump($category);
 
 // Rootkategorien in der obersten Ebene
 $root_categories = rex_category::getRootCategories();
@@ -155,7 +155,7 @@ Es arbeitet so wie die closest()-Methode in jQuery, bloß mit Callback statt Sel
 ***Beispiel Prüfen, ob der aktuelle Kategoriebaum offline ist.***
 
 ```php
-if ($cat->getClosest(fn (rex_category $cat) => 0 == $cat->getValue('status'))) {
+if ($category->getClosest(fn (rex_category $category) => 0 == $category->getValue('status'))) {
     // Alle Elterncats sind offline (also Status 0)
 } 
 ```
