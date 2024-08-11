@@ -73,7 +73,7 @@ Sollte die Ausführung als Cronjob nicht möglich sein (z.B.: aufgrund mangelnde
 
 Bei `Skript` findet die Ausführung über den Cronjob des Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in REDAXO. Zum Aufruf muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Cronjobs muss kleiner oder gleich sein, als das kleinste Intervall im REDAXO-Cronjob.
 
-**Wir empfehlen, den Aufruf serverseitig im Minutentakt durchzuführen, das Cronjob-Addon regelt dann die tatsächliche Ausführung.**
+**Wir empfehlen, den Aufruf serverseitig in möglichst kurzem Intervallen durchzuführen, das Cronjob-Addon regelt dann die tatsächliche Ausführung.**
 
 `Frontend` und `Backend` werden ausgeführt, wenn im Frontend und / oder Backend Seitenaufrufe erfolgen. Dies hat u.U. zur Folge, dass die Cronjobs ggf. später ausgeführt werden, als erwünscht. (z.B. bei regelmäßigen Backups, E-Mail-Benachrichtigungen)  
 
