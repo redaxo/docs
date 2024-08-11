@@ -17,7 +17,13 @@
 
 Cronjobs dienen der regelmäßigen automatisierten Ausführung von Programmcode. Das Cronjobs-AddOn ist Bestandteil der REDAXO-Basisinstallation, muss jedoch bei Bedarf separat installiert werden.
 
-Im AddOn lassen sich dann beliebig viele Einträge erstellen, die gemäß den Einstellungen jedes Eintrages abgearbeitet werden.
+Beispiele für die Verwendung:
+
+* Regelmäßige Datenbank-Tabellenoptimierung
+* Zeitgesteuertes Veröffentlichen von Artikeln
+* routinemäßige Aufgaben wie Datenbank-Backups
+
+Im Add-on lassen sich dann beliebig viele Einträge erstellen, die gemäß den Einstellungen jedes Eintrages abgearbeitet werden.
 
 <a name="einstellungen"></a>
 
@@ -43,7 +49,7 @@ Im Feld `Umgebung` kann man ein oder mehrere Ereignisse wählen, bei denen der C
 
 - Frontend
 - Backend
-- Skript
+- Skript (empfohlen, benöitgt Server-Cron)
 
 Sobald ein eingestelltes Intervall erreicht ist, wartet das AddOn auf das eingestellte Ereignis: einen Seitenaufruf im Frontend, auf eine Aktion durch einen Nutzer im Backend oder den Aufruf der Skriptumgebung. Tritt das eingestellte Ereignis ein, wird der Cronjob ausgeführt.
 
@@ -59,14 +65,15 @@ Bei der Ausführung in der Umgebung `Frontend` und `Backend` läuft der Cronjob 
 
 Nur in der Umgebung `Backend` ist es möglich, den Cronjob manuell in den Einstellungen des AddOns zu starten.
 
-
 #### Empfehlungen 
 
 Die empfohlene Umgebung ist `Skript`, hierbei wird der Cronjob über einen serverseitigen Cronjob aufgerufen. 
 
 Sollte die Ausführung als Cronjob nicht möglich sein (z.B.: aufgrund mangelnder Rechte auf dem Server), stehen die alternativen Umgebungen `Frontend` und `Backend` zur Verfügung. 
 
-Bei `Script` findet die Ausführung über den Cronjob des Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in REDAXO. Zum Aufruf muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Cronjobs muss kleiner oder gleich sein, als das kleinste Intervall im REDAXO-Cronjob.
+Bei `Skript` findet die Ausführung über den Cronjob des Betriebssystems statt (z.B. `crontab -e`) und ist unabhängig von den Seitenaufrufen in REDAXO. Zum Aufruf muss `redaxo/bin/console cronjob:run` aufgerufen werden. Das Intervall zwischen den Server-Cronjobs muss kleiner oder gleich sein, als das kleinste Intervall im REDAXO-Cronjob.
+
+**Wir empfehlen, den Aufruf serverseitig im Minutentakt durchzuführen, das Cronjob-Addon regelt dann die tatsächliche Ausführung.**
 
 `Frontend` und `Backend` werden ausgeführt, wenn im Frontend und / oder Backend Seitenaufrufe erfolgen. Dies hat u.U. zur Folge, dass die Cronjobs ggf. später ausgeführt werden, als erwünscht. (z.B. bei regelmäßigen Backups, E-Mail-Benachrichtigungen)  
 
