@@ -112,7 +112,7 @@ $success = rex_file::put(rex_path::frontend('/assets/new_styles.css'),$css);
 
 <a name="rexfile_append"></a>
 
-Die Methode `append` schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. Vorhandene Inhalte der Datei werden überschrieben. Es kann ein individueller Trenner definiert werden, der Standard ist leer.  
+Die Methode `append` schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. Die Rückgabe bei Erfolg ist TRUE, sonst FALSE. Es kann ein individueller Trenner definiert werden, der Standard ist leer.  
 
 ```php
 rex_file::append($file, $content, $delimiter = '');
