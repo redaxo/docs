@@ -1,24 +1,27 @@
 # Module
+
 - [Einführung](#einfuehrung)
 - [Entwickler: Module erstellen](#entwickler)
-    - [Input](#input)
-    - [Output](#output)
-    - [Aktionen](#aktionen)
+  - [Input](#input)
+  - [Output](#output)
+  - [Aktionen](#aktionen)
 - [Administratoren: Module verwalten](#redakteure)
-    - [Module in Templates und C-Types beschränken](#beschraenken)
+  - [Module in Templates und C-Types beschränken](#beschraenken)
 - [Redakteure: Module verwenden](#redakteure)
-    - [Inhaltsblöcke hinzufügen](#hinzufuegen)
-    - [Slices verschieben](#verschieben)
+  - [Inhaltsblöcke hinzufügen](#hinzufuegen)
+  - [Slices verschieben](#verschieben)
 - [Beispiele](#beispiele)
-    - [Einfaches Textmodul](#textmodul)
-    - [Bildmodul](#bildmodul)
-    - [Inhaltsübersicht für Artikel](#teaser)
-    - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
+  - [Einfaches Textmodul](#textmodul)
+  - [Bildmodul](#bildmodul)
+  - [Inhaltsübersicht für Artikel](#teaser)
+  - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
+  - [Checkboxen in Modulen](#checkbox)
 
 <a name="einfuehrung"></a>
+
 ## Einführung
 
-Jede Inhaltsseite in einer REDAXO-Website ist aus einem oder mehreren Modulen zusammengesetzt. Module bilden die Inhaltscontainer und werden als Blöcke im Backend auf einer Seite (Artikel) platziert. 
+Jede Inhaltsseite in einer REDAXO-Website ist aus einem oder mehreren Modulen zusammengesetzt. Module bilden die Inhaltscontainer und werden als Blöcke im Backend auf einer Seite (Artikel) platziert.
 
 Jedes Modul hat einen Eingabeteil, der mit verschiedensten Eingabeelementen versehen werden kann. Der Eingabeteil kann auch entfallen, wenn keine redaktionellen Inhalte erfasst werden sollen.
 
@@ -34,16 +37,19 @@ In einen Artikel eingesetzte Modulblöcke bilden die so genannten Slices, aus de
 Ein Slice hat einen vordefinierten Satz an Variablen, die für die Benutzerelemente zur Verfügung stehen. Diese Variablen werden über eine eigene Syntax angesprochen. Die Variablen sowohl für die EIngabe als auch für die Ausgabe werden ausführlich im Kapitel [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen) beschrieben.
 
 <a name="entwickler"></a>
+
 ## Entwickler: Module erstellen
 
 Ein Modul wird im Backend beim Menüpunkt `Module` erstellt. Die Benennung der Modules kann frei gewählt werden. Da die Reihenfolge der Module in der Auswahlliste nach Namen sortiert wird, sind die Namen für eine gewisse Struktur relevant. Um die Reihenfolge besser kontrollieren zu kontrollieren, könnte man dem Namen Zahlen voranstellen.
 
 <a name="input"></a>
+
 ### Input
 
 Im Eingabeteil werden die Felder definiert, die der Redakteur bei der Eingabe der Inhalte sieht. Der Eingabeteil kann individuell gestaltet werden und mit beliebigem HTML-Code formatiert werden. Da das REDAXO-Backend auf dem Frontend-Framework Bootstrap basiert, kann man Bootstrap-Markup verwenden. Der Eingabeteil kann aus PHP-Code und HTML bestehen. Alle Klassen des Frameworks (Core, AddOns) stehen zur Verfügung.
 
 <a name="output"></a>
+
 ### Output
 
 Der Ausgabecode wird von REDAXO ausgeführt und im Frontend ausgegeben. Auch hier stehen alle Klassen und Funktionen des Frameworks zur Verfügung.
@@ -52,13 +58,14 @@ PHP-Variablen, die in einem Modul definiert wurden, stehen in den nachfolgenden 
 
 **TIPP** Die Abarbeitung eines Moduls kann in der Ausgabe mittels `return` beendet werden. Die Verarbeitung wird dann mit dem nächsten Modul fortgesetzt.
 
-```
+```php
 <p>Dieser Text wird ausgegeben</p>
 <?php return; ?>
 <p>Dieser Text wird nicht ausgegeben</p>
 ```
 
 <a name="aktionen"></a>
+
 ### Aktionen
 
 Beim Anzeigen oder Speichern eines Moduls können zusätzliche Aktionen ausgeführt werden. Siehe hierzu das Kapitel [Aktionen](/{{path}}/{{version}}/aktionen).
@@ -66,9 +73,11 @@ Beim Anzeigen oder Speichern eines Moduls können zusätzliche Aktionen ausgefü
 > **Hinweis:** Wenn ein Modulblock in einem Artikel neu hinzugefügt wird, so ist die Slice-ID noch nicht vergeben. Daher können dem Slice beim einfügen auch keine Aktionen zugewiesen werden.
 
 <a name="administratoren"></a>
+
 ## Administratoren: Module verwalten
 
 <a name="beschraenken"></a>
+
 ### Module in Templates und C-Types beschränken
 
 Der Administrator kann die Verwendung von Modulen für Benutzergruppen und Templates einschränken. In jedem Template lässt sich einstellen, ob bestimmte Module für bestimmte C-Types (Spalten) zur Verfügung stehen oder nicht.  Nähere Informationen dazu liefert das [Template-Kapitel](/{{path}}/{{version}}/templates).
@@ -76,27 +85,32 @@ Der Administrator kann die Verwendung von Modulen für Benutzergruppen und Templ
 Auch für Benutzergruppen (Rollen) lässt sich einstellen, ob alle Module verfügbar sein sollen oder nur ausgewählte Module. Dadurch kann man die Übersicht bei der Modulauswahl verbessern. Auch lässt sich durch eine definierte Verfügbarkeit die fälschliche Verwendung von Inhaltsmodulen vermeiden: Wenn ein Modul erstellt wurde, welches nur in der Seitenspalte einer Seite verwendet werden soll, so kann es bei korrekter Einstellung nicht in der Hauptspalte eingesetzt werden.
 
 <a name="redakteure"></a>
+
 ## Redakteure: Module verwenden
 
 <a name="hinzufuegen"></a>
+
 ### Inhaltsblöcke hinzufügen
 
 REDAXO Artikel sind, wenn sie erstellt werden, zunächst leer. Über die Dropdownliste `Block hinzufügen` lässt sich ein neuer Inhaltsblock in den Artikel einsetzen. Es erscheint dann die Inhaltsmaske mit Feldern, die im Modul Input definiert wurde. Ein Block lässt sich vor oder hinter einem vorhandenen Block einfügen.
 
 <a name="verschieben"></a>
+
 ### Slices verschieben
 
 Die eingesetzten Modulblöcke kann man bei Bedarf über die Pfeile nach oben oder unten verschieben und dadurch in ihrer Reihenfolge verändern.
 
 <a name="beispiele"></a>
+
 ## Beispiele
 
 <a name="textmodul"></a>
-### Einaches Textmodul
+
+### Einfaches Textmodul
 
 **Eingabe**:
 
-```
+```html
 <label>Überschrift</label>
 <input type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
 
@@ -108,7 +122,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Überschrift</label>
@@ -116,7 +130,7 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
             <input class="form-control" type="text" name="REX_INPUT_VALUE[1]" value="REX_VALUE[1]">
         </div>
     </div>
-    
+
     <div class="form-group">
         <label class="col-sm-2 control-label">Introtext</label>
         <div class="col-sm-10">
@@ -126,12 +140,11 @@ Auch wenn die Eingabe der Inhalte so bereits funktioniert, so sieht das noch nic
 </fieldset>
 ```
 
-
 Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen nutzt. Über den Prefix und Suffix kann man die umschließenden HTML-Tags für die beiden Felder definieren.
 
 **Ausgabe:**
 
-```
+```html
 <div class="jumbotron">
     REX_VALUE[id='1' prefix='<h1>' suffix='</h1>']
     REX_VALUE[id='2' prefix='<p>' suffix='</p>']
@@ -139,11 +152,12 @@ Der Code zur Ausgabe ist noch einfacher – zumindest wenn man REDAXO-Variablen 
 ```
 
 <a name="bildmodul"></a>
+
 ### Bildmodul
 
 **Eingabe**:
 
-```
+```html
 <label>Bild 1</label>
 REX_MEDIA[id="1" widget="1"]
 
@@ -159,7 +173,7 @@ Auch dieses Modul lassen sich die Felder noch etwas hübscher darstellen.
 
 **Optisch gestylte Eingabe**:
 
-```
+```html
 <fieldset class="form-horizontal">
     <div class="form-group">
         <label class="col-sm-2 control-label">Bild 1</label>
@@ -188,7 +202,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 
 **Ausgabe**
 
-```
+```php
 <div class="row">
     <div class="col-lg-6">
         <?php
@@ -223,6 +237,7 @@ Nun fehlt noch die Ausgabe. Für die Ausgabe der Bilder sollte man prüfen, ob w
 ```
 
 <a name="teaser"></a>
+
 ### Inhaltsübersicht für Artikel
 
 Dieses Modul listet alle Artikel innerhalb einer Kategorie auf, die den Status `online` haben und nicht der Startartikel sind.
@@ -235,14 +250,14 @@ nicht erforderlich
 
 **Ausgabe**
 
-```
+```php
 <?php
 $articles = rex_category::getCurrent()->getArticles(true);
 
 echo '<ul>';
     foreach ($articles as $art) {
         if ($art->isStartArticle()) {
-            continue;      
+            continue;
         }
         echo '<li>';
             echo '<h3><a href="'.rex_getUrl($art->getId()).'">'.$art->getName().'</a></h3>';
@@ -254,29 +269,31 @@ echo '</ul>';
 ```
 
 <a name="linkliste"></a>
+
 ### Interne Linkliste mit `REX_LINKLIST`
 
-Einzelne Artikel können durch den Redakteur ausgewählt werden und so als Liste ausgegeben werden. Das Modul erstellt ein Bootstrap-Panel mit einer Artikelliste. 
+Einzelne Artikel können durch den Redakteur ausgewählt werden und so als Liste ausgegeben werden. Das Modul erstellt ein Bootstrap-Panel mit einer Artikelliste.
 
 #### Moduleingabe
 
 ```html
 <fieldset class="form-horizontal">
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Interne Links</label>
-		<div class="col-sm-10">
-			REX_LINKLIST[id="1" widget="1"]
-		</div>
-	</div>
+ <div class="form-group">
+  <label class="col-sm-2 control-label">Interne Links</label>
+  <div class="col-sm-10">
+   REX_LINKLIST[id="1" widget="1"]
+  </div>
+ </div>
 </fieldset>
 ```
 
-In der REX_Linklist werden die Werte (Artikel-IDs) kommasepariert gespeichert. 
+In der REX_Linklist werden die Werte (Artikel-IDs) kommasepariert gespeichert.
 
 <a name="modulausgabe"></a>
+
 ##### Modulausgabe
 
-In der Modulausgabe werden die Werte mitels explode (http://php.net/manual/de/function.explode.php) in einer foreach-Schleife ausgelesen. Anhand der ID holt man sich den Datensatz des Artikels. Wenn nur ein Link erzeugt werden soll, bietet sich die direkte Umwandlung des Datensatzes in einen Link mittels `->toLink()` an. 
+In der Modulausgabe werden die Werte mitels explode (<http://php.net/manual/de/function.explode.php)> in einer foreach-Schleife ausgelesen. Anhand der ID holt man sich den Datensatz des Artikels. Wenn nur ein Link erzeugt werden soll, bietet sich die direkte Umwandlung des Datensatzes in einen Link mittels `->toLink()` an.
 
 ```php
 <?php
@@ -299,4 +316,29 @@ if ("REX_LINKIST[1]" != "") {
   }
 }
 
+```
+
+<a name="checkbox"></a>
+
+### Beispiel für die Verwendung einer Checkbox in der Moduleingabe
+
+Dieses Modul Beinhaltet eine Checkbox als Modul.
+
+#### Moduleingabe
+
+```html
+<input type="hidden" name="REX_INPUT_VALUE[1]" value="0">
+<input type="checkbox" name="REX_INPUT_VALUE[1]" value="1" REX_VALUE[id=1 instead=checked]>
+```
+
+<a name="modulausgabe"></a>
+
+#### Modulausgabe
+
+```php
+<?php 
+
+if(REX_VALUE[1])
+    {
+      echo "checked...";
 ```

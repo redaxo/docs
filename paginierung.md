@@ -1,14 +1,14 @@
 # Paginierung
 
-Paginierungen werden für unterschiedlichste Zwecke eingesetzt. Genannt seien hier Datensätze einer Liste oder Newseinträge in einem Archiv. Paginierungen können im Backend und im Frontend eingesetzt werden. Genau zu diesen Zwecken kann man die in REDAXO vorgefertigte Paginierungsklasse `rex_pager` einsetzen. Das `rex_pager`-Objekt ist für die Paginierung zuständig. Die Anzeige der jeweiligen Inhalte (Datensätze, Artikel etc.) wird unabhängig davon programmiert.
+Paginierungen werden für unterschiedlichste Zwecke eingesetzt. Genannt seien hier Datensätze einer Liste oder News-Einträge in einem Archiv. Paginierungen können im Backend und im Frontend eingesetzt werden. Genau zu diesen Zwecken kann man die in REDAXO vorgefertigte Paginierungsklasse `rex_pager` einsetzen. Das `rex_pager`-Objekt ist für die Paginierung zuständig. Die Anzeige der jeweiligen Inhalte (Datensätze, Artikel etc.) wird unabhängig davon programmiert.
 
 Wir beginnen direkt mit einem Beispiel.
 
-```
+```php
 <?php $pager = new rex_pager(50,'offset') ?>
 ```
-    
-erstellt ein neues Paginierungsobjekt, es werden maximal 50 Einträge pro Seite angezeigt. Standard ist 30. Der Parameter, der die Paginierung steuert, heißt in unserem Beispiel `offset`. Standard ist `start`.
+
+Dieser Code erstellt ein neues Paginierungsobjekt, es werden maximal 50 Einträge pro Seite angezeigt. Standard ist 30. Der Parameter, der die Paginierung steuert, heißt in unserem Beispiel `offset`. Standard ist `start`.
 
 Der Wert `offset` wird als get- oder post-Parameter erwartet und gibt die Anzahl der Datensätze an, ab der die Anzeige beginnt. Man kann also diesen Parameter nutzen und in eine SQL-Abfrage zur Anzeige einbauen.
 
@@ -16,34 +16,35 @@ Der Wert `offset` wird als get- oder post-Parameter erwartet und gibt die Anzahl
 
 Mit
 
-```
+```php
 <?php $pager->setRowCount(123) ?>
 ```
-    
-wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt. 
+
+wird die Gesamtanzahl der anzuzeigenden Elemente festgelegt.
 Der Wert kann mit
 
-```
+```php
 <?php $numRowsTotal = $pager->getRowCount() ?>
 ```
-    
+
 ausgelesen werden.
 
-Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden. 
+Damit kann der Pager berechnen, wie viele Seiten für die Darstellung aller Datensätze benötigt werden.
 Die Seitenzahl kann mit
 
-```
+```php
 <?php $totalPages = $pager->getPageCount() ?>
 ```
+
 ermittelt werden.
-    
+
 Eine einfache Ausgabe, z.B. in einem Modul, könnte dann so aussehen:
 
-```
+```php
 <?php
 echo '<ul>';
   for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
-      echo '<li><a href="'.rex_getUrl(rex_article::getCurrentId(),'',[$pager->getCursorName() => $pager->getCursor($page)]).'">'.($page + 1).'</a></li>';    
+      echo '<li><a href="'.rex_getUrl(rex_article::getCurrentId(),'',[$pager->getCursorName() => $pager->getCursor($page)]).'">'.($page + 1).'</a></li>';
   }
 echo '</ul>';
 ?>
@@ -53,42 +54,42 @@ Eine etwas komplexere Ausgabe steht im Fragment `fragments/core/navigations/pagi
 
 Weitere Methoden der `rex_pager`-Klasse sind
 
-```
+```php
 <?php
 // Anzahl Elemente pro Seite (Standard 30)
 $rows_per_page = $pager->getRowsPerPage();
-   
+
 // Liefert den Wert des aktuellen Cursors
 // bei optionaler Übergabe einer Seitenzahl den Cursorwert der Seite
 $cursor = $pager->getCursor(integer $pageNo = null);
-   
+
 // prüft den übergebenen Cursorwert
 // Rückgabe: 1, wenn der Cursorwert innerhalb des definierten Bereiches ist
 //           0, wenn der Cursorwert nicht innerhalb des Bereiches liegt
 $is_valid_cursor = $pager->validateCursor(integer $cursor);
-   
+
 // Liefert den Name des Cursors. Standard ist "start"
 $cursor_name = $pager->getCursorName();
-   
-// Gibt 0 zurück, da der Offset für die erste Seite immer 0 ist        
+
+// Gibt 0 zurück, da der Offset für die erste Seite immer 0 ist
 $offset_for_first_page = $pager->getFirstPage();
-   
+
 // Gibt die Seitennummer für die vorhergehenden Seite zurück
 // Wert ist nie kleiner als die kleinste mögliche Seitennummer
 $prev_page_no = $pager->getPrevPage( );
-   
+
 // Gibt die Seitennummer der aktuellen Seite zurück oder 0
 $current_page_no = $pager->getCurrentPage();
-   
+
 // Gibt die Seitennummer für die nächste Seite zurück
 // Wert ist nie größer als die höchste mögliche Seitennummer
 $next_page_no = $pager->getNextPage();
-   
+
 // Gibt die höchste mögliche Seitennummer zurück
 $last_page_no = $pager->getLastPage();
-   
+
 // gibt true zurück, wenn der Cursor auf der übergebenen Seitennummer steht
-$is_active_page = $pager->isActivePage(integer $pageNo);
+$is_active_page = $pager->isActivePage($pageNo);
 ?>
 ```
 
@@ -98,7 +99,7 @@ Ein weiteres Beispiel einer Ausgabe zeigt, wie man die Klasse `rex_pager` verwen
 
 Aktuelle Seite wäre in diesem Beispiel die Seite 72
 
-```
+```php
 $distance = 3; // Wert, der bestimmt wieviele Seiten vor bzw. nach der aktuellen Seite angezeigt werden sollen.
 
 $last_page_shown = 0;
@@ -106,9 +107,9 @@ $last_page_shown = 0;
 echo '<ul>';
 for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
   $show = false;
-  $class = ($this->pager->isActivePage($page)) ? ' active' : '';
+  $class = ($pager->isActivePage($page)) ? ' active' : '';
   if ($page < $distance) $show = true;
-  if (abs($page - $pager->getCurrentPage()) < $distance) $show = true; 
+  if (abs($page - $pager->getCurrentPage()) < $distance) $show = true;
   if ($page + $distance > $pager->getLastPage()) $show = true;
   // if (($page+1)%10 == 0) $show = true; // alle 10er Schritte anzeigen
   if ($show) {
@@ -120,6 +121,4 @@ for ($page = $pager->getFirstPage(); $page <= $pager->getLastPage(); ++$page) {
   }
 }
 echo '</ul>';
-``` 
-
-
+```
