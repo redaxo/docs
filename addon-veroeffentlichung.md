@@ -135,6 +135,11 @@ Weitergehende Anpassungen führt man dann nach dem include der install.php aus.
 $addon = rex_addon::get('mein_addon');
 $addon->includeFile(__DIR__ . '/install.php');
 ```
+### Löschen nicht mehr benötigter PlugIns
+
+Sollte die neue Version ohne Plugins oder ohne ein spezielles PluIn nicht mehr ausgeliefert werdn, kann man alte PlugIn mit nachfolgendem Befehl löschen. 
+
+`rex_dir::delete(rex_path::plugin($addon, $plugin)`
 
 
 <a name="testing"></a>
