@@ -137,7 +137,7 @@ $addon->includeFile(__DIR__ . '/install.php');
 ```
 ### Löschen nicht mehr benötigter PlugIns
 
-Sollte die neue Version ohne Plugins oder ohne ein spezielles PluIn nicht mehr ausgeliefert werdn, kann man alte PlugIn mit nachfolgendem Befehl löschen. 
+Sollte die neue Version ohne Plugins oder ohne ein spezielles PlugIn nicht mehr ausgeliefert werdn, kann man alte PlugIns mit nachfolgendem Befehl löschen. 
 
 `rex_dir::delete(rex_path::plugin($addon, $plugin)`
 
