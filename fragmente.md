@@ -161,7 +161,7 @@ REDAXO Fragmente können auch überschrieben werden. Es genügt hierbei eine Fra
 
 ### Beispiel: Eigene Fehlerseiten erstellen
 
-Seit R5.7 ist es möglich, dass man die "Oooops Fehlerseiten" im Frontend als auch Backend individualisiert.
+Seit R5.7 ist es möglich dass man die "Ooops Fehlerseiten" im Frontend als auch Backend individualisiert.
 
 Die beiden Fehlerseiten sind als Core-Fragment im System enthalten und können z.b. via `fragments` Ordner im Project-AddOn (oder in einem beliebigen anderen AddOn) überschrieben werden.
 
@@ -169,11 +169,11 @@ Es gibt insgesamt 3 Fehlerseiten in REDAXO, davon sind aktuell zwei änderbar:
 
 - Whooops Fehlerseite, die man nur sieht wenn man als Admin im Backend eingeloggt ist. Diese enthält Debugging-Informationen und taucht sowohl im Front- und Backend auf. Sie ist nicht änderbar.
 
-- die ***Oooops Fehlerseite*** im REDAXO-Backend (als Fragment `core/be_ooops.php` überschreibbar), wenn man nicht als Admin user im Backend eingeloggt ist
+- die ***Ooops Fehlerseite*** im REDAXO-Backend (als Fragment `core/be_ooops.php` überschreibbar), wenn man nicht als Admin user im Backend eingeloggt ist
 
 ![Ooops](/assets/v5.7.0-fragmente_ooops.png)
 
-- Die ***Oooops Fehlerseite im Frontend*** (als Fragment `core/fe_ooops.php` überschreibbar), wenn man nicht als Admin-User im Backend eingeloggt ist
+- Die ***Ooops Fehlerseite im Frontend*** (als Fragment `core/fe_ooops.php` überschreibbar), wenn man nicht als Admin-User im Backend eingeloggt ist
 
 ![Ooops Frontend ](/assets/v5.7.0-fragmente_ooops_fe.png)
 
