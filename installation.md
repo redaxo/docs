@@ -68,7 +68,7 @@ rewrite ^/imagetypes/([^/]*)/([^/]*)              /index.php?rex_media_type=$1&r
 # !!! WICHTIG !!! Falls Let's Encrypt fehlschlägt, diese Zeile auskommentieren (sollte jedoch funktionieren)
 location ~ /\. { deny  all; }
 
-// Zugriff auf diese Verzeichnisse verbieten
+# Zugriff auf diese Verzeichnisse verbieten
 location ^~ /redaxo/src { deny  all; }
 location ^~ /redaxo/data { deny  all; }
 location ^~ /redaxo/cache { deny  all; }
