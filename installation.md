@@ -53,6 +53,9 @@ Eine vollständige nginx config für YRewrite.
 ```
 charset utf-8;
 
+# Deaktiviere Directory Listing
+autoindex off;
+
 location / {
   try_files $uri $uri/ /index.php$is_args$args;
 }
