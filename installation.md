@@ -34,15 +34,16 @@ Für Apache liefert REDAXO in den zuvor genannten Ordnern `.htaccess`-Dateien au
 
 ### Betrieb unter Nginx
 
-Wird REDAXO unter Nginx betrieben ist es erforderlich die Ordnerrechte korrekt zu setzen, da hier die mitgelieferten .htaccess-files nicht greifen. 
+Bei der Nutzung von REDAXO mit Nginx ist eine eigene Sicherheitskonfiguration notwendig, da die in REDAXO mitgelieferten .htaccess-Dateien hier nicht funktionieren. Es müssen das Directory-Listing deaktiviert und die Zugriffsberechtigungen für sensible Verzeichnisse korrekt gesetzt werden.
 
-Folgende Direktiven sorgen für eine Sperrung der Ordner (Stand REDAXO 5.13): 
+Folgende Direktiven sorgen für eine Sperrung der Ordner und verhindern das Directory-Listing: 
 
 ```
-location ^~ /redaxo/src { deny  all; }
-location ^~ /redaxo/data { deny  all; }
-location ^~ /redaxo/cache { deny  all; }
-location ^~ /redaxo/bin { deny  all; }
+autoindex off;
+location ^~ /redaxo/src { deny all; }
+location ^~ /redaxo/data { deny all; }
+location ^~ /redaxo/cache { deny all; }
+location ^~ /redaxo/bin { deny all; }
 ```
 #### NGINX-Konfiguration für YRewrite
 
@@ -53,7 +54,6 @@ Eine vollständige nginx config für YRewrite.
 ```
 charset utf-8;
 
-# Deaktiviere Directory Listing
 autoindex off;
 
 location / {
