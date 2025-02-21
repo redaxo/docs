@@ -6,6 +6,7 @@
 * [Auslesen der Einstellungen](#config)
 * Beispiele
   * [Passwort-Policies anpassen](#policies)
+* [Hinweise: https/hsts-config](https-config)
 
 <a name="einleitung"></a>
 
@@ -170,7 +171,7 @@ theme: null
 | lang |  |  | Sprachcode | Hier wird die default-Sprache festgelegt (Konfigurierbar im System) |
 | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">lang\_fallback</span> |  |  | Sparchcodes | Legt das Verhalten fest auf welche Sprachen REDAXO zurückspringen soll, wenn eine Übersetzung nicht gefunden wird. |
 | use\_https |  |  | true, false, frontend, backend | Legt fest ob https für Frontend und / oder Backend genutzt werden soll. |
-| use\_hsts |  |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security) |
+| use\_hsts |  |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security)  [⚠️ Hinweise: https/hsts-config](https-config)|
 | hsts\_max\_age |  |  | Sekunden | Legt die Laufzeit der HSTS-Einstellung fest |
 | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">use\_gzip</span> |  |  | true / false | Aktiviert oder deaktiviert die GZIP-Kompression |
 | use\_etag |  |  | true / false | Legt fest ob etag-Header ausgeliefert werden sollen |
@@ -238,3 +239,20 @@ Wird beides gesetzt, gilt auch beides. Im Beispiel dürfen also sowohl die letzt
 
 Im Beispiel muss man also nach 12 Monaten das Passwort ändern. Dazu wird man nach dem LogIn zwangsweise auf das Profil geleitet, mit der Warnung, dass man das Passwort ändern muss. Versucht man aber erst nach 24 Monaten sich wieder einzuloggen, ist man gesperrt, man gelangt also auch nicht mehr zum Profil, um das Passwort zu ändern. Diese Aufgabe muss dann ein Admin erledigen.
 
+<a name="https-config"></a>
+
+### HTTPS und HSTS-Konfiguration
+
+```yaml
+use_https: true
+use_hsts: true
+hsts_max_age: 31536000    # 1 Jahr
+```
+
+⚠️ HSTS-Warnhinweise:
+- Aktivierung NUR mit validem SSL-Zertifikat
+- HSTS-Einstellungen werden vom Browser gecached
+- Stufenweiser Rollout empfohlen:
+  1. HTTPS testen
+  2. HSTS mit kurzem max_age testen
+  3. max_age schrittweise erhöhen
