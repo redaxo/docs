@@ -6,7 +6,7 @@
 * [Auslesen der Einstellungen](#config)
 * Beispiele
   * [Passwort-Policies anpassen](#policies)
-* [Hinweise: https/hsts-config](https-config)
+* [Hinweise: https/hsts-config](#https-config)
 
 <a name="einleitung"></a>
 
@@ -171,7 +171,7 @@ theme: null
 | lang |  |  | Sprachcode | Hier wird die default-Sprache festgelegt (Konfigurierbar im System) |
 | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">lang\_fallback</span> |  |  | Sparchcodes | Legt das Verhalten fest auf welche Sprachen REDAXO zurückspringen soll, wenn eine Übersetzung nicht gefunden wird. |
 | use\_https |  |  | true, false, frontend, backend | Legt fest ob https für Frontend und / oder Backend genutzt werden soll. |
-| use\_hsts |  |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security)  [⚠️ Hinweise: https/hsts-config](https-config)|
+| use\_hsts |  |  | true / false | Aktiviert HSTS (HTTP Strict Transport Security)  [⚠️ Hinweise: https/hsts-config](#https-config)|
 | hsts\_max\_age |  |  | Sekunden | Legt die Laufzeit der HSTS-Einstellung fest |
 | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">use\_gzip</span> |  |  | true / false | Aktiviert oder deaktiviert die GZIP-Kompression |
 | use\_etag |  |  | true / false | Legt fest ob etag-Header ausgeliefert werden sollen |
