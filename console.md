@@ -9,6 +9,7 @@
   - [Datenbank Schema als PHP exportieren](#dbschema-export)
   - [package:list](#package-list)
   - [install:list](#install-list)
+  - [package:run-update-script](#package-run-update-script)
   - [Core/AddOn/PlugIn Assets synchronisieren](#asset-sync)
 - [Entwicklung eigener Konsolen-Skripte](#dev)
   - [run.php](#run)
@@ -166,6 +167,39 @@ Optionen:
 - `--search` - Filtert die Liste anhand eines Suchbegriffs (vgl. Filterung/Suche im Backend)
 - `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist
 - `--json` - gibt die Ausgabe als JSON (für z.B. Verarbeitung in Skripten)
+
+<a name="package-run-update-script"></a>
+
+### package:run-update-script
+
+Mit diesem Command kann das Update-Skript eines Packages manuell ausgeführt werden. Dies ist nützlich zum Testen von `update.php`-Skripten oder wenn ein Package manuell aktualisiert wurde.
+
+**Syntax:**
+```console
+php redaxo/bin/console package:run-update-script <package-name> <from-version>
+```
+
+**Parameter:**
+- `<package-name>`: Name des Packages (AddOn/PlugIn)
+- `<from-version>`: Vorgängerversion, von der das Update simuliert werden soll
+
+**Beispiele:**
+
+```console
+# Update-Skript von my_addon von Version 1.3.0 auf aktuelle Version ausführen
+php redaxo/bin/console package:run-update-script my_addon 1.3.0
+
+# Nützlich beim AddOn-Development zur Update-Skript-Entwicklung
+php redaxo/bin/console package:run-update-script demo_addon 2.1.5
+```
+
+**Anwendungsfälle:**
+- **AddOn-Entwicklung**: Testen von Update-Skripten während der Entwicklung
+- **Manuelle Updates**: Nach manueller Package-Aktualisierung das Update-Skript nachträglich ausführen
+- **Debugging**: Fehlersuche in Update-Prozessen
+- **Migration**: Simulieren von Updates zwischen verschiedenen Versionen
+
+> **Hinweis:** Das Update-Skript wird so ausgeführt, als würde ein Update von der angegebenen Version auf die aktuell installierte Version durchgeführt. Alle Versionsbedingungen in der `update.php` werden entsprechend ausgewertet.
 
 
 

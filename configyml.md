@@ -160,6 +160,10 @@ theme: null
 | session\_keep\_alive |  |  | Sekunden | Legt den Keep live-Zeitraum für die Session fest |
 | session | backend | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Backend festgelegt.<br>Dazu gehören u.a Pfadangabe zur Cookie-Speicherung, Domain und Laufzeit |
 |  | frontend<br>  | cookie |  | Hier werden Einstellungen für das Cookie-Handling im Frontend festgelegt. |
+| backend\_login\_policy | login\_tries\_until\_blocked |  | digit | Anzahl der Login-Versuche bis ein Account gesperrt wird (Standard: 50) |
+|  | login\_tries\_until\_delay |  | digit | Anzahl der Login-Versuche ohne Verzögerung (Standard: 3) |
+|  | relogin\_delay |  | digit | Verzögerung in Sekunden nach erreichen von login\_tries\_until\_delay (Standard: 5) |
+|  | enable\_stay\_logged\_in |  | true/false | Aktiviert/deaktiviert die "Angemeldet bleiben" Option (Standard: true) |
 | <span class="colour" style="color:var(--color-prettylights-syntax-entity-tag)">password\_policy</span> | length |  | digit | Hier können Angaben zur minimalen und maximalen Zeichenlänge für Passwörter festgelegt werden |
 |  | lowercase |  | digit | Angabe wieviele Kleinbuchstaben das Passwort enthalten muss |
 |  | uppercase |  | digit | Angabe wieviele Großbuchstaben das Passwort enthalten muss |
@@ -322,6 +326,64 @@ db:
 ```
 
 > **Sicherheitshinweis:** In Produktionsumgebungen sollte `ssl_verify_server_cert` immer auf `true` gesetzt sein, um Man-in-the-Middle-Angriffe zu verhindern.
+
+### Backend Login-Richtlinien
+
+Das Backend Login-System bietet verschiedene Sicherheitseinstellungen zum Schutz vor Brute-Force-Angriffen. Die Konfiguration erfolgt über `backend_login_policy` in der config.yml:
+
+```yaml
+backend_login_policy:
+    login_tries_until_blocked: 50    # Anzahl Versuche bis zur Sperrung
+    login_tries_until_delay: 3       # Anzahl Versuche ohne Verzögerung  
+    relogin_delay: 5                 # Verzögerung in Sekunden
+    enable_stay_logged_in: true      # "Angemeldet bleiben" Option
+```
+
+**Funktionsweise:**
+
+1. **Erste Versuche ohne Verzögerung**: Bis zu `login_tries_until_delay` Versuche können ohne Verzögerung durchgeführt werden (Standard: 3)
+
+2. **Verzögerte Versuche**: Nach `login_tries_until_delay` Versuchen wird bei jedem weiteren Versuch eine Verzögerung von `relogin_delay` Sekunden eingeführt
+
+3. **Account-Sperrung**: Nach `login_tries_until_blocked` Versuchen wird der Account komplett gesperrt und kann nur von einem Administrator entsperrt werden
+
+**Beispiel-Szenario:**
+```yaml
+login_tries_until_delay: 3
+relogin_delay: 5  
+login_tries_until_blocked: 10
+```
+
+- Versuche 1-3: Sofortige Login-Versuche möglich
+- Versuche 4-10: 5 Sekunden Wartezeit zwischen den Versuchen
+- Ab Versuch 11: Account gesperrt
+
+**Konfigurationsoptionen:**
+
+```yaml
+# Strenge Sicherheit (für kritische Systeme)
+backend_login_policy:
+    login_tries_until_blocked: 5
+    login_tries_until_delay: 2
+    relogin_delay: 30
+    enable_stay_logged_in: false
+
+# Moderate Sicherheit (Standard-Empfehlung)
+backend_login_policy:
+    login_tries_until_blocked: 20
+    login_tries_until_delay: 3
+    relogin_delay: 5
+    enable_stay_logged_in: true
+
+# Entwicklungsumgebung (weniger restriktiv)
+backend_login_policy:
+    login_tries_until_blocked: 100
+    login_tries_until_delay: 10
+    relogin_delay: 1
+    enable_stay_logged_in: true
+```
+
+> **Sicherheitshinweis:** In Produktionsumgebungen sollten restriktive Werte gewählt werden. Die "Angemeldet bleiben" Funktion sollte bei höchsten Sicherheitsanforderungen deaktiviert werden.
 
 <a name="https-config"></a>
 
