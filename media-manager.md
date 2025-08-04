@@ -49,6 +49,7 @@ Folgende Effekte stehen zur Verfügung:
 | Effekt           | Beschreibung                                                                                                                                                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | convert2img      | Konvertiert eine Quelldatei in ein Web-Format. Mögliche Formate für die Bildquelle: .pdf, .ps, .psd, .tif, .tiff, .bmp, .eps, .ico. Mögliche Formate für das Ziel: .jpg, .png **ImageMagick** sollte über *exec* verfügbar sein. |
+| video2image      | Erzeugt Vorschaubilder aus Videodateien (seit REDAXO 5.16). Unterstützte Videoformate: .mp4, .mov, .avi, .mkv. Erfordert **ffmpeg** und **ffprobe**. |
 | img2img          |  In JPEG/PNG/GIF/WEBP/AVIF konvertieren 
 | crop             | Beschneidet ein Bild auf die angegebene Größe (Angabe in Pixel)                                                                                                                                                                  |
 | filter_blur      | Weichzeichnungsfilter                                                                                                                                                                                                            |
@@ -67,6 +68,59 @@ Folgende Effekte stehen zur Verfügung:
 | workspace        | Hier kann eine Zeichenfläche inklusive Hintergrundfarbe definiert werden, auf der das Medium platziert wird.                                                                                                                     |
 
 Alle Effekte können kaskadiert, also hintereinander als "Bearbeitungskette" verwendet werden.
+
+### Video-Vorschaubilder generieren
+
+Seit REDAXO 5.16 unterstützt der Media Manager die automatische Generierung von Vorschaubildern aus Videodateien. Diese Funktion nutzt **ffmpeg** zur Extraktion von Einzelbildern aus Videos.
+
+**Systemvoraussetzungen:**
+- **ffmpeg** muss auf dem Server installiert und über `exec()` verfügbar sein
+- **ffprobe** wird zur Ermittlung der Videolänge verwendet
+
+**Unterstützte Videoformate:**
+- MP4 (.mp4)
+- QuickTime (.mov) 
+- AVI (.avi)
+- Matroska (.mkv)
+- und weitere von ffmpeg unterstützte Formate
+
+**Funktionsweise:**
+
+Der Media Manager extrahiert automatisch einen Frame aus der Mitte des Videos (50% der Gesamtlänge) als Vorschaubild. Dies ist ideal für:
+- Video-Poster für HTML5-Videos
+- Thumbnail-Generierung für Videogalerien
+- Vorschaubilder für Medienpool-Anzeige
+
+**Beispielkonfiguration:**
+
+1. Neuen Medientyp anlegen (z.B. `video_preview`)
+2. Effekt `convert2img` hinzufügen:
+   - Aktiviert automatisch video2image für Videodateien
+   - Konvertiert zu JPEG oder PNG
+3. Optional weitere Effekte wie `resize` oder `crop` hinzufügen
+
+**Praktisches Beispiel:**
+
+```php
+// Video-Vorschaubild erzeugen
+$video_file = 'mein_video.mp4';
+$preview_url = rex_media_manager::getUrl('video_preview', $video_file);
+?>
+
+<video poster="<?= $preview_url ?>" controls>
+    <source src="<?= rex_url::media($video_file) ?>" type="video/mp4">
+</video>
+```
+
+**Fehlerbehebung:**
+
+Falls keine Vorschaubilder generiert werden:
+1. Prüfung ob ffmpeg installiert ist: `ffmpeg -version`
+2. Prüfung der PHP exec()-Funktion
+3. Prüfung der Dateiberechtigungen
+4. Überprüfung der Serverlogs auf ffmpeg-Fehler
+
+> **Hinweis:** Die Video-zu-Bild-Konvertierung erfolgt nur bei der ersten Anfrage und wird dann gecacht. Je nach Videogröße kann die erste Generierung etwas Zeit in Anspruch nehmen.
 
 <a name="konfiguration"></a>
 

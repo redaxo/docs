@@ -41,6 +41,71 @@ class rex_api_demo extends rex_api_function
 }
 ```
 
+### Explizite Registrierung von API-Funktionen
+
+Seit REDAXO 5.17 können API-Funktionen auch explizit registriert werden. Dies ermöglicht die Verwendung von Namespaces und eine flexiblere Benennung:
+
+```php
+// Explizite Registrierung einer API-Funktion
+rex_api_function::register('my-api', MyNamespace\MyApiClass::class);
+
+// Aufruf über die registrierte Bezeichnung
+// index.php?rex-api-call=my-api
+```
+
+**Vorteile der expliziten Registrierung:**
+
+- **Namespaces**: API-Klassen können in Namespaces organisiert werden
+- **Flexible Benennung**: Der API-Name muss nicht dem Klassennamen entsprechen
+- **Bessere Organisation**: Strukturiertere Verwaltung von API-Funktionen
+
+**Beispiel mit Namespace:**
+
+```php
+<?php
+namespace MyAddon\Api;
+
+class UserManager extends \rex_api_function
+{
+    public function execute()
+    {
+        $action = rex_request('action', 'string');
+        
+        switch ($action) {
+            case 'activate':
+                return $this->activateUser();
+            case 'deactivate':
+                return $this->deactivateUser();
+            default:
+                throw new \rex_api_exception('Invalid action');
+        }
+    }
+    
+    private function activateUser()
+    {
+        // Benutzer aktivieren
+        return new \rex_api_result(true, 'User activated');
+    }
+    
+    private function deactivateUser()
+    {
+        // Benutzer deaktivieren
+        return new \rex_api_result(true, 'User deactivated');
+    }
+}
+
+// Registrierung in der boot.php
+rex_api_function::register('user-manager', MyAddon\Api\UserManager::class);
+```
+
+**Aufruf der registrierten API-Funktion:**
+
+```
+index.php?rex-api-call=user-manager&action=activate&user_id=5
+```
+
+> **Hinweis:** Bei der expliziten Registrierung wird die automatische Erkennung über den `rex_api_`-Präfix umgangen. Die Klassen können daher frei benannt werden.
+
 ## Die Methoden der Klassen
 
 ### rex_api_function

@@ -227,4 +227,65 @@ Dies ist möglich, sobald das REDAXO-Setup abgeschlossen wurde.
 
 ### Autovervollständigung
 
-Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes Drücken der Tab-Taste ausgelöst wird.
+Seit REDAXO 5.15 verfügen die Console-Commands über eine integrierte Autocompletion-Funktionalität für viele Parameter und Optionen.
+
+**Unterstützte Autocompletion:**
+
+**Package-Commands:**
+- `package:install [TAB]` - Zeigt verfügbare Packages an
+- `package:uninstall [TAB]` - Zeigt installierte Packages an  
+- `package:activate [TAB]` - Zeigt deaktivierte Packages an
+- `package:deactivate [TAB]` - Zeigt aktivierte Packages an
+
+**User-Commands:**
+- `user:create --login [TAB]` - Autocomplete für Benutzer-Parameter
+- `user:set-password [TAB]` - Zeigt vorhandene Benutzer an
+
+**Database-Commands:**
+- `db:set-connection [TAB]` - Autocomplete für Verbindungsparameter
+
+**Setup-Commands:**
+- Autocomplete für verschiedene Setup-Optionen und Parameter
+
+**Beispiele für Autocompletion:**
+
+```bash
+# Package-Namen automatisch vervollständigen
+php redaxo/bin/console package:install [TAB][TAB]
+# Zeigt: backup, be_style, install, media_manager, ...
+
+# Benutzer-Namen autocomplete
+php redaxo/bin/console user:set-password [TAB][TAB]  
+# Zeigt: admin, redakteur, editor, ...
+
+# Aktive Packages anzeigen
+php redaxo/bin/console package:deactivate [TAB][TAB]
+# Zeigt nur aktivierte Packages
+```
+
+**Externe Autocompletion:**
+
+Zusätzlich zur integrierten Autocompletion kann ein [externes Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) verwendet werden, das durch doppeltes Drücken der Tab-Taste ausgelöst wird.
+
+**Installation der externen Autocompletion:**
+
+```bash
+# Global installieren via Composer
+composer global require bamarni/symfony-console-autocomplete
+
+# Autocompletion für Bash aktivieren
+eval "$(symfony-autocomplete --shell bash)"
+
+# Für ZSH
+eval "$(symfony-autocomplete --shell zsh)"
+```
+
+**Verwendung:**
+
+```bash
+# Nach Installation funktioniert Tab-Completion
+php redaxo/bin/console pa[TAB]  # Vervollständigt zu "package:"
+php redaxo/bin/console package:i[TAB]  # Zeigt install/init Optionen
+```
+
+> **Hinweis:** Die integrierte Autocompletion funktioniert automatisch ohne zusätzliche Installation und bietet kontextspezifische Vorschläge basierend auf dem aktuellen REDAXO-System.

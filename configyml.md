@@ -148,7 +148,7 @@ theme: null
 | setup |  |  | true/ false/ hash+DayTime | Legt fest, ob das Setup ausgeführt werden soll. Bei true wird das Setup ausgeführt. Wird das Setup über das Backend gestartet findet sich hier ein Hash und eine DateTime-Angabe die festlegt bis wann der Setupaufruf gültig ist. |
 | debug | enabled |  | true/false | Startetet oder beenden den Debug-Modus |
 | live_mode |  |  | true/false | Aktiviert oder deaktiviert den Live-Modus. Mehr dazu unter [REDAXO absichern](/{{path}}/{{version}}/absichern) |
-| safe_mode |  |  | true/false | Aktiviert oder deaktiviert den Safe-Modus |
+| safe_mode |  |  | true/false | Aktiviert oder deaktiviert den Safe-Modus global. Siehe [Safe Mode konfigurieren](#safe-mode) |
 |  | throw\_always\_exception |  | true/false | Legt fest ob Exceptions immer ausgegeben werden sollen |
 | instname |  |  | rex… | Eindeutiger Installationsname, Beispiel: rex20201222171044 |
 | server |  |  | url | Url zum Frontend der Website |
@@ -238,6 +238,90 @@ Wird beides gesetzt, gilt auch beides. Im Beispiel dürfen also sowohl die letzt
     - `block_months`: Nach wie viel Monaten ohne Passwortänderung wird der Account gesperrt
 
 Im Beispiel muss man also nach 12 Monaten das Passwort ändern. Dazu wird man nach dem LogIn zwangsweise auf das Profil geleitet, mit der Warnung, dass man das Passwort ändern muss. Versucht man aber erst nach 24 Monaten sich wieder einzuloggen, ist man gesperrt, man gelangt also auch nicht mehr zum Profil, um das Passwort zu ändern. Diese Aufgabe muss dann ein Admin erledigen.
+
+### Safe Mode konfigurieren
+
+Der Safe Mode deaktiviert alle AddOns und ermöglicht den Zugriff auf das Backend, auch wenn AddOns Probleme verursachen. Seit REDAXO 5.16 kann der Safe Mode aus Sicherheitsgründen nur noch von Administratoren aktiviert werden.
+
+**Aktivierung durch Administratoren:**
+
+Eingeloggte Administratoren können den Safe Mode über die System-Seite oder per URL-Parameter aktivieren:
+
+```
+/redaxo/index.php?safemode=1
+```
+
+Bei dieser Variante ist der Safe Mode nur für die jeweilige Admin-Session aktiv.
+
+**Globale Aktivierung über config.yml:**
+
+Für Notfälle kann der Safe Mode auch global über die config.yml aktiviert werden:
+
+```yaml
+safe_mode: true
+```
+
+Bei dieser Konfiguration ist der Safe Mode für alle Backend-Nutzer aktiviert, unabhängig von der Session. Diese Option sollte nur in Notfällen verwendet werden, wenn sich Administratoren nicht mehr normal einloggen können.
+
+**Verwendungszwecke:**
+- Fehlerhaft Addons deaktivieren
+- Backend-Zugriff bei AdDon-Problemen ermöglichen 
+- Fehlerdiagnose ohne AddOn-Interferenzen
+- Notfall-Zugriff für Administratoren
+
+> **Sicherheitshinweis:** Der Safe Mode deaktiviert auch sicherheitsrelevante AddOns. Die globale Aktivierung über config.yml sollte nur temporär erfolgen.
+
+### Datenbank SSL-Konfiguration
+
+REDAXO unterstützt SSL/TLS-verschlüsselte Datenbankverbindungen. Die Konfiguration erfolgt in der config.yml unter dem `db`-Knoten:
+
+```yaml
+db:
+    1:
+        host: localhost
+        login: root
+        password: 'mypassword'
+        name: redaxo5
+        persistent: false
+        ssl_key: /path/to/client-key.pem      # Optionaler Client-Private-Key
+        ssl_cert: /path/to/client-cert.pem    # Optionales Client-Zertifikat
+        ssl_ca: /path/to/ca-cert.pem          # CA-Zertifikat für Verifikation
+        ssl_verify_server_cert: true          # Server-Zertifikat verifizieren
+```
+
+**SSL-Parameter:**
+
+- `ssl_key`: Pfad zum Client-Private-Key (optional)
+- `ssl_cert`: Pfad zum Client-Zertifikat (optional)  
+- `ssl_ca`: Pfad zum CA-Zertifikat für die Verifikation
+- `ssl_verify_server_cert`: Aktiviert/deaktiviert die Server-Zertifikat-Verifikation
+
+**Konfigurationsbeispiele:**
+
+```yaml
+# Einfache SSL-Verbindung ohne Client-Zertifikat
+db:
+    1:
+        host: mysql.example.com
+        ssl_verify_server_cert: true
+
+# SSL mit Client-Zertifikat-Authentifizierung
+db:
+    1:
+        host: secure-mysql.example.com
+        ssl_key: /var/ssl/client-key.pem
+        ssl_cert: /var/ssl/client-cert.pem
+        ssl_ca: /var/ssl/ca-cert.pem
+        ssl_verify_server_cert: true
+
+# SSL ohne Server-Verifikation (nicht empfohlen für Produktion)
+db:
+    1:
+        host: mysql.internal.network
+        ssl_verify_server_cert: false
+```
+
+> **Sicherheitshinweis:** In Produktionsumgebungen sollte `ssl_verify_server_cert` immer auf `true` gesetzt sein, um Man-in-the-Middle-Angriffe zu verhindern.
 
 <a name="https-config"></a>
 
