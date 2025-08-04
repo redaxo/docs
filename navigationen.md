@@ -681,7 +681,7 @@ echo $content;
 
 Das eignet sich vor allem für lange Seiten, die hauptsächlich mit einem Modul gespeist werden. Das Modul kann auf der Seite ganz oben eingebaut werden und die Anker werden automatisch erzeugt. 
 
-Die Anpassungen können individuell gemacht werden. In diesem Fall hat das Modul die ID 36. Der dump kann zum Test verwendet werden welche Felder mit $slice->getValue(1); ausgegeben werden sollen. Hier könnte man auch mehrere Felder mit $out sammeln und am Ende ausgeben. In dem Beispiel wird auch berücksichtigt, dass der Slice-Block online steht mit true am Ende.
+Die Anpassungen können individuell gemacht werden. In diesem Fall hat das Modul die ID 36. Der dump kann zum Test verwendet werden welche Felder mit $slice->getValue(1); ausgegeben werden sollen. Hier könnte man auch mehrere Felder mit $out sammeln und am Ende ausgeben. Der fünfte Parameter (`true`) sorgt dafür, dass nur online geschaltete Slices berücksichtigt werden.
 
 ``` php
 <!-- *******************************************************
@@ -690,6 +690,7 @@ NAVIGATIONS-ANKER MIT SLICES OUTPUT
 
 <?php
 //dump(rex_article_slice::getSlicesForArticleOfType('REX_ARTICLE_ID','36'));
+// Parameter: $article_id, $module_id, $clang, $revision, $ignoreOfflines
 $slices = rex_article_slice::getSlicesForArticleOfType('REX_ARTICLE_ID','36',false,0,true);
 echo '<ul>';
   foreach ($slices as $slice)

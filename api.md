@@ -120,3 +120,44 @@ $result = rex_api_result::fromJSON($json);
 ### rex_api_exception
 
 Diese Exception kann abgefangen werden. Im Normalfall wird sie von REDAXO als Whoops-Meldung ausgeben.
+
+## rex_article_slice
+
+Die Klasse `rex_article_slice` stellt Methoden zum Arbeiten mit Artikel-Slices zur Verfügung.
+
+### Slice-Status abfragen
+
+Mit der Methode `getStatus()` kann der Status (online/offline) eines Slices abgefragt werden:
+
+```php
+$slice = rex_article_slice::getArticleSliceById($slice_id);
+if ($slice) {
+    $status = $slice->getStatus();
+    // Status: 1 = online, 0 = offline
+}
+```
+
+### Offline-Slices ignorieren
+
+Viele Methoden der `rex_article_slice` Klasse unterstützen einen zusätzlichen Parameter `$ignoreOfflines`, um offline geschaltete Slices zu ignorieren:
+
+```php
+// Nur online Slices eines Artikels abrufen
+$slices = rex_article_slice::getSlicesForArticle($article_id, $clang, $revision, true);
+
+// Nur online Slices eines bestimmten Modultyps abrufen
+$slices = rex_article_slice::getSlicesForArticleOfType($article_id, $module_id, $clang, $revision, true);
+
+// Erstes online Slice für einen Artikel finden
+$slice = rex_article_slice::getFirstSliceForArticle($article_id, $clang, $revision, true);
+
+// Erstes online Slice für einen Ctype finden
+$slice = rex_article_slice::getFirstSliceForCtype($ctype, $article_id, $clang, $revision, true);
+
+// Nächstes/Vorheriges online Slice abrufen
+$nextSlice = $slice->getNextSlice(true);
+$prevSlice = $slice->getPreviousSlice(true);
+```
+
+**Parameter:**
+- `$ignoreOfflines` (boolean): `true` = nur online Slices berücksichtigen, `false` = alle Slices (Standard)
