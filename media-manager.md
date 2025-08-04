@@ -71,7 +71,7 @@ Alle Effekte können kaskadiert, also hintereinander als "Bearbeitungskette" ver
 
 ### Video-Vorschaubilder generieren
 
-Seit REDAXO 5.16 unterstützt der Media Manager die automatische Generierung von Vorschaubildern aus Videodateien. Diese Funktion nutzt **ffmpeg** zur Extraktion von Einzelbildern aus Videos.
+Der Media Manager die automatische Generierung von Vorschaubildern aus Videodateien. Diese Funktion nutzt **ffmpeg** zur Extraktion von Einzelbildern aus Videos.
 
 **Systemvoraussetzungen:**
 - **ffmpeg** muss auf dem Server installiert und über `exec()` verfügbar sein
