@@ -177,7 +177,47 @@ $select->addOptions([36,37,38,39,40,41,42,43,44,45,46,47,48], true);
 | `setSuffix($sufix);` | HTML Code, der am Ende des Feldes ausgegeben wird.    |
 | `setAttribute($name, $value);` | Attribute für das Feld                                |
 | `setLabel($label);` | Label für das Feld                                    |
+| `setLabelOnTop($onTop = true);` | Positioniert das Label über dem Eingabefeld (seit REDAXO 5.15) |
 | `setNotice($notice);` | Notiz für das Feld                                    |
+
+### Vertikales Layout für Formularfelder
+
+Seit REDAXO 5.15 können Labels optional über den Eingabefeldern positioniert werden. Dies ist besonders nützlich bei schmalen Layouts oder bei Textareas, wo mehr horizontaler Platz benötigt wird.
+
+**Verwendung:**
+
+```php
+// Textfeld mit Label über dem Eingabefeld
+$field = $form->addTextField('beschreibung');
+$field->setLabel('Beschreibung');
+$field->setLabelOnTop(true);
+
+// Textarea mit vertikalem Layout  
+$field = $form->addTextAreaField('langtext');
+$field->setLabel('Ausführliche Beschreibung');
+$field->setLabelOnTop();  // true ist Standard
+```
+
+**Vergleich der Layouts:**
+
+```php
+// Standard: Label neben dem Eingabefeld (horizontal)
+$field1 = $form->addTextField('vorname');
+$field1->setLabel('Vorname');
+
+// Neu: Label über dem Eingabefeld (vertikal)
+$field2 = $form->addTextField('nachname');
+$field2->setLabel('Nachname');
+$field2->setLabelOnTop();
+```
+
+**Anwendungsfälle für vertikales Layout:**
+- Textareas, die mehr Breite benötigen
+- Schmale Container oder Spalten-Layouts
+- Formulare in mobilen Ansichten
+- Select-Felder mit langen Optionen
+
+> **Hinweis:** Das horizontale Layout bleibt der Standard. Jedes Feld kann individuell konfiguriert werden.
 
 <a name="addinputfield"></a>
 

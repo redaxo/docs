@@ -48,6 +48,27 @@ Beim Datenbank-Export wird eine *.sql*-Datei erzeugt, welche die Struktur und In
 
 > **Tipp:** Wenn auch die Zugangsdaten der Redakteure gesichert werden sollen, muss zusätzlich die Tabelle **rex_user** ausgewählt werden.
 
+#### Tabellen vom Backup ausschließen
+
+AddOn-Entwickler können bestimmte Tabellen automatisch vom Backup ausschließen lassen, indem sie den Präfix `rex_tmp_` für den Tabellennamen verwenden. Dies ist besonders nützlich für:
+
+- Suchindizes (z.B. von SearchIt)
+- Cache-Tabellen
+- Log-Tabellen mit großen Datenmengen
+- Temporäre Daten, die sich leicht regenerieren lassen
+
+**Beispiel:**
+```php
+// Diese Tabelle wird automatisch vom Backup ausgeschlossen
+rex_sql_table::get(rex::getTable('tmp_search_index'))
+    ->addColumn(new rex_sql_column('id', 'int(11)', false, null, true))
+    ->addColumn(new rex_sql_column('article_id', 'int(11)'))
+    ->addColumn(new rex_sql_column('content', 'text'))
+    ->create();
+```
+
+> **Hinweis:** Der `rex_tmp_` Präfix kennzeichnet Tabellen als "nicht-kritische Nutzdaten", die bei Bedarf aus anderen Quellen regeneriert werden können. Diese Tabellen werden automatisch von Backups und dem Medienpool-Sync ausgeschlossen.
+
 <a name="fileexport"></a>
 
 ### Datei-Export

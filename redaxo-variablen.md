@@ -834,3 +834,98 @@ Je nachdem, welcher Art die Rückgabedaten sind, müssen sie anders vorbereitet 
 
 * Soll ein Array für die direkte Weiterverarbeitung zurückgegeben werden, kann es mit [var_export](http://php.net/manual/de/function.var-export.php) zurückgegeben werden: `return var_export($array);` 
 * Ein PHP-Befehl, der erst zur Laufzeit ausgeführt werden soll, muss als String zurückgegeben werden: `return 'strtolower($title)'; // Die Anführungszeichen nicht vergessen` 
+
+### Explizite Registrierung von REX_VAR-Klassen
+
+Seit REDAXO 5.18 können REX_VAR-Klassen auch explizit registriert werden. Dies ermöglicht die Verwendung von Namespaces und eine flexiblere Organisation:
+
+```php
+// Explizite Registrierung einer REX_VAR-Klasse
+rex_var::register('MY_CUSTOM_VAR', MyNamespace\MyCustomVar::class);
+```
+
+**Vorteile der expliziten Registrierung:**
+
+- **Namespaces**: Variablen-Klassen können in Namespaces organisiert werden
+- **Flexible Benennung**: Der Variablenname muss nicht dem Klassennamen entsprechen
+- **Bessere Organisation**: Strukturiertere Verwaltung von benutzerdefinierten Variablen
+
+**Beispiel mit Namespace:**
+
+```php
+<?php
+namespace MyAddon\Vars;
+
+class CustomInfo extends \rex_var
+{
+    protected function getOutput()
+    {
+        $type = $this->getArg('type');
+        
+        switch ($type) {
+            case 'date':
+                return self::quote(date('d.m.Y'));
+            case 'time':
+                return self::quote(date('H:i:s'));
+            case 'version':
+                return self::quote(\rex::getVersion());
+            default:
+                return self::quote('Unknown type');
+        }
+    }
+}
+
+// Registrierung in der boot.php des AddOns
+rex_var::register('MY_INFO', MyAddon\Vars\CustomInfo::class);
+```
+
+**Verwendung der registrierten Variable:**
+
+```
+REX_MY_INFO[type=date]    <!-- Gibt das aktuelle Datum aus -->
+REX_MY_INFO[type=time]    <!-- Gibt die aktuelle Zeit aus -->
+REX_MY_INFO[type=version] <!-- Gibt die REDAXO-Version aus -->
+```
+
+**Komplexeres Beispiel:**
+
+```php
+<?php
+namespace MyAddon\Vars;
+
+class ArticleStats extends \rex_var
+{
+    protected function getOutput()
+    {
+        $stat_type = $this->getArg('stat', 'count');
+        $category_id = $this->getArg('category_id', 0);
+        
+        switch ($stat_type) {
+            case 'count':
+                if ($category_id > 0) {
+                    return 'rex_article::getArticleCountByCategory(' . (int)$category_id . ')';
+                }
+                return 'rex_article::getArticleCount()';
+                
+            case 'online':
+                return 'rex_article::getOnlineArticleCount(' . (int)$category_id . ')';
+                
+            default:
+                return self::quote('0');
+        }
+    }
+}
+
+// Registrierung
+rex_var::register('ARTICLE_STATS', MyAddon\Vars\ArticleStats::class);
+```
+
+**Verwendung:**
+
+```
+REX_ARTICLE_STATS[stat=count]                    <!-- Gesamtanzahl Artikel -->
+REX_ARTICLE_STATS[stat=count category_id=5]      <!-- Artikel in Kategorie 5 -->
+REX_ARTICLE_STATS[stat=online category_id=5]     <!-- Online-Artikel in Kategorie 5 -->
+```
+
+> **Hinweis:** Bei der expliziten Registrierung wird die automatische Erkennung über den `rex_var_`-Präfix umgangen. Die Klassen können daher frei benannt werden. 

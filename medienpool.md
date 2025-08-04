@@ -10,6 +10,7 @@
 - [Medien verschieben](#schieben)
 - [Dateien Synchronisieren](#sync)
 - [Medien suchen](#search)
+- [Sicherheitseinstellungen](#sicherheit)
 
 
 <a name="zweck"></a>
@@ -129,3 +130,52 @@ Sucht alle Jpegs mit der Bezeichnung "Blume rot".
 `Auto type:jpg,png`
 
 Sucht alle Jpegs und png mit dem Begriff "Auto"
+
+<a name="sicherheit"></a>
+
+## Sicherheitseinstellungen
+
+### MIME-Type-Überprüfung
+
+Aus Sicherheitsgründen ist standardmäßig eine Whitelist mit erlaubten MIME-Types aktiv. Diese verhindert das Hochladen von potentiell gefährlichen Dateitypen. Die Überprüfung erfolgt sowohl beim Upload als auch beim Dateiaustausch.
+
+**Erlaubte MIME-Types erweitern:**
+
+```php
+// In der boot.php eines AddOns oder in der projekt/boot.php
+rex_mediapool::setAllowedMimeTypes([
+    ...rex_mediapool::getAllowedMimeTypes(),
+    'json' => ['application/json'],
+    'svg' => ['image/svg+xml'],
+    'webp' => ['image/webp'],
+]);
+```
+
+**Standard-MIME-Types komplett überschreiben:**
+
+```php
+rex_mediapool::setAllowedMimeTypes([
+    'jpg' => ['image/jpeg'],
+    'png' => ['image/png'],
+    'pdf' => ['application/pdf'],
+]);
+```
+
+**Aktuelle erlaubte MIME-Types abrufen:**
+
+```php
+$allowedTypes = rex_mediapool::getAllowedMimeTypes();
+```
+
+> **Hinweis:** Die MIME-Type-Überprüfung ist ein wichtiger Sicherheitsmechanismus. Neue Dateitypen sollten nur nach sorgfältiger Prüfung hinzugefügt werden.
+
+### SVG-Bereinigung
+
+Hochgeladene SVG-Dateien werden standardmäßig bereinigt, um potentiell schädlichen Code zu entfernen. Diese Funktion kann bei Bedarf deaktiviert werden:
+
+```php
+// SVG-Bereinigung deaktivieren
+rex_addon::require('mediapool')->setProperty('sanitize_svgs', false);
+```
+
+> **Achtung:** Das Deaktivieren der SVG-Bereinigung kann ein Sicherheitsrisiko darstellen, da SVG-Dateien JavaScript-Code enthalten können. Nur deaktivieren, wenn vertrauenswürdige Quellen verwendet werden.

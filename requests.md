@@ -44,6 +44,49 @@ rex_request::isXmlHttpRequest | `rex_request::isXmlHttpRequest()` | Liefert true
 rex_request::isPJAXRequest | `rex_request::isPJAXRequest()` | Liefert true, wenn $_SERVER['HTTP_X_PJAX'] true ist, ansonsten false
 rex_request::isPJAXContainer | `rex_request::isPJAXContainer($containerId)` | Liefert true, wenn $_SERVER['HTTP_X_PJAX_CONTAINER'] gleich wie $containerId ist, ansonsten false.
 
+### Erlaubte Werte explizit angeben
+
+Seit REDAXO 5.17 ist es möglich, bei `rex_get()`, `rex_post()` und `rex_request()` explizit die erlaubten Werte als Array anzugeben. Dies bietet eine zusätzliche Sicherheitsebene:
+
+```php
+// Nur bestimmte String-Werte erlauben
+$sort = rex_get('sort', ['name', 'date', 'title']); 
+// Wenn 'sort' nicht gesetzt ist oder einen anderen Wert hat, wird 'name' zurückgegeben
+
+// Mit eigenem Default-Wert
+$status = rex_get('status', ['active', 'inactive', 'pending'], 'active');
+
+// Auch mit Integer-Werten möglich
+$limit = rex_get('limit', [10, 20, 50, 100]);
+
+// Mit null als Default
+$filter = rex_get('filter', ['new', 'popular', 'featured'], null);
+```
+
+**Funktionsweise:**
+- Der Wert muss exakt einem der Werte im Array entsprechen
+- Ist der Parameter nicht gesetzt oder ungültig, wird der erste Wert aus dem Array verwendet
+- Optional kann ein anderer Default-Wert als dritter Parameter angegeben werden
+- Der Default-Wert muss nicht im Array der erlaubten Werte enthalten sein
+
+**Anwendungsbeispiele:**
+
+```php
+// Sortierung in einer Produktliste
+$sort = rex_get('sort', ['price_asc', 'price_desc', 'name', 'date'], 'name');
+
+// Pagination
+$page = rex_get('page', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1);
+
+// Filter-Status
+$status = rex_post('status', ['published', 'draft', 'archived']);
+
+// Anzeigemodus
+$view = rex_get('view', ['grid', 'list'], 'grid');
+```
+
+## Sessions
+
 Wird im Frontend eine Session benötigt, so muss diese explizit gestartet werden. Hierzu genügt in der Datei boot.php eines AddOns folgender Code:
 
 ```php

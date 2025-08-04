@@ -9,6 +9,7 @@
   - [Datenbank Schema als PHP exportieren](#dbschema-export)
   - [package:list](#package-list)
   - [install:list](#install-list)
+  - [package:run-update-script](#package-run-update-script)
   - [Core/AddOn/PlugIn Assets synchronisieren](#asset-sync)
 - [Entwicklung eigener Konsolen-Skripte](#dev)
   - [run.php](#run)
@@ -167,6 +168,39 @@ Optionen:
 - `--updates-only` - Zeigt nur AddOns an, für die ein Update verfügbar ist
 - `--json` - gibt die Ausgabe als JSON (für z.B. Verarbeitung in Skripten)
 
+<a name="package-run-update-script"></a>
+
+### package:run-update-script
+
+Mit diesem Command kann das Update-Skript eines Packages manuell ausgeführt werden. Dies ist nützlich zum Testen von `update.php`-Skripten oder wenn ein Package manuell aktualisiert wurde.
+
+**Syntax:**
+```console
+php redaxo/bin/console package:run-update-script <package-name> <from-version>
+```
+
+**Parameter:**
+- `<package-name>`: Name des Packages (AddOn/PlugIn)
+- `<from-version>`: Vorgängerversion, von der das Update simuliert werden soll
+
+**Beispiele:**
+
+```console
+# Update-Skript von my_addon von Version 1.3.0 auf aktuelle Version ausführen
+php redaxo/bin/console package:run-update-script my_addon 1.3.0
+
+# Nützlich beim AddOn-Development zur Update-Skript-Entwicklung
+php redaxo/bin/console package:run-update-script demo_addon 2.1.5
+```
+
+**Anwendungsfälle:**
+- **AddOn-Entwicklung**: Testen von Update-Skripten während der Entwicklung
+- **Manuelle Updates**: Nach manueller Package-Aktualisierung das Update-Skript nachträglich ausführen
+- **Debugging**: Fehlersuche in Update-Prozessen
+- **Migration**: Simulieren von Updates zwischen verschiedenen Versionen
+
+> **Hinweis:** Das Update-Skript wird so ausgeführt, als würde ein Update von der angegebenen Version auf die aktuell installierte Version durchgeführt. Alle Versionsbedingungen in der `update.php` werden entsprechend ausgewertet.
+
 
 
 <a name="dev"></a>
@@ -227,4 +261,65 @@ Dies ist möglich, sobald das REDAXO-Setup abgeschlossen wurde.
 
 ### Autovervollständigung
 
-Um die Bedienbarkeit der Konsole zu verbessern, ist es möglich ein [Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) zu verwenden, dass auf der Konsole durch doppeltes Drücken der Tab-Taste ausgelöst wird.
+Seit REDAXO 5.15 verfügen die Console-Commands über eine integrierte Autocompletion-Funktionalität für viele Parameter und Optionen.
+
+**Unterstützte Autocompletion:**
+
+**Package-Commands:**
+- `package:install [TAB]` - Zeigt verfügbare Packages an
+- `package:uninstall [TAB]` - Zeigt installierte Packages an  
+- `package:activate [TAB]` - Zeigt deaktivierte Packages an
+- `package:deactivate [TAB]` - Zeigt aktivierte Packages an
+
+**User-Commands:**
+- `user:create --login [TAB]` - Autocomplete für Benutzer-Parameter
+- `user:set-password [TAB]` - Zeigt vorhandene Benutzer an
+
+**Database-Commands:**
+- `db:set-connection [TAB]` - Autocomplete für Verbindungsparameter
+
+**Setup-Commands:**
+- Autocomplete für verschiedene Setup-Optionen und Parameter
+
+**Beispiele für Autocompletion:**
+
+```bash
+# Package-Namen automatisch vervollständigen
+php redaxo/bin/console package:install [TAB][TAB]
+# Zeigt: backup, be_style, install, media_manager, ...
+
+# Benutzer-Namen autocomplete
+php redaxo/bin/console user:set-password [TAB][TAB]  
+# Zeigt: admin, redakteur, editor, ...
+
+# Aktive Packages anzeigen
+php redaxo/bin/console package:deactivate [TAB][TAB]
+# Zeigt nur aktivierte Packages
+```
+
+**Externe Autocompletion:**
+
+Zusätzlich zur integrierten Autocompletion kann ein [externes Autovervollständigung-Skript](https://github.com/bamarni/symfony-console-autocomplete) verwendet werden, das durch doppeltes Drücken der Tab-Taste ausgelöst wird.
+
+**Installation der externen Autocompletion:**
+
+```bash
+# Global installieren via Composer
+composer global require bamarni/symfony-console-autocomplete
+
+# Autocompletion für Bash aktivieren
+eval "$(symfony-autocomplete --shell bash)"
+
+# Für ZSH
+eval "$(symfony-autocomplete --shell zsh)"
+```
+
+**Verwendung:**
+
+```bash
+# Nach Installation funktioniert Tab-Completion
+php redaxo/bin/console pa[TAB]  # Vervollständigt zu "package:"
+php redaxo/bin/console package:i[TAB]  # Zeigt install/init Optionen
+```
+
+> **Hinweis:** Die integrierte Autocompletion funktioniert automatisch ohne zusätzliche Installation und bietet kontextspezifische Vorschläge basierend auf dem aktuellen REDAXO-System.
