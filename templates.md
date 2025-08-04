@@ -31,20 +31,6 @@ Templates werden im Menüpunkt `Templates` erstellt.
 
 Ein neues Template wird über das (+)-Symbol angelegt. Man legt einen Namen und Schlüssel (key) fest und definiert, ob das Template aktiv geschaltet werden soll. Im darauf folgenden Feld `Template` wird der eigentliche Code eingepflegt.
 
-### Template-Namen und Übersetzungen
-
-Template-Namen werden in der Backend-Liste automatisch übersetzt, wenn entsprechende Übersetzungsschlüssel im Format `translate:template_name` definiert sind (seit REDAXO 5.14.3). Dies ermöglicht mehrsprachige Template-Namen im Backend.
-
-**Beispiel:**
-```php
-// In der Sprachdatei (lang/de_de.lang oder AddOn-Sprachdatei)
-template_header = Header-Template
-template_sidebar = Sidebar-Template
-template_footer = Footer-Template
-```
-
-Templates mit den Namen `translate:template_header`, `translate:template_sidebar` etc. werden dann in der Liste mit den übersetzten Namen angezeigt.
-
 <a name="ctype"></a>
 
 ## Content-Bereiche  (C-Types)

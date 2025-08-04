@@ -357,11 +357,6 @@ PAGE_STRUCTURE_HEADER_PRE
 : Daten: keine
 : Parameter: ['context' => $context]
 
-PAGE_STRUCTURE_ORDERBY
-: Daten: $query->orderBy
-: Parameter: ['list' => $list, 'sql' => $query]
-: Ermöglicht Anpassung der Sortierung in der Struktur-Ansicht (seit REDAXO 5.16)
-
 URL_REWRITE
 : Daten: keine
 : Parameter: ['id' => $id, 'clang' => $clang, 'params' => $params, 'separator' => $separator]
@@ -615,60 +610,3 @@ MEDIA_MANAGER_FILTERSET
 : Parameter: ['rex_media_type' => $type]
 
 ```
-
-## Beispiele für Extension Point-Verwendung
-
-### Struktur-Sortierung anpassen (PAGE_STRUCTURE_ORDERBY)
-
-Seit REDAXO 5.16 kann die Sortierung in der Struktur-Ansicht über den Extension Point `PAGE_STRUCTURE_ORDERBY` angepasst werden:
-
-```php
-// In der boot.php eines AddOns
-rex_extension::register('PAGE_STRUCTURE_ORDERBY', function (rex_extension_point $ep) {
-    // Zugriff auf die Parameter
-    $list = $ep->getParam('list');
-    $sql = $ep->getParam('sql');
-    
-    // Standard-Sortierung überschreiben
-    // Beispiel: Sortierung nach Name statt nach Priorität
-    return 'name ASC';
-    
-    // Beispiel: Sortierung nach Erstellungsdatum
-    return 'createdate DESC';
-    
-    // Beispiel: Benutzerdefinierte Sortierung basierend auf Metafeldern
-    $category_id = rex_be_controller::getCurrentPagePart(2);
-    if ($category_id == 5) {
-        // In Kategorie 5: Sortierung nach speziellem Metafeld
-        return 'art_custom_order ASC, priority ASC';
-    }
-    
-    // Standard-Sortierung beibehalten
-    return $ep->getSubject();
-});
-```
-
-**Erweiterte Sortierung mit benutzerdefinierten Kriterien:**
-
-```php
-rex_extension::register('PAGE_STRUCTURE_ORDERBY', function (rex_extension_point $ep) {
-    $list = $ep->getParam('list');
-    $clang = rex_be_controller::getCurrentPagePart(3);
-    
-    // Sprach-spezifische Sortierung
-    switch ($clang) {
-        case 1: // Deutsch
-            return 'name ASC';
-        case 2: // Englisch  
-            return 'art_en_title ASC';
-        default:
-            return $ep->getSubject();
-    }
-});
-```
-
-**Hinweise:**
-- Der Extension Point wird in der Backend-Struktur-Ansicht ausgeführt
-- Rückgabewert sollte ein gültiger SQL ORDER BY Ausdruck sein
-- Verfügbare Felder entsprechen der `rex_article`-Tabelle
-- Bei ungültigen Rückgabewerten wird die Standard-Sortierung verwendet
