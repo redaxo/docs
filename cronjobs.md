@@ -189,16 +189,15 @@ In der `boot.php` deines AddOns:
 rex_cronjob_manager::registerType('rex_cronjob_mein_typ');
 ```
 
-**Variante B: Registrierung über package.yml (Plugin)**
+**Variante B: Registrierung über package.yml**
 
-Wenn der Cronjob als Plugin bereitgestellt wird, kann die Registrierung über die `package.yml` erfolgen:
+Alternativ kann die Registrierung über die `package.yml` des AddOns erfolgen:
 
 ```yaml
 package: mein_addon
 version: '1.0.0'
-plugins:
-    mein_cronjob_plugin:
-        cronjob_type: 'rex_cronjob_mein_typ'
+cronjob_types:
+    - 'rex_cronjob_mein_typ'
 ```
 
 #### 3. Praktisches Beispiel: Abonnenten-Benachrichtigung
