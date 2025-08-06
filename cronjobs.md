@@ -178,26 +178,13 @@ class rex_cronjob_mein_typ extends rex_cronjob
 
 #### 2. Cronjob-Typ registrieren
 
-**Variante A: Registrierung über boot.php**
-
-In der `boot.php` deines AddOns:
+Die Registrierung erfolgt über die `boot.php` deines AddOns:
 
 ```php
 <?php
 // boot.php des AddOns
 
 rex_cronjob_manager::registerType('rex_cronjob_mein_typ');
-```
-
-**Variante B: Registrierung über package.yml**
-
-Alternativ kann die Registrierung über die `package.yml` des AddOns erfolgen:
-
-```yaml
-package: mein_addon
-version: '1.0.0'
-cronjob_types:
-    - 'rex_cronjob_mein_typ'
 ```
 
 #### 3. Praktisches Beispiel: Abonnenten-Benachrichtigung
