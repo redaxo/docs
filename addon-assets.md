@@ -13,7 +13,7 @@
 
 <a name="ueber"></a>
 
-## Über Asssets
+## Über Assets
 
 Als Assets bezeichnet man statische Dateien wie CSS-Files, Javascripte, Fonts oder Bilder, die für den Browser öffentlich zugänglich sein müssen. Hierzu gehören u.a. auch CSS und Javascripte für Editoren im Backend, Dateien für die Frontendausgabe oder Modifikationen für das Backend.
 
@@ -21,7 +21,7 @@ Als Assets bezeichnet man statische Dateien wie CSS-Files, Javascripte, Fonts od
 
 ## Speicherort
 
-Assets werden innerhalb von REDAXO im `assets` -Ordner des AddOns abgelegt. Eine Installation, Reinstallation und Update eines AddOns kopiert die Dateien aus `assets` in den öffentlich zugänglichen Ordner `/assets/addons/addonname/` .
+Assets werden innerhalb von REDAXO im `assets`-Ordner des AddOns abgelegt. Eine Installation, Reinstallation und Update eines AddOns kopiert die Dateien aus `assets` in den öffentlich zugänglichen Ordner `/assets/addons/addonname/`.
 
 > Werden während der Entwicklung Änderungen an den Dateien innerhalb des AddOn-Ordners durchgeführt, muss ein neuer Kopiervorgang per Reinstallation angestoßen werden.
 
@@ -31,7 +31,7 @@ Assets werden innerhalb von REDAXO im `assets` -Ordner des AddOns abgelegt. Eine
 
 Auf die Dateien eines AddOns oder PlugIns zeigt das jeweilige Package-Objekt der Klassen [rex_addon](https://friendsofredaxo.github.io/phpdoc/classes/rex-addon.html) oder [rex_plugin](https://friendsofredaxo.github.io/phpdoc/classes/rex-plugin.html).
 
-Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [ `rex_view` ](https://friendsofredaxo.github.io/phpdoc/classes/rex-view.html) die Methoden `addCssFile` und `addJsFile` .
+Die Dateien können in der Datei `boot.php` eingebunden werden. Hierfür liefert die Klasse [`rex_view`](https://friendsofredaxo.github.io/phpdoc/classes/rex-view.html) die Methoden `addCssFile` und `addJsFile`.
 
 ``` php
 //CSS-Datei einbinden
@@ -41,7 +41,7 @@ rex_view::addCssFile( /*Pfad zur Datei*/ );
 rex_view::addJSFile( /*Pfad zur Datei*/ );
 ```
 
-Den Pfad zu den Dateien erhält man per `getAssetsUrl` .
+Den Pfad zu den Dateien erhält man per `getAssetsUrl`.
 
 ``` php
 rex_addon::get('mein_addonkey')->setConfig($key, $value);

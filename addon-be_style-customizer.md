@@ -15,7 +15,7 @@ Das Customizer-Plugin ist zu finden als Unterpunkt unter Menüpunkt `System`.
 
 ## Codemirror
 
-Das PlugIn stellt den JavaScript-Quelltext-Editor `CodeMirror` (<http://codemirror.net)> zur Vefügung, der - sofern er aktiviert ist - auch bei selbst erstellten Textarea-Feldern verwendet werden kann.
+Das PlugIn stellt den JavaScript-Quelltext-Editor `CodeMirror` (<http://codemirror.net>) zur Verfügung, der - sofern er aktiviert ist - auch bei selbst erstellten Textarea-Feldern verwendet werden kann.
 
 <a name="headerbalken"></a>
 
