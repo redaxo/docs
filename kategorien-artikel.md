@@ -9,7 +9,7 @@
 * [Daten des aktuellen Artikels `rex_article`](#aktueller-artikel)
 * [Zugriff auf Kategorie-Daten `rex_category:`](#kategorie-daten)
 * [Code-Beispiele](#code-beispiele)
-  + [Auslesen der System-Artikeln](#system-artikel)
+  + [Auslesen der System-Artikel](#system-artikel)
 
 
 <a name="strukturverwaltung"></a>
@@ -26,7 +26,7 @@ Wozu braucht man also den Unterschied zwischen Kategorie und Artikel? **Kategori
 
 Kategorien dienen vor allem zum Aufbau einer Navigation. Es gibt zwar in REDAXO durch die Flexibilität des Systems meist mehrere Wege, das gewünschte Ziel zu erreichen, aber man erstellt üblicherweise die Navigations-Struktur mit Kategorien. Weil Kategorien in beliebiger Tiefe Unterkategorien enthalten können, sind der Komplexität von Navigationen keine Grenzen gesetzt. Um eine neue Kategorie anzulegen, klickt man auf den Ordner mit dem Pluszeichen; um eine bestehende Kategorie zu bearbeiten auf "Ändern".
 
-Dort kann man auch die Priorität, also die Reihenfolge, festlegen. "Online/Offline" schließlich vergibt einen Kategoriestatus – das heißt aber nicht, dass diese Kategorie nicht zu sehen ist. (Das entscheidet der Entwickler, wie mit Offline-Artikel verfahren wird.)
+Dort kann man auch die Priorität, also die Reihenfolge, festlegen. "Online/Offline" schließlich vergibt einen Kategoriestatus – das heißt aber nicht, dass diese Kategorie nicht zu sehen ist. (Das entscheidet der Entwickler, wie mit Offline-Artikeln verfahren wird.)
 
 Jede Kategorie hat einen Startartikel. Startartikel sind Einstiegsseiten einer Kategorie. Diese Startartikel kann man nicht löschen, man muss dann die Kategorie selbst löschen. Wie oben schon erwähnt ist es der "Startartikel-Status", der einen Artikel als Kategorie markiert.
 

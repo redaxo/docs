@@ -176,7 +176,7 @@ Wird die Verbindung über `rex_socket_proxy` aufgebaut, übergibt man mit `facto
 Immer wenn ein Request abgesetzt wird ([doRequest](#dorequest), [doGet](#doget), [doPost](#dopost), [doDelete](#dodelete)) bekommt man ein rex_socket_response-Objekt zurück. Hier stehen weitere Methoden zur Verfügung mit denen die Serverantwort und der Inhalt der Datei verarbeitet werden kann.
 <a name="getbody"></a>
 ### getBody
-Die bevorzugte Methode um den Inhalt der Datei aufzurufen und zu verarbeiten. Im Hintergrund wird `getBufferedBody()` (siehe nächste Methode und die einzelnen Chunks in eine Variable geschrieben. Somit erhält man den kompletten Inhalt einer Datei ohen sich Gedanken über Speicher Probleme machen zu müssen. 
+Die bevorzugte Methode, um den Inhalt der Datei aufzurufen und zu verarbeiten. Im Hintergrund wird `getBufferedBody()` (siehe nächste Methode) und die einzelnen Chunks in eine Variable geschrieben. Somit erhält man den kompletten Inhalt einer Datei, ohne sich Gedanken über Speicher-Probleme machen zu müssen. 
 
 <a name="getbufferedbody"></a>
 ### getBufferedBody

@@ -77,4 +77,4 @@ Der Customizer stellt Optionen zur Individualisierung des Backends zur Verfügun
 
 ## Historie (sofern installiert)
 
-Ist das History-Plugin der Struktur installiert, kann die Historie hier gelöscht werden.
+Ist das History-PlugIn der Struktur installiert, kann die Historie hier gelöscht werden.

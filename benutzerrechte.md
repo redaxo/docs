@@ -1,6 +1,6 @@
 # Benutzerrechte
 
-In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen, die den Benutzern zugeteilt werden können.  Die zuständige Klasse für einfache Berechtigungen ist [rex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-perm.html), die für erweiterte Berechtigungen (als `multiselect`-Feld) ist [rex_complex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-complex-perm.html)
+In REDAXO werden die Nutzerrechte über Rollen definiert. Rollen sammeln die Berechtigungen, die den Benutzern zugeteilt werden können. Die zuständige Klasse für einfache Berechtigungen ist [rex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-perm.html), die für erweiterte Berechtigungen (als `multiselect`-Feld) ist [rex_complex_perm](https://friendsofredaxo.github.io/phpdoc/classes/rex-complex-perm.html)
 
 ## Definieren
 
@@ -19,7 +19,7 @@ page:
 
 ### PHP
 
-Zur Laufzeit können die Berechtigungen in Gruppen eingeteilt werden und weitere registriert werden. 
+Zur Laufzeit können die Berechtigungen in Gruppen eingeteilt werden und weitere registriert werden.
 
 ```php
 <?php
@@ -31,11 +31,11 @@ if(rex::isBackend() && is_object(rex::getUser())) {
 }
 ```
 
-Der 2. Parameter gibt eine zusätzliche Beschriftung aus. 
+Der 2. Parameter gibt eine zusätzliche Beschriftung aus.
 
-Ohne den dritten Parameter werden alle Berechtigungen in die Gruppe `rex_perm::GENERAL` gespeichert. Diese Berechtigungen erscheinen in den Rollen unter `Allgemein`. 
+Ohne den dritten Parameter werden alle Berechtigungen in die Gruppe `rex_perm::GENERAL` gespeichert. Diese Berechtigungen erscheinen in den Rollen unter `Allgemein`.
 
-Dazu gibt es noch `rex_perm::OPTIONS` und `rex_perm::EXTRAS`. Diese Zusatzgruppen eigenen sich gut um die einzelnen Features eines AddOns freizugeben, wogegen GENERAL eher genutzt wird, um den Zugriff auf das AddOn/Plugin generell zu erlauben für diese Rolle.
+Dazu gibt es noch `rex_perm::OPTIONS` und `rex_perm::EXTRAS`. Diese Zusatzgruppen eignen sich gut, um die einzelnen Features eines AddOns freizugeben, wogegen GENERAL eher genutzt wird, um den Zugriff auf das AddOn/PlugIn generell zu erlauben für diese Rolle.
 
 ```php
 <?php

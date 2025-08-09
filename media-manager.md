@@ -29,21 +29,21 @@ $url = rex_media_manager::getUrl($type,$file);
 
 > Der Pfad zum Medium muss nicht angegeben werden.
 
-### Direkter Auruf per URL
+### Direkter Aufruf per URL
 
 ``` php
 index.php?rex_media_type=MediaTypeName&amp;rex_media_file=MediaFileName
 ```
 
-> MediaTypeName = Der MediaManager-Typ, MediaFileName = Dateiname des Mediums. Der Pfad zum Medium muss nicht angegeben werden.  
+> MediaTypeName = Der MediaManager-Typ, MediaFileName = Dateiname des Mediums. Der Pfad zum Medium muss nicht angegeben werden.
 
-Die durch den Media Manager erstellten Dateien, werden in einem eigenen Cache abgelegt, der bei Bedarf auch für jeden einzelnen Typ gelöscht werden kann.
+Die durch den Media Manager erstellten Dateien werden in einem eigenen Cache abgelegt, der bei Bedarf auch für jeden einzelnen Typ gelöscht werden kann.
 
 Häufig benutzte Effekte für den Media Manager sind resize und crop. Damit können Bilder auf eine einheitliche Größe gebracht und zugeschnitten werden (siehe Beispiel unten).
 
 <a name="effekte"></a>
 
-## Effekte Bild: 
+## Effekte Bild:
 Folgende Effekte stehen zur Verfügung:
 
 | Effekt           | Beschreibung                                                                                                                                                                                                                     |

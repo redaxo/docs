@@ -15,7 +15,7 @@
 Vor größeren Veränderungen am System oder vor dem Umzug auf einen neuen Server sollte eine Datensicherung durchgeführt werden.
 Für kleinere Webpräsenzen steht in REDAXO ein [Backup-AddOn](#addon) zur Sicherung der Datenbank und ausgewählter Dateiordner zur Verfügung. Zudem ist es möglich, in Kombination mit einem Cronjob regelmäßige Sicherungen der Datenbank durchzuführen.
 
-> Da das Backup-AddOn abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden, oder eine manuelle Sicherung per FTP(s) und PHPMyadmin durchgeführt werden.
+> Da das Backup-AddOn abhängig von der Laufzeitkonfiguration der PHP-Installation ist, kann es bei großen Datenbeständen zu Abbrüchen des Sicherungsvorgangs kommen. Hier sollten entweder die Laufzeitparameter geändert werden oder eine manuelle Sicherung per FTP(s) und PHPMyAdmin durchgeführt werden.
 > **Backups älterer REDAXO-Versionen als 5.0**
 > Das Einspielen eines REDAXO-Backups älterer Versionen als 5.0 ist nicht vorgesehen.
 
@@ -28,7 +28,7 @@ Tägliche Backups sollten möglichst automatisch über die im Webhosting des Pro
 Das Backup-AddOn ist über den Menüpunkt `Backup` erreichbar.
 Es unterscheidet zwischen Datenbank und Dateien. Für eine komplette Sicherung der Website sollten die Datenbank und die wichtigsten Dateien gesichert werden. Eine Sicherung von REDAXO selbst findet nicht statt.
 
-Zur Speicherung der Backups können "Auf dem Server speichern" (Speicherort: `redaxo/data/addons/backup`) oder ein direkter Download gewählt werden. 
+Zur Speicherung der Backups können "Auf dem Server speichern" (Speicherort: `redaxo/data/addons/backup`) oder ein direkter Download gewählt werden.
 
 <a name="dbexport"></a>
 

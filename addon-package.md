@@ -79,7 +79,6 @@ Die verwendete Sprache ist das auf Markup verzichtende YAML.
 Die Definition erfolgt in Schlüssel-Wert-Paaren (key value pairs). Das Trennzeichen zwischen Schlüssel und Wert ist der Doppelpunkt. Die Zugehörigkeit zu Oberpunkten wird durch Einrückungen (per Leerzeichen) definiert.
 
 Diese Definitionen heißen in REDAXO *Properties* und können mit `rex_addon::get('addonkey')->getProperty($key)` abgefragt werden.
- 
 <a name="pflicht"></a>
 
 ## Pflichtangaben
@@ -95,7 +94,7 @@ version: '1.0.0'
 
 **version:** Hier wird die Version des AddOns hinterlegt. Damit der Installer die Versionen korrekt zuordnen kann, müssen die folgenden Vorgaben entsprechend [Composer](https://getcomposer.org/doc/articles/versions.md) eingehalten werden.
 
-> Um Probleme mit neuen PHP Major-Releases zu vermeiden, empfehlen wir die Angabe zur gewünschten PHP-Version zu hinterlegen. ^7.1 steht hierbei für `>= 7.1 < 8` 
+> Um Probleme mit neuen PHP Major-Releases zu vermeiden, empfehlen wir die Angabe zur gewünschten PHP-Version zu hinterlegen. ^7.1 steht hierbei für `>= 7.1 < 8`
 
 <a name="empfohlen"></a>
 
@@ -112,7 +111,7 @@ supportpage: https://meinesupportseite.tld
 
 ## Abhängigkeiten (requires:)
 
-Im AddOn sollte man festgelegen, welche Umgebung es erwartet oder gar benötigt. Hierzu zählen:
+Im AddOn sollte man festlegen, welche Umgebung es erwartet oder gar benötigt. Hierzu zählen:
 
 * die erforderliche REDAXO-Version
 * erforderliche AddOns und PlugIns, auf denen das AddOn ggf. aufbaut oder deren Funktionen es nutzt.
@@ -134,17 +133,17 @@ requires:
         extensions: [gd, xml]
 ```
 
-Abhängigkeiten werden eingeleitet mit `requires:` .
+Abhängigkeiten werden eingeleitet mit `requires:`.
 
-Darunter eingerückt werden die Subkeys, hier: `redaxo` , `packages` , `php` ; `packages` und `php` haben wiederum eigene Subkeys.
+Darunter eingerückt werden die Subkeys, hier: `redaxo`, `packages`, `php`; `packages` und `php` haben wiederum eigene Subkeys.
 
-Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf das aktuelle Major-Release bezieht. Das heißt, eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, sodass eine Installation unter PHP 7 möglich ist. " `addonname/pluginname: '^2.4'` " prüft ob ein bestimmtes PlugIn vorhanden ist.
+Hier wird *mindestens REDAXO 5.1* vorausgesetzt. `^` drückt aus, dass es sich auf das aktuelle Major-Release bezieht. Das heißt, eine Installation in einem REDAXO 6 wäre nicht möglich. Dies gilt ebenso für den Media Manager, der mindestens in Version 2.0.1 vorliegen muss. PHP dagegen muss nur höher oder gleich 5.6 sein. Hier gilt nicht die Begrenzung auf die Major-Release, sodass eine Installation unter PHP 7 möglich ist. "`addonname/pluginname: '^2.4'`" prüft, ob ein bestimmtes PlugIn vorhanden ist.
 
 <a name="defaults"></a>
 
 ## Default settings (default_config)  
 
-In der package.yml können Default-Settings gesetzt werden, sodass diese direkt nach der Installation und Update zur Verfügung stehen. Diese Lösung ist eine Alternative zur PHP-Variante `$addon->setConfig('key', 'value')` , die bislang in in der boot.php, install.php und update.php Verwendung fand.
+In der package.yml können Default-Settings gesetzt werden, sodass diese direkt nach der Installation und Update zur Verfügung stehen. Diese Lösung ist eine Alternative zur PHP-Variante `$addon->setConfig('key', 'value')`, die bislang in der boot.php, install.php und update.php Verwendung fand.
 
 ``` yml
 default_config:
@@ -170,7 +169,7 @@ Wird die Version größer/gleich 1.0.0 des genannten AddOns gefunden, bricht die
 
 ## Dateien/Ordner ignorieren
 
-Bei der Erstellung des Installationspaketes können ausgwählte Dateien und Ordner ignoriert werden
+Bei der Erstellung des Installationspaketes können ausgewählte Dateien und Ordner ignoriert werden
 
 ``` yml
 installer_ignore:
@@ -188,7 +187,7 @@ installer_ignore:
 
 Die Hauptseite wird über die Property `page` definiert. Diese wird aufgerufen, wenn man auf den Menüpunkt des AddOns klickt.
 
-Jede Seite erhält einen Titel mit dem Key `title` .
+Jede Seite erhält einen Titel mit dem Key `title`.
 
 ``` yml
 page:

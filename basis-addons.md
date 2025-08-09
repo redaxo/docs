@@ -40,14 +40,14 @@ REDAXO bringt bereits bei der Installation einige AddOns und PlugIns mit:
 | backup          |                                                                         | Erstellung und Wiederherstellung von Backups                                               |
 | be_style        |                                                                         | AddOn für die Backenddarstellung                                                           |
 |                 | redaxo                                                                  | Liefert das Default-Design des Backend                                                     |
-|                 | customizer                                                              | Liefert Erweiterungen (Code-Higlightning, Link zum Frontend, Einfärbung                    |
+|                 | customizer                                                              | Liefert Erweiterungen (Code-Highlighting, Link zum Frontend, Einfärbung                   |
 | cronjob         |                                                                         | Ausführung regelmäßiger, geplanter Aufgaben                                                |
 |                 | article_status                                                          | Ändert den Online-Status entsprechend Meta-Angabe                                          |
 |                 | optimize_tables                                                         | Optimiert die Datenbanktabellen                                                            |
 | install         |                                                                         | Veröffentlichung und Download von AddOns                                                   |
 | media_manager   |                                                                         | Ausgabe und Manipulation von Medien                                                        |
 | mediapool       |                                                                         | Medienverwaltung                                                                           |
-| metainfo        |                                                                         | Stellt Metafelder im System zur Vefügung                                                   |
+| metainfo        |                                                                         | Stellt Metafelder im System zur Verfügung                                                 |
 | phpmailer       |                                                                         | Bindet die PHPMailer-Klasse ein für den Versand von E-Mails                                |
 | project         |                                                                         | Ein leeres AddOn, um eigene Projekt-spezifische Funktionen zu integrieren (*updatesicher*) |
 | structure       |                                                                         | Liefert die Strukturverwaltung für Kategorien und Artikel                                  |
@@ -134,7 +134,7 @@ Konkret werden vom Core die Bedingungen aus der package.yml neu geprüft, `insta
 
 ## Deinstallation / Löschen
 
-Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren` . Möchte man das AddOn komplett löschen, klickt man auf `löschen` .
+Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren`. Möchte man das AddOn komplett löschen, klickt man auf `löschen`.
 
 Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` geladen; die Assets sowie die Einträge aus `rex_config` werden gelöscht.
 

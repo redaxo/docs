@@ -104,7 +104,7 @@ Verschickt eine Ressource über die Methoden `sendCacheControl` und `sendContent
 
 `sendPage($content, $lastModified = null)` 
 
-Verschickt den Inhalt von `$content` . Optional kann ein `Last Modified` -Wert als Timestamp übergeben werden. Der Inhalt von `$content` kann über den Extensionpoint OUTPUT_FILTER modifiziert werden.
+Verschickt den Inhalt von `$content`. Optional kann ein `Last Modified`-Wert als Timestamp übergeben werden. Der Inhalt von `$content` kann über den Extensionpoint OUTPUT_FILTER modifiziert werden.
 
 <a name="sendcontent"></a>
 
@@ -168,4 +168,4 @@ Wenn der Browser Gzip/x-Gzip unterstützt, wird `$content` komprimiert übertrag
 
 `md5($content)` 
 
-Erzeugt einen md5-Hash aus `$content` . Inhalt, der von `<!--DYN-->.*<!--/DYN-->` umschlossen ist, wird ignoriert.
+Erzeugt einen md5-Hash aus `$content`. Inhalt, der von `<!--DYN-->.*<!--/DYN-->` umschlossen ist, wird ignoriert.

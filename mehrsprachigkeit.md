@@ -22,9 +22,9 @@ Mehrsprachige Websites sind mit REDAXO sehr einfach umsetzbar. Unter dem Menüpu
 
 Eine neue Sprache wird über das Pluszeichen angelegt. Nach diesem Schritt – also wenn mindestens zwei Sprachen vorhanden sind – findet man in der Strukturansicht Links zum Wechsel in die anderen Sprachen.
 
-Was ist durch diesen Schritt datenbanktechnisch passiert? Alle Artikel, also  alle Datensätze der Tabelle `rex_article`, wurden dupliziert und als leere Artikel mit der neuen Sprach-ID 2 gespeichert. Die ursprüngliche Sprache hat die ID 1, die zweite Sprache die ID 2, usw.
+Was ist durch diesen Schritt datenbanktechnisch passiert? Alle Artikel, also alle Datensätze der Tabelle `rex_article`, wurden dupliziert und als leere Artikel mit der neuen Sprach-ID 2 gespeichert. Die ursprüngliche Sprache hat die ID 1, die zweite Sprache die ID 2, usw.
 
-> **Hinweis:** In alten REDAXO-Version (4 und älter) fingen die Sprach-IDs mit der 0 an.
+> **Hinweis:** In alten REDAXO-Versionen (4 und älter) fingen die Sprach-IDs mit der 0 an.
 
 Da also jeder Artikel jeder Sprache in der Datenbank als eigener Datensatz vorliegt, können die Artikel in den Sprachen individuell umbenannt und sortiert werden.
 

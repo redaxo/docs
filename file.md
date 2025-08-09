@@ -29,7 +29,7 @@
 
 Für die Erstellung und Pflege von Dateien und Verzeichnissen stehen die PHP-Classes `rex_file` und `rex_dir` zur Verfügung. Nachfolgend werden die Aufgaben der darin enthaltenen Methoden gelistet.
 
-In den Methoden müsen korrekte Pfade angegeben werden. Im Kapitel [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade) finden sich dazu alle erforderlichen Informationen.
+In den Methoden müssen korrekte Pfade angegeben werden. Im Kapitel [Pfade (rex_path, rex_url)](/{{path}}/{{version}}/pfade) finden sich dazu alle erforderlichen Informationen.
 
 <a name="rexfile"></a>
 
@@ -37,13 +37,13 @@ In den Methoden müsen korrekte Pfade angegeben werden. Im Kapitel [Pfade (rex_p
 
 Die Class `rex_file` kümmert sich um das Handling einzelner Dateien. Hier stehen Methoden zum Einlesen, Schreiben und zur Ausgabe von Dateien aus und im Dateisystem zur Verfügung.
 
-[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/lib/util/file.php)  
+[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/lib/util/file.php)
 
 <a name="rexfile_get"></a>
 
 ### rex_file::get
 
-Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermedlung, wenn die Datei nicht gelesen werden kann (default: NULL).  
+Mit der Methode `get` wird eine Datei aus dem Dateisystem eingelesen. Ein weiterer Parameter erlaubt die Ausgabe eines Default-Wertes bzw. Fehlermeldung, wenn die Datei nicht gelesen werden kann (default: NULL).
 
 ```php
 rex_file::get($file, $default = null);

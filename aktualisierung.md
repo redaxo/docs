@@ -15,22 +15,22 @@ Mit dem [Installer-AddOn](/{{path}}/{{version}}/installer) bietet REDAXO hierfü
 
 ## Hinweise
 
-### Core-Upades
+### Core-Updates
 
-Allgemein ist es nicht erforderlich, die Core-Updates schrittweise durchzuführen. 
+Allgemein ist es nicht erforderlich, die Core-Updates schrittweise durchzuführen.
 
-**Ausnahme:** 
-Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden. 
+**Ausnahme:**
+Bei Versionen unter 5.6.5 sollte zunächst ein Update auf diese Version durchgeführt werden.
 
-Möchte man das System dennoch schrittweise aktualisieren, sollte das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte genutzt werden. 
-Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1 -> 5.15.1` 
+Möchte man das System dennoch schrittweise aktualisieren, sollte das aktuelle Bugfix-Release des Feature-Release für die Update-Schritte genutzt werden.
+Beispiel: `5.11.2 -> 5.12.1 -> 5.13.3 -> 5.14.1 -> 5.15.1`
 
 
 ### Datensicherung
 
 Wenn Aktualisierungen am System oder an AddOns vorgenommen werden, sollte in jedem Fall vorher eine vollständige Sicherung des Systems durchgeführt werden. Dazu muss die Datenbank gesichert werden. Dies kann entweder über das Backup-AddOn oder über eigene Datenbanktools (z.B. PhpMyAdmin oder adminer) erfolgen. Bei einigen AddOns kann es auch sinnvoll sein, die Daten des AddOns selbst zu sichern, hierzu bitte die Dokumentation des AddOns beachten.
 
->Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
+> Vor Aktualisierungen des Systems und AddOns sollten unbedingt die Versionshinweise beachtet werden. Möglicherweise werden bei einem Update Anpassungen am Code von Modulen, Templates oder anderen AddOns notwendig.
 
 
 

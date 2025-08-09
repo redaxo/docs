@@ -38,9 +38,9 @@
 
 ## Listenansicht von Datenbank-Tabellen
 
-Die Klasse `rex_list` ist eines der "heimlichen Heinzelmännchen" von REDAXO. Mit `rex_list` können die Ergebnisse Datenbankabfragen als tabellarische Listen dargestellt werden. Die Verwendung von `rex_list` kann sowohl im Backend als auch im Frontend sinnvoll sein.
+Die Klasse `rex_list` ist eines der "heimlichen Heinzelmännchen" von REDAXO. Mit `rex_list` können die Ergebnisse von Datenbankabfragen als tabellarische Listen dargestellt werden. Die Verwendung von `rex_list` kann sowohl im Backend als auch im Frontend sinnvoll sein.
 
-Eine Listenansicht kann über die `rex_list` -Klassen mit verschiedenen Funktionen ausgestattet werden, z. B. mit einer Sortierfunktion für bestimmte Spalten oder mit Links, um Datensätze zu editieren, zu löschen oder mit eigenen Funktionen zu manipulieren. Die Klasse verfügt von Haus aus über eine Paging-Funktion über die Klasse `rex_pager` .
+Eine Listenansicht kann über die `rex_list`-Klassen mit verschiedenen Funktionen ausgestattet werden, z. B. mit einer Sortierfunktion für bestimmte Spalten oder mit Links, um Datensätze zu editieren, zu löschen oder mit eigenen Funktionen zu manipulieren. Die Klasse verfügt von Haus aus über eine Paging-Funktion über die Klasse `rex_pager`.
 
 <a name="aufruf_von_rex_list"></a>
 

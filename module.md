@@ -34,13 +34,13 @@ Eingabeelemente können zum Beispiel sein:
 
 In einen Artikel eingesetzte Modulblöcke bilden die so genannten Slices, aus denen sich der gesamte Inhalt einer Seite zusammensetzt.
 
-Ein Slice hat einen vordefinierten Satz an Variablen, die für die Benutzerelemente zur Verfügung stehen. Diese Variablen werden über eine eigene Syntax angesprochen. Die Variablen sowohl für die EIngabe als auch für die Ausgabe werden ausführlich im Kapitel [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen) beschrieben.
+Ein Slice hat einen vordefinierten Satz an Variablen, die für die Benutzerelemente zur Verfügung stehen. Diese Variablen werden über eine eigene Syntax angesprochen. Die Variablen sowohl für die Eingabe als auch für die Ausgabe werden ausführlich im Kapitel [REDAXO-Variablen (REX_VARs)](/{{path}}/{{version}}/redaxo-variablen) beschrieben.
 
 <a name="entwickler"></a>
 
 ## Entwickler: Module erstellen
 
-Ein Modul wird im Backend beim Menüpunkt `Module` erstellt. Die Benennung der Modules kann frei gewählt werden. Da die Reihenfolge der Module in der Auswahlliste nach Namen sortiert wird, sind die Namen für eine gewisse Struktur relevant. Um die Reihenfolge besser kontrollieren zu kontrollieren, könnte man dem Namen Zahlen voranstellen.
+Ein Modul wird im Backend beim Menüpunkt `Module` erstellt. Die Benennung der Module kann frei gewählt werden. Da die Reihenfolge der Module in der Auswahlliste nach Namen sortiert wird, sind die Namen für eine gewisse Struktur relevant. Um die Reihenfolge besser kontrollieren zu können, könnte man dem Namen Zahlen voranstellen.
 
 <a name="input"></a>
 
