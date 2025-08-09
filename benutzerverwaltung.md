@@ -39,8 +39,8 @@ Folgende Informationen zu den einzelnen Benutzern werden aufgelistet:
 * Rolle
 * letzter Login
 
-Unter Funktionen besteht die Möglichkeit die Benutzerdaten zu `editieren` und Benutzer zu `löschen`. 
-Administratoren haben hier zudem die Möglichkeit, die aktuelle Ansicht eines Benutzers zu testen, ohne sich ab- und wieder anmelden zu müssen, in dem sie die Funktion `Identität wechseln` verwenden. 
+Unter Funktionen besteht die Möglichkeit die Benutzerdaten zu `editieren` und Benutzer zu `löschen`.
+Administratoren haben hier zudem die Möglichkeit, die aktuelle Ansicht eines Benutzers zu testen, ohne sich ab- und wieder anmelden zu müssen, indem sie die Funktion `Identität wechseln` verwenden.
 Nach dem Wechsel erscheint rechts oben ein Link zum `zurückwechseln` in den Administratormodus.
 
 > Das Löschen des aktuell angemeldeten Nutzers (also der eigene Account) ist nicht möglich.

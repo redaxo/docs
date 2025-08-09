@@ -2,7 +2,7 @@
 
 ## Erstellen einer Webseite mit REDAXO
 
-Ist die [Installation](/{{path}}/{{version}}/installation) von REDAXO abgeschlossen, kann man mit dem Aufbau der Webpräsenz beginnen. Hierzu müssen die folgenden Schritte durchgeführt werden. Diese Beschreibung ist nur eine Kurzfassung. Für detallierte Informationen sollten die weiteren Kapitel der Dokumentation betrachtet werden.
+Ist die [Installation](/{{path}}/{{version}}/installation) von REDAXO abgeschlossen, kann man mit dem Aufbau der Webpräsenz beginnen. Hierzu müssen die folgenden Schritte durchgeführt werden. Diese Beschreibung ist nur eine Kurzfassung. Für detaillierte Informationen sollten die weiteren Kapitel der Dokumentation betrachtet werden.
 
 **Schritte zur Erstellung einer Webseite mit REDAXO**
 
@@ -39,4 +39,4 @@ Wenn diese Schritte erledigt sind, das heißt: die Struktur ist festgelegt, Temp
 
 Die detaillierten Informationen zu jedem einzelnen Schritt findet man in den weiteren Kapiteln dieser Dokumentation.
 
-> Im Tutoral [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart) findet man eine kurze Anleitung zum schnellen Aufbau einer Webpräsenz inkl. Template und Modulen mit REDAXO.
+> Im Tutorial [Quickstart: Website in 15 Minuten](/{{path}}/{{version}}/tutorial-quickstart) findet man eine kurze Anleitung zum schnellen Aufbau einer Webpräsenz inkl. Template und Modulen mit REDAXO.
