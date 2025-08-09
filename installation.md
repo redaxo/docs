@@ -100,7 +100,7 @@ REDAXO benötigt eine leere MySQL- oder MariaDB-Datenbank für den Betrieb. Für
 * Eine MySQL-Datenbank erstellen und die Zugangsdaten notieren.
 * Die neueste Version unter <https://redaxo.org/download/core/> herunterladen.
 * Die ZIP-Datei auf dem eigenen Rechner entpacken.
-* Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/>) ausführen. 
+* Die entpackten Dateien in das Webverzeichnis hochladen und die Installation unter der Adresse der Website mit angehängtem /redaxo/ (<http://deinedomain.tld/redaxo/>) ausführen.
 * Alle [Installationsschritte](#install) durchgehen.
 
 
@@ -108,14 +108,14 @@ REDAXO benötigt eine leere MySQL- oder MariaDB-Datenbank für den Betrieb. Für
 
 ### Download
 
-Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen. 
+Als Erstes die aktuelle Version von REDAXO unter <https://redaxo.org/download/core/> herunterladen.
 Informationen zum aktuellen Release gibt es unter <https://github.com/redaxo/redaxo/releases>.
 
 <a name="upload"></a>
 
 ### Upload
 
-Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs` , `htdocs` oder `html`.
+Das heruntergeladene Zip-File wird entpackt und der Inhalt in den Webordner des lokalen Servers oder via FTP, SFTP, WebDAV auf einen öffentlichen Webserver kopiert. Meist lautet der Webordner `httpdocs`, `htdocs` oder `html`.
 
 > Bei Upload per FTP/SFTP: Die Transfer-Einstellungen des FTP-Programms sollten auf binary/binär eingestellt sein.
 
@@ -124,18 +124,18 @@ Ausführliche Informationen zum Upload und zu den Zugangsdaten liefert der Hosti
 > **Tipp:** Einige Hoster bieten zur Verwaltung des Webspaces auch Oberflächen wie Plesk oder cPanel an. Hier enthalten ist auch ein Dateimanager, mit dem die Zip-Datei direkt hochgeladen und auf dem Server entpackt werden kann.
 > **Hinweis für Mac und Linux-User:** Die versteckten .htaccess-Dateien müssen unbedingt mit übertragen werden. In einigen FTP-Programmen müssen diese erst eingeblendet werden.
 
-Jetzt kann man den [Installationsvorgang/Setup](#install) starten. 
+Jetzt kann man den [Installationsvorgang/Setup](#install) starten.
 
 <a name="loader"></a>
 ## Installation per REDAXO Loader
 
 ![Screenshot](/assets/v5.12.0-loader.png)
 
-Der REDAXO-Loader bietet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren.  Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet. 
+Der REDAXO-Loader bietet einen vereinfachten Weg REDAXO auf einen Webspace zu kopieren. Nach Auswahl der gewünschten REDAXO-Version wird diese bei GitHub heruntergeladen, entpackt und der [Installationsvorgang](#install) gestartet.
 
-> Der Loader wird bei Erfolg automatisch vom Server gelöscht.  
+> Der Loader wird bei Erfolg automatisch vom Server gelöscht.
 
-### Abruf über der Kommandozeile
+### Abruf über die Kommandozeile
 
 ```console
 curl -JLO https://redaxo.org/loader
