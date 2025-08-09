@@ -85,7 +85,7 @@ Das Cheatsheet-AddOn scant die REDAXO-Installation nach Extension-Points im Core
 
 ### Demo-AddOn
 
-Das Demo-AddOn zeigt, wie AddOns entwickelt und dokumentiert werden. Gut kommentierter Quellcode, Hilfe und Tipps im AddOn selbst helfen beim Verständnis der AddOn-Programmierung und der Dokumentation. Es liefert auch ein Doku-Plugin, das den Aufbau einer Hilfe für das eigne AddOn ermöglicht.
+Das Demo-AddOn zeigt, wie AddOns entwickelt und dokumentiert werden. Gut kommentierter Quellcode, Hilfe und Tipps im AddOn selbst helfen beim Verständnis der AddOn-Programmierung und der Dokumentation. Es liefert auch ein Doku-PlugIn, das den Aufbau einer Hilfe für das eigene AddOn ermöglicht.
 
 [**Github-Repo**](https://github.com/FriendsOfREDAXO/demo_addon)
 

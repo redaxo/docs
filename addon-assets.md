@@ -107,7 +107,7 @@ $(document).on('rex:ready', function() {
 
 Beispiel:
 
-Das findet sich so zum Beispiel im be_style-Plugin. `container` ist immer der Container, der ausgetauscht wurde. Initial bei `document:ready` ist es der `<body>` .
+Das findet sich so zum Beispiel im be_style-PlugIn. `container` ist immer der Container, der ausgetauscht wurde. Initial bei `document:ready` ist es der `<body>`.
 
 ```js
 $(document).on('rex:ready', function(event, container) {

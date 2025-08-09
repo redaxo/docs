@@ -134,7 +134,7 @@ Konkret werden vom Core die Bedingungen aus der package.yml neu geprüft, `insta
 
 ## Deinstallation / Löschen
 
-Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren` . Möchte man das AddOn komplett löschen, klickt man auf `löschen` .
+Möchte man ein AddOn deinstallieren, klickt man auf `de-installieren`. Möchte man das AddOn komplett löschen, klickt man auf `löschen`.
 
 Konkret werden vom Core `uninstall.php` und anschließend `uninstall.sql` geladen; die Assets sowie die Einträge aus `rex_config` werden gelöscht.
 

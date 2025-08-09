@@ -306,7 +306,7 @@ REX_MEDIALIST[id=1 widget=1]
 In `REX_VALUE` können alle möglichen Inhalte gespeichert werden. Sie ist daher die am häufigsten eingesetzte REDAXO-Variable.
 Inhalte werden mit `REX_INPUT_VALUE` aus üblichen HTML-Formularen übernommen. Mit `REX_VALUE` werden diese Inhalte abgerufen und könnne mit PHP weiterverarbeitet oder über HTML direkt ausgegeben werden.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.*
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.*
 
 #### REX_VALUE als Eingabe-Variable
 
@@ -452,7 +452,7 @@ REX_ARTICLE[id=5 clang=2 ctype=1]
 Liefert die ID des aktiven Artikels. Es sind keine Parameter erforderlich.
 Shortcut für `rex_article::getCurrentId()` .
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.*
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.*
 
 Wird innerhalb eines Artikels ein anderer Artikel über `rex_article_content` eingebunden, unterscheidet sich die Rückgabe von `rex_article::getCurrentId()` und `REX_ARTICLE_ID` :
 
@@ -504,7 +504,7 @@ REX_CATEGORY[id=5 field=title]
 Liefert die ID der aktiven Kategorie. Es sind keine Parameter erforderlich.
 Shortcut für `rex_category::getCurrentId()` .
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.*
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.*
 
 #### Syntax
 
@@ -539,7 +539,7 @@ REX_CLANG[id=i field=xzy]
 Liefert die ID der aktiven Frontend-Sprache. Es sind keine Parameter erforderlich.
 Shortcut für `rex_clang::getCurrentId()` .
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt. Die erste Sprache ist die Id 1.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt. Die erste Sprache ist die Id 1.
 
 #### Syntax
 
@@ -573,7 +573,7 @@ REX_CONFIG[namespace=xyz key=xyz]
 
 Liefert die ID der aktiven Artikel-Spalte. Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -587,7 +587,7 @@ REX_CTYPE_ID
 
 Liefert die ID des aktiven Moduls. Es sind keine Parameter erforderlich und es ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -601,7 +601,7 @@ REX_MODULE_ID
 
 Liefert den Key des aktiven Moduls. Es sind keine Parameter erforderlich und es ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -635,7 +635,7 @@ REX_PROPERTY[namespace=xyz key=xyz]
 
 Liefert die ID des aktiven Blocks (Slice). Es sind keine Parameter erforderlich. Ist nur innerhalb von Modulen verfügbar.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -649,7 +649,7 @@ REX_SLICE_ID
 
 Mit `REX_TEMPLATE` wird ein Template abgerufen. Shortcut für `$template = new rex_template($templateId); echo $template->getTemplate();` bzw. `$template = rex_template::forKey($templateKey); echo $template->getTemplate();` .
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -681,7 +681,7 @@ REX_TEMPLATE[id=i]
 
 Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 <a name="rex-template-key"></a>
 
@@ -689,7 +689,7 @@ Liefert die ID des aktiven Templates. Es sind keine Parameter erforderlich.
 
 Liefert den Key des aktiven Templates. Es sind keine Parameter erforderlich.
 
-**Hinweis:** Wird vom `structure` -Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -704,7 +704,7 @@ REX_TEMPLATE_ID
 Liefert die ID des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
 Shortcut für `rex::getUser()->getId()` .
 
-**Hinweis:** Wird vom `structure` Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 
@@ -719,7 +719,7 @@ REX_USER_ID
 Liefert den Login-Namen des eingeloggten Backend-Users. Wenn kein Backend-User eingeloggt ist, bleibt sie leer. Es sind keine Parameter erforderlich.
 Shortcut für `rex::getUser()->getLogin()` .
 
-**Hinweis:** Wird vom `structure` Plugin `content` bereitgestellt.
+**Hinweis:** Wird vom `structure`-PlugIn `content` bereitgestellt.
 
 #### Syntax
 

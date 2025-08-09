@@ -55,7 +55,7 @@ YConverter ist nicht im Installer verfügbar und muss in GitHub heruntergeladen 
 - [Zum GitHub-Repo](https://github.com/yakamara/yconverter/tree/redaxo4)
 - [Direkter Download](https://github.com/yakamara/yconverter/archive/refs/heads/redaxo4.zip)
 
-Man erhält eine Zip-Datei mit der Bezeichnung `redaxo4.zip` . Die Datei muss lokal entpackt werden und der Ordner ggf. in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren.
+Man erhält eine Zip-Datei mit der Bezeichnung `redaxo4.zip`. Die Datei muss lokal entpackt werden und der Ordner ggf. in yconverter umbenannt werden. Anschließend kopiert man den Ordner in den Ordner ***/redaxo/include/addons*** der REDAXO 4.x Installation. Danach lässt es sich in der AddOn-Verwaltung installieren.
 
 > Tipp: Einige Hoster bieten Oberflächen (PLESK, CPANEL) an um die Zip-Datei direkt auf dem Server hochzuladen und zu entpacken.
 
@@ -175,7 +175,7 @@ Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 
 
 > *Hinweis:* Die Listen sind nicht vollständig.
 
-Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex` , viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#set-property) und `rex::getProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#get-property)  verwenden.
+Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex`, viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#set-property) und `rex::getProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#get-property) verwenden.
 
 | REDAXO 4 | REDAXO 5 |
 | ------------- | ------------- |
@@ -196,7 +196,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 | `$REX['EXTPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::OPTIONS)` |
 | `$REX['EXTRAPERM'][] = 'myperm[]'` | `rex_perm::register('myperm[]', $name = null, rex_perm::EXTRAS)` |
 | `$REX['HTDOCS_PATH']` <br> `$REX['INCLUDE_PATH']` <br> `$REX['FRONTEND_PATH']` <br> `$REX['MEDIAFOLDER']` <br> `$REX['FRONTEND_FILE']` | `rex_path` [siehe hier](/{{path}}/{{version}}/pfade) |
-| `$REX['ADDON']` | `rex_addon` , bzw. `rex_plugin` (siehe weiter unten) |
+| `$REX['ADDON']` | `rex_addon`, bzw. `rex_plugin` (siehe weiter unten) |
 
 <a name="rex-var"></a>
 
@@ -262,7 +262,7 @@ Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt du
 
 ## rex_sql
 
-Die Methoden `setQuery()` , `insert()` , `update()` etc. liefern keine boolschen Werte mehr zurück, sondern das aktuelle rex_sql-Objekt.
+Die Methoden `setQuery()`, `insert()`, `update()` etc. liefern keine boolschen Werte mehr zurück, sondern das aktuelle rex_sql-Objekt.
 
 | REDAXO 4 | REDAXO 5 |
 | ------------- | ------------- |
@@ -344,7 +344,7 @@ requires:
     structure/content: '>5.0, <5.2'
 ```
 
-Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']` , sondern über die neue Package-api. Das aktuelle Objekt ( `rex_addon` oder `rex_plugin` ) ist in den Dateien ( `boot.php` , `install.php` , `pages/index.php` etc.) über `rex_addon::get('addonkey')` erreichbar.
+Es können aber auch weiterhin Package-Informationen in der `boot.php` gesetzt werden, aber nicht mehr über `$REX['ADDON']`, sondern über die neue Package-api. Das aktuelle Objekt (`rex_addon` oder `rex_plugin`) ist in den Dateien (`boot.php`, `install.php`, `pages/index.php` etc.) über `rex_addon::get('addonkey')` erreichbar.
 
 ```php
 // Beispiel boot.php
@@ -360,11 +360,11 @@ else
   rex_addon::get('addonkey')->setProperty('install', true);
 ```
 
-Außer der `package.yml` sind alle Dateien ( `boot.php` , `install.php` , `uninstall.php` etc.) optional. Die `package.yml` benötigt auf jeden Fall die "package"- und "version"-Angabe.
+Außer der `package.yml` sind alle Dateien (`boot.php`, `install.php`, `uninstall.php` etc.) optional. Die `package.yml` benötigt auf jeden Fall die "package"- und "version"-Angabe.
 
 Dadurch, dass die Dateien aus den Objekten heraus eingebunden werden, sind globale Variablen nicht mehr automatisch verfügbar.
 
-Der Klassenordner `classes` heißt jetzt `lib` . Die Klassen in diesem Ordner (und in den Unterordnern) müssen nicht mehr manuell über `include/require` eingebunden werden, dies übernimmt das "Autoloading" bei Bedarf automatisch.
+Der Klassenordner `classes` heißt jetzt `lib`. Die Klassen in diesem Ordner (und in den Unterordnern) müssen nicht mehr manuell über `include/require` eingebunden werden, dies übernimmt das "Autoloading" bei Bedarf automatisch.
 
 Die Sprachdateien im `lang` -Ordner werden automatisch dem Sprachkatalog hinzugefügt.
 
