@@ -11,8 +11,10 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ## Neues in dieser Doku
 
-- `rex_file::append`: Die Methode append schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. 
-- [REDAXO absichern](/{{path}}/{{version}}/absichern): Informationen zur Absicherung des Backends, z.B. via Live-Mode und Security AddOn
+- [REDAXO absichern](/{{path}}/{{version}}/absichern): Umfassendes Kapitel zur Absicherung des Backends mit Live-Mode und Security AddOn
+- [Live-Mode](/{{path}}/{{version}}/absichern#livemode): Sicherheitsmodus für Live-Systeme zur Einschränkung von PHP-Code-Ausführung
+- [Security AddOn](/{{path}}/{{version}}/absichern#securityaddon): AddOn für erweiterte Backend-Sicherheit mit IP-Kontrolle und Benutzerprotokoll
+- [`rex_file::append`](/{{path}}/{{version}}/file#rexfile_append): Erweiterte Dokumentation der append-Methode zum Anhängen von Content an Dateien
 
 ## Übersicht der Kategorien
 
