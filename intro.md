@@ -11,8 +11,26 @@ Die REDAXO-Dokumentation ist der Startpunkt für die Installation und Redaktion 
 
 ## Neues in dieser Doku
 
-- `rex_file::append`: Die Methode append schreibt Content an das Ende einer Datei. Existiert die Datei noch nicht, wird sie erstellt. 
-- [REDAXO absichern](/{{path}}/{{version}}/absichern): Informationen zur Absicherung des Backends, z.B. via Live-Mode und Security AddOn
+**Sicherheit und Konfiguration**
+- [REDAXO absichern](/{{path}}/{{version}}/absichern): Umfassendes Kapitel zur Absicherung des Backends mit Live-Mode und Security AddOn
+- [Live-Mode](/{{path}}/{{version}}/absichern#livemode): Sicherheitsmodus für Live-Systeme zur Einschränkung von PHP-Code-Ausführung
+- [Security AddOn](/{{path}}/{{version}}/absichern#securityaddon): AddOn für erweiterte Backend-Sicherheit mit IP-Kontrolle und Benutzerprotokoll
+- [MediaPool-Sicherheit](/{{path}}/{{version}}/medienpool#mime-typen-sicherheit): MIME-Type-Prüfung und SVG-Bereinigung für sicheren Datei-Upload
+- [Safe Mode Enhancement](/{{path}}/{{version}}/configyml#safe-mode): Erweiterte Admin-Beschränkungen und globale Konfiguration
+- [Datenbank-SSL](/{{path}}/{{version}}/configyml#datenbank-ssl): Sichere Datenbankverbindungen mit Zertifikatsprüfung
+- [Backend Login Policies](/{{path}}/{{version}}/configyml#login-policies): Brute-Force-Schutz mit konfigurierbaren Limits und Verzögerungen
+
+**Entwicklung und APIs**
+- [`rex_file::append`](/{{path}}/{{version}}/file#rexfile_append): Erweiterte Dokumentation der append-Methode zum Anhängen von Content an Dateien
+- [Namespace-Unterstützung](/{{path}}/{{version}}/api#namespace-registrierung): Explizite Registrierung für API-Funktionen und REX_VAR-Klassen
+- [Request-Validierung](/{{path}}/{{version}}/requests#explizite-werte): Validierung mit expliziten Werte-Arrays für rex_get() und rex_post()
+- [Extension Points](/{{path}}/{{version}}/extension-points#page-structure-orderby): Neuer Extension Point für benutzerdefinierte Struktursortierung
+- [Template-Übersetzungen](/{{path}}/{{version}}/templates#template-namen-uebersetzen): Automatische Übersetzung von Template-Namen mit translate:template_name Format
+
+**Medien und Tools**
+- [Video-Vorschau](/{{path}}/{{version}}/media-manager#video-vorschau): Media Manager Integration mit ffmpeg für automatische Video-Thumbnails
+- [Console Autocompletion](/{{path}}/{{version}}/console#autocompletion): Integrierte Autovervollständigung für Package-, User- und Datenbank-Befehle
+- [Formular-Validierung](/{{path}}/{{version}}/formulare#erweiterte-validierung): Verbesserte Unique-Constraint-Validierung mit benutzerdefinierten Fehlermeldungen
 
 ## Übersicht der Kategorien
 
