@@ -197,6 +197,15 @@ Bei eingeschalteter E-Mail-Archivierung werden alle E-Mails im Ordner `/redaxo/d
 Das Archiv kann über den CronJob "Mailer-Archiv bereinigen" regelmäßig bereinigt werden. 
 Es werden auch nicht verschickte Mails archiviert. 
 
+#### Archiv-Verwaltung (ab REDAXO 5.20) 
+
+Eine eigene Archiv-Verwaltungsseite steht unter `PHPMailer` > `Archiv` zur Verfügung und bietet:
+
+- Übersicht über Archivgröße und Anzahl der gespeicherten E-Mails
+- Auflistung der 10 zuletzt archivierten E-Mails mit Betreff, Empfänger und Datum
+- Sichere Löschung des kompletten E-Mail-Archivs über das Wartungspanel 
+
+
 <a name="extension"></a>
 ## Extension-Point `PHPMAILER_CONFIG`
 
