@@ -16,6 +16,7 @@
   - [Inhaltsübersicht für Artikel](#teaser)
   - [Interne Linkliste mit `REX_LINKLIST`](#linkliste)
   - [Checkboxen in Modulen](#checkbox)
+- [PHP-Alternativen für REDAXO-Variablen](#php-alternativen)
 
 <a name="einfuehrung"></a>
 
@@ -340,5 +341,343 @@ Dieses Modul Beinhaltet eine Checkbox als Modul.
 
 if(REX_VALUE[1])
     {
-      echo "checked...";
+      echo "checked...";
+    }
+?>
 ```
+
+<a name="php-alternativen"></a>
+
+## PHP-Alternativen für REDAXO-Variablen
+
+REDAXO-Variablen sind praktische Shortcuts, aber manchmal ist es notwendig oder vorteilhaft, die entsprechenden PHP-Methoden direkt zu verwenden. Hier sind die wichtigsten Entsprechungen:
+
+### Slice-Daten auslesen
+
+**REDAXO-Variable vs. PHP-Schreibweise:**
+
+```php
+// REDAXO-Variable
+REX_VALUE[1]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getValue(1);
+```
+
+```php
+// REDAXO-Variable für Media
+REX_MEDIA[1]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getMedia(1);
+```
+
+```php
+// REDAXO-Variable für Media-URL
+// (in REDAXO-Variable würde man: /media/REX_MEDIA[1] verwenden)
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getMediaUrl(1);
+```
+
+```php
+// REDAXO-Variable für Linklist
+REX_LINKLIST[1]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getLinklist(1);
+```
+
+```php
+// REDAXO-Variable für Link-URL
+REX_LINK[id=1 output=url]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getLinkUrl(1);
+```
+
+### Arrays aus REDAXO-Variablen
+
+**REDAXO-Variable vs. PHP-Schreibweise:**
+
+```php
+// REDAXO-Variable (Array-Zugriff)
+$value1 = rex_var::toArray("REX_VALUE[1]");
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+$value1 = $slice->getValueArray(1);
+```
+
+```php
+// Medialist als Array
+// REDAXO-Variable
+foreach (explode(',', 'REX_MEDIALIST[1]') as $media) {
+    // ...
+}
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+foreach ($slice->getMediaListArray(1) as $media) {
+    // ...
+}
+```
+
+```php
+// Linklist als Array
+// REDAXO-Variable
+foreach (explode(',', 'REX_LINKLIST[1]') as $articleId) {
+    // ...
+}
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+foreach ($slice->getLinkListArray(1) as $articleId) {
+    // ...
+}
+```
+
+### System-Informationen
+
+**REDAXO-Variable vs. PHP-Schreibweise:**
+
+```php
+// REDAXO-Variable
+REX_ARTICLE_ID
+
+// PHP-Alternative
+echo rex_article::getCurrentId();
+```
+
+```php
+// REDAXO-Variable
+REX_CATEGORY_ID
+
+// PHP-Alternative
+echo rex_category::getCurrentId();
+```
+
+```php
+// REDAXO-Variable
+REX_CLANG_ID
+
+// PHP-Alternative
+echo rex_clang::getCurrentId();
+```
+
+```php
+// REDAXO-Variable
+REX_USER_ID
+
+// PHP-Alternative
+echo rex::getUser() ? rex::getUser()->getId() : '';
+```
+
+```php
+// REDAXO-Variable
+REX_CONFIG[namespace=core key=server]
+
+// PHP-Alternative
+echo rex_config::get('core', 'server');
+```
+
+### Artikel- und Kategorie-Daten
+
+**REDAXO-Variable vs. PHP-Schreibweise:**
+
+```php
+// REDAXO-Variable
+REX_ARTICLE[id=5 field=name]
+
+// PHP-Alternative
+$article = rex_article::get(5);
+echo $article ? htmlspecialchars($article->getValue('name')) : '';
+```
+
+```php
+// REDAXO-Variable
+REX_CATEGORY[id=3 field=name]
+
+// PHP-Alternative
+$category = rex_category::get(3);
+echo $category ? htmlspecialchars($category->getValue('name')) : '';
+```
+
+### Template- und Modul-Informationen
+
+```php
+// REDAXO-Variable
+REX_TEMPLATE_ID
+
+// PHP-Alternative
+echo rex_template::getCurrentId();
+```
+
+```php
+// REDAXO-Variable
+REX_MODULE_ID
+
+// PHP-Alternative
+echo rex_module::getCurrentId();
+```
+
+```php
+// REDAXO-Variable
+REX_SLICE_ID
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getId();
+```
+
+### Prüfungen und Validierung
+
+```php
+// REDAXO-Variable mit isset-Parameter
+REX_VALUE[id=1 isset=1]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo $slice->getValue(1) !== '' ? 'true' : 'false';
+```
+
+```php
+// REDAXO-Variable mit Callback
+REX_VALUE[id=1 callback="htmlspecialchars"]
+
+// PHP-Alternative
+$slice = $this->getCurrentSlice();
+echo htmlspecialchars($slice->getValue(1));
+```
+
+### Metadaten-Zugriff mit REDAXO-Variablen
+
+REDAXO-Variablen können auch auf Metadatenfelder zugreifen:
+
+```php
+// Media-Metadaten abrufen
+REX_MEDIA[id=1 field=title]           // Titel des Mediums
+REX_MEDIA[id=1 field=med_description] // Beschreibung
+REX_MEDIA[id=1 field=width]           // Bildbreite
+REX_MEDIA[id=1 field=height]          // Bildhöhe
+REX_MEDIA[id=1 field=filesize]        // Dateigröße
+REX_MEDIA[id=1 field=filetype]        // Dateityp
+
+// Artikel-Metadaten
+REX_ARTICLE[id=5 field=name]          // Artikelname
+REX_ARTICLE[id=5 field=description]   // Meta-Description
+REX_ARTICLE[id=5 field=keywords]      // Meta-Keywords
+REX_ARTICLE[id=5 field=updatedate]    // Änderungsdatum
+
+// Kategorie-Metadaten
+REX_CATEGORY[id=3 field=catname]      // Kategoriename
+REX_CATEGORY[id=3 field=description]  // Kategorie-Beschreibung
+```
+
+**PHP-Alternativen für Metadaten:**
+
+```php
+// Media-Metadaten per PHP
+$slice = $this->getCurrentSlice();
+$media = $slice->getMedia(1);
+if ($media) {
+    $mediaObj = rex_media::get($media);
+    if ($mediaObj) {
+        echo $mediaObj->getTitle();           // Titel
+        echo $mediaObj->getValue('med_description'); // Beschreibung
+        echo $mediaObj->getWidth();           // Breite
+        echo $mediaObj->getHeight();          // Höhe
+        echo $mediaObj->getFilesize();        // Dateigröße
+        echo $mediaObj->getExtension();       // Dateierweiterung
+    }
+}
+
+// Artikel-Metadaten per PHP
+$article = rex_article::get(5);
+if ($article) {
+    echo $article->getName();                    // Name
+    echo $article->getValue('art_description');  // Description
+    echo $article->getValue('art_keywords');     // Keywords
+    echo $article->getUpdateDate();              // Änderungsdatum
+}
+```
+
+### Erweiterte Beispiele
+
+**Sichere Media-Ausgabe:**
+
+```php
+// REDAXO-Variable (einfache Implementierung)
+if ("REX_MEDIA[1]" != '') {
+    echo '<img src="/media/REX_MEDIA[1]">';
+}
+
+// Verbesserte REDAXO-Variable (mit Metadaten)
+REX_MEDIA[id=1 prefix='<img src="/media/' suffix='" alt="REX_MEDIA[id=1 field=title]">' ifempty='']
+
+// Oder noch besser mit verschiedenen Metadatenfeldern:
+<img src="/media/REX_MEDIA[1]" 
+     alt="REX_MEDIA[id=1 field=title]" 
+     title="REX_MEDIA[id=1 field=med_description]"
+     width="REX_MEDIA[id=1 field=width]" 
+     height="REX_MEDIA[id=1 field=height]">
+
+// PHP-Alternative (mit umfassender Fehlerbehandlung)
+$slice = $this->getCurrentSlice();
+$media = $slice->getMedia(1);
+if ($media) {
+    $mediaObj = rex_media::get($media);
+    if ($mediaObj) {
+        echo '<img src="' . $slice->getMediaUrl(1) . '" alt="' . htmlspecialchars($mediaObj->getTitle()) . '">';
+    }
+}
+```
+
+**Erweiterte Linklist-Verarbeitung:**
+
+```php
+// PHP-Alternative mit Fehlerbehandlung
+$slice = $this->getCurrentSlice();
+$links = $slice->getLinkListArray(1);
+
+if (!empty($links)) {
+    echo '<ul>';
+    foreach ($links as $articleId) {
+        $article = rex_article::get($articleId);
+        if ($article && $article->isOnline()) {
+            echo '<li><a href="' . rex_getUrl($articleId) . '">' . htmlspecialchars($article->getName()) . '</a></li>';
+        }
+    }
+    echo '</ul>';
+}
+```
+
+### Vorteile der PHP-Schreibweise
+
+- **Mehr Kontrolle**: Direkter Zugriff auf alle Methoden der Objekte
+- **Fehlerbehandlung**: Bessere Möglichkeiten für try-catch und Null-Checks
+- **Performance**: Keine zusätzliche Parsing-Schicht
+- **IDE-Support**: Bessere Code-Completion und Typsicherheit
+- **Debugging**: Einfacheres Debugging mit Breakpoints
+- **Typsicherheit**: Explizite Objekttypen statt String-basierte Variablen
+
+### Wann welche Schreibweise verwenden?
+
+**REDAXO-Variablen verwenden wenn:**
+- Einfache, direkte Ausgabe gewünscht
+- Keine komplexe Logik erforderlich
+- Parameter wie `prefix`, `suffix`, `callback` nützlich sind
+- Schnelle Prototyping-Phase
+
+**PHP-Schreibweise verwenden wenn:**
+- Komplexe Datenverarbeitung erforderlich
+- Fehlerbehandlung wichtig ist
+- Performance kritisch ist
+- Mit anderen PHP-Objekten interagiert werden muss
+- Code in einer IDE entwickelt wird
+- Unit-Tests geschrieben werden sollen
