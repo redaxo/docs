@@ -1,1 +1,2 @@
-Version 4.6
+Dokumentation REDAXO 4.x
+========================
