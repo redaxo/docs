@@ -37,7 +37,7 @@ In den Methoden müssen korrekte Pfade angegeben werden. Im Kapitel [Pfade (rex_
 
 Die Class `rex_file` kümmert sich um das Handling einzelner Dateien. Hier stehen Methoden zum Einlesen, Schreiben und zur Ausgabe von Dateien aus und im Dateisystem zur Verfügung.
 
-[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/lib/util/file.php)
+[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/5.x/redaxo/src/core/lib/util/file.php)
 
 <a name="rexfile_get"></a>
 
@@ -251,7 +251,7 @@ rex_file::getOutput($file);
 
 Die Class `rex_dir` kümmert sich um das Handling von Verzeichnissen. Hier stehen Methoden zum Erstellen, Kopieren und Löschen von Verzeichnissen zur Verfügung.
 
-[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/lib/util/dir.php)  
+[Quellcode auf GitHub](https://github.com/redaxo/redaxo/blob/5.x/redaxo/src/core/lib/util/dir.php)  
 
 <a name="create"></a>
 

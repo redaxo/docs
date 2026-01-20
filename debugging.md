@@ -157,7 +157,7 @@ Möglicherweise ist der Debug-Modus aktiviert. Der Debug-Modus sollte ausschlie�
 Möglicherweise wurde das Passwort geändert oder der Benutzer existiert nicht mehr. Oder: Möglicherweise wurde ein Backup eingespielt, das die Tabelle `rex_user` nicht beinhaltet hat oder überschrieben hat.
 
 * Lösung 1: Ggf. das Setup starten, um den Administrator erneut anzulegen.
-* Lösung 2: [Das Passwort des Administrators zurücksetzen.](https://redaxo.org/doku/main/passwort-vergessen)
+* Lösung 2: [Das Passwort des Administrators zurücksetzen.](https://redaxo.org/doku/5.x/passwort-vergessen)
 * Lösung 3: Über die REDAXO-Konsole einen neuen Benutzer erstellen oder das Passwort eines bestehenden Benutzers zurücksetzen: `console user:set-password <username> <neues-passwort>` 
 
 Ein Login ist auch nicht mehr möglich, wenn der Speicherplatz des Hosting-Pakets voll ist und die PHP-Session daher nicht gestartet werden kann.

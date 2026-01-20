@@ -175,7 +175,7 @@ Es ist nicht nötig ein vollständiges Update der Webpräsenz auf eine aktuelle 
 
 > *Hinweis:* Die Listen sind nicht vollständig.
 
-Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex`, viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#set-property) und `rex::getProperty()` [siehe hier](https://redaxo.org/doku/main/eigenschaften#get-property) verwenden.
+Die globale Variable `$REX` wurde entfernt. Im Wesentlichen wurde sie ersetzt durch die statische Klasse `rex`, viele Dinge aus `$REX` werden nun aber auch an anderen Stellen gelagert. AddOn-spezifische Dinge sollten zum Beispiel direkt in den neuen AddOn-Objekten gelagert werden (siehe unten). Möchte man aber Daten modulübergreifend zwischenlagern o.ä., kann man dafür durchaus die Methoden `rex::setProperty()` [siehe hier](https://redaxo.org/doku/5.x/eigenschaften#set-property) und `rex::getProperty()` [siehe hier](https://redaxo.org/doku/5.x/eigenschaften#get-property) verwenden.
 
 | REDAXO 4 | REDAXO 5 |
 | ------------- | ------------- |

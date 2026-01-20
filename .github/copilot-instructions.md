@@ -6,7 +6,7 @@ Always reference these instructions first and fallback to search or bash command
 
 This is the official documentation repository for REDAXO CMS, a German PHP-based content management system. The repository contains exclusively Markdown documentation files and supporting image assets. All documentation is written in German.
 
-**Live Documentation:** <https://redaxo.org/doku/main>
+**Live Documentation:** <https://redaxo.org/doku/5.x>
 
 ## Working Effectively
 

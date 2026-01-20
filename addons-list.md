@@ -17,7 +17,7 @@
   + [ZIP-Install](#zip)
 * [Workflows](#workflows)
   + [REDAXO mit Bimmelbam](#bimmelbam)
-  + [Docker](https://redaxo.org/doku/main/installation#docker)
+  + [Docker](https://redaxo.org/doku/5.x/installation#docker)
 
 <a name="einfuehrung"></a>
 

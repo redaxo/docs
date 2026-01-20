@@ -65,7 +65,7 @@ conflicts:
 <a name="schema"></a>
 
 ## Schema
-Die ausführliche Schema-Definition auf [GitHub](https://github.com/redaxo/redaxo/blob/main/redaxo/src/core/schemas/package.json)
+Die ausführliche Schema-Definition auf [GitHub](https://github.com/redaxo/redaxo/blob/5.x/redaxo/src/core/schemas/package.json)
 
 <a name="ueber"></a>
 
